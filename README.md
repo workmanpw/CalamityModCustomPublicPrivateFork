@@ -1,4 +1,4 @@
-This is my own fork of the Calamity Mod. I will be making changes to it as I see fit and as I please, while keeping it entirely seperated from the official mod. Do not use this repo if you expect a balanced Calamity experience.
+This is my own fork of the Calamity Mod. I will be making changes to it as I see fit and as I please, while keeping it entirely seperated from the official work. Do not use this repository if you expect or want a balanced, clean Calamity experience, and do not push or publish any changes made here to the official mod's repository: I do not and will not endorse such behavior. I made this fork for my own enjoyment (but you can use it, if you really want to) and it is not intended to be taken seriously.
 
 # Calamity Mod stuffs
 [![Discord](https://img.shields.io/discord/225030931008847874)](https://discord.gg/calamity)
@@ -8,6 +8,8 @@ This is my own fork of the Calamity Mod. I will be making changes to it as I see
 - [Official Wiki](https://calamitymod.wiki.gg/)
 - [Patreon](https://patreon.com/CalamityMod)
 - [Official GitHub](https://github.com/CalamityTeam/CalamityModMusicPublic/releases)
+
+Calamity Description (left for obvious reasons):
 
 The Calamity Mod is a vast content mod for Terraria which adds dozens of bosses and thousands of items to create an intense and varied experience. The mod must be installed using [tModLoader](https://github.com/tModLoader/tModLoader).
 
