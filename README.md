@@ -7,7 +7,7 @@ This is my own fork of the Calamity Mod. I will be making changes to it as I see
 - [Discord](https://discord.gg/calamity)
 - [Official Wiki](https://calamitymod.wiki.gg/)
 - [Patreon](https://patreon.com/CalamityMod)
-- [Official GitHub](https://github.com/CalamityTeam/CalamityModMusicPublic/releases)
+- [Official GitHub](https://github.com/CalamityTeam/CalamityModPublic/releases)
 
 Calamity Description (left for obvious reasons):
 
