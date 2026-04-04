@@ -31,7 +31,7 @@ namespace CalamityMod.Items.Weapons.Melee
         public static float MaxThrowReach = 920;
         public static float SnapDamageMultiplier = 2f; //Extra damage from making the scissors snap
 
-        public static float MaxCharge = 20f; // Maximum charge value: this is how much charge you get from a parry
+        public static float MaxCharge = 20f; // Maximum charge value: this is how much charge you get from a parry (increased from 16f)
         public static float chargeDamageMultiplier = 1.4f; //Extra damage from charge
         public static float chainDamageMultiplier = 0.1f;
         public static float SnapBoltsDamageMultiplier = 0.1f;
