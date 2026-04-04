@@ -27,20 +27,20 @@ namespace CalamityMod.Items.Weapons.Melee
         public static int DoubleRightClickFrames = 11;
         private int rmbFrames = 0;
 
-        public static float NeedleDamageMultiplier = 0.7f; //Damage on the non-homing needle projectile
-        public static float MaxThrowReach = 760;
-        public static float SnapDamageMultiplier = 1.2f; //Extra damage from making the scissors snap
+        public static float NeedleDamageMultiplier = 1f; //Damage on the non-homing needle projectile
+        public static float MaxThrowReach = 920;
+        public static float SnapDamageMultiplier = 2f; //Extra damage from making the scissors snap
 
-        public static float MaxCharge = 16f; // Maximum charge value AKA how much charge you get from a parry
-        public static float chargeDamageMultiplier = 1.35f; //Extra damage from charge
+        public static float MaxCharge = 20f; // Maximum charge value: this is how much charge you get from a parry
+        public static float chargeDamageMultiplier = 1.4f; //Extra damage from charge
         public static float chainDamageMultiplier = 0.1f;
         public static float SnapBoltsDamageMultiplier = 0.1f;
 
-        public static float BlastDamageMultiplier = 2f; //Damage multiplier for the blast attack
+        public static float BlastDamageMultiplier = 2.5f; //Damage multiplier for the blast attack
         public static float BlastBoltsDamageMultiplier = 0.2f;
 
-        public static float SwirlBoltAmount = 6f; //The amount of cosmic bolts produced during the swirl attack
-        public static float SwirlBoltDamageMultiplier = 0.7f; //This is the damage multiplier for ALL THE BOLTS: Aka, said damage multiplier is divided by the amount of bolts in a swirl and the full damage multiplier is gotten if you hit all the bolts
+        public static float SwirlBoltAmount = 12f; //The amount of cosmic bolts produced during the swirl attack
+        public static float SwirlBoltDamageMultiplier = 1f; //This is the damage multiplier for ALL THE BOLTS: Aka, said damage multiplier is divided by the amount of bolts in a swirl and the full damage multiplier is gotten if you hit all the bolts
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
@@ -76,7 +76,7 @@ namespace CalamityMod.Items.Weapons.Melee
         public override void SetDefaults()
         {
             Item.width = Item.height = 136;
-            Item.damage = 1800;
+            Item.damage = 2000;
             Item.DamageType = DamageClass.MeleeNoSpeed;
             Item.noMelee = true;
             Item.noUseGraphic = true;
@@ -252,7 +252,7 @@ namespace CalamityMod.Items.Weapons.Melee
             CreateRecipe().
                 AddIngredient<FourSeasonsGalaxia>().
                 AddIngredient<ArkoftheElements>().
-                AddIngredient<AuricBar>(5).
+                AddIngredient<AuricBar>(15).
                 AddTile<CosmicAnvil>().
                 Register();
         }
