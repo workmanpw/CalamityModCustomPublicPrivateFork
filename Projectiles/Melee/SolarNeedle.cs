@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
@@ -10,7 +10,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
-
 
 namespace CalamityMod.Projectiles.Melee
 {
@@ -34,7 +33,8 @@ namespace CalamityMod.Projectiles.Melee
             Projectile.penetrate = 1;
             Projectile.timeLeft = (int)MaxTime;
             Projectile.DamageType = DamageClass.Melee;
-            Projectile.tileCollide = false;
+            // Set to false to ensure the needle never breaks on walls
+            Projectile.tileCollide = false; 
         }
 
         public override bool? Colliding(Rectangle projHitbox, Rectangle targetHitbox)
@@ -84,7 +84,7 @@ namespace CalamityMod.Projectiles.Melee
             {
                 Main.spriteBatch.EnterShaderRegion();
                 Color outlineColor = Color.Lerp(Color.White, Color.OrangeRed, Timer / MaxTime);
-                Vector3 outlineHSL = Main.rgbToHsl(outlineColor); //BasicTint uses the opposite hue i guess? or smth is fucked with the way shaders get their colors. anyways, we invert it
+                Vector3 outlineHSL = Main.rgbToHsl(outlineColor); 
                 float outlineThickness = MathHelper.Clamp(Timer / MaxTime * 4f, 0f, 3f);
 
                 GameShaders.Misc["CalamityMod:BasicTint"].UseOpacity(1f);
@@ -98,7 +98,6 @@ namespace CalamityMod.Projectiles.Melee
                 Main.spriteBatch.ExitShaderRegion();
             }
 
-
             DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], lightColor, 1);
 
             Main.spriteBatch.End();
@@ -106,7 +105,6 @@ namespace CalamityMod.Projectiles.Melee
 
             Texture2D starTexture = Request<Texture2D>("CalamityMod/Particles/Sparkle").Value;
             Texture2D bloomTexture = Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
-            //Ajust the bloom's texture to be the same size as the star's
             float properBloomSize = (float)starTexture.Height / (float)bloomTexture.Height;
 
             Color color = Main.hslToRgb((Main.GlobalTimeWrappedHourly * 0.6f) % 1, 1, 0.85f);
@@ -120,7 +118,6 @@ namespace CalamityMod.Projectiles.Melee
 
             Main.spriteBatch.End();
             Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
-
 
             return false;
         }
