@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
@@ -28,7 +28,8 @@ namespace CalamityMod.Projectiles.Melee
             Projectile.width = 20;
             Projectile.height = 20;
             Projectile.friendly = true;
-            Projectile.tileCollide = false;
+            // Always ignore tile collision
+            Projectile.tileCollide = false; 
             Projectile.DamageType = DamageClass.Melee;
             Projectile.penetrate = 1;
             Projectile.timeLeft = (int)MaxTime;
@@ -50,10 +51,7 @@ namespace CalamityMod.Projectiles.Melee
                 }
             }
 
-            if (Projectile.timeLeft < MaxTime - 5)
-            {
-                Projectile.tileCollide = true;
-            }
+            // Removed the code that set tileCollide to true after 5 frames
 
             if (Timer / MaxTime > 0.25f)
             {
@@ -91,7 +89,11 @@ namespace CalamityMod.Projectiles.Melee
 
             Projectile.rotation += (Math.Abs(Projectile.velocity.X) + Math.Abs(Projectile.velocity.Y)) * 0.01f * (float)Projectile.direction;
 
-            CalamityUtils.HomeInOnNPC(Projectile, !Projectile.tileCollide, 350f, 12f, 20f);
+            // Updated Homing: 
+            // 1. ignoreTileExposed is set to true so it homes through walls.
+            // 2. homingStrength increased from 12f to 24f for sharper turning.
+            // 3. speed increased from 20f to 28f for faster tracking.
+            CalamityUtils.HomeInOnNPC(Projectile, true, 450f, 24f, 28f);
         }
 
         public override bool PreDraw(ref Color lightColor)
@@ -103,7 +105,6 @@ namespace CalamityMod.Projectiles.Melee
 
             Texture2D starTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/Sparkle").Value;
             Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
-            //Ajust the bloom's texture to be the same size as the star's
             float properBloomSize = (float)starTexture.Height / (float)bloomTexture.Height;
 
             Color color = Main.hslToRgb((float)Math.Sin(Main.GlobalTimeWrappedHourly * 15f) * 0.05f + 0.08f, 1, 0.55f);
@@ -116,7 +117,6 @@ namespace CalamityMod.Projectiles.Melee
 
             Main.spriteBatch.End();
             Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
-
 
             return false;
         }
