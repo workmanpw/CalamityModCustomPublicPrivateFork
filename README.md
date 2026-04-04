@@ -4,7 +4,7 @@ This is my own private/public fork of the Calamity Mod. I will be making changes
 [![Discord](https://img.shields.io/discord/225030931008847874)](https://discord.gg/calamity)
 - [Official site](https://calamitymod.com/)
 - [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2824688072)
-- [calamity Discord](https://discord.gg/calamity)
+- [Calamity Discord](https://discord.gg/calamity)
 - [Official Wiki](https://calamitymod.wiki.gg/)
 - [Support the Calamity Team on Patreon](https://patreon.com/CalamityMod)
 - [Official GitHub](https://github.com/CalamityTeam/CalamityModPublic/releases)
