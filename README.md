@@ -1,3 +1,5 @@
+# IMPORTANT!!!
+
 This is my own private/public fork of the Calamity Mod. I will be making changes to it as I see fit and as I please, while keeping it entirely seperated from the official work. Do not use this repository if you expect or want a balanced, clean Calamity experience, and do not push or publish any changes made here to the official mod's repository: I do not and will not endorse, support, or otherwise condone such behavior. I made this fork for my own enjoyment (but you can use it, if you really want to) and it is not intended to be taken seriously.
 
 # Calamity Mod stuffs
@@ -9,13 +11,13 @@ This is my own private/public fork of the Calamity Mod. I will be making changes
 - [Support the Calamity Team on Patreon](https://patreon.com/CalamityMod)
 - [Official GitHub](https://github.com/CalamityTeam/CalamityModPublic/releases)
 
-Calamity Description (left for obvious reasons):
+Calamity Description (left for obvious reasons, edited to clarify):
 
 The Calamity Mod is a vast content mod for Terraria which adds dozens of bosses and thousands of items to create an intense and varied experience. The mod must be installed using [tModLoader](https://github.com/tModLoader/tModLoader).
 
 **Note:** This repository contains only the latest public release of the Calamity Mod and any public contributions made since then.
 
-Active development by Calamity developers occurs on a separate, private repository. Contributions made here will be cherry picked into that repository. When an update is released to the Steam Workshop, the `1.4.4-release` branch is replaced with the matching branch from the private repository.
+Active development by Calamity developers occurs on a seperate, private repository. Contributions made here will be kept seperate from the official public repository tyo avoid confusion. When an update is released to the Steam Workshop, the `1.4.4-release` branch is replaced with the matching branch from the official repository.
 
 Issues are disabled on this repository. To report a bug, please join the [Calamity Discord](https://discord.gg/calamity) and use the `#bug-reports-read-pins` forum therein.
 
