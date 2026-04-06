@@ -19,7 +19,7 @@ The Calamity Mod is a vast content mod for Terraria which adds dozens of bosses 
 
 **Note:** This repository contains only the latest public release of the Calamity Mod and any public contributions made since then.
 
-Active development by Calamity developers occurs on a seperate, private repository. Contributions made here will be kept seperate from the official public repository tyo avoid confusion. When an update is released to the Steam Workshop, the `1.4.4-release` branch is replaced with the matching branch from the official repository.
+Active development by Calamity developers occurs on a seperate, private repository. Contributions made here will be kept seperate from the official public repository to avoid confusion. When an update is released to the Steam Workshop, the `1.4.4-release` branch is replaced with the matching branch from the official repository.
 
 Issues are disabled on this repository. To report a bug, please join the [Calamity Discord](https://discord.gg/calamity) and use the `#bug-reports-read-pins` forum therein.
 
