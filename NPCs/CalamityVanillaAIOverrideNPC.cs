@@ -29,19 +29,23 @@ namespace CalamityMod.NPCs;
 
 public static class VanillaAIOverrideExtension
 {
-    extension(NPC npc)
+    /// <summary>
+    ///     Attempts to get the AI override instance of type <typeparamref name="AI"/> from the NPC.
+    /// </summary>
+    /// <typeparam name="AI">The type of AI override to get.</typeparam>
+    /// <param name="npc">The NPC to get the AI override from.</param>
+    /// <param name="aiInstance">The AI override instance, if found.</param>
+    /// <returns>True if the AI override was found, false otherwise.</returns>
+    public static bool TryGetAIOverride<AI>(this NPC npc, out AI aiInstance) where AI : VanillaAIOverride, new()
     {
-        public bool TryGetAIOverride<AI>(out AI aiInstance) where AI : VanillaAIOverride, new()
+        if (!npc.TryGetGlobalNPC<CalamityVanillaAIOverrideNPC>(out var aiOverrideNPC))
         {
-            if (!npc.TryGetGlobalNPC<CalamityVanillaAIOverrideNPC>(out var aiOverrideNPC))
-            {
-                aiInstance = null;
-                return false;
-            }
-
-            aiInstance = aiOverrideNPC.AIOverride as AI;
-            return aiInstance != null;
+            aiInstance = null;
+            return false;
         }
+
+        aiInstance = aiOverrideNPC.AIOverride as AI;
+        return aiInstance != null;
     }
 }
 

@@ -121,48 +121,47 @@ internal struct SpriteBatchSnapshot
 /// </summary>
 internal static class SpriteBatchSnapshotExtensions
 {
+    /// <summary>
+    ///     Takes a snapshot of the <see cref="SpriteBatch" /> and then ends the
+    ///     <see cref="SpriteBatch" />
+    /// </summary>
     /// <param name="sb">The <see cref="SpriteBatch" />.</param>
-    extension(SpriteBatch sb)
+    /// <param name="ss">The produced <see cref="SpriteBatchSnapshot" />.</param>
+    public static void End(this SpriteBatch sb, out SpriteBatchSnapshot ss)
     {
-        /// <summary>
-        ///     Takes a snapshot of the <see cref="SpriteBatch" /> and then ends the
-        ///     <see cref="SpriteBatch" />/
-        /// </summary>
-        /// <param name="ss">The produced <see cref="SpriteBatchSnapshot" />.</param>
-        public void End(out SpriteBatchSnapshot ss)
-        {
-            ss = new SpriteBatchSnapshot(sb);
-            sb.End();
-        }
+        ss = new SpriteBatchSnapshot(sb);
+        sb.End();
+    }
 
-        /// <summary>
-        ///     Starts a <see cref="SpriteBatch" /> with the parameters from the
-        ///     given <see cref="SpriteBatchSnapshot" />.
-        /// </summary>
-        /// <param name="ss">The <see cref="SpriteBatchSnapshot" /> to use.</param>
-        public void Begin(in SpriteBatchSnapshot ss)
-        {
-            sb.Begin(
-                ss.SortMode,
-                ss.BlendState,
-                ss.SamplerState,
-                ss.DepthStencilState,
-                ss.RasterizerState,
-                ss.CustomEffect,
-                ss.TransformMatrix
-            );
-        }
+    /// <summary>
+    ///     Starts a <see cref="SpriteBatch" /> with the parameters from the
+    ///     given <see cref="SpriteBatchSnapshot" />.
+    /// </summary>
+    /// <param name="sb">The <see cref="SpriteBatch" />.</param>
+    /// <param name="ss">The <see cref="SpriteBatchSnapshot" /> to use.</param>
+    public static void Begin(this SpriteBatch sb, in SpriteBatchSnapshot ss)
+    {
+        sb.Begin(
+            ss.SortMode,
+            ss.BlendState,
+            ss.SamplerState,
+            ss.DepthStencilState,
+            ss.RasterizerState,
+            ss.CustomEffect,
+            ss.TransformMatrix
+        );
+    }
 
-        /// <summary>
-        ///     Immediately ends and then starts the given <see cref="SpriteBatch" />
-        ///     with the parameters from the given
-        ///     <see cref="SpriteBatchSnapshot" />.
-        /// </summary>
-        /// <param name="ss">The <see cref="SpriteBatchSnapshot" /> to use.</param>
-        public void Restart(in SpriteBatchSnapshot ss)
-        {
-            sb.End();
-            sb.Begin(ss);
-        }
+    /// <summary>
+    ///     Immediately ends and then starts the given <see cref="SpriteBatch" />
+    ///     with the parameters from the given
+    ///     <see cref="SpriteBatchSnapshot" />.
+    /// </summary>
+    /// <param name="sb">The <see cref="SpriteBatch" />.</param>
+    /// <param name="ss">The <see cref="SpriteBatchSnapshot" /> to use.</param>
+    public static void Restart(this SpriteBatch sb, in SpriteBatchSnapshot ss)
+    {
+        sb.End();
+        sb.Begin(ss);
     }
 }

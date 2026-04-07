@@ -7,9 +7,9 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CelestialCalamityAerus.Buffs;
+using CalamityMod.Aerus.AerusBuffs;
 
-namespace CelestialCalamityAerus
+namespace CalamityMod.Aerus.AerusProjectiles
 {
     public class TempestGalaxia2 : ModProjectile
     {

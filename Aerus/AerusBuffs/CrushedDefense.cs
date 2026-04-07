@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 
-namespace CelestialAerus.Buffs
+namespace CalamityMod.Aerus.AerusBuffs
 {
     public class CrushedDefense : ModBuff
     {

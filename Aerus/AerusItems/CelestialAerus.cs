@@ -8,11 +8,9 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using Terraria.Audio;
-using CelestialCalamityAerus.Effects;
-using CelestialCalamityAerus.Effects.Aerus;
-using CelestialCalamityAerus.Aerus.AerusProjectiles;
+using CalamityMod.Aerus.AerusProjectiles;
 
-namespace CelestialCalamityAerus
+namespace CalamityMod.Aerus
 {
     // ── Main Mod Class ──────────────────────────────────────────────────────────
     public class CelestialAerusMod : ModSystem

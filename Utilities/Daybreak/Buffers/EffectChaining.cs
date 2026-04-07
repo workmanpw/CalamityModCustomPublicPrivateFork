@@ -156,7 +156,7 @@ public sealed class DrawWithEffectsScope : IDisposable
         Color? clearColor = null,
         RenderTargetDescriptor? descriptor = null,
         SpriteBatchParameters parameters = default,
-        params IEnumerable<EffectChainEntry> effects
+        params EffectChainEntry[] effects
     )
     {
         ArgumentNullException.ThrowIfNull(spriteBatch);
@@ -236,7 +236,7 @@ public static class EffectChainingExtensions
         Color? clearColor = null,
         RenderTargetDescriptor? descriptor = null,
         SpriteBatchParameters parameters = default,
-        params IEnumerable<EffectChainEntry> effects
+        params EffectChainEntry[] effects
     )
     {
         return new DrawWithEffectsScope(

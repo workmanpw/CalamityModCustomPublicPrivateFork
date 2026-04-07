@@ -7,11 +7,10 @@ using Terraria.ID;
 using System.Collections.Generic;
 using Terraria.ModLoader;
 using System;
-using CelestialCalamityAerus.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.Graphics.Renderers;
 
-namespace CelestialCalamityAerus
+namespace CalamityMod.Aerus.AerusProjectiles
 {
     public class AncientHatchetProjectile : ModProjectile
     {

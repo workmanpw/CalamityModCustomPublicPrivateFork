@@ -244,78 +244,81 @@ internal static class RenderTargetPoolExtensions
     // TODO: Vector2 scale extensions and individual float width/height
     //       extensions.
 
+    /// <summary>
+    ///     See <see cref="RenderTargetPool.Rent"/>.
+    /// </summary>
     /// <param name="pool">The pool to rent from.</param>
-    extension(RenderTargetPool pool)
+    public static RenderTargetLease Rent(
+        this RenderTargetPool pool,
+        GraphicsDevice device,
+        int width,
+        int height
+    )
     {
-        /// <summary>
-        ///     See <see cref="RenderTargetPool.Rent"/>.
-        /// </summary>
-        public RenderTargetLease Rent(
-            GraphicsDevice device,
-            int width,
-            int height
-        )
-        {
-            return pool.Rent(
-                device,
-                width,
-                height,
-                RenderTargetDescriptor.Default
-            );
-        }
+        return pool.Rent(
+            device,
+            width,
+            height,
+            RenderTargetDescriptor.Default
+        );
+    }
 
-        /// <summary>
-        ///     Retrieves a buffer of size <paramref name="baseSize"/> scaled by
-        ///     <paramref name="scale"/> rounded up to the nearest integer
-        ///     value.
-        /// </summary>
-        /// <param name="device">The device to initialize with.</param>
-        /// <param name="baseSize">The base (unscaled) size of the target.</param>
-        /// <param name="scale">The scale factor of the target.</param>
-        /// <returns>
-        ///     A leased target which should be disposed upon use, automatically
-        ///     returning the target to the pool.
-        /// </returns>
-        public RenderTargetLease RentScaled(
-            GraphicsDevice device,
-            Point baseSize,
-            float scale
-        )
-        {
-            return pool.RentScaled(
-                device,
-                baseSize,
-                scale,
-                RenderTargetDescriptor.Default
-            );
-        }
+    /// <summary>
+    ///     Rents a render target with a size scaled from a base size.
+    ///     The resulting target will have dimensions equal to the base size
+    ///     multiplied by <paramref name="scale"/> rounded up to the nearest integer
+    ///     value.
+    /// </summary>
+    /// <param name="pool">The pool to rent from.</param>
+    /// <param name="device">The device to initialize with.</param>
+    /// <param name="baseSize">The base (unscaled) size of the target.</param>
+    /// <param name="scale">The scale factor of the target.</param>
+    /// <returns>
+    ///     A leased target which should be disposed upon use, automatically
+    ///     returning the target to the pool.
+    /// </returns>
+    public static RenderTargetLease RentScaled(
+        this RenderTargetPool pool,
+        GraphicsDevice device,
+        Point baseSize,
+        float scale
+    )
+    {
+        return pool.RentScaled(
+            device,
+            baseSize,
+            scale,
+            RenderTargetDescriptor.Default
+        );
+    }
 
-        /// <summary>
-        ///     Retrieves a buffer of size <paramref name="baseSize"/> scaled by
-        ///     <paramref name="scale"/> rounded up to the nearest integer value and
-        ///     with the given render target <paramref name="descriptor"/>.
-        /// </summary>
-        /// <param name="device">The device to initialize with.</param>
-        /// <param name="baseSize">The base (unscaled) size of the target.</param>
-        /// <param name="scale">The scale factor of the target.</param>
-        /// <param name="descriptor">The initialization parameters.</param>
-        /// <returns>
-        ///     A leased target which should be disposed upon use, automatically
-        ///     returning the target to the pool.
-        /// </returns>
-        public RenderTargetLease RentScaled(
-            GraphicsDevice device,
-            Point baseSize,
-            float scale,
-            RenderTargetDescriptor descriptor
-        )
-        {
-            ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(scale, 0f);
+    /// <summary>
+    ///     Rents a render target with a size scaled from a base size
+    ///     with the given render target <paramref name="descriptor"/>.
+    /// </summary>
+    /// <param name="pool">The pool to rent from.</param>
+    /// <param name="device">The device to initialize with.</param>
+    /// <param name="baseSize">The base (unscaled) size of the target.</param>
+    /// <param name="scale">The scale factor of the target.</param>
+    /// <param name="descriptor">The initialization parameters.</param>
+    /// <returns>
+    ///     A leased target which should be disposed upon use, automatically
+    ///     returning the target to the pool.
+    /// </returns>
+    public static RenderTargetLease RentScaled(
+        this RenderTargetPool pool,
+        GraphicsDevice device,
+        Point baseSize,
+        float scale,
+        RenderTargetDescriptor descriptor
+    )
+    {
+        ArgumentOutOfRangeException.ThrowIfLessThanOrEqual(scale, 0f);
 
-            var width = Math.Max(1, (int)MathF.Ceiling(baseSize.X * scale));
-            var height = Math.Max(1, (int)MathF.Ceiling(baseSize.Y * scale));
-            return pool.Rent(device, width, height, descriptor);
-        }
+        var width = Math.Max(1, (int)MathF.Ceiling(baseSize.X * scale));
+        var height = Math.Max(1, (int)MathF.Ceiling(baseSize.Y * scale));
+
+        return pool.Rent(device, width, height, descriptor);
     }
 }
 

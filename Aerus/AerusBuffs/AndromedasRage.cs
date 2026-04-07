@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 
-namespace CelestialCalamityAerus.Aerus.AerusBuffs
+namespace CalamityMod.Aerus.AerusBuffs
 {
     public class AndromedasRage : ModBuff
     {

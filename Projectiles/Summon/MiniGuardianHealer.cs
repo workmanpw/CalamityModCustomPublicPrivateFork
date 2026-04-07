@@ -150,7 +150,7 @@ namespace CalamityMod.Projectiles.Summon
                                     Main.dust[dust].noGravity = true;
                                     Main.dust[dust].scale = 1f + k;
                                     Main.dust[dust].fadeIn = Main.rand.NextFloat() * 2f;
-                                    Dust dust2 = Dust.BetterCloneDust(dust);
+                                    Dust dust2 = Main.dust[dust].BetterCloneDust();
                                     Dust dust3 = dust2;
                                     dust3.scale /= 2f;
                                     dust3 = dust2;
