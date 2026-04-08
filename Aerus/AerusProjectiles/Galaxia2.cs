@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using CalamityMod.Aerus.AerusBuffs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialCalamityAerus
+namespace CalamityMod.Aerus.AerusProjectiles
 {
     public class Galaxia2 : ModProjectile
     {
@@ -97,10 +98,10 @@ namespace CelestialCalamityAerus
         	ApplyBiomeSpecificBuffs(player);
 
         	// Apply Celestial Flames debuff with max stacks (nothing is immune)
-        	target.AddBuff(ModContent.BuffType<Buffs.CelestialFlames>(), 600); // 10 seconds at 60 ticks/second
+        	target.AddBuff(ModContent.BuffType<CelestialFlames>(), 600); // 10 seconds at 60 ticks/second
 
         	// Apply Crushed Defense debuff (reduces defense by 100&, no defense left)
-        	target.AddBuff(ModContent.BuffType<Buffs.CrushedDefense>(), 600); // 10 seconds at 60 ticks/second
+        	target.AddBuff(ModContent.BuffType<CrushedDefense>(), 600); // 10 seconds at 60 ticks/second
 
         	// Spawn ONE biome-specific projectile on every enemy hit
         	SpawnBiomeProjectiles(player, target.Center, target);
@@ -218,7 +219,7 @@ namespace CelestialCalamityAerus
 	        );
         }
 
-					public override string Texture => "CelestialCalamityAerus/Aerus/Galaxia2";
+					public override string Texture => "CalamityMod/Aerus/Galaxia2";
         private void ApplyBiomeSpecificBuffs(Player player)
         {
 	        // Biome-based buff selection for additional effects

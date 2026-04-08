@@ -132,7 +132,7 @@ namespace CalamityMod.Projectiles.Summon
                 sulphuricAcid.noGravity = true;
                 sulphuricAcid.velocity *= 1.8f;
 
-                sulphuricAcid = sulphuricAcid.BetterCloneDust();
+                sulphuricAcid = DustExtensions.BetterCloneDust(sulphuricAcid);
                 sulphuricAcid.velocity *= -1f;
             }
         }

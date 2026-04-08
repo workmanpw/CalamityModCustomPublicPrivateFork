@@ -6,13 +6,7 @@ namespace CalamityMod.Utilities
     public static class DustExtensions
     {
         [Obsolete("DO NOT USE. It is an unsafe fix to an even more unsafe vanilla method.")]
-        public static Dust BetterCloneDust(this Dust dust)
-        {
-            return BetterCloneDustStatic(dust);
-        }
-
-        [Obsolete("DO NOT USE. It is an unsafe fix to an even more unsafe vanilla method.")]
-        public static Dust BetterCloneDustStatic(Dust rf)
+        public static Dust BetterCloneDust(Dust rf)
         {
             if (rf.dustIndex == Main.maxDustToDraw)
             {
@@ -24,10 +18,15 @@ namespace CalamityMod.Utilities
             {
                 return new Dust();
             }
-
             Dust obj = Main.dust[num];
             obj.position = rf.position;
             obj.velocity = rf.velocity;
+            obj.fadeIn = rf.fadeIn;
+            obj.noGravity = rf.noGravity;
+            obj.scale = rf.scale;
+            obj.rotation = rf.rotation;
+            obj.noLight = rf.noLight;
+            obj.active = rf.active;
             obj.type = rf.type;
             obj.color = rf.color;
             obj.alpha = rf.alpha;
@@ -38,9 +37,9 @@ namespace CalamityMod.Utilities
         }
 
         [Obsolete("DO NOT USE. It is an unsafe fix to an even more unsafe vanilla method.")]
-        public static Dust BetterCloneDust(this Dust dust, int dustIndex)
+        public static Dust BetterCloneDust(int dustIndex)
         {
-            return BetterCloneDustStatic(Main.dust[dustIndex]);
+            return BetterCloneDust(Main.dust[dustIndex]);
         }
     }
 }

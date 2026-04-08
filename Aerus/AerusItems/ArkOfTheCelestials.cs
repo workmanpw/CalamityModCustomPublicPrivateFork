@@ -11,13 +11,14 @@ using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using CalamityMod.Aerus.AerusBuffs;
 using CalamityMod.Aerus.AerusProjectiles;
 
 namespace CalamityMod.Aerus
 {
     public class ArkOfTheCelestials : ModItem
     {
-        public override string Texture => "CelestialCalamityAerus/Aerus/ArkOfTheCelestials";
+        public override string Texture => "CalamityMod/Aerus/ArkOfTheCelestials";
         public override void SetStaticDefaults()
         {
             // DisplayName and Tooltip are now set via localization
@@ -103,7 +104,7 @@ namespace CalamityMod.Aerus
             player.Heal(250);
             
             // Apply CelestialFlames debuff to target
-            target.AddBuff(ModContent.BuffType<Buffs.Aerus.CelestialFlames>(), 300);
+            target.AddBuff(ModContent.BuffType<CelestialFlames>(), 300);
         }
     }
 }

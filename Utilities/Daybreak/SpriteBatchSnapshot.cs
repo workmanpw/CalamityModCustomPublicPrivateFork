@@ -123,7 +123,7 @@ internal static class SpriteBatchSnapshotExtensions
 {
     /// <summary>
     ///     Takes a snapshot of the <see cref="SpriteBatch" /> and then ends the
-    ///     <see cref="SpriteBatch" />
+    ///     <see cref="SpriteBatch" />/
     /// </summary>
     /// <param name="sb">The <see cref="SpriteBatch" />.</param>
     /// <param name="ss">The produced <see cref="SpriteBatchSnapshot" />.</param>

@@ -263,7 +263,7 @@ namespace CalamityMod.Projectiles.Ranged
                 // If the beam isn't at max scale, then make additional smaller dust.
                 if (Projectile.scale != MaxBeamScale)
                 {
-                    Dust smallDust = Main.dust[d].BetterCloneDust();
+                    Dust smallDust = DustExtensions.BetterCloneDust(d);
                     smallDust.scale /= 2f;
                 }
             }

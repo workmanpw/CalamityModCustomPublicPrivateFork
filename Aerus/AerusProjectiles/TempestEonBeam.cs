@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 using System;
 using System.Collections.Generic;
 
-namespace CelestialCalamityAerus
+namespace CalamityMod.Aerus.AerusProjectiles
 {
     public class TempestEonBeam : ModProjectile
     {
@@ -35,7 +35,7 @@ namespace CelestialCalamityAerus
             ProjectileID.Sets.TrailingMode[Type] = 2;
         }
         
-        public override string Texture => "CelestialCalamityAerus/Aerus/TempestEonBeam";
+        public override string Texture => "CalamityMod/Aerus/TempestEonBeam";
         public override void SetDefaults()
         {
             Projectile.aiStyle = ProjAIStyleID.Beam;

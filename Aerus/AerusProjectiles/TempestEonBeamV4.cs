@@ -7,11 +7,11 @@ using Terraria.ModLoader;
 using System;
 using System.Collections.Generic;
 
-namespace CelestialCalamityAerus
+namespace CalamityMod.Aerus.AerusProjectiles
 {
     public class TempestEonBeamV4 : ModProjectile
     {
-        public override string Texture => "CelestialCalamityAerus/Aerus/TempestEonBeamV4";
+        public override string Texture => "CalamityMod/Aerus/TempestEonBeamV4";
         // Trail system - same as Ancient Hatchet!
         private List<TrailSegment> trailSegments = new List<TrailSegment>();
         private const int MaxTrailLength = 20; // Shorter trail

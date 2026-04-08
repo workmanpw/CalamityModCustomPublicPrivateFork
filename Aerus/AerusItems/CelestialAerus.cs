@@ -8,12 +8,15 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using Terraria.Audio;
+// using CalamityMod.Aerus.Effects;
+// using CalamityMod.Aerus.AerusEffects;
+using CalamityMod.Aerus.AerusBuffs;
 using CalamityMod.Aerus.AerusProjectiles;
 
 namespace CalamityMod.Aerus
 {
     // ── Main Mod Class ──────────────────────────────────────────────────────────
-    public class CelestialAerusMod : ModSystem
+    public class CalamityModAerusMod : ModSystem
     {
         public static ModKeybind SwitchModeKeybind;
 
@@ -37,7 +40,7 @@ namespace CalamityMod.Aerus
     // ── Celestial Aerus Sword ────────────────────────────────────────────────────
     public class CelestialAerus : ModItem
     {
-        public override string Texture => "CelestialCalamityAerus/Aerus/CelestialAerus";
+        public override string Texture => "CalamityMod/Aerus/CelestialAerus";
         public override void SetStaticDefaults()
         {
             // DisplayName and Tooltip are now set via localization
@@ -147,17 +150,19 @@ namespace CalamityMod.Aerus
             player.Heal(125);
             
             // Apply CelestialFlames debuff to target
-            target.AddBuff(ModContent.BuffType<Buffs.Aerus.CelestialFlames>(), 300);
+            target.AddBuff(ModContent.BuffType<CelestialFlames>(), 300);
         }
     }
 
     // ── Homing Boomerang Projectile ────────────────────────────────────────────
     public class ThrownCelestialAerus : ModProjectile
     {
-        public override string Texture => "CelestialCalamityAerus/Aerus/ThrownCelestialAerus";
+        public override string Texture => "CalamityMod/Aerus/ThrownCelestialAerus";
         
         public override void SetStaticDefaults()
-            => DisplayName.SetDefault("Celestial Blade");
+        {
+            // DisplayName and Description are now handled by localization files
+        }
 
         public override void SetDefaults()
         {
@@ -256,7 +261,7 @@ namespace CalamityMod.Aerus
 
         public override void ProcessTriggers(TriggersSet triggersSet)
         {
-            if (CelestialAerusMod.SwitchModeKeybind.JustPressed)
+            if (CalamityModAerusMod.SwitchModeKeybind.JustPressed)
             {
                 aerusMode = (aerusMode + 1) % 2;
                 string mode = aerusMode == 1 ? "Boomerang" : "Fireball";
@@ -300,7 +305,7 @@ namespace CalamityMod.Aerus
     // ── New Celestial Yoyo Item ────────────────────────────────────────────────
     public class ThreadOfTheEmpyrean : ModItem
     {
-        public override string Texture => "CelestialCalamityAerus/Aerus/ThreadOfTheEmpyrean";
+        public override string Texture => "CalamityMod/Aerus/ThreadOfTheEmpyrean";
         public override void SetStaticDefaults()
         {
             // DisplayName and Tooltip are now set via localization
@@ -349,7 +354,7 @@ namespace CalamityMod.Aerus
     // ── Thread of the Empyrean Projectile ─────────────────────────────────────
     public class ThreadOfTheEmpyreanProjectile : ModProjectile
     {
-        public override string Texture => "CelestialCalamityAerus/Aerus/ThreadOfTheEmpyreanProjectile";
+        public override string Texture => "CalamityMod/Aerus/ThreadOfTheEmpyreanProjectile";
         private int fireTimer;
 
         // Enhanced graphics system for the yoyo
@@ -509,16 +514,16 @@ namespace CalamityMod.Aerus
         public override bool PreDraw(ref Color lightColor)
         {
             // Apply the shader effect for the trail
-            CelestialTrailEffect.BeginDrawTrail();
+            // CelestialTrailEffect.BeginDrawTrail();
             
             // Draw the enhanced yoyo Exobeam trail system with shader
             DrawYoyoTrail(lightColor);
             
             // End the shader effect for the trail
-            CelestialTrailEffect.EndDrawTrail();
+            // CelestialTrailEffect.EndDrawTrail();
 
             // Then draw the main yoyo projectile with enhanced effects
-            Texture2D texture = ModContent.Request<Texture2D>("CelestialCalamityAerus/Aerus/ThreadOfTheEmpyreanProjectile").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Aerus/ThreadOfTheEmpyreanProjectile").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
 
             // Simplified intensity calculation
@@ -536,7 +541,7 @@ namespace CalamityMod.Aerus
             Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, null, null, Main.GameViewMatrix.TransformationMatrix);
 
             // Apply the fire shader for the glow effect
-            CelestialFireTrailEffect.BeginDrawTrail();
+            // CelestialFireTrailEffect.BeginDrawTrail();
             
             // Reduced to 4 layers for better performance with shader
             for (int i = 0; i < 4; i++)
@@ -549,16 +554,16 @@ namespace CalamityMod.Aerus
             }
             
             // End the fire shader
-            CelestialFireTrailEffect.EndDrawTrail();
+            // CelestialFireTrailEffect.EndDrawTrail();
 
             // Reset to default blending
             Main.spriteBatch.End();
             Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, Main.DefaultSamplerState, DepthStencilState.None, null, null, Main.GameViewMatrix.TransformationMatrix);
 
             // Draw the main projectile with the celestial trail shader
-            CelestialTrailEffect.BeginDrawTrail();
+            // CelestialTrailEffect.BeginDrawTrail();
             Main.spriteBatch.Draw(texture, drawPosition, null, new Color(baseColor.ToVector4() * lightColor.ToVector4()), Projectile.rotation, texture.Size() / 2, Projectile.scale, SpriteEffects.None, 0f);
-            CelestialTrailEffect.EndDrawTrail();
+            // CelestialTrailEffect.EndDrawTrail();
 
             return false;
         }
@@ -574,7 +579,7 @@ namespace CalamityMod.Aerus
         private void DrawBasicYoyoTrail(Color lightColor)
         {
             // Use the celestial trail shader for the yoyo trail
-            CelestialTrailEffect.BeginDrawTrail();
+            // CelestialTrailEffect.BeginDrawTrail();
             
             // Draw the trail with multiple layers for a glowing effect
             for (int i = 0; i < trailPositions.Count - 1; i++)
@@ -584,7 +589,7 @@ namespace CalamityMod.Aerus
                 float scale = Projectile.scale * (0.8f + 0.4f * (float)Math.Sin(Main.GlobalTimeWrappedHourly * 4f));
                 
                 // Get the texture for the trail segment
-                Texture2D texture = ModContent.Request<Texture2D>("CelestialCalamityAerus/Aerus/ThreadOfTheEmpyreanProjectile").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Aerus/ThreadOfTheEmpyreanProjectile").Value;
                 
                 // Draw the trail segment with the shader effect
                 Main.spriteBatch.Draw(
@@ -601,7 +606,7 @@ namespace CalamityMod.Aerus
             }
             
             // End the shader effect
-            CelestialTrailEffect.EndDrawTrail();
+            // CelestialTrailEffect.EndDrawTrail();
             for (int i = 0; i < trailPositions.Count - 1; i++)
             {
                 if (i >= trailPositions.Count - 1) break;

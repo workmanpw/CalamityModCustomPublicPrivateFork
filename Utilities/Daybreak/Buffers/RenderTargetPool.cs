@@ -247,7 +247,6 @@ internal static class RenderTargetPoolExtensions
     /// <summary>
     ///     See <see cref="RenderTargetPool.Rent"/>.
     /// </summary>
-    /// <param name="pool">The pool to rent from.</param>
     public static RenderTargetLease Rent(
         this RenderTargetPool pool,
         GraphicsDevice device,
@@ -264,9 +263,8 @@ internal static class RenderTargetPoolExtensions
     }
 
     /// <summary>
-    ///     Rents a render target with a size scaled from a base size.
-    ///     The resulting target will have dimensions equal to the base size
-    ///     multiplied by <paramref name="scale"/> rounded up to the nearest integer
+    ///     Retrieves a buffer of size <paramref name="baseSize"/> scaled by
+    ///     <paramref name="scale"/> rounded up to the nearest integer
     ///     value.
     /// </summary>
     /// <param name="pool">The pool to rent from.</param>
@@ -293,7 +291,8 @@ internal static class RenderTargetPoolExtensions
     }
 
     /// <summary>
-    ///     Rents a render target with a size scaled from a base size
+    ///     Retrieves a buffer of size <paramref name="baseSize"/> scaled by
+    ///     <paramref name="scale"/> rounded up to the nearest integer value and
     ///     with the given render target <paramref name="descriptor"/>.
     /// </summary>
     /// <param name="pool">The pool to rent from.</param>
@@ -317,7 +316,6 @@ internal static class RenderTargetPoolExtensions
 
         var width = Math.Max(1, (int)MathF.Ceiling(baseSize.X * scale));
         var height = Math.Max(1, (int)MathF.Ceiling(baseSize.Y * scale));
-
         return pool.Rent(device, width, height, descriptor);
     }
 }
@@ -345,8 +343,8 @@ internal sealed class SharedRenderTargetPool : RenderTargetPool
     }
 
     // TODO: We can tweak these later for performance?
-    private const int max_per_key = 4;         // Max identical targets.
-    private const int max_total_targets = 128; // Max targets stored.
+    private const int MaxPerKey = 4;         // Max identical targets.
+    private const int MaxTotalTargets = 128; // Max targets stored.
     private static readonly TimeSpan max_idle_time = TimeSpan.FromSeconds(5);
     private static readonly TimeSpan minimum_trim_time = TimeSpan.FromSeconds(1);
 
@@ -410,9 +408,9 @@ internal sealed class SharedRenderTargetPool : RenderTargetPool
             entry.LastUsed = DateTime.UtcNow;
         }
 
-        if (entry.Targets.Count < max_per_key)
+        if (entry.Targets.Count < MaxPerKey)
         {
-            if (totalCached >= max_total_targets)
+            if (totalCached >= MaxTotalTargets)
             {
                 lease.Target.Dispose();
                 return;

@@ -7,11 +7,11 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialCalamityAerus
+namespace CalamityMod.Aerus.AerusProjectiles
 {
     public class ArkGalaxia2 : ModProjectile
     {
-		public override string Texture => "CelestialCalamityAerus/Aerus/ArkGalaxia2";
+		public override string Texture => "CalamityMod/Aerus/ArkGalaxia2";
     	public override void SetStaticDefaults()
 		{
 			//DisplayName.SetDefault("Orb");

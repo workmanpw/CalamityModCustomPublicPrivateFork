@@ -21,13 +21,19 @@ namespace CalamityMod.UI.ResourceSets
         const string fancyFolder = "Images/UI/PlayerResourceSets/FancyClassic/";
         const string barsFolder = "Images/UI/PlayerResourceSets/HorizontalBars/";
 
-        private Asset<Texture2D> FancyHeartFill => field ??= Main.Assets.Request<Texture2D>(fancyFolder + "Heart_Fill");
-        private Asset<Texture2D> FancyHeartFillB => field ??= Main.Assets.Request<Texture2D>(fancyFolder + "Heart_Fill_B");
-        private Asset<Texture2D> FancyStarFill => field ??= Main.Assets.Request<Texture2D>(fancyFolder + "Star_Fill");
+        private Asset<Texture2D> _fancyHeartFill;
+        private Asset<Texture2D> FancyHeartFill => _fancyHeartFill ??= Main.Assets.Request<Texture2D>(fancyFolder + "Heart_Fill");
+        private Asset<Texture2D> _fancyHeartFillB;
+        private Asset<Texture2D> FancyHeartFillB => _fancyHeartFillB ??= Main.Assets.Request<Texture2D>(fancyFolder + "Heart_Fill_B");
+        private Asset<Texture2D> _fancyStarFill;
+        private Asset<Texture2D> FancyStarFill => _fancyStarFill ??= Main.Assets.Request<Texture2D>(fancyFolder + "Star_Fill");
 
-        private Asset<Texture2D> BarMPFill => field ??= Main.Assets.Request<Texture2D>(barsFolder + "MP_Fill");
-        private Asset<Texture2D> BarHPFill => field ??= Main.Assets.Request<Texture2D>(barsFolder + "HP_Fill");
-        private Asset<Texture2D> BarHPFillHoney => field ??= Main.Assets.Request<Texture2D>(barsFolder + "HP_Fill_Honey");
+        private Asset<Texture2D> _barMPFill;
+        private Asset<Texture2D> BarMPFill => _barMPFill ??= Main.Assets.Request<Texture2D>(barsFolder + "MP_Fill");
+        private Asset<Texture2D> _barHPFill;
+        private Asset<Texture2D> BarHPFill => _barHPFill ??= Main.Assets.Request<Texture2D>(barsFolder + "HP_Fill");
+        private Asset<Texture2D> _barHPFillHoney;
+        private Asset<Texture2D> BarHPFillHoney => _barHPFillHoney ??= Main.Assets.Request<Texture2D>(barsFolder + "HP_Fill_Honey");
 
         // Determines which health UI to draw based on player upgrades.
         public static CalamityUIResourceSet GetLifeTextureSet()

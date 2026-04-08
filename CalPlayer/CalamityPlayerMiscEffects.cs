@@ -1677,7 +1677,7 @@ namespace CalamityMod.CalPlayer
                                         holyDust.noGravity = true;
                                         holyDust.scale = 1f;
                                         holyDust.fadeIn = Main.rand.NextFloat() * 2f;
-                                        Dust dustClone = Dust.BetterCloneDust(holyDust);
+                                        Dust dustClone = DustExtensions.BetterCloneDust(holyDust);
                                         Dust extraDust = dustClone;
                                         extraDust.scale /= 2f;
                                         extraDust = dustClone;

@@ -11,14 +11,16 @@ using System.Collections.Generic;
 using Terraria.Audio;
 using static Terraria.ModLoader.ModContent;
 
-namespace CelestialCalamityAerus.Aerus.AerusProjectiles
+namespace CalamityMod.Aerus.AerusProjectiles
 {
     public class CelestialFireball : ModProjectile
     {
-        public override string Texture => "CelestialCalamityAerus/Aerus/CelestialFireball";
+        public override string Texture => "CalamityMod/Aerus/CelestialFireball";
         
         public override void SetStaticDefaults()
-            => DisplayName.SetDefault("Celestial Beam");
+        {
+            // DisplayName and Description are now handled by localization files
+        }
 
         public override void SetDefaults()
         {

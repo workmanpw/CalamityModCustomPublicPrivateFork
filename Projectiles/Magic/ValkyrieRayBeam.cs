@@ -196,7 +196,7 @@ namespace CalamityMod.Projectiles.Magic
                 // If the beam isn't at max scale, then make additional smaller dust.
                 if (Projectile.scale != MaxBeamScale)
                 {
-                    Dust smallDust = Dust.BetterCloneDust(d);
+                    Dust smallDust = DustExtensions.BetterCloneDust(Main.dust[d]);
                     smallDust.scale /= 2f;
                 }
             }

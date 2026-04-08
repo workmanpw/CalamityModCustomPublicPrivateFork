@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialCalamityAerus
+namespace CalamityMod.Aerus.AerusProjectiles
 {
     public class EonBeamV3 : ModProjectile
     {
@@ -15,7 +15,7 @@ namespace CelestialCalamityAerus
 		{
 			//DisplayName.SetDefault("Beam");
 		}
-		public override string Texture => "CelestialCalamityAerus/Aerus/EonBeamV3";
+		public override string Texture => "CalamityMod/Aerus/EonBeamV3";
     	
         public override void SetDefaults()
         {

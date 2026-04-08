@@ -29,13 +29,6 @@ namespace CalamityMod.NPCs;
 
 public static class VanillaAIOverrideExtension
 {
-    /// <summary>
-    ///     Attempts to get the AI override instance of type <typeparamref name="AI"/> from the NPC.
-    /// </summary>
-    /// <typeparam name="AI">The type of AI override to get.</typeparam>
-    /// <param name="npc">The NPC to get the AI override from.</param>
-    /// <param name="aiInstance">The AI override instance, if found.</param>
-    /// <returns>True if the AI override was found, false otherwise.</returns>
     public static bool TryGetAIOverride<AI>(this NPC npc, out AI aiInstance) where AI : VanillaAIOverride, new()
     {
         if (!npc.TryGetGlobalNPC<CalamityVanillaAIOverrideNPC>(out var aiOverrideNPC))

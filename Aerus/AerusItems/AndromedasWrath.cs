@@ -1,17 +1,19 @@
 using System;
 using System.Collections.Generic;
+using CalamityMod.Aerus.AerusBuffs;
+using CalamityMod.Aerus.AerusProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialCalamityAerus
+namespace CalamityMod.Aerus
 {
 	public class AndromedasWrath : ModItem
 	{
 
-		public override string Texture => "CelestialCalamityAerus/Aerus/AndromedasWrath";
+		public override string Texture => "CalamityMod/Aerus/AndromedasWrath";
 
 		public override void SetStaticDefaults()
 		{
@@ -133,10 +135,10 @@ namespace CelestialCalamityAerus
             player.Heal(75);
 
             // Apply AndromedasRage buff to player
-            player.AddBuff(ModContent.BuffType<Buffs.Aerus.AndromedasRage>(), 300);
+            player.AddBuff(ModContent.BuffType<AndromedasRage>(), 300);
 
             // Apply CelestialFlames debuff to target
-            target.AddBuff(ModContent.BuffType<Buffs.Aerus.CelestialFlames>(), 300);
+            target.AddBuff(ModContent.BuffType<CelestialFlames>(), 300);
 
             // Apply biome-specific buffs to player based on current location
             ApplyBiomeSpecificBuffs(player);
@@ -296,7 +298,7 @@ namespace CelestialCalamityAerus
 	        target.AddBuff(BuffID.CursedInferno, 600); // Cursed flames DoT
 	        target.AddBuff(BuffID.Venom, 600); // Venom DoT (stronger poison)
 	        target.AddBuff(BuffID.Weak, 600); // Reduces damage by 10%
-	        target.AddBuff(ModContent.BuffType<Buffs.Aerus.CrushedDefense>(), 600); // Cuts enemy defense to 0.
+	        target.AddBuff(ModContent.BuffType<CrushedDefense>(), 600); // Cuts enemy defense to 0.
 	        target.AddBuff(BuffID.OnFire, 600); // Burning DoT
 	        target.AddBuff(BuffID.Poisoned, 600); // Poison DoT
 	        target.AddBuff(BuffID.Frostburn, 600); // Frostbite effect

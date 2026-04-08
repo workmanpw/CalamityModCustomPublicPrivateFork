@@ -23,7 +23,8 @@ namespace CalamityMod.Buffs.DamageOverTime
             EnemyLostRegen = 3000
         };
 
-        public static Asset<Texture2D> ShaderTexture => field ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons");
+        private static Asset<Texture2D> _shaderTexture;
+        public static Asset<Texture2D> ShaderTexture => _shaderTexture ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons");
 
         public static List<int> ExcludedNPCsForShader => new()
         {

@@ -12,7 +12,8 @@ namespace CalamityMod.CalPlayer.Dashes
         public static string ID { get; }
         public int dashTime { get; set; }
         public virtual int dashStartup => 0;
-        public virtual string DashID => field ??= FullName;
+        private string _dashID;
+        public virtual string DashID => _dashID ??= FullName;
 
         public int DashTimeAdjustedForStartup => dashTime - dashStartup;
 

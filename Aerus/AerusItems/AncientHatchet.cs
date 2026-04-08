@@ -1,16 +1,18 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
+using CalamityMod.Aerus.AerusBuffs;
+using CalamityMod.Aerus.AerusProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
-namespace CelestialCalamityAerus;
+namespace CalamityMod.Aerus;
 
 public class AncientHatchet : ModItem
 {
-    public override string Texture => "CelestialCalamityAerus/Aerus/AncientHatchet";
+    public override string Texture => "CalamityMod/Aerus/AncientHatchet";
     public override void SetStaticDefaults()
     {
         // DisplayName and Tooltip are now set via localization
@@ -47,7 +49,7 @@ public class AncientHatchet : ModItem
     public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
     {
         // Apply CelestialFlames debuff to target
-        target.AddBuff(ModContent.BuffType<Buffs.Aerus.CelestialFlames>(), 300);
+        target.AddBuff(ModContent.BuffType<CelestialFlames>(), 300);
         
         // This will make the hatchet return after hitting an enemy
         for (int i = 0; i < Main.maxProjectiles; i++)

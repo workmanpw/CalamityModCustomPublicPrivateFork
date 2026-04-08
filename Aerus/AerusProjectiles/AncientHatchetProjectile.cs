@@ -28,7 +28,7 @@ namespace CalamityMod.Aerus.AerusProjectiles
             // DisplayName handled by localization
         }
 
-        public override string Texture => "CelestialCalamityAerus/Aerus/AncientHatchetProjectile";
+        public override string Texture => "CalamityMod/Aerus/AncientHatchetProjectile";
 
         // Removed Load() as we don't need to load the effect instance anymore
 
@@ -224,10 +224,10 @@ namespace CalamityMod.Aerus.AerusProjectiles
             target.AddBuff(BuffID.Daybreak, 300); // 5 seconds
 
             // MageHammer-style explosion with orange particles
-            if (Projectile.owner == Main.myPlayer)
-            {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0f, 0f, ModContent.ProjectileType<Projectiles.Typeless.MageHammerBoom>(), (int)(Projectile.damage * 0.25), Projectile.knockBack, Projectile.owner, 0f, 0f);
-            }
+            // if (Projectile.owner == Main.myPlayer)
+            // {
+            //     Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0f, 0f, ModContent.ProjectileType<Projectiles.Typeless.MageHammerBoom>(), (int)(Projectile.damage * 0.25), Projectile.knockBack, Projectile.owner, 0f, 0f);
+            // }
             
             SoundEngine.PlaySound(SoundID.Item14, Projectile.position);
             

@@ -17,11 +17,14 @@ namespace CalamityMod.Fonts
 
         public static Asset<DynamicSpriteFont> CombatTextCrit => FontAssets.CombatText[1];
 
-        public static Asset<DynamicSpriteFont> CodebreakerDialog => field ??= GetFont("Fonts/CodebreakerDialog");
+        private static Asset<DynamicSpriteFont> _codebreakerDialog;
+        public static Asset<DynamicSpriteFont> CodebreakerDialog => _codebreakerDialog ??= GetFont("Fonts/CodebreakerDialog");
 
-        public static Asset<DynamicSpriteFont> Impact => field ??= GetFont("Fonts/Impact");
+        private static Asset<DynamicSpriteFont> _impact;
+        public static Asset<DynamicSpriteFont> Impact => _impact ??= GetFont("Fonts/Impact");
 
-        public static Asset<DynamicSpriteFont> Flexure => field ??= GetFont("Fonts/Flexure");
+        private static Asset<DynamicSpriteFont> _flexure;
+        public static Asset<DynamicSpriteFont> Flexure => _flexure ??= GetFont("Fonts/Flexure");
 
         private static Asset<DynamicSpriteFont> GetFont(string path)
         {

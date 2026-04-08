@@ -708,7 +708,7 @@ namespace CalamityMod.NPCs.Providence
                                 Main.dust[dust].noGravity = true;
                                 Main.dust[dust].scale = 1f;
                                 Main.dust[dust].fadeIn = Main.rand.NextFloat() * 2f;
-                                Dust dust2 = Dust.BetterCloneDust(dust);
+                                Dust dust2 = DustExtensions.BetterCloneDust(Main.dust[dust]);
                                 Dust dust3 = dust2;
                                 dust3.scale /= 2f;
                                 dust3 = dust2;
@@ -1354,7 +1354,7 @@ namespace CalamityMod.NPCs.Providence
                                 Main.dust[dust].noGravity = true;
                                 Main.dust[dust].scale = 3f;
                                 Main.dust[dust].fadeIn = Main.rand.NextFloat() * 2f;
-                                Dust dust2 = Dust.BetterCloneDust(dust);
+                                Dust dust2 = DustExtensions.BetterCloneDust(Main.dust[dust]);
                                 Dust dust3 = dust2;
                                 dust3.scale /= 2f;
                                 dust3 = dust2;
@@ -1645,7 +1645,7 @@ namespace CalamityMod.NPCs.Providence
                                         Main.dust[dust].noGravity = true;
                                         Main.dust[dust].scale = 1f + i;
                                         Main.dust[dust].fadeIn = Main.rand.NextFloat() * 2f;
-                                        Dust dust2 = Dust.BetterCloneDust(dust);
+                                        Dust dust2 = DustExtensions.BetterCloneDust(Main.dust[dust]);
                                         Dust dust3 = dust2;
                                         dust3.scale /= 2f;
                                         dust3 = dust2;
@@ -2529,9 +2529,12 @@ namespace CalamityMod.NPCs.Providence
             }
         }
 
-        private static Asset<Texture2D> DiagonalNoise => field ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/HarshNoise");
-        private static Asset<Texture2D> UpwardPerlinNoise => field ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Perlin");
-        private static Asset<Texture2D> UpwardNoise => field ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/MeltyNoise");
+        private static Asset<Texture2D> _diagonalNoise;
+        private static Asset<Texture2D> DiagonalNoise => _diagonalNoise ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/HarshNoise");
+        private static Asset<Texture2D> _upwardPerlinNoise;
+        private static Asset<Texture2D> UpwardPerlinNoise => _upwardPerlinNoise ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Perlin");
+        private static Asset<Texture2D> _upwardNoise;
+        private static Asset<Texture2D> UpwardNoise => _upwardNoise ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/MeltyNoise");
 
         private static void DrawHolyInferno()
         {

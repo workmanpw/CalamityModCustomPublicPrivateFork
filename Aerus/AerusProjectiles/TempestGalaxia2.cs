@@ -13,7 +13,7 @@ namespace CalamityMod.Aerus.AerusProjectiles
 {
     public class TempestGalaxia2 : ModProjectile
     {
-		public override string Texture => "CelestialCalamityAerus/Aerus/TempestGalaxia2";
+		public override string Texture => "CalamityMod/Aerus/TempestGalaxia2";
         // Trail system - same as Ancient Hatchet!
         private List<TrailSegment> trailSegments = new List<TrailSegment>();
         private const int MaxTrailLength = 20; // Shorter trail

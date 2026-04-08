@@ -7,7 +7,7 @@ namespace CalamityMod.Aerus.AerusBuffs
 {
     public class CelestialFlames : ModBuff
     {
-        public override string Texture => "CelestialCalamityAerus/Aerus/CelestialFireball"; // Use existing projectile texture as buff icon
+        public override string Texture => "CalamityMod/Aerus/CelestialFireball"; // Use existing projectile texture as buff icon
 
         public override void SetStaticDefaults()
         {

@@ -50,7 +50,8 @@ namespace CalamityMod.Items.SummonItems
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
             TooltipLine bait = tooltips.FirstOrDefault(x => x.Mod == "Terraria" && x.Name == "BaitPower");
-            bait?.Text = Language.GetTextValue("GameUI.BaitPower", SpoofBaitNumber);
+            if (bait != null)
+                bait.Text = Language.GetTextValue("GameUI.BaitPower", SpoofBaitNumber);
         }
     }
 }

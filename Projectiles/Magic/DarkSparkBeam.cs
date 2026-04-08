@@ -144,7 +144,7 @@ namespace CalamityMod.Projectiles.Magic
                     Main.dust[rainbowDust].noGravity = true;
                     if (Projectile.scale != 1.4f)
                     {
-                        Dust rainbowClone = Main.dust[rainbowDust].BetterCloneDust();
+                        Dust rainbowClone = DustExtensions.BetterCloneDust(Main.dust[rainbowDust]);
                         rainbowClone.color = color;
                         rainbowClone.scale /= 2f;
                         rainbowClone.noGravity = true;

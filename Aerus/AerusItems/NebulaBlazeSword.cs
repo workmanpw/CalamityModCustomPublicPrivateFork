@@ -1,11 +1,12 @@
 using System;
+using CalamityMod.Aerus.AerusBuffs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CelestialCalamityAerus
+namespace CalamityMod.Aerus
 {
     public class NebulaBlazeSword : ModItem
     {
@@ -100,8 +101,8 @@ namespace CelestialCalamityAerus
 
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            // Apply CelestialFlames debuff to target
-            target.AddBuff(ModContent.BuffType<Buffs.Aerus.CelestialFlames>(), 300);
+            // Apply "CalamityMod/Aerus/CelestialFlames" debuff to target
+            target.AddBuff(ModContent.BuffType<CelestialFlames>(), 300);
         }
 
         public override void AddRecipes()
