@@ -1,4 +1,4 @@
-All credit goes to the Calamity Team for (most of) this code:
+All credit goes to the Calamity Team for this code (I will make my own changes):
 
 This project is a fork of the **Calamity Mod** for Terraria. All original assets, core code, and design concepts belong to the **Calamity Mod Team**. This fork is intended for personal development, custom content, and specific feature expansions under the original mod's licensing guidelines.
 
