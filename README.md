@@ -1,6 +1,6 @@
 # IMPORTANT!!!
 
-This is my own private/public fork of the Calamity Mod. I will be making changes to it as I see fit and as I please, while keeping it entirely seperated from the official work. Do not use this repository if you expect or want a balanced, clean Calamity experience, and do not push or publish any changes made here to the official mod's repository: I do not and will not endorse, support, or otherwise condone such behavior. I made this fork for my own enjoyment (but you can use it, if you really want to) and it is not intended to be taken seriously.
+This is my own public private fork of the Calamity Mod. I will be making changes to it as I see fit and as I please, while keeping it entirely seperated from the official work. Do not use this repository if you expect or want a balanced, clean Calamity experience, and do not push or publish any changes made here to the official mod's repository: I do not and will not endorse, support, or otherwise condone such behavior. I made this fork for my own enjoyment (but you can use it, if you really want to) and it is not intended to be taken seriously.
 
 Credits to the official Calamity Mod and the Calamity Development Team are located in CREDITS.md.
 
