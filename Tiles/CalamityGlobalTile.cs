@@ -244,7 +244,8 @@ namespace CalamityModCustomPublicPrivateFork.Tiles
                 else if (Main.dedServ)
                 {
                     int proj = Projectile.NewProjectile(new EntitySource_TileBreak(i, j), i * 16 + 8, j * 16 + 8, 0f, 0.41f, projectileType, damage, 0f, Main.myPlayer);
-                    Main.projectile[proj].netUpdate = true;
+                    if (proj >= 0 && proj < Main.maxProjectiles && Main.projectile[proj] is not null)
+                        Main.projectile[proj].netUpdate = true;
                 }
             }
 

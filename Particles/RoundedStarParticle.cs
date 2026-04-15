@@ -33,9 +33,12 @@ namespace CalamityModCustomPublicPrivateFork.Particles
             if (UseSpiralAI)
             {
                 // Store the initial radius and angle relative to the player
-                Vector2 directionToPlayer = Position - Main.player[OwnerIndex].Center;
-                InitialRadius = directionToPlayer.Length();
-                OrbitalAngle = directionToPlayer.ToRotation();
+                if (OwnerIndex >= 0 && OwnerIndex < Main.maxPlayers && Main.player[OwnerIndex] is not null && Main.player[OwnerIndex].active)
+                {
+                    Vector2 directionToPlayer = Position - Main.player[OwnerIndex].Center;
+                    InitialRadius = directionToPlayer.Length();
+                    OrbitalAngle = directionToPlayer.ToRotation();
+                }
             }
         }
 
@@ -48,12 +51,12 @@ namespace CalamityModCustomPublicPrivateFork.Particles
                 float fadeScale = 1f - (Time / (float)Lifetime);
                 float currentRadius = InitialRadius * fadeScale;
 
-                Vector2 playerCenter = Main.player[OwnerIndex].Center;
-
-                Vector2 newRelativePosition = OrbitalAngle.ToRotationVector2() * currentRadius;
-
-                // Update the particle's position.
-                Position = playerCenter + newRelativePosition;
+                if (OwnerIndex >= 0 && OwnerIndex < Main.maxPlayers && Main.player[OwnerIndex] is not null && Main.player[OwnerIndex].active)
+                {
+                    Vector2 playerCenter = Main.player[OwnerIndex].Center;
+                    Vector2 newRelativePosition = OrbitalAngle.ToRotationVector2() * currentRadius;
+                    Position = playerCenter + newRelativePosition;
+                }
             }
             else
             {

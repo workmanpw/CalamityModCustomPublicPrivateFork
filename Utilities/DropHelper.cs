@@ -206,6 +206,8 @@ namespace CalamityModCustomPublicPrivateFork
         public static int FindClosestWormSegment(NPC wormHead, params int[] wormSegmentIDs)
         {
             List<int> idsToCheck = new List<int>(wormSegmentIDs);
+            if (wormHead.target < 0 || wormHead.target >= Main.maxPlayers || Main.player[wormHead.target] is null || !Main.player[wormHead.target].active)
+                return wormHead.whoAmI;
             Vector2 playerPos = Main.player[wormHead.target].Center;
 
             int r = wormHead.whoAmI;
@@ -792,7 +794,11 @@ namespace CalamityModCustomPublicPrivateFork
             // If the drop info doesn't have a player, then find the closest player to the NPC and use that player instead.
             Player p = info.player;
             if (p is null || !p.active)
-                p = Main.player[Player.FindClosest(npc.position, npc.width, npc.height)];
+            {
+                int closestPlayerIndex = Player.FindClosest(npc.position, npc.width, npc.height);
+                if (closestPlayerIndex >= 0 && closestPlayerIndex < Main.maxPlayers && Main.player[closestPlayerIndex] is not null && Main.player[closestPlayerIndex].active)
+                    p = Main.player[closestPlayerIndex];
+            }
 
             // With the player identified, return whether or not they have the full Gold Armor set equipped.
             return p.Calamity().goldArmorGoldDrops;

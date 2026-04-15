@@ -12,7 +12,7 @@ namespace CalamityModCustomPublicPrivateFork.Systems
         public override int? MusicModMusic => ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("AstrumDeus");
         public override int VanillaMusic => MusicID.Boss3;
         public override int OtherworldMusic => MusicID.OtherworldlyBoss2;
-        public override int[] AdditionalNPCs => new int[]
+        public override int[] AdditionalNPCs => new[]
         {
             ModContent.NPCType<AstrumDeusBody>(),
             ModContent.NPCType<AstrumDeusTail>()

@@ -208,12 +208,16 @@ namespace CalamityModCustomPublicPrivateFork
                     ret.type = RicoshotTargetType.Bullseye;
                     ret.entityID = proj.whoAmI;
 
-                    NPC bullseyesOwner = Main.npc[(int)proj.ai[0]];
-                    float currentSpeed = theShot.velocity.Length();
-                    Vector2 superpredictiveVelocity = CalculatePredictiveAimToTarget(startPos, bullseyesOwner, currentSpeed);
-                    Vector2 superpredictiveDirection = superpredictiveVelocity.SafeNormalize(Vector2.Zero);
-                    Vector2 superprediction = startPos + superpredictiveDirection * bullseyeDistance;
-                    ret.pos = Vector2.Lerp(proj.Center, superprediction, RicoshotCoin.SuperpredictionRatio);
+                    int ownerIndex = (int)proj.ai[0];
+                    if (ownerIndex >= 0 && ownerIndex < Main.maxNPCs && Main.npc[ownerIndex] is not null && Main.npc[ownerIndex].active)
+                    {
+                        NPC bullseyesOwner = Main.npc[ownerIndex];
+                        float currentSpeed = theShot.velocity.Length();
+                        Vector2 superpredictiveVelocity = CalculatePredictiveAimToTarget(startPos, bullseyesOwner, currentSpeed);
+                        Vector2 superpredictiveDirection = superpredictiveVelocity.SafeNormalize(Vector2.Zero);
+                        Vector2 superprediction = startPos + superpredictiveDirection * bullseyeDistance;
+                        ret.pos = Vector2.Lerp(proj.Center, superprediction, RicoshotCoin.SuperpredictionRatio);
+                    }
                 }
             }
 

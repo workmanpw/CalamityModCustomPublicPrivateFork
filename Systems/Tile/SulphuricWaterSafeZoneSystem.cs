@@ -18,7 +18,8 @@ namespace CalamityModCustomPublicPrivateFork.Systems
             // Make the potency of the current safe tiles gradually dissipate, and eventually disappear from the dictionary once completely gone.
             foreach (Point p in NearbySafeTiles.Keys)
                 NearbySafeTiles[p] -= 0.06f;
-            foreach (var key in NearbySafeTiles.Keys.Where(key => NearbySafeTiles[key] <= 0f))
+            var keysToRemove = NearbySafeTiles.Keys.Where(key => NearbySafeTiles[key] <= 0f).ToList();
+            foreach (var key in keysToRemove)
                 NearbySafeTiles.Remove(key);
 
             // TODO -- Uncomment the below code to use an actual block and not the auric tesla bar, once sprites for said blocks are created.

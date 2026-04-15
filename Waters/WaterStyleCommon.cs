@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
@@ -14,7 +15,9 @@ internal static class WaterStyleCommon
         if (SulphuricWaterSafeZoneSystem.NearbySafeTiles.Count >= 1)
         {
             Color cleanWaterColor = new(10, 62, 193);
-            var closestSafeZone = SulphuricWaterSafeZoneSystem.NearbySafeTiles.OrderBy(t => t.Key.ToVector2().DistanceSQ(new(x, y))).First();
+            var closestSafeZone = SulphuricWaterSafeZoneSystem.NearbySafeTiles.OrderBy(t => t.Key.ToVector2().DistanceSQ(new(x, y))).FirstOrDefault();
+            if (closestSafeZone.Equals(default(KeyValuePair<Point, float>)))
+                return;
             Point closestSafeZonePoint = closestSafeZone.Key;
             float closestSafeZoneAmt = closestSafeZone.Value;
             float lerpAmt = (1f - closestSafeZoneAmt) * 21f;

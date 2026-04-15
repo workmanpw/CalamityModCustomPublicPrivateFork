@@ -500,6 +500,8 @@ namespace CalamityModCustomPublicPrivateFork
 
         public static bool DrawHook(this Projectile projectile, Texture2D hookTexture, float angleAdditive = 0f)
         {
+            if (projectile.owner < 0 || projectile.owner >= Main.maxPlayers || Main.player[projectile.owner] is null || !Main.player[projectile.owner].active)
+                return false;
             Player player = Main.player[projectile.owner];
             Vector2 center = projectile.Center;
             float angleToMountedCenter = projectile.AngleTo(player.MountedCenter) - MathHelper.PiOver2;
