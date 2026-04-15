@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee.Spears
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears
 {
     public class BansheeHookProj : BaseSpearProjectile
     {
@@ -92,7 +92,7 @@ namespace CalamityMod.Projectiles.Melee.Spears
         public override bool PreDraw(ref Color lightColor)
         {
             Vector2 drawPosition = Projectile.position + new Vector2(Projectile.width, Projectile.height) / 2f + Vector2.UnitY * Projectile.gfxOffY - Main.screenPosition;
-            Texture2D alternateHookTexture = Projectile.spriteDirection == -1 ? ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/Spears/BansheeHookAlt").Value : Terraria.GameContent.TextureAssets.Projectile[Type].Value;
+            Texture2D alternateHookTexture = Projectile.spriteDirection == -1 ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/Spears/BansheeHookAlt").Value : Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             Vector2 origin = new Vector2(Projectile.spriteDirection == 1 ? alternateHookTexture.Width + 8f : -8f, -8f);
             Main.EntitySpriteDraw(alternateHookTexture, drawPosition, null,
                 new Color(255, 255, 255, 127), Projectile.rotation,
@@ -103,7 +103,7 @@ namespace CalamityMod.Projectiles.Melee.Spears
         public override void PostDraw(Color lightColor)
         {
             Vector2 drawPosition = Projectile.position + new Vector2(Projectile.width, Projectile.height) / 2f + Vector2.UnitY * Projectile.gfxOffY - Main.screenPosition;
-            Texture2D texture = Projectile.spriteDirection == -1 ? ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/Spears/BansheeHookAltGlow").Value : ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/Spears/BansheeHookGlow").Value;
+            Texture2D texture = Projectile.spriteDirection == -1 ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/Spears/BansheeHookAltGlow").Value : ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/Spears/BansheeHookGlow").Value;
             Vector2 origin = new Vector2(Projectile.spriteDirection == 1 ? texture.Width - -8f : -8f, -8f); //-8 -8
             Main.EntitySpriteDraw(texture, drawPosition, null, Color.White, Projectile.rotation, origin, 1f, SpriteEffects.None, 0);
         }

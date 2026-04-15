@@ -1,19 +1,19 @@
-﻿using System;
+using System;
 using System.Linq;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class HalleysComet : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public ref float Time => ref Projectile.ai[0];
 

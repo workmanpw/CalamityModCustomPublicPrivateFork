@@ -1,8 +1,8 @@
-﻿using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     [LegacyName("DepthBlade")]
     public class DepthCrusher : ModItem, ILocalizedModType

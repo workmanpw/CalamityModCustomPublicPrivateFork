@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Furniture
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
 {
     public class PiggyCageTile : ModTile
     {

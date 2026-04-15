@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.FurnitureDriftwood;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureDriftwood;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureDriftwood
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood
 {
     public class DriftwoodDoor : ModItem, ILocalizedModType
     {

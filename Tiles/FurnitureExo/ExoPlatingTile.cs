@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace CalamityMod.Tiles.FurnitureExo
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
 {
     public class ExoPlatingTile : GlowMaskTile
     {

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Projectiles.Ranged;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Ammo
+namespace CalamityModCustomPublicPrivateFork.Items.Ammo
 {
     public class HallowPointRound : ModItem, ILocalizedModType
     {

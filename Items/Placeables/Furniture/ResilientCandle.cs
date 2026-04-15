@@ -1,9 +1,9 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Furniture
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture
 {
     [LegacyName("PurpleCandle")]
     public class ResilientCandle : ModItem, ILocalizedModType

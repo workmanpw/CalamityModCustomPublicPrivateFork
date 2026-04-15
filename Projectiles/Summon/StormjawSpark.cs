@@ -1,15 +1,15 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class StormjawSpark : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         // Clone of Typeless/GenericElectricSpark but specfically benefits from whips
         public override void SetStaticDefaults() => ProjectileID.Sets.MinionShot[Type] = true;

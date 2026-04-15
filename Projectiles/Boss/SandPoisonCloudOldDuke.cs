@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class SandPoisonCloudOldDuke : ModProjectile, ILocalizedModType
     {

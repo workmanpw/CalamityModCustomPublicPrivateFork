@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee.Yoyos
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
 {
     public class GodsGambitYoyo : ModProjectile
     {

@@ -1,15 +1,15 @@
-﻿using CalamityMod.Items.Placeables;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Items.SummonItems;
-using CalamityMod.NPCs.Other;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Items.Placeables;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Items.SummonItems;
+using CalamityModCustomPublicPrivateFork.NPCs.Other;
+using CalamityModCustomPublicPrivateFork.World;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityMod.NPCs.NormalNPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
 {
     public class Bohldohr : ModNPC
     {
@@ -38,7 +38,7 @@ namespace CalamityMod.NPCs.NormalNPCs
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheTemple,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Bohldohr")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Bohldohr")
             });
         }
 

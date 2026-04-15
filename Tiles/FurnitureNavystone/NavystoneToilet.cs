@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -9,7 +9,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.FurnitureNavystone
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone
 {
     public class NavystoneToilet : ModTile
     {

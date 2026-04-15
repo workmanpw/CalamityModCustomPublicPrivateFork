@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Astral
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Astral
 {
     public class AstralSnow : ModItem, ILocalizedModType
     {

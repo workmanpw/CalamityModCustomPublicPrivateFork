@@ -1,20 +1,20 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using ReLogic.Utilities;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class WulfrumManaDrain : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
         private SlotId SuccSoundSlot;
         public Player Owner => Main.player[Projectile.owner];
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public ref float Timer => ref Projectile.ai[0];
 

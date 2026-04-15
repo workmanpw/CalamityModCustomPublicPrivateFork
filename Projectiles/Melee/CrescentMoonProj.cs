@@ -1,12 +1,12 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class CrescentMoonProj : ModProjectile, ILocalizedModType
     {
@@ -50,7 +50,7 @@ namespace CalamityMod.Projectiles.Melee
             if (Projectile.FinalExtraUpdate())
             {
                 GeneralParticleHandler.SpawnParticle(new BloomParticle(Projectile.Center, Vector2.Zero, Color.SkyBlue, 0.65f, 0.65f, 2, false),true,Enums.GeneralDrawLayer.AfterProjectiles);
-                GeneralParticleHandler.SpawnParticle(new CustomSpark(Projectile.Center, Vector2.UnitX.RotatedBy(Projectile.rotation) * 0.1f, "CalamityMod/Projectiles/Melee/CrescentMoonProj", false, 2, 1f, Color.White, Vector2.One, false), false, Enums.GeneralDrawLayer.AfterProjectiles);
+                GeneralParticleHandler.SpawnParticle(new CustomSpark(Projectile.Center, Vector2.UnitX.RotatedBy(Projectile.rotation) * 0.1f, "CalamityModCustomPublicPrivateFork/Projectiles/Melee/CrescentMoonProj", false, 2, 1f, Color.White, Vector2.One, false), false, Enums.GeneralDrawLayer.AfterProjectiles);
             }
                 
             Projectile.velocity *= 0.965f;

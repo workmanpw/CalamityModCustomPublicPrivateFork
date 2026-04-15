@@ -1,11 +1,11 @@
-﻿using CalamityMod.Systems;
-using CalamityMod.Tiles.SunkenSea.Ambient;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea
 {
     public class Limestone : ModTile
     {

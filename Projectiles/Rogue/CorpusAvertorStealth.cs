@@ -1,7 +1,7 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Buffs.StatBuffs;
-using CalamityMod.Particles;
-using CalamityMod.Sounds;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
@@ -9,12 +9,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class CorpusAvertorStealth : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/CorpusAvertor";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/CorpusAvertor";
 
         private ref float Timer => ref Projectile.ai[0];
         private ref float Slash => ref Projectile.ai[1]; // If set to 1, this is the slash projectile

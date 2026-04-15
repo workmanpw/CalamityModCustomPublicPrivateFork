@@ -1,5 +1,5 @@
-﻿using CalamityMod.NPCs;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,13 +7,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     [PierceResistException]
     public class EclipsesStealth : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/EclipsesFall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/EclipsesFall";
 
         // these also affect KB
         public const float RainDamageMult = 0.2f;

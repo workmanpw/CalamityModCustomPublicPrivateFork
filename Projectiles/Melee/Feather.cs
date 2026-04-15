@@ -1,15 +1,15 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class Feather : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
 
-        public override string Texture => "CalamityMod/Projectiles/Magic/TradewindsProjectile";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/TradewindsProjectile";
 
         private const int TimeLeft = 150;
 

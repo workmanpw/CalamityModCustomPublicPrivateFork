@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -13,15 +13,15 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     public class SHPC : LegendaryItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
-        public static readonly SoundStyle FireSound = new("CalamityMod/Sounds/Item/AnomalysNanogunMPFBShot");
-        public static readonly SoundStyle VacuumStart = new SoundStyle("CalamityMod/Sounds/Item/SHPCVacuumStart") with { Volume = 0.5f };
-        public static readonly SoundStyle VacuumLoop = new SoundStyle("CalamityMod/Sounds/Item/SHPCVacuumLoop") with { Volume = 0.5f };
-        public static readonly SoundStyle VacuumEnd = new SoundStyle("CalamityMod/Sounds/Item/SHPCVacuumEnd") with { Volume = 0.5f };
+        public static readonly SoundStyle FireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AnomalysNanogunMPFBShot");
+        public static readonly SoundStyle VacuumStart = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SHPCVacuumStart") with { Volume = 0.5f };
+        public static readonly SoundStyle VacuumLoop = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SHPCVacuumLoop") with { Volume = 0.5f };
+        public static readonly SoundStyle VacuumEnd = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SHPCVacuumEnd") with { Volume = 0.5f };
 
         public const int ShotsPerSoul = 50;
         public int storedSoulpower = 0;
@@ -222,8 +222,8 @@ namespace CalamityMod.Items.Weapons.Magic
         public override void PostDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
             float barScale = 2.5f;
-            var barBG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
-            var barFG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
+            var barBG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
+            var barFG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
 
             Vector2 drawPos = position + new Vector2((frame.Width - barBG.Width * 0.5f) * scale, (frame.Height + 45f) * scale);
             Rectangle frameCrop = new Rectangle(0, 0, (int)(storedSoulpower / (float)ShotsPerSoul * barFG.Width), barFG.Height);

@@ -1,9 +1,9 @@
-﻿using CalamityMod.Dusts.Furniture;
+using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureBotanic
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureBotanic
 {
     public class BotanicBookcase : ModTile
     {

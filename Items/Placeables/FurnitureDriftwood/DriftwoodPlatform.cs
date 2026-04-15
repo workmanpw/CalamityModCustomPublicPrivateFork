@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureDriftwood
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood
 {
     public class DriftwoodPlatform : ModItem, ILocalizedModType
     {

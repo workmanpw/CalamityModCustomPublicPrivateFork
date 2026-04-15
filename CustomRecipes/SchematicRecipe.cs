@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using Terraria.Localization;
 
-namespace CalamityMod.CustomRecipes
+namespace CalamityModCustomPublicPrivateFork.CustomRecipes
 {
     public static class SchematicRecipe
     {
@@ -13,19 +13,19 @@ namespace CalamityMod.CustomRecipes
                 case "Sunken Sea":
                 default:
                     condition = new Func<bool>(() => RecipeUnlockHandler.HasFoundSunkenSeaSchematic);
-                    return Language.GetOrRegister($"Mods.CalamityMod.Misc.SunkenSeaSchematicRecipeCondition");
+                    return Language.GetOrRegister($"Mods.CalamityModCustomPublicPrivateFork.Misc.SunkenSeaSchematicRecipeCondition");
                 case "Planetoid":
                     condition = new Func<bool>(() => RecipeUnlockHandler.HasFoundPlanetoidSchematic);
-                    return Language.GetOrRegister($"Mods.CalamityMod.Misc.PlanetoidSchematicRecipeCondition");
+                    return Language.GetOrRegister($"Mods.CalamityModCustomPublicPrivateFork.Misc.PlanetoidSchematicRecipeCondition");
                 case "Jungle":
                     condition = new Func<bool>(() => RecipeUnlockHandler.HasFoundJungleSchematic);
-                    return Language.GetOrRegister($"Mods.CalamityMod.Misc.JungleSchematicRecipeCondition");
+                    return Language.GetOrRegister($"Mods.CalamityModCustomPublicPrivateFork.Misc.JungleSchematicRecipeCondition");
                 case "Hell":
                     condition = new Func<bool>(() => RecipeUnlockHandler.HasFoundHellSchematic);
-                    return Language.GetOrRegister($"Mods.CalamityMod.Misc.UnderworldSchematicRecipeCondition");
+                    return Language.GetOrRegister($"Mods.CalamityModCustomPublicPrivateFork.Misc.UnderworldSchematicRecipeCondition");
                 case "Ice":
                     condition = new Func<bool>(() => RecipeUnlockHandler.HasFoundIceSchematic);
-                    return Language.GetOrRegister($"Mods.CalamityMod.Misc.IceSchematicRecipeCondition");
+                    return Language.GetOrRegister($"Mods.CalamityModCustomPublicPrivateFork.Misc.IceSchematicRecipeCondition");
             }
         }
     }

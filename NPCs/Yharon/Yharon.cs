@@ -1,27 +1,27 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Events;
-using CalamityMod.Items.Accessories.Wings;
-using CalamityMod.Items.Armor.Vanity;
-using CalamityMod.Items.LoreItems;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Pets;
-using CalamityMod.Items.Placeables.Furniture.BossRelics;
-using CalamityMod.Items.Placeables.Furniture.Paintings;
-using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Items.Potions;
-using CalamityMod.Items.SummonItems;
-using CalamityMod.Items.TreasureBags;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.NPCs.TownNPCs;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.Tiles.Ores;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Accessories.Wings;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.LoreItems;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Pets;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Items.Potions;
+using CalamityModCustomPublicPrivateFork.Items.SummonItems;
+using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Tiles.Ores;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -34,7 +34,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Yharon
+namespace CalamityModCustomPublicPrivateFork.NPCs.Yharon
 {
     [AutoloadBossHead]
     public class Yharon : ModNPC
@@ -56,12 +56,12 @@ namespace CalamityMod.NPCs.Yharon
         private const int Phase2InvincibilityTime = 300;
         private const float EnragedDR = 0.9f;
 
-        public static readonly SoundStyle RoarSound = new("CalamityMod/Sounds/Custom/Yharon/YharonRoar");
-        public static readonly SoundStyle ShortRoarSound = new("CalamityMod/Sounds/Custom/Yharon/YharonRoarShort");
-        public static readonly SoundStyle FireSound = new("CalamityMod/Sounds/Custom/Yharon/YharonFire");
-        public static readonly SoundStyle OrbSound = new("CalamityMod/Sounds/Custom/Yharon/YharonFireOrb");
-        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/YharonHurt");
-        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/YharonDeath");
+        public static readonly SoundStyle RoarSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Yharon/YharonRoar");
+        public static readonly SoundStyle ShortRoarSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Yharon/YharonRoarShort");
+        public static readonly SoundStyle FireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Yharon/YharonFire");
+        public static readonly SoundStyle OrbSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Yharon/YharonFireOrb");
+        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/YharonHurt");
+        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/YharonDeath");
 
         public SlotId RoarSoundSlot;
 
@@ -130,7 +130,7 @@ namespace CalamityMod.NPCs.Yharon
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Yharon")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Yharon")
             });
         }
 
@@ -1630,7 +1630,7 @@ namespace CalamityMod.NPCs.Yharon
             {
                 moveCloser = true;
 
-                string key = "Mods.CalamityMod.Status.Boss.FlameText";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.FlameText";
                 Color messageColor = Color.Orange;
 
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);
@@ -3026,7 +3026,7 @@ namespace CalamityMod.NPCs.Yharon
             {
                 CalamityUtils.SpawnOre(ModContent.TileType<AuricOre>(), 2E-05, 0.75f, 0.9f, 10, 20);
 
-                string key = "Mods.CalamityMod.Status.Progression.AuricOreText";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.AuricOreText";
                 Color messageColor = Color.Gold;
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);
             }

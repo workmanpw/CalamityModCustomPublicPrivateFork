@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class AnomalysNanogunMPFBDevastator : ModProjectile, ILocalizedModType
     {

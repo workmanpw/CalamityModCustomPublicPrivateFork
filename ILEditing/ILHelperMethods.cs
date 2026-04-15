@@ -1,10 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using MonoMod.Cil;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
+using Terraria.ModLoader;
 
-namespace CalamityMod.ILEditing
+namespace CalamityModCustomPublicPrivateFork.ILEditing
 {
     public partial class ILChanges
     {
@@ -58,7 +59,7 @@ namespace CalamityMod.ILEditing
             return true;
         }
 
-        public static void DumpToLog(ILContext il) => CalamityMod.Log.Debug(il.ToString());
-        public static void LogFailure(string name, string reason) => CalamityMod.Log.ILFailure(name, reason);
+        public static void DumpToLog(ILContext il) => ModContent.GetInstance<CalamityMod>().Logger.Debug(il.ToString());
+        public static void LogFailure(string name, string reason) => ModContent.GetInstance<CalamityMod>().Logger.ILFailure(name, reason);
     }
 }

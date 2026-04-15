@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurniturePlaguedPlate
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurniturePlaguedPlate
 {
     public class PlaguedPlateLantern : ModTile
     {

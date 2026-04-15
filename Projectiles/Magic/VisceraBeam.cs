@@ -1,7 +1,7 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Healing;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,12 +9,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class VisceraBeam : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         private int storedPenetrate;
         public override void SetStaticDefaults()
@@ -86,7 +86,7 @@ namespace CalamityMod.Projectiles.Magic
             // On-hit effects of piercing beams
             if (Projectile.ai[1] == 0f && Projectile.penetrate != storedPenetrate)
             {
-                SoundStyle hitSound = new("CalamityMod/Sounds/NPCHit/PerfLargeHit", 3);
+                SoundStyle hitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/PerfLargeHit", 3);
                 SoundEngine.PlaySound(hitSound with { Volume = 0.7f }, Projectile.Center);
 
                 for (int i = 0; i <= 6; i++)

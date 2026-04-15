@@ -1,13 +1,13 @@
-﻿using CalamityMod.Buffs.Pets;
-using CalamityMod.CalPlayer;
-using CalamityMod.NPCs.HiveMind;
+using CalamityModCustomPublicPrivateFork.Buffs.Pets;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.NPCs.HiveMind;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Pets
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 {
     public class MiniHiveMind : ModProjectile, ILocalizedModType
     {

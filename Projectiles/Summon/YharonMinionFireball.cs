@@ -1,4 +1,4 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,13 +6,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class YharonMinionFireball : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
         public ref float InitialSpeed => ref Projectile.ai[0];
-        public override string Texture => "CalamityMod/Projectiles/Boss/YharonFireball";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/YharonFireball";
         public override void SetStaticDefaults()
         {
             Main.projFrames[Type] = 5;

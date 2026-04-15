@@ -1,21 +1,21 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Buffs.StatBuffs;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Healing
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Healing
 {
     public class AbsorberAura : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Healing";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         private int AbDust = ModContent.DustType<LightDust>();
         public int ShinkGrow = 0;
         public int Framecounter = 0;
@@ -23,7 +23,7 @@ namespace CalamityMod.Projectiles.Healing
         public int PulseOnce = 1;
         public int PulseOnce2 = 1;
         public int PulseOnce3 = 1;
-        public static readonly SoundStyle Spawnsound = new("CalamityMod/Sounds/Custom/OrbHeal3") { Volume = 0.5f };
+        public static readonly SoundStyle Spawnsound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/OrbHeal3") { Volume = 0.5f };
         public List<bool> cleanseList = new List<bool>(new bool[Main.maxPlayers]);
         public ref int CleansingEffect => ref Main.player[Projectile.owner].Calamity().CleansingEffect;
 
@@ -101,8 +101,8 @@ namespace CalamityMod.Projectiles.Healing
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Particles/HighResFoggyCircleHardEdge").Value;
-            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/HighResHollowCircleHardEdge").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HighResFoggyCircleHardEdge").Value;
+            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge").Value;
             Color drawColor1 = Color.DarkSeaGreen;
             Color drawColor2 = Color.PaleGreen;
             float sine = Math.Abs((float)Math.Sin((Main.GlobalTimeWrappedHourly * 1.1f) * 5f / MathHelper.Pi));

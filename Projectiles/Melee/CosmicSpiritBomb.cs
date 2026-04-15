@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class CosmicSpiritBomb : ModProjectile, ILocalizedModType
     {
@@ -91,10 +91,10 @@ namespace CalamityMod.Projectiles.Melee
                     textureName = Texture;
                     break;
                 case 1:
-                    textureName = "CalamityMod/Projectiles/Melee/CosmicSpiritBomb2";
+                    textureName = "CalamityModCustomPublicPrivateFork/Projectiles/Melee/CosmicSpiritBomb2";
                     break;
                 case 2:
-                    textureName = "CalamityMod/Projectiles/Melee/CosmicSpiritBomb3";
+                    textureName = "CalamityModCustomPublicPrivateFork/Projectiles/Melee/CosmicSpiritBomb3";
                     break;
             }
             Texture2D realTexture = ModContent.Request<Texture2D>(textureName).Value;

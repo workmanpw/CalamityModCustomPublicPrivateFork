@@ -1,10 +1,10 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class Shaderain : ModProjectile, ILocalizedModType
     {

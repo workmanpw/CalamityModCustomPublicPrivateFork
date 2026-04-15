@@ -1,17 +1,17 @@
-﻿using CalamityMod.Balancing;
-using CalamityMod.CalPlayer;
-using CalamityMod.Cooldowns;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Rogue;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class EclipseMirror : ModItem, ILocalizedModType, IHoldShiftTooltipItem
     {

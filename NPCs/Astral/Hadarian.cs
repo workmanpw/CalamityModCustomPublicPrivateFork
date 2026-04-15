@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Accessories.Wings;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Sounds;
-using CalamityMod.Tiles.AstralDesert;
-using CalamityMod.World;
-using CalamityMod.BiomeManagers.BestiaryCategories;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Accessories.Wings;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.Tiles.AstralDesert;
+using CalamityModCustomPublicPrivateFork.World;
+using CalamityModCustomPublicPrivateFork.BiomeManagers.BestiaryCategories;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -18,7 +18,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Astral
+namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
 {
     public class Hadarian : ModNPC
     {
@@ -27,7 +27,7 @@ namespace CalamityMod.NPCs.Astral
         public override void SetStaticDefaults()
         {
             if (!Main.dedServ)
-                glowmask = ModContent.Request<Texture2D>("CalamityMod/NPCs/Astral/HadarianGlow", AssetRequestMode.AsyncLoad);
+                glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Astral/HadarianGlow", AssetRequestMode.AsyncLoad);
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers();
             value.Position.X += 10f;
             value.Position.Y += 10f;
@@ -64,7 +64,7 @@ namespace CalamityMod.NPCs.Astral
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Hadarian")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Hadarian")
             });
         }
 

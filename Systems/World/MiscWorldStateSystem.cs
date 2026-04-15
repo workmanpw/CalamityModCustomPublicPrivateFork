@@ -1,17 +1,17 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
-using CalamityMod.CustomRecipes;
-using CalamityMod.Events;
-using CalamityMod.NPCs;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.CustomRecipes;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using static CalamityMod.DownedBossSystem;
-using static CalamityMod.World.CalamityWorld;
+using static CalamityModCustomPublicPrivateFork.DownedBossSystem;
+using static CalamityModCustomPublicPrivateFork.World.CalamityWorld;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public class MiscWorldStateSystem : ModSystem
     {

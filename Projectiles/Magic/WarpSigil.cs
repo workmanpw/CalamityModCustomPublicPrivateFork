@@ -1,10 +1,10 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class WarpSigil : ModProjectile, ILocalizedModType
     {
@@ -77,7 +77,7 @@ namespace CalamityMod.Projectiles.Magic
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D mainTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D blankTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/BlankSigil").Value;
+            Texture2D blankTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/BlankSigil").Value;
 
             float finalScale = Projectile.scale;
             float alphaOpacity = 1f - (Projectile.alpha / 255f);

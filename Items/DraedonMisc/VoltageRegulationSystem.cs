@@ -1,22 +1,22 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.CustomRecipes;
-using CalamityMod.Items.Materials;
-using CalamityMod.Rarities;
-using CalamityMod.TileEntities;
-using CalamityMod.Tiles.DraedonSummoner;
+using CalamityModCustomPublicPrivateFork.CustomRecipes;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.TileEntities;
+using CalamityModCustomPublicPrivateFork.Tiles.DraedonSummoner;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.DraedonMisc
+namespace CalamityModCustomPublicPrivateFork.Items.DraedonMisc
 {
     public class VoltageRegulationSystem : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.DraedonItems";
-        public static readonly SoundStyle InstallSound = new("CalamityMod/Sounds/Custom/Codebreaker/VoltageRegulationSystemInstall");
+        public static readonly SoundStyle InstallSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/VoltageRegulationSystemInstall");
         public override void SetDefaults()
         {
             Item.width = 52;

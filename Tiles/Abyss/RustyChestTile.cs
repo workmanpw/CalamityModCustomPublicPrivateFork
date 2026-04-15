@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Abyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
 {
     public class RustyChestTile : ModTile
     {

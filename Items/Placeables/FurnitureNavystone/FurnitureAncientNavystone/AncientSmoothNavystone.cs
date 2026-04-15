@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone
 {
     public class AncientSmoothNavystone : ModItem, ILocalizedModType
     {

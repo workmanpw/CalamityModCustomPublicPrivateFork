@@ -1,14 +1,14 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class PlagueHumidifierMist : Particle
     {
         public override bool SetLifetime => true;
         public override int FrameVariants => 7;
 
-        public override string Texture => "CalamityMod/Particles/PlagueHumidifierMist";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/PlagueHumidifierMist";
 
         public PlagueHumidifierMist(Vector2 relativePosition, int lifetime, float scale, Vector2 speed)
         {

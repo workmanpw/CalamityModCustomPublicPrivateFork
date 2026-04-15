@@ -1,8 +1,8 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class TerraSigilSmallRock : ModProjectile, ILocalizedModType
     {

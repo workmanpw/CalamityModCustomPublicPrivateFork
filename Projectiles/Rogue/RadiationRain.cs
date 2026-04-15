@@ -1,17 +1,17 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Enums;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class RadiationRain : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public NPC targetedNPC;
         public int time = 0;
         public Vector2 spawnSpot;
@@ -42,12 +42,12 @@ namespace CalamityMod.Projectiles.Rogue
             {
                 float orbScale = 0.6f * Main.rand.NextFloat(0.8f, 1.1f);
                 Color smokeColor = Color.Lerp(Color.DimGray, Color.DarkGreen, Main.rand.NextFloat(0.2f, 0.6f));
-                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, smokeColor * 0.7f, "CalamityMod/ExtraTextures/GreyscaleVortex", new Vector2(1, 1), Projectile.ai[2] * 0.45f, orbScale, orbScale * 1.1f, 12, false);
+                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, smokeColor * 0.7f, "CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleVortex", new Vector2(1, 1), Projectile.ai[2] * 0.45f, orbScale, orbScale * 1.1f, 12, false);
                 GeneralParticleHandler.SpawnParticle(orb);
-                Particle orb3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Chartreuse, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.8f, 0.4f, 18);
+                Particle orb3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Chartreuse, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.8f, 0.4f, 18);
                 GeneralParticleHandler.SpawnParticle(orb3);
                 orb3.DrawLayer = GeneralDrawLayer.AfterEverything;
-                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.4f, 0.2f, 18);
+                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.4f, 0.2f, 18);
                 GeneralParticleHandler.SpawnParticle(orb2);
                 orb2.DrawLayer = GeneralDrawLayer.AfterEverything;
 

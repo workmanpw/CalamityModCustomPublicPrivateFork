@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class VisualTimerSystem : ModSystem
     {

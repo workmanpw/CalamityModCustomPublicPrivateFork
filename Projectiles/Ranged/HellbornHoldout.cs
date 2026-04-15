@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -11,7 +11,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     [PierceResistException]
     public class HellbornHoldout : BaseGunHoldoutProjectile
@@ -95,7 +95,7 @@ namespace CalamityMod.Projectiles.Ranged
                         Lighting.AddLight(Projectile.Center, Color.Lerp(Color.OrangeRed, Color.White, 0.6f).ToVector3() * fade * 0.7f);
                         if (!hasPlayedSound && Main.myPlayer == Projectile.owner)
                         {
-                            SoundStyle spin = new("CalamityMod/Sounds/Item/SpinningWoosh");
+                            SoundStyle spin = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SpinningWoosh");
                             SoundSlot = SoundEngine.PlaySound(spin with { Volume = 0.01f, Pitch = -0.1f, IsLooped = true }, Projectile.Center);
                             hasPlayedSound = true;
                         }
@@ -139,7 +139,7 @@ namespace CalamityMod.Projectiles.Ranged
                         OffsetLengthFromArm -= 35f;
                         cooldownTimer = Owner.itemAnimationMax * 2;
                         Owner.Calamity().hellbornShots--;
-                        SoundStyle bigShot = new("CalamityMod/Sounds/Item/HellbornShoot");
+                        SoundStyle bigShot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HellbornShoot");
                         SoundEngine.PlaySound(bigShot with { PitchVariance = 0.15f, Volume = 0.9f }, Projectile.Center);
 
                         Vector2 shootVelocity = Projectile.velocity.SafeNormalize(Vector2.UnitY) * 7;
@@ -173,7 +173,7 @@ namespace CalamityMod.Projectiles.Ranged
                     {
                         OffsetLengthFromArm -= 8f;
                         failedShot = true;
-                        SoundStyle bigShot = new("CalamityMod/Sounds/Item/DudFire");
+                        SoundStyle bigShot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire");
                         SoundEngine.PlaySound(bigShot with { PitchVariance = 0.15f, Volume = 0.75f }, Projectile.Center);
                         cooldownTimer = Owner.itemAnimationMax;
                     }
@@ -195,7 +195,7 @@ namespace CalamityMod.Projectiles.Ranged
                 {
                     if (!failedShot)
                     {
-                        SoundStyle fire = new("CalamityMod/Sounds/Item/HellbornReload");
+                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HellbornReload");
                         SoundEngine.PlaySound(fire with { Volume = 0.8f }, Projectile.Center);
                     }
                     hasPlayedReloadSound = true;
@@ -228,8 +228,8 @@ namespace CalamityMod.Projectiles.Ranged
         {
             if (time < 2)
                 return false;
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Ranged/Hellborn").Value;
-            Texture2D spinTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Ranged/Hellborn").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/Hellborn").Value;
+            Texture2D spinTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/Hellborn").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f) - (Owner.gravDir == -1 ? MathHelper.Pi * Owner.direction : 0f);
             Vector2 rotationPoint = texture.Size() * 0.5f;

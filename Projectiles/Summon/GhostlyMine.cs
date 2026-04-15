@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class GhostlyMine : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/Boss/PhantomMine";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/PhantomMine";
 
         public bool start = true;
         public bool spawnDust = true;

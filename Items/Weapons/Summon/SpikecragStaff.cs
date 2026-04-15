@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Projectiles.Summon;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Summon
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
 {
     public class SpikecragStaff : ModItem, ILocalizedModType
     {

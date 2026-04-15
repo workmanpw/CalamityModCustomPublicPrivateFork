@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class NanoblackTesselation : ModProjectile, ILocalizedModType
     {

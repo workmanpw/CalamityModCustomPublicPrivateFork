@@ -1,9 +1,9 @@
-﻿using System.Linq;
+using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.VanillaArmorChanges
+namespace CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges
 {
     // Certain things are virtual instead of abstract because not all pieces of armor are explicitly a part of any particular set.
     // The Wizard Hat is an example of this. The IDs are left abstract so that you don't mistakenly forget to override one of them.

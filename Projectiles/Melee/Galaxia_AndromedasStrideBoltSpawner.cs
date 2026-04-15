@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,12 +7,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class AndromedasStrideBoltSpawner : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         public NPC Target => Main.npc[(int)Projectile.ai[0]];
         public ref float ChargeLevel => ref Projectile.ai[1];

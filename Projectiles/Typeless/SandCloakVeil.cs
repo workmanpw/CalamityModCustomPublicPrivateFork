@@ -1,12 +1,12 @@
-﻿using CalamityMod.DataStructures;
-using CalamityMod.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class SandCloakVeil : ModProjectile, ILocalizedModType
     {

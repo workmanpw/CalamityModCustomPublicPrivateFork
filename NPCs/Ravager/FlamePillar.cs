@@ -1,6 +1,6 @@
-﻿using CalamityMod.Events;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,11 +10,11 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Ravager
+namespace CalamityModCustomPublicPrivateFork.NPCs.Ravager
 {
     public class FlamePillar : ModNPC
     {
-        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/RavagerRockPillarHit", 3);
+        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/RavagerRockPillarHit", 3);
         public static Asset<Texture2D> GlowTexture;
 
         public override void SetStaticDefaults()

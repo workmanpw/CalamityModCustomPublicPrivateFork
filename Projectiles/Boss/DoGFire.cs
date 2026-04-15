@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Linq;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Particles;
-using CalamityMod.Enums;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.DataStructures;
@@ -13,7 +13,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class DoGFire : ModProjectile, ILocalizedModType, IPixelatedPrimitiveRenderer
     {
@@ -24,8 +24,8 @@ namespace CalamityMod.Projectiles.Boss
         }
 
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
-        public static readonly SoundStyle SpawnSound = new("CalamityMod/Sounds/Custom/DoGFireball");
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public static readonly SoundStyle SpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DoGFireball");
 
         public override void SetStaticDefaults()
         {
@@ -164,12 +164,12 @@ namespace CalamityMod.Projectiles.Boss
         public void RenderPixelatedPrimitives(SpriteBatch spriteBatch, GeneralDrawLayer layer)
         {
             // Render the main trail for the body for the flame.
-            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
+            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(FireWidthFunction, FireColorFunction, (_,_) => Projectile.Size * 0.5f + Projectile.velocity.SafeNormalize(Vector2.Zero)*24f, true, true, GameShaders.Misc["CalamityMod:ImpFlameTrail"]), Projectile.oldPos.Length + 12);
 
             // Render a smaller, pure white trail in the same position to represent the glowing core of the flame.
             int coreLength = IsAPassiveFireball ? 6 : 7;
-            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
+            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos[..coreLength], new(FireCoreWidthFunction, FireCoreColorFunction, (_,_) => Projectile.Size * 0.5f + Projectile.velocity.SafeNormalize(Vector2.Zero) * 24f, true, true, GameShaders.Misc["CalamityMod:ImpFlameTrail"]), coreLength + 8);
         }
     }

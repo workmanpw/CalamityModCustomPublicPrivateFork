@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.WorldBuilding;
 
-namespace CalamityMod.World.Planets
+namespace CalamityModCustomPublicPrivateFork.World.Planets
 {
     public class HeartPlanet : Planetoid
     {

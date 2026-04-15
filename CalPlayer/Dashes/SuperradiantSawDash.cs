@@ -1,10 +1,10 @@
-﻿using CalamityMod.Enums;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityMod.CalPlayer.Dashes
+namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
 {
     public class SuperradiantSawDash : PlayerDashEffect
     {

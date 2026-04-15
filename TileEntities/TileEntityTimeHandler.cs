@@ -1,9 +1,9 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.TileEntities
+namespace CalamityModCustomPublicPrivateFork.TileEntities
 {
     public static class TileEntityTimeHandler
     {

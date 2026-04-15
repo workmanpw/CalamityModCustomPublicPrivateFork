@@ -1,4 +1,4 @@
-﻿using CalamityMod.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     [PierceResistException]
     public class OmegaBlueTentacle : ModProjectile, ILocalizedModType
@@ -183,7 +183,7 @@ namespace CalamityMod.Projectiles.Typeless
 
             GameShaders.Armor.ApplySecondary(Owner.cBody, Owner, new DrawData?());
             Texture2D texture2D13 = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D segmentSprite = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/OmegaBlueTentacleSegment1").Value;
+            Texture2D segmentSprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/OmegaBlueTentacleSegment1").Value;
             for (int i = 0; i < 5; i++)
             {
                 Projectile.rotation = (Projectile.Center - segment[i]).ToRotation();
@@ -192,16 +192,16 @@ namespace CalamityMod.Projectiles.Typeless
                     case 0:
                         break;
                     case 1:
-                        segmentSprite = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/OmegaBlueTentacleSegment2").Value;
+                        segmentSprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/OmegaBlueTentacleSegment2").Value;
                         break;
                     case 2:
-                        segmentSprite = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/OmegaBlueTentacleSegment3").Value;
+                        segmentSprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/OmegaBlueTentacleSegment3").Value;
                         break;
                     case 3:
-                        segmentSprite = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/OmegaBlueTentacleSegment4").Value;
+                        segmentSprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/OmegaBlueTentacleSegment4").Value;
                         break;
                     case 4:
-                        segmentSprite = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/OmegaBlueTentacleSegment5").Value;
+                        segmentSprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/OmegaBlueTentacleSegment5").Value;
                         break;
                     default:
                         break;

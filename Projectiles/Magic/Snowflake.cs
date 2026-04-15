@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.NPCs;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.NPCs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     [PierceResistException]
     public class Snowflake : ModProjectile, ILocalizedModType

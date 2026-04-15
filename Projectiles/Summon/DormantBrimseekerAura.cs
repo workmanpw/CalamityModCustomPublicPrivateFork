@@ -1,16 +1,16 @@
-﻿using System;
-using CalamityMod.Dusts;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class DormantBrimseekerAura : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Items/Weapons/Summon/DormantBrimseeker";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Summon/DormantBrimseeker";
 
         public override void SetStaticDefaults()
         {

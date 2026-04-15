@@ -1,14 +1,14 @@
-﻿using CalamityMod.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class SandDollarStealth : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/SandDollar";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/SandDollar";
 
         public override void SetDefaults()
         {

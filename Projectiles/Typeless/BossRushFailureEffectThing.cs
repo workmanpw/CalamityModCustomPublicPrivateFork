@@ -1,18 +1,18 @@
-﻿using CalamityMod.Events;
+using CalamityModCustomPublicPrivateFork.Events;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Events;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class BossRushFailureEffectThing : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
         public Player Owner => Main.player[Projectile.owner];
         public ref float Time => ref Projectile.ai[0];
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public override void SetDefaults()
         {
             Projectile.width = 2;

@@ -1,9 +1,9 @@
-﻿using System;
-using CalamityMod.BiomeManagers;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Projectiles.Enemy;
+using System;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.AcidRain
+namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
 {
     public class GammaSlime : ModNPC
     {
@@ -69,7 +69,7 @@ namespace CalamityMod.NPCs.AcidRain
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.GammaSlime")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.GammaSlime")
             });
         }
 

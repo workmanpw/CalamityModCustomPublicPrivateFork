@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class CelestialReaperProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/CelestialReaper";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/CelestialReaper";
 
         public int HomingCooldown = 0;
         public NPC HitTarget;

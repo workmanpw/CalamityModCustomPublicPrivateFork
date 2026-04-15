@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.Abyss;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Materials
+namespace CalamityModCustomPublicPrivateFork.Items.Materials
 {
     [LegacyName("Lumenite")]
     public class Lumenyl : ModItem, ILocalizedModType

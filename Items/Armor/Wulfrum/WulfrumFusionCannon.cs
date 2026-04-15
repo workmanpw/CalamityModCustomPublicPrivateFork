@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Cooldowns;
-using CalamityMod.Items.BaseItems;
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Items.BaseItems;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,16 +11,16 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Items.Armor.Wulfrum
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Wulfrum
 {
     public class WulfrumFusionCannon : HeldOnlyItem, IHideFrontArm, ILocalizedModType
     {
         // This is a weapon, but not, I DNC
         public new string LocalizationCategory => "Items.Armor.PreHardmode";
-        public static readonly SoundStyle ShootSound = new("CalamityMod/Sounds/Item/WulfrumProsthesisShoot") { PitchVariance = 0.1f, Volume = 0.4f };
-        public override string Texture => "CalamityMod/Items/Armor/Wulfrum/WulfrumFusionCannon";
+        public static readonly SoundStyle ShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumProsthesisShoot") { PitchVariance = 0.1f, Volume = 0.4f };
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Armor/Wulfrum/WulfrumFusionCannon";
 
         public static int ArmorPenetration = 10;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(ArmorPenetration);

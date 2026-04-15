@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Items.Accessories.Vanity;
-using CalamityMod.Items.Tools;
-using CalamityMod.Items.VanillaArmorChanges;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Tiles.Abyss;
-using CalamityMod.Tiles.SunkenSea;
-using CalamityMod.Tiles.SunkenSea.Ambient;
+using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
+using CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -16,7 +16,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Tiles
+namespace CalamityModCustomPublicPrivateFork.Tiles
 {
     public class CalamityGlobalTile : GlobalTile
     {

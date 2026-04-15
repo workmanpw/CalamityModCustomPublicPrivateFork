@@ -1,16 +1,16 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework.Graphics;
-using CalamityMod.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class PlaguePulse : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public ref float time => ref Projectile.ai[0];
         public ref float radius => ref Projectile.ai[1];
         public float maxRadius = 300;
@@ -94,8 +94,8 @@ namespace CalamityMod.Projectiles.Typeless
         {
             Player player = Main.player[Projectile.owner];
 
-            Texture2D rexture = ModContent.Request<Texture2D>("CalamityMod/Particles/SoftRoundExplosion").Value;
-            Texture2D fexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D rexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion").Value;
+            Texture2D fexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
             Color color = (Color.Green * Utils.Remap(time, 30, 60, 0.35f, 0, true)) with { A = 0 } * (visible ? 1f : 0.25f);
             float scale = (Utils.Remap(time, 0, 60, 1, 6, true) / 21) * (maxRadius == 300 ? 1 : 0.7f);
             Vector2 pos = Projectile.Center - Main.screenPosition;

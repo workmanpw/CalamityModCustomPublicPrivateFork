@@ -1,22 +1,22 @@
-﻿using CalamityMod.Enums;
-using CalamityMod.Events;
-using CalamityMod.NPCs.ExoMechs;
-using CalamityMod.Packets;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Events;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class BossRushEffectThing : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
         public Player Owner => Main.player[Projectile.owner];
         public ref float Time => ref Projectile.ai[0];
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public override void SetDefaults()
         {
             Projectile.width = 2;

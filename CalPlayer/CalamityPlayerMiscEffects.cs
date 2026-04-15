@@ -1,76 +1,76 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Balancing;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Buffs.Potions;
-using CalamityMod.Buffs.StatBuffs;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.CalPlayer.Dashes;
-using CalamityMod.Cooldowns;
-using CalamityMod.CustomRecipes;
-using CalamityMod.DataStructures;
-using CalamityMod.Dusts;
-using CalamityMod.Enums;
-using CalamityMod.Events;
-using CalamityMod.ExtraTextures;
-using CalamityMod.Items;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Ammo;
-using CalamityMod.Items.Armor.Aerospec;
-using CalamityMod.Items.Armor.Auric;
-using CalamityMod.Items.Armor.Bloodflare;
-using CalamityMod.Items.Armor.Brimflame;
-using CalamityMod.Items.Armor.DesertProwler;
-using CalamityMod.Items.Armor.Empyrean;
-using CalamityMod.Items.Armor.GodSlayer;
-using CalamityMod.Items.Armor.Hydrothermic;
-using CalamityMod.Items.Armor.LunicCorps;
-using CalamityMod.Items.Armor.OmegaBlue;
-using CalamityMod.Items.Armor.PlagueReaper;
-using CalamityMod.Items.Armor.Prismatic;
-using CalamityMod.Items.Armor.Reaver;
-using CalamityMod.Items.Armor.Silva;
-using CalamityMod.Items.Armor.Tarragon;
-using CalamityMod.Items.DraedonMisc;
-using CalamityMod.Items.Dyes;
-using CalamityMod.Items.Mounts.Minecarts;
-using CalamityMod.Items.Placeables.Furniture;
-using CalamityMod.Items.Potions;
-using CalamityMod.Items.Potions.Alcohol;
-using CalamityMod.Items.Potions.Food;
-using CalamityMod.Items.Tools;
-using CalamityMod.Items.VanillaArmorChanges;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.AcidRain;
-using CalamityMod.NPCs.Astral;
-using CalamityMod.NPCs.Crags;
-using CalamityMod.NPCs.DevourerofGods;
-using CalamityMod.NPCs.NormalNPCs;
-using CalamityMod.NPCs.Other;
-using CalamityMod.NPCs.PlagueEnemies;
-using CalamityMod.NPCs.TownNPCs;
-using CalamityMod.Packets;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Magic;
-using CalamityMod.Projectiles.Melee;
-using CalamityMod.Projectiles.Pets;
-using CalamityMod.Projectiles.Ranged;
-using CalamityMod.Projectiles.Rogue;
-using CalamityMod.Projectiles.Summon;
-using CalamityMod.Projectiles.Typeless;
-using CalamityMod.Systems;
-using CalamityMod.Systems.Collections;
-using CalamityMod.Tiles.Abyss.AbyssAmbient;
-using CalamityMod.Tiles.FurnitureAuric;
-using CalamityMod.Tiles.Ores;
-using CalamityMod.UI;
-using CalamityMod.Utilities;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.Potions;
+using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.CustomRecipes;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.ExtraTextures;
+using CalamityModCustomPublicPrivateFork.Items;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Ammo;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Aerospec;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Auric;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Bloodflare;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Brimflame;
+using CalamityModCustomPublicPrivateFork.Items.Armor.DesertProwler;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Empyrean;
+using CalamityModCustomPublicPrivateFork.Items.Armor.GodSlayer;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Hydrothermic;
+using CalamityModCustomPublicPrivateFork.Items.Armor.LunicCorps;
+using CalamityModCustomPublicPrivateFork.Items.Armor.OmegaBlue;
+using CalamityModCustomPublicPrivateFork.Items.Armor.PlagueReaper;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Prismatic;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Reaver;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Silva;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Tarragon;
+using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityModCustomPublicPrivateFork.Items.Dyes;
+using CalamityModCustomPublicPrivateFork.Items.Mounts.Minecarts;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Potions;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
+using CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
+using CalamityModCustomPublicPrivateFork.NPCs.Astral;
+using CalamityModCustomPublicPrivateFork.NPCs.Crags;
+using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.Other;
+using CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies;
+using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric;
+using CalamityModCustomPublicPrivateFork.Tiles.Ores;
+using CalamityModCustomPublicPrivateFork.UI;
+using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -84,9 +84,9 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using ProvidenceBoss = CalamityMod.NPCs.Providence.Providence;
+using ProvidenceBoss = CalamityModCustomPublicPrivateFork.NPCs.Providence.Providence;
 
-namespace CalamityMod.CalPlayer
+namespace CalamityModCustomPublicPrivateFork.CalPlayer
 {
     public partial class CalamityPlayer : ModPlayer
     {
@@ -367,7 +367,7 @@ namespace CalamityMod.CalPlayer
                 {
                     if (Main.rand.NextBool(3))
                     {
-                        Particle spark2 = new CustomSpark(Player.Center + Main.rand.NextVector2Circular(20, 20), -Player.velocity * Main.rand.NextFloat(0.3f, 0.8f) * fxScale, "CalamityMod/Particles/DemonSigilParticle", false, 22, Main.rand.NextFloat(0.2f, 0.3f) * fxScale, Color.Lerp(Color.MediumOrchid, Color.BlueViolet, Main.rand.NextFloat(0, 0.7f)) * 0.8f, new Vector2(1, 1), true, false, 0, false, false, fxScale - 1);
+                        Particle spark2 = new CustomSpark(Player.Center + Main.rand.NextVector2Circular(20, 20), -Player.velocity * Main.rand.NextFloat(0.3f, 0.8f) * fxScale, "CalamityModCustomPublicPrivateFork/Particles/DemonSigilParticle", false, 22, Main.rand.NextFloat(0.2f, 0.3f) * fxScale, Color.Lerp(Color.MediumOrchid, Color.BlueViolet, Main.rand.NextFloat(0, 0.7f)) * 0.8f, new Vector2(1, 1), true, false, 0, false, false, fxScale - 1);
                         GeneralParticleHandler.SpawnParticle(spark2);
                     }
                     else
@@ -412,7 +412,7 @@ namespace CalamityMod.CalPlayer
                 {
                     if (darklightEnergyTimer >= 1 && !darklightEnergyMaxFXPlayed)
                     {
-                        SoundStyle maxEnergyReached = new("CalamityMod/Sounds/Custom/AbilitySounds/DarklightEnergyCharged");
+                        SoundStyle maxEnergyReached = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/DarklightEnergyCharged");
                         SoundEngine.PlaySound(maxEnergyReached with { Volume = 0.9f }, Player.Center);
 
                         for (int i = 0; i < 10; i++) // Circular ring of particles burst from player
@@ -469,7 +469,7 @@ namespace CalamityMod.CalPlayer
                 {
                     if (elementalMasteryTimer >= 1 && !elementalMasterySFXPlayed)
                     {
-                        SoundStyle maxEnergyReached = new("CalamityMod/Sounds/Custom/AbilitySounds/DarklightEnergyCharged");
+                        SoundStyle maxEnergyReached = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/DarklightEnergyCharged");
                         SoundEngine.PlaySound(maxEnergyReached with { Volume = 0.9f }, Player.Center);
 
                         for (int i = 0; i < 10; i++) // Circular ring of particles burst from player
@@ -564,22 +564,22 @@ namespace CalamityMod.CalPlayer
 
                 if (dashStart)
                 {
-                    SoundStyle dash = new("CalamityMod/Sounds/Item/DashSound");
+                    SoundStyle dash = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DashSound");
                     SoundEngine.PlaySound(dash with { Volume = 0.7f, Pitch = Main.rand.NextFloat(0f, 0.2f) + (Orange ? 0 : 0.2f) }, Player.Center);
                     if (Orange)
                     {
-                        Particle spark1 = new CustomPulse(Player.Center, Vector2.Zero, XykFXColor, "CalamityMod/Particles/GlowSquareParticleBig", Vector2.One, MathHelper.PiOver4, 0.45f, 0.25f, 47);
+                        Particle spark1 = new CustomPulse(Player.Center, Vector2.Zero, XykFXColor, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleBig", Vector2.One, MathHelper.PiOver4, 0.45f, 0.25f, 47);
                         GeneralParticleHandler.SpawnParticle(spark1);
 
-                        Particle spark2 = new CustomPulse(Player.Center, Vector2.Zero, XykFXColor, "CalamityMod/Particles/GlowSquareParticleBig", Vector2.One, MathHelper.PiOver4, 0, 0.8f, 17);
+                        Particle spark2 = new CustomPulse(Player.Center, Vector2.Zero, XykFXColor, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleBig", Vector2.One, MathHelper.PiOver4, 0, 0.8f, 17);
                         GeneralParticleHandler.SpawnParticle(spark2);
                     }
                     else
                     {
-                        Particle spark1 = new CustomPulse(Player.Center, Player.velocity * 0.3f, XykFXColor, "CalamityMod/Particles/BloomRing", new Vector2(0.4f, 1f), Player.velocity.ToRotation(), 0, 1f, 24);
+                        Particle spark1 = new CustomPulse(Player.Center, Player.velocity * 0.3f, XykFXColor, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(0.4f, 1f), Player.velocity.ToRotation(), 0, 1f, 24);
                         GeneralParticleHandler.SpawnParticle(spark1);
 
-                        Particle spark2 = new CustomPulse(Player.Center, Player.velocity * 0.5f, XykFXColor, "CalamityMod/Particles/BloomRing", new Vector2(0.5f, 1f), Player.velocity.ToRotation(), 0, 0.75f, 17);
+                        Particle spark2 = new CustomPulse(Player.Center, Player.velocity * 0.5f, XykFXColor, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(0.5f, 1f), Player.velocity.ToRotation(), 0, 0.75f, 17);
                         GeneralParticleHandler.SpawnParticle(spark2);
                     }
                 }
@@ -595,7 +595,7 @@ namespace CalamityMod.CalPlayer
                         {
                             Vector2 offset = Player.velocity.SafeNormalize(Vector2.UnitX).RotatedBy(MathHelper.PiOver2) * sine * 18f * i;
 
-                            Particle spark1 = new CustomSpark(Player.Center + offset + SparkVelocity1, SparkVelocity1 * 2 * sparkscale1, "CalamityMod/Particles/BloomCircle", false, 15, 0.3f * sparkscale1, XykFXColor * 0.85f, new Vector2(0.9f, 1.4f), true, true, 0, shrinkSpeed: 0.2f, glowOpacity: 0.85f);
+                            Particle spark1 = new CustomSpark(Player.Center + offset + SparkVelocity1, SparkVelocity1 * 2 * sparkscale1, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 15, 0.3f * sparkscale1, XykFXColor * 0.85f, new Vector2(0.9f, 1.4f), true, true, 0, shrinkSpeed: 0.2f, glowOpacity: 0.85f);
                             GeneralParticleHandler.SpawnParticle(spark1);
                         }
                     }
@@ -606,7 +606,7 @@ namespace CalamityMod.CalPlayer
                         {
                             Vector2 offset = Player.velocity.SafeNormalize(Vector2.UnitX).RotatedBy(MathHelper.PiOver2) * 17f * i;
 
-                            Particle spark1 = new CustomSpark(Player.Center + offset + SparkVelocity1, SparkVelocity1 * 2 * sparkscale1, "CalamityMod/Particles/BloomCircle", false, 20, 0.4f * sparkscale1, XykFXColor * 0.95f, new Vector2(0.3f, 1.2f), true, true, 0, shrinkSpeed: 0.2f, glowOpacity: 0.95f);
+                            Particle spark1 = new CustomSpark(Player.Center + offset + SparkVelocity1, SparkVelocity1 * 2 * sparkscale1, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 20, 0.4f * sparkscale1, XykFXColor * 0.95f, new Vector2(0.3f, 1.2f), true, true, 0, shrinkSpeed: 0.2f, glowOpacity: 0.95f);
                             GeneralParticleHandler.SpawnParticle(spark1);
                         }
                     }
@@ -1031,7 +1031,7 @@ namespace CalamityMod.CalPlayer
                         Player.Hurt(PlayerDeathReason.ByCustomReason(CalamityUtils.GetText("Status.Death.AuricRejection").ToNetworkText(Player.name)), auricRejectionDamage, 0);
                         Player.AddBuff(ModContent.BuffType<AuricRebuke>(), 120);
                     }
-                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/ExoMechs/TeslaShoot1"), Player.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/TeslaShoot1"), Player.Center);
                 }
             }
         }
@@ -1079,7 +1079,7 @@ namespace CalamityMod.CalPlayer
                             vHexDuration = target.buffTime[target.FindBuffIndex(ModContent.BuffType<VulnerabilityHex>())];
                         target.AddBuff(ModContent.BuffType<TrueVulnerabilityHex>(), vHexDuration <= 300 ? vHexDuration : 300);
                         target.RequestBuffRemoval(ModContent.BuffType<VulnerabilityHex>());
-                        SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/WeaponEnchant"), target.Center);
+                        SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/WeaponEnchant"), target.Center);
 
                         for (int i = 0; i < 18; i++)
                         {
@@ -1720,7 +1720,7 @@ namespace CalamityMod.CalPlayer
                     int cooldownTime = (Player.Calamity().profanedSoulRelicBuff ? 300 : 600);
                     rOfResilienceCooldown = cooldownTime;
                     Player.AddCooldown(Cooldowns.RelicOfResilienceCooldown.ID, cooldownTime);
-                    SoundStyle y = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianRockShieldActivate");
+                    SoundStyle y = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianRockShieldActivate");
                     SoundEngine.PlaySound(y with { Volume = 0.7f, Pitch = -0.1f }, Player.Center);
                 }
 
@@ -1750,7 +1750,7 @@ namespace CalamityMod.CalPlayer
                     if (numOfShards == 0)
                     {
                         rOfResilienceOrbitOffset = Main.rand.Next(0, 100 + 1);
-                        SoundStyle sound = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianDash");
+                        SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianDash");
                         SoundEngine.PlaySound(sound with { Volume = 0.5f, Pitch = -0.3f }, Player.Center);
                     }
                     int shardDamage = (int)Player.GetBestClassDamage().ApplyTo(420);
@@ -1776,10 +1776,10 @@ namespace CalamityMod.CalPlayer
 
                     if (Player.Calamity().transformerVisual)
                     {
-                        Particle orb2 = new CustomPulse(Player.Center, Vector2.Zero, Color.LightSkyBlue, "CalamityMod/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.5f, 11);
+                        Particle orb2 = new CustomPulse(Player.Center, Vector2.Zero, Color.LightSkyBlue, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.5f, 11);
                         GeneralParticleHandler.SpawnParticle(orb2);
 
-                        SoundStyle transform = new("CalamityMod/Sounds/Item/NullImpact");
+                        SoundStyle transform = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NullImpact");
                         SoundEngine.PlaySound(transform with { Volume = 0.1f, Pitch = Main.rand.NextFloat(-0.3f, -0.4f) + numOfBlobs * 0.015f, MaxInstances = -1 }, Player.Center);
                     }
 
@@ -1827,10 +1827,10 @@ namespace CalamityMod.CalPlayer
 
                             if (Player.Calamity().transformerVisual)
                             {
-                                Particle orb2 = new CustomPulse(projectile.Center, Vector2.Zero, Color.LightSkyBlue, "CalamityMod/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.5f, 11);
+                                Particle orb2 = new CustomPulse(projectile.Center, Vector2.Zero, Color.LightSkyBlue, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.5f, 11);
                                 GeneralParticleHandler.SpawnParticle(orb2);
 
-                                SoundStyle transform = new("CalamityMod/Sounds/Item/NullImpact");
+                                SoundStyle transform = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NullImpact");
                                 SoundEngine.PlaySound(transform with { Volume = 0.1f, Pitch = Main.rand.NextFloat(-0.3f, -0.4f) + numOfBlobs * 0.015f, MaxInstances = -1 }, projectile.Center);
                             }
 
@@ -1896,7 +1896,7 @@ namespace CalamityMod.CalPlayer
                         Projectile energy = Projectile.NewProjectileDirect(Player.GetSource_FromThis(), Player.Center, (Vector2.One * 4).RotatedByRandom(MathHelper.TwoPi), ModContent.ProjectileType<AmuletEnergy>(), energyDamage, 0f, Player.whoAmI, 0, numOfEnergy);
                         if (numOfEnergy + 1 == energyCap && Player.Calamity().sSpiritAmuletVisual)
                         {
-                            SoundStyle transform = new("CalamityMod/Sounds/Item/WaterSplash1");
+                            SoundStyle transform = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WaterSplash1");
                             SoundEngine.PlaySound(transform with { Volume = 0.25f, Pitch = 0.9f, MaxInstances = -1 }, Player.Center);
 
                             for (int i = 0; i <= 14; i++)
@@ -1952,7 +1952,7 @@ namespace CalamityMod.CalPlayer
                             GeneralParticleHandler.SpawnParticle(sparks);
                         }
 
-                        SoundStyle sound = new("CalamityMod/Sounds/NPCHit/ExoHit3");
+                        SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ExoHit3");
                         SoundEngine.PlaySound(sound with { Volume = 0.6f * power, Pitch = Main.rand.NextFloat(0.6f, 0.8f) }, playerFeet);
 
                         Player.SetScreenshake(4 * scaledPower);
@@ -2010,7 +2010,7 @@ namespace CalamityMod.CalPlayer
                         energy.localAI[2] = energyType;
                         if (numOfEnergy + 1 == energyCap && Player.Calamity().dOfTheDeepVisual)
                         {
-                            SoundStyle max = new("CalamityMod/Sounds/Item/WaterSplash1");
+                            SoundStyle max = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WaterSplash1");
                             SoundEngine.PlaySound(max with { Volume = 0.35f, Pitch = 0.8f, MaxInstances = -1 }, Player.Center);
 
                             for (int i = 0; i <= 14; i++)
@@ -2042,14 +2042,14 @@ namespace CalamityMod.CalPlayer
                     float fade = (float)Math.Pow(Utils.GetLerpValue(0, 30, hookPullVisuals, true), 2);
 
                     Particle trail = new CustomSpark(Player.Center, -Player.velocity.SafeNormalize(Vector2.UnitX) * Main.rand.NextFloat(5f, 8f),
-                        "CalamityMod/Particles/BloomCircle", false, Main.rand.Next(7, 10 + 1), 0.65f,
+                        "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, Main.rand.Next(7, 10 + 1), 0.65f,
                         Color.Lerp(Color.HotPink, Color.Gold, Utils.GetLerpValue(60, 30, hookPullVisuals, true)) * 0.75f * fade, new Vector2(1f, 0.7f), true, shrinkSpeed: 0.6f);
                     GeneralParticleHandler.SpawnParticle(trail);
 
                     if (Main.rand.NextBool(3))
                     {
                         Particle floweyFromHitGameUndertale = new CustomSpark(spawnPos, -Player.velocity.SafeNormalize(Vector2.UnitX) * Main.rand.NextFloat(5f, 8f),
-                            "CalamityMod/Particles/MiniFlower", false, Main.rand.Next(25, 28 + 1), Main.rand.NextFloat(2.3f, 2.6f) * fade,
+                            "CalamityModCustomPublicPrivateFork/Particles/MiniFlower", false, Main.rand.Next(25, 28 + 1), Main.rand.NextFloat(2.3f, 2.6f) * fade,
                             Color.Lerp(Color.HotPink, Color.Plum, Main.rand.NextFloat(0, 0.65f)), new Vector2(1f, 1f), true, extraRotation: Main.rand.NextFloat(0, MathHelper.TwoPi));
                         GeneralParticleHandler.SpawnParticle(floweyFromHitGameUndertale);
                     }
@@ -4861,13 +4861,13 @@ namespace CalamityMod.CalPlayer
                 {
                     if (CalamityClientConfig.Instance.WikiStatusMessage)
                     {
-                        CalamityUtils.BroadcastLocalizedText("Mods.CalamityMod.Misc.WikiStatus1");
-                        CalamityUtils.BroadcastLocalizedText("Mods.CalamityMod.Misc.WikiStatus2");
+                        CalamityUtils.BroadcastLocalizedText("Mods.CalamityModCustomPublicPrivateFork.Misc.WikiStatus1");
+                        CalamityUtils.BroadcastLocalizedText("Mods.CalamityModCustomPublicPrivateFork.Misc.WikiStatus2");
                     }
 
                     if (CalamityClientConfig.Instance.VCMMStatusMessage && !ExternalMods.VCMMAvailable)
                     {
-                        CalamityUtils.BroadcastLocalizedText("Mods.CalamityMod.Misc.VCMMStatus");
+                        CalamityUtils.BroadcastLocalizedText("Mods.CalamityModCustomPublicPrivateFork.Misc.VCMMStatus");
                     }
                 }
 

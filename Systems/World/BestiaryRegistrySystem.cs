@@ -1,11 +1,11 @@
-﻿using CalamityMod.NPCs.Abyss;
-using CalamityMod.NPCs.Astral;
-using CalamityMod.NPCs.Crags;
+using CalamityModCustomPublicPrivateFork.NPCs.Abyss;
+using CalamityModCustomPublicPrivateFork.NPCs.Astral;
+using CalamityModCustomPublicPrivateFork.NPCs.Crags;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class BestiaryRegistrySystem : ModSystem
     {

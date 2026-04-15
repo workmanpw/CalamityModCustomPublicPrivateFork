@@ -1,10 +1,10 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Sounds;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityMod.NPCs.PlagueEnemies
+namespace CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies
 {
     public class Viruling : ModNPC
     {
@@ -48,7 +48,7 @@ namespace CalamityMod.NPCs.PlagueEnemies
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Jungle,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundJungle,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Viruling")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Viruling")
             });
         }
 

@@ -1,13 +1,13 @@
-﻿using CalamityMod.Enums;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 
-namespace CalamityMod.CalPlayer.Dashes
+namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
 {
     public class SpeedBlasterDash : PlayerDashEffect
     {

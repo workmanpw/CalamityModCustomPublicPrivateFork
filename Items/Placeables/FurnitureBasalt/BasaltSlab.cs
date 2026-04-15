@@ -1,8 +1,8 @@
-﻿using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureBasalt
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureBasalt
 {
     public class BasaltSlab : ModItem, ILocalizedModType
     {

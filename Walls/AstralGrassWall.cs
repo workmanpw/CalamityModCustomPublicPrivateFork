@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
-namespace CalamityMod.Walls
+namespace CalamityModCustomPublicPrivateFork.Walls
 {
     [LegacyName("AstralGrassWallSafe")]
     public class AstralGrassWall : ModWall
@@ -29,7 +29,7 @@ namespace CalamityMod.Walls
 
             if (!Main.dedServ)
             {
-                leafTexture = ModContent.Request<Texture2D>("CalamityMod/Walls/AstralGrassWallLeaves");
+                leafTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Walls/AstralGrassWallLeaves");
             }
         }
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     [PierceResistException]
     public class RespiteblockHoldout : ModProjectile, ILocalizedModType
@@ -109,7 +109,7 @@ namespace CalamityMod.Projectiles.Melee
                 dust.color = Color.White;
             }
 
-            SoundStyle fire = new("CalamityMod/Sounds/Item/WulfrumKnifeTileHit", 2);
+            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumKnifeTileHit", 2);
             SoundEngine.PlaySound(fire with { Volume = 0.55f, Pitch = 0.3f }, Projectile.Center);
             player.DoLifestealDirect(target, Main.rand.NextBool(4) ? 2 : 1, 0.75f);
         }

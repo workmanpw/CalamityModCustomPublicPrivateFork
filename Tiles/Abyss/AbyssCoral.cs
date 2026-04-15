@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Systems;
 
-namespace CalamityMod.Tiles.Abyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
 {
     public class AbyssCoral : ModTile
     {

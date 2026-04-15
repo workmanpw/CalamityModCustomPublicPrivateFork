@@ -1,7 +1,7 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class HolofibreImmolatorHoldout : BaseGunHoldoutProjectile
     {
@@ -50,7 +50,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
         {
             if (CurrentChargingFrames == 0)
             {
-                SoundStyle sound = new("CalamityMod/Sounds/Item/ImmolatorCharge");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ImmolatorCharge");
                 ChargeSlot = SoundEngine.PlaySound(sound with { Volume = 0.7f, IsLooped = true }, Projectile.Center);
             }
             CalamityGlobalItem modItem = Owner.HeldItem.Calamity();
@@ -76,7 +76,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                 if (ChargeLV1)
                 {
                     ChargeSound?.Stop();
-                    SoundStyle sound = new("CalamityMod/Sounds/Item/ImmolatorFire");
+                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ImmolatorFire");
                     SoundEngine.PlaySound(sound with { Volume = 0.7f, Pitch = 0.3f }, Projectile.Center);
 
                     Vector2 shootVelocity = Projectile.velocity.SafeNormalize(Vector2.UnitY) * BulletSpeed;
@@ -99,7 +99,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                 else
                 {
                     ChargeSound?.Stop();
-                    SoundStyle sound = new("CalamityMod/Sounds/Item/ImmolatorFire");
+                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ImmolatorFire");
                     SoundEngine.PlaySound(sound with { Volume = 0.7f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f) }, Projectile.Center);
 
                     Vector2 shootVelocity = Projectile.velocity.SafeNormalize(Vector2.UnitY) * BulletSpeed;
@@ -147,7 +147,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                         chargefull.noGravity = false;
                         chargefull.color = Effects.ArsenalEffects.ArsenalPlasmaColor;
                     }
-                    SoundStyle sound = new("CalamityMod/Sounds/Item/ImmolatorChargeLoop");
+                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ImmolatorChargeLoop");
                     ChargeSlot = SoundEngine.PlaySound(sound with { Volume = 0.7f, IsLooped = true }, Projectile.Center);
                 }
 
@@ -187,16 +187,16 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
 
             float fade = Utils.GetLerpValue(chargeMax / 3, chargeMax, CurrentChargingFrames, true);
 
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/DraedonsArsenal/HolofibreImmolator").Value;
-            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/DraedonsArsenal/HolofibreImmolatorGlow").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/HolofibreImmolator").Value;
+            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/HolofibreImmolatorGlow").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Projectile.GetAlpha(lightColor);
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f);
             Vector2 rotationPoint = texture.Size() * 0.5f;
             SpriteEffects flipSprite = Projectile.spriteDirection == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
 
-            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
-            Texture2D pointTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark").Value;
+            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D pointTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark").Value;
 
             Main.EntitySpriteDraw(texture, drawPosition, null, drawColor, drawRotation, rotationPoint, Projectile.scale, flipSprite);
             Main.EntitySpriteDraw(glowTexture, drawPosition, null, Color.White, drawRotation, rotationPoint, Projectile.scale, flipSprite);

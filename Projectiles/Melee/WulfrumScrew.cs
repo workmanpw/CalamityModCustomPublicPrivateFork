@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Sounds;
+using System;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class WulfrumScrew : ModProjectile, ILocalizedModType
     {
@@ -162,11 +162,11 @@ namespace CalamityMod.Projectiles.Melee
             //Draw a sightline before the player hits it.
             if (Owner.whoAmI == Main.myPlayer && BazingaTime == 0 && opacity > 0)
             {
-                Texture2D empty = Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj").Value;
+                Texture2D empty = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj").Value;
 
                 //Setup the laser sights effect.
                 Effect laserScopeEffect = Filters.Scene["CalamityMod:PixelatedSightLine"].GetShader().Shader;
-                laserScopeEffect.Parameters["sampleTexture2"].SetValue(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/CertifiedCrustyNoise").Value);
+                laserScopeEffect.Parameters["sampleTexture2"].SetValue(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/CertifiedCrustyNoise").Value);
                 laserScopeEffect.Parameters["noiseOffset"].SetValue(Main.GameUpdateCount * -0.003f);
 
                 laserScopeEffect.Parameters["mainOpacity"].SetValue((float)Math.Pow(opacity, 0.5f)); //Opacity increases as the screw gets close to the cursor
@@ -201,7 +201,7 @@ namespace CalamityMod.Projectiles.Melee
                 Main.spriteBatch.End();
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
 
-                GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityMod/ExtraTextures/Trails/BasicTrail"));
+                GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/BasicTrail"));
 
                 CalamityUtils.DrawChromaticAberration(Vector2.UnitX, 1f, delegate (Vector2 offset, Color colorMod)
                 {
@@ -226,7 +226,7 @@ namespace CalamityMod.Projectiles.Melee
 
 
                 if (SheenTex == null)
-                    SheenTex = ModContent.Request<Texture2D>("CalamityMod/Particles/HalfStar");
+                    SheenTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HalfStar");
                 Texture2D shineTex = SheenTex.Value;
                 Vector2 shineScale = new Vector2(1f, 3f - opacity * 2f);
 

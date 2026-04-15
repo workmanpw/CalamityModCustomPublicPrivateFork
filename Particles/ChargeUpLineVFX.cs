@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class ChargeUpLineVFX : Particle
     {
-        public override string Texture => "CalamityMod/Particles/Light";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Light";
         public override bool UseAdditiveBlend => true;
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;
@@ -74,7 +74,7 @@ namespace CalamityMod.Particles
 
         public override void CustomDraw(SpriteBatch spriteBatch, Vector2 basePosition)
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Particles/Light").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Light").Value;
 
             float rot = LineDirection + MathHelper.PiOver2;
             Vector2 origin = new Vector2(tex.Width / 2f, tex.Height);

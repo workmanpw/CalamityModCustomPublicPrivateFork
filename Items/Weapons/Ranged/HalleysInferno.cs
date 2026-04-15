@@ -1,8 +1,8 @@
-﻿using System.Linq;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Ores;
-using CalamityMod.Projectiles.Ranged;
-using CalamityMod.Rarities;
+using System.Linq;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -11,14 +11,14 @@ using Terraria.Graphics;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     public class HalleysInferno : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Ranged";
 
-        public static readonly SoundStyle ShootSound = new("CalamityMod/Sounds/Item/HalleysInfernoShoot") { Volume = 0.68f };
-        public static readonly SoundStyle Hit = new("CalamityMod/Sounds/Item/HalleysInfernoHit") { Volume = 0.75f };
+        public static readonly SoundStyle ShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HalleysInfernoShoot") { Volume = 0.68f };
+        public static readonly SoundStyle Hit = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HalleysInfernoHit") { Volume = 0.75f };
         public static float MaxStarburstPerComet => 1;
         public static float MaxStarburstPerStar => 0.5f;
         public static float LostAccuracyPerMiss => 4;

@@ -1,18 +1,18 @@
-﻿using CalamityMod.Graphics.Metaballs;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Healing
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Healing
 {
     public class BloodstoneHealOrb : ModProjectile, ILocalizedModType //Modified copy from SanguineHealOrb
     {
         public new string LocalizationCategory => "Projectiles.Healing";
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public int target = -1;
         public ref int heal => ref Projectile.damage;
@@ -107,7 +107,7 @@ namespace CalamityMod.Projectiles.Healing
                 player.lifeRegenTime += 3*PotionTime; //if Potion Sickness is full, each orb speeds up natural regen
             }
 
-            Particle ring = new CustomPulse(player.Center, Vector2.Zero, (!ChildSafety.Disabled ? Color.CornflowerBlue : new Color(255, 32, 32)) * 0.75f, "CalamityMod/Particles/DustyCircleHardEdge", Vector2.One, 0, 0.01f, 0.05f, 20);
+            Particle ring = new CustomPulse(player.Center, Vector2.Zero, (!ChildSafety.Disabled ? Color.CornflowerBlue : new Color(255, 32, 32)) * 0.75f, "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", Vector2.One, 0, 0.01f, 0.05f, 20);
             GeneralParticleHandler.SpawnParticle(ring);
         }
 

@@ -1,9 +1,9 @@
-﻿using CalamityMod.NPCs.SunkenSea;
+using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Critters
+namespace CalamityModCustomPublicPrivateFork.Items.Critters
 {
     public class BabyGhostBellItem : ModItem, ILocalizedModType
     {

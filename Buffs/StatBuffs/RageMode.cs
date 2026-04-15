@@ -1,6 +1,6 @@
-﻿using CalamityMod.Balancing;
-using CalamityMod.CalPlayer;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatBuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatBuffs
 {
     public class RageMode : ModBuff
     {

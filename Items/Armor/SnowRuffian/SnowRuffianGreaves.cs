@@ -1,9 +1,9 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.SnowRuffian
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.SnowRuffian
 {
     [AutoloadEquip(EquipType.Legs)]
     public class SnowRuffianGreaves : ModItem, ILocalizedModType

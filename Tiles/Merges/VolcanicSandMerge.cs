@@ -1,8 +1,8 @@
-﻿using CalamityMod.Systems;
-using CalamityMod.Tiles.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Merges
+namespace CalamityModCustomPublicPrivateFork.Tiles.Merges
 {
     public sealed class VolcanicSandMerge : TileBlendTexture
     {

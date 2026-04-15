@@ -1,9 +1,9 @@
-﻿using System;
-using CalamityMod.DataStructures;
+using System;
+using CalamityModCustomPublicPrivateFork.DataStructures;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.DamageOverTime
+namespace CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime
 {
     [LegacyName("CragsLava")]
     public class SearingLava : ModBuff

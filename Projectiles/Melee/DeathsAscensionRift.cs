@@ -1,18 +1,18 @@
-﻿using CalamityMod.Graphics.Metaballs;
-using CalamityMod.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class DeathsAscensionRift : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {

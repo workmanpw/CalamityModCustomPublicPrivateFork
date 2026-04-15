@@ -1,11 +1,11 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class PlagueFang : ModProjectile, ILocalizedModType
     {

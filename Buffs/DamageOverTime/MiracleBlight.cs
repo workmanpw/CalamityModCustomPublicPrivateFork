@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using CalamityMod.DataStructures;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.ExoMechs.Ares;
-using CalamityMod.Particles;
-using CalamityMod.Utilities.Daybreak;
-using CalamityMod.Utilities.Daybreak.Buffers;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.DamageOverTime
+namespace CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime
 {
     public class MiracleBlight : ModBuff
     {
@@ -24,7 +24,7 @@ namespace CalamityMod.Buffs.DamageOverTime
         };
 
         private static Asset<Texture2D> _shaderTexture;
-        public static Asset<Texture2D> ShaderTexture => _shaderTexture ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons");
+        public static Asset<Texture2D> ShaderTexture => _shaderTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Neurons");
 
         public static List<int> ExcludedNPCsForShader => new()
         {

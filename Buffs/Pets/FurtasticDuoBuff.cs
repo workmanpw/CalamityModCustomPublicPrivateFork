@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Projectiles.Pets;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Pets
+namespace CalamityModCustomPublicPrivateFork.Buffs.Pets
 {
     public class FurtasticDuoBuff : ModBuff
     {

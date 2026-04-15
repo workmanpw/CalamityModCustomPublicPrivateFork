@@ -1,14 +1,14 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.Projectiles.Ranged.TheHiveHoldout;
-namespace CalamityMod.Projectiles.Ranged
+using static CalamityModCustomPublicPrivateFork.Projectiles.Ranged.TheHiveHoldout;
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class HiveMissile : ModProjectile, ILocalizedModType
     {
@@ -127,7 +127,7 @@ namespace CalamityMod.Projectiles.Ranged
                 };
 
                 bool isClusterRocket = (RocketID == ItemID.ClusterRocketI || RocketID == ItemID.ClusterRocketII);
-                SoundStyle fire = new("CalamityMod/Sounds/Custom/PlagueSounds/PlagueBoom", 4);
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PlagueBoom", 4);
                 SoundEngine.PlaySound(fire with { Volume = 0.5f, Pitch = -0.3f }, Projectile.Center);
 
                 int blastRadius = (int)(Projectile.RocketBehavior(info) * 0.7f);
@@ -140,7 +140,7 @@ namespace CalamityMod.Projectiles.Ranged
                 Projectile.Center,
                 Vector2.Zero,
                 StaticEffectsColor * 0.8f,
-                "CalamityMod/Particles/FlameExplosion",
+                "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion",
                 Vector2.One,
                 Main.rand.NextFloat(-10, 10),
                 Projectile.width / 22815f,

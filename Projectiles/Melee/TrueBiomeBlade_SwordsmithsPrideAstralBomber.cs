@@ -1,5 +1,5 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -7,12 +7,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class SwordsmithsPrideAstralBomber : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/Summon/AureusBomber";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Summon/AureusBomber";
 
         public Player Owner => Main.player[Projectile.owner];
 
@@ -114,7 +114,7 @@ namespace CalamityMod.Projectiles.Melee
 
         public override void PostDraw(Color lightColor)
         {
-            Texture2D glow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AureusBomberGlow").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AureusBomberGlow").Value;
             Rectangle frame = glow.Frame(1, 3, 0, Projectile.frame);
             Main.EntitySpriteDraw(glow, Projectile.Center - Main.screenPosition, frame, Color.White, 0f, frame.Size() / 2f, 1f, SpriteEffects.None);
         }

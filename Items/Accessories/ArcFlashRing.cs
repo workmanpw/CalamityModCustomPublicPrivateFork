@@ -1,5 +1,5 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class ArcFlashRing : ModItem, ILocalizedModType
     {

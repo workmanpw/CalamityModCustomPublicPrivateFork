@@ -1,11 +1,11 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Enums;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.CalPlayer.Dashes
+namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
 {
     public class StatisNinjaBeltDash : PlayerDashEffect
     {

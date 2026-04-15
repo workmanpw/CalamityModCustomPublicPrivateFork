@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.PermanentBoosters;
-using CalamityMod.Items.Potions.Food;
+using CalamityModCustomPublicPrivateFork.Items.PermanentBoosters;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Tools
+namespace CalamityModCustomPublicPrivateFork.Items.Tools
 {
     public class DisgustingMeat : ModItem, ILocalizedModType
     {

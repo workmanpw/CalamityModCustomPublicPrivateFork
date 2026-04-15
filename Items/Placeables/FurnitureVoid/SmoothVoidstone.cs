@@ -1,8 +1,8 @@
-﻿using CalamityMod.Items.Placeables.Abyss;
-using CalamityMod.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureVoid
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureVoid
 {
     public class SmoothVoidstone : ModItem, ILocalizedModType
     {

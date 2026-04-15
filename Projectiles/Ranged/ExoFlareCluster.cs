@@ -1,23 +1,23 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     [PierceResistException]
     // Photoviscerator right click main projectile (invisible flare cluster bomb)
     public class ExoFlareCluster : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public int Time = 0;
         public Color sparkColor;
@@ -59,14 +59,14 @@ namespace CalamityMod.Projectiles.Ranged
 
             if (targetDist < 1400)
             {
-                Particle beam3 = new CustomSpark(Projectile.Center, Projectile.velocity * Main.rand.NextFloat(0.01f, 0.1f), "CalamityMod/Particles/SmallBloom", false, 3, 0.4f, sparkColor, new Vector2(1f, 1), true, true);
+                Particle beam3 = new CustomSpark(Projectile.Center, Projectile.velocity * Main.rand.NextFloat(0.01f, 0.1f), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 3, 0.4f, sparkColor, new Vector2(1f, 1), true, true);
                 GeneralParticleHandler.SpawnParticle(beam3);
 
                 float sine = MathHelper.Clamp((float)Math.Sin(Projectile.timeLeft * 0.875f / MathHelper.Pi), -0.7f, 0.7f);
 
                 Vector2 offset = Projectile.velocity.SafeNormalize(Vector2.UnitX).RotatedBy(MathHelper.PiOver2) * sine * 22.5f;
 
-                Particle beam33 = new CustomSpark(Projectile.Center + offset, (-offset.RotatedBy(MathHelper.PiOver2) * 0.3f) * Main.rand.NextFloat(0.01f, 0.1f), "CalamityMod/Particles/SmallBloom", false, 23, 0.3f, sparkColor, new Vector2(1f, 1), true, true, 0, false, false, 0.1f);
+                Particle beam33 = new CustomSpark(Projectile.Center + offset, (-offset.RotatedBy(MathHelper.PiOver2) * 0.3f) * Main.rand.NextFloat(0.01f, 0.1f), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 23, 0.3f, sparkColor, new Vector2(1f, 1), true, true, 0, false, false, 0.1f);
                 GeneralParticleHandler.SpawnParticle(beam33);
             }
 
@@ -98,7 +98,7 @@ namespace CalamityMod.Projectiles.Ranged
                 GeneralParticleHandler.SpawnParticle(exoEnergy);
             }
 
-            Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, sparkColor, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1.2f, 1.8f * Main.rand.NextFloat(0.9f, 1.1f), 12, true);
+            Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, sparkColor, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1.2f, 1.8f * Main.rand.NextFloat(0.9f, 1.1f), 12, true);
             GeneralParticleHandler.SpawnParticle(blastRing);
 
             if (audioCooldown == 0)

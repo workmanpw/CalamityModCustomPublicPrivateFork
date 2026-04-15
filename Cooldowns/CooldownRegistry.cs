@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     // TODO -- This can be made into a ModSystem with simple OnModLoad and Unload hooks.
     public sealed class CooldownRegistry : ModSystem

@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.BiomeManagers;
-using CalamityMod.Enums;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Enums;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Systems.Collections
+namespace CalamityModCustomPublicPrivateFork.Systems.Collections
 {
     /// <summary>
     /// Each Sunken Sea subbiome has a correspoding spawn condition boolean value and a biome type.

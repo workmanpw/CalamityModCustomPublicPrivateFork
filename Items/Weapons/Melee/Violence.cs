@@ -1,13 +1,13 @@
-﻿using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Projectiles.Melee;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     public class Violence : ModItem, ILocalizedModType
     {

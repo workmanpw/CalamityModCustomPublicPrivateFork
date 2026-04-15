@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Buffs.Mounts;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.Mounts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Mounts
+namespace CalamityModCustomPublicPrivateFork.Items.Mounts
 {
     public class Crysthamyr : ModMount
     {
@@ -71,7 +71,7 @@ namespace CalamityMod.Items.Mounts
             MountData.swimFrameStart = MountData.inAirFrameStart;
             if (!Main.dedServ)
             {
-                MountData.frontTextureExtra = ModContent.Request<Texture2D>("CalamityMod/Items/Mounts/CrysthamyrExtra");
+                MountData.frontTextureExtra = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Mounts/CrysthamyrExtra");
                 MountData.textureWidth = MountData.backTexture.Width();
                 MountData.textureHeight = MountData.backTexture.Height();
             }

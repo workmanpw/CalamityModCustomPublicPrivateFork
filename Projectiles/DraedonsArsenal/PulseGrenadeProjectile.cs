@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.Particles;
-using CalamityMod.Sounds;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,12 +11,12 @@ using Terraria.Audio;
 using Terraria.ModLoader;
 using static Terraria.Player;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class PulseGrenadeProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Items/Weapons/DraedonsArsenal/PulseGrenade";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/PulseGrenade";
 
         public ref float time => ref Projectile.ai[0];
         public bool catching => Projectile.ai[1] == 5;
@@ -105,7 +105,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                 }
                 else
                 {
-                    SoundStyle pulse = new("CalamityMod/Sounds/Item/PulseSound");
+                    SoundStyle pulse = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PulseSound");
                     SoundEngine.PlaySound(pulse with { Volume = 0.3f, Pitch = 0.1f + beepRate * 0.04f }, Projectile.Center);
                     Projectile.Opacity = 0;
                     beepTimer = 0;
@@ -127,11 +127,11 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
 
                 if (Projectile.Calamity().stealthStrike)
                 {
-                    SoundStyle hardThrow = new("CalamityMod/Sounds/Item/SwooshMid");
+                    SoundStyle hardThrow = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SwooshMid");
                     SoundEngine.PlaySound(hardThrow with { Volume = 0.9f, Pitch = 0.5f }, Projectile.Center);
 
                     Projectile.timeLeft = 240;
-                    Particle pulse3 = new CustomSpark(Projectile.Center, Projectile.velocity * 1.5f, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 13, 0.08f, Effects.ArsenalEffects.ArsenalPulseColor, new Vector2(1.2f, 0.7f), shrinkSpeed: 0.1f);
+                    Particle pulse3 = new CustomSpark(Projectile.Center, Projectile.velocity * 1.5f, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 13, 0.08f, Effects.ArsenalEffects.ArsenalPulseColor, new Vector2(1.2f, 0.7f), shrinkSpeed: 0.1f);
                     GeneralParticleHandler.SpawnParticle(pulse3);
 
                     for (int i = 0; i <= 12; i++)
@@ -154,7 +154,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                     }
                 }
 
-                SoundStyle toss = new("CalamityMod/Sounds/Item/LightThrow");
+                SoundStyle toss = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LightThrow");
                 SoundEngine.PlaySound(toss with { Volume = 1f, Pitch = 0 }, Projectile.Center);
 
                 Projectile.tileCollide = true;
@@ -175,9 +175,9 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                     if (pullPin && completion >= pinTime && !catching)
                     {
                         Vector2 vel = aimDirection * -6 - Vector2.UnitY * 3 + Owner.velocity;
-                        Particle thePin = new CustomSpark(Projectile.Center, vel, "CalamityMod/Projectiles/DraedonsArsenal/PulseGrenadePin", true, 43, 1f, Color.White, Vector2.One, false, false, 0, false, true, noShrink: true, spin: 0.1f * Math.Sign(vel.X));
+                        Particle thePin = new CustomSpark(Projectile.Center, vel, "CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/PulseGrenadePin", true, 43, 1f, Color.White, Vector2.One, false, false, 0, false, true, noShrink: true, spin: 0.1f * Math.Sign(vel.X));
                         GeneralParticleHandler.SpawnParticle(thePin);
-                        SoundStyle pin = new("CalamityMod/Sounds/Item/LightMetal");
+                        SoundStyle pin = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LightMetal");
                         SoundEngine.PlaySound(pin with { Volume = 0.6f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f) }, Projectile.Center);
                         pullPin = false;
                     }
@@ -224,7 +224,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
 
             if (Projectile.Calamity().stealthStrike)
             {
-                Particle fadeInfx = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomCircle", false, 23, 0.4f, col * 0.6f, new Vector2(0.8f, 1f), true, true, shrinkSpeed: 0.3f, glowOpacity: 0.35f);
+                Particle fadeInfx = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 23, 0.4f, col * 0.6f, new Vector2(0.8f, 1f), true, true, shrinkSpeed: 0.3f, glowOpacity: 0.35f);
                 GeneralParticleHandler.SpawnParticle(fadeInfx);
             }
             else
@@ -310,10 +310,10 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
 
             if (Projectile.Calamity().stealthStrike)
             {
-                SoundStyle pulseHard = new("CalamityMod/Sounds/Item/PulseSoundHeavy");
+                SoundStyle pulseHard = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PulseSoundHeavy");
                 SoundEngine.PlaySound(pulseHard with { Volume = 0.8f, Pitch = -0.6f, MaxInstances = 2 }, Projectile.Center);
             }
-            SoundStyle pulse = new("CalamityMod/Sounds/Item/PulseSoundHeavy");
+            SoundStyle pulse = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PulseSoundHeavy");
             SoundEngine.PlaySound(pulse with { Volume = 0.9f, Pitch = 0, MaxInstances = 2 }, Projectile.Center);
 
 
@@ -337,7 +337,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
         {
             float fade = 1;
             float reformMult = Utils.GetLerpValue(1, 0, Projectile.Opacity) * 3.5f;
-            Texture2D tex = pullPin ? ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/DraedonsArsenal/PulseGrenade").Value : ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/PulseGrenadeNoPin").Value;
+            Texture2D tex = pullPin ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/PulseGrenade").Value : ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/PulseGrenadeNoPin").Value;
             for (int i = 0; i < 15; i++)
             {
                 Color auraColor = col with { A = 0 } * 0.25f * fade * fxScale;
@@ -346,7 +346,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             }
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, lightColor * fade * Projectile.Opacity, Projectile.rotation, tex.Size() / 2f, Projectile.scale, (!flung ? Owner.direction : Projectile.direction) != 1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0);
 
-            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/DraedonsArsenal/PulseGrenadeGlow").Value, Projectile.Center - Main.screenPosition, null, Color.White * fade * Projectile.Opacity, Projectile.rotation, tex.Size() * 0.5f, 1f, (!flung ? Owner.direction : Projectile.direction) != 1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0);
+            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/PulseGrenadeGlow").Value, Projectile.Center - Main.screenPosition, null, Color.White * fade * Projectile.Opacity, Projectile.rotation, tex.Size() * 0.5f, 1f, (!flung ? Owner.direction : Projectile.direction) != 1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0);
             return false;
         }
         public override void DrawBehind(int index, List<int> behindNPCsAndTiles, List<int> behindNPCs, List<int> behindProjectiles, List<int> overPlayers, List<int> overWiresUI)

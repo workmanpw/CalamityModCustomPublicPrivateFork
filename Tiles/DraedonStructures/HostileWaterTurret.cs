@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items.Materials;
-using CalamityMod.TileEntities;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.DraedonStructures
+namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
 {
     public class HostileWaterTurret : ModTile
     {
@@ -24,7 +24,7 @@ namespace CalamityMod.Tiles.DraedonStructures
 
         public Asset<Texture2D> GlowTexture;
 
-        public override string Texture => "CalamityMod/Tiles/PlayerTurrets/PlayerWaterTurret";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/PlayerTurrets/PlayerWaterTurret";
         public override void SetStaticDefaults()
         {
             Main.tileLighted[Type] = true;
@@ -96,7 +96,7 @@ namespace CalamityMod.Tiles.DraedonStructures
                     drawColor.B = 50;
             }
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/PlayerTurrets/WaterTurretHead");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/PlayerTurrets/WaterTurretHead");
             Texture2D tex = GlowTexture.Value;
 
             Vector2 screenOffset = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);

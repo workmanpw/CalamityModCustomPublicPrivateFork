@@ -1,13 +1,13 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.FurnitureBotanic;
-using CalamityMod.Items.Placeables.FurnitureCosmilite;
-using CalamityMod.Items.Placeables.FurnitureSilva;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
-using CalamityMod.Tiles.FurnitureAuric;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureBotanic;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureCosmilite;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSilva;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureAuric
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAuric
 {
     public class AuricToilet : ModItem, ILocalizedModType
     {

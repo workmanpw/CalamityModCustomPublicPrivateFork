@@ -1,15 +1,15 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.CalPlayer;
-using CalamityMod.Dusts;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class AstrageldonSummon : ModProjectile, ILocalizedModType
     {

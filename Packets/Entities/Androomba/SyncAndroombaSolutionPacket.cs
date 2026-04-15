@@ -1,8 +1,8 @@
-﻿using System.IO;
-using CalamityMod.NPCs.TownNPCs;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
 using Terraria;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class SyncAndroombaSolutionPacket : CalamityPacket
     {

@@ -1,9 +1,9 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     [AutoloadEquip(EquipType.Face)]
     public class Abaddon : ModItem, ILocalizedModType

@@ -1,10 +1,10 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Events;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.CalClone;
-using CalamityMod.NPCs.Cryogen;
-using CalamityMod.NPCs.SupremeCalamitas;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.CalClone;
+using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
+using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,14 +12,14 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class SCalBrimstoneFireblast : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public static readonly SoundStyle ImpactSound = new("CalamityMod/Sounds/Custom/SCalSounds/BrimstoneFireblastImpact");
+        public static readonly SoundStyle ImpactSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/BrimstoneFireblastImpact");
         public int DartDamage = 0;
         public bool withinRange = false;
         public bool setLifetime = false;

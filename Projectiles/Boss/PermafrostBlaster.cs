@@ -1,19 +1,19 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class PermafrostBlaster : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
 
-        public override string Texture => "CalamityMod/Items/Accessories/PermafrostsConcoction";
-        public static readonly SoundStyle SANSCharge = new("CalamityMod/Sounds/Custom/Ravager/GasterBlasterCharge");
-        public static readonly SoundStyle SANSFire = new("CalamityMod/Sounds/Custom/Ravager/GasterBlasterFire");
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Accessories/PermafrostsConcoction";
+        public static readonly SoundStyle SANSCharge = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Ravager/GasterBlasterCharge");
+        public static readonly SoundStyle SANSFire = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Ravager/GasterBlasterFire");
         public Vector2 storedVelocity;
 
         public override void SetDefaults()

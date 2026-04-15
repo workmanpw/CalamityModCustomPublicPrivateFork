@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Linq;
-using CalamityMod.Dusts;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,12 +14,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class AerSigilMissile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public static float MaxWidth = 32;
         public ref float Time => ref Projectile.ai[0];
@@ -95,7 +95,7 @@ namespace CalamityMod.Projectiles.Magic
 
         public override void OnKill(int timeLeft)
         {
-            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/UnstableCastersGauntlet/AerSigilGust") { Volume = 0.6f, PitchVariance = 0.1f }, Projectile.Center);
+            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/UnstableCastersGauntlet/AerSigilGust") { Volume = 0.6f, PitchVariance = 0.1f }, Projectile.Center);
 
             Vector2 adjustedCenter = Projectile.Center - Main.screenPosition + new Vector2(0, -16).RotatedBy(Projectile.rotation - MathHelper.PiOver2);
 
@@ -117,9 +117,9 @@ namespace CalamityMod.Projectiles.Magic
                 explosion.netUpdate = true;
             }
 
-            Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Goldenrod * 0.75f, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f, 0.6f * 2.5f, 15);
+            Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Goldenrod * 0.75f, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f, 0.6f * 2.5f, 15);
             GeneralParticleHandler.SpawnParticle(orb);
-            Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.75f, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f, 0.5f * 2.5f, 15);
+            Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.75f, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f, 0.5f * 2.5f, 15);
             GeneralParticleHandler.SpawnParticle(orb2);
 
         }
@@ -148,7 +148,7 @@ namespace CalamityMod.Projectiles.Magic
             Vector2 adjustedCenter = Projectile.Center - Main.screenPosition + new Vector2(0, -16).RotatedBy(Projectile.rotation - MathHelper.PiOver2);
 
             wingAnimationTimer++;
-            Texture2D wingTexture = Request<Texture2D>("CalamityMod/ExtraTextures/SimpleWings").Value;
+            Texture2D wingTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/SimpleWings").Value;
             Vector2 origin = wingTexture.Size() * 0.5f;
 
             float stretchFactorY = 0f;
@@ -198,7 +198,7 @@ namespace CalamityMod.Projectiles.Magic
             Main.spriteBatch.EnterShaderRegion();
 
             if (TrailTex == null)
-                TrailTex = Request<Texture2D>("CalamityMod/ExtraTextures/Trails/BasicTrail");
+                TrailTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/BasicTrail");
 
             GameShaders.Misc["CalamityMod:ExobladePierce"].SetShaderTexture(TrailTex);
             GameShaders.Misc["CalamityMod:ExobladePierce"].UseImage2("Images/Extra_189");
@@ -226,7 +226,7 @@ namespace CalamityMod.Projectiles.Magic
 
             // Draw bloom circle at the tip
             if (BloomTex == null)
-                BloomTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+                BloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
             Texture2D bloomTex = BloomTex.Value;
             Main.EntitySpriteDraw(bloomTex, adjustedCenter, null, (Color.White * 4f) with { A = 0 }, 0, bloomTex.Size() / 2f, 0.45f * Projectile.scale, 0, 0);
 

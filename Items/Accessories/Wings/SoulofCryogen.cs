@@ -1,5 +1,5 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories.Wings
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Wings
 {
     [AutoloadEquip(EquipType.Wings)]
     public class SoulofCryogen : BaseWings

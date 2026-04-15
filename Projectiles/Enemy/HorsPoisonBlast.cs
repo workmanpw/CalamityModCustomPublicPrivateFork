@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent;
 
-namespace CalamityMod.Projectiles.Enemy
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
 {
     public class HorsPoisonBlast : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Enemy";
-        public override string Texture => "CalamityMod/Projectiles/Magic/VitriolicViperSpit";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/VitriolicViperSpit";
         public override void SetDefaults()
         {
             Projectile.width = 6;

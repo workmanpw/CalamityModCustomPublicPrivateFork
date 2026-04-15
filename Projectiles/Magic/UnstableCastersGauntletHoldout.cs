@@ -1,8 +1,8 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
@@ -10,12 +10,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class UnstableCastersGauntletHoldout : BaseGunHoldoutProjectile
     {
         public override int AssociatedItemID => ModContent.ItemType<UnstableCastersGauntlet>();
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public ref float shootingTimer => ref Projectile.ai[0];
 
         private float currentRecoilRotation;
@@ -142,7 +142,7 @@ namespace CalamityMod.Projectiles.Magic
                         currentRecoilRotation -= RecoilRotationAmount;
 
                         // SFX
-                        SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/UnstableCastersGauntlet/VisNeedleFire") { Volume = 0.4f, PitchVariance = 0.15f }, Projectile.Center);
+                        SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/UnstableCastersGauntlet/VisNeedleFire") { Volume = 0.4f, PitchVariance = 0.15f }, Projectile.Center);
 
                         // Pulse VFX
                         Particle shootPulse = new DirectionalPulseRing(GunTipPosition, Projectile.velocity.SafeNormalize(Vector2.UnitY) * 5f, Color.DarkMagenta * 4f, new Vector2(0.4f, 0.8f), Projectile.velocity.ToRotation(), 0.07f, 0.3f, 16);
@@ -171,7 +171,7 @@ namespace CalamityMod.Projectiles.Magic
                 {
                     calPlayer.unstableCastersGauntletVis -= 12f;
 
-                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/MagicRockSound") { Volume = 0.4f, PitchVariance = 0.05f }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockSound") { Volume = 0.4f, PitchVariance = 0.05f }, Projectile.Center);
                     if (Main.myPlayer == Projectile.owner)
                         Projectile.NewProjectile(Projectile.GetSource_FromThis(), Owner.Center, Vector2.Zero, ModContent.ProjectileType<SigilSet>(), Projectile.damage, Projectile.knockBack, Projectile.owner);
                     shootingTimer = 0f;

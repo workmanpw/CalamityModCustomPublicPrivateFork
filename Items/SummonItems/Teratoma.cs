@@ -1,11 +1,11 @@
-﻿using CalamityMod.Events;
-using CalamityMod.Items.Materials;
-using CalamityMod.NPCs.HiveMind;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.NPCs.HiveMind;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     public class Teratoma : ModItem, ILocalizedModType
     {

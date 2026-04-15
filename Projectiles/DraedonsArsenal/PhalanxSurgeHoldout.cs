@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Cooldowns;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -10,7 +10,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class PhalanxSurgeHoldout : BaseGunHoldoutProjectile
     {
@@ -85,7 +85,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                     float fxScale = Utils.GetLerpValue(10, 25, Owner.velocity.Length(), true);
                     for (int i = 0; i < 3; i++)
                     {
-                        Particle spark2 = new CustomSpark(Owner.Center + Main.rand.NextVector2Circular(20, 20), -Owner.velocity * Main.rand.NextFloat(0.4f, 1.2f), "CalamityMod/Particles/BloomLineSoftEdge", false, 12, Main.rand.NextFloat(0.02f, 0.03f) * fxScale, Effects.ArsenalEffects.ArsenalLaserColor * 0.8f, new Vector2(1, 1), true, false, 0, false, false, 1f * fxScale);
+                        Particle spark2 = new CustomSpark(Owner.Center + Main.rand.NextVector2Circular(20, 20), -Owner.velocity * Main.rand.NextFloat(0.4f, 1.2f), "CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge", false, 12, Main.rand.NextFloat(0.02f, 0.03f) * fxScale, Effects.ArsenalEffects.ArsenalLaserColor * 0.8f, new Vector2(1, 1), true, false, 0, false, false, 1f * fxScale);
                         GeneralParticleHandler.SpawnParticle(spark2);
                     }
                 }
@@ -129,7 +129,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                         {
                             Vector2 place = GunTipPosition + Main.rand.NextVector2Circular(5, 5) + Projectile.velocity * 12;
                             int dir = Main.rand.NextBool() ? 1 : -1;
-                            Particle chargeParticles = new CustomSpark(place, -Projectile.velocity.RotatedBy(0.42f * dir).RotatedByRandom(0.1f) * Main.rand.NextFloat(8, 30), "CalamityMod/Particles/BloomLineSoftEdge", false, 6, 0.015f * charge, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(1f, 0.7f), shrinkSpeed: 1.4f);
+                            Particle chargeParticles = new CustomSpark(place, -Projectile.velocity.RotatedBy(0.42f * dir).RotatedByRandom(0.1f) * Main.rand.NextFloat(8, 30), "CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge", false, 6, 0.015f * charge, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(1f, 0.7f), shrinkSpeed: 1.4f);
                             GeneralParticleHandler.SpawnParticle(chargeParticles);
 
                             if (i % 2 == 0)
@@ -144,18 +144,18 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                         bool soundPlaying = (SoundEngine.TryGetActiveSound(StartSlot, out var audio) && audio != null);
                         if (chargeTimer == chargeRate && (!SoundEngine.TryGetActiveSound(ChargeSlot, out var audio3) || !audio3.IsPlaying))
                         {
-                            SoundStyle sound = new("CalamityMod/Sounds/Item/PhalanxSurgeChargeLoop");
+                            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PhalanxSurgeChargeLoop");
                             ChargeSlot = SoundEngine.PlaySound(sound with { Volume = 0.7f, IsLooped = true }, Projectile.Center);
                         }
                         if ((!soundPlaying || !audio.IsPlaying) && startChargeLoop)
                         {
-                            SoundStyle sound = new("CalamityMod/Sounds/Item/PhalanxSurgeCharge");
+                            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PhalanxSurgeCharge");
                             StartSlot = SoundEngine.PlaySound(sound with { Volume = 0.9f }, Projectile.Center);
                             startChargeLoop = false;
                         }
                         if (chargeTimer == chargeRate) // Reached max charge
                         {
-                            SoundStyle sound = new("CalamityMod/Sounds/Item/PhalanxSurgeChargeMax");
+                            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PhalanxSurgeChargeMax");
                             StartSlot = SoundEngine.PlaySound(sound with { Volume = 0.8f }, Projectile.Center);
 
                             fullyCharged = true;
@@ -238,9 +238,9 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             {
                 if (Main.mouseLeft)
                 {
-                    SoundStyle sound2 = new("CalamityMod/Sounds/Item/LauncherHeavyShot");
+                    SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LauncherHeavyShot");
                     SoundEngine.PlaySound(sound2 with { Volume = 0.9f, Pitch = 0.4f }, Projectile.Center);
-                    Particle pulse3 = new CustomSpark(Owner.Center, Projectile.velocity * 7, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 26, 0.09f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.1f);
+                    Particle pulse3 = new CustomSpark(Owner.Center, Projectile.velocity * 7, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 26, 0.09f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.1f);
                     GeneralParticleHandler.SpawnParticle(pulse3);
                     didDash = true;
                 }
@@ -257,7 +257,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                     Projectile skewer = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), GunTipPosition, shootVelocity * 2, ModContent.ProjectileType<PhalanxSurgeLance>(), chargeDamage, chargeKB, Projectile.owner, 0, 0, (didDash ? 5 : 0));
                     skewer.timeLeft = didDash ? 25 : 10;
                 }
-                SoundStyle sound = new("CalamityMod/Sounds/Item/PhalanxSurgeChargeShoot");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PhalanxSurgeChargeShoot");
                 SoundEngine.PlaySound(sound with { Volume = 0.9f }, Projectile.Center);
                 Owner.SetScreenshake(6f);
 
@@ -275,7 +275,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             else
             {
                 OffsetLengthFromArm -= 10;
-                SoundStyle sound = new("CalamityMod/Sounds/Item/PhalanxSurgeShoot");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PhalanxSurgeShoot");
                 SoundEngine.PlaySound(sound with { Volume = 0.7f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f) }, Projectile.Center);
 
                 Vector2 shootVelocity = Projectile.velocity.SafeNormalize(Vector2.UnitY) * 6f;
@@ -323,8 +323,8 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             if (time < 2)
                 return false;
 
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/DraedonsArsenal/PhalanxSurge").Value;
-            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/DraedonsArsenal/PhalanxSurgeGlow").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/PhalanxSurge").Value;
+            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/PhalanxSurgeGlow").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition + new Vector2(0, -3);
 
 
@@ -334,8 +334,8 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             Vector2 rotationPoint = texture.Size() * 0.5f;
             SpriteEffects flipSprite = Projectile.direction == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
 
-            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/ArchSmear").Value;
-            Texture2D pointTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark").Value;
+            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/ArchSmear").Value;
+            Texture2D pointTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark").Value;
 
             if (charging)
             {

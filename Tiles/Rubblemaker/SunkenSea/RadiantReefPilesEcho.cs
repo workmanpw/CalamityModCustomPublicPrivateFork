@@ -1,13 +1,13 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 using Terraria.GameContent;
-using CalamityMod.Items.Placeables.SunkenSea;
-using CalamityMod.Tiles.SunkenSea.Ambient;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
 
-namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
 {
     public class SmallRadiantReefPileEcho : SmallRadiantReefPile
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/SmallRadiantReefPile";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/SmallRadiantReefPile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -17,7 +17,7 @@ namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
     }
     public class RadiantReefPilesEcho : MediumRadiantReefPile
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/MediumRadiantReefPile";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/MediumRadiantReefPile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -27,7 +27,7 @@ namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
     }
     public class LargeRadiantReefPileEcho : LargeRadiantReefPile
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/LargeRadiantReefPile";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/LargeRadiantReefPile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -37,7 +37,7 @@ namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
     }
     public class GiantRadiantReefPileEcho : GiantRadiantReefPile
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/GiantRadiantReefPile";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/GiantRadiantReefPile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

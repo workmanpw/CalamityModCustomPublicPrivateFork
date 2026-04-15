@@ -1,11 +1,11 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class NebulaDust : ModProjectile, ILocalizedModType
     {

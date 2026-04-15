@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,13 +11,13 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class MawOfInfinityJaws : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
 
-        public override string Texture => "CalamityMod/Particles/Jaws";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Jaws";
         public int time = 0;
         public override void SetDefaults()
         {
@@ -66,7 +66,7 @@ namespace CalamityMod.Projectiles.Melee
             {
                 Projectile.friendly = true;
 
-                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/NPCKilled/DevourerSegmentBreak1") { Volume = 0.3f, PitchVariance = 0.3f }, Projectile.position);
+                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/DevourerSegmentBreak1") { Volume = 0.3f, PitchVariance = 0.3f }, Projectile.position);
                 SoundEngine.PlaySound(SoundID.Item62 with { Volume = 0.5f, PitchVariance = 0.3f }, Projectile.position);
                 for (int i = 0; i < 35; i++)
                 {

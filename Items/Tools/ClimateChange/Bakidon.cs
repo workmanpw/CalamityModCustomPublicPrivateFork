@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Net;
 
-namespace CalamityMod.Items.Tools.ClimateChange
+namespace CalamityModCustomPublicPrivateFork.Items.Tools.ClimateChange
 {
     [LegacyName("Moonlight")]
     public class Bakidon : ModItem, ILocalizedModType
@@ -58,8 +58,8 @@ namespace CalamityMod.Items.Tools.ClimateChange
 
             float barScale = 1.1f;
 
-            var barBG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
-            var barFG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
+            var barBG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
+            var barFG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
 
             Vector2 barOrigin = barBG.Size() * 0.5f;
             float yOffset = 7.5f;

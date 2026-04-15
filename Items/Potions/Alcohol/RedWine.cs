@@ -1,13 +1,13 @@
-﻿using CalamityMod.Buffs.Alcohol;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Potions.Food;
+using CalamityModCustomPublicPrivateFork.Buffs.Alcohol;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Potions.Alcohol
+namespace CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol
 {
     public class RedWine : ModItem, ILocalizedModType
     {

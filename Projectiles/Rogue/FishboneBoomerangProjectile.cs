@@ -1,18 +1,18 @@
-﻿using System;
-using CalamityMod.Projectiles.Melee;
+using System;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class FishboneBoomerangProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/FishboneBoomerang";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/FishboneBoomerang";
 
         public static int ChargeupTime = 10;
         public static int Lifetime = 240;

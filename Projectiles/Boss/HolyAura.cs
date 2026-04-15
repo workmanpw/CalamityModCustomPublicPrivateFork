@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.Providence;
+using System;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.Providence;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class HolyAura : ModProjectile, ILocalizedModType
     {

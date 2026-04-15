@@ -1,23 +1,23 @@
-﻿using System.IO;
-using CalamityMod.BiomeManagers;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Armor.Vanity;
-using CalamityMod.Items.LoreItems;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Furniture.BossRelics;
-using CalamityMod.Items.Placeables.Furniture.Paintings;
-using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Items.TreasureBags;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.Projectiles.Enemy;
-using CalamityMod.World;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.LoreItems;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -30,7 +30,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.BrimstoneElemental
+namespace CalamityModCustomPublicPrivateFork.NPCs.BrimstoneElemental
 {
     [AutoloadBossHead]
     public class BrimstoneElemental : ModNPC
@@ -45,11 +45,11 @@ namespace CalamityMod.NPCs.BrimstoneElemental
         }
         public int currentMode = (int)Elemental.Brimstone;
 
-        public static readonly SoundStyle TeleportSound = new("CalamityMod/Sounds/Custom/BrimstoneElemental/Teleport");
-        public static readonly SoundStyle HellfireballSound = new("CalamityMod/Sounds/Custom/BrimstoneElemental/Hellfireball", 3);
-        public static readonly SoundStyle DartSound = new("CalamityMod/Sounds/Custom/BrimstoneElemental/BrimstoneDartRing", 3);
-        public static readonly SoundStyle HideInShellSound = new("CalamityMod/Sounds/Custom/BrimstoneElemental/ShellTransform");
-        public static readonly SoundStyle ShellFireSound = new("CalamityMod/Sounds/Custom/BrimstoneElemental/ShellProjectiles", 3);
+        public static readonly SoundStyle TeleportSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrimstoneElemental/Teleport");
+        public static readonly SoundStyle HellfireballSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrimstoneElemental/Hellfireball", 3);
+        public static readonly SoundStyle DartSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrimstoneElemental/BrimstoneDartRing", 3);
+        public static readonly SoundStyle HideInShellSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrimstoneElemental/ShellTransform");
+        public static readonly SoundStyle ShellFireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrimstoneElemental/ShellProjectiles", 3);
 
         public override void SetStaticDefaults()
         {
@@ -101,7 +101,7 @@ namespace CalamityMod.NPCs.BrimstoneElemental
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.BrimstoneElemental")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.BrimstoneElemental")
             });
         }
 

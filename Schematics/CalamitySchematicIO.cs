@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.IO.Compression;
@@ -10,7 +10,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.Default;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.Schematics
+namespace CalamityModCustomPublicPrivateFork.Schematics
 {
     #region Structs
     // A struct parallel to Tile which, for modded tiles, stores offset tile and wall type IDs based on the schematic's mod name arrays.
@@ -702,6 +702,9 @@ PostAreaIteration:
                 else
                 {
                     ModContent.SplitName(tileFullName, out string mod, out string tileName);
+                    // Handle legacy schematics that reference the old mod name
+                    if (mod == "CalamityMod")
+                        mod = "CalamityModCustomPublicPrivateFork";
                     Mod theMod = ModLoader.GetMod(mod);
 
                     // If that mod isn't loaded, spawn in a TML default UnloadedTile instead.
@@ -718,6 +721,9 @@ PostAreaIteration:
                 else
                 {
                     ModContent.SplitName(wallFullName, out string mod, out string wallName);
+                    // Handle legacy schematics that reference the old mod name
+                    if (mod == "CalamityMod")
+                        mod = "CalamityModCustomPublicPrivateFork";
                     Mod theMod = ModLoader.GetMod(mod);
                     // If that mod isn't loaded, spawn in a TML default UnloadedWall instead.
                     smt.WallType = (ushort)(theMod is null ? ModContent.WallType<UnloadedWall>() : theMod.Find<ModWall>(wallName).Type);
@@ -730,7 +736,7 @@ PostAreaIteration:
         public static SchematicMetaTile[,] LoadSchematic(string filename)
         {
             SchematicMetaTile[,] ret = null;
-            using (Stream st = CalamityMod.Instance.GetFileStream(filename, true))
+            using (Stream st = ModContent.GetInstance<CalamityMod>().GetFileStream(filename, true))
             {
                 ret = ImportSchematic(st);
             }
@@ -772,7 +778,7 @@ PostAreaIteration:
             // This is an intentional "fail gracefully" case.
             else if (isTML13Schematic)
             {
-                CalamityMod.Log.Error(TML13ValidString);
+                ModContent.GetInstance<CalamityMod>().Logger.Error(TML13ValidString);
                 SchematicMetaTile[,] empty = new SchematicMetaTile[0, 0];
                 return empty;
             }

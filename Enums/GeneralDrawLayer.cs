@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace CalamityMod.Enums
+namespace CalamityModCustomPublicPrivateFork.Enums
 {
     /// <summary>
     /// A general collection of points in Terraria's overall draw order that graphical systems in the mod draw to.

@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.BaseItems;
-using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Items.BaseItems;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     public class GrandGuardian : CustomUseProjItem, ILocalizedModType
     {
@@ -32,7 +32,7 @@ namespace CalamityMod.Items.Weapons.Melee
         }
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/GrandGuardianGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GrandGuardianGlow").Value);
         }
         public override bool MeleePrefix() => true;
         public override void AddRecipes()

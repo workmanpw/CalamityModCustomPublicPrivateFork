@@ -1,10 +1,10 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
 // + Throwing
 // '--+ Rogue
 //    '--> Stealth
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     // Rogue is a subclass of Throwing (the removed vanilla class re-added by TML).
     // It has no technical differences from Throwing, but is used by all Calamity thrown weapons.

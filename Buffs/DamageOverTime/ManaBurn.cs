@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.DamageOverTime
+namespace CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime
 {
     public class ManaBurn : ModBuff
     {

@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Dusts;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,13 +10,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     [PierceResistException]
     public class PauldronDash : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         private static float ExplosionRadius = 75f;
         public Color effectsColor = Color.White;
@@ -92,7 +92,7 @@ namespace CalamityMod.Projectiles.Typeless
                 {
                     Vector2 sparkVelocity = safeVel.RotatedBy(dir * 4.3f * i) - safeVel * 3;
                     Vector2 sparkPlace = Owner.Center + (safeVel * 15).RotatedBy(2f * dir * i) * 1.5f;
-                    Particle spark = new VelChangingSpark(sparkPlace, sparkVelocity, -safeVel * 5, "CalamityMod/Particles/BloomCircle", 10, sparkscale2, effectsColor * fxFade, new Vector2(0.8f, 2f), shrinkSpeed: 0.4f, lerpRate: 0.1f);
+                    Particle spark = new VelChangingSpark(sparkPlace, sparkVelocity, -safeVel * 5, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", 10, sparkscale2, effectsColor * fxFade, new Vector2(0.8f, 2f), shrinkSpeed: 0.4f, lerpRate: 0.1f);
                     GeneralParticleHandler.SpawnParticle(spark);
 
                     if (isAlive)
@@ -114,9 +114,9 @@ namespace CalamityMod.Projectiles.Typeless
             target.AddBuff(BuffID.OnFire3, 240);
             target.AddBuff(ModContent.BuffType<Buffs.StatDebuffs.ArmorCrunch>(), 300);
 
-            SoundStyle sound = new("CalamityMod/Sounds/Item/HolyColliderProjectileHit");
+            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HolyColliderProjectileHit");
             SoundEngine.PlaySound(sound with { Volume = 0.4f, Pitch = 0.15f }, Projectile.Center);
-            SoundStyle sound2 = new("CalamityMod/Sounds/Item/MagicRockImpact");
+            SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockImpact");
             SoundEngine.PlaySound(sound2 with { Volume = 0.6f, Pitch = 0.35f }, Projectile.Center);
 
             for (int i = 0; i <= 12; i++)
@@ -142,16 +142,16 @@ namespace CalamityMod.Projectiles.Typeless
                     for (int b = 0; b < 2; b++)
                     {
                         Vector2 pulseVel = new Vector2(0, Main.rand.NextFloat(-7, -9)).RotatedBy(i * (MathHelper.ToRadians(360f) / 5)).RotatedBy(rot + baseRot + 0.9f);
-                        Particle orb = new CustomPulse(target.Center, pulseVel, (Main.rand.NextBool() ? Color.Orange : Color.OrangeRed) * 0.9f, "CalamityMod/Projectiles/Summon/RustyBeaconPulse", Vector2.One, pulseVel.ToRotation(), 0.2f, Main.rand.NextFloat(0.55f, 0.85f) * 3f, Main.rand.Next(14, 19 + 1));
+                        Particle orb = new CustomPulse(target.Center, pulseVel, (Main.rand.NextBool() ? Color.Orange : Color.OrangeRed) * 0.9f, "CalamityModCustomPublicPrivateFork/Projectiles/Summon/RustyBeaconPulse", Vector2.One, pulseVel.ToRotation(), 0.2f, Main.rand.NextFloat(0.55f, 0.85f) * 3f, Main.rand.Next(14, 19 + 1));
                         GeneralParticleHandler.SpawnParticle(orb);
                     }
-                    Particle orb2 = new CustomSpark(target.Center, new Vector2(0, -7).RotatedBy(i * (MathHelper.ToRadians(360f) / 5)).RotatedBy(rot + baseRot), "CalamityMod/Particles/BloomLineFade", false, 13, 0.095f, Main.rand.NextBool() ? Color.Orange : Color.OrangeRed, new Vector2(2.9f, 0.5f), shrinkSpeed: 0.9f);
+                    Particle orb2 = new CustomSpark(target.Center, new Vector2(0, -7).RotatedBy(i * (MathHelper.ToRadians(360f) / 5)).RotatedBy(rot + baseRot), "CalamityModCustomPublicPrivateFork/Particles/BloomLineFade", false, 13, 0.095f, Main.rand.NextBool() ? Color.Orange : Color.OrangeRed, new Vector2(2.9f, 0.5f), shrinkSpeed: 0.9f);
                     GeneralParticleHandler.SpawnParticle(orb2);
                 }
 
                 for (int i = 0; i < 2; i++)
                 {
-                    Particle bloom = new CustomSpark(target.Center, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 20, 1.2f, Color.OrangeRed, new Vector2(1, 1), true, true, glowCenterScale: 0.7f, glowOpacity: 0.8f);
+                    Particle bloom = new CustomSpark(target.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 20, 1.2f, Color.OrangeRed, new Vector2(1, 1), true, true, glowCenterScale: 0.7f, glowOpacity: 0.8f);
                     GeneralParticleHandler.SpawnParticle(bloom);
                 }
             }
@@ -174,7 +174,7 @@ namespace CalamityMod.Projectiles.Typeless
                 return false;
 
             float sine = MathHelper.Lerp(Math.Abs((float)Math.Sin(Main.GlobalTimeWrappedHourly * 50f / MathHelper.Pi)), 0.8f, 0.7f);
-            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmearLarge").Value;
+            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmearLarge").Value;
 
             for (int i = 0; i < 5; i++)
             {

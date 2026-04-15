@@ -1,6 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 
-namespace CalamityMod.DataStructures
+namespace CalamityModCustomPublicPrivateFork.DataStructures
 {
     public abstract class BaseBossSpawnContext
     {

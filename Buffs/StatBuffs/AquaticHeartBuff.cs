@@ -1,9 +1,9 @@
-﻿using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatBuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatBuffs
 {
     public class AquaticHeartBuff : ModBuff
     {

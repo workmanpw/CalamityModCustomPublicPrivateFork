@@ -1,15 +1,15 @@
-﻿using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Enemy
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
 {
     public class GammaAcid : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Enemy";
-        public override string Texture => "CalamityMod/Projectiles/Enemy/FlakAcid";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Enemy/FlakAcid";
 
         public override void SetStaticDefaults()
         {

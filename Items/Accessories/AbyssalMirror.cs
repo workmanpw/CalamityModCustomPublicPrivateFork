@@ -1,14 +1,14 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.Armor.Silva;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Silva;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class AbyssalMirror : ModItem, ILocalizedModType, IHoldShiftTooltipItem
     {

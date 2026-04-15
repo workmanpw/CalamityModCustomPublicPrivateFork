@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Utilities;
+namespace CalamityModCustomPublicPrivateFork.Utilities;
 
 internal sealed class MainThreadedFileSystemWatcher : IDisposable
 {

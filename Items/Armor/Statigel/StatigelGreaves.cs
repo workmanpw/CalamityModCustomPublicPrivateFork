@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Statigel
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Statigel
 {
     [AutoloadEquip(EquipType.Legs)]
     public class StatigelGreaves : ModItem, ILocalizedModType

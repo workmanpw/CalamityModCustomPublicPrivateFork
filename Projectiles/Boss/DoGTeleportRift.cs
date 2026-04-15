@@ -1,22 +1,22 @@
-﻿using System.IO;
-using CalamityMod.Effects;
-using CalamityMod.Graphics.Metaballs;
-using CalamityMod.Particles;
-using CalamityMod.Skies;
-using CalamityMod.Utilities.Daybreak;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Effects;
+using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Skies;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class DoGTeleportRift : ModProjectile, ILocalizedModType
     {
-        public static readonly SoundStyle CrackSound = new("CalamityMod/Sounds/NPCHit/CryogenHit", 3);
+        public static readonly SoundStyle CrackSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/CryogenHit", 3);
 
-        public static readonly SoundStyle BreakSound = new("CalamityMod/Sounds/NPCHit/CryogenPhaseTransitionCrack");
+        public static readonly SoundStyle BreakSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/CryogenPhaseTransitionCrack");
 
         // GFB exclusive; DoG can spawn fake rifts on that seed to confuse the player.
         public bool FakeRift;
@@ -36,7 +36,7 @@ namespace CalamityMod.Projectiles.Boss
         public ref float MaxExposure => ref Projectile.localAI[2];
 
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {
@@ -114,7 +114,7 @@ namespace CalamityMod.Projectiles.Boss
                     }
 
                     float brightnessMultiplier = FakeRift ? 0.75f : 1f;
-                    CustomPulse shineExplosion2 = new(Projectile.Center, Vector2.Zero, Color.White * brightnessMultiplier, "CalamityMod/Particles/ShineExplosion2", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.5f * effectsLifetimeInterpolant, 45);
+                    CustomPulse shineExplosion2 = new(Projectile.Center, Vector2.Zero, Color.White * brightnessMultiplier, "CalamityModCustomPublicPrivateFork/Particles/ShineExplosion2", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.5f * effectsLifetimeInterpolant, 45);
                     GeneralParticleHandler.SpawnParticle(shineExplosion2);
 
                     // Increase the scale and exposure of the actual crack at each interval.
@@ -201,13 +201,13 @@ namespace CalamityMod.Projectiles.Boss
                 // Explosion visuals.
                 for (int i = 0; i < 3; i++)
                 {
-                    CustomPulse plasmaExplosion = new(Projectile.Center, Vector2.Zero, DoGSky.DoGTwlight * 0.8f * brightnessMultiplier, "CalamityMod/Particles/PlasmaExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 1.25f + i * 0.05f, 45);
+                    CustomPulse plasmaExplosion = new(Projectile.Center, Vector2.Zero, DoGSky.DoGTwlight * 0.8f * brightnessMultiplier, "CalamityModCustomPublicPrivateFork/Particles/PlasmaExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 1.25f + i * 0.05f, 45);
                     GeneralParticleHandler.SpawnParticle(plasmaExplosion);
                 }
 
-                CustomPulse shineExplosion = new(Projectile.Center, Vector2.Zero, DoGSky.DoGTwlight * brightnessMultiplier, "CalamityMod/Particles/ShineExplosion1", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.75f, 45);
+                CustomPulse shineExplosion = new(Projectile.Center, Vector2.Zero, DoGSky.DoGTwlight * brightnessMultiplier, "CalamityModCustomPublicPrivateFork/Particles/ShineExplosion1", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.75f, 45);
                 GeneralParticleHandler.SpawnParticle(shineExplosion);
-                CustomPulse shineExplosion2 = new(Projectile.Center, Vector2.Zero, Color.White * 0.6f * brightnessMultiplier, "CalamityMod/Particles/ShineExplosion2", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.5f, 45);
+                CustomPulse shineExplosion2 = new(Projectile.Center, Vector2.Zero, Color.White * 0.6f * brightnessMultiplier, "CalamityModCustomPublicPrivateFork/Particles/ShineExplosion2", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.5f, 45);
                 GeneralParticleHandler.SpawnParticle(shineExplosion2);
                 StrongBloom bloom = new(Projectile.Center, Vector2.Zero, Color.White * 0.8f * brightnessMultiplier, 8f, 30);
                 GeneralParticleHandler.SpawnParticle(bloom);
@@ -227,9 +227,9 @@ namespace CalamityMod.Projectiles.Boss
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D crackTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/CrackedGlass_Glowing").Value;
-            Texture2D starTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/StarProj").Value;
-            Texture2D bloomRingTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomRing").Value;
+            Texture2D crackTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/CrackedGlass_Glowing").Value;
+            Texture2D starTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/StarProj").Value;
+            Texture2D bloomRingTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomRing").Value;
 
             float chargeInterpolant = CalamityUtils.SineInOutEasing(Timer / RiftLifetime, 1);
             float brightnessMultiplier = FakeRift ? 0.6f : 1f;

@@ -1,4 +1,4 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.Audio;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class StomperSlam : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public float scaleFromFall;
         public float damageScaleFromFall;
         public int timeLeft = 60;
@@ -42,7 +42,7 @@ namespace CalamityMod.Projectiles.Typeless
                 damageScaleFromFall = Projectile.ai[0] / 40;
                 Projectile.damage = (int)(300f * damageScaleFromFall + 300f);
 
-                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/GravistarSlam") { Volume = 0.75f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/GravistarSlam") { Volume = 0.75f }, Projectile.Center);
 
                 //Spawn particles, but also increase the count to fill more of the circle the bigger it is
                 int particleCount = (int)(10 * scaleFromFall);
@@ -60,7 +60,7 @@ namespace CalamityMod.Projectiles.Typeless
         public override bool PreDraw(ref Color lightColor)
         {
             Main.spriteBatch.EnterShaderRegion();
-            Texture2D telegraphBase = ModContent.Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj").Value;
+            Texture2D telegraphBase = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj").Value;
 
             GameShaders.Misc["CalamityMod:CircularGradientWithEdge"].UseOpacity(0.75f * Projectile.timeLeft / (float)timeLeft);
             GameShaders.Misc["CalamityMod:CircularGradientWithEdge"].UseColor(Color.Lerp(Color.Cyan, Color.LightCyan, 0.5f));

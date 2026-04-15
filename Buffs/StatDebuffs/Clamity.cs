@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatDebuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs
 {
     public class Clamity : ModBuff
     {

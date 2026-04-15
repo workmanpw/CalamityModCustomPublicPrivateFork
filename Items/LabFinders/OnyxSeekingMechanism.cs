@@ -1,12 +1,12 @@
-﻿using CalamityMod.Projectiles.Typeless;
-using CalamityMod.Rarities;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.LabFinders
+namespace CalamityModCustomPublicPrivateFork.Items.LabFinders
 {
     public class OnyxSeekingMechanism : ModItem, ILocalizedModType
     {

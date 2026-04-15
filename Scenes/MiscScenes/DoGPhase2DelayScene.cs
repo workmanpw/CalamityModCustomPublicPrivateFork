@@ -1,13 +1,13 @@
-﻿using CalamityMod.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class DoGPhase2DelayScene : ModSceneEffect
     {
-        public override int Music => CalamityMod.Instance.GetMusicFromMusicMod("DevourerofGodsPhase2") ?? MusicID.LunarBoss;
+        public override int Music => ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("DevourerofGodsPhase2") ?? MusicID.LunarBoss;
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
 
         public override bool IsSceneEffectActive(Player player)

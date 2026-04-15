@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Enemy
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
 {
     public class CrimsonSpike : ModProjectile, ILocalizedModType
     {

@@ -1,17 +1,17 @@
-﻿using System.Collections.Generic;
-using CalamityMod.UI;
-using CalamityMod.UI.CalamitasEnchants;
-using CalamityMod.UI.DraedonsArsenal;
-using CalamityMod.UI.DraedonSummoning;
-using CalamityMod.UI.ModeIndicator;
-using CalamityMod.UI.Rippers;
-using CalamityMod.UI.SulphurousWaterMeter;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.UI;
+using CalamityModCustomPublicPrivateFork.UI.CalamitasEnchants;
+using CalamityModCustomPublicPrivateFork.UI.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.UI.DraedonSummoning;
+using CalamityModCustomPublicPrivateFork.UI.ModeIndicator;
+using CalamityModCustomPublicPrivateFork.UI.Rippers;
+using CalamityModCustomPublicPrivateFork.UI.SulphurousWaterMeter;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.UI;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class UIManagementSystem : ModSystem
     {

@@ -1,9 +1,9 @@
-﻿using CalamityMod.DataStructures;
+using CalamityModCustomPublicPrivateFork.DataStructures;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatDebuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs
 {
     public class WhisperingDeath : ModBuff
     {

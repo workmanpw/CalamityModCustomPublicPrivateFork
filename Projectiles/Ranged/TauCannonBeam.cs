@@ -1,6 +1,6 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -8,10 +8,10 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.Projectiles.Ranged.TauCannonHoldout;
+using static CalamityModCustomPublicPrivateFork.Projectiles.Ranged.TauCannonHoldout;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class TauCannonBeam : BaseLaserbeamProjectile, ILocalizedModType
     {
@@ -23,11 +23,11 @@ namespace CalamityMod.Projectiles.Ranged
 
         public override float MaxLaserLength => 2000f;
 
-        private const string LaserTexturePath = "CalamityMod/ExtraTextures/Lasers/TauCannonBeam";
+        private const string LaserTexturePath = "CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/TauCannonBeam";
         public override Texture2D LaserBeginTexture => Request<Texture2D>(LaserTexturePath + "Start").Value;
         public override Texture2D LaserMiddleTexture => Request<Texture2D>(LaserTexturePath + "Middle").Value;
         public override Texture2D LaserEndTexture => Request<Texture2D>(LaserTexturePath + "End").Value;
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         private Projectile Holdout => Main.projectile[(int)Projectile.ai[1]];
 

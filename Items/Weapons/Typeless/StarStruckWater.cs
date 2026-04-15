@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Astral;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Astral;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Typeless
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless
 {
     public class StarStruckWater : ModItem, ILocalizedModType
     {

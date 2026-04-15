@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Placeables.Furniture;
-using CalamityMod.Items.Potions;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Potions;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.TreasureBags.MiscGrabBags
+namespace CalamityModCustomPublicPrivateFork.Items.TreasureBags.MiscGrabBags
 {
     public class SulphuricTreasure : ModItem, ILocalizedModType
     {

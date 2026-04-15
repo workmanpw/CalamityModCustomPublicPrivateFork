@@ -1,11 +1,11 @@
-﻿
+
 using System.Collections.Generic;
-using CalamityMod.Prefixes.VanillaPrefixChanges.Stats;
+using CalamityModCustomPublicPrivateFork.Prefixes.VanillaPrefixChanges.Stats;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Prefixes.VanillaPrefixChanges
+namespace CalamityModCustomPublicPrivateFork.Prefixes.VanillaPrefixChanges
 {
     public abstract class VanillaPrefixChange : ILoadable
     {

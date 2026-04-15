@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Materials
+namespace CalamityModCustomPublicPrivateFork.Items.Materials
 {
     public class PurifiedGel : ModItem, ILocalizedModType
     {

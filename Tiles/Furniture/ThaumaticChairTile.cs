@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -7,7 +7,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Furniture
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
 {
     public class ThaumaticChairTile : ModTile
     {

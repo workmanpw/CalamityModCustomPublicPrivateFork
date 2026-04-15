@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Placeables.Ores;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Materials
+namespace CalamityModCustomPublicPrivateFork.Items.Materials
 {
     public class AstralBar : ModItem, ILocalizedModType
     {

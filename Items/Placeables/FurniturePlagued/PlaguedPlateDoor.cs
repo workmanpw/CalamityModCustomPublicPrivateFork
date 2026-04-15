@@ -1,8 +1,8 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
-using CalamityMod.Tiles.FurniturePlaguedPlate;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.FurniturePlaguedPlate;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurniturePlagued
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurniturePlagued
 {
     public class PlaguedPlateDoor : ModItem, ILocalizedModType
     {

@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.CalPlayer;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Pets
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 {
     public class LadShark : ModProjectile, ILocalizedModType
     {

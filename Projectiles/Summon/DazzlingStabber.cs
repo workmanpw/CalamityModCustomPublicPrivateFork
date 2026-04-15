@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class DazzlingStabber : ModProjectile, ILocalizedModType
     {
@@ -115,18 +115,18 @@ namespace CalamityMod.Projectiles.Summon
                         }
                         for (int i = 0; i < 4; i++)
                         {
-                            Particle spark = new CustomSpark(Projectile.Center, (Projectile.velocity.SafeNormalize(Vector2.UnitX)).RotatedByRandom(0.6f) * Main.rand.NextFloat(15f, 20f), "CalamityMod/Particles/ProvidenceMarkParticle", false, 25, Main.rand.NextFloat(1.35f, 1.6f), Color.Orchid, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.25f, 0.35f));
+                            Particle spark = new CustomSpark(Projectile.Center, (Projectile.velocity.SafeNormalize(Vector2.UnitX)).RotatedByRandom(0.6f) * Main.rand.NextFloat(15f, 20f), "CalamityModCustomPublicPrivateFork/Particles/ProvidenceMarkParticle", false, 25, Main.rand.NextFloat(1.35f, 1.6f), Color.Orchid, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.25f, 0.35f));
                             GeneralParticleHandler.SpawnParticle(spark);
                         }
                     }
                 }
                 if (KnifeType == 2)
                 {
-                    SoundStyle slam = new("CalamityMod/Sounds/NPCHit/RavagerRockPillarHit", 2);
+                    SoundStyle slam = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/RavagerRockPillarHit", 2);
                     SoundEngine.PlaySound(slam with { Volume = 0.4f, Pitch = Main.rand.NextFloat(-0.25f, -0.15f), MaxInstances = -1 }, Projectile.Center);
                     for (int i = 0; i < 7; i++)
                     {
-                        Particle spark = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(1f, 5f), "CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard6", false, Main.rand.Next(15, 25 + 1), Main.rand.NextFloat(0.75f, 1.2f), Color.White, new Vector2(1.3f, 0.5f), false, false, Main.rand.NextFloat(-5, 5), false, false);
+                        Particle spark = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(1f, 5f), "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard6", false, Main.rand.Next(15, 25 + 1), Main.rand.NextFloat(0.75f, 1.2f), Color.White, new Vector2(1.3f, 0.5f), false, false, Main.rand.NextFloat(-5, 5), false, false);
                         GeneralParticleHandler.SpawnParticle(spark);
                     }
                 }
@@ -143,7 +143,7 @@ namespace CalamityMod.Projectiles.Summon
                 {
                     if (Main.rand.NextBool(4))
                     {
-                        Particle spark = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(10, 10), -Projectile.velocity * Main.rand.NextFloat(0.1f, 0.8f), "CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard6", false, Main.rand.Next(25, 35 + 1), Main.rand.NextFloat(0.55f, 1.2f), Color.White, Vector2.One, false, false, Main.rand.NextFloat(-5, 5), false, false);
+                        Particle spark = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(10, 10), -Projectile.velocity * Main.rand.NextFloat(0.1f, 0.8f), "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard6", false, Main.rand.Next(25, 35 + 1), Main.rand.NextFloat(0.55f, 1.2f), Color.White, Vector2.One, false, false, Main.rand.NextFloat(-5, 5), false, false);
                         GeneralParticleHandler.SpawnParticle(spark);
                     }
                     else
@@ -163,7 +163,7 @@ namespace CalamityMod.Projectiles.Summon
                     dust.color = Color.Goldenrod;
                     dust.noLightEmittence = true;
 
-                    Particle spark2 = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX).RotatedByRandom(0.5f) * Main.rand.NextFloat(1f, 5f), "CalamityMod/Particles/ProvidenceMarkParticle", false, 14, Main.rand.NextFloat(0.9f, 1.2f), Color.Gold, new Vector2(0.5f, 1.5f), true, false, 0, false, false, -0.25f);
+                    Particle spark2 = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX).RotatedByRandom(0.5f) * Main.rand.NextFloat(1f, 5f), "CalamityModCustomPublicPrivateFork/Particles/ProvidenceMarkParticle", false, 14, Main.rand.NextFloat(0.9f, 1.2f), Color.Gold, new Vector2(0.5f, 1.5f), true, false, 0, false, false, -0.25f);
                     GeneralParticleHandler.SpawnParticle(spark2);
 
                     for (int i = 0; i < 2; i++)
@@ -201,9 +201,9 @@ namespace CalamityMod.Projectiles.Summon
 
                     if (KnifeType == 1)
                     {
-                        Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orchid, "CalamityMod/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.7f, 10);
+                        Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orchid, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.7f, 10);
                         GeneralParticleHandler.SpawnParticle(orb2);
-                        Particle orb3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orchid, "CalamityMod/Particles/SmallBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.35f, 15, true);
+                        Particle orb3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orchid, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.35f, 15, true);
                         GeneralParticleHandler.SpawnParticle(orb3);
 
                         for (int i = 0; i < 6; i++)
@@ -336,11 +336,11 @@ namespace CalamityMod.Projectiles.Summon
         {
             Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (KnifeType == 1)
-                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/DazzlingStabber").Value;
+                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/DazzlingStabber").Value;
             if (KnifeType == 2)
-                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/DazzlingStabber2").Value;
+                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/DazzlingStabber2").Value;
             if (KnifeType == 3)
-                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/DazzlingStabber3").Value;
+                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/DazzlingStabber3").Value;
 
             Projectile.DrawProjectileWithBackglow(bladeColor with { A = 0 }, lightColor, 3.5f, tex);
 

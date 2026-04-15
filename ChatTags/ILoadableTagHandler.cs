@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 
 using Terraria.ModLoader;
 using Terraria.UI.Chat;
 
-namespace CalamityMod.ChatTags
+namespace CalamityModCustomPublicPrivateFork.ChatTags
 {
     // Tomat: Adapted from NIGHTSHADE (ILoadableTagHandler<TSelf>), but I'm
     // granting us this to use here.

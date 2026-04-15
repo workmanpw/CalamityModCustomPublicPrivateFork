@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.UI.DialogueDisplay.DisplayEffects
+namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects
 {
     public class BossText : DisplayEffect
     {
@@ -41,7 +41,7 @@ namespace CalamityMod.UI.DialogueDisplay.DisplayEffects
 
         float OffsetDisappearTime(float time, float ratio) => MathHelper.Clamp((time - (ratio * TimeToDisappear / 2f)) / (TimeToDisappear / 2f), 0f, 1f);
 
-        public override Vector2 DisappearPositioning(Vector2 startPos, float time, DialogueCharacterData charData) => Vector2.Lerp(startPos, startPos + (Vector2.unitXVector * 12 * charData.Scale), CalamityUtils.SineOutEasing(OffsetDisappearTime(time, charData.CompletionRatio), 1));
+        public override Vector2 DisappearPositioning(Vector2 startPos, float time, DialogueCharacterData charData) => Vector2.Lerp(startPos, startPos + (Vector2.UnitX * 12 * charData.Scale), CalamityUtils.SineOutEasing(OffsetDisappearTime(time, charData.CompletionRatio), 1));
 
         public override float DisappearOpacity(float startOpacity, float time, DialogueCharacterData charData) => 1 - CalamityUtils.SineOutEasing(OffsetDisappearTime(time, charData.CompletionRatio), 1);
 
@@ -59,7 +59,7 @@ namespace CalamityMod.UI.DialogueDisplay.DisplayEffects
             if (switchTimer > 0)
                 Opacity *= 1 - CalamityUtils.CircOutEasing(switchTimer / 60f, 1);
 
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Particles/SmallBloom").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SmallBloom").Value;
             spriteBatch.Draw(tex, textStart + textSize * 0.5f - Main.screenPosition, null, Color.Black * 0.6f * Opacity, 0f, tex.Size() * 0.5f, new Vector2(textSize.X / 160f, textSize.Y / 120f), 0, 0);
         }
     }

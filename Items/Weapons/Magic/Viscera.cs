@@ -1,6 +1,6 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Magic;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     public class Viscera : ModItem, ILocalizedModType
     {
@@ -44,7 +44,7 @@ namespace CalamityMod.Items.Weapons.Magic
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
             Counter++;
-            SoundStyle fire = new("CalamityMod/Sounds/Item/MagnaCannonShot");
+            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagnaCannonShot");
             SoundEngine.PlaySound(fire with { Volume = 0.2f, Pitch = 0.95f }, position);
             position = position + velocity.RotatedBy(-0.75f * player.direction) * 1.8f;
 

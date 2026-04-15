@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     [PierceResistException]
     public class HellkiteHoldout : BaseCustomUseStyleProjectile, ILocalizedModType
@@ -21,7 +21,7 @@ namespace CalamityMod.Projectiles.Melee
         public override int AssignedItemID => ModContent.ItemType<Hellkite>();
 
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<Hellkite>();
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/Hellkite";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/Hellkite";
         public override float HitboxOutset => 100;
 
         public override Vector2 HitboxSize => new Vector2(185, 185) * Projectile.scale;
@@ -360,9 +360,9 @@ namespace CalamityMod.Projectiles.Melee
                     {
                         for (int i = 0; i < 3; i++)
                         {
-                            Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 2f * (i + 1), 1f, 18, true);
+                            Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 2f * (i + 1), 1f, 18, true);
                             GeneralParticleHandler.SpawnParticle(blastRing);
-                            Particle blastRing2 = new CustomPulse(target.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f * (i + 1), 0.5f, 18, true);
+                            Particle blastRing2 = new CustomPulse(target.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f * (i + 1), 0.5f, 18, true);
                             GeneralParticleHandler.SpawnParticle(blastRing2);
                         }
                     }
@@ -409,9 +409,9 @@ namespace CalamityMod.Projectiles.Melee
             if ((useAnim > 0 || DrawUnconditionally) && (Owner.ItemAnimationActive || Owner.Calamity().mouseRight))
             {
                 Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
-                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/HellkiteGlow");
-                Asset<Texture2D> shineTex = ModContent.Request<Texture2D>("CalamityMod/Particles/Sparkle");
-                Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmearRagged");
+                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/HellkiteGlow");
+                Asset<Texture2D> shineTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle");
+                Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmearRagged");
 
                 float r = FlipAsSword ? MathHelper.ToRadians(90) : 0f;
                 Vector2 generalDrawPos = Projectile.Center - Main.screenPosition + new Vector2(0, Owner.gfxOffY);
@@ -419,7 +419,7 @@ namespace CalamityMod.Projectiles.Melee
 
                 for (int i = 0; i < 25; i++)
                 {
-                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/HellkiteGhost").Value;
+                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/HellkiteGhost").Value;
                     Color auraColor = Color.OrangeRed with { A = 0 } * 0.15f * fadeIn;
                     Vector2 drawOffset = (MathHelper.TwoPi * i / 25f).ToRotationVector2() * (chargeTimer > 0 ? 4 : 7) * fadeIn;
                     Main.EntitySpriteDraw(centerTexture, Projectile.Center - Main.screenPosition + drawOffset + new Vector2(0, Owner.gfxOffY), centerTexture.Frame(1, FrameCount, 0, Frame), auraColor, Projectile.rotation + RotationOffset + r, FlipAsSword ? new Vector2(tex.Width() - SpriteOrigin.X, SpriteOrigin.Y) : SpriteOrigin, Projectile.scale, spriteEffects != SpriteEffects.None ? spriteEffects : (FlipAsSword ? SpriteEffects.FlipHorizontally : SpriteEffects.None));

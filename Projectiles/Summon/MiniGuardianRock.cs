@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Buffs.Summon.Whips;
-using CalamityMod.Dusts;
-using CalamityMod.NPCs.ProfanedGuardians;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,14 +10,14 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class MiniGuardianRock : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
         public Player Owner => Main.player[Projectile.owner];
 
-        public override string Texture => "CalamityMod/NPCs/ProfanedGuardians/ProfanedRocks";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/ProfanedGuardians/ProfanedRocks";
 
 
         public override void SetStaticDefaults()

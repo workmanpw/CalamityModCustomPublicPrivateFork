@@ -1,18 +1,18 @@
-﻿using System;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class VitriolicViperSpit : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public int time = 0;
         public int direction = 0;
         public Vector2 lastPos;
@@ -70,7 +70,7 @@ namespace CalamityMod.Projectiles.Magic
         {
             target.AddBuff(ModContent.BuffType<Irradiated>(), 230);
 
-            SoundStyle fire = new("CalamityMod/Sounds/NPCHit/NuclearTerrorHit");
+            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/NuclearTerrorHit");
             SoundEngine.PlaySound(fire with { Volume = 0.5f, Pitch = 0.7f }, Projectile.Center);
 
             for (int i = 0; i < (MathHelper.Clamp(6 - Projectile.numHits * 2, 1, 10)); i++)

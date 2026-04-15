@@ -1,9 +1,9 @@
-﻿using CalamityMod.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class DoGRiftCrack : ModProjectile, ILocalizedModType
     {
@@ -15,7 +15,7 @@ namespace CalamityMod.Projectiles.Boss
 
         public new string LocalizationCategory => "Projectiles.Boss";
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {

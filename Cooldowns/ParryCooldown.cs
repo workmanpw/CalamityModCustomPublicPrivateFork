@@ -1,14 +1,14 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria.Localization;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class ParryCooldown : CooldownHandler
     {
         public static new string ID => "ParryCooldown";
         public override bool ShouldDisplay => true;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => "CalamityMod/Cooldowns/" + skinTexture;
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/" + skinTexture;
         public override Color OutlineColor => outlineColor;
         public override Color CooldownStartColor => cooldownColorStart;
         public override Color CooldownEndColor => cooldownColorEnd;

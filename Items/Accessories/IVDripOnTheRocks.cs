@@ -1,14 +1,14 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Potions.Alcohol;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class IVDripOnTheRocks : ModItem, ILocalizedModType
     {

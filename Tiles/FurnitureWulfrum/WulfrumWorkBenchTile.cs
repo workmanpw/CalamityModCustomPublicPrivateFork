@@ -1,11 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureWulfrum
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum
 {
     [LegacyName("WulfrumWorkbench")]
     public class WulfrumWorkBenchTile : ModTile

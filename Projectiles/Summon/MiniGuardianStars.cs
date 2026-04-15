@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Items.Accessories;
-using CalamityMod.NPCs.Providence;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.NPCs.Providence;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class MiniGuardianStars : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/StarProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/StarProj";
 
         public override void SetDefaults()
         {

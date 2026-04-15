@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
@@ -8,11 +8,11 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Perforator
+namespace CalamityModCustomPublicPrivateFork.NPCs.Perforator
 {
     public class PerforatorCyst : ModNPC
     {
-        public static readonly SoundStyle HiveSpawn = new("CalamityMod/Sounds/Custom/Perforator/PerfHiveSpawn");
+        public static readonly SoundStyle HiveSpawn = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Perforator/PerfHiveSpawn");
 
         public static Asset<Texture2D> GlowTexture;
 
@@ -55,7 +55,7 @@ namespace CalamityMod.NPCs.Perforator
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCrimson,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundCrimson,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.PerforatorCyst")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.PerforatorCyst")
             });
         }
 

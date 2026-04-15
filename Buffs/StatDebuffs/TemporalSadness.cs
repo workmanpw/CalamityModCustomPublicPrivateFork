@@ -1,9 +1,9 @@
-﻿using CalamityMod.NPCs;
-using CalamityMod.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatDebuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs
 {
     public class TemporalSadness : ModBuff
     {

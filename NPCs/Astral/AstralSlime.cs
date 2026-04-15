@@ -1,17 +1,17 @@
-﻿using CalamityMod.BiomeManagers;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Items.Placeables.Ores;
-using CalamityMod.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Astral
+namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
 {
     public class AstralSlime : ModNPC
     {
@@ -51,7 +51,7 @@ namespace CalamityMod.NPCs.Astral
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.AstralSlime")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.AstralSlime")
             });
         }
 

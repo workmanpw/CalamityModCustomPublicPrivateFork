@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles
+namespace CalamityModCustomPublicPrivateFork.Tiles
 {
     [LegacyName("ChaoticBarPlaced")]
     public class ScoriaBarPlaced : ModTile

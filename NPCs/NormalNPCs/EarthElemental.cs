@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Projectiles.Enemy;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityMod.NPCs.NormalNPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
 {
     [LegacyName("Horse")]
     public class EarthElemental : ModNPC
@@ -61,7 +61,7 @@ namespace CalamityMod.NPCs.NormalNPCs
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Caverns,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.EarthElemental")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.EarthElemental")
             });
         }
 

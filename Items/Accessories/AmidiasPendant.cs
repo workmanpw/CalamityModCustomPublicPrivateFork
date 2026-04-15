@@ -1,10 +1,10 @@
-﻿using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class AmidiasPendant : ModItem, ILocalizedModType
     {

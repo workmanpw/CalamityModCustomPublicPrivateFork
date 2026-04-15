@@ -1,17 +1,17 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class NovaChargedShot : ModProjectile, ILocalizedModType
     {
-        public static readonly SoundStyle ChargeImpact = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeImpact") { Volume = 0.3f };
+        public static readonly SoundStyle ChargeImpact = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeImpact") { Volume = 0.3f };
         public int Time = 0;
         public new string LocalizationCategory => "Projectiles.Ranged";
         public override void SetStaticDefaults()
@@ -50,7 +50,7 @@ namespace CalamityMod.Projectiles.Ranged
                     Vector2 trailPos = Projectile.Center + Main.rand.NextVector2Circular(10, 10);
                     float trailScale = Main.rand.NextFloat(0.6f, 0.75f);
                     Color trailColor = Main.rand.NextBool(3) ? Color.Chartreuse : ArcNovaDiffuser.mainColor;
-                    Particle Trail = new CustomSpark(trailPos, Projectile.velocity * 0.2f, "CalamityMod/Particles/BloomCircle", false, 50, trailScale, trailColor, new Vector2(0.2f, 1.4f), true, true, shrinkSpeed: 0.1f);
+                    Particle Trail = new CustomSpark(trailPos, Projectile.velocity * 0.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 50, trailScale, trailColor, new Vector2(0.2f, 1.4f), true, true, shrinkSpeed: 0.1f);
                     GeneralParticleHandler.SpawnParticle(Trail);
                 }
                 if (Time % 2 == 0)
@@ -95,13 +95,13 @@ namespace CalamityMod.Projectiles.Ranged
                 dust2.color = Color.Lime;
             }
             SoundEngine.PlaySound(ChargeImpact, Projectile.Center);
-            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, ArcNovaDiffuser.mainColor, "CalamityMod/Particles/BloomRing", new Vector2(1f, 1f), 0, 0.2f, 1.3f, 16);
+            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, ArcNovaDiffuser.mainColor, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1f, 1f), 0, 0.2f, 1.3f, 16);
             GeneralParticleHandler.SpawnParticle(pulse);
-            Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lime, "CalamityMod/Particles/BloomCircle", new Vector2(1f, 1f), 0, 0.8f, 0.1f, 20);
+            Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lime, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", new Vector2(1f, 1f), 0, 0.8f, 0.1f, 20);
             GeneralParticleHandler.SpawnParticle(pulse2);
             for (int i = 0; i < 2; i++)
             {
-                Particle spark2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 16, 0.95f, ArcNovaDiffuser.mainColor, new Vector2(1f, 1f), true, true, glowOpacity: 0.9f);
+                Particle spark2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 16, 0.95f, ArcNovaDiffuser.mainColor, new Vector2(1f, 1f), true, true, glowOpacity: 0.9f);
                 GeneralParticleHandler.SpawnParticle(spark2);
             }
 

@@ -1,11 +1,11 @@
-﻿using CalamityMod.Systems;
-using CalamityMod.Tiles.Ores;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Tiles.Ores;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureAuric
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric
 {
     public class AuricPanelTile : ModTile
     {

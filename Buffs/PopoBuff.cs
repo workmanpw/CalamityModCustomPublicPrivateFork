@@ -1,10 +1,10 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.Accessories.Vanity;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs
+namespace CalamityModCustomPublicPrivateFork.Buffs
 {
     public class PopoBuff : ModBuff
     {

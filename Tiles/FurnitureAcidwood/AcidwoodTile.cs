@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureAcidwood
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAcidwood
 {
     public class AcidwoodTile : ModTile
     {

@@ -1,12 +1,12 @@
-﻿using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Projectiles.BaseProjectiles;
-using CalamityMod.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee.Spears
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears
 {
     public class EarthenPikeSpear : BaseSpearProjectile
     {

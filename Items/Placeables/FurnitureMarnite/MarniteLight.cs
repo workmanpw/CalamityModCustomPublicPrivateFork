@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureMarnite
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMarnite
 {
     public class MarniteLight : ModItem, ILocalizedModType
     {

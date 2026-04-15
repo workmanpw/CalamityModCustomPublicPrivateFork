@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityMod.UI.DialogueDisplay.TextEffects
+namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.TextEffects
 {
     public class Wavy : TextEffect
     {

@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Buffs.StatBuffs;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class PrimordialAncientProjectile : ModProjectile, ILocalizedModType
     {
@@ -88,7 +88,7 @@ namespace CalamityMod.Projectiles.Magic
                                 dust2.noGravity = true;
                             }
 
-                            SoundStyle buff = new("CalamityMod/Sounds/Custom/Ravager/RavagerPillarSummon");
+                            SoundStyle buff = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Ravager/RavagerPillarSummon");
                             SoundEngine.PlaySound(buff with { Volume = 0.65f, Pitch = 0.8f }, player.Center);
                         }
                     }
@@ -146,12 +146,12 @@ namespace CalamityMod.Projectiles.Magic
                 {
                     Projectile.velocity = Vector2.Zero;
 
-                    Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Purple, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0f, 0.52f, 9);
+                    Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Purple, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0f, 0.52f, 9);
                     GeneralParticleHandler.SpawnParticle(orb);
-                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0f, 0.46f, 9);
+                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0f, 0.46f, 9);
                     GeneralParticleHandler.SpawnParticle(orb2);
 
-                    SoundStyle explo = new("CalamityMod/Sounds/Item/MagicRockImpact");
+                    SoundStyle explo = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockImpact");
                     SoundEngine.PlaySound(explo with { Volume = 0.75f, Pitch = 0.35f }, Projectile.Center);
                     mousePos = Main.player[Projectile.owner].ClampedMouseWorld();
                     goToCursor = true;
@@ -220,7 +220,7 @@ namespace CalamityMod.Projectiles.Magic
                     for (int b = 0; b < 5; b++)
                     {
                         Color clr = Color.Lerp((Main.rand.NextBool() ? Color.Peru : Color.PeachPuff), Color.Black, Main.rand.NextFloat(0.25f, 0.45f));
-                        Particle sand = new CustomSpark(Projectile.Center, vel.RotatedByRandom(0.4f) * Main.rand.NextFloat(0.4f, 0.9f) * power, "CalamityMod/Particles/SmallSmoke", false, Main.rand.Next(25, 35 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 7, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 2f)), false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.8f, 0.8f), affectedByLight: true);
+                        Particle sand = new CustomSpark(Projectile.Center, vel.RotatedByRandom(0.4f) * Main.rand.NextFloat(0.4f, 0.9f) * power, "CalamityModCustomPublicPrivateFork/Particles/SmallSmoke", false, Main.rand.Next(25, 35 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 7, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 2f)), false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.8f, 0.8f), affectedByLight: true);
                         GeneralParticleHandler.SpawnParticle(sand);
                     }
                 }
@@ -236,24 +236,24 @@ namespace CalamityMod.Projectiles.Magic
                 Player Owner = Main.player[Projectile.owner];
                 Owner.SetScreenshake(8f);
 
-                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Purple, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.2f * 2f, 0.6f * 2.5f, 17);
+                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Purple, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.2f * 2f, 0.6f * 2.5f, 17);
                 GeneralParticleHandler.SpawnParticle(orb);
-                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f * 2f, 0.5f * 2.5f, 17);
+                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f * 2f, 0.5f * 2.5f, 17);
                 GeneralParticleHandler.SpawnParticle(orb2);
 
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Vector2.Zero, ModContent.ProjectileType<PrimordialAncientExplosion>(), Projectile.damage, Projectile.knockBack * 1.5f, Projectile.owner);
-                SoundStyle explo = new("CalamityMod/Sounds/Item/MineralMortarExplode");
+                SoundStyle explo = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MineralMortarExplode");
                 SoundEngine.PlaySound(explo with { Volume = 0.9f }, Projectile.Center);
-                SoundStyle explo2 = new("CalamityMod/Sounds/Item/EarthMeteor");
+                SoundStyle explo2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/EarthMeteor");
                 SoundEngine.PlaySound(explo2 with { Volume = 0.9f, Pitch = -0.3f }, Projectile.Center);
 
-                Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Purple, Color.White, 0.5f) * 0.55f, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 2.56f * 2.3f, 18);
+                Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Purple, Color.White, 0.5f) * 0.55f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 2.56f * 2.3f, 18);
                 GeneralParticleHandler.SpawnParticle(bolt2);
 
-                Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Peru * 0.55f, "CalamityMod/Particles/SmokeExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.4f, 23);
+                Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Peru * 0.55f, "CalamityModCustomPublicPrivateFork/Particles/SmokeExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.4f, 23);
                 GeneralParticleHandler.SpawnParticle(bolt3);
 
-                Particle bolt4 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.PeachPuff * 0.55f, "CalamityMod/Particles/SmokeExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.4f * 1.35f, 18);
+                Particle bolt4 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.PeachPuff * 0.55f, "CalamityModCustomPublicPrivateFork/Particles/SmokeExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.4f * 1.35f, 18);
                 GeneralParticleHandler.SpawnParticle(bolt4);
 
                 for (int i = 0; i < 140; i++)
@@ -274,7 +274,7 @@ namespace CalamityMod.Projectiles.Magic
                     else
                     {
                         Color clr = Color.Lerp((Main.rand.NextBool() ? Color.Peru : Color.PeachPuff), Color.Black, Main.rand.NextFloat(0.25f, 0.45f));
-                        Particle sand = new CustomSpark(Projectile.Center, (Vector2.One * Main.rand.NextFloat(9, 33)).RotatedByRandom(MathHelper.TwoPi), "CalamityMod/Particles/SmallSmoke", true, Main.rand.Next(25, 55 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 23, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 2f)), false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.8f, 0.8f), affectedByLight: true);
+                        Particle sand = new CustomSpark(Projectile.Center, (Vector2.One * Main.rand.NextFloat(9, 33)).RotatedByRandom(MathHelper.TwoPi), "CalamityModCustomPublicPrivateFork/Particles/SmallSmoke", true, Main.rand.Next(25, 55 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 23, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 2f)), false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.8f, 0.8f), affectedByLight: true);
                         GeneralParticleHandler.SpawnParticle(sand);
                     }
                 }
@@ -304,7 +304,7 @@ namespace CalamityMod.Projectiles.Magic
         {
             CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], lightColor * 0.7f, 1);
             
-            Texture2D rTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D rTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
             float randSize = Main.rand.NextFloat(0.8f, 1.2f);
             Color drawColor2 = Color.Purple;
             Main.EntitySpriteDraw(rTexture, Projectile.Center - Main.screenPosition, null, drawColor2 with { A = 0 }, Projectile.rotation, rTexture.Size() * 0.5f, 0.45f * Utils.GetLerpValue(0, 25, time, true) * randSize, SpriteEffects.None, 0);

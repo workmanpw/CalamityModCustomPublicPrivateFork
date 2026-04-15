@@ -1,6 +1,6 @@
-﻿using System.IO;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -13,7 +13,7 @@ using Terraria.ModLoader;
 //TY dom for coding condemnation, great reference, would steal code from again :)
 //                  - Iban
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class PumplerHoldout : ModProjectile
     {

@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Buffs.StatDebuffs;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Enemy
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
 {
     public class CragmawExplosion : ModProjectile, ILocalizedModType
     {
@@ -14,7 +14,7 @@ namespace CalamityMod.Projectiles.Enemy
         public int FrameY = 0;
         public int CurrentFrame => FrameY + FrameX * 14;
 
-        public override string Texture => "CalamityMod/Projectiles/Rogue/SulphuricNukesplosion";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Rogue/SulphuricNukesplosion";
 
         public override void SetDefaults()
         {
@@ -59,7 +59,7 @@ namespace CalamityMod.Projectiles.Enemy
         public override bool PreDraw(ref Color lightColor)
         {
             Rectangle frame = new Rectangle(FrameX * Projectile.width, FrameY * Projectile.height, Projectile.width, Projectile.height);
-            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/SulphuricNukesplosion").Value, Projectile.Center - Main.screenPosition, frame, Color.White, Projectile.rotation, Projectile.Size / 2f, 1f, SpriteEffects.None, 0);
+            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/SulphuricNukesplosion").Value, Projectile.Center - Main.screenPosition, frame, Color.White, Projectile.rotation, Projectile.Size / 2f, 1f, SpriteEffects.None, 0);
             return false;
         }
     }

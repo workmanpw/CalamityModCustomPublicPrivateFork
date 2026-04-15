@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureAshen
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAshen
 {
     public class AshenLamp : ModItem, ILocalizedModType
     {

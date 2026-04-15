@@ -1,5 +1,5 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class TerraSigilLargeRock : ModProjectile, ILocalizedModType
     {
@@ -41,7 +41,7 @@ namespace CalamityMod.Projectiles.Magic
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
 
             // All-white variant
-            Asset<Texture2D> ghostTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/TerraSigilLargeRockGhost");
+            Asset<Texture2D> ghostTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/TerraSigilLargeRockGhost");
 
             Color drawColor = Projectile.GetAlpha(lightColor);
             Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, texture.Frame(1, Main.projFrames[Type], 0, Projectile.frame), drawColor, Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
@@ -103,7 +103,7 @@ namespace CalamityMod.Projectiles.Magic
                 else
                 {
                     Color clr = Color.Lerp((Main.rand.NextBool() ? Color.Peru : Color.PeachPuff), Color.Black, Main.rand.NextFloat(0.25f, 0.45f));
-                    Particle sand = new CustomSpark(Projectile.Center, (Vector2.One * Main.rand.NextFloat(3, 8)).RotatedByRandom(MathHelper.TwoPi), "CalamityMod/Particles/SmallSmoke", true, Main.rand.Next(15, 30 + 1), Projectile.scale * Main.rand.NextFloat(0.05f, 0.1f) * 4, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 1f)), false, extraRotation: Main.rand.NextFloat(-2, 2), spin: Main.rand.NextFloat(-0.5f, 0.5f), affectedByLight: true);
+                    Particle sand = new CustomSpark(Projectile.Center, (Vector2.One * Main.rand.NextFloat(3, 8)).RotatedByRandom(MathHelper.TwoPi), "CalamityModCustomPublicPrivateFork/Particles/SmallSmoke", true, Main.rand.Next(15, 30 + 1), Projectile.scale * Main.rand.NextFloat(0.05f, 0.1f) * 4, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 1f)), false, extraRotation: Main.rand.NextFloat(-2, 2), spin: Main.rand.NextFloat(-0.5f, 0.5f), affectedByLight: true);
                     GeneralParticleHandler.SpawnParticle(sand);
                 }
             }

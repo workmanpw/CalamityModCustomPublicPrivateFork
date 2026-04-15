@@ -1,14 +1,14 @@
-﻿using CalamityMod.ExtraTextures.GreyscaleGradients;
-using CalamityMod.Sounds;
-using CalamityMod.Systems;
-using CalamityMod.Tiles.Abyss.AbyssAmbient;
+using CalamityModCustomPublicPrivateFork.ExtraTextures.GreyscaleGradients;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Abyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
 {
     public class Voidstone : GlowMaskTile
     {

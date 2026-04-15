@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.CustomRecipes;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.CustomRecipes;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal
 {
     public class HydraulicVoltCrasher : ModItem, ILocalizedModType
     {

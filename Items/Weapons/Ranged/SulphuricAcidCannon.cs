@@ -1,5 +1,5 @@
-﻿using CalamityMod.Projectiles.Ranged;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using System;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     public class SulphuricAcidCannon : ModItem, ILocalizedModType
     {

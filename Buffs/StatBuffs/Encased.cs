@@ -1,12 +1,12 @@
-﻿using CalamityMod.Balancing;
-using CalamityMod.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatBuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatBuffs
 {
     public class Encased : ModBuff
     {

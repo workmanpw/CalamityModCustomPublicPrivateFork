@@ -1,14 +1,14 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class AstrealFlame : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Projectiles/Healing/EssenceFlame";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Healing/EssenceFlame";
 
         public override void SetStaticDefaults()
         {

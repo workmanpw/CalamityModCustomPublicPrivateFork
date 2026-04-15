@@ -1,7 +1,7 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class BuzzkillHoldout : BaseGunHoldoutProjectile
     {
@@ -77,7 +77,7 @@ namespace CalamityMod.Projectiles.Ranged
 
                     Projectile.ai[1] = 1f;
                     Projectile.timeLeft = Owner.HeldItem.useAnimation;
-                    SoundStyle ShootSound = new("CalamityMod/Sounds/Item/SawShot", 2) { PitchVariance = 0.1f, Volume = 0.4f + SawPower * 0.5f };
+                    SoundStyle ShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SawShot", 2) { PitchVariance = 0.1f, Volume = 0.4f + SawPower * 0.5f };
                     SoundEngine.PlaySound(ShootSound, GunTipPosition);
 
                     int sawLevel = (SawPower >= 1f).ToInt() + (SawPower >= 0.25f).ToInt();
@@ -145,7 +145,7 @@ namespace CalamityMod.Projectiles.Ranged
             if (Time < ChargeupTime)
             {
                 if (Time == 30f)
-                    ChargeIdle = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/BuzzsawCharge") { Volume = 0.3f }, GunTipPosition);
+                    ChargeIdle = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BuzzsawCharge") { Volume = 0.3f }, GunTipPosition);
 
                 if (Time > 30f && Projectile.frame == 0)
                     Projectile.frame = 1;
@@ -153,7 +153,7 @@ namespace CalamityMod.Projectiles.Ranged
             else
             {
                 if ((Time + 240) % 360 == 0)
-                    ChargeIdle = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/BuzzsawIdle"), GunTipPosition);
+                    ChargeIdle = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BuzzsawIdle"), GunTipPosition);
 
                 if (Time % 3 == 0)
                 {
@@ -184,7 +184,7 @@ namespace CalamityMod.Projectiles.Ranged
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.AddBuff(ModContent.BuffType<HeavyBleeding>(), 240);
-            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/SwiftSlice") { Volume = 0.7f }, GunTipPosition);
+            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/SwiftSlice") { Volume = 0.7f }, GunTipPosition);
 
             int SawLevel = (Time / ChargeupTime >= 1f).ToInt() + (Time / ChargeupTime >= 0.25f).ToInt();
             int bloodCount = 4 + 3 * SawLevel;
@@ -210,11 +210,11 @@ namespace CalamityMod.Projectiles.Ranged
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Holdout ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/BuzzkillHoldout");
+            Holdout ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/BuzzkillHoldout");
             Texture2D holdoutTexture = Holdout.Value;
-            LargeSlash ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/BuzzkillSawLargeSlash");
+            LargeSlash ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/BuzzkillSawLargeSlash");
             Texture2D largeSlashTexture = LargeSlash.Value;
-            SmallSlash ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/BuzzkillSawSmallSlash");
+            SmallSlash ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/BuzzkillSawSmallSlash");
             Texture2D smallSlashTexture = SmallSlash.Value;
             Color slashColor = new Color(200, 200, 200, 100);
 

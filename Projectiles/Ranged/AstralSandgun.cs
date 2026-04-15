@@ -1,9 +1,9 @@
-﻿using System;
-using CalamityMod.Tiles.AstralDesert;
+using System;
+using CalamityModCustomPublicPrivateFork.Tiles.AstralDesert;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class AstralSandgun : ModProjectile, ILocalizedModType
     {

@@ -1,13 +1,13 @@
-﻿using Terraria.ModLoader;
-using CalamityMod.Tiles.SunkenSea.Ambient;
+using Terraria.ModLoader;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
 using Terraria.GameContent;
-using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
 
-namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
 {
     public class CoralPileGiantEcho : CoralPileGiant
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/CoralPileGiant";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/CoralPileGiant";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

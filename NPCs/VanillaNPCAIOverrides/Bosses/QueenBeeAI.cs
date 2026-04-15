@@ -1,17 +1,17 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Events;
-using CalamityMod.NPCs.PlagueEnemies;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
 {
     public class QueenBeeAI : VanillaAIOverride
     {

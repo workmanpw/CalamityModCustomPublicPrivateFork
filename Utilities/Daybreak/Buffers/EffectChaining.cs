@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.Graphics.Shaders;
 
-namespace CalamityMod.Utilities.Daybreak.Buffers;
+namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 
 /// <summary>
 ///     An entry in an effect chain which an arbitrary function to apply a
@@ -166,7 +166,8 @@ public sealed class DrawWithEffectsScope : IDisposable
         ArgumentOutOfRangeException.ThrowIfLessThan(targetSize.Y, 1);
 
         this.spriteBatch = spriteBatch;
-        graphicsDevice = spriteBatch.graphicsDevice;
+        // SpriteBatch.graphicsDevice no longer exists, use Main.instance.GraphicsDevice
+        graphicsDevice = Main.instance.GraphicsDevice;
         this.pool = pool;
         this.effects = effects;
 

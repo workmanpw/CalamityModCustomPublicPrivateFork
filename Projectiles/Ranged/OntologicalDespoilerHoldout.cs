@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -11,7 +11,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class OntologicalDespoilerHoldout : BaseGunHoldoutProjectile
     {
@@ -340,7 +340,7 @@ namespace CalamityMod.Projectiles.Ranged
                         ChargeSound5.Pitch = Utils.Remap(CurrentChargingFrames, Charge2Frames * 0.9f, Charge2Frames, 1f, (CurrentChargingFrames >= Charge2Frames ? -0.1f : 0.2f), true);
                     }
                     else
-                        OntologicalChargeSlotDeep = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/MagnaCannonChargeLoop") with { Volume = 0.01f, Pitch = 0f, IsLooped = true }, Projectile.Center);
+                        OntologicalChargeSlotDeep = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MagnaCannonChargeLoop") with { Volume = 0.01f, Pitch = 0f, IsLooped = true }, Projectile.Center);
                 }
 
                 // Charge-up visuals
@@ -370,7 +370,7 @@ namespace CalamityMod.Projectiles.Ranged
                 {
                     for (int i = 0; i < 3; i++)
                     {
-                        Particle orb = new CustomSpark(GunTipPosition, Projectile.velocity.RotatedByRandom(100) * Main.rand.NextFloat(1.1f, 15.8f), "CalamityMod/Particles/PearlParticleGlow", false, 3, Main.rand.NextFloat(2.3f, 2.6f), Color.Black, new Vector2(0.3f, 1.35f), false, false);
+                        Particle orb = new CustomSpark(GunTipPosition, Projectile.velocity.RotatedByRandom(100) * Main.rand.NextFloat(1.1f, 15.8f), "CalamityModCustomPublicPrivateFork/Particles/PearlParticleGlow", false, 3, Main.rand.NextFloat(2.3f, 2.6f), Color.Black, new Vector2(0.3f, 1.35f), false, false);
                         GeneralParticleHandler.SpawnParticle(orb);
                         bool color = Main.rand.NextBool(4);
                         Vector2 dustVel = -Projectile.velocity.RotatedByRandom(100) * Main.rand.NextFloat(1.1f, 15.8f);
@@ -395,7 +395,7 @@ namespace CalamityMod.Projectiles.Ranged
                         chargefull.noGravity = true;
                         chargefull.color = Positive ? useColor : baseColor;
                     }
-                    Particle orb2 = new CustomPulse(GunTipPosition, Vector2.Zero, Positive ? baseColor : Color.Black, "CalamityMod/Particles/SmallBloomRingLayered", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.65f, 0.85f, 11, Positive);
+                    Particle orb2 = new CustomPulse(GunTipPosition, Vector2.Zero, Positive ? baseColor : Color.Black, "CalamityModCustomPublicPrivateFork/Particles/SmallBloomRingLayered", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.65f, 0.85f, 11, Positive);
                     GeneralParticleHandler.SpawnParticle(orb2);
                     hasReachedLV1 = true;
                 }
@@ -412,7 +412,7 @@ namespace CalamityMod.Projectiles.Ranged
                         chargefull.noGravity = true;
                         chargefull.color = Positive ? useColor : baseColor;
                     }
-                    Particle orb2 = new CustomPulse(GunTipPosition, Vector2.Zero, Positive ? baseColor : Color.Black, "CalamityMod/Particles/SmallBloomRingLayered", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.85f, 1.05f, 11, Positive);
+                    Particle orb2 = new CustomPulse(GunTipPosition, Vector2.Zero, Positive ? baseColor : Color.Black, "CalamityModCustomPublicPrivateFork/Particles/SmallBloomRingLayered", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.85f, 1.05f, 11, Positive);
                     GeneralParticleHandler.SpawnParticle(orb2);
                     hasReachedLV2 = true;
                 }
@@ -454,8 +454,8 @@ namespace CalamityMod.Projectiles.Ranged
             if (Time < 3)
                 return false;
 
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/OntologicalDespoilerHoldout").Value;
-            Texture2D textureAlt = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/OntologicalDespoilerHoldout2").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/OntologicalDespoilerHoldout").Value;
+            Texture2D textureAlt = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/OntologicalDespoilerHoldout2").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f);
             Rectangle frame = texture.Frame(1, Main.projFrames[Type], 0, Projectile.frame);
@@ -467,18 +467,18 @@ namespace CalamityMod.Projectiles.Ranged
                 drawPosition += Main.rand.NextVector2Circular(rumble / 120f, rumble / 120f);
             }
 
-            Texture2D fireTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/OntologicalDespoilerFlame").Value;
-            Texture2D fireTexture2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/OntologicalDespoilerFlame2").Value;
+            Texture2D fireTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/OntologicalDespoilerFlame").Value;
+            Texture2D fireTexture2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/OntologicalDespoilerFlame2").Value;
             Rectangle frame2 = fireTexture.Frame(1, 7, 0, fireFrame);
             Vector2 rotationPoint2 = frame2.Size() * 0.5f;
 
-            Texture2D flashTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/OntologicalDespoilerFlash").Value;
+            Texture2D flashTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/OntologicalDespoilerFlash").Value;
             Rectangle frame3 = fireTexture.Frame(1, 6, 0, flashFrame);
             Vector2 rotationPoint3 = frame3.Size() * 0.5f;
 
             // Glow Orb
-            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/FlameExplosion").Value;
-            Texture2D rechargeTexture2 = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicCircle").Value;
+            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/FlameExplosion").Value;
+            Texture2D rechargeTexture2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle").Value;
             float randSize = Main.rand.NextFloat(0.9f, 1.1f);
             if (!hasBegunFiring)
             {

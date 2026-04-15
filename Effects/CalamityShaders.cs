@@ -1,11 +1,11 @@
-﻿using CalamityMod.Skies;
+using CalamityModCustomPublicPrivateFork.Skies;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Effects
+namespace CalamityModCustomPublicPrivateFork.Effects
 {
     // TODO -- This can be made into a ModSystem with simple OnModLoad and Unload hooks.
     // TODO: SOURCEGEN: Get rid of this loader and replace references with sourcegenned references
@@ -277,7 +277,7 @@ namespace CalamityMod.Effects
 
         public override void PostSetupContent()
         {
-            AssetRepository calAss = CalamityMod.Instance.Assets;
+            AssetRepository calAss = ModContent.GetInstance<CalamityMod>().Assets;
 
             // Shorthand to load shaders immediately.
             // Strings provided to LoadShader are the .xnb file paths.

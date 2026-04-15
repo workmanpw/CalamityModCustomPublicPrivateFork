@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Prefixes.VanillaPrefixChanges;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Prefixes.VanillaPrefixChanges;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Prefixes
+namespace CalamityModCustomPublicPrivateFork.Prefixes
 {
     public class Invigorating : ModPrefix, ILocalizedModType
     {

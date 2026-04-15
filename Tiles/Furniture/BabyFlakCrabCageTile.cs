@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Furniture
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
 {
     public class BabyFlakCrabCageTile : ModTile
     {
@@ -18,7 +18,7 @@ namespace CalamityMod.Tiles.Furniture
         {
             if (!Main.dedServ)
             {
-                topTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/Furniture/TransparentCageTile_Top");
+                topTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Furniture/TransparentCageTile_Top");
             }
             Main.tileFrameImportant[Type] = true;
             Main.tileLavaDeath[Type] = true;

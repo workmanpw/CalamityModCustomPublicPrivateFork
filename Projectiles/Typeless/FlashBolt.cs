@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class FlashBolt : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public int time = 0;
         public int dir = 0;
         bool setAltPlace = false;
@@ -50,7 +50,7 @@ namespace CalamityMod.Projectiles.Typeless
             {
                 if (visible)
                 {
-                    SoundStyle fire = new("CalamityMod/Sounds/Item/ArcFlash");
+                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcFlash");
                     SoundEngine.PlaySound(fire with { Volume = 0.6f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f) }, Owner.Center);
                 }
             }
@@ -75,7 +75,7 @@ namespace CalamityMod.Projectiles.Typeless
             if (simplify || !Owner.Calamity().arcFlashRingVisual)
                 return false;
 
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
 
             if (dir == 0)
                 dir = Main.rand.NextBool() ? -1 : 1;
@@ -132,12 +132,12 @@ namespace CalamityMod.Projectiles.Typeless
                             dust.color = Main.rand.NextBool(3) ? Color.Cyan : Color.Orchid;
                             dust.fadeIn = 7.5f;
                         }
-                        Particle orb = new CustomPulse(pos, Vector2.Zero, Color.Orchid, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.68f, 0.5f, 14);
+                        Particle orb = new CustomPulse(pos, Vector2.Zero, Color.Orchid, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.68f, 0.5f, 14);
                         GeneralParticleHandler.SpawnParticle(orb);
-                        Particle orb2 = new CustomPulse(pos, Vector2.Zero, Color.White * 0.8f, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.225f, 0.2f, 14);
+                        Particle orb2 = new CustomPulse(pos, Vector2.Zero, Color.White * 0.8f, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.225f, 0.2f, 14);
                         GeneralParticleHandler.SpawnParticle(orb2);
                     }
-                    Particle pulse2 = new CustomPulse(pos, Vector2.Zero, Color.Cyan * (Owner.Calamity().arcFlashRingVisual ? 1 : 0.6f), "CalamityMod/Particles/BloomRing", new Vector2(1, 1), 0, 0.3f, 0.95f, 10);
+                    Particle pulse2 = new CustomPulse(pos, Vector2.Zero, Color.Cyan * (Owner.Calamity().arcFlashRingVisual ? 1 : 0.6f), "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), 0, 0.3f, 0.95f, 10);
                     GeneralParticleHandler.SpawnParticle(pulse2);
                 }
             }

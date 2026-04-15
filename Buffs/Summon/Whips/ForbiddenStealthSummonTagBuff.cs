@@ -1,12 +1,12 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Summon.Whips
+namespace CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips
 {
     public class ForbiddenStealthSummonTagBuff : ModBuff
     {
-        public override string Texture => "CalamityMod/Buffs/Summon/Whips/SentinalLash";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Buffs/Summon/Whips/SentinalLash";
 
         public override void SetStaticDefaults()
         {

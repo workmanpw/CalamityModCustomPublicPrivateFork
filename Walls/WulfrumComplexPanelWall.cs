@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Walls
+namespace CalamityModCustomPublicPrivateFork.Walls
 {
     public class WulfrumComplexPanelWall : ModWall
     {
@@ -14,7 +14,7 @@ namespace CalamityMod.Walls
 
         public override void SetStaticDefaults()
         {
-            GlowMask = new("CalamityMod/Walls/WulfrumComplexPanelWall_Glow", 36, 36);
+            GlowMask = new("CalamityModCustomPublicPrivateFork/Walls/WulfrumComplexPanelWall_Glow", 36, 36);
 
             Main.wallHouse[Type] = true;
             AddMapEntry(new Color(28, 28, 29));

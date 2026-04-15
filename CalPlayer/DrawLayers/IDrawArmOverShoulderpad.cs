@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 
 /// <summary>
 /// Interface that can be used by chestplates that need their front arm (when walking) to go over the shoulderpads

@@ -1,18 +1,18 @@
-﻿using System;
-using CalamityMod.Graphics.Primitives;
+using System;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class SylvBolt : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         /// <summary>
         ///     The color hue interpolant for this bolt.
@@ -122,7 +122,7 @@ namespace CalamityMod.Projectiles.Magic
         {
             MiscShaderData boltShader = GameShaders.Misc["CalamityMod:SylvestaffProjectile"];
 
-            boltShader.SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
+            boltShader.SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(WidthFunction, ColorFunction, (_,_) => Projectile.Size * 0.5f, smoothen: false, shader: boltShader), 80);
             return false;
         }

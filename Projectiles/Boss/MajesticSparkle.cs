@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class MajesticSparkle : ModProjectile, ILocalizedModType
     {
@@ -14,7 +14,7 @@ namespace CalamityMod.Projectiles.Boss
         public const int Lifetime = 90;
         public const int FadeinTime = 18;
         public const int FadeoutTime = 18;
-        public override string Texture => "CalamityMod/Projectiles/StarProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/StarProj";
         public override void SetDefaults()
         {
             Projectile.width = 72;

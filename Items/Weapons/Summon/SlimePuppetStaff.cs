@@ -1,13 +1,13 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.NPCs.SlimeGod;
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Summon
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
 {
     public class SlimePuppetStaff : ModItem, ILocalizedModType
     {

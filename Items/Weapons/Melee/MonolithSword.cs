@@ -1,13 +1,13 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items.Placeables.FurnitureMonolith;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMonolith;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     public class MonolithSword : ModItem, ILocalizedModType
     {

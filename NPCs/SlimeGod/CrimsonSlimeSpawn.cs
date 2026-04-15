@@ -1,14 +1,14 @@
-﻿using System;
-using CalamityMod.Events;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.SlimeGod
+namespace CalamityModCustomPublicPrivateFork.NPCs.SlimeGod
 {
     public class CrimsonSlimeSpawn : ModNPC
     {
@@ -48,7 +48,7 @@ namespace CalamityMod.NPCs.SlimeGod
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCrimson,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.CrimsonSlimeSpawn")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.CrimsonSlimeSpawn")
             });
         }
 

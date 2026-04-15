@@ -1,13 +1,13 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.Placeables.Furniture;
-using CalamityMod.Systems;
-using CalamityMod.Waters;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Waters;
+using CalamityModCustomPublicPrivateFork.World;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.BiomeManagers
+namespace CalamityModCustomPublicPrivateFork.BiomeManagers
 {
     public class AbyssLayer4Biome : ModBiome
     {
@@ -17,16 +17,16 @@ namespace CalamityMod.BiomeManagers
             {
                 if (CalamityPlayer.areThereAnyDamnBosses)
                     return Main.curMusic;
-                return CalamityMod.Instance.GetMusicFromMusicMod("AbyssLayer4") ?? MusicID.Hell;
+                return ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("AbyssLayer4") ?? MusicID.Hell;
             }
         }
 
         public override ModWaterStyle WaterStyle => VoidWater.Instance;
         public override int BiomeTorchItemType => ModContent.ItemType<VoidTorch>();
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
-        public override string BestiaryIcon => "CalamityMod/BiomeManagers/AbyssLayer4Icon";
-        public override string BackgroundPath => "CalamityMod/Backgrounds/MapBackgrounds/AbyssBGLayer4";
-        public override string MapBackground => "CalamityMod/Backgrounds/MapBackgrounds/AbyssBGLayer4";
+        public override string BestiaryIcon => "CalamityModCustomPublicPrivateFork/BiomeManagers/AbyssLayer4Icon";
+        public override string BackgroundPath => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AbyssBGLayer4";
+        public override string MapBackground => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AbyssBGLayer4";
 
         public override bool IsBiomeActive(Player player)
         {

@@ -1,11 +1,11 @@
-﻿using System;
-using CalamityMod.Buffs.Summon;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class StormjawBaby : ModProjectile, ILocalizedModType
     {

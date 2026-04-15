@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.BaseItems
+namespace CalamityModCustomPublicPrivateFork.Items.BaseItems
 {
     /// <summary>
     /// A item that only exists as a held item. Useful if for example, it is used as a mean to temporarily replace the players attack ability.

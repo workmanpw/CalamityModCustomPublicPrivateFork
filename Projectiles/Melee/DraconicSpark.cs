@@ -1,15 +1,15 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class DraconicSpark : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public static int Lifetime = 120;
         public static float MaxHomingRange = 600f;

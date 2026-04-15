@@ -1,8 +1,8 @@
-﻿using CalamityMod.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityMod.Items.Placeables.SunkenSea;
-namespace CalamityMod.Items.Placeables.FurnitureShellstone
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureShellstone
 {
     public class ShellstoneSlab : ModItem, ILocalizedModType
     {

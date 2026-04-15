@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatBuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatBuffs
 {
     public class IceShieldBuff : ModBuff
     {

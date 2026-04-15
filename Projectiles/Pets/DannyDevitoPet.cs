@@ -1,11 +1,11 @@
-﻿using System;
-using CalamityMod.CalPlayer;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Pets
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 {
     public class DannyDevitoPet : ModProjectile, ILocalizedModType
     {

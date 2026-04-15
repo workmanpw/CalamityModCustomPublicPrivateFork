@@ -1,11 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityMod.CalPlayer.DrawLayers
+namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
 {
     public class WingsofRebirthLayer : PlayerDrawLayer
     {
@@ -13,7 +13,7 @@ namespace CalamityMod.CalPlayer.DrawLayers
 
         public override void Load()
         {
-            yharwingTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Accessories/Wings/WingsofRebirth_Wings_Real");
+            yharwingTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Accessories/Wings/WingsofRebirth_Wings_Real");
         }
 
         public override Position GetDefaultPosition() => new AfterParent(PlayerDrawLayers.Wings);

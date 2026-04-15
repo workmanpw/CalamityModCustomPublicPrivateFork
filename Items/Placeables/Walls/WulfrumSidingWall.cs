@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.FurnitureWulfrum;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureWulfrum;
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityMod.Walls;
+using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
 
-namespace CalamityMod.Items.Placeables.Walls
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
 {
     public class WulfrumSidingWall : ModItem, ILocalizedModType
     {

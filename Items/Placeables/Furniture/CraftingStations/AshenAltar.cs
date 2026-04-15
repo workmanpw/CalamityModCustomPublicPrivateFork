@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.Crags;
-using CalamityMod.Items.Placeables.FurnitureAshen;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAshen;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.Furniture.CraftingStations
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.CraftingStations
 {
     public class AshenAltar : ModItem, ILocalizedModType
     {

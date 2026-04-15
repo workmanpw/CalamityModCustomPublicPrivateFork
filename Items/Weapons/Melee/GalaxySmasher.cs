@@ -1,14 +1,14 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Melee;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     [LegacyName("GalaxySmasherMelee", "GalaxySmasherRogue")]
     public class GalaxySmasher : ModItem, ILocalizedModType

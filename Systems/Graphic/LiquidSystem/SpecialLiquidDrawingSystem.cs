@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -13,7 +13,7 @@ using Terraria.Graphics.Light;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems.Graphic.LiquidSystem
+namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
 {
     [Autoload(Side = ModSide.Client)]
     public sealed class SpecialLiquidDrawingSystem : ModSystem
@@ -90,21 +90,21 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
             var typeField = typeof(LiquidRenderer.LiquidDrawCache).GetField(nameof(LiquidRenderer.LiquidDrawCache.Type));
             if (typeField == null)
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not find FieldInfo for LiquidDrawCache.Type");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not find FieldInfo for LiquidDrawCache.Type");
                 return;
             }
 
             var lightingGetCornerColorsMethod = typeof(Lighting).GetMethod(nameof(Lighting.GetCornerColors));
             if (lightingGetCornerColorsMethod == null)
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not find MethodInfo for GetCornerColors");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not find MethodInfo for GetCornerColors");
                 return;
             }
 
             var mainDrawTileInWaterMethod = typeof(Main).GetMethod(nameof(Main.DrawTileInWater));
             if (mainDrawTileInWaterMethod == null)
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not find FieldInfo for DrawTileInWater");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not find FieldInfo for DrawTileInWater");
                 return;
             }
 
@@ -114,7 +114,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 c => c.MatchLdfld(typeField),
                 c => c.MatchStloc(out liquidStyleLocalIdx)))
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not locate the local index for Liquid Type (Style)");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not locate the local index for Liquid Type (Style)");
                 return;
             }
 
@@ -124,7 +124,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 c => c.MatchLdcR4(out _),
                 c => c.MatchCallOrCallvirt(lightingGetCornerColorsMethod)))
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not locate the local index for VertexColors");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not locate the local index for VertexColors");
                 return;
             }
 
@@ -136,7 +136,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 c => c.MatchLdloc(out yLocalIdx),
                 c => c.MatchCallOrCallvirt(mainDrawTileInWaterMethod)))
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not locate the liquid vertex colors for drawing");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not locate the liquid vertex colors for drawing");
                 return;
             }
 
@@ -152,7 +152,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
             if (!cursor.TryGotoNext(MoveType.After,
                 c => c.MatchCallOrCallvirt<TileBatch>(nameof(TileBatch.Draw))))
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not locate TileBatch.Draw call");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not locate TileBatch.Draw call");
                 return;
             }
 
@@ -197,7 +197,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 c => c.MatchCallOrCallvirt<Lighting>(nameof(Lighting.GetColor)),
                 c => c.MatchStloc(out _))) // Color color;
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not locate Lighting.GetColor call");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not locate Lighting.GetColor call");
                 return;
             }
 
@@ -240,10 +240,11 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
             if (GetModWaterfallStyle(waterfallType) is IWaterfallStyleModifyColor style)
             {
                 Tile tile = Main.tile[x, y];
-                Texture2D texture = self.waterfallTexture[waterfallType].Value;
-                Lighting.GetCornerColors(x, y, out var vertices, 1f);
-                style.ModifyColor(in tile, x, y, ref vertices);
-                Main.tileBatch.Draw(texture, position, sourceRect, vertices, Vector2.Zero, 1f, effects);
+                // WaterfallManager.waterfallTexture no longer exists
+                // Texture2D texture = self.waterfallTexture[waterfallType].Value;
+                // Lighting.GetCornerColors(x, y, out var vertices, 1f);
+                // style.ModifyColor(in tile, x, y, ref vertices);
+                // Main.tileBatch.Draw(texture, position, sourceRect, vertices, Vector2.Zero, 1f, effects);
             }
             else
             {

@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,11 +7,11 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class DoGLaserWalls : ModProjectile, ILocalizedModType
     {
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public new string LocalizationCategory => "Projectiles.Boss";
         public float time = 0;
         public ref float attackSpeed => ref Projectile.ai[0]; // How fast the attack goes, higher is faster
@@ -60,14 +60,14 @@ namespace CalamityMod.Projectiles.Boss
                 Projectile.velocity = Vector2.Zero;
                 laserFX = 1f;
 
-                SoundStyle appear = new("CalamityMod/Sounds/Custom/DoGLaserWallSpawn");
+                SoundStyle appear = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DoGLaserWallSpawn");
                 SoundEngine.PlaySound(appear with { Volume = 1f, Pitch = 0f, MaxInstances = -1 }, targetPos);
                 storedTargetPos = targetPos;
                 Projectile.ForceNetUpdate();
             }
             if (time >= attackTime && !doneAttack)
             {
-                SoundStyle attack = new("CalamityMod/Sounds/Custom/DoGLaserWallLightAttack");
+                SoundStyle attack = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DoGLaserWallLightAttack");
                 for (int i = 0; i < 2; i++)
                     SoundEngine.PlaySound(attack with { Volume = 0.9f, Pitch = 0, MaxInstances = -1 }, targetPos);
                 laserFX = 3;
@@ -152,9 +152,9 @@ namespace CalamityMod.Projectiles.Boss
         {
             if (laserFX == 0)
                 return false;
-            Texture2D beam = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineThick").Value;
-            Texture2D bBeam = ModContent.Request<Texture2D>("CalamityMod/Particles/LineThick").Value;
-            Texture2D bloom = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D beam = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineThick").Value;
+            Texture2D bBeam = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/LineThick").Value;
+            Texture2D bloom = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
             float opacity = (doneAttack ? 0.65f : 0.3f) * (float)Math.Pow(Math.Min(laserFX, 1), 2);
             if (CalamityClientConfig.Instance.Photosensitivity)
                 opacity = 0.2f;
@@ -162,7 +162,7 @@ namespace CalamityMod.Projectiles.Boss
             Color beamColor = drawColor with { A = 0 };
             if (laserType == 6)
             {
-                Texture2D ring = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomRingThinLarge").Value;
+                Texture2D ring = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomRingThinLarge").Value;
                 for (float scale = 0.25f * laserDist / 120f; scale < 1.25f; scale += 0.125f * laserDist / 120f)
                     Main.EntitySpriteDraw(ring, Projectile.Center - Main.screenPosition, null, beamColor * opacity, 0f, ring.Size() * 0.5f, scale, SpriteEffects.None);
                 return false;

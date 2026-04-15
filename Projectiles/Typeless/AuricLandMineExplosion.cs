@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Particles;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,12 +10,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class AuricLandMineExplosion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         private Player Owner => Main.player[Projectile.owner];
 
         public List<List<Vector2>> lightningTrails = new List<List<Vector2>>();
@@ -42,9 +42,9 @@ namespace CalamityMod.Projectiles.Typeless
             {
                 if (Projectile.ai[0] % 4 == 0)
                 {
-                    SoundStyle explode = new("CalamityMod/Sounds/Item/AuricBulletHit");
+                    SoundStyle explode = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AuricBulletHit");
                     SoundEngine.PlaySound(explode with { Pitch = 0.4f }, Projectile.Center);
-                    SoundStyle explode2 = new("CalamityMod/Sounds/Item/TheHiveNuke");
+                    SoundStyle explode2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TheHiveNuke");
                     SoundEngine.PlaySound(explode2 with { Pitch = -0.4f }, Projectile.Center);
                     lightningTrails.Clear();
                     for (int i = 0; i < lightningCount; i++)
@@ -110,7 +110,7 @@ namespace CalamityMod.Projectiles.Typeless
                     return false;
 
             Main.spriteBatch.EnterShaderRegion(BlendState.Additive);
-            GameShaders.Misc["CalamityMod:TeslaTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ZapTrail"));
+            GameShaders.Misc["CalamityMod:TeslaTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ZapTrail"));
             foreach (List<Vector2> points in lightningTrails)
             {
                 PrimitiveRenderer.RenderTrail(points, new(WidthFunction, ColorFunction, smoothen: false, shader: GameShaders.Misc["CalamityMod:TeslaTrail"]), 60);

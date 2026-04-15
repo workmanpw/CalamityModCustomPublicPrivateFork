@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Bestiary;
@@ -6,7 +6,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityMod.NPCs.NormalNPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
 {
     // This is intended to be a new variant for the vanilla Zombie
     public class BucketZombie : ModNPC

@@ -1,9 +1,9 @@
-﻿using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureMonolith
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith
 {
     public class MonolithPlatform : ModTile
     {

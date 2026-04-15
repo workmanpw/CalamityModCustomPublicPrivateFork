@@ -1,12 +1,12 @@
-﻿using CalamityMod.Projectiles.Magic;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     public class GruesomeEminence : ExhumedItem, ILocalizedModType
     {

@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureDriftwood
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureDriftwood
 {
     public class DriftwoodDoorClosed : ModTile
     {

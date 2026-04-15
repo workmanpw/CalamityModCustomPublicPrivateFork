@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.CalPlayer;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class EyeOfNightSummon : ModProjectile, ILocalizedModType
     {

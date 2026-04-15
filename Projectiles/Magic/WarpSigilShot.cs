@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Enums;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,12 +12,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class WarpSigilShot : ModProjectile, ILocalizedModType, IPixelatedPrimitiveRenderer
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public ref float FixedOffsetX => ref Projectile.ai[0];
         public ref float FixedOffsetY => ref Projectile.ai[1];
         public ref float DamageStatus => ref Projectile.ai[2];
@@ -93,10 +93,10 @@ namespace CalamityMod.Projectiles.Magic
         }
         public override void OnKill(int timeLeft)
         {
-            SoundStyle w = new("CalamityMod/Sounds/Custom/PlagueSounds/PlagueBoom4");
+            SoundStyle w = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PlagueBoom4");
             SoundEngine.PlaySound(w with { Volume = 0.25f, Pitch = 0f, MaxInstances = 4 }, Projectile.Center);
 
-            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DarkMagenta * 2f, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.04f, 14, true, 1f);
+            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DarkMagenta * 2f, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.04f, 14, true, 1f);
             GeneralParticleHandler.SpawnParticle(blastRing);
 
             for (int i = 0; i < 8; i++)
@@ -128,7 +128,7 @@ namespace CalamityMod.Projectiles.Magic
         }
         public void RenderPixelatedPrimitives(SpriteBatch spriteBatch, GeneralDrawLayer layer)
         {
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new PrimitiveSettings(WidthFunction, ColorFunction, (_,_) => Projectile.Size * 0.5f, pixelate: true, shader: GameShaders.Misc["CalamityMod:TrailStreak"]), 32);
 
             GeneralParticleHandler.SpawnParticle(new SquishyLightParticle(Projectile.Center, Projectile.velocity, Projectile.scale * 0.4f, Color.Magenta, 2, 1f, 0.5f, 1f), pixelate: true);

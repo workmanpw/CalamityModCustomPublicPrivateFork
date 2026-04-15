@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Mounts;
+using CalamityModCustomPublicPrivateFork.Items.Mounts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.DraedonStructures
+namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
 {
     public class OnyxExcavatorTile : ModTile
     {

@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Items.Tools;
+using System;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,12 +10,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class MarniteObliteratorProj : ModProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<MarniteObliterator>();
-        public override string Texture => "CalamityMod/Items/Tools/MarniteObliterator";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Tools/MarniteObliterator";
         public static Asset<Texture2D> GlowmaskTex;
         public static Asset<Texture2D> BloomTex;
 
@@ -159,7 +159,7 @@ namespace CalamityMod.Projectiles.Melee
 
 
             Vector2 normalizedVelocity = Projectile.velocity.SafeNormalize(Vector2.Zero);
-            Texture2D beamTex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/SimpleGradient").Value;
+            Texture2D beamTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/SimpleGradient").Value;
 
             for (int i = 0; i < 3; i++)
             {
@@ -169,12 +169,12 @@ namespace CalamityMod.Projectiles.Melee
             }
 
             if (BloomTex == null)
-                BloomTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+                BloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
             Texture2D bloomTex = BloomTex.Value;
 
             Main.EntitySpriteDraw(bloomTex, Projectile.Center - Main.screenPosition, null, Color.DeepSkyBlue * 0.3f, MathHelper.PiOver2, bloomTex.Size() / 2f, 0.3f * Projectile.scale, SpriteEffects.None, 0);
 
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/DoubleTrail"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/DoubleTrail"));
             PrimitiveRenderer.RenderTrail(new Vector2[] { Projectile.Center, Owner.MountedCenter - normalizedVelocity * 13f }, new(WidthFunction, ColorFunction, shader: GameShaders.Misc["CalamityMod:TrailStreak"]), 30);
 
             Main.spriteBatch.End();
@@ -194,7 +194,7 @@ namespace CalamityMod.Projectiles.Melee
 
             //Draw some bloom
             if (GlowmaskTex == null)
-                GlowmaskTex = ModContent.Request<Texture2D>("CalamityMod/Items/Tools/MarniteObliteratorBloom");
+                GlowmaskTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Tools/MarniteObliteratorBloom");
             Texture2D glowTex = GlowmaskTex.Value;
             float bloomOpacity = (float)Math.Pow(Math.Clamp(Timer / 100f, 0f, 1f), 2) * (0.85f + (0.5f + 0.5f * (float)Math.Sin(Main.GlobalTimeWrappedHourly))) * 0.8f;
             Color bloomColor = Color.Lerp(Color.DeepSkyBlue, Color.Chocolate, 0.5f + 0.5f * (float)Math.Sin(SpeenBeams * 0.2f + 1.2f));

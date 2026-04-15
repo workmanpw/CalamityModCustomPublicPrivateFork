@@ -1,11 +1,11 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class VampiricTalisman : ModItem, ILocalizedModType, IHoldShiftTooltipItem
     {

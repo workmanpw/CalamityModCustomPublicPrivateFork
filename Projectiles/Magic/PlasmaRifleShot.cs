@@ -1,19 +1,19 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class PlasmaRifleShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         // Due to how far/fast this thing moves, it'd require way too many points for a smooth long trail using oldPos
         public List<Vector2> TrailPos = new List<Vector2>();

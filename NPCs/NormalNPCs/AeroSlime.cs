@@ -1,12 +1,12 @@
-﻿using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Items.Placeables.Ores;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityMod.NPCs.NormalNPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
 {
     public class AeroSlime : ModNPC
     {
@@ -47,7 +47,7 @@ namespace CalamityMod.NPCs.NormalNPCs
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Sky,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.AeroSlime")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.AeroSlime")
             });
         }
 

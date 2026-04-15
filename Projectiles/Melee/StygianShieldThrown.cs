@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using ReLogic.Utilities;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class StygianShieldThrown : ModProjectile, ILocalizedModType
     {

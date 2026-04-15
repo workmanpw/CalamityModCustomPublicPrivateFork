@@ -1,18 +1,18 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.NPCs.Abyss;
-using CalamityMod.NPCs.Crags;
-using CalamityMod.NPCs.SulphurousSea;
-using CalamityMod.NPCs.SunkenSea;
-using CalamityMod.Projectiles.Enemy;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.NPCs.Abyss;
+using CalamityModCustomPublicPrivateFork.NPCs.Crags;
+using CalamityModCustomPublicPrivateFork.NPCs.SulphurousSea;
+using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.NormalNPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
 {
     public static class CalamityRegularEnemyAI
     {

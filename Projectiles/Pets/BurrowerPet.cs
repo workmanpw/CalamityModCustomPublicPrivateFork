@@ -1,38 +1,38 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Effects;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.Deconstructors;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
-using CalamityMod.Systems;
-using CalamityMod.Systems.Mechanic;
-using CalamityMod.Tiles.Ores;
+using CalamityModCustomPublicPrivateFork.Effects;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.Deconstructors;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
+using CalamityModCustomPublicPrivateFork.Tiles.Ores;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Pets
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 {
     public class BurrowerPet : BaseWormProjectile, ILocalizedModType
     {
-        public override string Texture => "CalamityMod/NPCs/Deconstructors/DeconstructorMK1Head";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1Head";
         public override List<string> SegmentTextures => new()
         {
-            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1Body",
-            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1BodyAlt1",
-            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1BodyAlt2",
-            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1Tail"
+            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1Body",
+            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1BodyAlt1",
+            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1BodyAlt2",
+            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1Tail"
         };
 
         public override List<string?> GlowTextures => new()
         {
             null,
-            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1BodyGlow",
-            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1BodyAlt1Glow",
-            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1BodyAlt2Glow"
+            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1BodyGlow",
+            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1BodyAlt1Glow",
+            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1BodyAlt2Glow"
         };
         public override int SegmentCount => 3;
 
@@ -257,7 +257,7 @@ namespace CalamityMod.Projectiles.Pets
                                 Projectile.rotation = Projectile.velocity.ToRotation() - MathHelper.PiOver2;
                                 SwitchAttackState(AttackState.Shocked, 300); //Shock for 5 seconds
                                 AuricOre.Animate = true;
-                                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/ExoMechs/TeslaShoot1"), Projectile.Center);
+                                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/TeslaShoot1"), Projectile.Center);
                                 return;
                             }
                             SegmentRigidity = 0f;

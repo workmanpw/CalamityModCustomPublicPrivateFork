@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Text;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Localization;
 
-namespace CalamityMod.UI.DraedonSummoning
+namespace CalamityModCustomPublicPrivateFork.UI.DraedonSummoning
 {
     public class DraedonDialogEntry
     {

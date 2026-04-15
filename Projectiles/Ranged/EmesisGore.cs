@@ -1,13 +1,13 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class EmesisGore : ModProjectile, ILocalizedModType
     {
@@ -71,7 +71,7 @@ namespace CalamityMod.Projectiles.Ranged
                 Particle spark = new LineParticle(Projectile.Center, new Vector2(11, 11).RotatedByRandom(100) * Main.rand.NextFloat(0.5f, 1f), true, Main.rand.Next(23, 35 + 1), Main.rand.NextFloat(0.8f, 1.2f), Color.Chartreuse * Main.rand.NextFloat(0.15f, 0.5f));
                 GeneralParticleHandler.SpawnParticle(spark);
             }
-            SoundStyle splode = new("CalamityMod/Sounds/NPCKilled/PerfLargeDeath");
+            SoundStyle splode = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/PerfLargeDeath");
             SoundEngine.PlaySound(splode with { Volume = 0.6f }, Projectile.Center);
         }
 
@@ -82,7 +82,7 @@ namespace CalamityMod.Projectiles.Ranged
         public override bool PreDraw(ref Color lightColor)
         {
             
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/OldDukeGore").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/OldDukeGore").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Projectile.GetAlpha(lightColor);
             float drawRotation = Projectile.rotation;

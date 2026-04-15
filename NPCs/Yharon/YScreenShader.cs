@@ -1,11 +1,11 @@
-﻿using CalamityMod.Events;
+using CalamityModCustomPublicPrivateFork.Events;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Yharon
+namespace CalamityModCustomPublicPrivateFork.NPCs.Yharon
 {
     public class YScreenShaderData : ScreenShaderData
     {

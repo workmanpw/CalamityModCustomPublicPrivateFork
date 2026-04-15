@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     public class SnowstormStaff : ModItem, ILocalizedModType
     {

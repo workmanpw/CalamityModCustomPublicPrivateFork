@@ -1,23 +1,23 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Terraria.DataStructures;
 using System.Collections.Generic;
-using CalamityMod.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 using Terraria.Graphics.Shaders;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class MantisClawJet : ModProjectile, ILocalizedModType
     {
         int TimerCap = 70;
 
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Particles/ThunderBolt";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/ThunderBolt";
 
         public static Color WaterColor = new Color(114, 197, 255, 0);
 

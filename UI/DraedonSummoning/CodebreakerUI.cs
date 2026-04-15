@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Text;
-using CalamityMod.Items.DraedonMisc;
-using CalamityMod.Items.Pets;
-using CalamityMod.NPCs.ExoMechs;
-using CalamityMod.Packets;
-using CalamityMod.Systems.Collections;
-using CalamityMod.TileEntities;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityModCustomPublicPrivateFork.Items.Pets;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.TileEntities;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -17,7 +17,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI.Chat;
 
-namespace CalamityMod.UI.DraedonSummoning
+namespace CalamityModCustomPublicPrivateFork.UI.DraedonSummoning
 {
     public partial class CodebreakerUI : ModSystem
     {
@@ -95,9 +95,9 @@ namespace CalamityMod.UI.DraedonSummoning
 
         public static Rectangle MouseScreenArea => Utils.CenteredRectangle(Main.MouseScreen, Vector2.One * 2f);
 
-        public static readonly SoundStyle SummonSound = new("CalamityMod/Sounds/Custom/CodebreakerBeam");
+        public static readonly SoundStyle SummonSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CodebreakerBeam");
 
-        public static readonly SoundStyle BloodSound = new("CalamityMod/Sounds/Custom/Codebreaker/BloodForHekate");
+        public static readonly SoundStyle BloodSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/BloodForHekate");
 
         public static void Draw(SpriteBatch spriteBatch)
         {
@@ -126,7 +126,7 @@ namespace CalamityMod.UI.DraedonSummoning
             }
 
             // Draw the background.
-            Texture2D backgroundTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DraedonDecrypterBackground").Value;
+            Texture2D backgroundTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DraedonDecrypterBackground").Value;
             spriteBatch.Draw(backgroundTexture, BackgroundCenter, null, Color.White, 0f, backgroundTexture.Size() * 0.5f, GeneralScale * (1f - CommunicationPanelScale), 0, 0f);
 
             Rectangle backgroundArea = Utils.CenteredRectangle(BackgroundCenter, backgroundTexture.Size() * GeneralScale);
@@ -166,9 +166,9 @@ namespace CalamityMod.UI.DraedonSummoning
             Vector2 backgroundTopLeft = BackgroundCenter - backgroundTexture.Size() * GeneralScale * 0.5f;
 
             // Draw the cell payment slot icon.
-            Texture2D emptyCellIconTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonsArsenal/PowerCellSlot_Empty").Value;
-            Texture2D occupiedCellIconTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonsArsenal/PowerCellSlot_Filled").Value;
-            Texture2D bloodyVeinIconTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Pets/BloodyVein").Value;
+            Texture2D emptyCellIconTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonsArsenal/PowerCellSlot_Empty").Value;
+            Texture2D occupiedCellIconTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonsArsenal/PowerCellSlot_Filled").Value;
+            Texture2D bloodyVeinIconTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Pets/BloodyVein").Value;
             Texture2D cellTexture = emptyCellIconTexture;
             if (codebreakerTileEntity.InputtedCellCount > 0)
             {
@@ -223,7 +223,7 @@ namespace CalamityMod.UI.DraedonSummoning
                 DrawDecryptCancelConfirmationText(costVerificationLocation);
 
             // Draw the schematic icon.
-            Texture2D schematicIconBG = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/EncryptedSchematicSlotBackground").Value;
+            Texture2D schematicIconBG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/EncryptedSchematicSlotBackground").Value;
             Texture2D schematicIconTexture = schematicIconBG;
             int schematicType = 0;
 
@@ -231,13 +231,13 @@ namespace CalamityMod.UI.DraedonSummoning
                 schematicType = EncryptedSchematicIDRelationshipDict.Dict[codebreakerTileEntity.HeldSchematicID];
 
             if (schematicType == ModContent.ItemType<EncryptedSchematicPlanetoid>())
-                schematicIconTexture = ModContent.Request<Texture2D>("CalamityMod/Items/DraedonMisc/EncryptedSchematicPlanetoid").Value;
+                schematicIconTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/DraedonMisc/EncryptedSchematicPlanetoid").Value;
             if (schematicType == ModContent.ItemType<EncryptedSchematicJungle>())
-                schematicIconTexture = ModContent.Request<Texture2D>("CalamityMod/Items/DraedonMisc/EncryptedSchematicJungle").Value;
+                schematicIconTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/DraedonMisc/EncryptedSchematicJungle").Value;
             if (schematicType == ModContent.ItemType<EncryptedSchematicHell>())
-                schematicIconTexture = ModContent.Request<Texture2D>("CalamityMod/Items/DraedonMisc/EncryptedSchematicHell").Value;
+                schematicIconTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/DraedonMisc/EncryptedSchematicHell").Value;
             if (schematicType == ModContent.ItemType<EncryptedSchematicIce>())
-                schematicIconTexture = ModContent.Request<Texture2D>("CalamityMod/Items/DraedonMisc/EncryptedSchematicIce").Value;
+                schematicIconTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/DraedonMisc/EncryptedSchematicIce").Value;
 
             spriteBatch.Draw(schematicIconBG, schematicSlotDrawCenter, null, Color.White, 0f, schematicIconBG.Size() * 0.5f, GeneralScale, 0, 0f);
             if (codebreakerTileEntity.HeldSchematicID != 0)
@@ -255,7 +255,7 @@ namespace CalamityMod.UI.DraedonSummoning
             // Copy the cell stack from the amount of cells in the tile entity.
             temporaryPowerCell.stack = codebreakerTileEntity.InputtedCellCount;
 
-            Vector2 cellInteractionArea = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonsArsenal/PowerCellSlot_Empty").Value.Size() * GeneralScale;
+            Vector2 cellInteractionArea = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonsArsenal/PowerCellSlot_Empty").Value.Size() * GeneralScale;
             CalamityUtils.DrawPowercellSlot(spriteBatch, temporaryPowerCell, cellDrawCenter, GeneralScale);
             HandleCellSlotInteractions(codebreakerTileEntity, temporaryPowerCell, cellDrawCenter, cellInteractionArea);
 
@@ -267,7 +267,7 @@ namespace CalamityMod.UI.DraedonSummoning
 
         public static void DrawExitButton(Vector2 drawPosition, float opacity)
         {
-            Texture2D cancelButton = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DecryptCancelIcon").Value;
+            Texture2D cancelButton = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DecryptCancelIcon").Value;
             Rectangle clickArea = Utils.CenteredRectangle(drawPosition, cancelButton.Size() * VerificationButtonScale);
 
             // Check if the mouse is hovering over the exit button area.
@@ -477,7 +477,7 @@ namespace CalamityMod.UI.DraedonSummoning
             Utils.DrawBorderStringFourWay(Main.spriteBatch, FontAssets.MouseText.Value, text, drawPosition.X, drawPosition.Y + GeneralScale * 20f, Color.White * (Main.mouseTextColor / 255f), Color.Black, Vector2.Zero, GeneralScale);
 
             // And draw the cells to the right of the text.
-            Texture2D cellTexture = ModContent.Request<Texture2D>("CalamityMod/Items/DraedonMisc/DraedonPowerCell").Value;
+            Texture2D cellTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/DraedonMisc/DraedonPowerCell").Value;
             Vector2 offsetDrawPosition = new Vector2(drawPosition.X + ChatManager.GetStringSize(FontAssets.MouseText.Value, text, Vector2.One, -1f).X * GeneralScale + GeneralScale * 15f, drawPosition.Y + GeneralScale * 30f);
             Main.spriteBatch.Draw(cellTexture, offsetDrawPosition, null, Color.White, 0f, cellTexture.Size() * 0.5f, GeneralScale, 0, 0f);
 
@@ -487,7 +487,7 @@ namespace CalamityMod.UI.DraedonSummoning
 
         public static void DrawCostVerificationButton(TECodebreaker codebreakerTileEntity, Vector2 drawPosition)
         {
-            Texture2D confirmationTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DecryptIcon").Value;
+            Texture2D confirmationTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DecryptIcon").Value;
             Rectangle clickArea = Utils.CenteredRectangle(drawPosition, confirmationTexture.Size() * VerificationButtonScale);
 
             // Check if the mouse is hovering over the cost button area.
@@ -521,7 +521,7 @@ namespace CalamityMod.UI.DraedonSummoning
         public static void DisplayDecryptCancelButton(TECodebreaker codebreakerTileEntity, Vector2 drawPosition)
         {
             bool clickingMouse = Main.mouseLeft && Main.mouseLeftRelease;
-            Texture2D cancelTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DecryptCancelIcon").Value;
+            Texture2D cancelTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DecryptCancelIcon").Value;
             Rectangle clickArea = Utils.CenteredRectangle(drawPosition, cancelTexture.Size() * CancelButtonScale * 1.2f);
 
             // Check if the mouse is hovering over the decrypt button area.
@@ -564,7 +564,7 @@ namespace CalamityMod.UI.DraedonSummoning
 
         public static void DrawDecryptCancelConfirmationText(Vector2 drawPosition)
         {
-            Texture2D textPanelTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DraedonDecrypterScreen").Value;
+            Texture2D textPanelTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DraedonDecrypterScreen").Value;
             drawPosition.X += GeneralScale * 196f;
 
             Vector2 scale = new Vector2(1f, 0.3f) * GeneralScale;
@@ -577,7 +577,7 @@ namespace CalamityMod.UI.DraedonSummoning
 
         public static void HandleDecryptionStuff(TECodebreaker codebreakerTileEntity, Texture2D backgroundTexture, Vector2 backgroundTopLeft, Vector2 barCenter)
         {
-            Texture2D textPanelTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DraedonDecrypterScreen").Value;
+            Texture2D textPanelTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DraedonDecrypterScreen").Value;
             Vector2 textPanelCenter = backgroundTopLeft + Vector2.UnitX * backgroundTexture.Width * GeneralScale + textPanelTexture.Size() * new Vector2(-0.5f, 0.5f) * GeneralScale;
             Main.spriteBatch.Draw(textPanelTexture, textPanelCenter, null, Color.White, 0f, textPanelTexture.Size() * 0.5f, GeneralScale, 0, 0f);
 
@@ -619,8 +619,8 @@ namespace CalamityMod.UI.DraedonSummoning
                 return;
 
             // Draw a small bar at the bottom to indicate how much work is left.
-            Texture2D borderTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/CodebreakerDecyptionBar").Value;
-            Texture2D barTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/CodebreakerDecyptionBarCharge").Value;
+            Texture2D borderTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/CodebreakerDecyptionBar").Value;
+            Texture2D barTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/CodebreakerDecyptionBarCharge").Value;
             Main.spriteBatch.Draw(borderTexture, barCenter, null, Color.White, 0f, borderTexture.Size() * 0.5f, GeneralScale, 0, 0);
             Rectangle barRectangle = new Rectangle(0, 0, (int)(barTexture.Width * codebreakerTileEntity.DecryptionCompletion), barTexture.Width);
             Main.spriteBatch.Draw(barTexture, barCenter, barRectangle, Color.White, 0f, barTexture.Size() * 0.5f, GeneralScale, 0, 0);
@@ -633,7 +633,7 @@ namespace CalamityMod.UI.DraedonSummoning
 
         public static void HandleDraedonSummonButton(TECodebreaker codebreakerTileEntity, Vector2 drawPosition)
         {
-            Texture2D contactButton = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/ContactIcon").Value;
+            Texture2D contactButton = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/ContactIcon").Value;
 
             Rectangle clickArea = Utils.CenteredRectangle(drawPosition, contactButton.Size() * VerificationButtonScale);
 
@@ -691,7 +691,7 @@ namespace CalamityMod.UI.DraedonSummoning
 
         public static void HandleDraedonTalkButton(Vector2 drawPosition)
         {
-            Texture2D communicateButton = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/CommunicateIcon").Value;
+            Texture2D communicateButton = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/CommunicateIcon").Value;
 
             Rectangle clickArea = Utils.CenteredRectangle(drawPosition, communicateButton.Size() * VerificationButtonScale);
 

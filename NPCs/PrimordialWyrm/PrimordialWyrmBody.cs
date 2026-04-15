@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.PrimordialWyrm
+namespace CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm
 {
     [LongDistanceNetSync(SyncWith = typeof(PrimordialWyrmHead))]
     public class PrimordialWyrmBody : ModNPC

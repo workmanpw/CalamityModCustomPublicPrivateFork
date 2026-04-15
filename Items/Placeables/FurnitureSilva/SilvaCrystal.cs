@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Abyss;
-using CalamityMod.Items.Placeables.Walls;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureSilva
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSilva
 {
     public class SilvaCrystal : ModItem, ILocalizedModType
     {

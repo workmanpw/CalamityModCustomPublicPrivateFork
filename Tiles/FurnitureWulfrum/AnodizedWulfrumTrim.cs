@@ -1,11 +1,11 @@
-﻿using CalamityMod.Sounds;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureWulfrum
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum
 {
     public class AnodizedWulfrumTrim : ModTile
     {

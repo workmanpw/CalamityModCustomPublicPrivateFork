@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Events;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class UnstableCrimulanGlob : ModProjectile, ILocalizedModType
     {

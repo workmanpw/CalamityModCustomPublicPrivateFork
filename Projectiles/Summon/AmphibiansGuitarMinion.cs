@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class AmphibiansGuitarMinion : BaseMinionProjectile
     {
@@ -52,7 +52,7 @@ namespace CalamityMod.Projectiles.Summon
             if (!_hasSpawned)
             {
                 // Pitch matches the song if played with proper timing
-                SoundStyle spawnSound = new("CalamityMod/Sounds/Item/AmphibiansGuitarSummon");
+                SoundStyle spawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AmphibiansGuitarSummon");
                 SoundEngine.PlaySound(spawnSound with { Volume = 0.8f, Pitch = (GuitarSprite == 2 || GuitarSprite == 5) ? -0.15f : 0f }, Projectile.Center);
 
                 ShootTimer = GuitarSprite * 12f;
@@ -88,15 +88,15 @@ namespace CalamityMod.Projectiles.Summon
 
                     if (bigShot)
                     {
-                        SoundStyle fire = new("CalamityMod/Sounds/Item/Evernote");
+                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/Evernote");
                         SoundEngine.PlaySound(fire with { Volume = 0.5f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f), MaxInstances = 10 }, Projectile.Center);
 
-                        Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, _effectsColor, "CalamityMod/Particles/HighResFoggyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.01f, 0.09f, 17);
+                        Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, _effectsColor, "CalamityModCustomPublicPrivateFork/Particles/HighResFoggyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.01f, 0.09f, 17);
                         GeneralParticleHandler.SpawnParticle(blastRing);
                     }
                     else
                     {
-                        SoundStyle fireSmall = new("CalamityMod/Sounds/Item/WulfrumProsthesisShoot");
+                        SoundStyle fireSmall = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumProsthesisShoot");
                         SoundEngine.PlaySound(fireSmall with { Volume = 0.3f, Pitch = Main.rand.NextFloat(0.6f, 0.7f) }, Projectile.Center);
                     }
 

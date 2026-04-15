@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon.MirrorofKalandraMinions
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.MirrorofKalandraMinions
 {
     public class HopeShredderArrowSplit : ModProjectile, ILocalizedModType
     {

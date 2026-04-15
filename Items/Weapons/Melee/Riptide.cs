@@ -1,12 +1,12 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.SunkenSea;
-using CalamityMod.Projectiles.Melee.Yoyos;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     [LegacyName("Whirlpool")]
     public class Riptide : ModItem, ILocalizedModType

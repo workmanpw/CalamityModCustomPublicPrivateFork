@@ -1,4 +1,4 @@
-﻿using CalamityMod.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     [LegacyName("DeathValley")]
     public class DeathValleyDuster : ModItem, ILocalizedModType
@@ -30,7 +30,7 @@ namespace CalamityMod.Items.Weapons.Magic
             Item.knockBack = 8f;
             Item.value = CalamityGlobalItem.RarityLightRedBuyPrice;
             Item.rare = ItemRarityID.LightRed;
-            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/MagicRockSound") with { Volume = 0.4f, Pitch = -0.1f };
+            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockSound") with { Volume = 0.4f, Pitch = -0.1f };
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<DeathValleyDusterProjectile>();
             Item.shootSpeed = 6.5f;

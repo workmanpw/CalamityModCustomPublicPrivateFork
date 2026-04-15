@@ -1,19 +1,19 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.CalPlayer;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class SupernovaStealthBoom : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         private float radius = 90f;
         public bool damageFrame = false;
         public bool doDamage = true;
@@ -77,11 +77,11 @@ namespace CalamityMod.Projectiles.Rogue
             if (time <= 72)
             {
                 float orbScale = MathHelper.Clamp(Utils.GetLerpValue(85, 0, time), 0, 1);
-                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 2.5f * orbScale, 2.5f * orbScale, 4);
+                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 2.5f * orbScale, 2.5f * orbScale, 4);
                 GeneralParticleHandler.SpawnParticle(orb);
                 if (!photosen)
                 {
-                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 2f * orbScale, 2f * orbScale, 4);
+                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 2f * orbScale, 2f * orbScale, 4);
                     GeneralParticleHandler.SpawnParticle(orb2);
                 }
 
@@ -159,9 +159,9 @@ namespace CalamityMod.Projectiles.Rogue
 
                 if (!photosen)
                 {
-                    Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 4.5f, 3.5f, 20);
+                    Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 4.5f, 3.5f, 20);
                     GeneralParticleHandler.SpawnParticle(orb);
-                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 4f, 3f, 20);
+                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 4f, 3f, 20);
                     GeneralParticleHandler.SpawnParticle(orb2);
                 }
 
@@ -211,7 +211,7 @@ namespace CalamityMod.Projectiles.Rogue
                 for (int i = 0; i < 10; i++)
                 {
                     randomColor = RandomizeColor();
-                    Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, randomColor * 0.7f, "CalamityMod/Particles/FlameExplosion", new Vector2(1f, 1f), Main.rand.NextFloat(-20, 20), 0f, 4f - i * 0.28f, 50);
+                    Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, randomColor * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", new Vector2(1f, 1f), Main.rand.NextFloat(-20, 20), 0f, 4f - i * 0.28f, 50);
                     GeneralParticleHandler.SpawnParticle(pulse2);
                 }
 

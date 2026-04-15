@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.FurnitureDriftwood
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureDriftwood
 {
     public class DriftwoodBaroqueCello : ModTile
     {

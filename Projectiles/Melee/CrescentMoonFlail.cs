@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Linq;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.DataStructures;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
-using CalamityMod.Projectiles.Summon;
-using CalamityMod.Systems.Mechanic;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
 using Microsoft.Build.Evaluation;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -15,7 +15,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class CrescentMoonFlail : ModProjectile, ILocalizedModType
     {
@@ -117,8 +117,8 @@ namespace CalamityMod.Projectiles.Melee
                         Projectile.position = Projectile.Center;
                         Projectile.Size *= 0.2f;
                         Projectile.Center = Projectile.position;
-                        GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, Color.SkyBlue, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-15f, 15f), 0f, 0.25f, 12));
-                        GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, Color.DeepSkyBlue, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-15f, 15f), 0f, 0.2f, 12));
+                        GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, Color.SkyBlue, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-15f, 15f), 0f, 0.25f, 12));
+                        GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, Color.DeepSkyBlue, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-15f, 15f), 0f, 0.2f, 12));
                         for (int i = 0; i < 30; i++)
                         {
                             int dustType = Utils.SelectRandom(Main.rand, new int[]

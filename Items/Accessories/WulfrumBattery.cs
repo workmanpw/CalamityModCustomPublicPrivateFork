@@ -1,16 +1,16 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class WulfrumBattery : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Accessories";
-        public static readonly SoundStyle ExtraDropSound = new("CalamityMod/Sounds/Custom/WulfrumExtraDrop") { PitchVariance = 0.3f };
+        public static readonly SoundStyle ExtraDropSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumExtraDrop") { PitchVariance = 0.3f };
 
         public override void SetStaticDefaults()
         {

@@ -1,8 +1,8 @@
-﻿using CalamityMod.Items.Placeables.Walls;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureAshen
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAshen
 {
     public class AshenSlab : ModItem, ILocalizedModType
     {

@@ -1,18 +1,18 @@
-﻿using System;
-using CalamityMod.Systems;
-using CalamityMod.Walls;
-using CalamityMod.Walls.DraedonStructures;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityModCustomPublicPrivateFork.Walls.DraedonStructures;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Scenes.MusicScenes
+namespace CalamityModCustomPublicPrivateFork.Scenes.MusicScenes
 {
     public class BioLabMusicScene : ModSceneEffect
     {
-        public override int Music => CalamityMod.Instance.GetMusicFromMusicMod("BioLab") ?? -1;
+        public override int Music => ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("BioLab") ?? -1;
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
         // This weight is here to ensure this theme plays over most other songs that use the Environment priority, as it's a smaller area and should take higher precedent
         public override float GetWeight(Player player) => 0.6f;

@@ -1,14 +1,14 @@
-﻿using System.Linq;
-using CalamityMod.NPCs.AcidRain;
-using CalamityMod.NPCs.Astral;
-using CalamityMod.NPCs.NormalNPCs;
+using System.Linq;
+using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
+using CalamityModCustomPublicPrivateFork.NPCs.Astral;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs
 {
     public sealed class CalamityNaturalSpawnBossNPC : GlobalNPC
     {
@@ -75,14 +75,14 @@ namespace CalamityMod.NPCs
             ghostKillCount++;
             if (ghostKillCount == 10)
             {
-                string key = "Mods.CalamityMod.Status.Boss.GhostBossText2";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.GhostBossText2";
                 Color messageColor = Color.Cyan;
 
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);
             }
             else if (ghostKillCount == 20)
             {
-                string key = "Mods.CalamityMod.Status.Boss.GhostBossText3";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.GhostBossText3";
                 Color messageColor = Color.Cyan;
 
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);
@@ -121,14 +121,14 @@ namespace CalamityMod.NPCs
             sharkKillCount++;
             if (sharkKillCount == 4)
             {
-                string key = "Mods.CalamityMod.Status.Boss.SandSharkText";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SandSharkText";
                 Color messageColor = Color.Goldenrod;
 
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);
             }
             else if (sharkKillCount == 8)
             {
-                string key = "Mods.CalamityMod.Status.Boss.SandSharkText2";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SandSharkText2";
                 Color messageColor = Color.Goldenrod;
 
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);

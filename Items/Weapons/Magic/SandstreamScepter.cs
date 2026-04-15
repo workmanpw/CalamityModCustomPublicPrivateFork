@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     [LegacyName("StormSpray")]
     public class SandstreamScepter : ModItem, ILocalizedModType

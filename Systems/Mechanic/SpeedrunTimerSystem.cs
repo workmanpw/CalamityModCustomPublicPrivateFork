@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Diagnostics;
-using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     internal sealed class SpeedrunTimerSystem : ModSystem
     {

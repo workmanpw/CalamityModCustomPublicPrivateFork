@@ -1,12 +1,12 @@
-﻿using CalamityMod.Items.Placeables.Furniture;
-using CalamityMod.Systems;
-using CalamityMod.Waters;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Waters;
 using Terraria;
 using Terraria.GameContent.Events;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.BiomeManagers
+namespace CalamityModCustomPublicPrivateFork.BiomeManagers
 {
     public class AstralInfectionBiome : ModBiome
     {
@@ -18,15 +18,15 @@ namespace CalamityMod.BiomeManagers
             {
                 if (Main.LocalPlayer.ZoneSnow) //Snow
                 {
-                    return ModContent.Find<ModSurfaceBackgroundStyle>("CalamityMod/AstralSnowSurfaceBGStyle");
+                    return ModContent.Find<ModSurfaceBackgroundStyle>("CalamityModCustomPublicPrivateFork/AstralSnowSurfaceBGStyle");
                 }
                 else if (Main.LocalPlayer.ZoneDesert && !Main.LocalPlayer.ZoneSnow) //Desert
                 {
-                    return ModContent.Find<ModSurfaceBackgroundStyle>("CalamityMod/AstralDesertSurfaceBGStyle");
+                    return ModContent.Find<ModSurfaceBackgroundStyle>("CalamityModCustomPublicPrivateFork/AstralDesertSurfaceBGStyle");
                 }
                 else //surface
                 {
-                    return ModContent.Find<ModSurfaceBackgroundStyle>("CalamityMod/AstralSurfaceBGStyle");
+                    return ModContent.Find<ModSurfaceBackgroundStyle>("CalamityModCustomPublicPrivateFork/AstralSurfaceBGStyle");
                 }
             }
         }
@@ -37,9 +37,9 @@ namespace CalamityMod.BiomeManagers
             {
                 if (Main.LocalPlayer.ZoneSnow)
                 {
-                    return ModContent.Find<ModUndergroundBackgroundStyle>("CalamityMod/AstralUndergroundBGStyle"); // Could use its own unique background
+                    return ModContent.Find<ModUndergroundBackgroundStyle>("CalamityModCustomPublicPrivateFork/AstralUndergroundBGStyle"); // Could use its own unique background
                 }
-                return ModContent.Find<ModUndergroundBackgroundStyle>("CalamityMod/AstralUndergroundBGStyle");
+                return ModContent.Find<ModUndergroundBackgroundStyle>("CalamityModCustomPublicPrivateFork/AstralUndergroundBGStyle");
             }
         }
 
@@ -60,7 +60,7 @@ namespace CalamityMod.BiomeManagers
             }
         }
 
-        public override string BestiaryIcon => "CalamityMod/BiomeManagers/AbovegroundAstralBiomeIcon";
+        public override string BestiaryIcon => "CalamityModCustomPublicPrivateFork/BiomeManagers/AbovegroundAstralBiomeIcon";
 
         public override string BackgroundPath 
         { 
@@ -69,20 +69,20 @@ namespace CalamityMod.BiomeManagers
                 if (Main.LocalPlayer.ZoneDesert && !Main.LocalPlayer.ZoneSnow)
                 {
                     //desert
-                    return "CalamityMod/Backgrounds/MapBackgrounds/AstralBG"; // Could use its own unique background
+                    return "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AstralBG"; // Could use its own unique background
                 }
                 else if (Main.LocalPlayer.ZoneDirtLayerHeight || Main.LocalPlayer.ZoneRockLayerHeight || Main.LocalPlayer.ZoneUnderworldHeight)
                 {
                     //underground
-                    return "CalamityMod/Backgrounds/MapBackgrounds/AstralBG"; // Could use its own unique background
+                    return "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AstralBG"; // Could use its own unique background
                 }
                 else
                 {
-                    return "CalamityMod/Backgrounds/MapBackgrounds/AstralBG";
+                    return "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AstralBG";
                 }
             } 
         }
-        public override string MapBackground => "CalamityMod/Backgrounds/MapBackgrounds/AstralBG";
+        public override string MapBackground => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AstralBG";
 
         public override int Music
         {
@@ -90,9 +90,9 @@ namespace CalamityMod.BiomeManagers
             {
                 if (Main.LocalPlayer.ZoneDirtLayerHeight || Main.LocalPlayer.ZoneRockLayerHeight || Main.LocalPlayer.ZoneUnderworldHeight)
                 {
-                    return CalamityMod.Instance.GetMusicFromMusicMod("AstralInfectionUnderground") ?? MusicID.Space;
+                    return ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("AstralInfectionUnderground") ?? MusicID.Space;
                 }
-                return CalamityMod.Instance.GetMusicFromMusicMod("AstralInfection") ?? MusicID.Space;
+                return ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("AstralInfection") ?? MusicID.Space;
             }
         }
 

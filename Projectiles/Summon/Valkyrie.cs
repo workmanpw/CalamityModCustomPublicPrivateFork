@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.CalPlayer;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class Valkyrie : ModProjectile, ILocalizedModType
     {

@@ -1,9 +1,9 @@
-﻿
+
 using Terraria;
 using Terraria.ID;
 using Terraria.WorldBuilding;
 
-namespace CalamityMod.World
+namespace CalamityModCustomPublicPrivateFork.World
 {
     public static class CustomConditions
     {

@@ -1,4 +1,4 @@
-﻿using CalamityMod.Dusts.Furniture;
+using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureProfaned
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureProfaned
 {
     public class ProfanedDresser : ModTile
     {

@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Tools
+namespace CalamityModCustomPublicPrivateFork.Items.Tools
 {
     [LegacyName("PurityAxe")]
     public class AxeofPurity : ModItem, ILocalizedModType

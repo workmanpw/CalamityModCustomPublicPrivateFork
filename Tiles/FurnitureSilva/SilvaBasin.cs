@@ -1,11 +1,11 @@
-﻿using CalamityMod.Dusts.Furniture;
+using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.FurnitureSilva
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSilva
 {
     public class SilvaBasin : ModTile
     {

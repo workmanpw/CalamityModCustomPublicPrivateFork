@@ -1,16 +1,16 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Ammo
+namespace CalamityModCustomPublicPrivateFork.Items.Ammo
 {
     public class HolyFireBullet : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Ammo";
-        public static readonly SoundStyle Explosion = new("CalamityMod/Sounds/Item/HolyFireBulletExplosion") { PitchVariance = 0.2f, Volume = 0.6f };
+        public static readonly SoundStyle Explosion = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HolyFireBulletExplosion") { PitchVariance = 0.2f, Volume = 0.6f };
         public override void SetStaticDefaults()
         {
             Item.ResearchUnlockCount = 99;

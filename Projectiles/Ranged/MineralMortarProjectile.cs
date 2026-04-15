@@ -1,5 +1,5 @@
-﻿using CalamityMod.Graphics.Primitives;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class MineralMortarProjectile : ModProjectile, ILocalizedModType
     {
@@ -158,7 +158,7 @@ namespace CalamityMod.Projectiles.Ranged
                     GeneralParticleHandler.SpawnParticle(boomMist);
                 }
 
-                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/MineralMortarExplode") { PitchVariance = 0.2f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MineralMortarExplode") { PitchVariance = 0.2f }, Projectile.Center);
             }
         }
 
@@ -173,7 +173,7 @@ namespace CalamityMod.Projectiles.Ranged
             float rotation = Projectile.rotation + MathHelper.PiOver2;
             Vector2 origin = texture.Size() * 0.5f;
 
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SwordSlashTexture"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SwordSlashTexture"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(TrailWidthFunction, ColorTrailFunction, (_,_) => Projectile.Size * 0.5f, shader: GameShaders.Misc["CalamityMod:TrailStreak"]), 50);
             if (CalamityClientConfig.Instance.Afterimages)
             {

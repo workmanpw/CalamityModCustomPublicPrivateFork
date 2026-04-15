@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class PulseTurret : ModProjectile, ILocalizedModType
     {
@@ -62,7 +62,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                 }
                 if (Projectile.ai[0] % 40f == 39f && Main.myPlayer == Projectile.owner)
                 {
-                    Texture2D standTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/PulseTurretStand").Value;
+                    Texture2D standTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/PulseTurretStand").Value;
                     Vector2 shootPosition = Projectile.Center - ((standTexture.Height / 2 + 6f) * Vector2.UnitY);
                     shootPosition += (Projectile.Size * 0.5f).RotatedBy(Projectile.rotation - MathHelper.ToRadians(18f) - (Projectile.spriteDirection == -1).ToInt() * MathHelper.Pi);
 
@@ -110,7 +110,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D standTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/PulseTurretStand").Value;
+            Texture2D standTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/PulseTurretStand").Value;
             Main.EntitySpriteDraw(Terraria.GameContent.TextureAssets.Projectile[Type].Value,
                              Projectile.Center - ((standTexture.Height / 2 + 6f) * Vector2.UnitY) - Main.screenPosition,
                              null,

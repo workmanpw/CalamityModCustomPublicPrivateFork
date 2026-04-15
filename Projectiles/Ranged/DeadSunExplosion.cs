@@ -1,17 +1,17 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Enums;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Pets;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class DeadSunExplosion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         public ref float ExplosionRadius => ref Projectile.ai[0];
         public Color color1 = Color.LightGreen;
@@ -42,7 +42,7 @@ namespace CalamityMod.Projectiles.Ranged
 
             for (int i = 0; i < 4; i++)
             {
-                Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, color1, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0, ExplosionRadius * 0.005f + 0.05f, 25);
+                Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, color1, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0, ExplosionRadius * 0.005f + 0.05f, 25);
                 GeneralParticleHandler.SpawnParticle(blastRing);
                 blastRing.DrawLayer = GeneralDrawLayer.AfterEverything;
             }

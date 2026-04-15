@@ -1,17 +1,17 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items.Armor.Bloodflare;
-using CalamityMod.Items.Armor.GodSlayer;
-using CalamityMod.Items.Armor.Silva;
-using CalamityMod.Items.Armor.Tarragon;
-using CalamityMod.Items.Materials;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Bloodflare;
+using CalamityModCustomPublicPrivateFork.Items.Armor.GodSlayer;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Silva;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Tarragon;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Auric
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Auric
 {
     [AutoloadEquip(EquipType.Body)]
     public class AuricTeslaBodyArmor : ModItem, ILocalizedModType
@@ -34,7 +34,7 @@ namespace CalamityMod.Items.Armor.Auric
             if (!Main.dedServ)
             {
                 // Add equip textures
-                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Auric/AuricTeslaBodyArmor_Back", EquipType.Back, this);
+                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Auric/AuricTeslaBodyArmor_Back", EquipType.Back, this);
             }
         }
 

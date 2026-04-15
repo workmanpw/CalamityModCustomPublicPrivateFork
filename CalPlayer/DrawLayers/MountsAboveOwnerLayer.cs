@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityMod.CalPlayer.DrawLayers
+namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
 {
     public class MountsAboveOwnerLayer : PlayerDrawLayer
     {

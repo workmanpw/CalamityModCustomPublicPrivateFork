@@ -1,20 +1,20 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class DyingSun : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";        
         public ref float Time => ref Projectile.ai[0];
         public ref float Radius => ref Projectile.ai[1];
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.DrawScreenCheckFluff[Type] = 10000;

@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon.Umbrella
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella
 {
     public class MagicBird : ModProjectile, ILocalizedModType
     {

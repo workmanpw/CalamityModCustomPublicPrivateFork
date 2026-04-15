@@ -1,6 +1,6 @@
-﻿using Terraria.Localization;
+using Terraria.Localization;
 
-namespace CalamityMod.Items.Fishing.SunkenSeaCatches
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches
 {
     public class SurfClam : BaseQuestFish
     {

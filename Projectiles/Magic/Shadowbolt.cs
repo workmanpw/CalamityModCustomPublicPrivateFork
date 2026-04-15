@@ -1,4 +1,4 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using System;
 using ReLogic.Content;
 using Terraria.Audio;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class Shadowbolt : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public int time = 0;
         public float platFade = 0;
         public float platRot = 0;
@@ -73,7 +73,7 @@ namespace CalamityMod.Projectiles.Magic
                 reflectionTimer--;
                 if (reflectionTimer <= 0)
                 {
-                    SoundStyle bounce = new("CalamityMod/Sounds/Item/ShadowboltReflect");
+                    SoundStyle bounce = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ShadowboltReflect");
                     SoundEngine.PlaySound(bounce with { Volume = 0.6f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f), MaxInstances = -1 }, platPosWall);
                     for (int i = 0; i < Main.maxNPCs; i++)
                         Projectile.localNPCImmunity[i] = 0;
@@ -116,10 +116,10 @@ namespace CalamityMod.Projectiles.Magic
                 float beamDist = Vector2.Distance(platPosWall, Projectile.Center);
                 if (beamDist <= 25 && !reflecting)
                 {
-                    Particle blastRing = new CustomPulse(platPosWall, Vector2.Zero, Color.Purple, "CalamityMod/Particles/SmallBloomRing", Vector2.One, Main.rand.NextFloat(-10, 10), 0.1f, 1.55f, 20, true);
+                    Particle blastRing = new CustomPulse(platPosWall, Vector2.Zero, Color.Purple, "CalamityModCustomPublicPrivateFork/Particles/SmallBloomRing", Vector2.One, Main.rand.NextFloat(-10, 10), 0.1f, 1.55f, 20, true);
                     GeneralParticleHandler.SpawnParticle(blastRing);
 
-                    SoundStyle wall = new("CalamityMod/Sounds/Item/ShadowboltWallHit");
+                    SoundStyle wall = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ShadowboltWallHit");
                     SoundEngine.PlaySound(wall with { Volume = 0.5f, Pitch = 0f, MaxInstances = -1 }, platPosWall);
                     reflecting = true;
                     Projectile.extraUpdates = 0;
@@ -154,9 +154,9 @@ namespace CalamityMod.Projectiles.Magic
                     Projectile.velocity = Projectile.velocity.RotatedByRandom(0.15f);
                     for (int i = 0; i < 2; i++)
                     {
-                        Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Indigo, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.3f, 0.75f, 12, true);
+                        Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Indigo, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.3f, 0.75f, 12, true);
                         GeneralParticleHandler.SpawnParticle(blastRing);
-                        Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.2f, 0.55f, 12, true);
+                        Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.2f, 0.55f, 12, true);
                         GeneralParticleHandler.SpawnParticle(blastRing2);
                     }
                     for (int i = 0; i < 6; i++)
@@ -209,7 +209,7 @@ namespace CalamityMod.Projectiles.Magic
         {
             if (targetCenter != Vector2.Zero && platFade > 0)
             {
-                Texture2D pTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/ShadowPlatform").Value;
+                Texture2D pTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/ShadowPlatform").Value;
 
                 for (int i = 0; i < 5; i++)
                 {
@@ -226,7 +226,7 @@ namespace CalamityMod.Projectiles.Magic
 
             if (!reflecting && time >= 22 && !hasReboundOffPlat)
             {
-                Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark");
+                Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark");
                 for (int i = 0; i < 5; i++)
                 {
                     Main.EntitySpriteDraw(tex.Value, Projectile.Center - Main.screenPosition - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 15, null, Color.White with { A = 0 } * 0.7f, Projectile.velocity.ToRotation() + MathHelper.ToRadians(90f), tex.Size() * 0.5f, new Vector2(0.4f, 1f) * (i * 0.3f) * 0.05f * (hasReboundOffPlat ? 1.1f : 0.5f), SpriteEffects.None);
@@ -235,7 +235,7 @@ namespace CalamityMod.Projectiles.Magic
 
             if (reflecting)
             {
-                Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+                Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
 
                 float randSize = Main.rand.NextFloat(0.8f, 1.2f);
                 Main.EntitySpriteDraw(rechargeTexture, platPosWall - Main.screenPosition, null, Color.Purple with { A = 0 }, Projectile.rotation, rechargeTexture.Size() * 0.5f, 0.65f * Utils.GetLerpValue(-25, 20, reflectionTimer, true) * randSize, SpriteEffects.None, 0);

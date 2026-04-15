@@ -1,10 +1,10 @@
-﻿using CalamityMod.Balancing;
-using CalamityMod.DataStructures;
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.DamageOverTime
+namespace CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime
 {
     public class ShellfishClaps : ModBuff
     {

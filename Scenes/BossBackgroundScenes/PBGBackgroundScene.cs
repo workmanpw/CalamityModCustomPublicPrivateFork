@@ -1,8 +1,8 @@
-﻿using CalamityMod.NPCs.PlaguebringerGoliath;
+using CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class PBGBackgroundScene : ModSceneEffect
     {

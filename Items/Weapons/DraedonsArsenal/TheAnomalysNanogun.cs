@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.CustomRecipes;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.DraedonsArsenal;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.CustomRecipes;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -12,14 +12,14 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal
 {
     public class TheAnomalysNanogun : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.DraedonsArsenal";
-        public static readonly SoundStyle PlasmaChargeSFX = new("CalamityMod/Sounds/Item/AnomalysNanogunPlasmaCharge");
-        public static readonly SoundStyle MPFBShotSFX = new("CalamityMod/Sounds/Item/AnomalysNanogunMPFBShot");
-        public static readonly SoundStyle PlasmaShotSFX = new("CalamityMod/Sounds/Item/AnomalysNanogunPlasmaShot");
+        public static readonly SoundStyle PlasmaChargeSFX = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AnomalysNanogunPlasmaCharge");
+        public static readonly SoundStyle MPFBShotSFX = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AnomalysNanogunMPFBShot");
+        public static readonly SoundStyle PlasmaShotSFX = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AnomalysNanogunPlasmaShot");
         public bool PlasmaChargeSelected = true;
 
         public override void SetDefaults()

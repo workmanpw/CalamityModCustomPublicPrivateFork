@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea
 {
     public class SeaPrism : ModItem, ILocalizedModType
     {

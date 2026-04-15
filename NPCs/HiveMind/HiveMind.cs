@@ -1,21 +1,21 @@
-﻿using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Events;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Armor.Vanity;
-using CalamityMod.Items.LoreItems;
-using CalamityMod.Items.Pets;
-using CalamityMod.Items.Placeables.Furniture.BossRelics;
-using CalamityMod.Items.Placeables.Furniture.Paintings;
-using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Items.TreasureBags;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.LoreItems;
+using CalamityModCustomPublicPrivateFork.Items.Pets;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -36,7 +36,7 @@ using Terraria.ModLoader;
 * 6 = deceleration
 */
 
-namespace CalamityMod.NPCs.HiveMind
+namespace CalamityModCustomPublicPrivateFork.NPCs.HiveMind
 {
     public class HiveMind : ModNPC
     {
@@ -45,11 +45,11 @@ namespace CalamityMod.NPCs.HiveMind
 
         public override void Load()
         {
-            string normalIconPath = "CalamityMod/NPCs/HiveMind/HiveMind_Head_Boss";
-            string phase2IconPath = "CalamityMod/NPCs/HiveMind/HiveMindP2_Head_Boss";
+            string normalIconPath = "CalamityModCustomPublicPrivateFork/NPCs/HiveMind/HiveMind_Head_Boss";
+            string phase2IconPath = "CalamityModCustomPublicPrivateFork/NPCs/HiveMind/HiveMindP2_Head_Boss";
 
-            normalIconIndex = CalamityMod.Instance.AddBossHeadTexture(normalIconPath, -1);
-            phase2IconIndex = CalamityMod.Instance.AddBossHeadTexture(phase2IconPath, -1);
+            normalIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(normalIconPath, -1);
+            phase2IconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(phase2IconPath, -1);
         }
 
         // This block of values can be modified in SetDefaults() based on difficulty mode or something
@@ -91,8 +91,8 @@ namespace CalamityMod.NPCs.HiveMind
 
         private bool IsPhaseTwo => (NPC.life / (float)NPC.lifeMax) < 0.8f;
 
-        public static readonly SoundStyle RoarSound = new("CalamityMod/Sounds/Custom/HiveMindRoar");
-        public static readonly SoundStyle FastRoarSound = new("CalamityMod/Sounds/Custom/HiveMindRoarFast");
+        public static readonly SoundStyle RoarSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/HiveMindRoar");
+        public static readonly SoundStyle FastRoarSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/HiveMindRoarFast");
 
         public static Asset<Texture2D> Phase2Texture;
 
@@ -207,7 +207,7 @@ namespace CalamityMod.NPCs.HiveMind
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundCorruption,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.HiveMind")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.HiveMind")
             });
         }
 
@@ -1308,7 +1308,7 @@ namespace CalamityMod.NPCs.HiveMind
             // If neither The Hive Mind nor The Perforator Hive have been killed yet, notify players of Aerialite Ore
             if (!DownedBossSystem.downedHiveMind && !DownedBossSystem.downedPerforator)
             {
-                string key = "Mods.CalamityMod.Status.Progression.SkyOreText";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.SkyOreText";
                 Color messageColor = Color.Cyan;
                 AerialiteOreGen.Enchant();
 

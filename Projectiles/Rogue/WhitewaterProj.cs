@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class WhitewaterProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/Whitewater";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/Whitewater";
         public ref float time => ref Projectile.ai[0];
 
         public bool returning = false;
@@ -191,7 +191,7 @@ namespace CalamityMod.Projectiles.Rogue
 
             if (empowered && !shattered)
             {
-                SoundStyle sound = new("CalamityMod/Sounds/Item/BreakAndReform");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/BreakAndReform");
                 SoundEngine.PlaySound(sound with { Volume = 0.4f }, Projectile.Center);
 
                 int points = Projectile.Calamity().stealthStrike ? 6 : 4;
@@ -216,8 +216,8 @@ namespace CalamityMod.Projectiles.Rogue
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D rTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
-            Texture2D wTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/HalfStar").Value;
+            Texture2D rTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D wTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HalfStar").Value;
             Color drawColor2 = Color.LightBlue;
 
             Main.EntitySpriteDraw(rTexture, Projectile.Center - Main.screenPosition, null, drawColor2 with { A = 0 } * fade * 0.5f, Projectile.rotation, rTexture.Size() * 0.5f, 0.45f * randSize, SpriteEffects.None, 0);

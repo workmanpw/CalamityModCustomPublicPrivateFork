@@ -1,13 +1,13 @@
-﻿using System.IO;
-using CalamityMod.Events;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Leviathan
+namespace CalamityModCustomPublicPrivateFork.NPCs.Leviathan
 {
     public class AnahitasIceShield : ModNPC
     {

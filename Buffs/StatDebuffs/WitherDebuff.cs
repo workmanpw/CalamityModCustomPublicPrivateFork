@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatDebuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs
 {
     public class WitherDebuff : ModBuff
     {

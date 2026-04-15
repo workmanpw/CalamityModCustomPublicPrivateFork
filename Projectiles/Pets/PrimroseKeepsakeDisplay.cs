@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Pets
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 {
     public class PrimroseKeepsakeDisplay : ModProjectile, ILocalizedModType
     {

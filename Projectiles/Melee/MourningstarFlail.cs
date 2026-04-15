@@ -1,10 +1,10 @@
-﻿using CalamityMod.Projectiles.BaseProjectiles;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class MourningstarFlail : BaseFlailProjectile, ILocalizedModType
     {

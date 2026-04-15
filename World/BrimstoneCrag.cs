@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Schematics;
-using CalamityMod.Tiles.Crags;
-using CalamityMod.Tiles.Crags.Lily;
-using CalamityMod.Tiles.Crags.Spike;
-using CalamityMod.Tiles.Crags.Tree;
-using CalamityMod.Tiles.Ores;
-using CalamityMod.Walls.UnsafeWalls;
+using CalamityModCustomPublicPrivateFork.Schematics;
+using CalamityModCustomPublicPrivateFork.Tiles.Crags;
+using CalamityModCustomPublicPrivateFork.Tiles.Crags.Lily;
+using CalamityModCustomPublicPrivateFork.Tiles.Crags.Spike;
+using CalamityModCustomPublicPrivateFork.Tiles.Crags.Tree;
+using CalamityModCustomPublicPrivateFork.Tiles.Ores;
+using CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -15,7 +15,7 @@ using Terraria.ModLoader;
 using Terraria.Utilities;
 using Terraria.WorldBuilding;
 
-namespace CalamityMod.World
+namespace CalamityModCustomPublicPrivateFork.World
 {
     public class BrimstoneCrag
     {

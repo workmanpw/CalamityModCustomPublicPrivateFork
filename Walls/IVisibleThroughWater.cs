@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Terraria.Localization;
 using Terraria.Map;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Walls
+namespace CalamityModCustomPublicPrivateFork.Walls
 {
     /// <summary>
     /// Walls that implement this interface may be revealed on the map through
@@ -40,7 +40,7 @@ namespace CalamityMod.Walls
 
         public static void InitializeWaterMapEntryLookups()
         {
-            foreach (var visibleThroughWater in CalamityMod.Instance.GetContent<IVisibleThroughWater>())
+            foreach (var visibleThroughWater in ModContent.GetInstance<CalamityMod>().GetContent<IVisibleThroughWater>())
             {
                 AssertIsWall(visibleThroughWater, out var wall);
                 visibleThroughWater.WaterMapEntry = MapHelper.wallLookup[wall.Type] + 1;

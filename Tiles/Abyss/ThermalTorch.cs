@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using CalamityMod.Graphics;
+using System.Linq;
+using CalamityModCustomPublicPrivateFork.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Abyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
 {
     public class ThermalTorch : ModTile
     {
@@ -77,7 +77,7 @@ namespace CalamityMod.Tiles.Abyss
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Abyss/ThermalTorchFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Abyss/ThermalTorchFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j, 2);
         }
 

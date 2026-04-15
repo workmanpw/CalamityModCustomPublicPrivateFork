@@ -1,10 +1,10 @@
-﻿using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Materials
+namespace CalamityModCustomPublicPrivateFork.Items.Materials
 {
     public class RuinousSoul : ModItem, ILocalizedModType
     {

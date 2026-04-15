@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Mounts
+namespace CalamityModCustomPublicPrivateFork.Items.Mounts
 {
     [LegacyName("SquishyBeanMount")]
     public class SuspiciousLookingJellyBean : ModItem, ILocalizedModType

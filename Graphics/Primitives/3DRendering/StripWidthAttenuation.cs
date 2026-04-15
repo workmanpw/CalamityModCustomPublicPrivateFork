@@ -1,4 +1,4 @@
-﻿namespace CalamityMod.Graphics.Primitives;
+namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 
 /// <summary>
 /// Controls how strip width is attenuated along the path.

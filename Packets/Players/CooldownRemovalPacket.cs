@@ -1,10 +1,10 @@
-﻿using System.IO;
-using CalamityMod.CalPlayer;
-using CalamityMod.Cooldowns;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class CooldownRemovalPacket : CalamityPacket
     {

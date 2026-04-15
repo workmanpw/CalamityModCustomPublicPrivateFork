@@ -1,18 +1,18 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class ShrimpPlasmaMissile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public ref float time => ref Projectile.ai[0];
         public NPC closestNPC;
         public Vector2 offset = Vector2.Zero;
@@ -50,7 +50,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             {
                 if (Utils.Distance(Owner.Center, Projectile.Center) < 1400)
                 {
-                    Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity * -0.01f, "CalamityMod/Particles/BloomCircle", false, 12, 0.18f, Effects.ArsenalEffects.ArsenalPlasmaColor, new Vector2(0.3f, 1), true, true, 0, false, false, 0.3f, glowCenterScale: 0.5f);
+                    Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity * -0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 12, 0.18f, Effects.ArsenalEffects.ArsenalPlasmaColor, new Vector2(0.3f, 1), true, true, 0, false, false, 0.3f, glowCenterScale: 0.5f);
                     GeneralParticleHandler.SpawnParticle(spark);
                 }
                 if (Projectile.ai[2] == 0)
@@ -132,17 +132,17 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                 dust.fadeIn = (noFall ? 4.5f * Projectile.scale : 1f);
             }
             SoundEngine.PlaySound(AqueousHunterDrone.Hit with { Volume = 0.4f * Projectile.scale, Pitch = Main.rand.NextFloat(-0.1f, 0.1f), MaxInstances = 30 }, Projectile.Center);
-            Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalPlasmaColor * 0.95f, "CalamityMod/Particles/SmokeExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.1f * Projectile.scale, 14);
+            Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalPlasmaColor * 0.95f, "CalamityModCustomPublicPrivateFork/Particles/SmokeExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.1f * Projectile.scale, 14);
             GeneralParticleHandler.SpawnParticle(bolt2);
 
-            Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalPlasmaColor * 0.75f, "CalamityMod/Particles/WaterFoam", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.77f * Projectile.scale, (int)(10 * lifetimeMult));
+            Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalPlasmaColor * 0.75f, "CalamityModCustomPublicPrivateFork/Particles/WaterFoam", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.77f * Projectile.scale, (int)(10 * lifetimeMult));
             GeneralParticleHandler.SpawnParticle(bolt3);
 
-            Particle spark = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, (int)(17 * lifetimeMult), 0.6f * Projectile.scale, Effects.ArsenalEffects.ArsenalPlasmaColor, new Vector2(1, 1), true, true, 0, false, false);
+            Particle spark = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, (int)(17 * lifetimeMult), 0.6f * Projectile.scale, Effects.ArsenalEffects.ArsenalPlasmaColor, new Vector2(1, 1), true, true, 0, false, false);
             GeneralParticleHandler.SpawnParticle(spark);
             if (hitTile)
             {
-                Particle spark2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, (int)(20 * lifetimeMult), 0.6f * Projectile.scale * lifetimeMult, Effects.ArsenalEffects.ArsenalPlasmaColor * 0.35f, new Vector2(1, 1), true, true, 0, false, false, glowOpacity: 0.35f);
+                Particle spark2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, (int)(20 * lifetimeMult), 0.6f * Projectile.scale * lifetimeMult, Effects.ArsenalEffects.ArsenalPlasmaColor * 0.35f, new Vector2(1, 1), true, true, 0, false, false, glowOpacity: 0.35f);
                 GeneralParticleHandler.SpawnParticle(spark2);
             }
             if (Projectile.scale > 1)

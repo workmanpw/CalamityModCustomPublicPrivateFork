@@ -1,7 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria.Localization;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class RaiderBoost : CooldownHandler
     {
@@ -10,7 +10,7 @@ namespace CalamityMod.Cooldowns
         public override bool ShouldDisplay => true;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
 
-        public override string Texture => "CalamityMod/Cooldowns/" + skinTexture;
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/" + skinTexture;
         public override Color OutlineColor => outlineColor;
         public override Color CooldownStartColor => Color.Lerp(cooldownColorStart, cooldownColorEnd, 1 - instance.Completion);
         public override Color CooldownEndColor => Color.Lerp(cooldownColorStart, cooldownColorEnd, 1 - instance.Completion);

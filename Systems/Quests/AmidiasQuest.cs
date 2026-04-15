@@ -1,4 +1,4 @@
-﻿namespace CalamityMod.Systems.Quests
+namespace CalamityModCustomPublicPrivateFork.Systems.Quests
 {
     /// <summary>
     /// The different progression points of Amidias' Quest.

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using CalamityMod.CalPlayer;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Tools
+namespace CalamityModCustomPublicPrivateFork.Items.Tools
 {
     public class MomentumCapacitor : ModItem, ILocalizedModType
     {

@@ -1,5 +1,5 @@
-﻿using CalamityMod.Graphics.Primitives;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,11 +7,11 @@ using Terraria.Audio;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.Items.Weapons.Ranged.Scorpio;
-using static CalamityMod.Projectiles.Ranged.ScorpioHoldout;
+using static CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged.Scorpio;
+using static CalamityModCustomPublicPrivateFork.Projectiles.Ranged.ScorpioHoldout;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class ScorpioRocket : ModProjectile, ILocalizedModType
     {
@@ -161,7 +161,7 @@ namespace CalamityMod.Projectiles.Ranged
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D glowTexture = Request<Texture2D>("CalamityMod/Projectiles/Ranged/ScorpioRocket_Glow").Value;
+            Texture2D glowTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/ScorpioRocket_Glow").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Rectangle frame = texture.Frame(1, Main.projFrames[Type], 0, Projectile.frame);
             Color drawColor = Projectile.GetAlpha(lightColor);
@@ -171,7 +171,7 @@ namespace CalamityMod.Projectiles.Ranged
             if (Time >= TimeToLaunch)
             {
                 // 29FEB2024: Ozzatron: hopefully ported this correctly to the new prim system by Toasty
-                GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
+                GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
                 PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(TrailWidthFunction, TrailColorFunction, (_,_) => Projectile.Size * 0.5f, smoothen: false, shader: GameShaders.Misc["CalamityMod:TrailStreak"]), 25);
             }
 

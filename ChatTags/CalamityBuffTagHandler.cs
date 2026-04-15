@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 using ReLogic.Graphics;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI.Chat;
 
-namespace CalamityMod.ChatTags
+namespace CalamityModCustomPublicPrivateFork.ChatTags
 {
     public sealed class CalamityBuffTagHandler : AbstractTagHandler<CalamityBuffTagHandler>
     {

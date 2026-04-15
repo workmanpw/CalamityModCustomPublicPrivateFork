@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,15 +9,15 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class CauldronHoldout : ModProjectile, ILocalizedModType
     {
         public override LocalizedText DisplayName => GetItemName<TheCauldron>();
 
-        public override string Texture => "CalamityMod/Items/Weapons/Magic/TheCauldron";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/TheCauldron";
 
         public static int FireRate = 60;
 

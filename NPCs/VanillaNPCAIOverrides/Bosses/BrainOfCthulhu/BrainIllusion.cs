@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -12,7 +12,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
 
 [AutoloadBossHead]
 public class BrainIllusion : ModNPC, ILocalizedModType
@@ -31,7 +31,7 @@ public class BrainIllusion : ModNPC, ILocalizedModType
 
     ref float TeleportTime => ref NPC.ai[3];
 
-    private Vector2 OldPos = Vector2.zeroVector;
+    private Vector2 OldPos = Vector2.Zero;
 
     public override void SetStaticDefaults()
     {

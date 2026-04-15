@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatBuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatBuffs
 {
     public class GraxBoost : ModBuff
     {

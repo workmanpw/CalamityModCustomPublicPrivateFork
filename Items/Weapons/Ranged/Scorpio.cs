@@ -1,4 +1,4 @@
-﻿using CalamityMod.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     [LegacyName("Scorpion")]
     public class Scorpio : ModItem, ILocalizedModType
@@ -33,9 +33,9 @@ namespace CalamityMod.Items.Weapons.Ranged
 
         #endregion
 
-        public static readonly SoundStyle RocketShoot = new("CalamityMod/Sounds/Item/ScorpioShot") { Volume = 0.45f };
-        public static readonly SoundStyle RocketHit = new("CalamityMod/Sounds/Item/ScorpioHit") { Volume = 0.35f };
-        public static readonly SoundStyle NukeHit = new("CalamityMod/Sounds/Item/ScorpioNukeHit") { Volume = 0.6f };
+        public static readonly SoundStyle RocketShoot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ScorpioShot") { Volume = 0.45f };
+        public static readonly SoundStyle RocketHit = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ScorpioHit") { Volume = 0.35f };
+        public static readonly SoundStyle NukeHit = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ScorpioNukeHit") { Volume = 0.6f };
 
         public override void SetDefaults()
         {
@@ -55,7 +55,7 @@ namespace CalamityMod.Items.Weapons.Ranged
             Item.value = CalamityGlobalItem.RarityRedBuyPrice;
             Item.rare = ItemRarityID.Red;
             Item.useStyle = ItemUseStyleID.Shoot;
-            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/DudFire") with { Volume = .4f, Pitch = -.9f, PitchVariance = 0.1f };
+            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire") with { Volume = .4f, Pitch = -.9f, PitchVariance = 0.1f };
         }
 
         public override bool CanUseItem(Player player) => player.ownedProjectileCounts[Item.shoot] == 0;
@@ -77,7 +77,7 @@ namespace CalamityMod.Items.Weapons.Ranged
             return false;
         }
 
-        public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI) => Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, Request<Texture2D>("CalamityMod/Items/Weapons/Ranged/Scorpio_Glow").Value);
+        public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI) => Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/Scorpio_Glow").Value);
 
         public override void AddRecipes()
         {

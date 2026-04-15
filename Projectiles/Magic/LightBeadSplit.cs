@@ -1,13 +1,13 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class LightBeadSplit : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/Magic/LightBead";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/LightBead";
 
         public override void SetDefaults()
         {

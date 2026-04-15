@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Dyes
+namespace CalamityModCustomPublicPrivateFork.Items.Dyes
 {
     public class AcidRainDye : BaseDye
     {
         public override ArmorShaderData ShaderDataToBind => new ArmorShaderData(Mod.Assets.Request<Effect>("Effects/Dyes/AcidRainDyeShader"), "DyePass").
-            UseColor(new Color(20, 117, 70)).UseSecondaryColor(new Color(208, 254, 39)).UseImage(Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Bark"));
+            UseColor(new Color(20, 117, 70)).UseSecondaryColor(new Color(208, 254, 39)).UseImage(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Bark"));
         public override void SafeSetStaticDefaults()
         {
             Item.ResearchUnlockCount = 3;

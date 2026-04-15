@@ -1,11 +1,11 @@
-﻿using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityMod.CalPlayer.DrawLayers
+namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
 {
     public class AndromedaMechLayer : PlayerDrawLayer
     {
@@ -56,7 +56,7 @@ namespace CalamityMod.CalPlayer.DrawLayers
             switch (drawPlayer.Calamity().andromedaState)
             {
                 case AndromedaPlayerState.SpecialAttack:
-                    Texture2D dashTexture = ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/AndromedaBolt").Value;
+                    Texture2D dashTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/AndromedaBolt").Value;
                     Rectangle frame = dashTexture.Frame(1, 4, 0, robotEntityInstance.RightIconCooldown / 4 % 4);
 
                     DrawData drawData = new DrawData(dashTexture,
@@ -90,7 +90,7 @@ namespace CalamityMod.CalPlayer.DrawLayers
                     drawInfo.DrawDataCache.Add(drawData);
                     break;
                 case AndromedaPlayerState.SmallRobot:
-                    robotTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaSmall").Value;
+                    robotTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaSmall").Value;
                     frame = new Rectangle(0, robotEntityInstance.CurrentFrame * 54, robotTexture.Width, robotTexture.Height / 21);
                     drawData = new DrawData(robotTexture,
                                      drawPlayer.Center + new Vector2(drawPlayer.direction == 1 ? -24 : -10, drawPlayer.gravDir * -8f) - Main.screenPosition,

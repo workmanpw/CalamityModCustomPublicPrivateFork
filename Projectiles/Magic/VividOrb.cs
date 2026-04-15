@@ -1,10 +1,10 @@
-﻿using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Magic
+using Terraria.ModLoader;
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class VividOrb : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {

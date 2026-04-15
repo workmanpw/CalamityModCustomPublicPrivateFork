@@ -1,6 +1,6 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items.Materials;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,7 +8,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories.Wings
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Wings
 {
     [AutoloadEquip(EquipType.Wings)]
     public class TarragonWings : BaseWings

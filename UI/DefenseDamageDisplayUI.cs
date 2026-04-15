@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
@@ -6,7 +6,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI.Chat;
 
-namespace CalamityMod.UI
+namespace CalamityModCustomPublicPrivateFork.UI
 {
     public static class DefenseDamageDisplayUI
     {
@@ -19,7 +19,7 @@ namespace CalamityMod.UI
                 return;
 
             string defenseDamageText = (-defenseDamage).ToString();
-            Texture2D defenseDamageIcon = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/DefenseDamage").Value;
+            Texture2D defenseDamageIcon = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/DefenseDamage").Value;
             Vector2 defenseDamageIconCenter = new Vector2(Main.screenWidth - Main.UIScale * 328f, Main.UIScale * 16f) + defenseDamageIcon.Size() * 0.5f;
             Rectangle defenseDamageIconArea = Utils.CenteredRectangle(defenseDamageIconCenter, defenseDamageIcon.Size() * Main.UIScale);
             Vector2 defenseDamageTextArea = FontAssets.MouseText.Value.MeasureString(defenseDamageText);
@@ -27,7 +27,7 @@ namespace CalamityMod.UI
             Rectangle mouseArea = new Rectangle(Main.mouseX, Main.mouseY, 2, 2);
             bool hoveringOverIcon = mouseArea.Intersects(defenseDamageIconArea);
             if (hoveringOverIcon)
-                defenseDamageIcon = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/DefenseDamageHover").Value;
+                defenseDamageIcon = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/DefenseDamageHover").Value;
 
             // Draw the icon.
             spriteBatch.Draw(defenseDamageIcon, defenseDamageIconCenter, null, Color.White, 0f, defenseDamageIcon.Size() * 0.5f, Main.UIScale, 0, 0f);

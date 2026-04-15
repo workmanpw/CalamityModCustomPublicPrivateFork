@@ -1,11 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Abyss.AbyssAmbient
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient
 {
     public class MassiveRarePearl : ModTile
     {

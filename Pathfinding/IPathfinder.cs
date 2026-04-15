@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Pathfinding.Movements;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Pathfinding.Movements;
 
-namespace CalamityMod.Pathfinding
+namespace CalamityModCustomPublicPrivateFork.Pathfinding
 {
     /// <summary>
     /// Defines an interface for an object that can use pathfinding.

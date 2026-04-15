@@ -1,12 +1,12 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Crags;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Furniture.CraftingStations
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.CraftingStations
 {
     [LegacyName("SCalAltarItem")]
     public class AltarOfTheAccursedItem : ModItem, ILocalizedModType

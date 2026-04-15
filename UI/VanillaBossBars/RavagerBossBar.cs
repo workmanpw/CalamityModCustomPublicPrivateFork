@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using CalamityMod.NPCs.Ravager;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.UI.VanillaBossBars
+namespace CalamityModCustomPublicPrivateFork.UI.VanillaBossBars
 {
     public class RavagerBossBar : ModBossBar
     {

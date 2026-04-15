@@ -1,8 +1,8 @@
-﻿using CalamityMod.Buffs.Summon;
-using CalamityMod.Items.Materials;
-using CalamityMod.Packets;
-using CalamityMod.Projectiles.Summon;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Weapons.Summon
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
 {
     public class ViridVanguard : ModItem, ILocalizedModType
     {
@@ -53,7 +53,7 @@ namespace CalamityMod.Items.Weapons.Summon
         {
             if (BladeOutline == null)
             {
-                var texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/ViridVanguardBlade").Value;
+                var texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/ViridVanguardBlade").Value;
                 BladeOutline = new Texture2D(Main.graphics.GraphicsDevice, texture.Width, texture.Height);
 
                 var BaseArray = new Color[BladeOutline.Width * BladeOutline.Height];

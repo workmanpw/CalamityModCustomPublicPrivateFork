@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class SylvRay : ModProjectile, ILocalizedModType
     {
@@ -34,7 +34,7 @@ namespace CalamityMod.Projectiles.Magic
 
         public new string LocalizationCategory => "Projectiles.Magic";
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void SetStaticDefaults()
         {
@@ -179,7 +179,7 @@ namespace CalamityMod.Projectiles.Magic
             Vector2 glowScale = new Vector2(1f + glowBump * 0.8f, 1f) * glowBump;
 
             Vector2 startingPosition = GlowCenter - Main.screenPosition;
-            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BloomCirclePinpoint").Value;
+            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BloomCirclePinpoint").Value;
             Main.spriteBatch.Draw(lightTexture, startingPosition, null, ColorFunction(0f,Vector2.Zero) with { A = 0 }, glowRotation, lightTexture.Size() * 0.5f, glowScale, 0, 0f);
             Main.spriteBatch.Draw(lightTexture, startingPosition, null, ColorFunction(0f, Vector2.Zero) with { A = 0 }, glowRotation, lightTexture.Size() * 0.5f, glowScale * 0.4f, 0, 0f);
         }
@@ -189,7 +189,7 @@ namespace CalamityMod.Projectiles.Magic
             RenderFrontGlow();
 
             MiscShaderData rayShader = GameShaders.Misc["CalamityMod:SylvestaffProjectile"];
-            rayShader.SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
+            rayShader.SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
 
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new PrimitiveSettings(WidthFunction, ColorFunction, OffsetFunction, pixelate: false, shader: rayShader), 32);
             return false;

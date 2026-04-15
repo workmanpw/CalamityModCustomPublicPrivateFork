@@ -1,11 +1,11 @@
-﻿using CalamityMod.Dusts.Furniture;
+using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ModLoader;
-namespace CalamityMod.Tiles.FurnitureBotanic
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureBotanic
 {
     public class BotanicBench : ModTile
     {

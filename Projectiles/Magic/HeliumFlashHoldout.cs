@@ -1,6 +1,6 @@
-﻿using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -10,7 +10,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     internal class HeliumFlashHoldout : BaseGunHoldoutProjectile
     {
@@ -18,7 +18,7 @@ namespace CalamityMod.Projectiles.Magic
         public override float MaxOffsetLengthFromArm => 60f;
         public override float BaseOffsetY => 0f;
         public override float RecoilResolveSpeed => 0.4f;
-        public override string Texture => "CalamityMod/Projectiles/Magic/HeliumFlashEmpty";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/HeliumFlashEmpty";
         public override Vector2 GunTipPosition => base.GunTipPosition - Vector2.UnitX.RotatedBy(Projectile.rotation) * 26;
         
         private ref float CurrentChargingFrames => ref Projectile.ai[0];
@@ -71,9 +71,9 @@ namespace CalamityMod.Projectiles.Magic
                         if (Main.myPlayer == Projectile.owner)
                             Projectile.NewProjectile(Projectile.GetSource_FromThis(), GunTipPosition, shootVelocity, ModContent.ProjectileType<VolatileStarcore>(), Projectile.damage, Projectile.knockBack, Projectile.owner, 0);
                         
-                        Particle pulse = new CustomPulse(GunTipPosition, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.05f, 14);
+                        Particle pulse = new CustomPulse(GunTipPosition, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.05f, 14);
                         GeneralParticleHandler.SpawnParticle(pulse);
-                        Particle pulse2 = new CustomPulse(GunTipPosition, Vector2.Zero, Color.Red, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.08f, 14);
+                        Particle pulse2 = new CustomPulse(GunTipPosition, Vector2.Zero, Color.Red, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.08f, 14);
                         GeneralParticleHandler.SpawnParticle(pulse2);
 
                         for (int i = 0; i < 17; i++)
@@ -105,7 +105,7 @@ namespace CalamityMod.Projectiles.Magic
                     }
                     else
                     {
-                        SoundStyle fire = new("CalamityMod/Sounds/Item/HeliumFlashDudFire");
+                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashDudFire");
                         SoundEngine.PlaySound(fire with { Volume = 0.4f, Pitch = 0.3f }, Projectile.Center);
                         for (int i = 0; i < 12; i++)
                         {
@@ -154,7 +154,7 @@ namespace CalamityMod.Projectiles.Magic
                 // Full charge effects
                 if (CurrentChargingFrames == HeliumFlash.FullChargeFrames)
                 {
-                    SoundStyle fire = new("CalamityMod/Sounds/Item/HeliumFlashReady");
+                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashReady");
                     SoundEngine.PlaySound(fire with { Volume = 1f, Pitch = 0f }, Projectile.Center);
                     for (int i = 0; i < 18; i++)
                     {
@@ -174,7 +174,7 @@ namespace CalamityMod.Projectiles.Magic
                 }
                 if (Projectile.ai[2] == 1 && Projectile.timeLeft == (int)(HeliumFlash.AftershotCooldownFrames * 1.1f))
                 {
-                    SoundStyle fire = new("CalamityMod/Sounds/Item/HeliumFlashSteamRelease");
+                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashSteamRelease");
                     SoundEngine.PlaySound(fire with { Volume = 0.6f, Pitch = 0f }, Projectile.Center);
                     for (int b = 0; b < 12; b++)
                     {
@@ -241,11 +241,11 @@ namespace CalamityMod.Projectiles.Magic
                 drawPosition += Main.rand.NextVector2Circular(rumble / 25f, rumble / 25f);
             }
 
-            Texture2D orbTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/VolatileStarcore").Value;
+            Texture2D orbTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/VolatileStarcore").Value;
             Rectangle frame = orbTexture.Frame(1, 6, 0, starcoreFrame);
             Vector2 origin = frame.Size() * 0.5f;
 
-            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
 
             float bonusScale = 1;
             if (CurrentChargingFrames >= HeliumFlash.FullChargeFrames)

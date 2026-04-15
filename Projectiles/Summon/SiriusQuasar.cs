@@ -1,18 +1,18 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class SiriusQuasar : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         bool hasExploded = false;
         public override void SetStaticDefaults()
@@ -79,7 +79,7 @@ namespace CalamityMod.Projectiles.Summon
             if (!hasExploded && !target.Calamity().IsArmored())
             {
                 hasExploded = true;
-                SoundStyle fire = new("CalamityMod/Sounds/Item/ScorpioNukeHit");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ScorpioNukeHit");
                 SoundEngine.PlaySound(fire with { Volume = 0.75f, Pitch = 0.6f, PitchVariance = 0.2f }, Projectile.Center);
                 float numberOfDusts = 156f;
                 float rotFactor = 360f / numberOfDusts;
@@ -91,7 +91,7 @@ namespace CalamityMod.Projectiles.Summon
                     Vector2 velOffset = new Vector2(40.8f, 10.5f).RotatedBy(rot);
                     if (i % 2 == 0)
                     {
-                        Particle orb = new CustomSpark(Projectile.Center + offset, velOffset * intensity * 0.7f, "CalamityMod/Particles/Sparkle", false, (int)(40 * intensity), intensity, Main.rand.NextBool(3) ? Color.DarkSlateBlue : Color.SlateBlue, new Vector2(1f, 2f), true, true);
+                        Particle orb = new CustomSpark(Projectile.Center + offset, velOffset * intensity * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/Sparkle", false, (int)(40 * intensity), intensity, Main.rand.NextBool(3) ? Color.DarkSlateBlue : Color.SlateBlue, new Vector2(1f, 2f), true, true);
                         GeneralParticleHandler.SpawnParticle(orb);
                     }
                     else
@@ -104,9 +104,9 @@ namespace CalamityMod.Projectiles.Summon
                     }
                 }
 
-                Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DarkSlateBlue, "CalamityMod/Particles/BloomRing", new Vector2(0.6f, 0.8f), Projectile.velocity.ToRotation(), 0f, 3f, 25);
+                Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DarkSlateBlue, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(0.6f, 0.8f), Projectile.velocity.ToRotation(), 0f, 3f, 25);
                 GeneralParticleHandler.SpawnParticle(bolt2);
-                Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SlateBlue, "CalamityMod/Particles/BloomRing", new Vector2(0.3f, 0.7f), Projectile.velocity.ToRotation(), 0f, 4f, 25);
+                Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SlateBlue, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(0.3f, 0.7f), Projectile.velocity.ToRotation(), 0f, 4f, 25);
                 GeneralParticleHandler.SpawnParticle(bolt3);
             }
         }

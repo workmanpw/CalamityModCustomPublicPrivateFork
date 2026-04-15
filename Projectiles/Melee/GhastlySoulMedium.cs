@@ -1,12 +1,12 @@
-﻿using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class GhastlySoulMedium : ModProjectile, ILocalizedModType
     {

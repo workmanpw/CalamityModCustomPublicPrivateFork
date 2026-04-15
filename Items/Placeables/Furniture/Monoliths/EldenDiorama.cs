@@ -1,10 +1,10 @@
-﻿using CalamityMod.ForegroundDrawing.LoopingTextures;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.Monoliths;
+using CalamityModCustomPublicPrivateFork.ForegroundDrawing.LoopingTextures;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Monoliths;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.Furniture.Monoliths
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths
 {
     [LegacyName("OldDukeMonolith")]
     public class EldenDiorama : ModItem, ILocalizedModType

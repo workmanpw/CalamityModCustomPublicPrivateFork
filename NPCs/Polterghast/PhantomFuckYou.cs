@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Dusts;
-using CalamityMod.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Polterghast
+namespace CalamityModCustomPublicPrivateFork.NPCs.Polterghast
 {
     public class PhantomFuckYou : ModNPC
     {

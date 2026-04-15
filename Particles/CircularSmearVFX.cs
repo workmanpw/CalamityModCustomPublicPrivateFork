@@ -1,14 +1,14 @@
-﻿using CalamityMod.ExtraTextures;
+using CalamityModCustomPublicPrivateFork.ExtraTextures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using ReLogic.Content;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class CircularSmearVFX : Particle //Also check out Split mod!
     {
-        public override string Texture => "CalamityMod/Particles/CircularSmear";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/CircularSmear";
         public override bool UseAdditiveBlend => true;
 
         public override bool SetLifetime => true;

@@ -1,10 +1,10 @@
-﻿using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Tiles.FurnitureMonolith
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith
 {
     public class MonolithBathtub : ModTile
     {
@@ -31,7 +31,7 @@ namespace CalamityMod.Tiles.FurnitureMonolith
             int xPos = Main.tile[i, j].TileFrameX;
             int yPos = Main.tile[i, j].TileFrameY;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureMonolith/MonolithBathtubGlow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureMonolith/MonolithBathtubGlow");
             Texture2D glowmask = GlowTexture.Value;
 
             Color drawColour = CalamityUtils.ApplyPaint(Main.tile[i, j].TileColor, new Color(100, 100, 100, 100));

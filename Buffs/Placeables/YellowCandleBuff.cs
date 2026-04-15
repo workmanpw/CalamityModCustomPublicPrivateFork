@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.NPC;
 
-namespace CalamityMod.Buffs.Placeables
+namespace CalamityModCustomPublicPrivateFork.Buffs.Placeables
 {
     public class YellowCandleBuff
         : ModBuff

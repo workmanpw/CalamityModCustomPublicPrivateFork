@@ -1,12 +1,12 @@
-﻿using CalamityMod.Buffs.Potions;
-using CalamityMod.Items.Materials;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Buffs.Potions;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Potions
+namespace CalamityModCustomPublicPrivateFork.Items.Potions
 {
     public class CeaselessHungerPotion : ModItem, ILocalizedModType
     {

@@ -1,12 +1,12 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.VanillaProjectileOverrides
+namespace CalamityModCustomPublicPrivateFork.Projectiles.VanillaProjectileOverrides
 {
     public static class HornetMinionAI
     {

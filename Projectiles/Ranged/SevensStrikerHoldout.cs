@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class SevensStrikerHoldout : ModProjectile
     {
@@ -330,7 +330,7 @@ namespace CalamityMod.Projectiles.Ranged
         public override bool PreDraw(ref Color lightColor)
         {
             Player Owner = Main.player[Projectile.owner];
-            Texture2D gun = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/SevensStrikerHoldout").Value;
+            Texture2D gun = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SevensStrikerHoldout").Value;
 
             SpriteEffects flip = Projectile.direction < 0 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
 

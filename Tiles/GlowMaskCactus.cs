@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles
+namespace CalamityModCustomPublicPrivateFork.Tiles
 {
     public abstract class GlowMaskCactus : ModCactus
     {

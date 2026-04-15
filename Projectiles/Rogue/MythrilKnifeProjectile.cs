@@ -1,15 +1,15 @@
-﻿using CalamityMod.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class MythrilKnifeProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/MythrilKnife";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/MythrilKnife";
 
         public override void SetDefaults()
         {

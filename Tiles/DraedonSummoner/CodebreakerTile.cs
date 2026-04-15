@@ -1,5 +1,5 @@
-﻿using CalamityMod.TileEntities;
-using CalamityMod.UI.DraedonSummoning;
+using CalamityModCustomPublicPrivateFork.TileEntities;
+using CalamityModCustomPublicPrivateFork.UI.DraedonSummoning;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.DraedonSummoner
+namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonSummoner
 {
     public class CodebreakerTile : ModTile
     {
@@ -39,18 +39,18 @@ namespace CalamityMod.Tiles.DraedonSummoner
         {
             if (!Main.dedServ)
             {
-                TileTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonSummoner/CodebreakerTile", AssetRequestMode.ImmediateLoad).Value;
-                ComputerTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonSummoner/CodebreakerDecryptionComputer", AssetRequestMode.ImmediateLoad).Value;
-                SensorTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonSummoner/CodebreakerLongRangedSensorArray", AssetRequestMode.ImmediateLoad).Value;
-                DisplayTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonSummoner/CodebreakerAdvancedDisplay", AssetRequestMode.ImmediateLoad).Value;
-                VoltageRegulatorTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonSummoner/CodebreakerVoltageRegulationSystem", AssetRequestMode.ImmediateLoad).Value;
-                VoltageRegulatorTexture2 = ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonSummoner/CodebreakerVoltageRegulationSystem2", AssetRequestMode.ImmediateLoad).Value;
-                CoolingCellTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonSummoner/CodebreakerAuricQuantumCoolingCell", AssetRequestMode.ImmediateLoad).Value;
+                TileTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonSummoner/CodebreakerTile", AssetRequestMode.ImmediateLoad).Value;
+                ComputerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonSummoner/CodebreakerDecryptionComputer", AssetRequestMode.ImmediateLoad).Value;
+                SensorTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonSummoner/CodebreakerLongRangedSensorArray", AssetRequestMode.ImmediateLoad).Value;
+                DisplayTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonSummoner/CodebreakerAdvancedDisplay", AssetRequestMode.ImmediateLoad).Value;
+                VoltageRegulatorTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonSummoner/CodebreakerVoltageRegulationSystem", AssetRequestMode.ImmediateLoad).Value;
+                VoltageRegulatorTexture2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonSummoner/CodebreakerVoltageRegulationSystem2", AssetRequestMode.ImmediateLoad).Value;
+                CoolingCellTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonSummoner/CodebreakerAuricQuantumCoolingCell", AssetRequestMode.ImmediateLoad).Value;
 
-                HighlightT1 = ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonSummoner/CodebreakerT1Highlight", AssetRequestMode.ImmediateLoad).Value;
-                HighlightT2 = ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonSummoner/CodebreakerT2Highlight", AssetRequestMode.ImmediateLoad).Value;
-                HighlightT3 = ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonSummoner/CodebreakerT3Highlight", AssetRequestMode.ImmediateLoad).Value;
-                HighlightT4 = ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonSummoner/CodebreakerT4Highlight", AssetRequestMode.ImmediateLoad).Value;
+                HighlightT1 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonSummoner/CodebreakerT1Highlight", AssetRequestMode.ImmediateLoad).Value;
+                HighlightT2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonSummoner/CodebreakerT2Highlight", AssetRequestMode.ImmediateLoad).Value;
+                HighlightT3 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonSummoner/CodebreakerT3Highlight", AssetRequestMode.ImmediateLoad).Value;
+                HighlightT4 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonSummoner/CodebreakerT4Highlight", AssetRequestMode.ImmediateLoad).Value;
             }
 
             Main.tileLighted[Type] = true;

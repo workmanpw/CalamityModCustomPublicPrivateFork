@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Buffs.Pets;
-using CalamityMod.Projectiles.Pets;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Buffs.Pets;
+using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Pets
+namespace CalamityModCustomPublicPrivateFork.Items.Pets
 {
     public class PrimroseKeepsake : ModItem, ILocalizedModType
     {

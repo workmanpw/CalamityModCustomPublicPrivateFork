@@ -1,27 +1,27 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Pets;
-using CalamityMod.Items.Tools.ClimateChange;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Packets;
-using CalamityMod.Systems.Collections;
-using CalamityMod.Tiles.Abyss;
-using CalamityMod.Tiles.Abyss.AbyssAmbient;
-using CalamityMod.Tiles.Ores;
-using CalamityMod.Walls;
-using CalamityMod.Walls.UnsafeWalls;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Pets;
+using CalamityModCustomPublicPrivateFork.Items.Tools.ClimateChange;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient;
+using CalamityModCustomPublicPrivateFork.Tiles.Ores;
+using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
-namespace CalamityMod.World
+namespace CalamityModCustomPublicPrivateFork.World
 {
     public class Abyss
     {

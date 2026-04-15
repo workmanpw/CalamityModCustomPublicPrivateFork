@@ -1,5 +1,5 @@
-﻿using CalamityMod.Dusts.Furniture;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles
+namespace CalamityModCustomPublicPrivateFork.Tiles
 {
     public class UelibloomBrick : ModTile
     {
@@ -20,7 +20,7 @@ namespace CalamityMod.Tiles
 
         public override void SetStaticDefaults()
         {
-            LeavesTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/UelibloomBrick_Leaves");
+            LeavesTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/UelibloomBrick_Leaves");
 
             Main.tileSolid[Type] = true;
             Main.tileMergeDirt[Type] = false;

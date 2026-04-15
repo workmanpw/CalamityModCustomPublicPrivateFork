@@ -1,4 +1,4 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class RefractionRotorProjectile : ModProjectile, ILocalizedModType
     {
@@ -15,7 +15,7 @@ namespace CalamityMod.Projectiles.Rogue
         public const int EnergyShotCount = 6;
         public const int StealthEnergyShotCount = 4;
         private static float RotationIncrement = 0.5f;
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/RefractionRotor";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/RefractionRotor";
 
         public override void SetStaticDefaults()
         {
@@ -67,7 +67,7 @@ namespace CalamityMod.Projectiles.Rogue
             Projectile.velocity *= 0.8f;
             if (Projectile.soundDelay == 0)
             {
-                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/SwiftSlice") { Volume = 0.7f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/SwiftSlice") { Volume = 0.7f }, Projectile.Center);
                 Projectile.soundDelay = 10;
             }
             if (Main.myPlayer == Projectile.owner)
@@ -91,11 +91,11 @@ namespace CalamityMod.Projectiles.Rogue
                     rainbowBurst.fadeIn = Main.rand.NextFloat(0.8f, 1.6f);
                     rainbowBurst.noGravity = true;
                 }
-                Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DarkRed, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.2f, 25);
+                Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DarkRed, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.2f, 25);
                 GeneralParticleHandler.SpawnParticle(bolt2);
-                Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SkyBlue, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.1f, 21);
+                Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SkyBlue, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.1f, 21);
                 GeneralParticleHandler.SpawnParticle(bolt3);
-                Particle bolt4 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DarkGreen, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.15f, 19);
+                Particle bolt4 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DarkGreen, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.15f, 19);
                 GeneralParticleHandler.SpawnParticle(bolt4);
             }
 
@@ -117,12 +117,12 @@ namespace CalamityMod.Projectiles.Rogue
 
         public override void PostDraw(Color lightColor)
         {
-            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/RefractionRotorGlowmask").Value;
+            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/RefractionRotorGlowmask").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition + Vector2.UnitY * Projectile.gfxOffY;
             Vector2 origin = glowmask.Size() * 0.5f;
             Main.EntitySpriteDraw(glowmask, drawPosition, null, Projectile.GetAlpha(Color.White), Projectile.rotation, origin, Projectile.scale, SpriteEffects.None, 0);
-            Asset<Texture2D> p = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularSmearSmokey");
-            Asset<Texture2D> p2 = ModContent.Request<Texture2D>("CalamityMod/Particles/SemiCircularSmearSwipe");
+            Asset<Texture2D> p = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmearSmokey");
+            Asset<Texture2D> p2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SemiCircularSmearSwipe");
             Vector2 generalDrawPos = Projectile.Center - Main.screenPosition;
             Main.EntitySpriteDraw(p2.Value, generalDrawPos, null, (Main.rand.NextBool() ? Color.YellowGreen : Color.Goldenrod) with { A = 0 } * 0.55f, Projectile.rotation * Main.rand.NextFloat(1.6f, 1.7f), p2.Size() * 0.5f, (Main.rand.NextBool() ? 1.6f : 1.4f) * Main.rand.NextFloat(0.8f, 1.15f), SpriteEffects.None);
             Main.EntitySpriteDraw(p.Value, generalDrawPos, null, (Main.rand.NextBool() ? Color.OrangeRed : Color.CornflowerBlue) with { A = 0 } * 0.75f, Projectile.rotation * Main.rand.NextFloat(1.2f, 1.3f), p.Size() * 0.5f, Main.rand.NextBool() ? 1.4f : 1.2f, SpriteEffects.None);

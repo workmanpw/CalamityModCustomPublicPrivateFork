@@ -1,6 +1,6 @@
-﻿using Terraria.Localization;
+using Terraria.Localization;
 
-namespace CalamityMod.Items.Fishing.BrimstoneCragCatches
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCragCatches
 {
     public class Brimlish : BaseQuestFish
     {

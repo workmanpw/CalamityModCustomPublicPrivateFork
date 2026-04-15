@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.CalPlayer.Dashes
+namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
 {
     public struct DashHitContext
     {

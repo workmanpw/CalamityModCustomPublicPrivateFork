@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Pets
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 {
     public class FrostyBatPet : ModProjectile, ILocalizedModType
     {
@@ -77,7 +77,7 @@ namespace CalamityMod.Projectiles.Pets
                 goalPosition = Owner.Center + dashDirection * (250 + velPower) * dashIntensity;
 
                 float opacity = Utils.GetLerpValue(6, 12, Projectile.velocity.Length(), true) * 0.25f + 0.05f;
-                Particle iceMist = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 14f, Vector2.One.RotatedByRandom(MathHelper.TwoPi) * Main.rand.NextFloat(0.3f, 1f) + Projectile.velocity * Main.rand.NextFloat(0.2f, 0.8f), "CalamityMod/Particles/BloomCircle", false, 22, Main.rand.NextFloat(0.3f, 0.55f), effectColor * opacity, new Vector2(1f, 1.3f), true, true, glowOpacity: opacity, extraRotation: Main.rand.NextFloat(0, MathHelper.TwoPi), spin: Main.rand.NextFloat(-0.1f, 0.1f));
+                Particle iceMist = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 14f, Vector2.One.RotatedByRandom(MathHelper.TwoPi) * Main.rand.NextFloat(0.3f, 1f) + Projectile.velocity * Main.rand.NextFloat(0.2f, 0.8f), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 22, Main.rand.NextFloat(0.3f, 0.55f), effectColor * opacity, new Vector2(1f, 1.3f), true, true, glowOpacity: opacity, extraRotation: Main.rand.NextFloat(0, MathHelper.TwoPi), spin: Main.rand.NextFloat(-0.1f, 0.1f));
                 GeneralParticleHandler.SpawnParticle(iceMist);
             }
             else if (Projectile.extraUpdates > 0)
@@ -96,7 +96,7 @@ namespace CalamityMod.Projectiles.Pets
             if (Main.rand.NextBool(15 / (dashingTimer != 0 ? 3 : 1)))
             {
                 Vector2 vel = Vector2.One.RotatedByRandom(MathHelper.TwoPi);
-                Particle iceFlake = new CustomSpark(Projectile.Center + vel * 9, vel * Main.rand.NextFloat(0.3f, 1.5f) + Projectile.velocity * Main.rand.NextFloat(0.1f, 0.4f), "CalamityMod/Particles/GlowFlakeParticle", false, Main.rand.Next(25, 35), Main.rand.NextFloat(0.2f, 0.45f) + (dashingTimer > 0 ? 0.2f : 0), effectColor * 0.7f, new Vector2(1f, 1f), true, true, glowOpacity: 0.8f, extraRotation: Main.rand.NextFloat(0, MathHelper.TwoPi), spin: Main.rand.NextFloat(-0.3f, 0.3f));
+                Particle iceFlake = new CustomSpark(Projectile.Center + vel * 9, vel * Main.rand.NextFloat(0.3f, 1.5f) + Projectile.velocity * Main.rand.NextFloat(0.1f, 0.4f), "CalamityModCustomPublicPrivateFork/Particles/GlowFlakeParticle", false, Main.rand.Next(25, 35), Main.rand.NextFloat(0.2f, 0.45f) + (dashingTimer > 0 ? 0.2f : 0), effectColor * 0.7f, new Vector2(1f, 1f), true, true, glowOpacity: 0.8f, extraRotation: Main.rand.NextFloat(0, MathHelper.TwoPi), spin: Main.rand.NextFloat(-0.3f, 0.3f));
                 GeneralParticleHandler.SpawnParticle(iceFlake);
             }
 
@@ -130,7 +130,7 @@ namespace CalamityMod.Projectiles.Pets
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D texture = ModContent.Request<Texture2D>(Texture).Value;
-            Texture2D glow = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
 
             float sine = (float)Math.Sin((time * 0.05f / MathHelper.Pi) * 3);
 

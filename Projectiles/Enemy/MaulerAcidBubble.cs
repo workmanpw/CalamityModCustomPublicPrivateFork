@@ -1,4 +1,4 @@
-﻿using CalamityMod.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,13 +6,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Enemy
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
 {
     public class MaulerAcidBubble : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Enemy";
         public ref float Time => ref Projectile.ai[0];
-        public override string Texture => "CalamityMod/Projectiles/Enemy/SulphuricAcidBubble";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Enemy/SulphuricAcidBubble";
         public override void SetStaticDefaults()
         {
             Main.projFrames[Type] = 7;

@@ -1,6 +1,6 @@
-﻿using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.NPCs;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using ReLogic.Utilities;
 using System;
@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     [PierceResistException(onlyForSingleHitbox: true)]
     public class AnahitasArpeggioNote : ModProjectile, ILocalizedModType
@@ -72,15 +72,15 @@ namespace CalamityMod.Projectiles.Magic
                 if (Main.zenithWorld)
                 {
                     if (NoteSequence == 0f)
-                        StupidEasterEggSlot = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/GFB/SevenTrebleClefSouls"), Owner.Center);
+                        StupidEasterEggSlot = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/GFB/SevenTrebleClefSouls"), Owner.Center);
                 }
                 else
-                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/HarpLV" + Math.Clamp((int)NoteSequence + 1, 1, 6)) with { Volume = 0.8f }, Owner.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/HarpLV" + Math.Clamp((int)NoteSequence + 1, 1, 6)) with { Volume = 0.8f }, Owner.Center);
             }
             // They did not obey me
             // Big shoutouts to NotRyo for making this Finale remix out of harp notes
             if (Main.zenithWorld && NoteSequence == 0f && Timer % 2428f == 0f && AIState == 0f)
-                StupidEasterEggSlot = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/GFB/SevenTrebleClefSouls"), Owner.Center);
+                StupidEasterEggSlot = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/GFB/SevenTrebleClefSouls"), Owner.Center);
             if (SoundEngine.TryGetActiveSound(StupidEasterEggSlot, out var TrebleSoul) && TrebleSoul.IsPlaying)
                 TrebleSoul.Position = Owner.Center;
 

@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class DetailedExplosion : Particle
     {
-        public override string Texture => "CalamityMod/Particles/DetailedExplosion";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/DetailedExplosion";
         public bool UseAltVisual = true;
         public override bool UseAdditiveBlend => UseAltVisual;
         public override bool SetLifetime => true;

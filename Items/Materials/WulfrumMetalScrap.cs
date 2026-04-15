@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Placeables.FurnitureWulfrum;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureWulfrum;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Materials
+namespace CalamityModCustomPublicPrivateFork.Items.Materials
 {
     [LegacyName("WulfrumShard")]
     public class WulfrumMetalScrap : ModItem, ILocalizedModType

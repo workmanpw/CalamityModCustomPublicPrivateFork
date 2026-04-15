@@ -1,11 +1,11 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.Items.Weapons.Summon.SquirrelSquireStaff;
+using static CalamityModCustomPublicPrivateFork.Items.Weapons.Summon.SquirrelSquireStaff;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class SquirrelSquireAcorn : ModProjectile, ILocalizedModType
     {

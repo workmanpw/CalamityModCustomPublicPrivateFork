@@ -1,19 +1,19 @@
-﻿using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class PureClarity : BaseCustomUseStyleProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
         public override int AssignedItemID => ModContent.ItemType<BrokenBiomeBlade>();
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/BrokenBiomeBlade";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/BrokenBiomeBlade";
         public override float HitboxOutset => 50f;
         public override Vector2 HitboxSize => new Vector2(48, 48);
         public override float HitboxRotationOffset => MathHelper.ToRadians(-45);

@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -12,7 +12,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class IonBlasterHoldout : BaseGunHoldoutProjectile
     {
@@ -110,7 +110,7 @@ namespace CalamityMod.Projectiles.Magic
                     }
                     else
                     {
-                        SoundStyle charge = new("CalamityMod/Sounds/Item/IonChargeLoop");
+                        SoundStyle charge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/IonChargeLoop");
                         ionHum = SoundEngine.PlaySound(charge with { Volume = 0.7f, IsLooped = true }, Projectile.Center);
                     }
 
@@ -144,7 +144,7 @@ namespace CalamityMod.Projectiles.Magic
 
                         if (isAtMaxMana && !fullyCharged && manaPower >= 0.25f)
                         {
-                            SoundStyle fullCharge = new("CalamityMod/Sounds/Item/DudFire");
+                            SoundStyle fullCharge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire");
                             for (int i = 0; i < 2; i++)
                                 SoundEngine.PlaySound(fullCharge with { Volume = .6f, Pitch = -0.7f + i * 1.5f, MaxInstances = 2 }, Projectile.Center);
                             fullyCharged = true;
@@ -226,10 +226,10 @@ namespace CalamityMod.Projectiles.Magic
                 }
                 if (manaPower >= 1)
                 {
-                    SoundStyle fire = new("CalamityMod/Sounds/Item/ImpalerLaunch");
+                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ImpalerLaunch");
                     SoundEngine.PlaySound(fire with { Volume = 0.8f, Pitch = -0.6f }, Projectile.Center);
                 }
-                SoundStyle fire2 = new("CalamityMod/Sounds/Item/LanceofDestinyStrong");
+                SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LanceofDestinyStrong");
                 SoundEngine.PlaySound(fire2 with { Volume = 0.4f, Pitch = (manaPower >= 1 ? 0.8f : 0.6f) }, Projectile.Center);
 
                 Owner.SetScreenshake(6f * manaPower);
@@ -249,7 +249,7 @@ namespace CalamityMod.Projectiles.Magic
                     Particle sparks = new SparkParticle(GunTipPosition, Projectile.velocity.RotatedByRandom(0.7f) * Main.rand.NextFloat(7, 25), false, 35, Main.rand.NextFloat(0.5f, 0.9f), Main.rand.NextBool() ? Color.Lerp(effectsColor, Color.White, 0.5f) : effectsColor);
                     GeneralParticleHandler.SpawnParticle(sparks);
                 }
-                Particle pulse3 = new CustomSpark(GunTipPosition, shootDirection * 9, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 17, 0.06f, effectsColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.1f);
+                Particle pulse3 = new CustomSpark(GunTipPosition, shootDirection * 9, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 17, 0.06f, effectsColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.1f);
                 GeneralParticleHandler.SpawnParticle(pulse3);
             }
             else
@@ -272,7 +272,7 @@ namespace CalamityMod.Projectiles.Magic
 
                     if (k % 2 == 0)
                     {
-                        Particle blast = new CustomSpark(GunTipPosition, Projectile.velocity * 3 * k, "CalamityMod/Particles/BloomLineSoftEdge", false, 11, 0.04f, useColor, new Vector2(1f, 0.8f), shrinkSpeed: 0.8f);
+                        Particle blast = new CustomSpark(GunTipPosition, Projectile.velocity * 3 * k, "CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge", false, 11, 0.04f, useColor, new Vector2(1f, 0.8f), shrinkSpeed: 0.8f);
                         GeneralParticleHandler.SpawnParticle(blast);
                     }
                 }
@@ -284,8 +284,8 @@ namespace CalamityMod.Projectiles.Magic
             if (time < 2)
                 return false;
             Texture2D tex = TextureAssets.Projectile[Type].Value;
-            Texture2D texGlow = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/IonBlasterGlow").Value;
-            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D texGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/IonBlasterGlow").Value;
+            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f) - (Owner.gravDir == -1 ? MathHelper.Pi * Owner.direction : 0f);
             SpriteEffects flipSprite = (Projectile.spriteDirection * Owner.gravDir == -1) ? SpriteEffects.FlipHorizontally : SpriteEffects.None;

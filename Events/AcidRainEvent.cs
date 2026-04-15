@@ -1,19 +1,19 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.NPCs.AcidRain;
-using CalamityMod.NPCs.OldDuke;
-using CalamityMod.Packets;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.UI;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
+using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.UI;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Events
+namespace CalamityModCustomPublicPrivateFork.Events
 {
     public enum AcidRainSpawnRequirement
     {
@@ -210,7 +210,7 @@ namespace CalamityMod.Events
             }
 
             UpdateInvasion();
-            BroadcastEventText("Mods.CalamityMod.Events.AcidRainStart"); // A toxic downpour falls over the wasteland seas!
+            BroadcastEventText("Mods.CalamityModCustomPublicPrivateFork.Events.AcidRainStart"); // A toxic downpour falls over the wasteland seas!
         }
 
         /// <summary>
@@ -316,7 +316,7 @@ namespace CalamityMod.Events
                 if (AccumulatedKillPoints <= 0)
                 {
                     AcidRainEventIsOngoing = false;
-                    BroadcastEventText("Mods.CalamityMod.Events.AcidRainEnd"); // The sulphuric skies begin to clear...
+                    BroadcastEventText("Mods.CalamityModCustomPublicPrivateFork.Events.AcidRainEnd"); // The sulphuric skies begin to clear...
 
                     // Turn off the rain from the event
                     Main.numCloudsTemp = Main.rand.Next(5, 20 + 1);

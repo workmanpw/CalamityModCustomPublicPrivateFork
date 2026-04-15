@@ -1,4 +1,4 @@
-﻿using CalamityMod.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.CalPlayer.DrawLayers
+namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
 {
     public class RancorBookLayer : PlayerDrawLayer
     {

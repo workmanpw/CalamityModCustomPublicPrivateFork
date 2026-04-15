@@ -1,8 +1,8 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureAbyss
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAbyss
 {
     [LegacyName("AbyssWorkbench")]
     public class AbyssWorkBench : ModItem, ILocalizedModType

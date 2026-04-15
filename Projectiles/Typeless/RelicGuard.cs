@@ -1,19 +1,19 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.CalPlayer;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Tools;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class RelicGuard : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         public CalamityPlayer moddedOwner => Owner.Calamity();
         public Color bColor = Color.White;
@@ -87,8 +87,8 @@ namespace CalamityMod.Projectiles.Typeless
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D rTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Tools/RelicOfResilience").Value;
-            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D rTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Tools/RelicOfResilience").Value;
+            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
             Color drawColor = bColor;
             float CDScale = Utils.GetLerpValue(300, 0, Owner.Calamity().rOfResilienceCooldown, true);
 

@@ -1,10 +1,10 @@
-﻿using CalamityMod.NPCs.Cryogen;
-using CalamityMod.Skies;
+using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
+using CalamityModCustomPublicPrivateFork.Skies;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class CryogenBackgroundScene : ModSceneEffect
     {

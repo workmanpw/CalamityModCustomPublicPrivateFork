@@ -1,9 +1,9 @@
-﻿using CalamityMod.Buffs.Mounts;
-using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Buffs.Mounts;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Mounts
+namespace CalamityModCustomPublicPrivateFork.Items.Mounts
 {
     public class BrimroseChair : ModMount
     {

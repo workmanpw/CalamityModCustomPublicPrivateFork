@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,19 +6,19 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Walls.UnsafeWalls
+namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
 {
     [LegacyName("VoidstoneWallUnsafe")]
     public class UnsafeVoidstoneWall : ModWall
     {
         internal static FramedMaskTexture GlowMask;
-        public override string Texture => "CalamityMod/Walls/VoidstoneWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/VoidstoneWall";
 
         public override void SetStaticDefaults()
         {
             // We basically have same copy in VoidstoneWall
             // But leaving this in case of changing to Unsafe variant specific glowmask
-            GlowMask = new("CalamityMod/Walls/VoidstoneWall_Glowmask", 36, 36);
+            GlowMask = new("CalamityModCustomPublicPrivateFork/Walls/VoidstoneWall_Glowmask", 36, 36);
 
             DustType = DustID.BlueFlare;
             AddMapEntry(new Color(0, 0, 0));

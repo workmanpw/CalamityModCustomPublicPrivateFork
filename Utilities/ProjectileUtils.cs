@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Projectiles.Magic;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public static partial class CalamityUtils
     {
@@ -760,7 +760,7 @@ namespace CalamityMod
 
         public static void DrawStarTrail(this Projectile projectile, Color outer, Color inner, float auraHeight = 10f)
         {
-            Texture2D aura = Request<Texture2D>("CalamityMod/Projectiles/StarTrail").Value;
+            Texture2D aura = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/StarTrail").Value;
             Vector2 offsets = new Vector2(0f, projectile.gfxOffY) - Main.screenPosition;
             Rectangle auraRec = aura.Frame();
             float auraRotation = projectile.velocity.ToRotation() + MathHelper.PiOver2;

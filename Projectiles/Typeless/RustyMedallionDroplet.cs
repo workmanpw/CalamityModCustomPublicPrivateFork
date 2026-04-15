@@ -1,15 +1,15 @@
-﻿using CalamityMod.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class RustyMedallionDroplet : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/Environment/AcidDrop";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Environment/AcidDrop";
 
         public override void SetStaticDefaults()
         {

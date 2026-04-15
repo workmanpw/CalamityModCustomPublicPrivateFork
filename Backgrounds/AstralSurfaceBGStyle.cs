@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Skies;
+using System;
+using CalamityModCustomPublicPrivateFork.Skies;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Backgrounds
+namespace CalamityModCustomPublicPrivateFork.Backgrounds
 {
     //this is just a blank background, so each custom background will draw over it
     public class AstralSurfaceBGStyle : ModSurfaceBackgroundStyle
@@ -38,17 +38,17 @@ namespace CalamityMod.Backgrounds
             }
         }
 
-        public override int ChooseFarTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralSurfaceHorizon"); //5th layer (Horizon)
+        public override int ChooseFarTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceHorizon"); //5th layer (Horizon)
 
-        public override int ChooseMiddleTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralSurfaceFar"); //4th layer (Far)
+        public override int ChooseMiddleTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceFar"); //4th layer (Far)
 
-        public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b) => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Skies/AstralSurfaceMiddle"); //Fallback texture, not nessesarily needed since predraw returns false
+        public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b) => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Skies/AstralSurfaceMiddle"); //Fallback texture, not nessesarily needed since predraw returns false
 
         public override bool PreDrawCloseBackground(SpriteBatch spriteBatch) //Taken from vanilla to draw the front 3 layers, edited to fit tmod and astral background needs
         {
-            float screenOff = Main.instance.screenOff;
-            float scAdj = Main.instance.scAdj;
-            Color COSBMAplha = Main.ColorOfSurfaceBackgroundsModified;
+            float screenOff = 0f; // Main.instance.screenOff no longer exists
+            float scAdj = 0f; // Main.instance.scAdj no longer exists
+            Color COSBMAplha = Main.ColorOfTheSkies;
             Color ColorOfSurfaceBackgroundsModified = new Color(63, 51, 90, COSBMAplha.A); //Astral Biome Coloration with the alpha as the background fade
             bool canBGDraw = false;
             if ((!Main.remixWorld || (Main.gameMenu && !WorldGen.remixWorldGen)) && (!WorldGen.remixWorldGen || !WorldGen.drunkWorldGen))

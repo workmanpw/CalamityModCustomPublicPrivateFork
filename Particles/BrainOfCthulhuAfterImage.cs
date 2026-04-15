@@ -1,20 +1,20 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityMod.DataStructures;
+using CalamityModCustomPublicPrivateFork.DataStructures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 
-namespace CalamityMod.Particles;
+namespace CalamityModCustomPublicPrivateFork.Particles;
 
 public class BrainOfCthulhuAfterImage : Particle
 {
-    public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+    public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
     public override bool UseCustomDraw => false;
 

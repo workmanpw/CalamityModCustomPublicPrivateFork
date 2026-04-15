@@ -1,11 +1,11 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     [AutoloadEquip(EquipType.Shield)]
     public class ShieldoftheHighRuler : ModItem, ILocalizedModType, IHoldShiftTooltipItem

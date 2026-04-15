@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameInput;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Potions
+namespace CalamityModCustomPublicPrivateFork.Items.Potions
 {
     [LegacyName("AstralJelly")]
     public class AureusCell : ModItem, ILocalizedModType

@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Cooldowns;
-using CalamityMod.Items.Accessories.Vanity;
-using CalamityMod.Items.Materials;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -12,7 +12,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Armor.Wulfrum
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Wulfrum
 {
     #region Armor pieces
 
@@ -25,14 +25,14 @@ namespace CalamityMod.Items.Armor.Wulfrum
     {
         public new string LocalizationCategory => "Items.Armor.PreHardmode";
         #region big hat
-        public string ExtensionTexture => "CalamityMod/Items/Armor/Wulfrum/WulfrumHat_HeadExtension";
+        public string ExtensionTexture => "CalamityModCustomPublicPrivateFork/Items/Armor/Wulfrum/WulfrumHat_HeadExtension";
         public Vector2 ExtensionSpriteOffset(PlayerDrawSet drawInfo) => -Vector2.UnitY * 2f;
         public string EquipSlotName(Player drawPlayer) => drawPlayer.Male ? Name : "WulfrumHatFemale";
         #endregion
 
-        public static readonly SoundStyle SetActivationSound = new("CalamityMod/Sounds/Custom/AbilitySounds/WulfrumBastionActivate");
-        public static readonly SoundStyle SetBreakSound = new("CalamityMod/Sounds/Custom/AbilitySounds/WulfrumBastionBreak");
-        public static readonly SoundStyle SetBreakSoundSafe = new("CalamityMod/Sounds/Custom/AbilitySounds/WulfrumBastionBreakSafely");
+        public static readonly SoundStyle SetActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/WulfrumBastionActivate");
+        public static readonly SoundStyle SetBreakSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/WulfrumBastionBreak");
+        public static readonly SoundStyle SetBreakSoundSafe = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/WulfrumBastionBreakSafely");
 
         public static float SummonDamageBoost = 0.05f;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(SummonDamageBoost.ToPercent());
@@ -58,7 +58,7 @@ namespace CalamityMod.Items.Armor.Wulfrum
         {
             if (!Main.dedServ)
             {
-                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Wulfrum/WulfrumHat_FemaleHead", EquipType.Head, name: "WulfrumHatFemale");
+                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Wulfrum/WulfrumHat_FemaleHead", EquipType.Head, name: "WulfrumHatFemale");
             }
 
             On_Main.DrawPendingMouseText += SpoofMouseItem;

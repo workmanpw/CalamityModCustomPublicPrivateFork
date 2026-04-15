@@ -1,7 +1,7 @@
-﻿using System.IO;
-using CalamityMod.Events;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Events;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class BRHostileProjKillSyncPacket : CalamityPacket
     {

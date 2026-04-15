@@ -1,19 +1,19 @@
-﻿using System;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class AncientBeam : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/FracturedArkGlow";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/FracturedArkGlow";
 
         public override void SetStaticDefaults()
         {

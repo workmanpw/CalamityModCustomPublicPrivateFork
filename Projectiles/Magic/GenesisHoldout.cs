@@ -1,15 +1,15 @@
-﻿using System.IO;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.Items.Weapons.Magic.Genesis;
+using static CalamityModCustomPublicPrivateFork.Items.Weapons.Magic.Genesis;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class GenesisHoldout : BaseGunHoldoutProjectile
     {
@@ -93,7 +93,7 @@ namespace CalamityMod.Projectiles.Magic
 
             if (yBeam)
             {
-                SoundStyle fire = new("CalamityMod/Sounds/Item/LanceofDestinyStrong");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LanceofDestinyStrong");
                 SoundEngine.PlaySound(fire with { Volume = 0.35f, Pitch = 1f, PitchVariance = 0.15f }, Projectile.Center);
 
                 if (Main.myPlayer == Projectile.owner)
@@ -109,7 +109,7 @@ namespace CalamityMod.Projectiles.Magic
             }
             else
             {
-                SoundStyle fire = new("CalamityMod/Sounds/Item/MagnaCannonShot");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagnaCannonShot");
                 SoundEngine.PlaySound(fire with { Volume = 0.25f, Pitch = 1f, PitchVariance = 0.35f }, Projectile.Center);
 
                 for (int i = 0; i < 4; i++)

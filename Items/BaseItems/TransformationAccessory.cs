@@ -1,4 +1,4 @@
-﻿using Terraria.DataStructures;
+using Terraria.DataStructures;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
@@ -7,13 +7,13 @@ using System;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 
-namespace CalamityMod.Items.BaseItems
+namespace CalamityModCustomPublicPrivateFork.Items.BaseItems
 {
     public abstract class TransformationAccessory : ModItem
     {
         public bool IsForced = false;
 
-        public virtual string AssetPath => "CalamityMod/Items/Accessories/Vanity/";
+        public virtual string AssetPath => "CalamityModCustomPublicPrivateFork/Items/Accessories/Vanity/";
         
         public virtual (EquipType Type, string AssetName, string EquipName)[] EquipSlots => [];
 

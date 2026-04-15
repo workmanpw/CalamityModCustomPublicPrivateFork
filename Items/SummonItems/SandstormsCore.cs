@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items.Materials;
-using CalamityMod.NPCs.GreatSandShark;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.NPCs.GreatSandShark;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     public class SandstormsCore : ModItem, ILocalizedModType
     {

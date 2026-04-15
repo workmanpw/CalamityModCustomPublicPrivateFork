@@ -1,18 +1,18 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class RemsRevengeExplosion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public Player Owner => Main.player[Projectile.owner];
         public ref float Time => ref Projectile.ai[0];
@@ -35,20 +35,20 @@ namespace CalamityMod.Projectiles.Melee
             if (Time == 0f)
             {
                 // Makeshift metal-blood explosion sound that is good enough ig
-                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/Ravager/RavagerStomp", 2) { Pitch = -0.75f, PitchVariance = 0.5f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/Ravager/RavagerStomp", 2) { Pitch = -0.75f, PitchVariance = 0.5f }, Projectile.Center);
 
                 for (int i = 0; i < 5; i++)
                 {
-                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, (!ChildSafety.Disabled ? Color.CornflowerBlue : (Color.Lerp(Color.DarkRed, Color.Red, Utils.GetLerpValue(0, 5, i, true)))), "CalamityMod/Particles/DetailedExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.5f + 0.03f * i, (int)(20 - i * 1.5f));
+                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, (!ChildSafety.Disabled ? Color.CornflowerBlue : (Color.Lerp(Color.DarkRed, Color.Red, Utils.GetLerpValue(0, 5, i, true)))), "CalamityModCustomPublicPrivateFork/Particles/DetailedExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.5f + 0.03f * i, (int)(20 - i * 1.5f));
                     GeneralParticleHandler.SpawnParticle(explosion);
                 }
                 for (int i = 0; i < 3; i++)
                 {
-                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, (!ChildSafety.Disabled ? Color.CornflowerBlue : (Color.Lerp(Color.DarkRed, Color.Red, Utils.GetLerpValue(0, 3, i, true)))), "CalamityMod/Projectiles/FireProj", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 2f + 0.22f * i, (int)(20 - i * 2f));
+                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, (!ChildSafety.Disabled ? Color.CornflowerBlue : (Color.Lerp(Color.DarkRed, Color.Red, Utils.GetLerpValue(0, 3, i, true)))), "CalamityModCustomPublicPrivateFork/Projectiles/FireProj", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 2f + 0.22f * i, (int)(20 - i * 2f));
                     GeneralParticleHandler.SpawnParticle(explosion);
                 }
 
-                Particle outerGlow = new CustomPulse(Projectile.Center, Vector2.Zero, Color.RosyBrown, "CalamityMod/Particles/BloomCircle", Vector2.One, 0f, 0.1f, 2f, 24, true);
+                Particle outerGlow = new CustomPulse(Projectile.Center, Vector2.Zero, Color.RosyBrown, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, 0f, 0.1f, 2f, 24, true);
                 GeneralParticleHandler.SpawnParticle(outerGlow);
 
                 for (int p = 0; p < 16; p++)

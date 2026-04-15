@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Linq;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,20 +10,20 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     [LegacyName("WulfrumBlade")]
     public class WulfrumScrewdriver : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Melee";
         public static int DefaultTime = 10;
-        public static readonly SoundStyle ThrustSound = new("CalamityMod/Sounds/Item/WulfrumScrewdriverThrust") { PitchVariance = 0.4f };
-        public static readonly SoundStyle ThudSound = new("CalamityMod/Sounds/Item/WulfrumScrewdriverThud") { PitchVariance = 0.2f, Volume = 0.7f };
-        public static readonly SoundStyle ScrewGetSound = new("CalamityMod/Sounds/Item/WulfrumScrewdriverScrewGet") { PitchVariance = 0.1f };
-        public static readonly SoundStyle ScrewHitSound = new("CalamityMod/Sounds/Item/WulfrumScrewdriverScrewHit") { Volume = 0.7f };
-        public static readonly SoundStyle FunnyUltrablingSound = new("CalamityMod/Sounds/Custom/UltrablingHit");
+        public static readonly SoundStyle ThrustSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumScrewdriverThrust") { PitchVariance = 0.4f };
+        public static readonly SoundStyle ThudSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumScrewdriverThud") { PitchVariance = 0.2f, Volume = 0.7f };
+        public static readonly SoundStyle ScrewGetSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumScrewdriverScrewGet") { PitchVariance = 0.1f };
+        public static readonly SoundStyle ScrewHitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumScrewdriverScrewHit") { Volume = 0.7f };
+        public static readonly SoundStyle FunnyUltrablingSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/UltrablingHit");
 
         public static bool ScrewQeuedForStorage = false;
         public bool ScrewStored = false;
@@ -172,9 +172,9 @@ namespace CalamityMod.Items.Weapons.Melee
             Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, Main.GameViewMatrix.TransformationMatrix);
 
             if (ScrewTex == null)
-                ScrewTex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/WulfrumScrew");
+                ScrewTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/WulfrumScrew");
             if (ScrewOutlineTex == null)
-                ScrewOutlineTex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/WulfrumScrewOutline");
+                ScrewOutlineTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/WulfrumScrewOutline");
 
             Texture2D screwTex = ScrewTex.Value;
             Texture2D screwOutlineTex = ScrewOutlineTex.Value;

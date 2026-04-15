@@ -1,17 +1,17 @@
-﻿using CalamityMod.Tiles.SunkenSea;
-using CalamityMod.Walls;
-using CalamityMod.Walls.UnsafeWalls;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls;
 using ReLogic.Reflection;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Systems.Collections
+namespace CalamityModCustomPublicPrivateFork.Systems.Collections
 {
     [ReinitializeDuringResizeArrays]
     public static class CalamityTileSets
     {
-        public static SetFactory Factory = new SetFactory(TileLoader.TileCount, "CalamityMod/TileID", Search);
+        public static SetFactory Factory = new SetFactory(TileLoader.TileCount, "CalamityModCustomPublicPrivateFork/TileID", Search);
         public static IdDictionary Search = IdDictionary.Create<TileID, int>();
 
         /// <summary>

@@ -1,8 +1,8 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Skies
+namespace CalamityModCustomPublicPrivateFork.Skies
 {
     [Autoload(Side = ModSide.Client)]
     internal sealed class SkyTextureRefs : ModSystem
@@ -31,25 +31,25 @@ namespace CalamityMod.Skies
         public override void OnModLoad()
         {
             // Astral Sky/BG
-            AstralSky = ModContent.Request<Texture2D>("CalamityMod/Skies/AstralSky");
-            AstralSurfaceFront = ModContent.Request<Texture2D>("CalamityMod/Backgrounds/AstralSurfaceFront");
-            AstralSurfaceFrontGlow = ModContent.Request<Texture2D>("CalamityMod/Backgrounds/AstralSurfaceFrontGlow");
-            AstralSurfaceClose = ModContent.Request<Texture2D>("CalamityMod/Backgrounds/AstralSurfaceClose");
-            AstralSurfaceCloseGlow = ModContent.Request<Texture2D>("CalamityMod/Backgrounds/AstralSurfaceCloseGlow");
-            AstralSurfaceMiddle = ModContent.Request<Texture2D>("CalamityMod/Backgrounds/AstralSurfaceMiddle");
-            AstralSurfaceMiddleGlow = ModContent.Request<Texture2D>("CalamityMod/Backgrounds/AstralSurfaceMiddleGlow");
+            AstralSky = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/AstralSky");
+            AstralSurfaceFront = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceFront");
+            AstralSurfaceFrontGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceFrontGlow");
+            AstralSurfaceClose = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceClose");
+            AstralSurfaceCloseGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceCloseGlow");
+            AstralSurfaceMiddle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceMiddle");
+            AstralSurfaceMiddleGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceMiddleGlow");
 
             //Astral Desert Sky/BG
-            AstralDesertSurfaceClose = ModContent.Request<Texture2D>("CalamityMod/Backgrounds/AstralDesertSurfaceClose");
-            AstralDesertSurfaceMiddle = ModContent.Request<Texture2D>("CalamityMod/Backgrounds/AstralDesertSurfaceMiddle");
+            AstralDesertSurfaceClose = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/AstralDesertSurfaceClose");
+            AstralDesertSurfaceMiddle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/AstralDesertSurfaceMiddle");
 
             //Astral Snow Sky/BG
-            AstralSnowSurfaceMiddle = ModContent.Request<Texture2D>("CalamityMod/Backgrounds/AstralSnowSurfaceMiddle");
+            AstralSnowSurfaceMiddle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSnowSurfaceMiddle");
 
             // Sulpher Sea Sky/BG
-            SulphurSeaSky = ModContent.Request<Texture2D>("CalamityMod/Skies/SulphurSeaSky");
-            SulphurSeaSkyFront = ModContent.Request<Texture2D>("CalamityMod/Skies/SulphurSeaSkyFront");
-            SulphurSeaSurface = ModContent.Request<Texture2D>("CalamityMod/Skies/SulphurSeaSurface");
+            SulphurSeaSky = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/SulphurSeaSky");
+            SulphurSeaSkyFront = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/SulphurSeaSkyFront");
+            SulphurSeaSurface = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/SulphurSeaSurface");
         }
 
         public override void Unload()

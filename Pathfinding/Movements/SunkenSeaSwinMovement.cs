@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.NPCs.SunkenSea;
+using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityMod.Pathfinding.Movements
+namespace CalamityModCustomPublicPrivateFork.Pathfinding.Movements
 {
     public class SunkenSeaSwimMovement(NPC creature) : IMovement
     {

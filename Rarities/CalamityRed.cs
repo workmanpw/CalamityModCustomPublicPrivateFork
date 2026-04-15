@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Graphics;
@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 using Terraria.UI.Chat;
 using Terraria.ID;
 
-namespace CalamityMod.Rarities
+namespace CalamityModCustomPublicPrivateFork.Rarities
 {
     public class CalamityRed : ModRarity
     {
@@ -27,8 +27,8 @@ namespace CalamityMod.Rarities
         public static void Draw(Item Item, SpriteBatch spriteBatch, string text, int X, int Y, Color textColor, Color lightColor, float rotation,
             Vector2 origin, Vector2 baseScale, float time, bool renderTextSparkles, DynamicSpriteFont font)
         {
-            var crystalTextGlow = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/UI/CrystalTextGlow").Value;
-            var sparkle = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/UI/CrystalTextSparkle").Value;
+            var crystalTextGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/UI/CrystalTextGlow").Value;
+            var sparkle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/UI/CrystalTextSparkle").Value;
             var fontSize = font.MeasureString(text);
             var center = fontSize / 2f;
 

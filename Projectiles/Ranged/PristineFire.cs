@@ -1,18 +1,18 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class PristineFire : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Particles/MediumMist";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/MediumMist";
 
         public float smokeOpa = 0.25f;
         public ref float time => ref Projectile.ai[2];
@@ -47,7 +47,7 @@ namespace CalamityMod.Projectiles.Ranged
                 beamPos2 = Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.UnitX).RotatedBy(MathHelper.PiOver2) * sine * (30f * mult) * Utils.GetLerpValue(116, 108, Projectile.timeLeft, true);
                 for (int i = 0; i < 2; i++)
                 {
-                    Particle beam = new CustomSpark(i == 0 ? beamPos : beamPos2, Projectile.velocity * 0.1f, "CalamityMod/Particles/SmallBloom", false, 6, (0.065f * mult) + 0.01f, Color.Lerp(Color.Red, Color.Goldenrod, mult), new Vector2(1f, 2.5f), true, false);
+                    Particle beam = new CustomSpark(i == 0 ? beamPos : beamPos2, Projectile.velocity * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 6, (0.065f * mult) + 0.01f, Color.Lerp(Color.Red, Color.Goldenrod, mult), new Vector2(1f, 2.5f), true, false);
                     GeneralParticleHandler.SpawnParticle(beam);
                 }
             }
@@ -63,7 +63,7 @@ namespace CalamityMod.Projectiles.Ranged
                         {
                             projectile.ai[2] = boomTime;
                             hasIgnited = true;
-                            SoundStyle ignite = new("CalamityMod/Sounds/Custom/Providence/ProvidenceBurn");
+                            SoundStyle ignite = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceBurn");
                             SoundEngine.PlaySound(ignite with { Volume = 1f, Pitch = Main.rand.NextFloat(0.5f, 0.6f), SoundLimitBehavior = SoundLimitBehavior.IgnoreNew }, Projectile.Center);
                         }
                         else
@@ -96,7 +96,7 @@ namespace CalamityMod.Projectiles.Ranged
                 Vector2 linePos = i < 2 ? beamPos : beamPos2;
                 Vector2 lineVel = (Utils.DirectionFrom(linePos, Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.UnitX) * 40) * 3).RotatedByRandom(0.16f) * Main.rand.NextFloat(0.4f, 2.5f);
 
-                Particle beam = new CustomSpark(linePos, lineVel, "CalamityMod/Particles/SmallBloom", false, 11, 0.09f, Main.rand.NextBool() ? Color.Orange : Color.DarkOrange, new Vector2(2f, 1.5f), true, false, 0, false, false, 1.1f);
+                Particle beam = new CustomSpark(linePos, lineVel, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 11, 0.09f, Main.rand.NextBool() ? Color.Orange : Color.DarkOrange, new Vector2(2f, 1.5f), true, false, 0, false, false, 1.1f);
                 GeneralParticleHandler.SpawnParticle(beam);
             }
 

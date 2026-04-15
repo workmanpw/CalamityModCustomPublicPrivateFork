@@ -1,17 +1,17 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Effects;
-using CalamityMod.Events;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.NPCs.DevourerofGods;
-using CalamityMod.Systems.Graphic;
-using CalamityMod.Utilities.Daybreak;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Effects;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
+using CalamityModCustomPublicPrivateFork.Systems.Graphic;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Skies
+namespace CalamityModCustomPublicPrivateFork.Skies
 {
     public class DoGSky : CustomSky
     {
@@ -281,10 +281,10 @@ namespace CalamityMod.Skies
         private void DrawDistortionWinds(SpriteBatch spriteBatch)
         {
             Effect shader = CalamityShaders.DoGDistortionWindsShader.Value;
-            Texture2D windsTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons2").Value;
-            Texture2D highlightsTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/SharpNoise").Value;
-            Texture2D distortionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/MeltyNoise").Value;
-            Texture2D erosionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Pebbles").Value;
+            Texture2D windsTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Neurons2").Value;
+            Texture2D highlightsTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/SharpNoise").Value;
+            Texture2D distortionTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/MeltyNoise").Value;
+            Texture2D erosionTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Pebbles").Value;
 
             Vector2 screenSize = new(Main.screenWidth, Main.screenHeight);
 
@@ -320,8 +320,8 @@ namespace CalamityMod.Skies
         private void DrawRollingBackgroundFog(SpriteBatch spriteBatch)
         {
             Effect shader = CalamityShaders.DoGBackgroundFogShader.Value;
-            Texture2D cloudsTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/RealisticClouds").Value;
-            Texture2D erosionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/HarshNoise").Value;
+            Texture2D cloudsTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/RealisticClouds").Value;
+            Texture2D erosionTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/HarshNoise").Value;
 
             Vector2 screenSize = new(Main.screenWidth, Main.screenHeight);
 
@@ -356,8 +356,8 @@ namespace CalamityMod.Skies
                 return;
 
             Effect shader = CalamityShaders.DoGRiftAuraShader.Value;
-            Texture2D riftAuraTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Smudges").Value;
-            Texture2D distortionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Swirls").Value;
+            Texture2D riftAuraTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Smudges").Value;
+            Texture2D distortionTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Swirls").Value;
 
             Vector2 screenSize = new(Main.screenWidth, Main.screenHeight);
             Vector2 screenCenter = Main.screenPosition + (screenSize * 0.5f);
@@ -390,7 +390,7 @@ namespace CalamityMod.Skies
                 return;
 
             Effect shader = CalamityShaders.DoGRealityCrackShader.Value;
-            Texture2D cracksTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/CrackedGlass_Glowing").Value;
+            Texture2D cracksTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/CrackedGlass_Glowing").Value;
 
             Vector2 screenSize = new(Main.screenWidth, Main.screenHeight);
             Vector2 screenCenter = Main.screenPosition + (screenSize * 0.5f);
@@ -423,7 +423,7 @@ namespace CalamityMod.Skies
                 Texture2D distortionRiftContents = DoGVisualsManager.DistortionRiftBackgroundContentsTarget.Target;
                 Texture2D distortionRift = DoGVisualsManager.DistortionRiftPrimitivesTarget.Target;
 
-                Vector2 screenSize = new(Main.graphics.graphicsDevice.Viewport.Width, Main.graphics.graphicsDevice.Viewport.Height);
+                Vector2 screenSize = new(Main.instance.GraphicsDevice.Viewport.Width, Main.instance.GraphicsDevice.Viewport.Height);
 
                 metaballShader.Value.Parameters["layerSize"]?.SetValue(distortionRiftContents.Size());
                 metaballShader.Value.Parameters["screenSize"]?.SetValue(screenSize);

@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,12 +8,12 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class BatholithBangleProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public int time = 0;
         public int damageTime = 120;
         public int Soundtime1 = 84;
@@ -49,7 +49,7 @@ namespace CalamityMod.Projectiles.Typeless
             if (time == 0 && visual)
             {
                 spinDir = Main.rand.NextBool() ? 1 : -1;
-                SoundStyle sound = new("CalamityMod/Sounds/Item/BatholithBangleSound");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/BatholithBangleSound");
                 SoundSlot = SoundEngine.PlaySound(sound with { Volume = 1f, MaxInstances = -1 }, Projectile.Center);
             }
             if (!invalidTarget)
@@ -80,14 +80,14 @@ namespace CalamityMod.Projectiles.Typeless
                 {
                     Owner.SetScreenshake(5f);
 
-                    Particle spark = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 12, 1.35f, clr3, Projectile.scale * new Vector2(2.5f, 1.3f), true, true, shrinkSpeed: 1.25f, extraRotation: MathHelper.PiOver2);
+                    Particle spark = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 12, 1.35f, clr3, Projectile.scale * new Vector2(2.5f, 1.3f), true, true, shrinkSpeed: 1.25f, extraRotation: MathHelper.PiOver2);
                     GeneralParticleHandler.SpawnParticle(spark);
-                    Particle spark2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 10, 1.05f, clr3, Projectile.scale * new Vector2(2f, 1.3f), true, true, shrinkSpeed: 0.7f);
+                    Particle spark2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 10, 1.05f, clr3, Projectile.scale * new Vector2(2f, 1.3f), true, true, shrinkSpeed: 0.7f);
                     GeneralParticleHandler.SpawnParticle(spark2);
 
-                    Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, clr1, "CalamityMod/Particles/BloomRing", Projectile.scale * new Vector2(0.6f, 1.4f), 0, 0.3f, 1.35f, 15);
+                    Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, clr1, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Projectile.scale * new Vector2(0.6f, 1.4f), 0, 0.3f, 1.35f, 15);
                     GeneralParticleHandler.SpawnParticle(pulse);
-                    Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, clr1, "CalamityMod/Particles/BloomRing", Projectile.scale * new Vector2(1.3f, 0.7f), 0, 0.25f, 1f, 15);
+                    Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, clr1, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Projectile.scale * new Vector2(1.3f, 0.7f), 0, 0.25f, 1f, 15);
                     GeneralParticleHandler.SpawnParticle(pulse2);
 
                 }
@@ -95,7 +95,7 @@ namespace CalamityMod.Projectiles.Typeless
                 for (int i = 0; i < 12; i++)
                 {
                     Vector2 vel = Vector2.One.RotatedByRandom(MathHelper.TwoPi) * Main.rand.NextFloat(5, 10);
-                    Particle granite = new CustomSpark(Projectile.Center, vel, "CalamityMod/Particles/GlowTriangle", true, Main.rand.Next(30, 55 + 1), Projectile.scale * Main.rand.NextFloat(0.12f, 0.18f), (Main.rand.NextBool() ? clr1 : clr3) * visMult, Vector2.One, true, false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.5f, 0.5f));
+                    Particle granite = new CustomSpark(Projectile.Center, vel, "CalamityModCustomPublicPrivateFork/Particles/GlowTriangle", true, Main.rand.Next(30, 55 + 1), Projectile.scale * Main.rand.NextFloat(0.12f, 0.18f), (Main.rand.NextBool() ? clr1 : clr3) * visMult, Vector2.One, true, false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.5f, 0.5f));
                     GeneralParticleHandler.SpawnParticle(granite);
                 }
             }
@@ -111,7 +111,7 @@ namespace CalamityMod.Projectiles.Typeless
             for (int i = 0; i < 8; i++)
             {
                 Vector2 outerVel = Vector2.One.RotatedByRandom(MathHelper.TwoPi) * Main.rand.NextFloat(1, 5);
-                Particle marble = new CustomSpark(position + outerVel * 5, outerVel, "CalamityMod/Particles/BloomCircle", false, Main.rand.Next(18, 25 + 1), Projectile.scale * Main.rand.NextFloat(0.3f, 0.4f), Main.rand.NextBool() ? clr1 : clr3, Vector2.One, true, true, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.3f, 0.3f), glowOpacity: 0.8f);
+                Particle marble = new CustomSpark(position + outerVel * 5, outerVel, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, Main.rand.Next(18, 25 + 1), Projectile.scale * Main.rand.NextFloat(0.3f, 0.4f), Main.rand.NextBool() ? clr1 : clr3, Vector2.One, true, true, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.3f, 0.3f), glowOpacity: 0.8f);
                 GeneralParticleHandler.SpawnParticle(marble);
             }
         }
@@ -143,8 +143,8 @@ namespace CalamityMod.Projectiles.Typeless
         {
             if (!visual)
                 return false;
-            Asset<Texture2D> tri = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowTriangle");
-            Asset<Texture2D> shine = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+            Asset<Texture2D> tri = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowTriangle");
+            Asset<Texture2D> shine = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
 
             float stabLerp = (float)Math.Pow(Utils.GetLerpValue(Soundtime4, damageTime, time, true), 8);
             Vector2 triPlace = Vector2.UnitY * (230 - 150 * stabLerp) * Projectile.scale;

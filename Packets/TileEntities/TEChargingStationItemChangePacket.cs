@@ -1,9 +1,9 @@
-﻿using System.IO;
-using CalamityMod.TileEntities;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Terraria;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class TEChargingStationItemChangePacket : CalamityPacket
     {

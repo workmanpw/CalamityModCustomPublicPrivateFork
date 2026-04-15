@@ -1,8 +1,8 @@
-﻿using CalamityMod.Items.Mounts;
+using CalamityModCustomPublicPrivateFork.Items.Mounts;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Mounts
+namespace CalamityModCustomPublicPrivateFork.Buffs.Mounts
 {
     public class BumbledogeMount : ModBuff
     {

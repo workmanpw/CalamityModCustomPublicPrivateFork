@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.BiomeManagers;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -13,7 +13,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.OldDuke
+namespace CalamityModCustomPublicPrivateFork.NPCs.OldDuke
 {
     public class SulphurousSharkron : ModNPC
     {

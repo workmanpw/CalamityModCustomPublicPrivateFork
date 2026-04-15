@@ -1,14 +1,14 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class PhantasmalSoulBlue : ModProjectile, ILocalizedModType
     {
-        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/Item/PhantomSpirit") { Volume = 0.2f };
+        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PhantomSpirit") { Volume = 0.2f };
         public new string LocalizationCategory => "Projectiles.Rogue";
         private const int Lifetime = 300;
         private const int NoHomingFrames = 45;

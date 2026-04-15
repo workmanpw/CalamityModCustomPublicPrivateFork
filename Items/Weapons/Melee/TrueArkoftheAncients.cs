@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     // TODO -- CANNOT RENAME THIS to ArkoftheAncients without corrupting existing items
     public class TrueArkoftheAncients : ModItem, ILocalizedModType
@@ -135,8 +135,8 @@ namespace CalamityMod.Items.Weapons.Melee
             if (Charge <= 0)
                 return;
 
-            var barBG = Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
-            var barFG = Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
+            var barBG = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
+            var barFG = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
 
             float barScale = 1.625f;
             Vector2 barOrigin = barBG.Size() * 0.5f;

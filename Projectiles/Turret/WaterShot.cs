@@ -1,16 +1,16 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Turret
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
 {
     public class WaterShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
 
         public override void SetStaticDefaults()
@@ -51,7 +51,7 @@ namespace CalamityMod.Projectiles.Turret
             {
                 Projectile.velocity.Y -= 1.5f; // Add vertical velocity at the start
                 // play a sound frame 1.
-                var sound = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/PlantyMushMine", 3) with { Volume = 0.65f }, Projectile.Center);
+                var sound = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlantyMushMine", 3) with { Volume = 0.65f }, Projectile.Center);
 
                 Projectile.localAI[0] = 1f;
             }
@@ -68,7 +68,7 @@ namespace CalamityMod.Projectiles.Turret
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/SmallGreyscaleCircle").Value;
+            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/SmallGreyscaleCircle").Value;
             for (int i = 0; i < Projectile.oldPos.Length; i++)
             {
                 Color color = new Color(59, 175, 252);

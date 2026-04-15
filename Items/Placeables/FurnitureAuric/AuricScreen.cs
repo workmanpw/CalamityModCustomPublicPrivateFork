@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.DraedonMisc;
-using CalamityMod.Tiles.Furniture.CraftingStations;
-using CalamityMod.Tiles.FurnitureAuric;
+using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureAuric
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAuric
 {
     public class AuricScreen : ModItem, ILocalizedModType
     {

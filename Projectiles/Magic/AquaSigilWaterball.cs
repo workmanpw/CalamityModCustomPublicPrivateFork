@@ -1,5 +1,5 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Projectiles.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class AquaSigilWaterball : ModProjectile, ILocalizedModType
     {
@@ -69,7 +69,7 @@ namespace CalamityMod.Projectiles.Magic
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
 
             // All-white variant
-            Asset<Texture2D> ghostTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/AquaSigilWaterballGhost");
+            Asset<Texture2D> ghostTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/AquaSigilWaterballGhost");
 
             Color drawColor = Projectile.GetAlpha(lightColor);
 
@@ -103,7 +103,7 @@ namespace CalamityMod.Projectiles.Magic
 
         public override void OnKill(int timeLeft)
         {
-            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/UnstableCastersGauntlet/AquaSigilExplosion") { Volume = 1f, PitchVariance = 0.1f }, Projectile.Center);
+            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/UnstableCastersGauntlet/AquaSigilExplosion") { Volume = 1f, PitchVariance = 0.1f }, Projectile.Center);
 
             for (int i = 0; i < 40; i++)
             {

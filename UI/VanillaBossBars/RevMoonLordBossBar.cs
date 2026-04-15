@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using Terraria.GameContent.UI.BigProgressBar;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.UI.VanillaBossBars
+namespace CalamityModCustomPublicPrivateFork.UI.VanillaBossBars
 {
     internal class RevMoonLordBossBar : ModBossBar
     {

@@ -1,8 +1,8 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
-using CalamityMod.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -15,7 +15,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class SpectralstormCannonHoldout : BaseGunHoldoutProjectile
     {
@@ -25,7 +25,7 @@ namespace CalamityMod.Projectiles.Ranged
         public override float OffsetYDownwards => 5f;
         public override Vector2 GunTipPosition => Projectile.Center + Vector2.UnitX.RotatedBy(Projectile.rotation) * Projectile.width * 0.35f;
 
-        public static readonly SoundStyle OverheatSound = new SoundStyle("CalamityMod/Sounds/Custom/AbilitySounds/OmegaBlueAbility") with { Pitch = -0.5f };
+        public static readonly SoundStyle OverheatSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/OmegaBlueAbility") with { Pitch = -0.5f };
         public SlotId WarningSlot;
         public ref float Timer => ref Projectile.ai[0];
         public ref float SoulTimer => ref Projectile.ai[1];

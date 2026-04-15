@@ -1,6 +1,6 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.SunkenSea;
-using CalamityMod.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,11 +8,11 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Rogue
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
 {
     public class StormfrontRazor : RogueWeapon
     {
-        public static readonly SoundStyle LightningStrikeSound = new("CalamityMod/Sounds/Custom/LightningStrike");
+        public static readonly SoundStyle LightningStrikeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/LightningStrike");
         public const float LightningDamageFactor = 1.5f;
 
         public override void SetStaticDefaults()

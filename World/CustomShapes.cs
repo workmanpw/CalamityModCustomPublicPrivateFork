@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.WorldBuilding;
 
-namespace CalamityMod.World
+namespace CalamityModCustomPublicPrivateFork.World
 {
     public static class CustomShapes
     {

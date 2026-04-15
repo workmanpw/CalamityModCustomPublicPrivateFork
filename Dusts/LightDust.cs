@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.Enums;
-using CalamityMod.Systems.Graphic.PixelationSystem;
+using System;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Systems.Graphic.PixelationSystem;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Dusts
+namespace CalamityModCustomPublicPrivateFork.Dusts
 {
     public class LightDust : ModDust
     {
@@ -20,8 +20,8 @@ namespace CalamityMod.Dusts
             if (Main.dedServ)
                 return;
 
-            SolidCircle = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicCircle");
-            BloomCircle = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+            SolidCircle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle");
+            BloomCircle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
         }
 
         public override void OnSpawn(Dust dust)
@@ -59,7 +59,7 @@ namespace CalamityMod.Dusts
 
     public class LightDustPixelated : LightDust
     {
-        public override string Texture => "CalamityMod/Dusts/LightDust";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Dusts/LightDust";
 
         public override bool PreDraw(Dust dust)
         {

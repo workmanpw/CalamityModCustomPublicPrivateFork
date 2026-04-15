@@ -1,13 +1,13 @@
-﻿using CalamityMod.Items.Placeables.SunkenSea;
-using CalamityMod.Tiles.SunkenSea.Ambient;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Ambient.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.Ambient.SunkenSea
 {
     public class BranchCoralEcho : BranchCoral
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/BranchCoral";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/BranchCoral";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

@@ -1,7 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityMod.UI.DialogueDisplay.DisplayEffects
+namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects
 {
     public class BuiltEffect : DisplayEffect
     {

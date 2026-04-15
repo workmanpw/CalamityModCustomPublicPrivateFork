@@ -1,4 +1,4 @@
-﻿#nullable enable
+#nullable enable
 
 // 10FEB2026: jasper: you probably don't need this file for casual mesh use.
 // you should be careful with mesh transformations, they are intended for advanced users.
@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityMod.Graphics.Primitives;
+namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 
 public static class PrimitiveMeshExtensions
 {

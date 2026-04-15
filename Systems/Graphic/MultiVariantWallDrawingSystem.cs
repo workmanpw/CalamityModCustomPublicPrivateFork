@@ -1,11 +1,11 @@
-﻿using CalamityMod.Walls;
+using CalamityModCustomPublicPrivateFork.Walls;
 using Microsoft.Xna.Framework;
 using MonoMod.Cil;
 using Terraria;
 using Terraria.GameContent.Drawing;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     internal sealed class MultiVariantWallDrawingSystem : ModSystem
     {
@@ -65,7 +65,7 @@ namespace CalamityMod.Systems
 
         private static void LogILFailure(string reason)
         {
-            CalamityMod.Log.ILFailure("Support for Wall FrameOffset", reason);
+            ModContent.GetInstance<CalamityMod>().Logger.ILFailure("Support for Wall FrameOffset", reason);
         }
     }
 }

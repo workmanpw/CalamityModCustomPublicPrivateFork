@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
@@ -9,7 +9,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.Utilities;
 
-namespace CalamityMod.Tiles.MusicBoxes
+namespace CalamityModCustomPublicPrivateFork.Tiles.MusicBoxes
 {
     public class DraedonTalkMusicBox : ModTile
     {

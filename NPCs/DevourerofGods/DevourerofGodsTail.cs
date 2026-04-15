@@ -1,9 +1,9 @@
-﻿using System.IO;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.Projectiles.Melee.Yoyos;
-using CalamityMod.Utilities.Daybreak;
-using CalamityMod.World;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -15,7 +15,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.DevourerofGods
+namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
 {
     [LongDistanceNetSync(SyncWith = typeof(DevourerofGodsHead))]
     public class DevourerofGodsTail : ModNPC
@@ -31,11 +31,11 @@ namespace CalamityMod.NPCs.DevourerofGods
 
         public override void Load()
         {
-            string phase1IconPath = "CalamityMod/NPCs/DevourerofGods/DevourerofGodsTail_Head_Boss";
-            string phase2IconPath = "CalamityMod/NPCs/DevourerofGods/DevourerofGodsTail_P2_Head_Boss";
+            string phase1IconPath = "CalamityModCustomPublicPrivateFork/NPCs/DevourerofGods/DevourerofGodsTail_Head_Boss";
+            string phase2IconPath = "CalamityModCustomPublicPrivateFork/NPCs/DevourerofGods/DevourerofGodsTail_P2_Head_Boss";
             
-            phase1IconIndex = CalamityMod.Instance.AddBossHeadTexture(phase1IconPath, -1);
-            phase2IconIndex = CalamityMod.Instance.AddBossHeadTexture(phase2IconPath, -1);
+            phase1IconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(phase1IconPath, -1);
+            phase2IconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(phase2IconPath, -1);
         }
 
         private int invinceTime = 720;
@@ -309,14 +309,14 @@ namespace CalamityMod.NPCs.DevourerofGods
 
             if (shouldUseShader)
             {
-                if (noiseOffset == Vector2.zeroVector)
+                if (noiseOffset == Vector2.Zero)
                     noiseOffset = NPC.Center;
 
                 Main.spriteBatch.End(out snap);
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.LinearWrap, DepthStencilState.Default, RasterizerState.CullNone, null, Main.GameViewMatrix.ZoomMatrix);
 
                 MiscShaderData dissolveShader = GameShaders.Misc["CalamityMod:Dissolve"];
-                Texture2D dissolveTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/HarshNoise").Value;
+                Texture2D dissolveTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/HarshNoise").Value;
 
                 dissolveShader.Shader.Parameters["noiseScale"].SetValue(1f);
                 dissolveShader.Shader.Parameters["dissolveIntensity"].SetValue(CalamityDrawParameterNPC.DoGDeathAnimationTimer / 600f);

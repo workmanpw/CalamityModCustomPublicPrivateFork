@@ -1,8 +1,8 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureCosmilite
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureCosmilite
 {
     public class CosmiliteDresser : ModItem, ILocalizedModType
     {

@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityMod.Packets;
+using CalamityModCustomPublicPrivateFork.Packets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public class CalamityNetcode : ModSystem
     {
@@ -59,18 +59,18 @@ namespace CalamityMod
                     // Throw an exception now instead of allowing the network stream to corrupt.
                     //
 
-                    CalamityMod.Log.Error($"Failed to parse Calamity packet: No Calamity packet exists with ID {netID}.");
+                    ModContent.GetInstance<CalamityMod>().Logger.Error($"Failed to parse Calamity packet: No Calamity packet exists with ID {netID}.");
                     throw new Exception("Failed to parse Calamity packet: Invalid Calamity packet ID.");
                 }
             }
             catch (Exception e)
             {
                 if (e is EndOfStreamException eose)
-                    CalamityMod.Log.Error("Failed to parse Calamity packet: Packet was too short, missing data, or otherwise corrupt.", eose);
+                    ModContent.GetInstance<CalamityMod>().Logger.Error("Failed to parse Calamity packet: Packet was too short, missing data, or otherwise corrupt.", eose);
                 else if (e is ObjectDisposedException ode)
-                    CalamityMod.Log.Error("Failed to parse Calamity packet: Packet reader disposed or destroyed.", ode);
+                    ModContent.GetInstance<CalamityMod>().Logger.Error("Failed to parse Calamity packet: Packet reader disposed or destroyed.", ode);
                 else if (e is IOException ioe)
-                    CalamityMod.Log.Error("Failed to parse Calamity packet: An unknown I/O error occurred.", ioe);
+                    ModContent.GetInstance<CalamityMod>().Logger.Error("Failed to parse Calamity packet: An unknown I/O error occurred.", ioe);
                 else
                     throw; // this either will crash the game or be caught by TML's packet policing
             }

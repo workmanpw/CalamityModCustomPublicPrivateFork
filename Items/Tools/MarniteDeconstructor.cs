@@ -1,10 +1,10 @@
-﻿using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Tools
+namespace CalamityModCustomPublicPrivateFork.Items.Tools
 {
     //Its not like its a renamed version of the spear, but i put this here more as a way to "refund" the item, so it doesnt end up rotting as an unloaded item.
     [LegacyName("MarniteSpear")]

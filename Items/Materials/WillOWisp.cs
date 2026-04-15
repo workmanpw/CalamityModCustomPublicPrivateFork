@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Materials
+namespace CalamityModCustomPublicPrivateFork.Items.Materials
 {
     public class WillOWisp : ModItem, ILocalizedModType
     {
@@ -38,7 +38,7 @@ namespace CalamityMod.Items.Materials
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
-            var tex = textureVariant == 0 ? TextureAssets.Item[Type] : CalamityUtils.GetTextureEfficient(ref altTexture, "CalamityMod/Items/Materials/WillOWisp2");
+            var tex = textureVariant == 0 ? TextureAssets.Item[Type] : CalamityUtils.GetTextureEfficient(ref altTexture, "CalamityModCustomPublicPrivateFork/Items/Materials/WillOWisp2");
             float rotationAmount = 0.25f;
             float rotationSpeedMult = 0.033f;
             spriteBatch.Draw(tex.Value, Item.Center - Main.screenPosition, null, lightColor, rotation + (rotationAmount * (float)Math.Sin(Item.whoAmI + Main.timeForVisualEffects * rotationSpeedMult)), tex.Size() / 2, scale, SpriteEffects.None, 0);
@@ -51,7 +51,7 @@ namespace CalamityMod.Items.Materials
                 return true;
             else
             {
-                var tex = CalamityUtils.GetTextureEfficient(ref altTexture, "CalamityMod/Items/Materials/WillOWisp2");
+                var tex = CalamityUtils.GetTextureEfficient(ref altTexture, "CalamityModCustomPublicPrivateFork/Items/Materials/WillOWisp2");
                 spriteBatch.Draw(tex.Value, position, null, drawColor, 0, tex.Size() / 2, scale, SpriteEffects.None, 0);
                 return false;
             }

@@ -1,18 +1,18 @@
-﻿using CalamityMod.Events;
-using CalamityMod.Items.Materials;
-using CalamityMod.NPCs.DesertScourge;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.NPCs.DesertScourge;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     [LegacyName("DriedSeafood")]
     public class DesertMedallion : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.SummonItems";
-        public static readonly SoundStyle SummonSound = new("CalamityMod/Sounds/Custom/DesertScourge/DesertScourgeSummon");
+        public static readonly SoundStyle SummonSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DesertScourge/DesertScourgeSummon");
 
         public override void SetStaticDefaults()
         {

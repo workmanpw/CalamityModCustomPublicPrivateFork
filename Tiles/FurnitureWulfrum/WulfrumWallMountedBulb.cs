@@ -1,5 +1,5 @@
-﻿using CalamityMod.Sounds;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.FurnitureWulfrum
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum
 {
     public class WulfrumWallMountedBulb : ModTile
     {
@@ -97,7 +97,7 @@ namespace CalamityMod.Tiles.FurnitureWulfrum
             if (Main.tile[i, j].IsTileActuallyInvisible())
                 return;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureWulfrum/WulfrumWallMountedBulb_Glow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureWulfrum/WulfrumWallMountedBulb_Glow");
             Texture2D tex = GlowTexture.Value;
 
             Tile tile = Main.tile[i, j];

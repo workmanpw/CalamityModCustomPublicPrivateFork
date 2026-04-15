@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.DataStructures;
-using CalamityMod.Schematics;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Schematics;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Generation;
 using Terraria.ID;
 using Terraria.WorldBuilding;
 
-namespace CalamityMod.World.Planets
+namespace CalamityModCustomPublicPrivateFork.World.Planets
 {
     public class MainPlanet : Planetoid
     {

@@ -1,22 +1,22 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Enums;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Accessories.Vanity;
-using CalamityMod.Items.Fishing;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.PermanentBoosters;
-using CalamityMod.Items.Placeables.Furniture.Paintings;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.World;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.Fishing;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.PermanentBoosters;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.World;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items
+namespace CalamityModCustomPublicPrivateFork.Items
 {
     public class CalamityGlobalItemLoot : GlobalItem
     {

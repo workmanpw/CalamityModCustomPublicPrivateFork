@@ -1,18 +1,18 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class RetaliationProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         public float radius = 25f;
         public int time = 0;
@@ -53,7 +53,7 @@ namespace CalamityMod.Projectiles.Typeless
 
             if (time % 2 == 0) // The trail
             {
-                Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityMod/Particles/SmallBloom", false, 11, 0.11f, mainColor, new Vector2(Utils.Remap(Projectile.velocity.Length(), 0, 5, 1, 0.6f, true), 1f), true, false, 0, false, false, Utils.Remap(Projectile.velocity.Length(), 0, 5, 0, 0.9f, true));
+                Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 11, 0.11f, mainColor, new Vector2(Utils.Remap(Projectile.velocity.Length(), 0, 5, 1, 0.6f, true), 1f), true, false, 0, false, false, Utils.Remap(Projectile.velocity.Length(), 0, 5, 0, 0.9f, true));
                 GeneralParticleHandler.SpawnParticle(spark2);
             }
 
@@ -100,12 +100,12 @@ namespace CalamityMod.Projectiles.Typeless
         {
             Projectile.timeLeft = Main.rand.Next(50, 75 + 1);
 
-            SoundStyle sound = new("CalamityMod/Sounds/NPCHit/PerfHiveHit", 3);
+            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/PerfHiveHit", 3);
             SoundEngine.PlaySound(sound with { Volume = 0.3f, Pitch = Main.rand.NextFloat(-0.1f, 0.2f), MaxInstances = 15 }, Projectile.Center);
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Particles/BigHeart").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BigHeart").Value;
             Vector2 squash = new Vector2(Utils.Remap(Projectile.velocity.Length(), 1, 7, 1, 0.5f), Utils.Remap(Projectile.velocity.Length(), 1, 7, 1, 3.2f));
 
             for (int i = 0; i < 2; i++)

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.MainMenu
+namespace CalamityModCustomPublicPrivateFork.MainMenu
 {
     // Intentionally masquerades over the previous main menu, which is now the Classic main menu.
     public class CalamityMainMenu : ModMenu
@@ -43,18 +43,18 @@ namespace CalamityMod.MainMenu
         public float remixLogoRotation = 0f;
         public override string DisplayName => CalamityUtils.GetTextValue("UI.MainMenu");
 
-        public override Asset<Texture2D> Logo => ModContent.Request<Texture2D>("CalamityMod/MainMenu/Logo");
-        public override Asset<Texture2D> SunTexture => ModContent.Request<Texture2D>("CalamityMod/Backgrounds/BlankPixel");
-        public override Asset<Texture2D> MoonTexture => ModContent.Request<Texture2D>("CalamityMod/Backgrounds/BlankPixel");
+        public override Asset<Texture2D> Logo => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/MainMenu/Logo");
+        public override Asset<Texture2D> SunTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/BlankPixel");
+        public override Asset<Texture2D> MoonTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/BlankPixel");
 
-        public override int Music => CalamityMod.Instance.GetMusicFromMusicMod("CalamityTitle") ?? MusicID.Title;
+        public override int Music => ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("CalamityTitle") ?? MusicID.Title;
 
         public override ModSurfaceBackgroundStyle MenuBackgroundStyle => ModContent.GetInstance<NullSurfaceBackground>();
 
         // Before drawing the logo, draw the entire Calamity background. This way, the typical parallax background is skipped entirely.
         public override bool PreDrawLogo(SpriteBatch spriteBatch, ref Vector2 logoDrawCenter, ref float logoRotation, ref float logoScale, ref Color drawColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/MainMenu/ModernMenuBackground").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/MainMenu/ModernMenuBackground").Value;
 
             // Calculate the draw position offset and scale in the event that someone is using a non-16:9 monitor
             Vector2 drawOffset = Vector2.Zero;
@@ -123,7 +123,7 @@ namespace CalamityMod.MainMenu
             Cinders.RemoveAll(c => c.Time >= c.Lifetime);
 
             // Draw cinders.
-            Texture2D cinderTexture = ModContent.Request<Texture2D>("CalamityMod/Skies/CalamitasCinder").Value;
+            Texture2D cinderTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/CalamitasCinder").Value;
             for (int i = 0; i < Cinders.Count; i++)
             {
                 Vector2 drawPosition = Cinders[i].Center;

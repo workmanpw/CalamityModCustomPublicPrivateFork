@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Effects;
-using CalamityMod.Items.Placeables.SunkenSea;
-using CalamityMod.Systems;
-using CalamityMod.Walls;
+using System;
+using CalamityModCustomPublicPrivateFork.Effects;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Walls;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea
 {
     public class SeaPrism : ModTile
     {
@@ -49,10 +49,10 @@ namespace CalamityMod.Tiles.SunkenSea
             this.RegisterBlendMergeWith(ModContent.TileType<Navystone>());
             this.RegisterBlendMergeWith(ModContent.TileType<EutrophicSand>());
 
-            Blue = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/SeaPrism_Blue");
-            Purple = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/SeaPrism_Purple");
-            Green = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/SeaPrism_Green");
-            Glint = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/SeaPrism_GlintMask");
+            Blue = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/SeaPrism_Blue");
+            Purple = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/SeaPrism_Purple");
+            Green = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/SeaPrism_Green");
+            Glint = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/SeaPrism_GlintMask");
         }
 
         public override void NumDust(int i, int j, bool fail, ref int num)
@@ -102,16 +102,16 @@ namespace CalamityMod.Tiles.SunkenSea
 
     public class SeaPrismWall : MultiVariantModWall
     {
-        public override string Texture => "CalamityMod/Walls/SeaPrismWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/SeaPrismWall";
 
         internal static FramedMaskTexture GlowMaskBlue;
         internal static FramedMaskTexture GlowMaskPurple;
         internal static FramedMaskTexture GlowMaskGreen;
         public override void SetStaticDefaults()
         {
-            GlowMaskBlue = new("CalamityMod/Walls/SeaPrismWall_Blue", 36, 36);
-            GlowMaskPurple = new("CalamityMod/Walls/SeaPrismWall_Purple", 36, 36);
-            GlowMaskGreen = new("CalamityMod/Walls/SeaPrismWall_Green", 36, 36);
+            GlowMaskBlue = new("CalamityModCustomPublicPrivateFork/Walls/SeaPrismWall_Blue", 36, 36);
+            GlowMaskPurple = new("CalamityModCustomPublicPrivateFork/Walls/SeaPrismWall_Purple", 36, 36);
+            GlowMaskGreen = new("CalamityModCustomPublicPrivateFork/Walls/SeaPrismWall_Green", 36, 36);
             Main.wallHouse[Type] = true;
             DustType = DustID.RainCloud;
 
@@ -131,7 +131,7 @@ namespace CalamityMod.Tiles.SunkenSea
 
     public class UnsafeSeaPrismWall : MultiVariantModWall
     {
-        public override string Texture => "CalamityMod/Walls/SeaPrismWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/SeaPrismWall";
         public override void SetStaticDefaults()
         {
             Main.wallHouse[Type] = false;
@@ -173,10 +173,10 @@ namespace CalamityMod.Tiles.SunkenSea
             Main.tileSpelunker[Type] = true;
             MinPick = 55;
 
-            BlueCrystals = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/SeaPrismCrystals");
-            PurpleCrystals = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/SeaPrismCrystals_Purple");
-            GreenCrystals = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/SeaPrismCrystals_Green");
-            Glint = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/SeaPrismCrystals_Glint");
+            BlueCrystals = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/SeaPrismCrystals");
+            PurpleCrystals = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/SeaPrismCrystals_Purple");
+            GreenCrystals = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/SeaPrismCrystals_Green");
+            Glint = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/SeaPrismCrystals_Glint");
         }
 
         public override void NumDust(int i, int j, bool fail, ref int num)
@@ -302,10 +302,10 @@ namespace CalamityMod.Tiles.SunkenSea
             TileObjectData.addAlternate(24);
             TileObjectData.addTile(Type);
 
-            BlueCrystals = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/MediumSeaPrismCrystal_Blue");
-            PurpleCrystals = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/MediumSeaPrismCrystal_Purple");
-            GreenCrystals = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/MediumSeaPrismCrystal_Green");
-            Glint = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/MediumSeaPrismCrystal_Glint");
+            BlueCrystals = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/MediumSeaPrismCrystal_Blue");
+            PurpleCrystals = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/MediumSeaPrismCrystal_Purple");
+            GreenCrystals = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/MediumSeaPrismCrystal_Green");
+            Glint = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/MediumSeaPrismCrystal_Glint");
         }
 
         public override void NumDust(int i, int j, bool fail, ref int num)
@@ -367,6 +367,12 @@ namespace CalamityMod.Tiles.SunkenSea
 
             SeaPrismWallType = ModContent.WallType<SeaPrismWall>();
             UnsafeSeaPrismWallType = ModContent.WallType<UnsafeSeaPrismWall>();
+        }
+
+        public override void OnModUnload()
+        {
+            On_Main.DrawTiles -= DrawSeaPrismsAndCrystals;
+            On_Main.DrawWalls -= DrawSeaPrismWalls;
         }
 
         private static void GetScreenDrawArea(Vector2 screenPosition, Vector2 offSet, out int firstTileX, out int lastTileX, out int firstTileY, out int lastTileY)

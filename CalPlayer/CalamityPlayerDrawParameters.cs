@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Linq;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Armor.LunicCorps;
-using CalamityMod.Packets;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Armor.LunicCorps;
+using CalamityModCustomPublicPrivateFork.Packets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.CalPlayer
+namespace CalamityModCustomPublicPrivateFork.CalPlayer
 {
     // This should be a thing for reason:
     // - Draw call invoke faster than Player.Update on different thread

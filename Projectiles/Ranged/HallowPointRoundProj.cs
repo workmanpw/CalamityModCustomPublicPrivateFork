@@ -1,12 +1,12 @@
-﻿using CalamityMod.Items.Ammo;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Items.Ammo;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class HallowPointRoundProj : ModProjectile, ILocalizedModType
     {

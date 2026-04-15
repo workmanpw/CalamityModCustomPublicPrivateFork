@@ -1,6 +1,6 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureOtherworldly
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureOtherworldly
 {
     [LegacyName("OccultWorkbench", "OccultWorkBench")]
     public class OtherworldlyWorkBench : ModItem, ILocalizedModType

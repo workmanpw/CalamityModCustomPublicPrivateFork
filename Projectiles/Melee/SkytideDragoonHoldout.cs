@@ -1,9 +1,9 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     [PierceResistException]
     public class SkytideDragoonHoldout : BaseCustomUseStyleProjectile, ILocalizedModType
@@ -21,7 +21,7 @@ namespace CalamityMod.Projectiles.Melee
         public override int AssignedItemID => ModContent.ItemType<SkytideDragoon>();
 
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<SkytideDragoon>();
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/SkytideDragoon";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/SkytideDragoon";
         public override float HitboxOutset => 245;
 
         public override Vector2 HitboxSize => new Vector2(40, 40); // long thin hitbox for a spear is done in collision, the X here determines hitbox width
@@ -162,7 +162,7 @@ namespace CalamityMod.Projectiles.Melee
 
                             if (i % 2 == 0)
                             {
-                                Particle orb = new CustomSpark(pos, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 35, 0.75f, color * 0.75f, new Vector2(1f, 1));
+                                Particle orb = new CustomSpark(pos, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 35, 0.75f, color * 0.75f, new Vector2(1f, 1));
                                 GeneralParticleHandler.SpawnParticle(orb);
                             }
                         }
@@ -204,7 +204,7 @@ namespace CalamityMod.Projectiles.Melee
 
                     if (time == (int)(timeMax * 0.4f))
                     {
-                        SoundStyle fire = new("CalamityMod/Sounds/Item/SkytideSwing");
+                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SkytideSwing");
                         SoundEngine.PlaySound(fire with { Volume = 1f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f) - (fancySwing ? 0.3f : 0) }, Projectile.Center);
                     }
                     if ( time > (int)(timeMax * 0.4f) && time < (int)(timeMax * 0.7f))
@@ -219,7 +219,7 @@ namespace CalamityMod.Projectiles.Melee
                             if (fancySwing) // Call down the bolt
                             {
                                 Owner.SetScreenshake(3f);
-                                SoundStyle sound = new("CalamityMod/Sounds/Item/SkytideBolt");
+                                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SkytideBolt");
                                 SoundEngine.PlaySound(sound with { Volume = 0.8f }, Projectile.Center);
                                 Projectile proj = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), Owner.Center + new Vector2(0, -600), new Vector2(0, 10), ModContent.ProjectileType<DragoonBigBolt>(), (int)(Projectile.damage * 10), Projectile.knockBack, Projectile.owner, 0, 0.5f);
                                 proj.timeLeft = 45;
@@ -229,9 +229,9 @@ namespace CalamityMod.Projectiles.Melee
                             else if (redirected) // Redirect the bolt
                             {
                                 Owner.SetScreenshake(4.5f);
-                                SoundStyle fire = new("CalamityMod/Sounds/Item/SkytideBolt");
+                                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SkytideBolt");
                                 SoundEngine.PlaySound(fire with { Volume = 1f, Pitch = -0.2f }, Projectile.Center);
-                                SoundStyle fire2 = new("CalamityMod/Sounds/Item/AuricBulletHit");
+                                SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AuricBulletHit");
                                 SoundEngine.PlaySound(fire2 with { Volume = 0.5f, Pitch = 0.2f }, Projectile.Center);
                                 Projectile proj = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), Owner.Center - aimVel * 2, aimVel.SafeNormalize(Vector2.UnitX) * -10, ModContent.ProjectileType<DragoonBigBolt>(), (int)(Projectile.damage * 10), Projectile.knockBack, Projectile.owner, 0, 1f);
                                 swingCount = -1;
@@ -292,9 +292,9 @@ namespace CalamityMod.Projectiles.Melee
             if ((damageDone <= 2 || (target.life <= 0 && target.realLife == -1)) && Projectile.numHits > 0)
                 Projectile.numHits -= 1;
 
-            SoundStyle fire = new("CalamityMod/Sounds/Item/AuricBulletHit");
+            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AuricBulletHit");
             SoundEngine.PlaySound(fire with { Volume = 0.55f, Pitch = 0.8f }, Projectile.Center);
-            SoundStyle fire2 = new("CalamityMod/Sounds/Custom/DefenseDamage");
+            SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DefenseDamage");
             SoundEngine.PlaySound(fire2 with { Volume = 0.65f, Pitch = 0.4f }, Projectile.Center);
 
             Vector2 launchVel = Utils.DirectionTo(Owner.Center, Owner.Calamity().mouseWorld);
@@ -314,8 +314,8 @@ namespace CalamityMod.Projectiles.Melee
             // Only draw the projectile if the projectile's owner is currently using the item this projectile is attached to.
             if ((useAnim > 0 || DrawUnconditionally) && Owner.ItemAnimationActive)
             {
-                Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/SkytideDragoonHoldout");
-                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/SkytideDragoonGlow");
+                Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SkytideDragoonHoldout");
+                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SkytideDragoonGlow");
                 float fxRot = Projectile.rotation + MathHelper.ToRadians(45);
                 float fxPosRot = Projectile.rotation - MathHelper.ToRadians(45);
                 float r = FlipAsSword ? MathHelper.ToRadians(90) : 0f;
@@ -326,7 +326,7 @@ namespace CalamityMod.Projectiles.Melee
                 for (int i = 0; i < 25; i++)
                 {
                     // Outline effect
-                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/SkytideDragoonGhost").Value;
+                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SkytideDragoonGhost").Value;
                     Vector2 drawOffset = (MathHelper.TwoPi * i / 25f).ToRotationVector2() * 7.2f * fadeIn;
                     Main.EntitySpriteDraw(centerTexture, drawPos + drawOffset, centerTexture.Frame(1, FrameCount, 0, Frame), auraColor, Projectile.rotation + RotationOffset + r, FlipAsSword ? new Vector2(tex.Width() - SpriteOrigin.X, SpriteOrigin.Y) : SpriteOrigin, Projectile.scale, spriteEffects != SpriteEffects.None ? spriteEffects : (FlipAsSword ? SpriteEffects.FlipHorizontally : SpriteEffects.None));
                 }
@@ -335,8 +335,8 @@ namespace CalamityMod.Projectiles.Melee
                 for (int i = 0; i < 2; i++)
                     Main.EntitySpriteDraw(glowTex.Value, drawPos, glowTex.Frame(1, FrameCount, 0, Frame), glowColor, Projectile.rotation + RotationOffset + r, FlipAsSword ? new Vector2(glowTex.Width() - SpriteOrigin.X, SpriteOrigin.Y) : SpriteOrigin, Projectile.scale, spriteEffects != SpriteEffects.None ? spriteEffects : (FlipAsSword ? SpriteEffects.FlipHorizontally : SpriteEffects.None));
 
-                Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/ArchSmear");
-                Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+                Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/ArchSmear");
+                Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
                 float sine = (float)Math.Sin(Main.GlobalTimeWrappedHourly * 55.5f / MathHelper.Pi);
                 for (int i = 0; i < 6; i++)
                 {

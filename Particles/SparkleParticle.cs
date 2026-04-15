@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class SparkleParticle : Particle
     {
-        public override string Texture => "CalamityMod/Particles/Sparkle2";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Sparkle2";
         public bool UseAltVisual = true;
         public override bool UseAdditiveBlend => UseAltVisual;
         public override bool UseCustomDraw => true;
@@ -48,7 +48,7 @@ namespace CalamityMod.Particles
         public override void CustomDraw(SpriteBatch spriteBatch)
         {
             Texture2D starTexture = ModContent.Request<Texture2D>(Texture).Value;
-            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
             //Ajust the bloom's texture to be the same size as the star's
             float properBloomSize = (float)starTexture.Height / (float)bloomTexture.Height;
 

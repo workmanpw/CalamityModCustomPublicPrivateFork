@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.FurnitureNavystone.FurnitureAncientNavystone;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone.FurnitureAncientNavystone;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone
 {
     [LegacyName("EutrophicDoor")]
     public class AncientNavystoneDoor : ModItem, ILocalizedModType

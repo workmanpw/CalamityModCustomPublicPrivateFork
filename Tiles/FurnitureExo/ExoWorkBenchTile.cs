@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.FurnitureExo;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureExo
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
 {
     [LegacyName("ExoWorkbenchTile")]
     public class ExoWorkBenchTile : ModTile

@@ -1,8 +1,8 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureVoid
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureVoid
 {
     public class VoidChandelier : ModItem, ILocalizedModType
     {

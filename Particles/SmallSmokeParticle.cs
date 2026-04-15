@@ -1,12 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class SmallSmokeParticle : Particle
     {
-        public override string Texture => "CalamityMod/Particles/SmallSmoke";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/SmallSmoke";
 
         private float Opacity;
         private Color ColorFire;

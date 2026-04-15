@@ -1,8 +1,8 @@
-﻿using CalamityMod.NPCs;
-using CalamityMod.NPCs.ExoMechs;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class DraedonExoSelectMusicScene : BaseMusicSceneEffect
     {

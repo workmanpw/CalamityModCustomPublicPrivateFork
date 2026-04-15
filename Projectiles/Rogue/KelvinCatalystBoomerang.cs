@@ -1,17 +1,17 @@
-﻿using System.IO;
-using CalamityMod.Projectiles.Typeless;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class KelvinCatalystBoomerang : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/KelvinCatalyst";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/KelvinCatalyst";
         public int AIState = 0;
 
         public override void SetStaticDefaults()

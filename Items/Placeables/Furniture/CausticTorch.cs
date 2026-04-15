@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.Abyss;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Furniture
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture
 {
     public class CausticTorch : ModItem, ILocalizedModType
     {

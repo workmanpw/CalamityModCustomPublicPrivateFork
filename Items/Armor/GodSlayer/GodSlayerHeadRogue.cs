@@ -1,13 +1,13 @@
-﻿using CalamityMod.CalPlayer.Dashes;
-using CalamityMod.Items.Materials;
-using CalamityMod.NPCs.DevourerofGods;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.GodSlayer
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.GodSlayer
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("GodSlayerMask")]

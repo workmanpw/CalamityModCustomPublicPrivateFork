@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Events;
-using CalamityMod.Graphics;
-using CalamityMod.Systems.Graphic;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Graphics;
+using CalamityModCustomPublicPrivateFork.Systems.Graphic;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -16,7 +16,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
 {
     public class DeerclopsAI : VanillaAIOverride
     {
@@ -24,7 +24,7 @@ namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
         public const float IncreaseDRTriggerDistance = 750f;
         public const float MaxDRIncreaseDistance = 1200f;
         public static float borderScale = 5f;
-        public static string ArenaTexPath = "CalamityMod/Particles/LargeBloom";
+        public static string ArenaTexPath = "CalamityModCustomPublicPrivateFork/Particles/LargeBloom";
 
         // Vanilla values
         public static int DebrisDamage = 18; // 72

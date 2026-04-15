@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Placeables.Astral;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Astral;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 
-namespace CalamityMod.Items.Dyes
+namespace CalamityModCustomPublicPrivateFork.Items.Dyes
 {
     public class AstralDye : BaseDye
     {

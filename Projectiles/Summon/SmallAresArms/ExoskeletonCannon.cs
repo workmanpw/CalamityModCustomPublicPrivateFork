@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.InverseKinematics;
-using CalamityMod.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.InverseKinematics;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon.SmallAresArms
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
 {
     public abstract class ExoskeletonCannon : ModProjectile, ILocalizedModType
     {
@@ -186,13 +186,13 @@ namespace CalamityMod.Projectiles.Summon.SmallAresArms
 
                 if (i == 0)
                 {
-                    segmentTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ArmPart1").Value;
-                    glowmaskTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ArmPart1Glowmask").Value;
+                    segmentTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ArmPart1").Value;
+                    glowmaskTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ArmPart1Glowmask").Value;
                 }
                 else
                 {
-                    segmentTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ArmPart2").Value;
-                    glowmaskTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ArmPart2Glowmask").Value;
+                    segmentTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ArmPart2").Value;
+                    glowmaskTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ArmPart2Glowmask").Value;
                 }
 
                 Rectangle segmentFrame = segmentTexture.Frame(1, 9, 0, frame);
@@ -219,7 +219,7 @@ namespace CalamityMod.Projectiles.Summon.SmallAresArms
             // Draw the shoulders on top of everything else.
             Vector2 shoulderPosition = Limbs.ConnectPoint + DrawOffset * Projectile.scale;
             Color shoulderColor = Lighting.GetColor(Limbs.ConnectPoint.ToTileCoordinates());
-            Texture2D shoulderTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ArmTopShoulder").Value;
+            Texture2D shoulderTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ArmTopShoulder").Value;
             SpriteEffects shoulderDirection = OwnerRestingOffset.X < 0f ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
             Rectangle shoulderFrame = shoulderTexture.Frame(1, 9, 0, frame);
             Main.EntitySpriteDraw(shoulderTexture, shoulderPosition - Main.screenPosition, shoulderFrame, Projectile.GetAlpha(shoulderColor), 0f, shoulderFrame.Size() * 0.5f, Projectile.scale, shoulderDirection, 0);

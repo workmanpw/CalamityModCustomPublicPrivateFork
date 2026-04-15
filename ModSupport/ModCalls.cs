@@ -1,22 +1,24 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.CalPlayer;
-using CalamityMod.Events;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.TownNPCs;
-using CalamityMod.Systems;
-using CalamityMod.Systems.Collections;
-using CalamityMod.UI;
-using CalamityMod.UI.CalamitasEnchants;
-using CalamityMod.UI.DraedonSummoning;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
+using CalamityModCustomPublicPrivateFork.UI;
+using CalamityModCustomPublicPrivateFork.UI.CalamitasEnchants;
+using CalamityModCustomPublicPrivateFork.UI.DraedonSummoning;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.UI.Elements;
 using Terraria.Localization;
+using Terraria.ModLoader;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public class ModCalls
     {
@@ -2061,11 +2063,11 @@ namespace CalamityMod
                     return null;
 
                 case "LoadParticleInstances":
-                    CalamityMod.Log.Warn("This mod call is deprecated. Calamity automatically registers particles.");
+                    ModContent.GetInstance<CalamityMod>().Logger.Warn("This mod call is deprecated. Calamity automatically registers particles.");
                     return null;
 
                 case "RegisterModCooldowns":
-                    CalamityMod.Log.Warn("This mod call is deprecated. Calamity automatically registers cooldowns.");
+                    ModContent.GetInstance<CalamityMod>().Logger.Warn("This mod call is deprecated. Calamity automatically registers cooldowns.");
                     return null;
 
                 case "GetSummonerNerfDisabledByItem":

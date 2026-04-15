@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems.Graphic.LiquidSystem
+namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
 {
     public class ModLavaStyleLoader : ModSystem
     {

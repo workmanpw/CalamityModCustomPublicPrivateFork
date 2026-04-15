@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories.Wings
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Wings
 {
     [AutoloadEquip(EquipType.Wings)]
     public class SkylineWings : BaseWings

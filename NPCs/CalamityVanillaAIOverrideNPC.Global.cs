@@ -1,9 +1,9 @@
-﻿using System;
-using CalamityMod.Events;
-using CalamityMod.ExtraTextures;
-using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses;
-using CalamityMod.Systems.Collections;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.ExtraTextures;
+using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,7 +12,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs;
+namespace CalamityModCustomPublicPrivateFork.NPCs;
 
 public sealed partial class CalamityVanillaAIOverrideNPC : GlobalNPC
 {
@@ -324,7 +324,7 @@ public sealed partial class CalamityVanillaAIOverrideNPC : GlobalNPC
             Texture2D forcefieldTexture = SupremeCalamitas.SupremeCalamitas.ForcefieldTexture.Value;
 
             if (npc.type == NPCID.CultistBoss)
-                GameShaders.Misc["CalamityMod:SupremeShield"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/EternityStreak"));
+                GameShaders.Misc["CalamityMod:SupremeShield"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/EternityStreak"));
             else
                 GameShaders.Misc["CalamityMod:SupremeShield"].UseImage1("Images/Misc/noise");
 
@@ -352,7 +352,7 @@ public sealed partial class CalamityVanillaAIOverrideNPC : GlobalNPC
         else if (npc.type == NPCID.Probe)
         {
             float eyeTelegraphGateValue = (NPC.IsMechQueenUp ? DestroyerAI.ProbeLaserGateValue_Mechdusa : revenge ? DestroyerAI.ProbeLaserGateValue_Rev : DestroyerAI.ProbeLaserGateValue) - DestroyerAI.ProbeLaserTelegraphTime;
-            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/Sparkle").Value;
+            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle").Value;
             Vector2 halfSize = npc.frame.Size() / 2;
 
             Vector2 drawPosition = npc.Center - screenPos + Vector2.UnitX.RotatedBy(npc.rotation) * (npc.width * 0.45f * npc.spriteDirection) + Vector2.UnitY * npc.gfxOffY;

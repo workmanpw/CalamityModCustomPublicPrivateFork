@@ -1,8 +1,8 @@
-﻿using Terraria.ID;
+using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityMod.Walls;
+using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
 
-namespace CalamityMod.Items.Placeables.Walls
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
 {
     [LegacyName("ChaoticBrickWall")]
     public class ScoriaBrickWall : ModItem, ILocalizedModType

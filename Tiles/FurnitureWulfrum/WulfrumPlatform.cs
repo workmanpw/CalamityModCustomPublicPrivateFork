@@ -1,11 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureWulfrum
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum
 {
     public class WulfrumPlatform : ModTile
     {
@@ -15,7 +15,7 @@ namespace CalamityMod.Tiles.FurnitureWulfrum
         {
             if (!Main.dedServ)
             {
-                GlowTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureWulfrum/WulfrumPlatform_Glow", AssetRequestMode.ImmediateLoad).Value;
+                GlowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureWulfrum/WulfrumPlatform_Glow", AssetRequestMode.ImmediateLoad).Value;
             }
             this.SetUpPlatform(ModContent.ItemType<Items.Placeables.FurnitureWulfrum.WulfrumPlatform>(), true);
         }

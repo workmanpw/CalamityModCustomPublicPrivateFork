@@ -1,16 +1,16 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.SupremeCalamitas;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class BrimstoneHellblast : ModProjectile, ILocalizedModType
     {

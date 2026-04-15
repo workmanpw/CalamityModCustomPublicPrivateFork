@@ -1,7 +1,7 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.DraedonMisc;
-using CalamityMod.Items.Placeables.DraedonStructures;
-using CalamityMod.TileEntities;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.DraedonStructures
+namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
 {
     public class ChargingStation : ModTile
     {
@@ -124,7 +124,7 @@ namespace CalamityMod.Tiles.DraedonStructures
             // Grab the tile entity because its glowmask depends on whether it's currently charging.
             TEChargingStation charger = CalamityUtils.FindTileEntity<TEChargingStation>(i, j, Width, Height, SheetSquare);
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonStructures/ChargingStation_Glow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonStructures/ChargingStation_Glow");
             Vector2 screenOffset = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
             Vector2 drawOffset = new Vector2(i * 16 - Main.screenPosition.X, j * 16 - Main.screenPosition.Y) + screenOffset;
             Color drawColor = charger?.LightColor ?? Color.Red;

@@ -1,21 +1,21 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
-using CalamityMod.Particles;
-using CalamityMod.Items.Weapons.Typeless;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Projectiles.Typeless;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class EquanimityProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/Equanimity";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/Equanimity";
 
         public static int ChargeupTime = 10;
         public static int Lifetime = 500;
@@ -173,14 +173,14 @@ namespace CalamityMod.Projectiles.Rogue
                     SoundEngine.PlaySound(DeadSunsWind.Explosion with { Volume = 0.4f }, Projectile.Center);
                     for (int i = 0; i < 3; i++)
                     {
-                        Particle innerglow = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Indigo, "CalamityMod/Particles/LargeBloom", Vector2.One, Main.rand.NextFloat(-10, 10), 0, 0.3f, 15);
+                        Particle innerglow = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Indigo, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", Vector2.One, Main.rand.NextFloat(-10, 10), 0, 0.3f, 15);
                         GeneralParticleHandler.SpawnParticle(innerglow);
                     }
-                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityMod/Particles/FlameExplosion2", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.04f, 25, false, 0.85f);
+                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion2", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.04f, 25, false, 0.85f);
                     GeneralParticleHandler.SpawnParticle(explosion);
-                    Particle explosion2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityMod/Particles/FlameExplosion2", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.07f, 25, false, 0.85f);
+                    Particle explosion2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion2", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.07f, 25, false, 0.85f);
                     GeneralParticleHandler.SpawnParticle(explosion2);
-                    Particle explosion3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Indigo * 0.55f, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0.07f, 0.08f, 30);
+                    Particle explosion3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Indigo * 0.55f, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0.07f, 0.08f, 30);
                     GeneralParticleHandler.SpawnParticle(explosion3);
                     for (int s = 0; s < 13; s++)
                     {
@@ -204,18 +204,18 @@ namespace CalamityMod.Projectiles.Rogue
                     SoundEngine.PlaySound(LunicEye.UseSound with { Volume = 0.7f }, Projectile.Center);
                     for (int i = 0; i < 3; i++)
                     {
-                        Particle innerglow = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightPink, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0, 0.3f, 15);
+                        Particle innerglow = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightPink, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0, 0.3f, 15);
                         GeneralParticleHandler.SpawnParticle(innerglow);
                     }
-                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.WhiteSmoke, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.07f, 20, true);
+                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.WhiteSmoke, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.07f, 20, true);
                     GeneralParticleHandler.SpawnParticle(explosion);
-                    Particle explosion2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.MediumVioletRed, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.07f, 20, true);
+                    Particle explosion2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.MediumVioletRed, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.07f, 20, true);
                     GeneralParticleHandler.SpawnParticle(explosion2);
-                    Particle explosion4 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightPink, "CalamityMod/Particles/DetailedExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.3f, 20, true);
+                    Particle explosion4 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightPink, "CalamityModCustomPublicPrivateFork/Particles/DetailedExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.3f, 20, true);
                     GeneralParticleHandler.SpawnParticle(explosion4);
-                    Particle explosion3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightPink, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.04f, 20);
+                    Particle explosion3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightPink, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.04f, 20);
                     GeneralParticleHandler.SpawnParticle(explosion3);
-                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.09f, 25);
+                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.09f, 25);
                     GeneralParticleHandler.SpawnParticle(blastRing2);
                     for (int i = 0; i < 10; i++)
                     {

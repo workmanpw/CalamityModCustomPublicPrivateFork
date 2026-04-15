@@ -1,17 +1,17 @@
-﻿using CalamityMod.Buffs.Summon;
-using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class CorruptionSlimeGodMinion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/Summon/CorroslimeMinion";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Summon/CorroslimeMinion";
         public float dust = 0f;
 
         public override void SetStaticDefaults()

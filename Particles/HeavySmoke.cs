@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class HeavySmokeParticle : Particle
     {
@@ -15,7 +15,7 @@ namespace CalamityMod.Particles
         public override bool UseAdditiveBlend => Glowing;
         public override bool UseHalfTransparency => !Glowing;
 
-        public override string Texture => "CalamityMod/Particles/HeavySmoke";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/HeavySmoke";
 
         private float Opacity;
         private float Spin;

@@ -1,11 +1,11 @@
-﻿using CalamityMod.ExtraJumps;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.ExtraJumps;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Statigel
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Statigel
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("StatigelMask")]

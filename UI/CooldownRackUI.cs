@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Cooldowns;
-using CalamityMod.Enums;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityMod.UI
+namespace CalamityModCustomPublicPrivateFork.UI
 {
     public class CooldownRackUI
     {

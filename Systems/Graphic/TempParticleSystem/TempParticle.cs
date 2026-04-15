@@ -1,8 +1,8 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 
-namespace CalamityMod.Systems.Graphic.TempParticleSystem
+namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.TempParticleSystem
 {
     public class TempParticle
     {

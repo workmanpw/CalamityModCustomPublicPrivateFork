@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.CalPlayer;
-using CalamityMod.Items.Accessories;
-using CalamityMod.NPCs.Providence;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.NPCs.Providence;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,10 +9,10 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.Graphics.Shaders;
 using Terraria.Localization;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class ProfanedSoulShield : CooldownHandler
     {
@@ -43,9 +43,9 @@ namespace CalamityMod.Cooldowns
         public override bool CanTickDown => !CalPlayer.pSoulArtifact || instance.timeLeft <= 0;
         public override bool ShouldDisplay => (CalPlayer.pSoulArtifact && !CalPlayer.profanedCrystal) || CalPlayer.profanedCrystalBuffs;
         public override LocalizedText DisplayName => GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => "CalamityMod/Cooldowns/ProfanedSoulShieldActive";
-        public override string OutlineTexture => "CalamityMod/Cooldowns/ProfanedSoulShieldOutline";
-        public override string OverlayTexture => "CalamityMod/Cooldowns/ProfanedSoulShieldOverlay";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/ProfanedSoulShieldActive";
+        public override string OutlineTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/ProfanedSoulShieldOutline";
+        public override string OverlayTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/ProfanedSoulShieldOverlay";
         public override Color OutlineColor => new Color(255, 191, 73);
         public override Color CooldownStartColor => Color.Lerp(GetColor(true), GetColor(false), instance.Completion);
         public override Color CooldownEndColor => Color.Lerp(GetColor(true), GetColor(false), instance.Completion);
@@ -100,9 +100,9 @@ namespace CalamityMod.Cooldowns
         public static new string ID => "ProfanedSoulShieldRecharge";
         public override bool ShouldDisplay => true;
         public override LocalizedText DisplayName => GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => "CalamityMod/Cooldowns/ProfanedSoulShieldRecharge";
-        public override string OutlineTexture => "CalamityMod/Cooldowns/ProfanedSoulShieldOutline";
-        public override string OverlayTexture => "CalamityMod/Cooldowns/ProfanedSoulShieldOverlay";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/ProfanedSoulShieldRecharge";
+        public override string OutlineTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/ProfanedSoulShieldOutline";
+        public override string OverlayTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/ProfanedSoulShieldOverlay";
         public override bool SavedWithPlayer => false;
         public override bool PersistsThroughDeath => false;
         public override Color OutlineColor => new Color(57, 195, 237);

@@ -1,5 +1,5 @@
-﻿using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureOtherworldly
+using Terraria.ModLoader;
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureOtherworldly
 {
     [LegacyName("OccultPlatform")]
     public class OtherworldlyPlatform : ModItem, ILocalizedModType

@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.CalPlayer;
-using CalamityMod.Items.Weapons.Magic;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -8,7 +8,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.UI.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.UI.DraedonsArsenal
 {
     [Autoload(Side = ModSide.Client)]
     public sealed class VisUI : ModSystem
@@ -24,8 +24,8 @@ namespace CalamityMod.UI.DraedonsArsenal
 
         public override void OnModLoad()
         {
-            edgeTexture = ModContent.Request<Texture2D>("CalamityMod/UI/UnstableCastersGauntlet/VisMeterBorder", AssetRequestMode.ImmediateLoad).Value;
-            barTexture = ModContent.Request<Texture2D>("CalamityMod/UI/UnstableCastersGauntlet/VisMeter", AssetRequestMode.ImmediateLoad).Value;
+            edgeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/UnstableCastersGauntlet/VisMeterBorder", AssetRequestMode.ImmediateLoad).Value;
+            barTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/UnstableCastersGauntlet/VisMeter", AssetRequestMode.ImmediateLoad).Value;
             Reset();
         }
 

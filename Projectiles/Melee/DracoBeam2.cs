@@ -1,15 +1,15 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class DracoBeam2 : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/Melee/DracoBeam";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/DracoBeam";
 
         private int start = 60;
         private int speedTimer = 60;

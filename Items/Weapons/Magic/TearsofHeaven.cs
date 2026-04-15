@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Placeables.SunkenSea;
-using CalamityMod.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,11 +7,11 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     public class TearsofHeaven : ModItem, ILocalizedModType
     {
-        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/TearsOfHeavenUse");
+        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TearsOfHeavenUse");
 
         public new string LocalizationCategory => "Items.Weapons.Magic";
         public override void SetDefaults()

@@ -1,8 +1,8 @@
-﻿using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea
 {
     public class VolcanicSand : ModItem, ILocalizedModType
     {

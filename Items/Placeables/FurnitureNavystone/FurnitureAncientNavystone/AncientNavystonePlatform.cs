@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone
 {
     [LegacyName("EutrophicPlatform")]
     public class AncientNavystonePlatform : ModItem, ILocalizedModType

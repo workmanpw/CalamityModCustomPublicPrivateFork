@@ -1,10 +1,10 @@
-﻿using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     // Thanks a lot for naming it Caustic Edge :)
     public class TrueCausticEdge : ModItem, ILocalizedModType

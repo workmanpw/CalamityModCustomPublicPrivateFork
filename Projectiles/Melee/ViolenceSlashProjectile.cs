@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class ViolenceSlashProjectile : ModProjectile
     {
@@ -19,7 +19,7 @@ namespace CalamityMod.Projectiles.Melee
         internal Player Owner => Main.player[Projectile.owner];
         internal ref float Time => ref Projectile.ai[0];
         internal float SwingSine => (float)Math.Sin(MathHelper.TwoPi * Time / 50f);
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/Violence";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/Violence";
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.TrailingMode[Type] = 2;
@@ -98,7 +98,7 @@ namespace CalamityMod.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            GameShaders.Misc["CalamityMod:PhaseslayerRipEffect"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SwordSlashTexture"));
+            GameShaders.Misc["CalamityMod:PhaseslayerRipEffect"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SwordSlashTexture"));
 
             Texture2D spearProjectile = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
 

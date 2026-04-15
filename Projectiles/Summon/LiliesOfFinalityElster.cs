@@ -1,7 +1,7 @@
-﻿using System.IO;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,10 +10,10 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static System.MathF;
-using static CalamityMod.Items.Weapons.Summon.LiliesOfFinality;
+using static CalamityModCustomPublicPrivateFork.Items.Weapons.Summon.LiliesOfFinality;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class LiliesOfFinalityElster : BaseMinionProjectile
     {
@@ -329,7 +329,7 @@ namespace CalamityMod.Projectiles.Summon
                 7);
             GeneralParticleHandler.SpawnParticle(shootRing);
 
-            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/ElsterShot", 4) { Volume = 0.3f }, Projectile.Center);
+            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/ElsterShot", 4) { Volume = 0.3f }, Projectile.Center);
         }
 
         private void ElevationDust(bool shootingState)
@@ -430,8 +430,8 @@ namespace CalamityMod.Projectiles.Summon
                     }
                 }
 
-                Texture2D blinkTexture_FirstEye = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/ArianeAndElsterBlink_FirstEye", AssetRequestMode.ImmediateLoad).Value;
-                Texture2D blinkTexture_SecondEye = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/ArianeAndElsterBlink_SecondEye", AssetRequestMode.ImmediateLoad).Value;
+                Texture2D blinkTexture_FirstEye = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/ArianeAndElsterBlink_FirstEye", AssetRequestMode.ImmediateLoad).Value;
+                Texture2D blinkTexture_SecondEye = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/ArianeAndElsterBlink_SecondEye", AssetRequestMode.ImmediateLoad).Value;
 
                 Rectangle blinkFrame = blinkTexture_FirstEye.Frame(1, 3, 0, EyeFrameToShow);
                 drawPosition += new Vector2(Projectile.spriteDirection == -1 ? 2f : 6f, yOffset);

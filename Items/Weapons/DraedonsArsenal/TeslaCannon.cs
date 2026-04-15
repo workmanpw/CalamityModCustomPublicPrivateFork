@@ -1,23 +1,23 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.CustomRecipes;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.DraedonsArsenal;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.CustomRecipes;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal
 {
     public class TeslaCannon : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.DraedonsArsenal";
 
-        public static readonly SoundStyle FireSound = new("CalamityMod/Sounds/Item/TeslaCannonFire");
+        public static readonly SoundStyle FireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TeslaCannonFire");
 
         public override void SetDefaults()
         {

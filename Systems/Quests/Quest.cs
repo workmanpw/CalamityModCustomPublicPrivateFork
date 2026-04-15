@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.Systems.Quests
+namespace CalamityModCustomPublicPrivateFork.Systems.Quests
 {
     /// <summary>
     /// An <see langword="abstract"/> <see cref="ModSystem"/> that implements the foundation to make quests in Terraria<br/>

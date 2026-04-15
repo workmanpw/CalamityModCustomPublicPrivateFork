@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.BaseItems;
-using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Items.BaseItems;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     public class BalefulHarvester : CustomUseProjItem, ILocalizedModType
     {

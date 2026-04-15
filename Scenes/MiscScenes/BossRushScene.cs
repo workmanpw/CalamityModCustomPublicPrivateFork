@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Events;
-using CalamityMod.Skies;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Skies;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class BossRushScene : ModSceneEffect
     {
@@ -20,20 +20,22 @@ namespace CalamityMod.Systems
             // Clear all other skies, including the vanilla ones.
             if (isActive)
             {
-                Dictionary<string, CustomSky> skies = SkyManager.Instance._effects;
-                bool updateRequired = false;
-                foreach (string skyName in skies.Keys)
-                {
-                    if (skies[skyName].IsActive() && skyName != "CalamityMod:BossRush")
-                    {
-                        skies[skyName].Opacity = 0f;
-                        skies[skyName].Deactivate();
-                        updateRequired = true;
-                    }
-                }
+                // SkyManager.Instance._effects is private and no longer accessible
+                // Dictionary<string, CustomSky> skies = SkyManager.Instance._effects;
+                // bool updateRequired = false;
+                // foreach (string skyName in skies.Keys)
+                // {
+                //     if (skies[skyName].IsActive() && skyName != "CalamityMod:BossRush")
+                //     {
+                //         skies[skyName].Opacity = 0f;
+                //         skies[skyName].Deactivate();
+                //         updateRequired = true;
+                //     }
+                // }
 
-                if (updateRequired)
-                    SkyManager.Instance.Update(new GameTime());
+                // updateRequired is no longer set since we commented out the sky clearing code
+                // if (updateRequired)
+                //     SkyManager.Instance.Update(new GameTime());
             }
 
             if (SkyManager.Instance["CalamityMod:BossRush"] != null && isActive != SkyManager.Instance["CalamityMod:BossRush"].IsActive())

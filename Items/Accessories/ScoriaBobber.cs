@@ -1,15 +1,15 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     internal class ScoriaBobber : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Fishing";
-        public override string Texture => "CalamityMod/Projectiles/Typeless/RiftReelerBobber";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/RiftReelerBobber";
         public override void SetDefaults()
         {
             Item.width = 9;

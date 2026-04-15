@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Pets;
+using CalamityModCustomPublicPrivateFork.Items.Pets;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.ModLoader;
 using Terraria.UI.Chat;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public static partial class CalamityUtils
     {
@@ -71,18 +71,18 @@ namespace CalamityMod
         // Draws the Power Cell item slot in a UI. Used by both the Power Cell Factory and Charging Station.
         internal static void DrawPowercellSlot(SpriteBatch spriteBatch, Item item, Vector2 drawPosition, float iconScale = 0.7f)
         {
-            Texture2D slotBackgroundTex = Request<Texture2D>("CalamityMod/UI/DraedonsArsenal/PowerCellSlot_Empty").Value;
+            Texture2D slotBackgroundTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonsArsenal/PowerCellSlot_Empty").Value;
 
             // This check is done twice because the draw order matters. We want to draw the background icon before any text.
             if (item.stack > 0)
             {
                 if (item.type == ItemType<BloodyVein>())
                 {
-                    slotBackgroundTex = Request<Texture2D>("CalamityMod/UI/DraedonsArsenal/PowerCellSlot_Blood").Value;
+                    slotBackgroundTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonsArsenal/PowerCellSlot_Blood").Value;
                 }
                 else
                 {
-                    slotBackgroundTex = Request<Texture2D>("CalamityMod/UI/DraedonsArsenal/PowerCellSlot_Filled").Value;
+                    slotBackgroundTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonsArsenal/PowerCellSlot_Filled").Value;
                 }
             }
 

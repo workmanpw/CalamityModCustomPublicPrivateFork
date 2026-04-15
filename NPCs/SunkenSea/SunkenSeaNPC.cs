@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Enums;
-using CalamityMod.Pathfinding;
-using CalamityMod.Pathfinding.Movements;
-using CalamityMod.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Pathfinding;
+using CalamityModCustomPublicPrivateFork.Pathfinding.Movements;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Bestiary;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.Utilities.NPCUtils;
 
-namespace CalamityMod.NPCs.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.NPCs.SunkenSea
 {
     /// <summary>
     /// An abstract class that provides the necessary members for an NPC to function as a Sunken Sea NPC.<br/>
@@ -103,7 +103,7 @@ namespace CalamityMod.NPCs.SunkenSea
         }
 
         public override void SetBestiary(BestiaryDatabase database, BestiaryEntry bestiaryEntry)
-            => bestiaryEntry.Info.AddRange([new FlavorTextBestiaryInfoElement($"Mods.CalamityMod.Bestiary.{Name}")]);
+            => bestiaryEntry.Info.AddRange([new FlavorTextBestiaryInfoElement($"Mods.CalamityModCustomPublicPrivateFork.Bestiary.{Name}")]);
 
         public override bool PreAI()
         {

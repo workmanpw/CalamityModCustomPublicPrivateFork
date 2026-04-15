@@ -1,12 +1,12 @@
-﻿using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class VolatileStarcore : ModProjectile, ILocalizedModType
     {
@@ -120,18 +120,18 @@ namespace CalamityMod.Projectiles.Magic
             float kb = 9.5f;
             if (explode)
             {
-                SoundStyle fire = new("CalamityMod/Sounds/Item/HeliumFlashCoreImpact");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashCoreImpact");
                 SoundEngine.PlaySound(fire with { Volume = 1f, Pitch = 0f }, Projectile.Center);
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Vector2.Zero, type, damage, kb, Projectile.owner, 0f, 0f);
             }
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D orbTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/VolatileStarcore").Value;
+            Texture2D orbTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/VolatileStarcore").Value;
             Rectangle frame = orbTexture.Frame(1, NumAnimationFrames, 0, Projectile.frame);
             Vector2 origin = frame.Size() * 0.5f;
 
-            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
 
             // Glow Orb
             float randSize = Main.rand.NextFloat(0.8f, 1.2f);

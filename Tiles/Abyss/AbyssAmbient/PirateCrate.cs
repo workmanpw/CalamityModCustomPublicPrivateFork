@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Abyss.AbyssAmbient
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient
 {
     //
     // Pirate Crate With Glow
@@ -15,7 +15,7 @@ namespace CalamityMod.Tiles.Abyss.AbyssAmbient
     {
         public abstract string GoreKey { get; }
 
-        public static readonly SoundStyle MineSound = new("CalamityMod/Sounds/Custom/CrateBreak", 3) { Volume = 0.8f };
+        public static readonly SoundStyle MineSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CrateBreak", 3) { Volume = 0.8f };
         public override void SetupStatic()
         {
             Main.tileFrameImportant[Type] = true;
@@ -80,7 +80,7 @@ namespace CalamityMod.Tiles.Abyss.AbyssAmbient
     {
         public abstract string GoreKey { get; }
 
-        public static readonly SoundStyle MineSound = new("CalamityMod/Sounds/Custom/CrateBreak", 3) { Volume = 0.8f };
+        public static readonly SoundStyle MineSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CrateBreak", 3) { Volume = 0.8f };
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;

@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureWulfrum
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureWulfrum
 {
     public class WulfrumEnergyBarrier : ModItem, ILocalizedModType
     {

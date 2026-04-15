@@ -1,7 +1,7 @@
-﻿using CalamityMod.Tiles.FurnitureStratus;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureStratus;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureStratus
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureStratus
 {
     [LegacyName("StratusWorkbench")]
     public class StratusWorkBench : ModItem, ILocalizedModType

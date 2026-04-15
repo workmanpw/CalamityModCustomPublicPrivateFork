@@ -1,18 +1,18 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     public class GeliticBlade : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Melee";
 
-        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/GeliticBladeSwing", 2);
+        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GeliticBladeSwing", 2);
 
         public override void SetDefaults()
         {

@@ -1,10 +1,10 @@
-﻿using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     [LegacyName("ManaJelly")]
     public class CleansingJelly : ModItem, ILocalizedModType

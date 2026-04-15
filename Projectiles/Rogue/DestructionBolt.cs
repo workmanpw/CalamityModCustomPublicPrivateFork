@@ -1,13 +1,13 @@
-﻿using CalamityMod.Enums;
-using CalamityMod.Graphics.Renderers;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Graphics.Renderers;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class DestructionBolt : ModProjectile, ILocalizedModType
     {
@@ -105,7 +105,7 @@ namespace CalamityMod.Projectiles.Rogue
 
                 for (int i = 0; i < 2; i++)
                 {
-                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen with { A = 0 }, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), Projectile.ai[1] * 0.5f, Projectile.ai[1] * 0.3f, 15, false);
+                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen with { A = 0 }, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), Projectile.ai[1] * 0.5f, Projectile.ai[1] * 0.3f, 15, false);
                     GeneralParticleHandler.SpawnParticle(blastRing);
                     blastRing.DrawLayer = GeneralDrawLayer.AfterEverything;
                 }
@@ -114,7 +114,7 @@ namespace CalamityMod.Projectiles.Rogue
             {
                 for (int i = 0; i < 3; i++)
                 {
-                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityMod/Particles/SmallBloom", Vector2.One, Main.rand.NextFloat(-10, 10), Projectile.ai[1] * 0.25f, Projectile.ai[1] * 0.2f, 10, false);
+                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", Vector2.One, Main.rand.NextFloat(-10, 10), Projectile.ai[1] * 0.25f, Projectile.ai[1] * 0.2f, 10, false);
                     GeneralParticleHandler.SpawnParticle(blastRing);
                 }
             }
@@ -122,8 +122,8 @@ namespace CalamityMod.Projectiles.Rogue
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/DestructionBoltGhost");
-            Asset<Texture2D> tex3 = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/DestructionBoltGhost");
+            Asset<Texture2D> tex3 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
             float fading = Utils.GetLerpValue(180, 90, time, true);
             float fading2 = Utils.GetLerpValue(240, 180, time, true);
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, lightColor * fading, Projectile.rotation, tex.Size() / 2f, Projectile.scale, SpriteEffects.None, 0);

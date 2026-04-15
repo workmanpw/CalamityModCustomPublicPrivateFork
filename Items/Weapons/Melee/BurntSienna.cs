@@ -1,10 +1,10 @@
-﻿using CalamityMod.Projectiles.Healing;
+using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     public class BurntSienna : ModItem, ILocalizedModType
     {

@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Abyss.AbyssAmbient
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient
 {
     public class SpiderCoral1 : GlowMaskTile
     {

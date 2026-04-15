@@ -1,11 +1,11 @@
-﻿using CalamityMod.DataStructures;
+using CalamityModCustomPublicPrivateFork.DataStructures;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.DamageOverTime
+namespace CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime
 {
     public class StaticDischarge : ModBuff
     {

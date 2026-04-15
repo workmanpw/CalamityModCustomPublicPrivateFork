@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items.Materials;
-using CalamityMod.TileEntities;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.DraedonStructures
+namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
 {
     public class DraedonLabTurret : ModTile
     {
@@ -24,7 +24,7 @@ namespace CalamityMod.Tiles.DraedonStructures
 
         public Asset<Texture2D> GlowTexture;
 
-        public override string Texture => "CalamityMod/Tiles/PlayerTurrets/PlayerLabTurret";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/PlayerTurrets/PlayerLabTurret";
         public override void SetStaticDefaults()
         {
             Main.tileLighted[Type] = true;
@@ -102,7 +102,7 @@ namespace CalamityMod.Tiles.DraedonStructures
                     drawColor.B = 50;
             }
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/PulseTurret");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/PulseTurret");
             Texture2D tex = GlowTexture.Value;
 
             Vector2 screenOffset = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);

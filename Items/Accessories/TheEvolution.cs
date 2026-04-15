@@ -1,11 +1,11 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class TheEvolution : ModItem, ILocalizedModType
     {

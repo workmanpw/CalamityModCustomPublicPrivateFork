@@ -1,16 +1,16 @@
-﻿using System;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.World;
 using Terraria;
 using Terraria.Localization;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public static class CalamityConditions
     {
         private static Condition Create(string key, Func<bool> predicate)
         {
             return new Condition(
-                Language.GetText($"Mods.CalamityMod.Condition.{key}"),
+                Language.GetText($"Mods.CalamityModCustomPublicPrivateFork.Condition.{key}"),
                 predicate
             );
         }

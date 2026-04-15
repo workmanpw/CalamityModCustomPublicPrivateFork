@@ -1,13 +1,13 @@
-﻿using CalamityMod.Items.Placeables.FurnitureDriftwood;
-using CalamityMod.Tiles.SunkenSea.Ambient;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
 {
     public class LargeDriftwoodWreckageEcho : LargeDriftwoodWreckage
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/LargeDriftwoodWreckage";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/LargeDriftwoodWreckage";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

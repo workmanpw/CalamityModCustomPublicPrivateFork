@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.VanillaArmorChanges
+namespace CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges
 {
     public class VanillaArmorChangeManager : ModSystem
     {

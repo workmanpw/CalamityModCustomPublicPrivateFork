@@ -1,12 +1,12 @@
-﻿using CalamityMod.Buffs.StatBuffs;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class ChronoClock : ModProjectile, ILocalizedModType
     {

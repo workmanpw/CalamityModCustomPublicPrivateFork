@@ -1,7 +1,7 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Magic;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,16 +9,16 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     public class HeliumFlash : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
         internal const float ExplosionDamageMultiplier = 1.4f;
-        public static readonly SoundStyle Charge = new("CalamityMod/Sounds/Item/HeliumFlashCharge");
-        public static readonly SoundStyle ChargeLoop = new("CalamityMod/Sounds/Item/HeliumFlashFullChargeLoop");
+        public static readonly SoundStyle Charge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashCharge");
+        public static readonly SoundStyle ChargeLoop = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashFullChargeLoop");
         internal static readonly int ChargeLoopSoundFrames = 120;
-        public static readonly SoundStyle ChargeFire = new("CalamityMod/Sounds/Item/HeliumFlashFire") { Volume = 1f };
+        public static readonly SoundStyle ChargeFire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashFire") { Volume = 1f };
 
         public static int AftershotCooldownFrames = 17;
         public static int FullChargeFrames = 88;

@@ -1,8 +1,8 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Rarities
+namespace CalamityModCustomPublicPrivateFork.Rarities
 {
     public class PureGreen : ModRarity
     {

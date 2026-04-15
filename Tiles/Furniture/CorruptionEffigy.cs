@@ -1,4 +1,4 @@
-﻿using CalamityMod.Buffs.Placeables;
+using CalamityModCustomPublicPrivateFork.Buffs.Placeables;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Furniture
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
 {
     public class CorruptionEffigy : ModTile
     {

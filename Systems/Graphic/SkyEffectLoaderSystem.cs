@@ -1,16 +1,16 @@
-﻿using CalamityMod.NPCs.CalClone;
-using CalamityMod.NPCs.Leviathan;
-using CalamityMod.NPCs.PlaguebringerGoliath;
-using CalamityMod.NPCs.Signus;
-using CalamityMod.NPCs.Yharon;
-using CalamityMod.Skies;
+using CalamityModCustomPublicPrivateFork.NPCs.CalClone;
+using CalamityModCustomPublicPrivateFork.NPCs.Leviathan;
+using CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath;
+using CalamityModCustomPublicPrivateFork.NPCs.Signus;
+using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
+using CalamityModCustomPublicPrivateFork.Skies;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     [Autoload(Side = ModSide.Client)]
     internal sealed class SkyEffectLoaderSystem : ModSystem
@@ -47,7 +47,7 @@ namespace CalamityMod.Systems
             SkyManager.Instance["CalamityMod:MonolithAccursed"] = new MonolithSky();
 
             // Normal intensity is 4f
-            Texture2D DistortionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/BlobbyNoise", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D DistortionTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/BlobbyNoise", AssetRequestMode.ImmediateLoad).Value;
             Filters.Scene["CalamityMod:DrunkCrabulon"] = new Filter(new DrunkCrabScreenShaderData("FilterHeatDistortion").UseImage(DistortionTexture, 0, null).UseIntensity(20f), EffectPriority.VeryHigh);
 
             Filters.Scene["CalamityMod:BrimstoneCrag"] = new Filter(new MonolithScreenShaderData("FilterMiniTower").UseColor(0f, 0f, 0f).UseOpacity(0f), EffectPriority.VeryHigh);

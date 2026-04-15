@@ -1,18 +1,18 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class DragonScalesInfernado : ModProjectile, ILocalizedModType
     {
 
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Projectiles/Magic/InfernadoFriendly";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/InfernadoFriendly";
 
         bool intersectingSomething = false;
         public override void SetStaticDefaults()

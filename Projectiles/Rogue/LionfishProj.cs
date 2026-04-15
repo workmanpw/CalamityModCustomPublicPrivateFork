@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.NPCs;
-using CalamityMod.Projectiles.Melee;
+using System;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,13 +8,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     [PierceResistException]
     public class LionfishProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/Lionfish";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/Lionfish";
 
         public override void SetDefaults()
         {

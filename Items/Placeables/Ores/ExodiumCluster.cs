@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.Ores;
+using CalamityModCustomPublicPrivateFork.Tiles.Ores;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Ores
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Ores
 {
     [LegacyName("ExodiumClusterOre")]
     public class ExodiumCluster : ModItem, ILocalizedModType

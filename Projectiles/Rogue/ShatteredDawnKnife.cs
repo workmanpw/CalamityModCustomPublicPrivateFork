@@ -1,17 +1,17 @@
-﻿using System;
-using CalamityMod.CalPlayer;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class ShatteredDawnKnife : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/ShatteredDawn";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/ShatteredDawn";
 
         public override void SetStaticDefaults()
         {

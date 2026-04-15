@@ -1,7 +1,7 @@
-﻿using System.Linq;
+using System.Linq;
 using Terraria;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public static partial class CalamityUtils
     {

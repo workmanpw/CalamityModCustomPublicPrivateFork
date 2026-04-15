@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class SmallSkeletonMinion : ModProjectile, ILocalizedModType
     {

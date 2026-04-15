@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Tiles.Crags;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Tiles.Crags;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing.BrimstoneCragCatches
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCragCatches
 {
     public class BrimstoneCrate : ModItem, ILocalizedModType
     {

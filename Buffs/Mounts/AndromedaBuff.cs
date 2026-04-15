@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Mounts
+namespace CalamityModCustomPublicPrivateFork.Buffs.Mounts
 {
     public class AndromedaBuff : ModBuff
     {

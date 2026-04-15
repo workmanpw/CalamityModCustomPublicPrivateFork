@@ -1,16 +1,16 @@
-﻿using System;
-using CalamityMod.BiomeManagers;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Abyss;
-using CalamityMod.Items.Placeables.Banners;
+using System;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityMod.NPCs.Abyss
+namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
 {
     public class Bloatfish : ModNPC
     {
@@ -47,7 +47,7 @@ namespace CalamityMod.NPCs.Abyss
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Bloatfish")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Bloatfish")
             });
         }
 

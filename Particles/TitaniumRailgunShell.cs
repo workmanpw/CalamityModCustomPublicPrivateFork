@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class TitaniumRailgunShell : Particle
     {
-        public override string Texture => "CalamityMod/Particles/TitaniumRailgunShell";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/TitaniumRailgunShell";
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;
 
@@ -82,7 +82,7 @@ namespace CalamityMod.Particles
         public override void CustomDraw(SpriteBatch spriteBatch)
         {
             Texture2D texture = GeneralParticleHandler.GetTexture(Type);
-            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/TitaniumRailgunShellGlow").Value;
+            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/TitaniumRailgunShellGlow").Value;
 
             Vector2 minorDisplacementToMakeItLookLikeItActuallyWasMovingButFast = Rotation.ToRotationVector2() * -13f * (float)Math.Pow(MathHelper.Clamp(1 - LifetimeCompletion * 3f, 0f, 1f), 3f);
 

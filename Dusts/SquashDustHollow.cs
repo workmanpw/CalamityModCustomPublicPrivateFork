@@ -1,22 +1,22 @@
-﻿using CalamityMod.Systems.Graphic.PixelationSystem;
+using CalamityModCustomPublicPrivateFork.Systems.Graphic.PixelationSystem;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Dusts
+namespace CalamityModCustomPublicPrivateFork.Dusts
 {
     public class SquashDustHollow : ModDust
     {
         public static Asset<Texture2D> BloomRing { get; private set; }
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void Load()
         {
             if (!Main.dedServ)
-                BloomRing = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomRing");
+                BloomRing = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomRing");
         }
 
         public override void OnSpawn(Dust dust)
@@ -68,7 +68,7 @@ namespace CalamityMod.Dusts
 
     public class SquashDustHollowPixelated : SquashDustHollow
     {
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override bool PreDraw(Dust dust)
         {

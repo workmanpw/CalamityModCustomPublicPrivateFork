@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public class AverageDamageClass : DamageClass
     {

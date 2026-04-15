@@ -1,16 +1,16 @@
-﻿using System;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class CountermeasurePalmBlast : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public ref float time => ref Projectile.ai[0];
         public float fade => (float)Math.Pow(Utils.GetLerpValue(0, 13, Projectile.timeLeft, true), 4);
         public bool onSpawn = true;
@@ -69,8 +69,8 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
         public override bool PreDraw(ref Color lightColor)
         {
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
-            Texture2D beam = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineFade").Value;
-            Texture2D bloom = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D beam = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineFade").Value;
+            Texture2D bloom = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
             float completion = Utils.GetLerpValue(lifetime, 0, time);
             for (int i = 0; i < 6; i++)
             {

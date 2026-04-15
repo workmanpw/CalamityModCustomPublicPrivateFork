@@ -1,7 +1,7 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class HolyLaser : BaseLaserbeamProjectile, ILocalizedModType
     {
@@ -20,11 +20,11 @@ namespace CalamityMod.Projectiles.Magic
 
         public override float MaxLaserLength => 1500f;
 
-        private const string LaserTexturePath = "CalamityMod/ExtraTextures/Lasers/ProvidenceHolyRay";
+        private const string LaserTexturePath = "CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/ProvidenceHolyRay";
         public override Texture2D LaserBeginTexture => Request<Texture2D>(LaserTexturePath + "Start").Value;
         public override Texture2D LaserMiddleTexture => Request<Texture2D>(LaserTexturePath + "Mid").Value;
         public override Texture2D LaserEndTexture => Request<Texture2D>(LaserTexturePath + "End").Value;
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override Color LaserOverlayColor => Color.White with { A = 0 };
         public override Color LightCastColor => Color.Transparent;
@@ -122,7 +122,7 @@ namespace CalamityMod.Projectiles.Magic
                 }
                 else
                 {
-                    Particle spark2 = new CustomSpark(randomLineEffectPosition, Projectile.velocity * Main.rand.NextFloat(1f, 10f), "CalamityMod/Particles/ProvidenceMarkParticle", false, 17, Main.rand.NextFloat(1.15f, 1.3f), Color.Lerp(color1, color2, Main.rand.NextFloat()), new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.3f, 0.4f));
+                    Particle spark2 = new CustomSpark(randomLineEffectPosition, Projectile.velocity * Main.rand.NextFloat(1f, 10f), "CalamityModCustomPublicPrivateFork/Particles/ProvidenceMarkParticle", false, 17, Main.rand.NextFloat(1.15f, 1.3f), Color.Lerp(color1, color2, Main.rand.NextFloat()), new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.3f, 0.4f));
                     GeneralParticleHandler.SpawnParticle(spark2);
                 }
             }

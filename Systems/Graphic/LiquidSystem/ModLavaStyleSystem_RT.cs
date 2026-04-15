@@ -1,11 +1,11 @@
-﻿using CalamityMod.Utilities.Daybreak.Buffers;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems.Graphic.LiquidSystem
+namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
 {
     [Autoload(Side = ModSide.Client)]
     public sealed partial class ModLavaStyleSystem : ModSystem

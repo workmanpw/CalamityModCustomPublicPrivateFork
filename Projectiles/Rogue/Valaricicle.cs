@@ -1,11 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class Valaricicle : ModProjectile, ILocalizedModType
     {
@@ -47,7 +47,7 @@ namespace CalamityMod.Projectiles.Rogue
 
         public override bool PreDraw(ref Color lightColor)
         {
-            string texString = Projectile.ai[2] == 1f ? "CalamityMod/Projectiles/Rogue/Valaricicle2" : Texture;
+            string texString = Projectile.ai[2] == 1f ? "CalamityModCustomPublicPrivateFork/Projectiles/Rogue/Valaricicle2" : Texture;
             Texture2D tex = ModContent.Request<Texture2D>(texString).Value;
             SpriteEffects spr = Projectile.spriteDirection == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
 

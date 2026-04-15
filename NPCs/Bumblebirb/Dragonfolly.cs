@@ -1,23 +1,23 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Events;
-using CalamityMod.Items.Armor.Vanity;
-using CalamityMod.Items.LoreItems;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Mounts;
-using CalamityMod.Items.Placeables.Furniture.BossRelics;
-using CalamityMod.Items.Placeables.Furniture.Paintings;
-using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Items.Potions;
-using CalamityMod.Items.TreasureBags;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.Sounds;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.LoreItems;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Mounts;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Items.Potions;
+using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -29,7 +29,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Bumblebirb
+namespace CalamityModCustomPublicPrivateFork.NPCs.Bumblebirb
 {
     [AutoloadBossHead]
     public class Dragonfolly : ModNPC
@@ -52,12 +52,12 @@ namespace CalamityMod.NPCs.Bumblebirb
             NPCID.Sets.MPAllowedEnemies[Type] = true;
             if (!Main.dedServ)
             {
-                GlowTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/Bumblebirb/BirbGlow", AssetRequestMode.AsyncLoad);
+                GlowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Bumblebirb/BirbGlow", AssetRequestMode.AsyncLoad);
             }
         }
 
-        public override string Texture => "CalamityMod/NPCs/Bumblebirb/Birb";
-        public override string BossHeadTexture => "CalamityMod/NPCs/Bumblebirb/Birb_Head_Boss";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/Bumblebirb/Birb";
+        public override string BossHeadTexture => "CalamityModCustomPublicPrivateFork/NPCs/Bumblebirb/Birb_Head_Boss";
 
         public static float DashDamageMult = 1.5f; // 240
         public static int FeatherDamage = 36; // 144
@@ -94,7 +94,7 @@ namespace CalamityMod.NPCs.Bumblebirb
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Jungle,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Bumblefuck")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Bumblefuck")
             });
         }
 

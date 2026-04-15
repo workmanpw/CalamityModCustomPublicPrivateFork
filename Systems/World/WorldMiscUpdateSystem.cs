@@ -1,17 +1,17 @@
-﻿using System;
-using CalamityMod.CalPlayer;
-using CalamityMod.Events;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.ExoMechs;
-using CalamityMod.NPCs.PrimordialWyrm;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.Tiles;
-using CalamityMod.Tiles.Abyss;
-using CalamityMod.Tiles.Crags;
-using CalamityMod.Tiles.SunkenSea;
-using CalamityMod.Tiles.SunkenSea.Ambient;
-using CalamityMod.Walls;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
+using CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Tiles;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityModCustomPublicPrivateFork.Tiles.Crags;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
+using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -19,10 +19,10 @@ using Terraria.GameContent.Events;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using static CalamityMod.World.CalamityWorld;
+using static CalamityModCustomPublicPrivateFork.World.CalamityWorld;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class WorldMiscUpdateSystem : ModSystem
     {
@@ -94,7 +94,7 @@ namespace CalamityMod.Systems
             // Very, very, very rarely display a Lorde joke text if the system clock is set to April Fools Day.
             if (Main.rand.NextBool(100000000) && DateTime.Now.Month == 4 && DateTime.Now.Day == 1)
             {
-                string key = Main.zenithWorld ? "Mods.CalamityMod.Status.Boss.AprilFoolsGFB" : "Mods.CalamityMod.Status.Boss.AprilFools";
+                string key = Main.zenithWorld ? "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.AprilFoolsGFB" : "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.AprilFools";
                 Color messageColor = Color.Crimson;
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);
             }

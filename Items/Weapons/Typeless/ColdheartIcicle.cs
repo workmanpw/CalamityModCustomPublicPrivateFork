@@ -1,12 +1,12 @@
-﻿using CalamityMod.NPCs.Other;
-using CalamityMod.Particles;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.NPCs.Other;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Typeless
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless
 {
     [LegacyName("AlicornonaStick")]
     public class ColdheartIcicle : ModItem, ILocalizedModType

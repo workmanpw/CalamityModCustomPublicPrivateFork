@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Pets
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 {
     public class GoldiePet : ModProjectile, ILocalizedModType
     {
@@ -149,11 +149,11 @@ namespace CalamityMod.Projectiles.Pets
         public override bool PreDraw(ref Color lightColor)
         {
             //Similar coin shining to Midas Prime coins. Thought it'd look pretty neat for a light pet.
-            Texture2D shineTex = ModContent.Request<Texture2D>("CalamityMod/Particles/Sparkle").Value;
+            Texture2D shineTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle").Value;
             float shinePercent = Utils.SmoothStep(MaxBloomTime, MaxSparkleTime, SparkleTimer);
             float shineScale = (float)Math.Log10(shinePercent + 0.01) + 2f;
 
-            Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityMod/Particles/Light").Value;
+            Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Light").Value;
             float bloomPercent = Math.Clamp(SparkleTimer / MaxBloomTime, 0f, 5f); //Max of 500% when collecting coins
             float bloomScale = Math.Clamp(bloomPercent, 0f, 2.5f);
 

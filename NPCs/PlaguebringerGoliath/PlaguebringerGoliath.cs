@@ -1,24 +1,24 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.Items.Armor.Vanity;
-using CalamityMod.Items.LoreItems;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Pets;
-using CalamityMod.Items.Placeables.Furniture.BossRelics;
-using CalamityMod.Items.Placeables.Furniture.Paintings;
-using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Items.TreasureBags;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.LoreItems;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Pets;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -30,7 +30,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.PlaguebringerGoliath
+namespace CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath
 {
     [AutoloadBossHead]
     public class PlaguebringerGoliath : ModNPC
@@ -54,10 +54,10 @@ namespace CalamityMod.NPCs.PlaguebringerGoliath
         public static Asset<Texture2D> Texture_Glow;
         public static Asset<Texture2D> ChargeTexture_Glow;
 
-        public static readonly SoundStyle NukeWarningSound = new("CalamityMod/Sounds/Custom/PlagueSounds/PBGNukeWarning");
-        public static readonly SoundStyle AttackSwitchSound = new("CalamityMod/Sounds/Custom/PlagueSounds/PBGAttackSwitch", 2);
-        public static readonly SoundStyle DashSound = new("CalamityMod/Sounds/Custom/PlagueSounds/PBGDash");
-        public static readonly SoundStyle BarrageLaunchSound = new("CalamityMod/Sounds/Custom/PlagueSounds/PBGBarrageLaunch");
+        public static readonly SoundStyle NukeWarningSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PBGNukeWarning");
+        public static readonly SoundStyle AttackSwitchSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PBGAttackSwitch", 2);
+        public static readonly SoundStyle DashSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PBGDash");
+        public static readonly SoundStyle BarrageLaunchSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PBGBarrageLaunch");
 
         public override void SetStaticDefaults()
         {
@@ -77,9 +77,9 @@ namespace CalamityMod.NPCs.PlaguebringerGoliath
             NPCID.Sets.MPAllowedEnemies[Type] = true;
             if (!Main.dedServ)
             {
-                ChargeTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/PlaguebringerGoliath/PlaguebringerGoliathChargeTex", AssetRequestMode.AsyncLoad);
-                Texture_Glow = ModContent.Request<Texture2D>("CalamityMod/NPCs/PlaguebringerGoliath/PlaguebringerGoliathGlow", AssetRequestMode.AsyncLoad);
-                ChargeTexture_Glow = ModContent.Request<Texture2D>("CalamityMod/NPCs/PlaguebringerGoliath/PlaguebringerGoliathChargeTexGlow", AssetRequestMode.AsyncLoad);
+                ChargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/PlaguebringerGoliath/PlaguebringerGoliathChargeTex", AssetRequestMode.AsyncLoad);
+                Texture_Glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/PlaguebringerGoliath/PlaguebringerGoliathGlow", AssetRequestMode.AsyncLoad);
+                ChargeTexture_Glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/PlaguebringerGoliath/PlaguebringerGoliathChargeTexGlow", AssetRequestMode.AsyncLoad);
             }
         }
 
@@ -115,7 +115,7 @@ namespace CalamityMod.NPCs.PlaguebringerGoliath
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Jungle,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundJungle,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.PlaguebringerGoliath")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.PlaguebringerGoliath")
             });
         }
 
@@ -196,7 +196,7 @@ namespace CalamityMod.NPCs.PlaguebringerGoliath
             // Show message
             if (!halfLife && phase3 && expertMode)
             {
-                string key = "Mods.CalamityMod.Status.Boss.PlagueBossText";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PlagueBossText";
                 Color messageColor = Color.Lime;
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);
                 SoundEngine.PlaySound(NukeWarningSound, NPC.Center);

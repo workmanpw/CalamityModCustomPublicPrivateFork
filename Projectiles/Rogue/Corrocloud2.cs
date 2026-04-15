@@ -1,9 +1,9 @@
-﻿using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class Corrocloud2 : ModProjectile, ILocalizedModType
     {

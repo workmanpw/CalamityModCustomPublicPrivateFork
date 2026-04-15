@@ -1,20 +1,20 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.CustomRecipes;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.PlaceableTurrets;
-using CalamityMod.Items.SummonItems;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.Rarities;
-using CalamityMod.UI;
-using CalamityMod.UI.DraedonLogs;
+using CalamityModCustomPublicPrivateFork.CustomRecipes;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.PlaceableTurrets;
+using CalamityModCustomPublicPrivateFork.Items.SummonItems;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.UI;
+using CalamityModCustomPublicPrivateFork.UI.DraedonLogs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.DraedonMisc
+namespace CalamityModCustomPublicPrivateFork.Items.DraedonMisc
 {
     public class EncryptedSchematicPlanetoid : ModItem, ILocalizedModType
     {

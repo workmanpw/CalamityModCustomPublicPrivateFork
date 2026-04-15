@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Items.Armor.DesertProwler;
-using CalamityMod.Particles;
-using CalamityMod.UI;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Armor.DesertProwler;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.UI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class SandsmokeBomb : CooldownHandler
     {
@@ -21,13 +21,13 @@ namespace CalamityMod.Cooldowns
         public static new string ID => "SandsmokeBomb";
         public override bool ShouldDisplay => true;
         public override LocalizedText DisplayName => CalamityUtils.GetText("UI.Cooldowns.SandsmokeBomb" + (PowerActive ? "Active" : "Cooldown"));
-        public override string Texture => "CalamityMod/Cooldowns/SandsmokeBomb";
-        public override string OutlineTexture => "CalamityMod/Cooldowns/SandsmokeBombOutline";
-        public override string OverlayTexture => "CalamityMod/Cooldowns/SandsmokeBombOverlay";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/SandsmokeBomb";
+        public override string OutlineTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/SandsmokeBombOutline";
+        public override string OverlayTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/SandsmokeBombOverlay";
         public override Color OutlineColor => new Color(255, 299, 156);
         public override Color CooldownStartColor => PowerActive ? Color.Lerp(new Color(204, 181, 72), new Color(169, 142, 16), PowerPercent) : new Color(204, 181, 72);
         public override Color CooldownEndColor => PowerActive ? Color.Lerp(new Color(204, 181, 72), new Color(169, 142, 16), PowerPercent) : new Color(169, 142, 16);
-        public override SoundStyle? EndSound => new("CalamityMod/Sounds/Custom/AbilitySounds/DesertProwlerSmokeBombReload");
+        public override SoundStyle? EndSound => new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/DesertProwlerSmokeBombReload");
 
         public override void OnCompleted()
         {

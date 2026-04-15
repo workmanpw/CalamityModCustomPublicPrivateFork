@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Items.Armor.Wulfrum;
-using CalamityMod.UI;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Wulfrum;
+using CalamityModCustomPublicPrivateFork.UI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class WulfrumBastion : CooldownHandler
     {
@@ -20,13 +20,13 @@ namespace CalamityMod.Cooldowns
         public static new string ID => "WulfrumBastion";
         public override bool ShouldDisplay => true;
         public override LocalizedText DisplayName => CalamityUtils.GetText("UI.Cooldowns.WulfrumBastion" + (PowerActive ? "Active" : "Cooldown"));
-        public override string Texture => PowerActive ? "CalamityMod/Cooldowns/WulfrumBastionActive" : "CalamityMod/Cooldowns/WulfrumBastion";
-        public override string OutlineTexture => "CalamityMod/Cooldowns/WulfrumBastionOutline";
-        public override string OverlayTexture => "CalamityMod/Cooldowns/WulfrumBastionOverlay";
+        public override string Texture => PowerActive ? "CalamityModCustomPublicPrivateFork/Cooldowns/WulfrumBastionActive" : "CalamityModCustomPublicPrivateFork/Cooldowns/WulfrumBastion";
+        public override string OutlineTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/WulfrumBastionOutline";
+        public override string OverlayTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/WulfrumBastionOverlay";
         public override Color OutlineColor => PowerActive ? new Color(194, 255, 67) : new Color(206, 201, 170);
         public override Color CooldownStartColor => PowerActive ? Color.Lerp(new Color(112, 244, 244), new Color(54, 177, 221), DurabilityPercent) : new Color(92, 187, 99);
         public override Color CooldownEndColor => PowerActive ? Color.Lerp(new Color(112, 244, 244), new Color(54, 177, 221), DurabilityPercent) : new Color(160, 232, 77);
-        public override SoundStyle? EndSound => new("CalamityMod/Sounds/Custom/AbilitySounds/WulfrumBastionRecharge");
+        public override SoundStyle? EndSound => new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/WulfrumBastionRecharge");
         //public override bool SavedWithPlayer => false;
 
         public override void OnCompleted()

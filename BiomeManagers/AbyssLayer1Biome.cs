@@ -1,14 +1,14 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.Placeables.Furniture;
-using CalamityMod.Systems;
-using CalamityMod.Waters;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Waters;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.BiomeManagers
+namespace CalamityModCustomPublicPrivateFork.BiomeManagers
 {
     public class AbyssLayer1Biome : ModBiome
     {
@@ -50,9 +50,9 @@ namespace CalamityMod.BiomeManagers
         public override ModWaterStyle WaterStyle => SulphuricDepthsWater.Instance;
         public override int BiomeTorchItemType => ModContent.ItemType<CausticTorch>();
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
-        public override string BestiaryIcon => "CalamityMod/BiomeManagers/AbyssLayer1Icon";
-        public override string BackgroundPath => "CalamityMod/Backgrounds/MapBackgrounds/AbyssBGLayer1";
-        public override string MapBackground => "CalamityMod/Backgrounds/MapBackgrounds/AbyssBGLayer1";
+        public override string BestiaryIcon => "CalamityModCustomPublicPrivateFork/BiomeManagers/AbyssLayer1Icon";
+        public override string BackgroundPath => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AbyssBGLayer1";
+        public override string MapBackground => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AbyssBGLayer1";
 
         public override int Music
         {
@@ -60,7 +60,7 @@ namespace CalamityMod.BiomeManagers
             {
                 if (CalamityPlayer.areThereAnyDamnBosses)
                     return Main.curMusic;
-                return CalamityMod.Instance.GetMusicFromMusicMod("AbyssLayer1") ?? MusicID.Desert;
+                return ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("AbyssLayer1") ?? MusicID.Desert;
             }
         }
 

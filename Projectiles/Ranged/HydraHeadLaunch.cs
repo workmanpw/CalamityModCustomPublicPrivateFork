@@ -1,17 +1,17 @@
-﻿using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Sounds;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class HydraHeadLaunch : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Items/Weapons/Ranged/Hydra";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/Hydra";
 
         public override void SetDefaults()
         {

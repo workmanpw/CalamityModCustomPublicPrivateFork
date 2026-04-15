@@ -1,18 +1,18 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class HolyColliderHolyFire : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/Boss/HolyFire2";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolyFire2";
 
         public bool isLaunched = false;
         public bool setStats = true;
@@ -64,7 +64,7 @@ namespace CalamityMod.Projectiles.Melee
                         Projectile.timeLeft = 300;
                         for (int i = 0; i < 2; i++)
                         {
-                            SoundStyle sound5 = new("CalamityMod/Sounds/Item/HeliumFlashCoreImpact");
+                            SoundStyle sound5 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashCoreImpact");
                             SoundEngine.PlaySound(sound5 with { Volume = 0.55f, Pitch = 0.6f, MaxInstances = 2 }, Projectile.Center);
                         }
                         float starAngle = Main.rand.NextFloat(-0.9f, 0.9f);
@@ -79,7 +79,7 @@ namespace CalamityMod.Projectiles.Melee
                     }
                     if (setStatTimer == 0)
                     {
-                        SoundStyle fire = new("CalamityMod/Sounds/Custom/Providence/ProvidenceHolyBlastShoot");
+                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceHolyBlastShoot");
                         SoundEngine.PlaySound(fire with { Volume = 1f, Pitch = 0.4f }, Projectile.Center);
 
                         Projectile.extraUpdates = 5;
@@ -112,7 +112,7 @@ namespace CalamityMod.Projectiles.Melee
                     }
                     else
                     {
-                        Particle spark = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(80, 80), -Projectile.velocity * Main.rand.NextFloat(0.1f, 1f), "CalamityMod/Particles/ProvidenceMarkParticle", false, 27, Main.rand.NextFloat(1.15f, 1.3f), Main.rand.NextBool(4) ? Color.Khaki : Color.Orange, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.1f, 0.2f));
+                        Particle spark = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(80, 80), -Projectile.velocity * Main.rand.NextFloat(0.1f, 1f), "CalamityModCustomPublicPrivateFork/Particles/ProvidenceMarkParticle", false, 27, Main.rand.NextFloat(1.15f, 1.3f), Main.rand.NextBool(4) ? Color.Khaki : Color.Orange, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.1f, 0.2f));
                         GeneralParticleHandler.SpawnParticle(spark);
                     }
                     
@@ -159,19 +159,19 @@ namespace CalamityMod.Projectiles.Melee
             {
                 Owner.SetScreenshake(9f);
 
-                SoundStyle sound = new("CalamityMod/Sounds/Item/HolyColliderProjectileHit");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HolyColliderProjectileHit");
                 SoundEngine.PlaySound(sound with { Volume = 1f }, Projectile.Center);
 
                 for (int g = 0; g < 3; g++)
                 {
-                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 2.8f * (g + 1), 1.7f, 18, true);
+                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 2.8f * (g + 1), 1.7f, 18, true);
                     GeneralParticleHandler.SpawnParticle(blastRing);
-                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 2.2f * (g + 1), 1.3f, 18, true);
+                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 2.2f * (g + 1), 1.3f, 18, true);
                     GeneralParticleHandler.SpawnParticle(blastRing2);
                 }
                 for (int i = 0; i < 5; i++)
                 {
-                    Particle orb1 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.OrangeRed, Color.Orange, i * 0.2f), i == 4 ? "CalamityMod/Particles/ShatteredExplosion" : "CalamityMod/Particles/FlameExplosion", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.11f + i * 0.05f, 18);
+                    Particle orb1 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.OrangeRed, Color.Orange, i * 0.2f), i == 4 ? "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion" : "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.11f + i * 0.05f, 18);
                     GeneralParticleHandler.SpawnParticle(orb1);
                 }
                 for (int i = 0; i < 25; i++)
@@ -185,10 +185,10 @@ namespace CalamityMod.Projectiles.Melee
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
 
-            Texture2D smallTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/HolyColliderHolyFire").Value;
-            Texture2D bigTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/HolyColliderHolyFire2").Value;
+            Texture2D smallTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/HolyColliderHolyFire").Value;
+            Texture2D bigTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/HolyColliderHolyFire2").Value;
 
             Vector2 drawPos = Projectile.Center - Main.screenPosition;
 

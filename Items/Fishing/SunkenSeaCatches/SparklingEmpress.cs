@@ -1,10 +1,10 @@
-﻿using CalamityMod.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing.SunkenSeaCatches
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches
 {
     public class SparklingEmpress : ModItem, ILocalizedModType
     {

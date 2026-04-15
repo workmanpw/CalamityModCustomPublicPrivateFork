@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Cooldowns;
-using CalamityMod.Items.Materials;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using ReLogic.Utilities;
 using Terraria;
@@ -12,15 +12,15 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Armor.DesertProwler
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.DesertProwler
 {
     [AutoloadEquip(EquipType.Head)]
     public class DesertProwlerHat : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Armor.PreHardmode";
-        public static readonly SoundStyle SmokeBombSound = new("CalamityMod/Sounds/Custom/AbilitySounds/DesertProwlerSmokeBomb");
-        public static readonly SoundStyle SmokeBombEndSound = new("CalamityMod/Sounds/Custom/AbilitySounds/DesertProwlerSmokeBombEnd");
-        public static readonly SoundStyle CDResetSound = new("CalamityMod/Sounds/Custom/AbilitySounds/DesertProwlerCDReset");
+        public static readonly SoundStyle SmokeBombSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/DesertProwlerSmokeBomb");
+        public static readonly SoundStyle SmokeBombEndSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/DesertProwlerSmokeBombEnd");
+        public static readonly SoundStyle CDResetSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/DesertProwlerCDReset");
 
         public static int RogueCritBoost = 4;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(RogueCritBoost);
@@ -159,7 +159,7 @@ namespace CalamityMod.Items.Armor.DesertProwler
     public class DesertProwlerShirt : ModItem, IBulkyArmor, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Armor.PreHardmode";
-        public string BulkTexture => "CalamityMod/Items/Armor/DesertProwler/DesertProwlerShirt_Bulk";
+        public string BulkTexture => "CalamityModCustomPublicPrivateFork/Items/Armor/DesertProwler/DesertProwlerShirt_Bulk";
 
         public static float RogueDamageBoost = 0.05f;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(RogueDamageBoost.ToPercent());

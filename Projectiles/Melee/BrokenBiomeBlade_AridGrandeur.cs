@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,12 +11,12 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class AridGrandeur : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/Melee/BrokenBiomeBlade_AridGrandeur";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_AridGrandeur";
         private bool initialized = false;
         Vector2 direction = Vector2.Zero;
         public ref float Shred => ref Projectile.ai[0]; //How much the attack is, attacking
@@ -172,8 +172,8 @@ namespace CalamityMod.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D handle = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/BrokenBiomeBlade").Value;
-            Texture2D blade = Request<Texture2D>("CalamityMod/Projectiles/Melee/BrokenBiomeBlade_AridGrandeur").Value;
+            Texture2D handle = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/BrokenBiomeBlade").Value;
+            Texture2D blade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_AridGrandeur").Value;
 
             int bladeAmount = 4;
 
@@ -197,7 +197,7 @@ namespace CalamityMod.Projectiles.Melee
 
             for (int i = 0; i < bladeAmount; i++) // Draw extra copies
             {
-                blade = Request<Texture2D>("CalamityMod/Projectiles/Melee/BrokenBiomeBlade_AridGrandeurExtra").Value;
+                blade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_AridGrandeurExtra").Value;
 
                 drawAngle = direction.ToRotation();
 

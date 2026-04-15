@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.NPCs.ProfanedGuardians;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,13 +9,13 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Providence
+namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
 {
     [AutoloadBossHead]
     public class ProvSpawnDefense : ModNPC
     {
         private bool start = true;
-        public override string Texture => "CalamityMod/NPCs/ProfanedGuardians/ProfanedGuardianDefender";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/ProfanedGuardians/ProfanedGuardianDefender";
 
         public override void SetStaticDefaults()
         {

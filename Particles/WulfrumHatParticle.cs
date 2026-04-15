@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class WulfrumHatParticle : Particle
     {
         public override bool SetLifetime => true;
-        public override string Texture => "CalamityMod/Particles/WulfrumHat";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/WulfrumHat";
         public override bool UseCustomDraw => true;
 
         public int Direction;

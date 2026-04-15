@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using CalamityMod.NPCs.DevourerofGods;
-using CalamityMod.NPCs.ExoMechs.Ares;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs
 {
     // Why this class is exist?
     // It because we want to avoid Threading Issues while We using NPC's properties on Draw Thread
@@ -96,7 +96,7 @@ namespace CalamityMod.NPCs
                 return false;
 
             // Do not draw other mod's bosses.
-            if (npc.ModNPC != null && npc.ModNPC.Mod != CalamityMod.Instance && npc.boss)
+            if (npc.ModNPC != null && npc.ModNPC.Mod != ModContent.GetInstance<CalamityMod>() && npc.boss)
                 return false;
 
             // Don't draw excluded NPCs, or if the npc is a bestiary dummy.

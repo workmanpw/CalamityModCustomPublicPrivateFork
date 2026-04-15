@@ -1,17 +1,17 @@
-﻿using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Projectiles.Melee.Yoyos;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     public class TheMicrowave : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Melee";
-        public static readonly SoundStyle BeepSound = new("CalamityMod/Sounds/Custom/MicrowaveBeep");
-        public static readonly SoundStyle MMMSound = new("CalamityMod/Sounds/Custom/MMMMMMMMMMMMM") { IsLooped = true };
+        public static readonly SoundStyle BeepSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/MicrowaveBeep");
+        public static readonly SoundStyle MMMSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/MMMMMMMMMMMMM") { IsLooped = true };
 
         public static float Reach = 512f;
         public static float Speed = 54f;

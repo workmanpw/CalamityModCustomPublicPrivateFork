@@ -1,20 +1,20 @@
-﻿using CalamityMod.CustomRecipes;
+using CalamityModCustomPublicPrivateFork.CustomRecipes;
 using System;
-using CalamityMod.Events;
-using CalamityMod.Items.Materials;
-using CalamityMod.NPCs.AstrumAureus;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.NPCs.AstrumAureus;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using System.Collections.Generic;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     public class AstralChunk : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.SummonItems";
-        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Custom/AstrumAureus/AstrumAureusSpawn");
+        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AstrumAureus/AstrumAureusSpawn");
         public override void SetStaticDefaults()
         {
             ItemID.Sets.SortingPriorityBossSpawns[Type] = 12; // Truffle Worm

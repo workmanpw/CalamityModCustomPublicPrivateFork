@@ -1,8 +1,8 @@
-﻿using CalamityMod.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureProfaned
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureProfaned
 {
     public class RunicProfanedBrick : ModItem, ILocalizedModType
     {

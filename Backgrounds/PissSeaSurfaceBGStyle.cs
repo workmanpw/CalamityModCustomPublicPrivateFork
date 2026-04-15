@@ -1,13 +1,13 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Backgrounds
+namespace CalamityModCustomPublicPrivateFork.Backgrounds
 {
     public class PissSeaSurfaceBGStyle : ModSurfaceBackgroundStyle
     {
         public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b)
         {
             b -= 250f;
-            return BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/PissSeaSurfaceClose");
+            return BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/PissSeaSurfaceClose");
         }
 
         public override void ModifyFarFades(float[] fades, float transitionSpeed)

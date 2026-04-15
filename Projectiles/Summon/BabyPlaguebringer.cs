@@ -1,17 +1,17 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class BabyPlaguebringer : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/Pets/PlaguebringerBab";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Pets/PlaguebringerBab";
 
         public override void SetStaticDefaults()
         {

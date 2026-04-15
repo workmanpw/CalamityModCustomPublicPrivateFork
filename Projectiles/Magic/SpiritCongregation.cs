@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityMod.Graphics.Metaballs;
-using CalamityMod.NPCs;
+using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
+using CalamityModCustomPublicPrivateFork.NPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     [PierceResistException]
     public class SpiritCongregation : ModProjectile, ILocalizedModType
@@ -271,7 +271,7 @@ namespace CalamityMod.Projectiles.Magic
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (CurrentPower > LargeMouthPowerLowerBound)
-                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/SpiritCongregationBig").Value;
+                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/SpiritCongregationBig").Value;
 
             DrawHead(texture);
             return false;
@@ -293,9 +293,9 @@ namespace CalamityMod.Projectiles.Magic
 
         public void DrawHeadForMetaball()
         {
-            Texture2D backTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/SpiritCongregationBack").Value;
+            Texture2D backTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/SpiritCongregationBack").Value;
             if (CurrentPower > LargeMouthPowerLowerBound)
-                backTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/SpiritCongregationBackBig").Value;
+                backTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/SpiritCongregationBackBig").Value;
 
             DrawHead(backTexture, 1.04f);
         }

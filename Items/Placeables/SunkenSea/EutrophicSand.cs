@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.Walls;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea
 {
     public class EutrophicSand : ModItem, ILocalizedModType
     {

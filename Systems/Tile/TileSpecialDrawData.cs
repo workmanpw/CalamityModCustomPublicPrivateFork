@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.GameContent.Drawing;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public struct TileSpecialDrawData : ITileData
     {

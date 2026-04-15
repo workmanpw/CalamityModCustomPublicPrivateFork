@@ -1,8 +1,8 @@
-﻿using System.IO;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.StormWeaver
+namespace CalamityModCustomPublicPrivateFork.NPCs.StormWeaver
 {
     [HasPierceResist]
     [LongDistanceNetSync(SyncWith = typeof(StormWeaverHead))]

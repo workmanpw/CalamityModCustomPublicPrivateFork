@@ -1,11 +1,11 @@
-﻿using System.IO;
-using CalamityMod.NPCs;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.NPCs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     [PierceResistException]
     public class SacrificeProjectile : ModProjectile, ILocalizedModType
@@ -15,7 +15,7 @@ namespace CalamityMod.Projectiles.Rogue
         public bool StickingToAnything => Projectile.ai[0] == 1f;
         public bool ReturningToOwner => Projectile.ai[0] == 2f;
         public bool AbleToHealOwner = true;
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/Sacrifice";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/Sacrifice";
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.TrailingMode[Type] = 1;

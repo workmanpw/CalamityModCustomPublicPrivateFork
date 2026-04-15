@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Abyss;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.FathomSwarmer
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.FathomSwarmer
 {
     [AutoloadEquip(EquipType.Legs)]
     public class FathomSwarmerBoots : ModItem, ILocalizedModType

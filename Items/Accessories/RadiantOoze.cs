@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using CalamityMod.CalPlayer;
-using CalamityMod.Items.Materials;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class RadiantOoze : ModItem, ILocalizedModType
     {

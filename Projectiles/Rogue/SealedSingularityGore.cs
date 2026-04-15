@@ -1,11 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class SealedSingularityGore : ModProjectile, ILocalizedModType
     {
@@ -47,10 +47,10 @@ namespace CalamityMod.Projectiles.Rogue
             switch (Projectile.ai[0])
             {
                 case 1f:
-                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/SealedSingularityGore2").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/SealedSingularityGore2").Value;
                     break;
                 case 2f:
-                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/SealedSingularityGore3").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/SealedSingularityGore3").Value;
                     break;
                 default:
                     texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;

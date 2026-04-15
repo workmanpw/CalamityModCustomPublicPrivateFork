@@ -1,11 +1,11 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Sounds;
-using CalamityMod.World;
-using CalamityMod.BiomeManagers.BestiaryCategories;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.World;
+using CalamityModCustomPublicPrivateFork.BiomeManagers.BestiaryCategories;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -15,7 +15,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace CalamityMod.NPCs.Astral
+namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
 {
     public class Astraglomerate : ModNPC
     {
@@ -25,7 +25,7 @@ namespace CalamityMod.NPCs.Astral
         {
             NPCID.Sets.NeedsExpertScaling[Type] = true;
             if (!Main.dedServ)
-                glowmask = ModContent.Request<Texture2D>("CalamityMod/NPCs/Astral/AstraglomerateGlow", AssetRequestMode.AsyncLoad);
+                glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Astral/AstraglomerateGlow", AssetRequestMode.AsyncLoad);
             Main.npcFrameCount[Type] = 6;
         }
 
@@ -61,7 +61,7 @@ namespace CalamityMod.NPCs.Astral
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Astraglomerate")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Astraglomerate")
             });
         }
 

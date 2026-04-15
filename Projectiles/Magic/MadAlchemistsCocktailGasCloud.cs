@@ -1,5 +1,5 @@
-﻿using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Magic
+using Terraria.ModLoader;
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class MadAlchemistsCocktailGasCloud : ModProjectile, ILocalizedModType
     {

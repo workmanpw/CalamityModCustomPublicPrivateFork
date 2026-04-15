@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Graphics.Primitives
+namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives
 {
     /// <summary>
     /// This manages rendering primitives in via the provided <see cref="RenderTrail"/> method.<br/><br/>

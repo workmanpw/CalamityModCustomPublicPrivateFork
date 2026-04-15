@@ -1,8 +1,8 @@
-﻿using CalamityMod.NPCs.Yharon;
+using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class YharonBackgroundScene : ModSceneEffect
     {

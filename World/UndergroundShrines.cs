@@ -1,26 +1,26 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Mounts;
-using CalamityMod.Items.Placeables.Furniture;
-using CalamityMod.Items.Potions.Alcohol;
-using CalamityMod.Items.Potions.Food;
-using CalamityMod.Items.SummonItems;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Schematics;
-using CalamityMod.Tiles;
-using CalamityMod.Tiles.FurnitureVoid;
-using CalamityMod.Walls;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Mounts;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
+using CalamityModCustomPublicPrivateFork.Items.SummonItems;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Schematics;
+using CalamityModCustomPublicPrivateFork.Tiles;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureVoid;
+using CalamityModCustomPublicPrivateFork.Walls;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using static CalamityMod.Schematics.SchematicManager;
+using static CalamityModCustomPublicPrivateFork.Schematics.SchematicManager;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.World
+namespace CalamityModCustomPublicPrivateFork.World
 {
     public class UndergroundShrines
     {
@@ -926,7 +926,7 @@ namespace CalamityMod.World
                     return;
                 }
             } while (tries <= 100000);
-            CalamityMod.Log.Debug("Rox Shrine failed to generate");
+            ModContent.GetInstance<CalamityMod>().Logger.Debug("Rox Shrine failed to generate");
         }
         #endregion
 

@@ -1,13 +1,13 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class DesertProwlerSkullParticle : Particle
     {
-        public override string Texture => "CalamityMod/Particles/DesertProwlerSkull";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/DesertProwlerSkull";
         public override bool UseCustomDraw => true;
         public override bool UseHalfTransparency => true;
 

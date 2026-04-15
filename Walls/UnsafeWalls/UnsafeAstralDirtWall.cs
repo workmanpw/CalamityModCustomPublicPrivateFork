@@ -1,12 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Walls.UnsafeWalls
+namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
 {
     public class UnsafeAstralDirtWall : ModWall
     {
-        public override string Texture => "CalamityMod/Walls/AstralDirtWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/AstralDirtWall";
 
         public override void SetStaticDefaults()
         {

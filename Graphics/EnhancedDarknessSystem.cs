@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Utilities.Daybreak;
-using CalamityMod.Utilities.Daybreak.Buffers;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.Graphics.Light;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Graphics
+namespace CalamityModCustomPublicPrivateFork.Graphics
 {
     public class EnhancedDarknessSystem : ModSystem
     {
@@ -33,7 +33,7 @@ namespace CalamityMod.Graphics
             // This constructor only gives the most common arguments. Frame, Color, lifetime, etc. must be set in curly braces afterwards to prevent this constructor getting too unwieldy.
             public LightSource(Vector2? center = null, Texture2D texture = null, float scale = 1, float rotation = 0, Vector2? vectorScale = null, float opacity = 1)
             {
-                this.texture = texture ?? ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+                this.texture = texture ?? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
                 this.scale = scale;
                 this.vectorScale = vectorScale ?? Vector2.One;
                 this.center = center ?? Main.LocalPlayer.Center;
@@ -47,7 +47,7 @@ namespace CalamityMod.Graphics
         {
             On_OverlayManager.Draw += DrawShadowOverlay;
             On_LightingEngine.UpdateLightDecay += AdjustTransmissiveness;
-            _defaultTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+            _defaultTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
         }
 
         private void DrawShadowOverlay(On_OverlayManager.orig_Draw orig, OverlayManager self, SpriteBatch spriteBatch, RenderLayers layer, bool beginSpriteBatch)
@@ -98,13 +98,14 @@ namespace CalamityMod.Graphics
             orig(self);
 
             var mp = Main.LocalPlayer.Calamity();
-            LightMap map = self._workingLightMap;
+            // LightingEngine._workingLightMap is private and no longer accessible
+            // LightMap map = self._workingLightMap;
             if (mp.ZoneAbyss)
             {
                 //This converts the light decay amount from the amount it normally is in water into the amount it normally is in air, depending on the intensity of the abyss darkness.
                 //This is to offset the abyss darkness system to make the parts that are supposed to be visible easier to see.
                 //Dividing by 0.91 brings the water back to 100% transmissiveness with the original color
-                map.LightDecayThroughWater = Vector3.Lerp(map.LightDecayThroughWater, (map.LightDecayThroughWater / VanillaWaterLightMult) * 0.95f, MathHelper.Clamp(mp.darknessIntensity, 0, 1));
+                // map.LightDecayThroughWater = Vector3.Lerp(map.LightDecayThroughWater, (map.LightDecayThroughWater / VanillaWaterLightMult) * 0.95f, MathHelper.Clamp(mp.darknessIntensity, 0, 1));
             }
         }
 

@@ -1,11 +1,11 @@
-﻿using CalamityMod.Buffs.Pets;
-using CalamityMod.Projectiles.Pets;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Buffs.Pets;
+using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Pets
+namespace CalamityModCustomPublicPrivateFork.Items.Pets
 {
     public class Levi : ModItem, ILocalizedModType
     {

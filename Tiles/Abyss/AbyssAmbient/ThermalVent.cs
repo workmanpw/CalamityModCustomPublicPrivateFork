@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.CalPlayer;
-using CalamityMod.Projectiles.Environment;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Projectiles.Environment;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Abyss.AbyssAmbient
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient
 {
     public class ThermalVent1 : ModTile
     {

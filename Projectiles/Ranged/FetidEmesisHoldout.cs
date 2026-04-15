@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class FetidEmesisHoldout : BaseGunHoldoutProjectile
     {
@@ -51,7 +51,7 @@ namespace CalamityMod.Projectiles.Ranged
             {
                 Owner.PickAmmo(Owner.HeldItem, out int bulletAMMO, out float SpeedNoUse, out int bulletDamage, out float kBackNoUse, out _);
                 
-                SoundStyle fire = new("CalamityMod/Sounds/Item/GunShotSmallAlt");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GunShotSmallAlt");
                 SoundEngine.PlaySound(fire with { Volume = 0.7f, Pitch = -0.1f + revSpeed * 0.01f }, Projectile.Center);
 
                 Vector2 shootVelocity = Projectile.velocity.SafeNormalize(Vector2.UnitY) * 19;
@@ -95,8 +95,8 @@ namespace CalamityMod.Projectiles.Ranged
                 Owner.SetScreenshake(6.5f);
                 OffsetLengthFromArm -= 35f;
                 cooldownTimer = (int)MathHelper.Lerp((int)(Utils.Remap(revFrames, 0, 350, 40, 180, true)), 180, 0.7f);
-                SoundStyle bigShot = new("CalamityMod/Sounds/Custom/Perforator/PerfHiveIchorShoot");
-                SoundStyle bigShotGun = new("CalamityMod/Sounds/Item/FlakKrakenShoot");
+                SoundStyle bigShot = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Perforator/PerfHiveIchorShoot");
+                SoundStyle bigShotGun = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FlakKrakenShoot");
                 SoundEngine.PlaySound(bigShot with { Pitch = -0.2f, Volume = 0.6f }, Projectile.Center);
                 SoundEngine.PlaySound(bigShotGun with { Volume = 0.6f }, Projectile.Center);
 
@@ -106,9 +106,9 @@ namespace CalamityMod.Projectiles.Ranged
                 Particle pulse3 = new GlowSparkParticle(GunTipPosition - shootVelocity, shootVelocity, false, 12, 0.035f, Color.Chartreuse, new Vector2(2.5f, 0.9f), true);
                 GeneralParticleHandler.SpawnParticle(pulse3);
 
-                Particle pulse2 = new CustomPulse(GunTipPosition, Projectile.velocity * 14.5f, Color.Chartreuse * 0.7f, "CalamityMod/Particles/DustyCircleHardEdge", new Vector2(0.4f, 1f), Projectile.velocity.ToRotation(), 0.13f, 0, 34);
+                Particle pulse2 = new CustomPulse(GunTipPosition, Projectile.velocity * 14.5f, Color.Chartreuse * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", new Vector2(0.4f, 1f), Projectile.velocity.ToRotation(), 0.13f, 0, 34);
                 GeneralParticleHandler.SpawnParticle(pulse2);
-                Particle pulse = new CustomPulse(GunTipPosition, Projectile.velocity * 9f, Color.Chartreuse * 0.7f, "CalamityMod/Particles/FlameExplosion", new Vector2(0.4f, 1f), Projectile.velocity.ToRotation(), 0.25f, 0, 34);
+                Particle pulse = new CustomPulse(GunTipPosition, Projectile.velocity * 9f, Color.Chartreuse * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", new Vector2(0.4f, 1f), Projectile.velocity.ToRotation(), 0.25f, 0, 34);
                 GeneralParticleHandler.SpawnParticle(pulse);
                 
                 if (Main.myPlayer == Projectile.owner)
@@ -141,7 +141,7 @@ namespace CalamityMod.Projectiles.Ranged
 
                 if (cooldownTimer % 29 == 0)
                 {
-                    SoundStyle tired = new("CalamityMod/Sounds/Custom/OldDukeHuff");
+                    SoundStyle tired = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeHuff");
                     SoundEngine.PlaySound(tired with { Pitch = -0.2f }, Projectile.Center);
                     for (int i = 0; i <= 12; i++)
                     {
@@ -187,7 +187,7 @@ namespace CalamityMod.Projectiles.Ranged
 
             Main.EntitySpriteDraw(texture, drawPosition, null, Projectile.GetAlpha(lightColor), drawRotation, rotationPoint, Projectile.scale * Owner.gravDir, flipSprite);
 
-            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/FullStar").Value;
+            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/FullStar").Value;
             float rot = Main.GlobalTimeWrappedHourly * 4;
 
             if (!isTired && (revFrames < maxFrames) && revFrames > 20)

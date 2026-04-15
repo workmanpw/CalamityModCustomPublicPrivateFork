@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.FurnitureSacrilegious;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSacrilegious;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureSacrilegious
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious
 {
     // TODO -- why does this one piece of Otherworldly furniture still use the old naming scheme
     public class OccultPlatformTile : ModTile

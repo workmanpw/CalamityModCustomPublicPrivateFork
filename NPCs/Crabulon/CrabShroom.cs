@@ -1,5 +1,5 @@
-﻿using CalamityMod.Events;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Crabulon
+namespace CalamityModCustomPublicPrivateFork.NPCs.Crabulon
 {
     public class CrabShroom : ModNPC
     {

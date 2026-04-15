@@ -1,4 +1,4 @@
-﻿using CalamityMod.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -6,13 +6,13 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Rogue
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
 {
     public class SpearofDestiny : RogueWeapon
     {
-        public static readonly SoundStyle ThrowSound = new("CalamityMod/Sounds/Item/SpearofDestiny") { Volume = 0.3f, PitchVariance = 0.3f };
-        public static readonly SoundStyle ThrowSound2 = new("CalamityMod/Sounds/Item/LanceofDestiny") { Volume = 0.3f, PitchVariance = 0.3f };
-        public static readonly SoundStyle ThrowSound3 = new("CalamityMod/Sounds/Item/LanceofDestinyStrong") { Volume = 0.5f, PitchVariance = 0.3f };
+        public static readonly SoundStyle ThrowSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SpearofDestiny") { Volume = 0.3f, PitchVariance = 0.3f };
+        public static readonly SoundStyle ThrowSound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LanceofDestiny") { Volume = 0.3f, PitchVariance = 0.3f };
+        public static readonly SoundStyle ThrowSound3 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LanceofDestinyStrong") { Volume = 0.5f, PitchVariance = 0.3f };
         private bool BigSpear = false;
         public override void SetDefaults()
         {

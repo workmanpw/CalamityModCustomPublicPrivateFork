@@ -1,16 +1,16 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
-using static CalamityMod.Items.Weapons.Ranged.FlakKraken;
+using static CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged.FlakKraken;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class FlakKrakenHoldout : BaseGunHoldoutProjectile
     {
@@ -146,7 +146,7 @@ namespace CalamityMod.Projectiles.Ranged
                             shootDust.noLightEmittence = false;
                         }
 
-                        SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/FlakKrakenShoot") { Volume = 0.6f }, GunTipPosition);
+                        SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/FlakKrakenShoot") { Volume = 0.6f }, GunTipPosition);
                     }
                 }
 

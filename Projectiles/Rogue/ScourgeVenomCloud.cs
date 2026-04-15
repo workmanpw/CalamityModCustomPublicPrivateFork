@@ -1,10 +1,10 @@
-﻿using System;
-using CalamityMod.Buffs.StatDebuffs;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class ScourgeVenomCloud : ModProjectile, ILocalizedModType
     {

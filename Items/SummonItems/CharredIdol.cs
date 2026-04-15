@@ -1,18 +1,18 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Events;
-using CalamityMod.Items.Materials;
-using CalamityMod.NPCs.BrimstoneElemental;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.NPCs.BrimstoneElemental;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     public class CharredIdol : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.SummonItems";
-        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Custom/BrimstoneElemental/BrimstoneSpawn");
+        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrimstoneElemental/BrimstoneSpawn");
         public override void SetStaticDefaults()
         {
             ItemID.Sets.SortingPriorityBossSpawns[Type] = 10; // Mechanical Skull

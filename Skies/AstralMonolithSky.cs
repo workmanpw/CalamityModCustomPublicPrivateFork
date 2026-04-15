@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 
-namespace CalamityMod.Skies
+namespace CalamityModCustomPublicPrivateFork.Skies
 {
     public class AstralMonolithSky : CustomSky
     {

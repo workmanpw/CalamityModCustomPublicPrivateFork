@@ -1,9 +1,9 @@
-﻿#nullable enable
+#nullable enable
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityMod.Utilities.Daybreak;
+namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
 
 /// <summary>
 ///     Wraps the parameters of a <see cref="SpriteBatch"/> initialization,

@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Events;
-using CalamityMod.NPCs.Cryogen;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class IceRain : ModProjectile, ILocalizedModType
     {

@@ -1,9 +1,9 @@
-﻿using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Typeless
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless
 {
     [LegacyName("AeroDynamite")]
     public class Skynamite : ModItem, ILocalizedModType

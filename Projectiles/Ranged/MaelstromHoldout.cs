@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class MaelstromHoldout : ModProjectile
     {
@@ -16,7 +16,7 @@ namespace CalamityMod.Projectiles.Ranged
         private ref float CurrentChargingFrames => ref Projectile.ai[0];
         private ref float FramesToLoadNextArrow => ref Projectile.localAI[0];
 
-        public override string Texture => "CalamityMod/Items/Weapons/Ranged/TheMaelstrom";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/TheMaelstrom";
 
         public override void SetDefaults()
         {

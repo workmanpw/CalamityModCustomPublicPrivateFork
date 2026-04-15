@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -8,7 +8,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon.Umbrella
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella
 {
     public class MagicAxe : ModProjectile, ILocalizedModType
     {

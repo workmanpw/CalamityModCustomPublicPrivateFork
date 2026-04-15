@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Buffs.Summon.Whips;
-using CalamityMod.NPCs.Providence;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips;
+using CalamityModCustomPublicPrivateFork.NPCs.Providence;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class MiniGuardianAttack : ModProjectile, ILocalizedModType
     {

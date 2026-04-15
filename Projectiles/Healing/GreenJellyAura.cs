@@ -1,27 +1,27 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Buffs.StatBuffs;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Particles;
-using CalamityMod.Systems.Collections;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Healing
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Healing
 {
     public class GreenJellyAura : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Healing";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public int ShinkGrow = 0;
         public int Framecounter = 0;
         public int CleanseOnce = 1;
         public int PulseOnce = 1;
         public int PulseOnce2 = 1;
         public int PulseOnce3 = 1;
-        public static readonly SoundStyle Spawnsound = new("CalamityMod/Sounds/Custom/OrbHeal3") { Volume = 0.5f };
+        public static readonly SoundStyle Spawnsound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/OrbHeal3") { Volume = 0.5f };
         public List<bool> cleanseList = new List<bool>(new bool[Main.maxPlayers]);
         public ref int CleansingEffect => ref Main.player[Projectile.owner].Calamity().CleansingEffect;
 

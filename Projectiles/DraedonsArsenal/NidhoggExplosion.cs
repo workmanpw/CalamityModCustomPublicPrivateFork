@@ -1,16 +1,16 @@
-﻿using System;
-using CalamityMod.Dusts;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class NidhoggExplosion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public int time = 0;
         public float sine = 0;
         public float shrink = 1;
@@ -73,7 +73,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             float sine2 = Math.Abs(MathHelper.Lerp((float)Math.Sin(time * 0.7f / MathHelper.Pi), 0.4f, 0.8f));
             float fade = (float)Math.Pow(Utils.GetLerpValue(0, 10, Projectile.timeLeft, true), 3);
             float areaScale = (strong ? 1f : 1) * fade;
-            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSquareParticleBig").Value;
+            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleBig").Value;
             Color drawColor = Effects.ArsenalEffects.ArsenalGaussColor with { A = 0 } * (strong ? 0.5f : 0.3f) * shrinkFade;
 
             Main.EntitySpriteDraw(tex2, Projectile.Center - Main.screenPosition, null, drawColor, MathHelper.PiOver4 - MathHelper.PiOver2 * sine * 3, tex2.Size() / 2f, (areaScale + sine * 0.5f) * shrink, SpriteEffects.None, 0);

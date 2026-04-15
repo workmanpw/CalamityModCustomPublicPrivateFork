@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Plates;
-using CalamityMod.Tiles.DraedonStructures.CagedLights;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Plates;
+using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures.CagedLights;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.DraedonStructures.CagedLights
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures.CagedLights
 {
     public class CagedFloodlightItem : ModItem, ILocalizedModType
     {

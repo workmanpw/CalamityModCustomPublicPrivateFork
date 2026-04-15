@@ -1,11 +1,11 @@
-﻿using System.IO;
+using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides
 {
     public abstract class VanillaAIOverride : ILoadable
     {

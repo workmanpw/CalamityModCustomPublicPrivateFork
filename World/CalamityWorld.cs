@@ -1,9 +1,13 @@
-﻿using CalamityMod.Items.Tools.ClimateChange;
-using CalamityMod.NPCs.ExoMechs;
-using CalamityMod.NPCs.ExoMechs.Apollo;
-using CalamityMod.NPCs.ExoMechs.Ares;
-using CalamityMod.NPCs.ExoMechs.Artemis;
-using CalamityMod.NPCs.ExoMechs.Thanatos;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using CalamityModCustomPublicPrivateFork.Items.Tools.ClimateChange;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -11,7 +15,7 @@ using Terraria.GameContent.Events;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.World
+namespace CalamityModCustomPublicPrivateFork.World
 {
     // For the sake of ease of access of variables this class remains in its current form (there are likely thousands of references by now).
     // However, all functionalities in the form of hooks have been cleared away in favor of split systems.
@@ -58,11 +62,13 @@ namespace CalamityMod.World
             if (Main.GameModeInfo.IsJourneyMode)
             {
                 CreativePowers.DifficultySliderPower power = CreativePowerManager.Instance.GetPower<CreativePowers.DifficultySliderPower>();
-                float level = power._sliderCurrentValueCache;
+                // Accessing private field via reflection since it's no longer accessible directly
+                FieldInfo sliderCacheField = typeof(CreativePowers.DifficultySliderPower).GetField("_sliderCurrentValueCache", BindingFlags.Instance | BindingFlags.NonPublic);
+                float level = (float)sliderCacheField.GetValue(power);
                 return level == 1f;
             }
 
-            return Main._currentGameModeInfo.IsMasterMode;
+            return Main.GameModeInfo.IsMasterMode;
         }
 
         // Sunken Sea

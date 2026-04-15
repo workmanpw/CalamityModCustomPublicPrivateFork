@@ -1,17 +1,17 @@
-﻿using CalamityMod.Buffs.Summon;
-using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class PhantomGuy : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/NPCs/Polterghast/PhantomFuckYou";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/Polterghast/PhantomFuckYou";
 
         public override void SetStaticDefaults()
         {

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.UI.DraedonLogs
+namespace CalamityModCustomPublicPrivateFork.UI.DraedonLogs
 {
     public abstract class DraedonsLogGUI : PopupGUI
     {
@@ -47,7 +47,7 @@ namespace CalamityMod.UI.DraedonLogs
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            Texture2D pageTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonLogs/DraedonsLogPage").Value;
+            Texture2D pageTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonLogs/DraedonsLogPage").Value;
             float xScale = MathHelper.Lerp(0.004f, 1f, FadeTime / (float)FadeTimeMax);
             Vector2 scale = new Vector2(xScale, 1f) * new Vector2(Main.screenWidth, Main.screenHeight) / pageTexture.Size();
             scale.Y *= 1.5f;
@@ -112,7 +112,7 @@ namespace CalamityMod.UI.DraedonLogs
         public void DrawArrows(SpriteBatch spriteBatch, float xResolutionScale, float yResolutionScale, float yPageBottom, Rectangle mouseRectangle)
         {
             float arrowScale = 0.6f;
-            Texture2D arrowTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonLogs/DraedonsLogArrow").Value;
+            Texture2D arrowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonLogs/DraedonsLogArrow").Value;
             if (Page > 0)
             {
                 Vector2 drawPosition = new Vector2(Main.screenWidth / 2 - 80f, yPageBottom);
@@ -122,7 +122,7 @@ namespace CalamityMod.UI.DraedonLogs
 
                 if (mouseRectangle.Intersects(arrowRectangle))
                 {
-                    arrowTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonLogs/DraedonsLogArrowHover").Value;
+                    arrowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonLogs/DraedonsLogArrowHover").Value;
                     if (ArrowClickCooldown <= 0 && Main.mouseLeft)
                     {
                         Page--;
@@ -143,7 +143,7 @@ namespace CalamityMod.UI.DraedonLogs
 
                 if (mouseRectangle.Intersects(arrowRectangle))
                 {
-                    arrowTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonLogs/DraedonsLogArrowHover").Value;
+                    arrowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonLogs/DraedonsLogArrowHover").Value;
                     if (ArrowClickCooldown <= 0 && Main.mouseLeft)
                     {
                         Page++;

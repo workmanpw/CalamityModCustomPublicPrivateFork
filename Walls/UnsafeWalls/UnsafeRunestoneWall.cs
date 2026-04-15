@@ -1,12 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Walls.UnsafeWalls
+namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
 {
     public class UnsafeRunestoneWall : ModWall, IVisibleThroughWater
     {
-        public override string Texture => "CalamityMod/Walls/RunestoneWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/RunestoneWall";
         int IVisibleThroughWater.WaterMapEntry { get; set; }
 
         public override void SetStaticDefaults()

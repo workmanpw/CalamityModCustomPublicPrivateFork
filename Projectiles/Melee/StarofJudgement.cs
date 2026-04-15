@@ -1,18 +1,18 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework.Graphics;
 using System;
-using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Dusts;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class StarofJudgement : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/Melee/StarofJudgement";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/StarofJudgement";
         public ref float time => ref Projectile.ai[0];
         public Color mainColor;
         public override void SetStaticDefaults()
@@ -60,7 +60,7 @@ namespace CalamityMod.Projectiles.Melee
                     Projectile.velocity = Projectile.velocity.RotatedBy(0.085f * Projectile.ai[1]);
                 if (time % 2 == 0)
                 {
-                    Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity * 0.2f, "CalamityMod/Particles/BloomCircle", false, 13, 0.35f, mainColor * 0.75f, new Vector2(0.8f, 1.35f), true, false, shrinkSpeed: 0.3f);
+                    Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity * 0.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 13, 0.35f, mainColor * 0.75f, new Vector2(0.8f, 1.35f), true, false, shrinkSpeed: 0.3f);
                     GeneralParticleHandler.SpawnParticle(spark);
                 }
             }
@@ -81,7 +81,7 @@ namespace CalamityMod.Projectiles.Melee
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/StarofJudgement").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/StarofJudgement").Value;
 
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Color.Lerp(mainColor, Color.White, 0.2f) with { A = 0 };

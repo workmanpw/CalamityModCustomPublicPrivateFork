@@ -1,15 +1,15 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class PhalanxSurgeLaser : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public int time = 0;
         public override void SetDefaults()
@@ -63,7 +63,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             
             if (time < 1)
                 return false;
-            Texture2D pointTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowBlade").Value;
+            Texture2D pointTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowBlade").Value;
             float fade = Utils.GetLerpValue(0, 15, Projectile.timeLeft, true);
 
             for (int i = 0; i < 4; i++)

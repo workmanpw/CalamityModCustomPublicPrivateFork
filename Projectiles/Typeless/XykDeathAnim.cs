@@ -1,18 +1,18 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class XykDeathAnim : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
         public ref float time => ref Projectile.ai[0];
         public int endTime = 25;
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void SetStaticDefaults()
         {
@@ -38,7 +38,7 @@ namespace CalamityMod.Projectiles.Typeless
 
             if (time == 0)
             {
-                SoundStyle die = new("CalamityMod/Sounds/Item/XykDie");
+                SoundStyle die = new("CalamityModCustomPublicPrivateFork/Sounds/Item/XykDie");
                 SoundEngine.PlaySound(die with { Volume = 1f }, Projectile.Center);
             }
             if (time < endTime)
@@ -63,9 +63,9 @@ namespace CalamityMod.Projectiles.Typeless
                 Projectile.scale *= 1.15f;
                 for (int i = 0; i < 3; i++)
                 {
-                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, effectColor, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.7f * (i + 1) * Projectile.scale, 1f * Projectile.scale, 18, true);
+                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, effectColor, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.7f * (i + 1) * Projectile.scale, 1f * Projectile.scale, 18, true);
                     GeneralParticleHandler.SpawnParticle(blastRing);
-                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.35f * (i + 1) * Projectile.scale, 0.5f * Projectile.scale, 18, true);
+                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.35f * (i + 1) * Projectile.scale, 0.5f * Projectile.scale, 18, true);
                     GeneralParticleHandler.SpawnParticle(blastRing2);
                 }
 
@@ -79,15 +79,15 @@ namespace CalamityMod.Projectiles.Typeless
                 {
                     if (Orange)
                     {
-                        Particle spark1 = new CustomPulse(Projectile.Center, Vector2.Zero, effectColor, "CalamityMod/Particles/GlowSquareParticleBig", Vector2.One, MathHelper.PiOver4, 0, 2.2f, 22);
+                        Particle spark1 = new CustomPulse(Projectile.Center, Vector2.Zero, effectColor, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleBig", Vector2.One, MathHelper.PiOver4, 0, 2.2f, 22);
                         GeneralParticleHandler.SpawnParticle(spark1);
 
-                        Particle spark2 = new CustomPulse(Projectile.Center, Vector2.Zero, effectColor, "CalamityMod/Particles/GlowSquareParticleBig", Vector2.One, MathHelper.PiOver4, 0, 1.2f, 47);
+                        Particle spark2 = new CustomPulse(Projectile.Center, Vector2.Zero, effectColor, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleBig", Vector2.One, MathHelper.PiOver4, 0, 1.2f, 47);
                         GeneralParticleHandler.SpawnParticle(spark2);
                     }
                     else
                     {
-                        Particle spark1 = new CustomPulse(Projectile.Center, Vector2.Zero, effectColor, "CalamityMod/Particles/HighResHollowCircleHardEdge", Vector2.One, MathHelper.PiOver4, 0, 0.3f, 22);
+                        Particle spark1 = new CustomPulse(Projectile.Center, Vector2.Zero, effectColor, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", Vector2.One, MathHelper.PiOver4, 0, 0.3f, 22);
                         GeneralParticleHandler.SpawnParticle(spark1);
                     }
                     for (int i = 0; i < 30; i++)
@@ -99,12 +99,12 @@ namespace CalamityMod.Projectiles.Typeless
 
                         if (Orange)
                         {
-                            Particle squarker = new CustomPulse(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(5.5f, 20), effectColor, "CalamityMod/Particles/GlowSquareParticle", Vector2.One, MathHelper.PiOver4, Main.rand.NextFloat(1.3f, 3.8f), 0.2f, 38);
+                            Particle squarker = new CustomPulse(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(5.5f, 20), effectColor, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticle", Vector2.One, MathHelper.PiOver4, Main.rand.NextFloat(1.3f, 3.8f), 0.2f, 38);
                             GeneralParticleHandler.SpawnParticle(squarker);
                         }
                         else
                         {
-                            Particle sparker = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(5.5f, 20), "CalamityMod/Particles/Sparkle", false, 38, Main.rand.NextFloat(2.2f, 4.8f), effectColor, new Vector2(0.4f, Main.rand.NextFloat(0.9f, 1.4f)), true, true, 0, false, false, 0.1f);
+                            Particle sparker = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(5.5f, 20), "CalamityModCustomPublicPrivateFork/Particles/Sparkle", false, 38, Main.rand.NextFloat(2.2f, 4.8f), effectColor, new Vector2(0.4f, Main.rand.NextFloat(0.9f, 1.4f)), true, true, 0, false, false, 0.1f);
                             GeneralParticleHandler.SpawnParticle(sparker);
                         }
                     }

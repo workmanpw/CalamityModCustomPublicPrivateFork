@@ -1,24 +1,24 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Events;
-using CalamityMod.Items.Materials;
-using CalamityMod.NPCs.CeaselessVoid;
-using CalamityMod.NPCs.Signus;
-using CalamityMod.NPCs.StormWeaver;
-using CalamityMod.Rarities;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.NPCs.CeaselessVoid;
+using CalamityModCustomPublicPrivateFork.NPCs.Signus;
+using CalamityModCustomPublicPrivateFork.NPCs.StormWeaver;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     [LegacyName("RuneofCos", "RuneofKos")]
     public class MarkofProvidence : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.SummonItems";
-        public static readonly SoundStyle CVSound = new("CalamityMod/Sounds/Item/CeaselessVoidSpawn");
-        public static readonly SoundStyle SignutSound = new("CalamityMod/Sounds/Item/SignusSpawn");
-        public static readonly SoundStyle StormSound = new("CalamityMod/Sounds/Item/StormWeaverSpawn");
+        public static readonly SoundStyle CVSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/CeaselessVoidSpawn");
+        public static readonly SoundStyle SignutSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SignusSpawn");
+        public static readonly SoundStyle StormSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/StormWeaverSpawn");
         public override void SetStaticDefaults()
         {
             ItemID.Sets.SortingPriorityBossSpawns[Type] = 19; // Celestial Sigil

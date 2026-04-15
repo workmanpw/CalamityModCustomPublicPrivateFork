@@ -1,14 +1,14 @@
-﻿using CalamityMod.Buffs.Summon.Whips;
-using CalamityMod.CalPlayer;
-using CalamityMod.DataStructures;
-using CalamityMod.Projectiles.Summon;
-using CalamityMod.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor
+namespace CalamityModCustomPublicPrivateFork.Items.Armor
 {
     [AutoloadEquip(EquipType.Head)]
     public class ForbiddenCirclet : ModItem, ILocalizedModType

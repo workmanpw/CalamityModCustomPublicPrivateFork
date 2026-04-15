@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Ranged;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,13 +8,13 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     public class RubicoPrime : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Ranged";
-        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/TankCannon") { PitchVariance = 0.5f };
-        public static readonly SoundStyle ReloadSound = new("CalamityMod/Sounds/Item/RubicoReload") { Volume = 1.1f, PitchVariance = 0.1f };
+        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TankCannon") { PitchVariance = 0.5f };
+        public static readonly SoundStyle ReloadSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/RubicoReload") { Volume = 1.1f, PitchVariance = 0.1f };
         public static int BaseReuseDelay = 25;
         public static int ShotsToReset = 5;
 

@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.NPCs;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.NPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     [PierceResistException]
     public class ApotheosisWorm : ModProjectile, ILocalizedModType
@@ -201,7 +201,7 @@ namespace CalamityMod.Projectiles.Magic
                 }
 
                 if (Main.rand.NextBool(10))
-                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/MechGaussRifle"), Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MechGaussRifle"), Projectile.Center);
             }
 
             float idealFlyAcceleration = 0.18f;
@@ -269,12 +269,12 @@ namespace CalamityMod.Projectiles.Magic
             drawPosition -= headTexture.Size() * Projectile.scale * 0.5f;
             drawPosition += headTextureOrigin * Projectile.scale + new Vector2(0f, 4f + Projectile.gfxOffY);
 
-            Texture2D jawTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/ApotheosisJaw").Value;
+            Texture2D jawTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/ApotheosisJaw").Value;
             Vector2 jawOrigin = jawTexture.Size() * 0.5f;
 
             // Segment drawing.
-            Texture2D bodyTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsBody_P2").Value;
-            Texture2D tailTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsTail_P2").Value;
+            Texture2D bodyTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/DevourerofGods/DevourerofGodsBody_P2").Value;
+            Texture2D tailTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/DevourerofGods/DevourerofGodsTail_P2").Value;
 
             // Not white to differentiate itself slightly from regular DoG when fighting Boss Rush.
             Color baseColor = Color.Lerp(Color.White, Color.Fuchsia, 0.15f);
@@ -311,7 +311,7 @@ namespace CalamityMod.Projectiles.Magic
                 float currentFade = Utils.GetLerpValue(0f, 8f, Time, true) * Utils.GetLerpValue(60f, 52f, Time, true);
                 currentFade *= (1f + 0.2f * (float)Math.Cos(Main.GlobalTimeWrappedHourly % 30f * MathHelper.Pi * 3f)) * 0.8f;
 
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/StarProj").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/StarProj").Value;
                 Vector2 drawPos = PortalPosition - Main.screenPosition;
                 baseColor = new Color(150, 100, 255, 255) * Projectile.Opacity;
                 baseColor *= 0.5f;

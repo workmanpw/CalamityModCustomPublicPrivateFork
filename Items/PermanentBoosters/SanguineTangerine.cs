@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using CalamityMod.CalPlayer;
-using CalamityMod.Items.Materials;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.PermanentBoosters
+namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
 {
     [LegacyName("BloodOrange")]
     public class SanguineTangerine : ModItem, ILocalizedModType
@@ -18,7 +18,7 @@ namespace CalamityMod.Items.PermanentBoosters
         public const int LifeBoost = 25;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(LifeBoost);
 
-        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/BloodOrangeConsume");
+        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/BloodOrangeConsume");
         public override void SetStaticDefaults()
         {
             // For some reason Life/Mana boosting items are in this set (along with Magic Mirror+)
@@ -50,7 +50,7 @@ namespace CalamityMod.Items.PermanentBoosters
             {
                 if (player.whoAmI == Main.myPlayer)
                 {
-                    string key = "Mods.CalamityMod.Misc.SanguineTangerineText";
+                    string key = "Mods.CalamityModCustomPublicPrivateFork.Misc.SanguineTangerineText";
                     Color messageColor = Color.Orange;
                     Main.NewText(Language.GetTextValue(key), messageColor);
                 }

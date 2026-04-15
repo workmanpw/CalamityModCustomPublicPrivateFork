@@ -1,6 +1,6 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Systems;
-using CalamityMod.Tiles.Crags.Lily;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Tiles.Crags.Lily;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Crags
+namespace CalamityModCustomPublicPrivateFork.Tiles.Crags
 {
     public class ScorchedRemainsGrass : ModTile
     {
@@ -22,7 +22,7 @@ namespace CalamityMod.Tiles.Crags
 
         public override void SetStaticDefaults()
         {
-            GrassTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/CinderBlossomGrassGrass");
+            GrassTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/CinderBlossomGrassGrass");
 
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = true;

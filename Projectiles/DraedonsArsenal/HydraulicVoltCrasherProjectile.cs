@@ -1,6 +1,6 @@
-﻿using CalamityMod.Items;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.Sounds;
+using CalamityModCustomPublicPrivateFork.Items;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class HydraulicVoltCrasherProjectile : ModProjectile
     {

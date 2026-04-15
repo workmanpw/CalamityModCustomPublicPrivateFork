@@ -1,4 +1,4 @@
-﻿namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public enum RicoshotTargetType : byte
     {

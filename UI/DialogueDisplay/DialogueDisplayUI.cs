@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.Json.Serialization;
-using CalamityMod.Dialogues;
-using CalamityMod.Packets;
-using CalamityMod.UI.DialogueDisplay.DialogueEvents;
-using CalamityMod.UI.DialogueDisplay.DisplayEffects;
-using CalamityMod.UI.DialogueDisplay.TextEffects;
+using CalamityModCustomPublicPrivateFork.Dialogues;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DialogueEvents;
+using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects;
+using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.TextEffects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -19,10 +19,10 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI;
 using Terraria.UI.Chat;
-using static CalamityMod.Packets.StartDialogueDisplayPacket;
+using static CalamityModCustomPublicPrivateFork.Packets.StartDialogueDisplayPacket;
 using static ReLogic.Graphics.DynamicSpriteFont;
 
-namespace CalamityMod.UI.DialogueDisplay
+namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay
 {
     internal class DialogueDisplayUI : UIState
     {
@@ -577,7 +577,7 @@ namespace CalamityMod.UI.DialogueDisplay
                                 foreach (string s in returnString)
                                     storedLen += s.Length;
 
-                                string path = "CalamityMod.UI.DialogueDisplay.TextEffects.";
+                                string path = "CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.TextEffects.";
                                 Type t = Type.GetType(path + ID) ?? throw new Exception("Invalid text effect ID found");
                                 TextEffect te = (TextEffect)Activator.CreateInstance(t);
                                 if (TextEffects.TryGetValue(index - storedLen, out var value))
@@ -1081,7 +1081,7 @@ namespace CalamityMod.UI.DialogueDisplay
 
             if (!DialogueLoader.TryGetDialogue(name, out var textData))
             {
-                CalamityMod.Log.Error($"Unable to find Dialogue Data for given name: '{name}'");
+                ModContent.GetInstance<CalamityMod>().Logger.Error($"Unable to find Dialogue Data for given name: '{name}'");
                 return -1;
             }
 
@@ -1142,7 +1142,7 @@ namespace CalamityMod.UI.DialogueDisplay
 
             if (!DialogueLoader.TryGetDialogue(name, out var textData))
             {
-                CalamityMod.Log.Error($"Unable to find Dialogue Data for given name: '{name}'");
+                ModContent.GetInstance<CalamityMod>().Logger.Error($"Unable to find Dialogue Data for given name: '{name}'");
                 return -1;
             }
 

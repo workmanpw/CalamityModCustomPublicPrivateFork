@@ -1,11 +1,11 @@
-﻿using CalamityMod.NPCs.NormalNPCs;
-using CalamityMod.Packets;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityModCustomPublicPrivateFork.Packets;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Tools
+namespace CalamityModCustomPublicPrivateFork.Items.Tools
 {
     public class SuperDummy : ModItem, ILocalizedModType
     {

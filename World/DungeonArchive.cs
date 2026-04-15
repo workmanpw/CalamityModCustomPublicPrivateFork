@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Schematics;
+using CalamityModCustomPublicPrivateFork.Schematics;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.WorldBuilding;
-using static CalamityMod.Schematics.SchematicManager;
+using static CalamityModCustomPublicPrivateFork.Schematics.SchematicManager;
 
-namespace CalamityMod.World
+namespace CalamityModCustomPublicPrivateFork.World
 {
     public class DungeonArchive
     {

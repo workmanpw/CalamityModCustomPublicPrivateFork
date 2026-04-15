@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.Abyss;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,12 +10,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Rubblemaker.Abyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.Abyss
 {
     public class AbyssGiantKelp4Echo : ModTile
     {
         public Asset<Texture2D> GlowTexture;
-        public override string Texture => "CalamityMod/Tiles/Abyss/AbyssAmbient/AbyssGiantKelp4";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/Abyss/AbyssAmbient/AbyssGiantKelp4";
         public override void SetStaticDefaults()
         {
             Main.tileLighted[Type] = true;
@@ -75,7 +75,7 @@ namespace CalamityMod.Tiles.Rubblemaker.Abyss
             if (tile.IsTileActuallyInvisible())
                 return;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Abyss/AbyssAmbient/AbyssGiantKelp4Glow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Abyss/AbyssAmbient/AbyssGiantKelp4Glow");
             Texture2D tex = GlowTexture.Value;
             Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange, Main.offScreenRange);
 

@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Potions.Alcohol;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Alcohol
+namespace CalamityModCustomPublicPrivateFork.Buffs.Alcohol
 {
     public class MargaritaBuff : ModBuff
     {

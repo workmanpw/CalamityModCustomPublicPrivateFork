@@ -1,13 +1,13 @@
-﻿using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class FlashRoundFlash : ModProjectile, ILocalizedModType
     {
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public new string LocalizationCategory => "Projectiles.Ranged";
         public override void SetDefaults()
         {

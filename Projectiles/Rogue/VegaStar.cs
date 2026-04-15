@@ -1,7 +1,7 @@
-﻿
+
 using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using rail;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class VegaStar : ModProjectile, ILocalizedModType
     {
@@ -44,7 +44,7 @@ namespace CalamityMod.Projectiles.Rogue
             if (Projectile.FinalExtraUpdate())
             {
                 var star = new BloomParticle(Projectile.Center, Vector2.Zero, Color.SkyBlue, 0.2f, 0.25f, 2, false);
-                var star2 = new CustomSpark(Projectile.Center, Vector2.UnitX.RotatedBy(Projectile.rotation) * 0.1f, "CalamityMod/Particles/Sparkle", false, 2, 1f, Color.White, Vector2.One);
+                var star2 = new CustomSpark(Projectile.Center, Vector2.UnitX.RotatedBy(Projectile.rotation) * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/Sparkle", false, 2, 1f, Color.White, Vector2.One);
                 GeneralParticleHandler.SpawnParticle(star);
                 GeneralParticleHandler.SpawnParticle(star2);
             }

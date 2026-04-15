@@ -1,4 +1,4 @@
-﻿using CalamityMod.Dusts.Furniture;
+using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureProfaned
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureProfaned
 {
     public class ProfanedCandelabra : ModTile
     {
@@ -50,7 +50,7 @@ namespace CalamityMod.Tiles.FurnitureProfaned
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureProfaned/ProfanedCandelabraFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureProfaned/ProfanedCandelabraFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j);
         }
 

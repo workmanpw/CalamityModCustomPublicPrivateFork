@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.DraedonStructures;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.DraedonStructures
+namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
 {
     public class AgedSecurityChestTile : ModTile
     {

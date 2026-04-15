@@ -1,15 +1,15 @@
-﻿using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class AnomalysNanogunMPFBBoom : BaseMassiveExplosionProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public static readonly SoundStyle MPFBExplosion = new("CalamityMod/Sounds/Item/AnomalysNanogunMPFBExplosion");
+        public static readonly SoundStyle MPFBExplosion = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AnomalysNanogunMPFBExplosion");
         public override int Lifetime => 40;
         public override bool UsesScreenshake => true;
         public override float GetScreenshakePower(float pulseCompletionRatio) => CalamityUtils.Convert01To010(pulseCompletionRatio) * 3f;

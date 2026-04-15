@@ -1,12 +1,12 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.BiomeManagers.BestiaryCategories
+namespace CalamityModCustomPublicPrivateFork.BiomeManagers.BestiaryCategories
 {
     public class AstralUnderground : ModBiome
     {
-        public override string BestiaryIcon => "CalamityMod/BiomeManagers/UndergroundAstralIcon";
+        public override string BestiaryIcon => "CalamityModCustomPublicPrivateFork/BiomeManagers/UndergroundAstralIcon";
 
-        public override string MapBackground => "CalamityMod/Backgrounds/MapBackgrounds/AstralBG";
-        public override string BackgroundPath => "CalamityMod/Backgrounds/MapBackgrounds/AstralBG";
+        public override string MapBackground => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AstralBG";
+        public override string BackgroundPath => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AstralBG";
     }
 }

@@ -1,9 +1,9 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.GameContent.Achievements;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing
 {
     public class EnchantedStarfish : ModItem, ILocalizedModType
     {

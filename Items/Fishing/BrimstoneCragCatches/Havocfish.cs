@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing.BrimstoneCragCatches
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCragCatches
 {
     [LegacyName("ChaoticFish")]
     public class Havocfish : BaseQuestFish

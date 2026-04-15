@@ -1,10 +1,11 @@
-﻿using System.IO;
+using System.IO;
 using System.Linq;
-using CalamityMod.Systems;
-using CalamityMod.UI.ModeIndicator;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.UI.ModeIndicator;
 using Terraria;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class SwitchToDifficultyPacket : CalamityPacket
     {
@@ -33,7 +34,7 @@ namespace CalamityMod.Packets
             }
             else
             {
-                CalamityMod.Log.Error($"Packet: [{nameof(SwitchToDifficultyPacket)}] has failed! Name: [{modeName}] is not a valid {nameof(DifficultyMode)} name!");
+                ModContent.GetInstance<CalamityMod>().Logger.Error($"Packet: [{nameof(SwitchToDifficultyPacket)}] has failed! Name: [{modeName}] is not a valid {nameof(DifficultyMode)} name!");
             }
         }
     }

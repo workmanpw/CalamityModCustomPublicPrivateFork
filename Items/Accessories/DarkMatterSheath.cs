@@ -1,10 +1,10 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     [LegacyName("DarkGodsSheath")]
     public class DarkMatterSheath : ModItem, ILocalizedModType

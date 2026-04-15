@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class EXPLODINGFROG : ModProjectile, ILocalizedModType
     {
@@ -129,7 +129,7 @@ namespace CalamityMod.Projectiles.Summon
         {
             if (GlowOutline == null)
             {
-                var texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/EXPLODINGFROG").Value;
+                var texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/EXPLODINGFROG").Value;
                 GlowOutline = new Texture2D(Main.graphics.GraphicsDevice, texture.Width, texture.Height);
 
                 var BaseArray = new Color[GlowOutline.Width * GlowOutline.Height];

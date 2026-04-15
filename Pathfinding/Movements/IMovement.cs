@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace CalamityMod.Pathfinding.Movements
+namespace CalamityModCustomPublicPrivateFork.Pathfinding.Movements
 {
     /// <summary>
     /// Defines an interface for different types of movement in the context of pathfinding.

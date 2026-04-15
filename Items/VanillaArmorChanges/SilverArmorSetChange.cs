@@ -1,8 +1,8 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityMod.Items.VanillaArmorChanges
+namespace CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges
 {
     public class SilverArmorSetChange : VanillaArmorChange
     {

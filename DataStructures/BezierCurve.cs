@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-namespace CalamityMod.DataStructures
+namespace CalamityModCustomPublicPrivateFork.DataStructures
 {
     public class BezierCurve
     {

@@ -1,27 +1,27 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using static Terraria.Player;
 using Microsoft.Xna.Framework.Graphics;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 using System.Linq;
 using Terraria.Graphics.Shaders;
-using static CalamityMod.CalamityUtils;
-using CalamityMod.Sounds;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using CalamityModCustomPublicPrivateFork.Sounds;
 
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class LightspeedHoldout : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
 
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/Lightspeed";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/Lightspeed";
         public ref float attackTimer => ref Projectile.ai[0];
         public Player Owner => Main.player[Projectile.owner];
         public int time = 0;
@@ -232,7 +232,7 @@ namespace CalamityMod.Projectiles.Melee
                 GeneralParticleHandler.SpawnParticle(spark);
             }
 
-            Particle afterImage = new CustomSpark(Projectile.Center + (stabDir * 10f) + Main.rand.NextVector2Circular(4f, 11f), (Projectile.rotation - MathHelper.PiOver2).ToRotationVector2(), new("CalamityMod/Items/Weapons/Melee/Lightspeed"), false, Main.rand.Next(5,9), Projectile.scale * Main.rand.NextFloat(0.9f, 1.02f), Color.White * Main.rand.NextFloat(0.66f, 0.825f), new Vector2(1, 1), true, false, flipHorizontal: Owner.direction == -1 ? true : false);
+            Particle afterImage = new CustomSpark(Projectile.Center + (stabDir * 10f) + Main.rand.NextVector2Circular(4f, 11f), (Projectile.rotation - MathHelper.PiOver2).ToRotationVector2(), new("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/Lightspeed"), false, Main.rand.Next(5,9), Projectile.scale * Main.rand.NextFloat(0.9f, 1.02f), Color.White * Main.rand.NextFloat(0.66f, 0.825f), new Vector2(1, 1), true, false, flipHorizontal: Owner.direction == -1 ? true : false);
             GeneralParticleHandler.SpawnParticle(afterImage);
 
             // Make blade randomly vibrate
@@ -341,7 +341,7 @@ namespace CalamityMod.Projectiles.Melee
 
                     SoundEngine.PlaySound(Exoblade.DashSound, Owner.MountedCenter);
 
-                    SoundStyle otherSound = new("CalamityMod/Sounds/Item/OmicronBeam");
+                    SoundStyle otherSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/OmicronBeam");
                     SoundEngine.PlaySound(otherSound with { Volume = 0.6f, Pitch = Main.rand.NextFloat(0.2f, 0.25f) }, Projectile.Center);
 
                     Owner.immune = true;
@@ -420,7 +420,7 @@ namespace CalamityMod.Projectiles.Melee
             secondaryColor = Color.Lerp(Color.White, secondaryColor, 0.4f + 0.6f * (float)Math.Pow(LungeProgression, 0.5f));
 
             Vector2 trailOffset = Projectile.Size * 0.5f;
-            GameShaders.Misc["CalamityMod:ExobladePierce"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/EternityStreak"));
+            GameShaders.Misc["CalamityMod:ExobladePierce"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/EternityStreak"));
             GameShaders.Misc["CalamityMod:ExobladePierce"].UseImage2("Images/Extra_189");
             GameShaders.Misc["CalamityMod:ExobladePierce"].UseColor(mainColor);
             GameShaders.Misc["CalamityMod:ExobladePierce"].UseSecondaryColor(secondaryColor);

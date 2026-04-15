@@ -1,4 +1,4 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class MeteorFistMeteorite : ModProjectile, ILocalizedModType
     {
@@ -53,7 +53,7 @@ namespace CalamityMod.Projectiles.Rogue
         public override void OnKill(int timeLeft)
         {
             Main.LocalPlayer.SetScreenshake(3f);
-            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/HellbornImpact"), Projectile.Center);
+            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/HellbornImpact"), Projectile.Center);
 
             Projectile.ExpandHitboxBy(300);
             Projectile.penetrate = -1;
@@ -69,9 +69,9 @@ namespace CalamityMod.Projectiles.Rogue
                 boomDust2 = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, DustID.Torch, 0f, 0f, 100, default, 1f);
                 Main.dust[boomDust2].velocity *= 2f;
             }
-            CustomPulse outerRing = new(Projectile.Center, Vector2.Zero, Color.Red, "CalamityMod/Particles/BloomRing", Vector2.One, 0f, 0f, 2.8f, 15);
+            CustomPulse outerRing = new(Projectile.Center, Vector2.Zero, Color.Red, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, 0f, 0f, 2.8f, 15);
             GeneralParticleHandler.SpawnParticle(outerRing);
-            CustomPulse innerRing = new(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/DetailedExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.8f, 30, true, 0.8f);
+            CustomPulse innerRing = new(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/DetailedExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.8f, 30, true, 0.8f);
             GeneralParticleHandler.SpawnParticle(innerRing);
         }
 

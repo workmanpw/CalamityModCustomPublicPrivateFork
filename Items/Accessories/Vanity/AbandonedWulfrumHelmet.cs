@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.BaseItems;
+using CalamityModCustomPublicPrivateFork.Items.BaseItems;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories.Vanity
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity
 {
     [AutoloadEquip(EquipType.Head)]
 

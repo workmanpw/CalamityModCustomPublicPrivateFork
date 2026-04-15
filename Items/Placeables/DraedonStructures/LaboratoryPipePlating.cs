@@ -1,6 +1,6 @@
-﻿using Terraria.ID;
+using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.DraedonStructures
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures
 {
     public class LaboratoryPipePlating : ModItem, ILocalizedModType
     {

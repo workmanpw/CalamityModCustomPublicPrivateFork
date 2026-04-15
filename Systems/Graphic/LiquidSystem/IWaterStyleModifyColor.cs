@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Graphics;
 
-namespace CalamityMod.Systems.Graphic.LiquidSystem
+namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
 {
     public interface IWaterStyleModifyColor
     {

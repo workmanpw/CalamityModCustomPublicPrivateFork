@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,12 +10,12 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class DecaysRetort : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/Melee/BrokenBiomeBlade_DecaysRetort";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_DecaysRetort";
         private bool initialized = false;
         Vector2 direction = Vector2.Zero;
         public ref float MaxTime => ref Projectile.ai[0];
@@ -110,8 +110,8 @@ namespace CalamityMod.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D handle = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/BrokenBiomeBlade").Value;
-            Texture2D tex = Request<Texture2D>("CalamityMod/Projectiles/Melee/BrokenBiomeBlade_DecaysRetort").Value;
+            Texture2D handle = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/BrokenBiomeBlade").Value;
+            Texture2D tex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_DecaysRetort").Value;
 
             float drawAngle = direction.ToRotation();
             float drawRotation = drawAngle + MathHelper.PiOver4;

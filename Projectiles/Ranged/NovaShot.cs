@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class NovaShot : ModProjectile, ILocalizedModType
     {
@@ -43,7 +43,7 @@ namespace CalamityMod.Projectiles.Ranged
             //dust.scale = 0.5f;
             if (Projectile.timeLeft % 2 == 0 && Projectile.timeLeft < 290)
             {
-                Particle Trail = new CustomSpark(Projectile.Center - Projectile.velocity * 0.5f, Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomCircle", false, 7, 0.33f, ArcNovaDiffuser.mainColor * 0.8f, new Vector2(0.2f, 1.4f), true, true, shrinkSpeed: 0.4f, glowOpacity: 0.8f);
+                Particle Trail = new CustomSpark(Projectile.Center - Projectile.velocity * 0.5f, Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 7, 0.33f, ArcNovaDiffuser.mainColor * 0.8f, new Vector2(0.2f, 1.4f), true, true, shrinkSpeed: 0.4f, glowOpacity: 0.8f);
                 GeneralParticleHandler.SpawnParticle(Trail);
             }
             if (Main.rand.NextBool(3))

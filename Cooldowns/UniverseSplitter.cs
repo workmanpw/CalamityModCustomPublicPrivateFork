@@ -1,16 +1,16 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Localization;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class UniverseSplitter : CooldownHandler
     {
         public static new string ID => "UniverseSplitter";
         public override bool ShouldDisplay => true;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => "CalamityMod/Cooldowns/UniverseSplitter";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/UniverseSplitter";
         public override Color OutlineColor => rainbowMode;
         public override Color CooldownStartColor => rainbowMode;
         public override Color CooldownEndColor => rainbowMode;

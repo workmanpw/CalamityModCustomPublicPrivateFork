@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Buffs.StatDebuffs;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Enemy
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
 {
     public class SulphuricAcidMist : ModProjectile, ILocalizedModType
     {

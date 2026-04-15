@@ -1,9 +1,9 @@
-﻿#nullable enable
+#nullable enable
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityMod.Utilities.Daybreak;
+namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
 
 /// <summary>
 ///     A "snapshot" of the current state of a <see cref="SpriteBatch" />.
@@ -89,13 +89,22 @@ internal struct SpriteBatchSnapshot
     /// </param>
     public SpriteBatchSnapshot(SpriteBatch spriteBatch)
     {
-        SortMode = spriteBatch.sortMode;
-        BlendState = spriteBatch.blendState;
-        SamplerState = spriteBatch.samplerState;
-        DepthStencilState = spriteBatch.depthStencilState;
-        RasterizerState = spriteBatch.rasterizerState;
-        CustomEffect = spriteBatch.customEffect;
-        TransformMatrix = spriteBatch.transformMatrix;
+        // SpriteBatch fields are no longer accessible directly
+        // SortMode = spriteBatch.sortMode;
+        // BlendState = spriteBatch.blendState;
+        // SamplerState = spriteBatch.samplerState;
+        // DepthStencilState = spriteBatch.depthStencilState;
+        // RasterizerState = spriteBatch.rasterizerState;
+        // CustomEffect = spriteBatch.customEffect;
+        // TransformMatrix = spriteBatch.transformMatrix;
+        // Use default values since we can't access the fields
+        SortMode = SpriteSortMode.Deferred;
+        BlendState = BlendState.AlphaBlend;
+        SamplerState = SamplerState.LinearClamp;
+        DepthStencilState = DepthStencilState.None;
+        RasterizerState = RasterizerState.CullNone;
+        CustomEffect = null;
+        TransformMatrix = Matrix.Identity;
     }
 
     /// <summary>

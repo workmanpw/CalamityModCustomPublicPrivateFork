@@ -1,6 +1,6 @@
-﻿using Terraria;
+using Terraria;
 
-namespace CalamityMod.Systems.Graphic.LiquidSystem
+namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
 {
     public interface IWaterStylePostDrawEffect
     {

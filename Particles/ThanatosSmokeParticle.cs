@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class ThanatosSmokeParticle : Particle
     {
@@ -11,7 +11,7 @@ namespace CalamityMod.Particles
         public override bool SetLifetime => true;
         public override int FrameVariants => 3;
 
-        public override string Texture => "CalamityMod/Particles/MediumSmoke";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/MediumSmoke";
 
         public ThanatosSmokeParticle(Vector2 relativePosition, int lifetime, float scale, float relativePower, float baseMoveRotation)
         {

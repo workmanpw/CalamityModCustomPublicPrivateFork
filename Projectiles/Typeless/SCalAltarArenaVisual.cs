@@ -1,16 +1,16 @@
-﻿using Microsoft.Xna.Framework;
-using CalamityMod.Particles;
+using Microsoft.Xna.Framework;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
-using CalamityMod.NPCs.SupremeCalamitas;
+using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class SCalAltarArenaVisual : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         private const int VisualDuration = 900;
         private Particle topLine;

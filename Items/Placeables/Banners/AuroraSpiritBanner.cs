@@ -1,4 +1,4 @@
-﻿namespace CalamityMod.Items.Placeables.Banners
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Banners
 {
     public class AuroraSpiritBanner : BaseBanner
     {

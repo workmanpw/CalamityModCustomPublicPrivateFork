@@ -1,11 +1,11 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing.FishingRods
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.FishingRods
 {
     public class SlurperPole : ModItem, ILocalizedModType
     {

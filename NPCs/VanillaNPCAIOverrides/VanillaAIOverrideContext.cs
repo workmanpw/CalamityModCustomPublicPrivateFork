@@ -1,6 +1,6 @@
-﻿using Terraria;
+using Terraria;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides;
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides;
 
 public class VanillaAIOverrideContext
 {

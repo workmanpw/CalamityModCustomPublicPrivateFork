@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Potions
+namespace CalamityModCustomPublicPrivateFork.Buffs.Potions
 {
     public class WeaponImbueHolyFlames : ModBuff
     {

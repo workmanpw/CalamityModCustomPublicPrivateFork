@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.NPCs.SupremeCalamitas;
+using System;
+using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Skies
+namespace CalamityModCustomPublicPrivateFork.Skies
 {
     public class SCalScreenShaderData : ScreenShaderData
     {

@@ -1,11 +1,11 @@
-using CalamityMod.Buffs.StatBuffs;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Empyrean
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Empyrean
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("XerocMask")]
@@ -30,10 +30,10 @@ namespace CalamityMod.Items.Armor.Empyrean
         {
             if (!Main.dedServ)
             {
-                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Empyrean/MeldTransformation_Head", EquipType.Head, name: "MeldTransformation");
-                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Empyrean/MeldTransformation_Body", EquipType.Body, name: "MeldTransformation");
-                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Empyrean/MeldTransformation_Neck", EquipType.Neck, name: "MeldTransformation");
-                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Empyrean/MeldTransformation_Legs", EquipType.Legs, name: "MeldTransformation");
+                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Empyrean/MeldTransformation_Head", EquipType.Head, name: "MeldTransformation");
+                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Empyrean/MeldTransformation_Body", EquipType.Body, name: "MeldTransformation");
+                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Empyrean/MeldTransformation_Neck", EquipType.Neck, name: "MeldTransformation");
+                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Empyrean/MeldTransformation_Legs", EquipType.Legs, name: "MeldTransformation");
             }
         }
 

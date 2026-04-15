@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.NPCs;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.NPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.BaseProjectiles
+namespace CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles
 {
 
     public class BaseSwordHoldoutPlayer : ModPlayer
@@ -296,7 +296,7 @@ namespace CalamityMod.Projectiles.BaseProjectiles
             Projectile.usesLocalNPCImmunity = true;
             Projectile.extraUpdates = 0;
             Projectile.aiStyle = -2;
-            Projectile.DamageType = ModLoader.GetMod("CalamityMod").Find<DamageClass>("TrueMeleeDamageClass");
+            Projectile.DamageType = ModLoader.GetMod("CalamityModCustomPublicPrivateFork").Find<DamageClass>("TrueMeleeDamageClass");
             Projectile.tileCollide = false;
             ProjectileID.Sets.TrailingMode[Projectile.type] = 2;
             ProjectileID.Sets.TrailCacheLength[Projectile.type] = 100;
@@ -469,7 +469,7 @@ namespace CalamityMod.Projectiles.BaseProjectiles
                 Main.spriteBatch.EnterShaderRegion();
                 if (TrailTexture == null)
                 {
-                    TrailTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/VoronoiShapes", (AssetRequestMode)2);
+                    TrailTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/VoronoiShapes", (AssetRequestMode)2);
                 }
                 Vector2 trailOffset = (Projectile.rotation - MathHelper.PiOver4).ToRotationVector2() + Projectile.Size * 0.5f;
                 GameShaders.Misc["CalamityMod:ExobladeSlash"].SetShaderTexture(TrailTexture);

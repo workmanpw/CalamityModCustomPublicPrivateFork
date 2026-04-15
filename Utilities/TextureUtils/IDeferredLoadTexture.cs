@@ -1,4 +1,4 @@
-﻿namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public interface IDeferredLoadTexture
     {

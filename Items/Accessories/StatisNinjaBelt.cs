@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
-using CalamityMod.CalPlayer.Dashes;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class StatisNinjaBelt : ModItem, ILocalizedModType, IHoldShiftTooltipItem
     {

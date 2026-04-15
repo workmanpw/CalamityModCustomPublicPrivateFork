@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Projectiles.Typeless;
+using System;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.SunkenSea.Ambient
+namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
 {
     public class SmallBrainCoral : ModTile
     {

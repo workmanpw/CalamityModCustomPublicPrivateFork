@@ -1,15 +1,15 @@
-﻿using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class AcidicReed : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
 
-        public static readonly SoundStyle SaxSound = new("CalamityMod/Sounds/Item/Saxophone/Sax", 6);
+        public static readonly SoundStyle SaxSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/Saxophone/Sax", 6);
 
         public override void SetDefaults()
         {

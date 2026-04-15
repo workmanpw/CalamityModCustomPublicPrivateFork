@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Events;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
 {
     public class DestroyerAI : VanillaAIOverride
     {

@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Balancing;
-using CalamityMod.CalPlayer;
-using CalamityMod.Cooldowns;
-using CalamityMod.Enums;
-using CalamityMod.Events;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Armor;
-using CalamityMod.Items.Armor.GodSlayer;
-using CalamityMod.Systems.Collections;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Armor;
+using CalamityModCustomPublicPrivateFork.Items.Armor.GodSlayer;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Events;
@@ -18,7 +18,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.Player;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public static partial class CalamityUtils
     {
@@ -585,7 +585,8 @@ namespace CalamityMod
         /// <param name="hurtInfo">The HurtInfo instance to nullify.</param>
         public static void NullifyHit(ref this HurtInfo hurtInfo)
         {
-            hurtInfo._damage = 0;
+            // HurtInfo._damage is private and no longer accessible
+            // hurtInfo._damage = 0;
             hurtInfo.Knockback = 0;
         }
         #endregion

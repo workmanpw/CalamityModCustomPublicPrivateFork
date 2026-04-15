@@ -1,9 +1,9 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles
+namespace CalamityModCustomPublicPrivateFork.Tiles
 {
     public class ShadowspecBarTile : ModTile
     {

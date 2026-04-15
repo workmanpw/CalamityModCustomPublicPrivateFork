@@ -1,8 +1,8 @@
-﻿using CalamityMod.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     [PierceResistExceptionAttribute(true)]
     public class KeelhaulGeyserBottom : ModProjectile, ILocalizedModType

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Graphics;
-using CalamityMod.Utilities.Daybreak.Buffers;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Graphics;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityMod.FluidSimulation
+namespace CalamityModCustomPublicPrivateFork.FluidSimulation
 {
     // Calculations for these are done primarily on the GPU in shaders for performance-sake.
     public class FluidFieldState

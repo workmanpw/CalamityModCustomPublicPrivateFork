@@ -1,16 +1,16 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Rubblemaker.SulphurousSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SulphurousSea
 {
     public class SulphuricFossil1Echo : ModTile
     {
-        public override string Texture => "CalamityMod/Tiles/Abyss/SulphuricFossil1";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/Abyss/SulphuricFossil1";
         public override void SetStaticDefaults()
         {
             Main.tileLighted[Type] = true;

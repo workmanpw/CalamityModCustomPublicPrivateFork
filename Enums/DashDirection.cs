@@ -1,4 +1,4 @@
-﻿namespace CalamityMod.Enums
+namespace CalamityModCustomPublicPrivateFork.Enums
 {
     public enum DashDirection
     {

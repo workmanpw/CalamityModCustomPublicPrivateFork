@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Utilities.Daybreak.Buffers;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityMod.Graphics;
+namespace CalamityModCustomPublicPrivateFork.Graphics;
 
 internal sealed class ManagedRenderTargetPool : RenderTargetPool
 {

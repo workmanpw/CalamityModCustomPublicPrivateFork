@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Placeables.FurnitureAshen;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAshen;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureAshen
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAshen
 {
     public class AshenDoorClosed : ModTile
     {

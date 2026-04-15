@@ -1,4 +1,4 @@
-﻿using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.GameContent.Drawing;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureMonolith
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith
 {
     public class MonolithChandelier : ModTile
     {

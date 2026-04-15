@@ -1,6 +1,6 @@
-﻿using CalamityMod.ForegroundDrawing.LoopingTextures;
-using CalamityMod.Items.Placeables.Furniture.Monoliths;
-using CalamityMod.Tiles.BaseTiles;
+using CalamityModCustomPublicPrivateFork.ForegroundDrawing.LoopingTextures;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths;
+using CalamityModCustomPublicPrivateFork.Tiles.BaseTiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Furniture.Monoliths
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Monoliths
 {
     public class OldDukeMonolithTile : BaseMonolith
     {
@@ -27,7 +27,7 @@ namespace CalamityMod.Tiles.Furniture.Monoliths
             if (!Main.dedServ)
             {
                 GlowMask = ModContent.Request<Texture2D>($"{Texture}_Glow");
-                //Numbers = ModContent.Request<Texture2D>("CalamityMod/Tiles/Furniture/Monoliths/ExoObeliskText", AssetRequestMode.AsyncLoad);
+                //Numbers = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Furniture/Monoliths/ExoObeliskText", AssetRequestMode.AsyncLoad);
             }
 
             RegisterItemDrop(CursorItemType);

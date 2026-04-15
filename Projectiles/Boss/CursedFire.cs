@@ -1,17 +1,17 @@
-﻿using System;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class CursedFire : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityMod/Projectiles/FireProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/FireProj";
 
         public static int Lifetime => 70;
         public static int Fadetime => 60;
@@ -100,7 +100,7 @@ namespace CalamityMod.Projectiles.Boss
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D fire = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D mist = ModContent.Request<Texture2D>("CalamityMod/Particles/MediumMist").Value;
+            Texture2D mist = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/MediumMist").Value;
 
             // The conga line of colors to sift through
             Color color1 = new Color(100, 255, 20, 200);

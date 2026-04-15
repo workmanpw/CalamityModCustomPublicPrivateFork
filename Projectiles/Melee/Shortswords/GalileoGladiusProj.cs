@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
-using CalamityMod.Sounds;
-using CalamityMod.Utilities.Daybreak;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -16,7 +16,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee.Shortswords
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Shortswords
 {
     public class GalileoGladiusProj : BaseSwordHoldoutProjectile
     {
@@ -59,7 +59,7 @@ namespace CalamityMod.Projectiles.Melee.Shortswords
                 {
                     Vector2 velocity = -sparkAngle.RotatedBy(i * -0.3f) * 10f;
                     Vector2 position = Projectile.Center + new Vector2(MathHelper.Lerp(20, 93 * Projectile.scale, SwingCompletion), i * 15).RotatedBy(sparkAngle.ToRotation());
-                    Particle spark = new CustomSpark(position, velocity, "CalamityMod/Particles/BloomCircle", false, 3, 0.3f, color, new Vector2(0.3f, 3f),noShrink:true);
+                    Particle spark = new CustomSpark(position, velocity, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 3, 0.3f, color, new Vector2(0.3f, 3f),noShrink:true);
                     GeneralParticleHandler.SpawnParticle(spark);
                 }
             }
@@ -74,7 +74,7 @@ namespace CalamityMod.Projectiles.Melee.Shortswords
 
         public override bool PreDraw(ref Color lightColor)
         {
-            var tex = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowBlade").Value;
+            var tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowBlade").Value;
             var sparkAngle = angle.RotatedBy(MathHelper.Pi);
 
             using (Main.spriteBatch.Scope())
@@ -92,7 +92,7 @@ namespace CalamityMod.Projectiles.Melee.Shortswords
 
         public override void PostDraw(Color lightColor)
         {
-            var tex2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/GalileoGladiusGlow").Value;
+            var tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/GalileoGladiusGlow").Value;
             using (Main.spriteBatch.Scope())
             {
                 Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);

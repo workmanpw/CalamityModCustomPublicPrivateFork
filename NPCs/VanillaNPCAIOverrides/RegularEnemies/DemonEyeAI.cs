@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using CalamityMod.NPCs.Crags;
-using CalamityMod.World;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.NPCs.Crags;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.RegularEnemies
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.RegularEnemies
 {
     public class DemonEyeAI : VanillaAIOverride
     {

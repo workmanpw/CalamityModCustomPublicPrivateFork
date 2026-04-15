@@ -1,23 +1,23 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Armor.Vanity;
-using CalamityMod.Items.LoreItems;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Furniture.BossRelics;
-using CalamityMod.Items.Placeables.Furniture.Paintings;
-using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Items.SummonItems;
-using CalamityMod.Items.Weapons.Typeless;
-using CalamityMod.NPCs.Providence;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.UI.VanillaBossBars;
-using CalamityMod.Utilities;
-using CalamityMod.Utilities.Daybreak;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.LoreItems;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Items.SummonItems;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless;
+using CalamityModCustomPublicPrivateFork.NPCs.Providence;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.UI.VanillaBossBars;
+using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -30,7 +30,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Filters = Terraria.Graphics.Effects.Filters;
 
-namespace CalamityMod.NPCs.ProfanedGuardians
+namespace CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians
 {
     [AutoloadBossHead]
     public class ProfanedGuardianCommander : ModNPC
@@ -38,9 +38,9 @@ namespace CalamityMod.NPCs.ProfanedGuardians
         private int spearType = 0;
         private int healTimer = 0;
         private const float TimeForShieldDespawn = 120f;
-        public static readonly SoundStyle HolyRaySound = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianRay") { Volume = 1.25f };
-        public static readonly SoundStyle DashSound = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianDash");
-        public static readonly SoundStyle ShieldDeathSound = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianShieldDeactivate");
+        public static readonly SoundStyle HolyRaySound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianRay") { Volume = 1.25f };
+        public static readonly SoundStyle DashSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianDash");
+        public static readonly SoundStyle ShieldDeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianShieldDeactivate");
 
         public static Asset<Texture2D> Texture_Glow;
         public static Asset<Texture2D> TextureNight_Glow;
@@ -104,7 +104,7 @@ namespace CalamityMod.NPCs.ProfanedGuardians
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheHallow,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheUnderworld,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.ProfanedGuardianCommander")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.ProfanedGuardianCommander")
             });
         }
 
@@ -1136,7 +1136,7 @@ namespace CalamityMod.NPCs.ProfanedGuardians
                 float invertedSmallerOscillationRatio = 1f - (1f - smallerRemappedOscillation) * (1f - smallerRemappedOscillation);
                 float smallerOscillationScale = 1f - (1f - invertedSmallerOscillationRatio) * (1f - invertedSmallerOscillationRatio);
                 float shieldScale2 = (minScale + maxPulseScale * smallerOscillationScale) * invertedOscillationUsedForScale;
-                Texture2D shieldTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleOpenCircle").Value;
+                Texture2D shieldTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleOpenCircle").Value;
                 Rectangle shieldFrame = shieldTexture.Frame();
                 Vector2 origin = shieldFrame.Size() * 0.5f;
                 Vector2 shieldDrawPos = NPC.Center - screenPos;
@@ -1187,7 +1187,7 @@ namespace CalamityMod.NPCs.ProfanedGuardians
                 {
                     Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, shieldEffect, matrix);
                     // Fetch shield heat overlay texture (this is the neutrons fed to the shader)
-                    Texture2D heatTex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons2").Value;
+                    Texture2D heatTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Neurons2").Value;
                     Vector2 pos = NPC.Center + NPC.gfxOffY * Vector2.UnitY - Main.screenPosition;
                     Main.spriteBatch.Draw(heatTex, shieldDrawPos, null, Color.White, 0, heatTex.Size() / 2f, shieldScale * scaleMult * 0.5f, 0, 0);
                     Main.spriteBatch.End();

@@ -1,13 +1,13 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using ReLogic.Utilities;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class ORDERSystem : ModSystem
     {
-        private static readonly SoundStyle ORDERTrack = new("CalamityMod/Sounds/Custom/ORDER", SoundType.Music);
+        private static readonly SoundStyle ORDERTrack = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ORDER", SoundType.Music);
         private static SlotId orderSoundSlot;
 
         internal static float DefaultOrderTime = 100f;

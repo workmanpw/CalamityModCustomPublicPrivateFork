@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Critters;
-using CalamityMod.Tiles.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Critters;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Furniture
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture
 {
     public class TwinklerInABottle : ModItem, ILocalizedModType
     {

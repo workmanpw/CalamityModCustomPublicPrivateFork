@@ -1,6 +1,6 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     [PierceResistException]
     public class DevilsSunriseCyclone : ModProjectile, ILocalizedModType
     {
-        public static readonly SoundStyle HitSound = new SoundStyle("CalamityMod/Sounds/Item/MantisSwipe", 2) with { Pitch = 1.25f, PitchVariance = 0.15f };
+        public static readonly SoundStyle HitSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MantisSwipe", 2) with { Pitch = 1.25f, PitchVariance = 0.15f };
         public new string LocalizationCategory => "Projectiles.Melee";
 
         public ref float State => ref Projectile.ai[0];
@@ -105,7 +105,7 @@ namespace CalamityMod.Projectiles.Melee
                         if (Timer % 4 == 0)
                         {
                             float angle = (Projectile.Center - targetToSlice.Center).ToRotation() + MathHelper.PiOver2;
-                            CustomSpark impact = new(targetToSlice.Center, Vector2.Zero, "CalamityMod/Particles/ThinEndedLine", false, 10, Main.rand.NextFloat(0.6f, 0.8f), Color.Red, new Vector2(0.5f, 1f), extraRotation: angle);
+                            CustomSpark impact = new(targetToSlice.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/ThinEndedLine", false, 10, Main.rand.NextFloat(0.6f, 0.8f), Color.Red, new Vector2(0.5f, 1f), extraRotation: angle);
                             GeneralParticleHandler.SpawnParticle(impact);
                         }
                         else
@@ -181,7 +181,7 @@ namespace CalamityMod.Projectiles.Melee
             Main.EntitySpriteDraw(cyclone, drawPos, null, new Color(255, greenAndBlue, greenAndBlue) * 0.4f, Projectile.rotation * 0.75f, cyclone.Size() / 2f, Projectile.scale * 2f, sp);
 
             // Extra slash effect that flickers around everywhere
-            Texture2D flashySlash = ModContent.Request<Texture2D>("CalamityMod/Particles/SlashSmear").Value;
+            Texture2D flashySlash = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SlashSmear").Value;
             Main.spriteBatch.SetBlendState(BlendState.Additive);
             Main.EntitySpriteDraw(flashySlash, drawPos + Main.rand.NextVector2Circular(30f, 30f), null, new Color(255, greenAndBlue, greenAndBlue), Main.rand.NextFloat(MathHelper.TwoPi), flashySlash.Size() / 2f, 0.275f, sp);
             Main.spriteBatch.SetBlendState(BlendState.AlphaBlend);

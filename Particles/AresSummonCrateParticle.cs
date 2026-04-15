@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class AresSummonCrateParticle : Particle
     {
         public override bool SetLifetime => true;
-        public override string Texture => "CalamityMod/Particles/AresSummonCrate";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/AresSummonCrate";
         public override bool UseCustomDraw => true;
 
         public AresSummonCrateParticle(Player owner, Vector2 velocity, int lifetime)

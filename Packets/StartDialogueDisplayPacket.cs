@@ -1,13 +1,13 @@
-﻿using System.IO;
+using System.IO;
 using System.Linq;
-using CalamityMod.UI.DialogueDisplay.DisplayEffects;
+using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader.IO;
-using static CalamityMod.UI.DialogueDisplay.DialogueDisplaySystem;
+using static CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DialogueDisplaySystem;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class StartDialogueDisplayPacket : CalamityPacket
     {
@@ -67,7 +67,7 @@ namespace CalamityMod.Packets
             packet.ReadFlags(out bool progressDialogue, out bool hasEntity);
 
             int entity = -1;
-            Vector2 pos = Vector2.zeroVector;
+            Vector2 pos = Vector2.Zero;
             EntityType type = EntityType.NPC;
             if (hasEntity)
             {

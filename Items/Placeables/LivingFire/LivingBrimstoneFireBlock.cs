@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.Crags;
-using CalamityMod.Tiles.LivingFire;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
+using CalamityModCustomPublicPrivateFork.Tiles.LivingFire;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.LivingFire
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.LivingFire
 {
     public class LivingBrimstoneFireBlock : ModItem, ILocalizedModType
     {

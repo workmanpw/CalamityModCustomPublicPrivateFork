@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Events;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.SupremeCalamitas;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Skies
+namespace CalamityModCustomPublicPrivateFork.Skies
 {
     public class SCalSky : CustomSky
     {
@@ -228,7 +228,7 @@ namespace CalamityMod.Skies
             if (maxDepth >= 0 && minDepth < 0)
             {
                 var viewport = Main.graphics.GraphicsDevice.Viewport;
-                var tex = CalamityUtils.GetTextureEfficient(ref backgroundTex, "CalamityMod/Skies/CalamitasBackground").Value;
+                var tex = CalamityUtils.GetTextureEfficient(ref backgroundTex, "CalamityModCustomPublicPrivateFork/Skies/CalamitasBackground").Value;
 
                 //We add 2 to the repeat count as a buffer for the texture position offset, to ensure the screen is always fully covered.
                 float repeatX = (float)viewport.Width / tex.Width + 2;
@@ -263,7 +263,7 @@ namespace CalamityMod.Skies
 
             // Draw cinders.
 
-            var cinderTexture = CalamityUtils.GetTextureEfficient(ref cinderTex, "CalamityMod/ExtraTextures/SmallGreyscaleCircle").Value;
+            var cinderTexture = CalamityUtils.GetTextureEfficient(ref cinderTex, "CalamityModCustomPublicPrivateFork/ExtraTextures/SmallGreyscaleCircle").Value;
             for (int i = 0; i < Cinders.Count; i++)
             {
                 float OpacityMult = 0.1f + 0.3f * ((MathF.Sin(Cinders[i].Time * 0.1f + Cinders[i].IdentityIndex) + 1) * 0.5f);

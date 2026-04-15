@@ -1,9 +1,9 @@
-﻿using CalamityMod.Projectiles.Magic;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Ammo
+namespace CalamityModCustomPublicPrivateFork.Items.Ammo
 {
     public class BloodRune : ModItem, ILocalizedModType
     {

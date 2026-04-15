@@ -1,5 +1,5 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class VoidVortexProj : ModProjectile, ILocalizedModType
     {
@@ -154,9 +154,9 @@ namespace CalamityMod.Projectiles.Magic
                     dust2.scale = Main.rand.NextFloat(0.65f, 1.15f);
                     dust2.noGravity = true;
                 }
-                SoundStyle fire = new("CalamityMod/Sounds/Item/AuricBulletHit");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AuricBulletHit");
                 SoundEngine.PlaySound(fire with { Volume = 0.4f, Pitch = 0f }, Projectile.Center);
-                Particle bolt = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Aqua, "CalamityMod/Particles/HighResFoggyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0.03f, 0.16f, 16);
+                Particle bolt = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Aqua, "CalamityModCustomPublicPrivateFork/Particles/HighResFoggyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0.03f, 0.16f, 16);
                 GeneralParticleHandler.SpawnParticle(bolt);
             }
             if (Projectile.ai[2] == 3)

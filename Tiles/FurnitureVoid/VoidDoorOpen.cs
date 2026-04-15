@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Placeables.FurnitureVoid;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureVoid;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureVoid
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureVoid
 {
     public class VoidDoorOpen : ModTile
     {

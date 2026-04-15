@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria.Graphics.Shaders;
 
-namespace CalamityMod.Graphics.Primitives
+namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives
 {
     /// <summary>
     /// Controls how U texture coordinates are generated for primitive ribbons.

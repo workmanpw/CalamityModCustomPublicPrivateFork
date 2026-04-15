@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     [LegacyName("YoungDuke")]
     public class MutatedTruffleMinion : BaseMinionProjectile
@@ -226,11 +226,11 @@ namespace CalamityMod.Projectiles.Summon
                 Projectile.rotation = 0f;
 
                 if (!Main.dedServ)
-                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/OldDukeHuff") with { Volume = .5f, Pitch = .1f }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeHuff") with { Volume = .5f, Pitch = .1f }, Projectile.Center);
             }
 
             if ((state == AIState.Dashing || state == AIState.Toothball) && !Main.dedServ)
-                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/OldDukeRoar") with { Volume = .3f, Pitch = .1f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeRoar") with { Volume = .3f, Pitch = .1f }, Projectile.Center);
 
             if (state == AIState.Vortex)
             {
@@ -238,7 +238,7 @@ namespace CalamityMod.Projectiles.Summon
                     Projectile.NewProjectile(Projectile.GetSource_FromThis(), Target.Center, Vector2.Zero, ModContent.ProjectileType<MutatedTruffleVortex>(), (int)Projectile.damage, Projectile.knockBack, Owner.whoAmI);
 
                 if (!Main.dedServ)
-                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/OldDukeVomit") with { Volume = .4f, Pitch = .1f }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeVomit") with { Volume = .4f, Pitch = .1f }, Projectile.Center);
             }
 
             SyncVariables();

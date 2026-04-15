@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.Localization;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class WarbanneroftheRighteousBuff : CooldownHandler
     {
@@ -19,7 +19,7 @@ namespace CalamityMod.Cooldowns
         public override bool CanTickDown => false;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
         public override bool ShouldDisplay => instance.player.Calamity().WarbanneroftheRighteous;
-        public override string Texture => "CalamityMod/Cooldowns/" + ID;
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/" + ID;
 
         public override Color CooldownStartColor => IsEmpty ? Color.DimGray : Color.Lerp(Color.SlateGray, Color.DarkGoldenrod, CompletionPercentage);
         public override Color CooldownEndColor => IsEmpty ? Color.DimGray : Color.Lerp(Color.SlateGray, Color.Gold, CompletionPercentage);

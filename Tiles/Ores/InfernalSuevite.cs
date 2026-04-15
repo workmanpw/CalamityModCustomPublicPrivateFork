@@ -1,10 +1,10 @@
-﻿using CalamityMod.Tiles.Crags;
+using CalamityModCustomPublicPrivateFork.Tiles.Crags;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Ores
+namespace CalamityModCustomPublicPrivateFork.Tiles.Ores
 {
     [LegacyName("CharredOre")]
     public class InfernalSuevite : ModTile

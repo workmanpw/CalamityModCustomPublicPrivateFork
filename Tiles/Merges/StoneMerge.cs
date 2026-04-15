@@ -1,7 +1,7 @@
-﻿using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Terraria.ID;
 
-namespace CalamityMod.Tiles.Merges
+namespace CalamityModCustomPublicPrivateFork.Tiles.Merges
 {
     public sealed class StoneMerge : TileBlendTexture
     {

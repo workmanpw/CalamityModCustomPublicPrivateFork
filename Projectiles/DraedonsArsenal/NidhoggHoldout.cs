@@ -1,9 +1,9 @@
-﻿using System;
-using CalamityMod.Cooldowns;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -11,7 +11,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class NidhoggHoldout : BaseGunHoldoutProjectile
     {
@@ -66,7 +66,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                 shootingTimer++;
                 if (charge == 0) // Make a sound when the jaws close
                 {
-                    SoundStyle close = new("CalamityMod/Sounds/NPCHit/ExoHit2");
+                    SoundStyle close = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ExoHit2");
                     SoundEngine.PlaySound(close with { Volume = 0.5f, Pitch = Main.rand.NextFloat(0.3f, 0.4f) }, Projectile.Center);
                     charge -= 0.001f;
                 }
@@ -106,7 +106,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
 
                     if (chargeTimer == 0)
                     {
-                        SoundStyle sound = new("CalamityMod/Sounds/Item/NidhoggCharge");
+                        SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NidhoggCharge");
                         SoundSlot = SoundEngine.PlaySound(sound with { Volume = 0.9f }, Projectile.Center);
                     }
                     if (chargeTimer == chargeRate) // Reached max charge
@@ -153,7 +153,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                     Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), GunTipPosition, shootVelocity * 6, ModContent.ProjectileType<NidhoggRailgunBigShot>(), chargeDamage, 0, Projectile.owner);
                 }
 
-                SoundStyle sound = new("CalamityMod/Sounds/Item/NidhoggBigShot");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NidhoggBigShot");
                 for (int i = 0; i < 2; i++)
                     SoundEngine.PlaySound(sound with { Volume = 0.9f, MaxInstances = 2, Pitch = i == 0 ? -0.4f : 0 }, Projectile.Center);
                 Owner.SetScreenshake(8f);
@@ -166,7 +166,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                 }
                 for (float i = 0.6f; i <= 1; i += 0.4f)
                 {
-                    Particle pulse3 = new CustomSpark(Projectile.Center, Projectile.velocity * (20 - 10 * i), "CalamityMod/Particles/GlowSquareFading", false, 19, 0.9f * i, Effects.ArsenalEffects.ArsenalGaussColor, new Vector2(1.2f, 0.7f), shrinkSpeed: -0.1f, extraRotation: MathHelper.Pi);
+                    Particle pulse3 = new CustomSpark(Projectile.Center, Projectile.velocity * (20 - 10 * i), "CalamityModCustomPublicPrivateFork/Particles/GlowSquareFading", false, 19, 0.9f * i, Effects.ArsenalEffects.ArsenalGaussColor, new Vector2(1.2f, 0.7f), shrinkSpeed: -0.1f, extraRotation: MathHelper.Pi);
                     GeneralParticleHandler.SpawnParticle(pulse3);
                 }
 
@@ -177,7 +177,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             else
             {
                 OffsetLengthFromArm -= 5;
-                SoundStyle sound = new("CalamityMod/Sounds/Item/NidhoggFire");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NidhoggFire");
                 SoundEngine.PlaySound(sound with { Volume = 0.6f, Pitch = Main.rand.NextFloat(0.5f, 0.65f) }, Projectile.Center);
 
                 Vector2 shootVelocity = Projectile.velocity.SafeNormalize(Vector2.UnitX) * 6f;
@@ -204,9 +204,9 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             if (time < 2)
                 return false;
 
-            Texture2D topJaw = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/NidhoggTop").Value;
-            Texture2D bottomJaw = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/NidhoggBottom").Value;
-            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/DraedonsArsenal/NidhoggGlow").Value;
+            Texture2D topJaw = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/NidhoggTop").Value;
+            Texture2D bottomJaw = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/NidhoggBottom").Value;
+            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/NidhoggGlow").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Vector2 jawVec = Projectile.velocity.SafeNormalize(Vector2.UnitX).RotatedBy(MathHelper.PiOver2 * Projectile.direction);
 
@@ -215,10 +215,10 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             float drawRotation = Projectile.rotation + (Projectile.direction == -1 ? MathHelper.Pi : 0f);
             SpriteEffects flipSprite = Projectile.direction == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
 
-            Texture2D aimTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineThick").Value;
-            Texture2D ringTex = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSquareFading").Value;
-            Texture2D pointTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark").Value;
-            Texture2D centerTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D aimTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineThick").Value;
+            Texture2D ringTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSquareFading").Value;
+            Texture2D pointTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark").Value;
+            Texture2D centerTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
 
             if (charging)
             {

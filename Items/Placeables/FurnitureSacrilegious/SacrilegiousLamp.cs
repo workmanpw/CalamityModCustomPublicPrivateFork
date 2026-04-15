@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
-using CalamityMod.Tiles.FurnitureSacrilegious;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureSacrilegious
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSacrilegious
 {
     public class SacrilegiousLamp : ModItem, ILocalizedModType
     {

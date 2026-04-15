@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Enums;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -12,12 +12,12 @@ using Terraria.DataStructures;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class SarosEclipseBeam : ModProjectile, ILocalizedModType, IPixelatedPrimitiveRenderer
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         Player Owner => Main.player[Projectile.owner];
 
         public override void SetStaticDefaults()
@@ -43,7 +43,8 @@ namespace CalamityMod.Projectiles.Summon
         Vector2 SarosPos => Owner.Center + Vector2.UnitY * (Owner.gfxOffY + Owner.gravDir * -24f);
         public override void OnSpawn(IEntitySource source)
         {
-            SoundEngine.PlaySound(SarosPossession.SpawnSound with {pitch = -0.5f, MaxInstances = 5, SoundLimitBehavior = SoundLimitBehavior.IgnoreNew}, Owner.Center);
+            // SoundStyle.pitch is private, use with clause for other properties
+            SoundEngine.PlaySound(SarosPossession.SpawnSound with {MaxInstances = 5, SoundLimitBehavior = SoundLimitBehavior.IgnoreNew}, Owner.Center);
             Projectile.rotation = SarosPos.DirectionTo(Owner.Calamity().mouseWorld).ToRotation();
         }
         public override void AI()
@@ -115,9 +116,9 @@ namespace CalamityMod.Projectiles.Summon
             }
             var pos = posList.ToArray();
 
-            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
+            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
             PrimitiveRenderer.RenderTrail(pos, new(FireWidthFunction, FireColorFunction, null, true, true, GameShaders.Misc["CalamityMod:ImpFlameTrail"]), pos.Length+32);
-            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
+            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
             PrimitiveRenderer.RenderTrail(pos, new(FireCoreWidthFunction, FireCoreColorFunction, null, true, true, GameShaders.Misc["CalamityMod:ImpFlameTrail"]), pos.Length+24);
         }
     }

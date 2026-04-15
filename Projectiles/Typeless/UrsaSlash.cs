@@ -1,16 +1,16 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class UrsaSlash : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         private static float radius = 85f;
         public bool visuals = true;
@@ -86,9 +86,9 @@ namespace CalamityMod.Projectiles.Typeless
 
                 if (visible)
                 {
-                    SoundStyle sound = new("CalamityMod/Sounds/Item/AstralSlash", 3);
+                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AstralSlash", 3);
                     SoundEngine.PlaySound(sound with { Volume = 0.65f }, Projectile.Center);
-                    SoundStyle sound2 = new("CalamityMod/Sounds/NPCHit/PerfLargeHit", 3);
+                    SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/PerfLargeHit", 3);
                     SoundEngine.PlaySound(sound2 with { Volume = 0.85f, Pitch = Main.rand.NextFloat(0.4f, 0.5f) }, Projectile.Center);
                 }
             }

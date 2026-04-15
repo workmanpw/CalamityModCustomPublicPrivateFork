@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -6,7 +6,7 @@ using Terraria.Enums;
 using Terraria.DataStructures;
 using Terraria.Localization;
 
-namespace CalamityMod.Tiles.SunkenSea.Ambient
+namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
 {
     public class SunkenShip : ModTile
     {

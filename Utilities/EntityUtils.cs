@@ -1,9 +1,9 @@
-﻿using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public static partial class CalamityUtils
     {

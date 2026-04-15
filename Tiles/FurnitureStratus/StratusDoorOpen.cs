@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Placeables.FurnitureStratus;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureStratus;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureStratus
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStratus
 {
     public class StratusDoorOpen : ModTile
     {

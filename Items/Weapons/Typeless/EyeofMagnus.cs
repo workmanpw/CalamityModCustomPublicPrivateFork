@@ -1,16 +1,16 @@
-﻿using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Typeless
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless
 {
     public class EyeofMagnus : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Typeless";
-        public static readonly SoundStyle ImpactSound = new("CalamityMod/Sounds/Item/MagnusImpact") { PitchVariance = 0.1f };
+        public static readonly SoundStyle ImpactSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagnusImpact") { PitchVariance = 0.1f };
 
         public override void SetDefaults()
         {

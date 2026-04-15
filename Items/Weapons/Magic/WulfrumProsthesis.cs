@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Linq;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,22 +9,22 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     [LegacyName("WulfrumStaff")]
     public class WulfrumProsthesis : ModItem, IHideFrontArm, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
-        public static readonly SoundStyle ShootSound = new("CalamityMod/Sounds/Item/WulfrumProsthesisShoot") { PitchVariance = 0.1f, Volume = 0.55f };
-        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/Item/WulfrumProsthesisHit") { PitchVariance = 0.1f, Volume = 0.75f, MaxInstances = 3 };
-        public static readonly SoundStyle SuckSound = new("CalamityMod/Sounds/Item/WulfrumProsthesisSucc") { Volume = 0.5f };
-        public static readonly SoundStyle SuckStopSound = new("CalamityMod/Sounds/Item/WulfrumProsthesisSuccStop") { Volume = 0.5f };
+        public static readonly SoundStyle ShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumProsthesisShoot") { PitchVariance = 0.1f, Volume = 0.55f };
+        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumProsthesisHit") { PitchVariance = 0.1f, Volume = 0.75f, MaxInstances = 3 };
+        public static readonly SoundStyle SuckSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumProsthesisSucc") { Volume = 0.5f };
+        public static readonly SoundStyle SuckStopSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumProsthesisSuccStop") { Volume = 0.5f };
 
         internal static Asset<Texture2D> RealSprite;
 
-        public override string Texture => "CalamityMod/Items/Weapons/Magic/WulfrumProsthesis_Arm";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/WulfrumProsthesis_Arm";
 
         public override void SetDefaults()
         {
@@ -120,7 +120,7 @@ namespace CalamityMod.Items.Weapons.Magic
         public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
             if (RealSprite == null)
-                RealSprite = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/WulfrumProsthesis");
+                RealSprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/WulfrumProsthesis");
 
             Texture2D properSprite = RealSprite.Value;
 
@@ -132,7 +132,7 @@ namespace CalamityMod.Items.Weapons.Magic
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
             if (RealSprite == null)
-                RealSprite = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/WulfrumProsthesis");
+                RealSprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/WulfrumProsthesis");
 
             Texture2D properSprite = RealSprite.Value;
 

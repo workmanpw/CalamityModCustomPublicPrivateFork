@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.NPCs.Other;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.NPCs.Other;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class SepulcherMinion : ModProjectile, ILocalizedModType
     {
@@ -101,7 +101,7 @@ namespace CalamityMod.Projectiles.Summon
         public ref float JawSnapTimer => ref Projectile.localAI[1];
         public const int HeartCreationRate = 420;
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void SetStaticDefaults()
         {
@@ -553,15 +553,15 @@ namespace CalamityMod.Projectiles.Summon
             Color backAfterimageColor = Color.Red * angerFactor;
             backAfterimageColor.A = 0;
 
-            Texture2D eyesTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SepulcherMinionEyes").Value;
-            Texture2D jawTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SepulcherMinionJaw").Value;
-            Texture2D headTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SepulcherMinionHead").Value;
-            Texture2D bodyTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SepulcherMinionBody").Value;
-            Texture2D bodyTexture2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SepulcherMinionBodyAlt").Value;
-            Texture2D tailTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SepulcherMinionTail").Value;
-            Texture2D armTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SepulcherArm").Value;
-            Texture2D foreArmTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SepulcherForeArm").Value;
-            Texture2D handTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SepulcherHand").Value;
+            Texture2D eyesTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SepulcherMinionEyes").Value;
+            Texture2D jawTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SepulcherMinionJaw").Value;
+            Texture2D headTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SepulcherMinionHead").Value;
+            Texture2D bodyTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SepulcherMinionBody").Value;
+            Texture2D bodyTexture2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SepulcherMinionBodyAlt").Value;
+            Texture2D tailTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SepulcherMinionTail").Value;
+            Texture2D armTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SepulcherArm").Value;
+            Texture2D foreArmTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SepulcherForeArm").Value;
+            Texture2D handTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SepulcherHand").Value;
 
             Vector2 drawPosition;
 

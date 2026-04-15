@@ -1,13 +1,13 @@
-﻿using System.Linq;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Projectiles.Rogue;
+using System.Linq;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Rogue
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
 {
     public class CrushsawCrasher : RogueWeapon
     {

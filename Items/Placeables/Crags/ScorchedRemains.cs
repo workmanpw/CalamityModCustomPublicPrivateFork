@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Crags
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Crags
 {
     public class ScorchedRemains : ModItem, ILocalizedModType
     {

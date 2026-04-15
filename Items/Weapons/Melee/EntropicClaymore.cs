@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Enums;
-using CalamityMod.Items.Materials;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Melee;
+using System;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -10,7 +10,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     [LegacyName("XerocsGreatsword")]
     public class EntropicClaymore : ModItem, ILocalizedModType
@@ -30,7 +30,7 @@ namespace CalamityMod.Items.Weapons.Melee
             Item.useTime = 30;
             Item.useTurn = true;
             Item.knockBack = 5.25f;
-            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/SwingMid") with { Volume = 0.5f, Pitch = Main.rand.NextFloat(-0.3f, -0.4f) };
+            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SwingMid") with { Volume = 0.5f, Pitch = Main.rand.NextFloat(-0.3f, -0.4f) };
             Item.autoReuse = true;
             Item.value = CalamityGlobalItem.RarityRedBuyPrice;
             Item.rare = ItemRarityID.Red;

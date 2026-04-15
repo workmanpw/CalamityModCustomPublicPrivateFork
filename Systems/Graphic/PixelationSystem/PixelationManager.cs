@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Enums;
-using CalamityMod.Graphics;
-using CalamityMod.Utilities.Daybreak.Buffers;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Graphics;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems.Graphic.PixelationSystem
+namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.PixelationSystem
 {
     public class PixelationManager : ModSystem
     {

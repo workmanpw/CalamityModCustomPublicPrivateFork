@@ -1,12 +1,12 @@
-﻿using System.IO;
-using CalamityMod.BiomeManagers;
-using CalamityMod.Items.Placeables.Banners;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityMod.NPCs.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.NPCs.SunkenSea
 {
     public class SeaFloaty : ModNPC
     {
@@ -45,7 +45,7 @@ namespace CalamityMod.NPCs.SunkenSea
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.SeaFloaty")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.SeaFloaty")
             });
         }
 

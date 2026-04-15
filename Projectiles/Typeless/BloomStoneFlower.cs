@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,12 +9,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class BloomStoneFlower : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/Magic/BeamingBolt";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/BeamingBolt";
 
         public ref float HookIndex => ref Projectile.ai[0];
         public ref float FlowerPart => ref Projectile.ai[1];
@@ -119,8 +119,8 @@ namespace CalamityMod.Projectiles.Typeless
         {
             if (FlowerPart == 0f)
             {
-                Texture2D tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/BigHeart").Value;
-                Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+                Texture2D tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BigHeart").Value;
+                Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
 
                 int parts = 5;
                 float rot = 0;

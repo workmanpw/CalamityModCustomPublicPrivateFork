@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.UI
+namespace CalamityModCustomPublicPrivateFork.UI
 {
     [Autoload(Side = ModSide.Client)]
     public sealed class PopupGUIManager : ModSystem

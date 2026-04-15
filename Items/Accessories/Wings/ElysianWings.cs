@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Particles;
-using CalamityMod.Rarities;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories.Wings
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Wings
 {
     [AutoloadEquip(EquipType.Wings)]
     public class ElysianWings : BaseWings
@@ -62,22 +62,22 @@ namespace CalamityMod.Items.Accessories.Wings
                 float partScale = Main.rand.NextFloat(0.3f, 0.8f);
                 Vector2 partVel = new Vector2(0, 5).RotatedBy(0.5f * player.direction).RotatedByRandom(0.5f) * Main.rand.NextFloat(0.5f, 0.8f);
 
-                Particle smoke = new CustomSpark(spawnPos, partVel, "CalamityMod/Particles/SmallBloom", false, 13, partScale * 0.25f, usedColor * 0.4f, Vector2.One, true, false, 0, false, false);
+                Particle smoke = new CustomSpark(spawnPos, partVel, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 13, partScale * 0.25f, usedColor * 0.4f, Vector2.One, true, false, 0, false, false);
                 GeneralParticleHandler.SpawnParticle(smoke);
 
                 if (Main.rand.NextBool((player.controlJump ? 2 : 4)))
                 {
-                    Particle spark3 = new CustomSpark(spawnPos, partVel, "CalamityMod/Particles/ProvidenceMarkParticle", false, 19, partScale, Main.rand.NextBool(4) ? Color.Khaki : Color.Goldenrod, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.1f, 0.2f));
+                    Particle spark3 = new CustomSpark(spawnPos, partVel, "CalamityModCustomPublicPrivateFork/Particles/ProvidenceMarkParticle", false, 19, partScale, Main.rand.NextBool(4) ? Color.Khaki : Color.Goldenrod, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.1f, 0.2f));
                     GeneralParticleHandler.SpawnParticle(spark3);
                 }
 
                 if (Main.rand.NextBool())
                 {
-                    Particle smoke2 = new CustomSpark(spawnPos2, partVel, "CalamityMod/Particles/SmallBloom", false, 13, partScale * 0.15f, usedColor * 0.4f, Vector2.One, true, false, 0, false, false);
+                    Particle smoke2 = new CustomSpark(spawnPos2, partVel, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 13, partScale * 0.15f, usedColor * 0.4f, Vector2.One, true, false, 0, false, false);
                     GeneralParticleHandler.SpawnParticle(smoke2);
                     if (Main.rand.NextBool((player.controlJump ? 2 : 4)))
                     {
-                        Particle spark3 = new CustomSpark(spawnPos2, partVel, "CalamityMod/Particles/ProvidenceMarkParticle", false, 19, partScale * 0.7f, Main.rand.NextBool(4) ? Color.Khaki : Color.Goldenrod, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.1f, 0.2f));
+                        Particle spark3 = new CustomSpark(spawnPos2, partVel, "CalamityModCustomPublicPrivateFork/Particles/ProvidenceMarkParticle", false, 19, partScale * 0.7f, Main.rand.NextBool(4) ? Color.Khaki : Color.Goldenrod, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.1f, 0.2f));
                         GeneralParticleHandler.SpawnParticle(spark3);
                     }
                 }

@@ -1,5 +1,5 @@
-﻿using CalamityMod.DataStructures;
-using CalamityMod.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class GemTechArmorGem : ModProjectile, ILocalizedModType
     {
@@ -18,7 +18,7 @@ namespace CalamityMod.Projectiles.Typeless
         public const int UpwardFlyTime = 24;
         public const int RedirectTime = 12;
 
-        public override string Texture => "CalamityMod/Projectiles/Typeless/GemTechYellowGem";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechYellowGem";
 
         public override void SetStaticDefaults()
         {
@@ -141,7 +141,7 @@ namespace CalamityMod.Projectiles.Typeless
         public override bool PreDraw(ref Color lightColor)
         {
             // Prepare the flame trail shader with its map texture.
-            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
+            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
 
             Texture2D texture;
             switch (Variant)
@@ -151,19 +151,19 @@ namespace CalamityMod.Projectiles.Typeless
                     texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
                     break;
                 case (int)GemTechArmorGemType.Ranged:
-                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/GemTechGreenGem").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechGreenGem").Value;
                     break;
                 case (int)GemTechArmorGemType.Magic:
-                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/GemTechPurpleGem").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechPurpleGem").Value;
                     break;
                 case (int)GemTechArmorGemType.Summoner:
-                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/GemTechBlueGem").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechBlueGem").Value;
                     break;
                 case (int)GemTechArmorGemType.Rogue:
-                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/GemTechRedGem").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechRedGem").Value;
                     break;
                 case (int)GemTechArmorGemType.Base:
-                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/GemTechPinkGem").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechPinkGem").Value;
                     break;
             }
 

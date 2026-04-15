@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Furniture
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture
 {
     public class NavyPrismTorch : ModItem, ILocalizedModType
     {

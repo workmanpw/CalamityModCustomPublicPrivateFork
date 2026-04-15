@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.CalPlayer;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class SnakeEyesSummon : ModProjectile, ILocalizedModType
     {
@@ -246,7 +246,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             Vector2 origin = frame.Size() * 0.5f;
             Main.EntitySpriteDraw(texture, drawPosition, frame, Projectile.GetAlpha(lightColor), Projectile.rotation, origin, Projectile.scale, SpriteEffects.None, 0);
 
-            Texture2D eyeTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/SnakeEye").Value;
+            Texture2D eyeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/SnakeEye").Value;
             Vector2 eyeDrawPosition = Projectile.Center - Main.screenPosition + EyeAngle.ToRotationVector2() * EyeOutwardness;
             Main.EntitySpriteDraw(eyeTexture, eyeDrawPosition, null, Color.White, 0f, eyeTexture.Size() * 0.5f, 1f, SpriteEffects.None, 0);
 

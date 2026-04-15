@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.CalPlayer;
-using CalamityMod.Dusts;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Pets
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 {
     public class BrimlingPet : ModProjectile, ILocalizedModType
     {

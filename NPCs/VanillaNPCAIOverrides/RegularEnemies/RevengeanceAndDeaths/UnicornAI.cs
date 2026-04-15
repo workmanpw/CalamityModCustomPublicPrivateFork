@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.NPCs.NormalNPCs;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.RegularEnemies;
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.RegularEnemies;
 
 public static partial class RevengeanceAndDeathAI
 {

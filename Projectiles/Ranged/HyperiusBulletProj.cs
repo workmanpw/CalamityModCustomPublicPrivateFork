@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class HyperiusBulletProj : ModProjectile, ILocalizedModType
     {
@@ -100,7 +100,7 @@ namespace CalamityMod.Projectiles.Ranged
             Vector2 orbPos = Projectile.Center + (Projectile.velocity.RotatedBy((dustWave ? 1 : -1) * dustAngle) * 4.5f - Projectile.velocity * 5);
             if (Projectile.ai[2] > 15 && targetDist < 1200f)
             {
-                CustomSpark orb = new CustomSpark(orbPos - Utils.DirectionTo(lastPos, orbPos) * timeleftFade, Utils.DirectionTo(lastPos, orbPos) * 0.1f, "CalamityMod/Particles/BloomCircle", false, 5, (0.55f + MathF.Abs(dustAngle * 0.65f)) * 0.15f * timeleftFade, currentColor, new Vector2(1 - MathF.Abs(dustAngle * 0.2f), 2 - (1 - MathF.Abs(dustAngle))), true, true, 0, false, false, 0.8f - MathF.Abs(dustAngle * 0.6f), 0.7f, 0.8f);
+                CustomSpark orb = new CustomSpark(orbPos - Utils.DirectionTo(lastPos, orbPos) * timeleftFade, Utils.DirectionTo(lastPos, orbPos) * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 5, (0.55f + MathF.Abs(dustAngle * 0.65f)) * 0.15f * timeleftFade, currentColor, new Vector2(1 - MathF.Abs(dustAngle * 0.2f), 2 - (1 - MathF.Abs(dustAngle))), true, true, 0, false, false, 0.8f - MathF.Abs(dustAngle * 0.6f), 0.7f, 0.8f);
                 GeneralParticleHandler.SpawnParticle(orb);
 
                 if (Main.rand.NextBool(8))
@@ -142,7 +142,7 @@ namespace CalamityMod.Projectiles.Ranged
         {
             if (Projectile.owner == Main.myPlayer)
             {
-                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/ShadowboltWallHit") with { Volume = 0.25f, Pitch = Main.rand.NextFloat(0.6f, 1f), MaxInstances = -1 }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/ShadowboltWallHit") with { Volume = 0.25f, Pitch = Main.rand.NextFloat(0.6f, 1f), MaxInstances = -1 }, Projectile.Center);
                 for (int b = 0; b < 2; b++)
                 {
                     Vector2 velocity = (Projectile.velocity.SafeNormalize(Vector2.UnitX) * 7 * (tileTouched ? -1 : 1)).RotatedByRandom(0.5f);
@@ -152,7 +152,7 @@ namespace CalamityMod.Projectiles.Ranged
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark");
+            Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark");
             int startTime = 9;
             int endTime = 35;
             float timeleftFade = (float)Math.Pow(Utils.GetLerpValue(0, slowdownTime * Projectile.extraUpdates, Projectile.timeLeft, true), 1);

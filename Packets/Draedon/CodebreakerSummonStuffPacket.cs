@@ -1,8 +1,8 @@
-﻿using System.IO;
-using CalamityMod.World;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.World;
 using Terraria;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class CodebreakerSummonStuffPacket : CalamityPacket
     {

@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.FurnitureNavystone;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureNavystone
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone
 {
     public class NavystoneDoor : ModItem, ILocalizedModType
     {

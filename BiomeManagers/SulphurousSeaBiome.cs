@@ -1,26 +1,26 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Events;
-using CalamityMod.Items.Placeables.Furniture;
-using CalamityMod.Systems;
-using CalamityMod.Waters;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Waters;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.BiomeManagers
+namespace CalamityModCustomPublicPrivateFork.BiomeManagers
 {
     public class SulphurousSeaBiome : ModBiome
     {
         public override ModWaterStyle WaterStyle => Main.zenithWorld ? PissWater.Instance : SulphuricWater.Instance;
-        public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => Main.zenithWorld ? ModContent.Find<ModSurfaceBackgroundStyle>("CalamityMod/PissSeaSurfaceBGStyle") : ModContent.Find<ModSurfaceBackgroundStyle>("CalamityMod/SulphurSeaSurfaceBGStyle");
+        public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => Main.zenithWorld ? ModContent.Find<ModSurfaceBackgroundStyle>("CalamityModCustomPublicPrivateFork/PissSeaSurfaceBGStyle") : ModContent.Find<ModSurfaceBackgroundStyle>("CalamityModCustomPublicPrivateFork/SulphurSeaSurfaceBGStyle");
         public override int BiomeTorchItemType => ModContent.ItemType<SulphurousTorch>();
         public override SceneEffectPriority Priority => SceneEffectPriority.BiomeHigh;
-        public override string BestiaryIcon => "CalamityMod/BiomeManagers/SulphurousSeaIcon";
-        public override string BackgroundPath => "CalamityMod/Backgrounds/MapBackgrounds/SulphurBG";
-        public override string MapBackground => "CalamityMod/Backgrounds/MapBackgrounds/SulphurBG";
+        public override string BestiaryIcon => "CalamityModCustomPublicPrivateFork/BiomeManagers/SulphurousSeaIcon";
+        public override string BackgroundPath => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/SulphurBG";
+        public override string MapBackground => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/SulphurBG";
 
         public override int Music
         {
@@ -36,8 +36,8 @@ namespace CalamityMod.BiomeManagers
                     if (acidRain)
                     {
                         music = DownedBossSystem.downedPolterghast
-                        ? CalamityMod.Instance.GetMusicFromMusicMod("AcidRainTier3") ?? MusicID.Monsoon // Acid Rain Tier 3
-                        : CalamityMod.Instance.GetMusicFromMusicMod("AcidRainTier1") ?? MusicID.OldOnesArmy; // Acid Rain Tier 1 + 2
+                        ? ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("AcidRainTier3") ?? MusicID.Monsoon // Acid Rain Tier 3
+                        : ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("AcidRainTier1") ?? MusicID.OldOnesArmy; // Acid Rain Tier 1 + 2
                     }
 
                     // Regular Sulphur Sea themes, when Acid Rain is not occurring
@@ -45,13 +45,13 @@ namespace CalamityMod.BiomeManagers
                     {
                         if (normalRain)
                         {
-                            music = CalamityMod.Instance.GetMusicFromMusicMod("SulphurousSeaRain") ?? MusicID.Desert; // Normal Rain
+                            music = ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("SulphurousSeaRain") ?? MusicID.Desert; // Normal Rain
                         }
                         else
                         {
                             music = !Main.dayTime
-                            ? CalamityMod.Instance.GetMusicFromMusicMod("SulphurousSeaNight") ?? MusicID.Desert // Nighttime
-                            : CalamityMod.Instance.GetMusicFromMusicMod("SulphurousSeaDay") ?? MusicID.Desert; // Daytime
+                            ? ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("SulphurousSeaNight") ?? MusicID.Desert // Nighttime
+                            : ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("SulphurousSeaDay") ?? MusicID.Desert; // Daytime
                         }
                     }
                 }

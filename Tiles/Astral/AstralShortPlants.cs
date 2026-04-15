@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Dusts;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -7,7 +7,7 @@ using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Astral
+namespace CalamityModCustomPublicPrivateFork.Tiles.Astral
 {
     public class AstralShortPlants : ModTile
     {

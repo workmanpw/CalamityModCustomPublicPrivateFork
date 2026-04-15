@@ -1,18 +1,18 @@
-﻿using System;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class RedLabSeeker : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
         public ref float Time => ref Projectile.ai[0];
-        public override string Texture => "CalamityMod/Items/LabFinders/RedSeekingMechanism";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/LabFinders/RedSeekingMechanism";
 
         public override void SetStaticDefaults()
         {

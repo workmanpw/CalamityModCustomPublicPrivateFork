@@ -1,4 +1,4 @@
-﻿using CalamityMod.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
 using Microsoft.Xna.Framework.Graphics;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
@@ -8,7 +8,7 @@ using Terraria.Graphics.Renderers;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.ILEditing
+namespace CalamityModCustomPublicPrivateFork.ILEditing
 {
     public partial class ILChanges
     {

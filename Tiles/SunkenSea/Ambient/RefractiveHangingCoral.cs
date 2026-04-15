@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 
-namespace CalamityMod.Tiles.SunkenSea.Ambient
+namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
 {
     public class RefractiveHangingCoral : ModTile
     {

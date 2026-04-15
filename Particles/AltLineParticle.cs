@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class AltLineParticle : Particle
     {
@@ -14,7 +14,7 @@ namespace CalamityMod.Particles
         public override bool UseCustomDraw => true;
         public override bool UseAdditiveBlend => false;
 
-        public override string Texture => "CalamityMod/Particles/DrainLine";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/DrainLine";
 
         public AltLineParticle(Vector2 relativePosition, Vector2 velocity, bool affectedByGravity, int lifetime, float scale, Color color)
         {

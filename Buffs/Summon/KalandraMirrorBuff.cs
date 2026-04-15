@@ -1,7 +1,7 @@
-﻿using CalamityMod.Projectiles.Summon.MirrorofKalandraMinions;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon.MirrorofKalandraMinions;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Summon
+namespace CalamityModCustomPublicPrivateFork.Buffs.Summon
 {
     public class KalandraMirrorBuff : BaseSummonBuff
     {

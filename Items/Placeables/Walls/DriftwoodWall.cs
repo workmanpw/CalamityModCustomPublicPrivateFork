@@ -1,9 +1,9 @@
-﻿using Terraria.ModLoader;
-using WallTiles = CalamityMod.Walls;
+using Terraria.ModLoader;
+using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
 using Terraria.ID;
-using CalamityMod.Items.Placeables.FurnitureDriftwood;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood;
 
-namespace CalamityMod.Items.Placeables.Walls
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
 {
     public class DriftwoodWall : ModItem, ILocalizedModType
     {

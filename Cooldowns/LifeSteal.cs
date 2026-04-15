@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Balancing;
+using System;
+using CalamityModCustomPublicPrivateFork.Balancing;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.Localization;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class LifeSteal : CooldownHandler
     {
@@ -15,7 +15,7 @@ namespace CalamityMod.Cooldowns
         private float lifeStealCap => Main.expertMode ? BalancingConstants.LifeStealCap_Expert : BalancingConstants.LifeStealCap_Classic;
         public override bool ShouldDisplay => instance.player.lifeSteal < lifeStealCap;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => "CalamityMod/Cooldowns/LifeSteal";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/LifeSteal";
 
         public override bool CanTickDown => false;
         public override Color OutlineColor => instance.player!.lifeSteal < 0

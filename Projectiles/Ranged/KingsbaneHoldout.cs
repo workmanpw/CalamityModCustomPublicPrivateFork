@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -6,13 +6,13 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class KingsbaneHoldout : ModProjectile
     {
         // Take the name and texture from the weapon
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<Kingsbane>();
-        public override string Texture => "CalamityMod/Projectiles/Ranged/KingsbaneWindUp";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/KingsbaneWindUp";
         private Player Owner => Main.player[Projectile.owner];
 
         public int Time = 0;
@@ -99,7 +99,7 @@ namespace CalamityMod.Projectiles.Ranged
                     //recoil
                     Owner.velocity += -Projectile.velocity * fullRevShots * (Main.zenithWorld ? 0.028f : 0.013f);
                     Projectile.NewProjectile(Projectile.GetSource_FromThis(), tipPosition + Projectile.velocity * 5 + Main.rand.NextVector2Circular(7, 7), shootVelocity.RotatedByRandom(MathHelper.ToRadians(4f)), ModContent.ProjectileType<AuricBullet>(), (int)(Projectile.damage), Projectile.knockBack, Projectile.owner);
-                    SoundStyle fire = new("CalamityMod/Sounds/Item/GunShotSmall");
+                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GunShotSmall");
                     if (fullRevShots % 2 == 0)
                         SoundEngine.PlaySound(fire with { Volume = 0.7f }, Projectile.Center);
                     //SoundEngine.PlaySound(SoundID.Item40 with { PitchVariance = 0.4f }, Projectile.Center);
@@ -132,7 +132,7 @@ namespace CalamityMod.Projectiles.Ranged
                             dust3.scale = Main.rand.NextFloat(0.9f, 1.6f);
                         }
                         Projectile.NewProjectile(Projectile.GetSource_FromThis(), Owner.Center, shootVelocity.RotatedByRandom(MathHelper.ToRadians(1.5f)), bulletAMMO, Projectile.damage, Projectile.knockBack, Projectile.owner);
-                        SoundStyle fire = new("CalamityMod/Sounds/Item/GunShotMid");
+                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GunShotMid");
                         SoundEngine.PlaySound(fire with { Volume = 0.4f }, Projectile.Center);
                         framesBetweenShots = 3;
                     }

@@ -1,16 +1,16 @@
-﻿using CalamityMod.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class ValkyrieRayStaff : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Items/Weapons/Magic/ValkyrieRay";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/ValkyrieRay";
 
         private const float AimResponsiveness = 0.66f;
 

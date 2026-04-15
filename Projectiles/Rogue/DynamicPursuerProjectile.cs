@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Projectiles.DraedonsArsenal;
-using CalamityMod.Sounds;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class DynamicPursuerProjectile : ModProjectile, ILocalizedModType
     {
@@ -288,7 +288,7 @@ namespace CalamityMod.Projectiles.Rogue
         {
             CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], lightColor, ProjectileID.Sets.TrailCacheLength[Type]);
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D glowmaskTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/DynamicPursuerProjectileGlowmask").Value;
+            Texture2D glowmaskTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/DynamicPursuerProjectileGlowmask").Value;
             Rectangle glowmaskRectangle = glowmaskTexture.Frame(1, 9, 0, glowmaskFrame);
             Vector2 origin = glowmaskRectangle.Size() / 2f;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;

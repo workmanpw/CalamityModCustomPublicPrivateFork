@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.BiomeManagers;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Items.Placeables.Crags;
-using CalamityMod.NPCs.NormalNPCs;
-using CalamityMod.Particles;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using ReLogic.Utilities;
 using Terraria;
@@ -17,15 +17,15 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Crags
+namespace CalamityModCustomPublicPrivateFork.NPCs.Crags
 {
     public class DespairStone : ModNPC
     {
         public SlotId ChainsawSoundSlot;
 
-        public static readonly SoundStyle ChainsawStartSound = new("CalamityMod/Sounds/Custom/ChainsawStart") { Volume = 0.15f };
+        public static readonly SoundStyle ChainsawStartSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ChainsawStart") { Volume = 0.15f };
 
-        public static readonly SoundStyle ChainsawEndSound = new("CalamityMod/Sounds/Custom/ChainsawEnd") { Volume = 0.15f };
+        public static readonly SoundStyle ChainsawEndSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ChainsawEnd") { Volume = 0.15f };
 
         public override void SetDefaults()
         {
@@ -60,7 +60,7 @@ namespace CalamityMod.NPCs.Crags
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.DespairStone")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.DespairStone")
             });
         }
 

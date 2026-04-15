@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Items;
+using System;
+using CalamityModCustomPublicPrivateFork.Items;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,13 +8,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class RicoshotCoin : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        internal static readonly SoundStyle BlingSound = new("CalamityMod/Sounds/Custom/Ultrabling") { PitchVariance = 0.5f };
-        internal static readonly SoundStyle BlingHitSound = new("CalamityMod/Sounds/Custom/UltrablingHit") { PitchVariance = 0.5f };
+        internal static readonly SoundStyle BlingSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Ultrabling") { PitchVariance = 0.5f };
+        internal static readonly SoundStyle BlingHitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/UltrablingHit") { PitchVariance = 0.5f };
         private static Asset<Texture2D> sheenAsset;
         private static Asset<Texture2D> bloomAsset;
 
@@ -281,10 +281,10 @@ namespace CalamityMod.Projectiles.Ranged
                 Main.spriteBatch.End();
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
 
-                sheenAsset ??= ModContent.Request<Texture2D>("CalamityMod/Particles/HalfStar");
+                sheenAsset ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HalfStar");
                 Texture2D shineTex = sheenAsset.Value;
 
-                bloomAsset ??= ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+                bloomAsset ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
                 Texture2D bloomTex = bloomAsset.Value;
 
                 Vector2 shineScale = new Vector2(1f, 3f - sheenOpacity * 2f);

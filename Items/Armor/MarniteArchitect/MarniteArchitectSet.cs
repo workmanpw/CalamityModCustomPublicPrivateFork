@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Buffs.Mounts;
+using CalamityModCustomPublicPrivateFork.Buffs.Mounts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -14,16 +14,16 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
 
-namespace CalamityMod.Items.Armor.MarniteArchitect
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.MarniteArchitect
 {
     [AutoloadEquip(EquipType.Head)]
     public class MarniteArchitectHeadgear : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Armor.PreHardmode";
 
-        public static readonly SoundStyle LiftSpawnSound = new("CalamityMod/Sounds/Item/MarniteLiftSummon");
-        public static readonly SoundStyle LiftGoAwaySound = new("CalamityMod/Sounds/Item/MarniteLiftUnsummon");
-        public static readonly SoundStyle LiftHummSound = new("CalamityMod/Sounds/Item/MarniteLiftHumm") { IsLooped = true };
+        public static readonly SoundStyle LiftSpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MarniteLiftSummon");
+        public static readonly SoundStyle LiftGoAwaySound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MarniteLiftUnsummon");
+        public static readonly SoundStyle LiftHummSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MarniteLiftHumm") { IsLooped = true };
 
         public static int TileRangeBoost = 5;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(TileRangeBoost);
@@ -122,7 +122,7 @@ namespace CalamityMod.Items.Armor.MarniteArchitect
         {
             if (Main.dedServ)
                 return;
-            EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/MarniteArchitect/MarniteArchitectToga_Legs", EquipType.Legs, this);
+            EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/MarniteArchitect/MarniteArchitectToga_Legs", EquipType.Legs, this);
         }
 
         public override void SetDefaults()
@@ -341,7 +341,7 @@ namespace CalamityMod.Items.Armor.MarniteArchitect
             //Sprites
             if (!Main.dedServ)
             {
-                MountData.frontTextureGlow = Request<Texture2D>("CalamityMod/Items/Armor/MarniteArchitect/MarniteLiftFire");
+                MountData.frontTextureGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Armor/MarniteArchitect/MarniteLiftFire");
             }
         }
 

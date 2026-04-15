@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.Items.Accessories.Wings
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Wings
 {
     [AutoloadEquip(EquipType.Wings)]
     public class MOAB : BaseWings

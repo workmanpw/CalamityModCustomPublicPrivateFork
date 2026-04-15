@@ -1,12 +1,12 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items.Placeables.FurnitureMonolith;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMonolith;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     public class MonolithBow : ModItem, ILocalizedModType
     {

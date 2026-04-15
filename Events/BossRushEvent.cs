@@ -1,46 +1,46 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.CalPlayer;
-using CalamityMod.Enums;
-using CalamityMod.Items.SummonItems;
-using CalamityMod.NPCs.AquaticScourge;
-using CalamityMod.NPCs.AstrumAureus;
-using CalamityMod.NPCs.AstrumDeus;
-using CalamityMod.NPCs.BrimstoneElemental;
-using CalamityMod.NPCs.Bumblebirb;
-using CalamityMod.NPCs.CalClone;
-using CalamityMod.NPCs.CeaselessVoid;
-using CalamityMod.NPCs.Crabulon;
-using CalamityMod.NPCs.Cryogen;
-using CalamityMod.NPCs.DesertScourge;
-using CalamityMod.NPCs.DevourerofGods;
-using CalamityMod.NPCs.ExoMechs;
-using CalamityMod.NPCs.ExoMechs.Ares;
-using CalamityMod.NPCs.ExoMechs.Thanatos;
-using CalamityMod.NPCs.HiveMind;
-using CalamityMod.NPCs.Leviathan;
-using CalamityMod.NPCs.NormalNPCs;
-using CalamityMod.NPCs.OldDuke;
-using CalamityMod.NPCs.Perforator;
-using CalamityMod.NPCs.PlaguebringerGoliath;
-using CalamityMod.NPCs.Polterghast;
-using CalamityMod.NPCs.ProfanedGuardians;
-using CalamityMod.NPCs.Providence;
-using CalamityMod.NPCs.Ravager;
-using CalamityMod.NPCs.Signus;
-using CalamityMod.NPCs.SlimeGod;
-using CalamityMod.NPCs.StormWeaver;
-using CalamityMod.NPCs.SupremeCalamitas;
-using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
-using CalamityMod.NPCs.Yharon;
-using CalamityMod.Packets;
-using CalamityMod.Projectiles.Typeless;
-using CalamityMod.Skies;
-using CalamityMod.Systems;
-using CalamityMod.UI.DraedonSummoning;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Items.SummonItems;
+using CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge;
+using CalamityModCustomPublicPrivateFork.NPCs.AstrumAureus;
+using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
+using CalamityModCustomPublicPrivateFork.NPCs.BrimstoneElemental;
+using CalamityModCustomPublicPrivateFork.NPCs.Bumblebirb;
+using CalamityModCustomPublicPrivateFork.NPCs.CalClone;
+using CalamityModCustomPublicPrivateFork.NPCs.CeaselessVoid;
+using CalamityModCustomPublicPrivateFork.NPCs.Crabulon;
+using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
+using CalamityModCustomPublicPrivateFork.NPCs.DesertScourge;
+using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
+using CalamityModCustomPublicPrivateFork.NPCs.HiveMind;
+using CalamityModCustomPublicPrivateFork.NPCs.Leviathan;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
+using CalamityModCustomPublicPrivateFork.NPCs.Perforator;
+using CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath;
+using CalamityModCustomPublicPrivateFork.NPCs.Polterghast;
+using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
+using CalamityModCustomPublicPrivateFork.NPCs.Providence;
+using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
+using CalamityModCustomPublicPrivateFork.NPCs.Signus;
+using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
+using CalamityModCustomPublicPrivateFork.NPCs.StormWeaver;
+using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
+using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Skies;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.UI.DraedonSummoning;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -48,10 +48,10 @@ using Terraria.DataStructures;
 using Terraria.GameContent.Events;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ApolloBoss = CalamityMod.NPCs.ExoMechs.Apollo.Apollo;
-using ArtemisBoss = CalamityMod.NPCs.ExoMechs.Artemis.Artemis;
+using ApolloBoss = CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo.Apollo;
+using ArtemisBoss = CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis.Artemis;
 
-namespace CalamityMod.Events
+namespace CalamityModCustomPublicPrivateFork.Events
 {
     public sealed class BossRushEvent : ModSystem
     {
@@ -116,25 +116,25 @@ namespace CalamityMod.Events
         public static int CurrentlyFoughtBoss => Bosses[BossRushStage].EntityID;
         public static int NextBossToFight => Bosses[BossRushStage + 1].EntityID;
 
-        public static readonly SoundStyle BossSummonSound = new("CalamityMod/Sounds/Custom/BossRush/BossRushSummon", 2);
+        public static readonly SoundStyle BossSummonSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BossRush/BossRushSummon", 2);
 
-        public static readonly SoundStyle TeleportSound = new("CalamityMod/Sounds/Custom/BossRush/BossRushTeleport");
+        public static readonly SoundStyle TeleportSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BossRush/BossRushTeleport");
 
-        public static readonly SoundStyle TerminusActivationSound = new("CalamityMod/Sounds/Custom/BossRush/BossRushTerminusActivate");
+        public static readonly SoundStyle TerminusActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BossRush/BossRushTerminusActivate");
 
-        public static readonly SoundStyle StartBuildupSound = new("CalamityMod/Sounds/Custom/BossRush/BossRushTerminusCharge");
+        public static readonly SoundStyle StartBuildupSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BossRush/BossRushTerminusCharge");
 
-        public static readonly SoundStyle TerminusDeactivationSound = new("CalamityMod/Sounds/Custom/BossRush/BossRushTerminusDeactivate");
+        public static readonly SoundStyle TerminusDeactivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BossRush/BossRushTerminusDeactivate");
 
-        public static readonly SoundStyle Tier2TransitionSound = new("CalamityMod/Sounds/Custom/BossRush/BossRushTier2Transition");
+        public static readonly SoundStyle Tier2TransitionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BossRush/BossRushTier2Transition");
 
-        public static readonly SoundStyle Tier3TransitionSound = new("CalamityMod/Sounds/Custom/BossRush/BossRushTier3Transition");
+        public static readonly SoundStyle Tier3TransitionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BossRush/BossRushTier3Transition");
 
-        public static readonly SoundStyle Tier4TransitionSound = new("CalamityMod/Sounds/Custom/BossRush/BossRushTier4Transition");
+        public static readonly SoundStyle Tier4TransitionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BossRush/BossRushTier4Transition");
 
-        public static readonly SoundStyle Tier5TransitionSound = new("CalamityMod/Sounds/Custom/BossRush/BossRushTier5Transition");
+        public static readonly SoundStyle Tier5TransitionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BossRush/BossRushTier5Transition");
 
-        public static readonly SoundStyle VictorySound = new("CalamityMod/Sounds/Custom/BossRush/BossRushVictory");
+        public static readonly SoundStyle VictorySound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BossRush/BossRushVictory");
 
         #region Loading and Unloading
         public override void OnModLoad()
@@ -493,7 +493,7 @@ namespace CalamityMod.Events
                     // Boss Rush music for tier 5 doesn't exist
                     if (tier > 4)
                         tier = 4;
-                    return CalamityMod.Instance.GetMusicFromMusicMod($"BossRushTier{tier}") ?? 0;
+                    return ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod($"BossRushTier{tier}") ?? 0;
                 }
 
                 switch (CurrentTier)

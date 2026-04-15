@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Graphics;
@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 using Terraria.UI.Chat;
 using Terraria.ID;
 
-namespace CalamityMod.Rarities
+namespace CalamityModCustomPublicPrivateFork.Rarities
 {
     public class BurnishedAuric : ModRarity
     {

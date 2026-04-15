@@ -1,11 +1,11 @@
-﻿using CalamityMod.NPCs.Cryogen;
+using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class IceBomb : ModProjectile, ILocalizedModType
     {

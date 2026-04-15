@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs
 {
     public sealed class CalamityNetImportantNPC : GlobalNPC
     {
@@ -68,7 +68,7 @@ namespace CalamityMod.NPCs
                 }
                 catch (Exception e)
                 {
-                    CalamityMod.Log.Error($"Exception thrown while evaluating type \"{npc.FullName}\": {e}");
+                    ModContent.GetInstance<CalamityMod>().Logger.Error($"Exception thrown while evaluating type \"{npc.FullName}\": {e}");
                 }
             }
 

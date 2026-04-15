@@ -1,34 +1,34 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.Graphics.Metaballs;
-using CalamityMod.Items.Armor.Vanity;
-using CalamityMod.Items.Fishing.FishingRods;
-using CalamityMod.Items.LoreItems;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Pets;
-using CalamityMod.Items.Placeables.Furniture.BossRelics;
-using CalamityMod.Items.Placeables.Furniture.Paintings;
-using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Items.Potions;
-using CalamityMod.Items.TreasureBags;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Items.Weapons.Typeless;
-using CalamityMod.NPCs.Bumblebirb;
-using CalamityMod.NPCs.DevourerofGods;
-using CalamityMod.NPCs.TownNPCs;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.Systems.Collections;
-using CalamityMod.Systems.Mechanic;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.Fishing.FishingRods;
+using CalamityModCustomPublicPrivateFork.Items.LoreItems;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Pets;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Items.Potions;
+using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless;
+using CalamityModCustomPublicPrivateFork.NPCs.Bumblebirb;
+using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
+using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -42,7 +42,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.SupremeCalamitas
+namespace CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas
 {
     public class SupremeCalamitas : ModNPC
     {
@@ -218,19 +218,19 @@ namespace CalamityMod.NPCs.SupremeCalamitas
         public const int brothersSpawnCastTime = 150;
 
         // Sounds.
-        public static readonly SoundStyle SpawnSound = new("CalamityMod/Sounds/Custom/SupremeCalamitasSpawn") { Volume = 1.2f };
-        public static readonly SoundStyle SepulcherSummonSound = new("CalamityMod/Sounds/Custom/SCalSounds/SepulcherSpawn");
-        public static readonly SoundStyle BrimstoneShotSound = new("CalamityMod/Sounds/Custom/SCalSounds/BrimstoneShoot");
-        public static readonly SoundStyle BrotherHit = new("CalamityMod/Sounds/Custom/SCalSounds/BrothersHurt", 2);
-        public static readonly SoundStyle BrotherDeath = new("CalamityMod/Sounds/Custom/SCalSounds/BrothersDeath", 2);
-        public static readonly SoundStyle CatastropheSwing = new("CalamityMod/Sounds/Custom/SCalSounds/CatastropheResonanceSlash");
-        public static readonly SoundStyle BrimstoneBigShotSound = new("CalamityMod/Sounds/Custom/SCalSounds/BrimstoneBigShoot"); // DON'T YOU WANNA BE A [BIG SHOT]
-        public static readonly SoundStyle DashSound = new("CalamityMod/Sounds/Custom/SCalSounds/SCalDash");
-        public static readonly SoundStyle HellblastSound = new("CalamityMod/Sounds/Custom/SCalSounds/BrimstoneHellblastSound");
-        public static readonly SoundStyle HurtSound = new("CalamityMod/Sounds/NPCHit/ShieldHit", 3);
-        public static readonly SoundStyle BulletHellSound = new("CalamityMod/Sounds/Custom/SCalSounds/SCalRumble");
-        public static readonly SoundStyle BulletHellEndSound = new("CalamityMod/Sounds/Custom/SCalSounds/SCalEndBH");
-        public static readonly SoundStyle GiveUpSound = new("CalamityMod/Sounds/Custom/SCalSounds/SupremeCalamitasGiveUp");
+        public static readonly SoundStyle SpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SupremeCalamitasSpawn") { Volume = 1.2f };
+        public static readonly SoundStyle SepulcherSummonSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/SepulcherSpawn");
+        public static readonly SoundStyle BrimstoneShotSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/BrimstoneShoot");
+        public static readonly SoundStyle BrotherHit = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/BrothersHurt", 2);
+        public static readonly SoundStyle BrotherDeath = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/BrothersDeath", 2);
+        public static readonly SoundStyle CatastropheSwing = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/CatastropheResonanceSlash");
+        public static readonly SoundStyle BrimstoneBigShotSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/BrimstoneBigShoot"); // DON'T YOU WANNA BE A [BIG SHOT]
+        public static readonly SoundStyle DashSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/SCalDash");
+        public static readonly SoundStyle HellblastSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/BrimstoneHellblastSound");
+        public static readonly SoundStyle HurtSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ShieldHit", 3);
+        public static readonly SoundStyle BulletHellSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/SCalRumble");
+        public static readonly SoundStyle BulletHellEndSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/SCalEndBH");
+        public static readonly SoundStyle GiveUpSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/SupremeCalamitasGiveUp");
         public SlotId BulletHellRumbleSlot;
 
         public static Asset<Texture2D> HoodedTexture;
@@ -242,13 +242,13 @@ namespace CalamityMod.NPCs.SupremeCalamitas
         // TODO -- This is cumbersome. Change it to be better in 1.4.
         public override void Load()
         {
-            string hoodedIconPath = "CalamityMod/NPCs/SupremeCalamitas/HoodedHeadIcon";
-            string hoodlessIconPath = "CalamityMod/NPCs/SupremeCalamitas/HoodlessHeadIcon";
-            string permafrostIconPath = "CalamityMod/NPCs/TownNPCs/Archmage_Head";
+            string hoodedIconPath = "CalamityModCustomPublicPrivateFork/NPCs/SupremeCalamitas/HoodedHeadIcon";
+            string hoodlessIconPath = "CalamityModCustomPublicPrivateFork/NPCs/SupremeCalamitas/HoodlessHeadIcon";
+            string permafrostIconPath = "CalamityModCustomPublicPrivateFork/NPCs/TownNPCs/Archmage_Head";
 
-            hoodedHeadIconIndex = CalamityMod.Instance.AddBossHeadTexture(hoodedIconPath, -1);
-            hoodlessHeadIconIndex = CalamityMod.Instance.AddBossHeadTexture(hoodlessIconPath, -1);
-            permafrostHeadIconIndex = CalamityMod.Instance.AddBossHeadTexture(permafrostIconPath, -1);
+            hoodedHeadIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(hoodedIconPath, -1);
+            hoodlessHeadIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(hoodlessIconPath, -1);
+            permafrostHeadIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(permafrostIconPath, -1);
         }
 
         public override void SetStaticDefaults()
@@ -265,10 +265,10 @@ namespace CalamityMod.NPCs.SupremeCalamitas
             if (!Main.dedServ)
             {
                 HoodedTexture = ModContent.Request<Texture2D>(Texture + "Hooded", AssetRequestMode.AsyncLoad);
-                PermafrostTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/SupremePermafrost", AssetRequestMode.AsyncLoad);
-                ShieldTopTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/SupremeShieldTop", AssetRequestMode.AsyncLoad);
-                ShieldBottomTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/SupremeShieldBottom", AssetRequestMode.AsyncLoad);
-                ForcefieldTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/ForcefieldTexture", AssetRequestMode.AsyncLoad);
+                PermafrostTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/SupremeCalamitas/SupremePermafrost", AssetRequestMode.AsyncLoad);
+                ShieldTopTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/SupremeCalamitas/SupremeShieldTop", AssetRequestMode.AsyncLoad);
+                ShieldBottomTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/SupremeCalamitas/SupremeShieldBottom", AssetRequestMode.AsyncLoad);
+                ForcefieldTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/SupremeCalamitas/ForcefieldTexture", AssetRequestMode.AsyncLoad);
             }
         }
 
@@ -306,7 +306,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 new MoonLordPortraitBackgroundProviderBestiaryInfoElement(), // Gives black background
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.SupremeCalamitas")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.SupremeCalamitas")
             });
         }
 
@@ -510,9 +510,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
             {
                 if (!BossRushEvent.BossRushActive)
                 {
-                    string key = "Mods.CalamityMod.Status.Boss.SCalSummonText";
+                    string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalSummonText";
                     if (permafrost)
-                        key = "Mods.CalamityMod.Status.Boss.PermafrostSummonText";
+                        key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostSummonText";
                     else if (DownedBossSystem.downedCalamitas)
                         key += "Rematch";
                     CalamityUtils.BroadcastLocalizedText(key, permafrost ? permafrostTextColor : textColor);
@@ -1137,9 +1137,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
 
                 if (!BossRushEvent.BossRushActive)
                 {
-                    string key = "Mods.CalamityMod.Status.Boss.SCalBH2Text";
+                    string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalBH2Text";
                     if (permafrost)
-                        key = "Mods.CalamityMod.Status.Boss.PermafrostBH2Text";
+                        key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostBH2Text";
                     else if (DownedBossSystem.downedCalamitas)
                         key += "Rematch";
 
@@ -1262,9 +1262,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
 
                 if (!BossRushEvent.BossRushActive)
                 {
-                    string key = "Mods.CalamityMod.Status.Boss.SCalBH3Text";
+                    string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalBH3Text";
                     if (permafrost)
-                        key = "Mods.CalamityMod.Status.Boss.PermafrostBH3Text";
+                        key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostBH3Text";
                     else if (DownedBossSystem.downedCalamitas)
                         key += "Rematch";
 
@@ -1392,7 +1392,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                     passedVar += 1f;
                     if (passedVar == 180) // Giant homing fireballs
                     {
-                        SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/SCalAltarSummon") with { Pitch = 0.3f }, player.Center);
+                        SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalAltarSummon") with { Pitch = 0.3f }, player.Center);
                         for (int i = 0; i < 2; i++)
                         {
                             Particle bloom = new BloomParticle(spawnSpot, Vector2.Zero, Color.Lerp(Color.Red, Color.Magenta, 0.3f), 0f, 1.45f, 240, false);
@@ -1468,9 +1468,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
 
                 if (!BossRushEvent.BossRushActive)
                 {
-                    string key = "Mods.CalamityMod.Status.Boss.SCalBH4Text";
+                    string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalBH4Text";
                     if (permafrost)
-                        key = "Mods.CalamityMod.Status.Boss.PermafrostBH4Text";
+                        key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostBH4Text";
                     else if (DownedBossSystem.downedCalamitas)
                         key += "Rematch";
 
@@ -1613,9 +1613,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                     }
                 }
 
-                string key = "Mods.CalamityMod.Status.Boss.SCalBH5Text";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalBH5Text";
                 if (permafrost)
-                    key = "Mods.CalamityMod.Status.Boss.PermafrostBH5Text";
+                    key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostBH5Text";
 
                 if (!BossRushEvent.BossRushActive)
                 {
@@ -1683,7 +1683,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                             if (giveUpCounter == 1)
                             {
                                 NPC.velocity = Vector2.Zero;
-                                CalamityUtils.BroadcastLocalizedText("Mods.CalamityMod.Status.Boss.PermafrostGiveUpText", permafrostTextColor);
+                                CalamityUtils.BroadcastLocalizedText("Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostGiveUpText", permafrostTextColor);
                                 Dust.QuickDustLine(NPC.Center, initialRitualPosition, 500f, Color.Cyan);
                                 NPC.Center = initialRitualPosition;
                                 giveUpCounter--;
@@ -1793,13 +1793,13 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                                         GeneralParticleHandler.SpawnParticle(spark);
                                     }
 
-                                    Particle orb = new CustomPulse(NPC.Center, Vector2.Zero, Color.Red, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 1.2f, 1.1f, 13);
+                                    Particle orb = new CustomPulse(NPC.Center, Vector2.Zero, Color.Red, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 1.2f, 1.1f, 13);
                                     GeneralParticleHandler.SpawnParticle(orb);
-                                    Particle orb2 = new CustomPulse(NPC.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.Magenta, 0.5f), "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 1f, 0.9f, 13);
+                                    Particle orb2 = new CustomPulse(NPC.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.Magenta, 0.5f), "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 1f, 0.9f, 13);
                                     GeneralParticleHandler.SpawnParticle(orb2);
                                     for (int i = 0; i < 4; i++)
                                     {
-                                        Particle orb3 = new CustomPulse(NPC.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.9f, 0.8f, 13);
+                                        Particle orb3 = new CustomPulse(NPC.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.9f, 0.8f, 13);
                                         GeneralParticleHandler.SpawnParticle(orb3);
                                     }
 
@@ -1854,15 +1854,15 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                             }
                             else if (giveUpCounter == 900 && !BossRushEvent.BossRushActive)
                             {
-                                CalamityUtils.BroadcastLocalizedText("Mods.CalamityMod.Status.Boss.SCalAcceptanceText1", textColor);
+                                CalamityUtils.BroadcastLocalizedText("Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalAcceptanceText1", textColor);
                             }
                             else if (giveUpCounter == 600 && !BossRushEvent.BossRushActive)
                             {
-                                CalamityUtils.BroadcastLocalizedText("Mods.CalamityMod.Status.Boss.SCalAcceptanceText2", textColor);
+                                CalamityUtils.BroadcastLocalizedText("Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalAcceptanceText2", textColor);
                             }
                             else if (giveUpCounter == 300 && !BossRushEvent.BossRushActive)
                             {
-                                CalamityUtils.BroadcastLocalizedText("Mods.CalamityMod.Status.Boss.SCalAcceptanceText3", textColor);
+                                CalamityUtils.BroadcastLocalizedText("Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalAcceptanceText3", textColor);
                             }
 
                             if (giveUpCounter <= 0)
@@ -1922,9 +1922,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
 
                     if (!BossRushEvent.BossRushActive)
                     {
-                        string key = "Mods.CalamityMod.Status.Boss.SCalDesparationText4";
+                        string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalDesparationText4";
                         if (permafrost)
-                            key = "Mods.CalamityMod.Status.Boss.PermafrostBruhText";
+                            key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostBruhText";
                         else if (DownedBossSystem.downedCalamitas)
                             key += "Rematch";
 
@@ -1938,7 +1938,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                 {
                     if (!BossRushEvent.BossRushActive && !permafrost)
                     {
-                        string key = "Mods.CalamityMod.Status.Boss.SCalDesparationText3";
+                        string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalDesparationText3";
                         if (DownedBossSystem.downedCalamitas)
                             key += "Rematch";
 
@@ -1952,7 +1952,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                 {
                     if (!BossRushEvent.BossRushActive && !permafrost)
                     {
-                        string key = "Mods.CalamityMod.Status.Boss.SCalDesparationText2";
+                        string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalDesparationText2";
                         if (DownedBossSystem.downedCalamitas)
                             key += "Rematch";
 
@@ -1966,9 +1966,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                 {
                     if (!BossRushEvent.BossRushActive)
                     {
-                        string key = "Mods.CalamityMod.Status.Boss.SCalDesparationText1";
+                        string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalDesparationText1";
                         if (permafrost)
-                            key = "Mods.CalamityMod.Status.Boss.PermafrostNonchalantText";
+                            key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostNonchalantText";
                         else if (DownedBossSystem.downedCalamitas)
                             key += "Rematch";
 
@@ -2037,9 +2037,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
             {
                 if (!BossRushEvent.BossRushActive)
                 {
-                    string key = "Mods.CalamityMod.Status.Boss.SCalPhase2Text";
+                    string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalPhase2Text";
                     if (permafrost)
-                        key = "Mods.CalamityMod.Status.Boss.PermafrostPhase2Text";
+                        key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostPhase2Text";
                     else if (DownedBossSystem.downedCalamitas)
                         key += "Rematch";
 
@@ -2055,9 +2055,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                 {
                     if (!BossRushEvent.BossRushActive)
                     {
-                        string key = "Mods.CalamityMod.Status.Boss.SCalSeekerRingText";
+                        string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalSeekerRingText";
                         if (permafrost)
-                            key = "Mods.CalamityMod.Status.Boss.PermafrostHallowBossSpamText";
+                            key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostHallowBossSpamText";
                         else if (DownedBossSystem.downedCalamitas)
                             key += "Rematch";
 
@@ -3257,9 +3257,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
 
             if (attackCastDelay == 0)
             {
-                string key = permafrost ? "Mods.CalamityMod.Status.Boss.PermafrostBirbSwarmText" : "Mods.CalamityMod.Status.Boss.SCalStartText";
+                string key = permafrost ? "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostBirbSwarmText" : "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalStartText";
                 if (NPC.life <= NPC.lifeMax * 0.08)
-                    key = permafrost ? "Mods.CalamityMod.Status.Boss.PermafrostSecondBirbSwarmText" : "Mods.CalamityMod.Status.Boss.SCalSepulcher2Text";
+                    key = permafrost ? "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostSecondBirbSwarmText" : "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalSepulcher2Text";
 
                 if (!BossRushEvent.BossRushActive)
                 {
@@ -3418,9 +3418,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
 
                 if (!BossRushEvent.BossRushActive)
                 {
-                    string key = "Mods.CalamityMod.Status.Boss.SCalBrothersText";
+                    string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SCalBrothersText";
                     if (permafrost)
-                        key = "Mods.CalamityMod.Status.Boss.PermafrostDoGText";
+                        key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PermafrostDoGText";
                     else if (DownedBossSystem.downedCalamitas)
                         key += "Rematch";
 
@@ -3435,8 +3435,8 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                         CalamityUtils.SpawnBossBetter(cataclysmSpawnPosition, ModContent.NPCType<SupremeCataclysm>(), null, broDirection == true ? 1 : -1);
                 }
 
-                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/NPCKilled/RavagerDeath1") with { Pitch = -0.2f }, cataclysmSpawnPosition);
-                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/NPCKilled/RavagerDeath2") with { Pitch = -0.2f }, catastropheSpawnPosition);
+                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/RavagerDeath1") with { Pitch = -0.2f }, cataclysmSpawnPosition);
+                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/RavagerDeath2") with { Pitch = -0.2f }, catastropheSpawnPosition);
                 hasSummonedBrothers = true;
             }
         }
@@ -3809,9 +3809,9 @@ namespace CalamityMod.NPCs.SupremeCalamitas
             GameShaders.Misc["CalamityMod:SupremeShield"].UseOpacity(0.65f);
             GameShaders.Misc["CalamityMod:SupremeShield"].Apply();
 
-            Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/CentralGold").Value;
+            Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CentralGold").Value;
 
-            Texture2D immuneTex = ModContent.Request<Texture2D>("CalamityMod/Particles/SemiCircularSmearVertical").Value;
+            Texture2D immuneTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SemiCircularSmearVertical").Value;
             if (postMusicHit)
                 spriteBatch.Draw(centerTexture, NPC.Center - Main.screenPosition, null, (Color.White with { A = 0 } * opacity) * 2f, rotateAwayPlayer, centerTexture.Size() * 0.5f, forcefieldScale * 0.088f * forcefieldPureVisualScale, SpriteEffects.None, 0f);
             if (!NPC.dontTakeDamage)

@@ -1,7 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class EnchantedParticle : Particle
     {
@@ -13,7 +13,7 @@ namespace CalamityMod.Particles
         public Color EdgeColor;
         public Color CenterColor;
 
-        public override string Texture => "CalamityMod/Particles/Light";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Light";
 
         public EnchantedParticle(Vector2 relativePosition, int lifetime, float scale, Color edgeColor, Color centerColor, float interpolationSpeed, float edgeOffset)
         {

@@ -1,6 +1,6 @@
-﻿using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.ModLoader;
 using System;
 using ReLogic.Utilities;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class M1GarandHoldout : BaseGunHoldoutProjectile
     {
@@ -37,21 +37,21 @@ namespace CalamityMod.Projectiles.Ranged
         public override float OffsetYDownwards => 0f;
 
         public override Vector2 GunTipPosition => (Projectile.Center + new Vector2(1.5f, -2.5f)) + Vector2.UnitX.RotatedBy(Projectile.rotation) * Projectile.width * 0.425f;
-        public override string Texture => "CalamityMod/Projectiles/Ranged/M1GarandHoldout";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/M1GarandHoldout";
 
         // Muzzle flash textures
         public static Asset<Texture2D> MuzzleFlash;
         public static Asset<Texture2D> HoldoutGlow;
 
-        public static readonly SoundStyle FireSound = new("CalamityMod/Sounds/Item/WulfrumBlunderbussFire") { PitchVariance = 0.1f }; 
-        public static readonly SoundStyle PingSound = new("CalamityMod/Sounds/Item/M1GarandPing");
-        public static readonly SoundStyle ReloadSound = new("CalamityMod/Sounds/Item/M1GarandReload");
+        public static readonly SoundStyle FireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumBlunderbussFire") { PitchVariance = 0.1f }; 
+        public static readonly SoundStyle PingSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/M1GarandPing");
+        public static readonly SoundStyle ReloadSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/M1GarandReload");
         private SlotId reloadSoundSlot;
 
         public override void Load()
         {
-            MuzzleFlash = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/M1GarandMuzzleFlash", AssetRequestMode.ImmediateLoad);
-            HoldoutGlow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/M1GarandHoldoutGlow", AssetRequestMode.ImmediateLoad);
+            MuzzleFlash = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/M1GarandMuzzleFlash", AssetRequestMode.ImmediateLoad);
+            HoldoutGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/M1GarandHoldoutGlow", AssetRequestMode.ImmediateLoad);
         }
 
         public override void SetStaticDefaults()
@@ -315,7 +315,7 @@ namespace CalamityMod.Projectiles.Ranged
             {
                 if (pingAnimationTimer <= PingAnimationDuration)
                 {
-                    Texture2D pingTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/M1GarandPingText").Value;
+                    Texture2D pingTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/M1GarandPingText").Value;
                     Vector2 origin = pingTexture.Size() * 0.5f;
                     Vector2 pingDrawPosition;
 

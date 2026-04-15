@@ -1,8 +1,8 @@
-﻿using CalamityMod.Tiles.Furniture.Monoliths;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Monoliths;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.Furniture.Monoliths
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths
 {
     public class FrigidMonolith : ModItem, ILocalizedModType
     {

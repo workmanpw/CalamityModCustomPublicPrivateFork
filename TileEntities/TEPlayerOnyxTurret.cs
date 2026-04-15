@@ -1,11 +1,11 @@
-﻿using System.IO;
-using CalamityMod.Projectiles.Turret;
-using CalamityMod.Tiles.PlayerTurrets;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Projectiles.Turret;
+using CalamityModCustomPublicPrivateFork.Tiles.PlayerTurrets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.TileEntities
+namespace CalamityModCustomPublicPrivateFork.TileEntities
 {
     public class TEPlayerOnyxTurret : TEBaseTurret
     {

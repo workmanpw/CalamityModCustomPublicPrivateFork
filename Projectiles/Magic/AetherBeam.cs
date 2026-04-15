@@ -1,14 +1,14 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class AetherBeam : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/LaserProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/LaserProj";
 
         public const int DoubleDamageTime = 90;
         public ref float BeamLength => ref Projectile.localAI[0];

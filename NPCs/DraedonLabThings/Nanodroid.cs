@@ -1,5 +1,5 @@
-﻿using CalamityMod.BiomeManagers;
-using CalamityMod.Items.Critters;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Items.Critters;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.DraedonLabThings
+namespace CalamityModCustomPublicPrivateFork.NPCs.DraedonLabThings
 {
     public class Nanodroid : ModNPC
     {
@@ -41,7 +41,7 @@ namespace CalamityMod.NPCs.DraedonLabThings
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Nanodroid")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Nanodroid")
             });
         }
 

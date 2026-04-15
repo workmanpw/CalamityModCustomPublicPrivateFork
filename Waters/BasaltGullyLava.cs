@@ -1,14 +1,14 @@
-﻿using CalamityMod.Dusts.WaterSplash;
-using CalamityMod.Gores.WaterDroplet;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Dusts.WaterSplash;
+using CalamityModCustomPublicPrivateFork.Gores.WaterDroplet;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Waters
+namespace CalamityModCustomPublicPrivateFork.Waters
 {
     public class BasaltGullyLava : ModLavaStyle
     {
-        public override string WaterfallTexture => "CalamityMod/Waters/BasaltGullyLavaflow";
+        public override string WaterfallTexture => "CalamityModCustomPublicPrivateFork/Waters/BasaltGullyLavaflow";
 
         public override int GetSplashDust() => ModContent.DustType<BasaltGullyLavaSplash>();
 

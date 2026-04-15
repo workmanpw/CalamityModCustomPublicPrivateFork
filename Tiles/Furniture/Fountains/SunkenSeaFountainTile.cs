@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Placeables.Furniture.Fountains;
-using CalamityMod.Waters;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Fountains;
+using CalamityModCustomPublicPrivateFork.Waters;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Furniture.Fountains
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Fountains
 {
     public class SunkenSeaFountainTile : ModTile
     {

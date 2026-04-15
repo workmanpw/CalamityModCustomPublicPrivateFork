@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.CeaselessVoid
+namespace CalamityModCustomPublicPrivateFork.NPCs.CeaselessVoid
 {
     [HasPierceResist]
     public class DarkEnergy : ModNPC
@@ -69,7 +69,7 @@ namespace CalamityMod.NPCs.CeaselessVoid
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheDungeon,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.DarkEnergy")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.DarkEnergy")
             });
         }
 

@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,12 +11,12 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class TrueArkoftheAncientsParryHoldout : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/TrueArkoftheAncients";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/TrueArkoftheAncients";
 
         private bool initialized = false;
         const float MaxTime = 340;
@@ -166,8 +166,8 @@ namespace CalamityMod.Projectiles.Melee
             {
                 if (Main.myPlayer == Owner.whoAmI)
                 {
-                    var barBG = Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
-                    var barFG = Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
+                    var barBG = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
+                    var barFG = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
 
                     Vector2 drawPos = Owner.Center - Main.screenPosition + new Vector2(0, -36) - barBG.Size() / 2;
                     Rectangle frame = new Rectangle(0, 0, (int)((Timer - ParryTime) / (MaxTime - ParryTime) * barFG.Width), barFG.Height);
@@ -180,8 +180,8 @@ namespace CalamityMod.Projectiles.Melee
                 }
                 return false;
             }
-            Texture2D sword = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/TrueArkoftheAncients").Value;
-            Texture2D glowmask = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/TrueArkoftheAncientsGlow").Value;
+            Texture2D sword = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/TrueArkoftheAncients").Value;
+            Texture2D glowmask = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/TrueArkoftheAncientsGlow").Value;
 
             float drawRotation = Projectile.rotation + MathHelper.PiOver4;
             Vector2 drawOrigin = new Vector2(0f, sword.Height);

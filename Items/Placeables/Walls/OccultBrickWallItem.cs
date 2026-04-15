@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.FurnitureSacrilegious;
-using CalamityMod.Walls;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSacrilegious;
+using CalamityModCustomPublicPrivateFork.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Walls
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
 {
     public class OccultBrickWallItem : ModItem, ILocalizedModType
     {

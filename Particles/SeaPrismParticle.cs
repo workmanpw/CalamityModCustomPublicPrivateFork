@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class SeaPrismParticle : Particle
     {
-        public override string Texture => "CalamityMod/Particles/SeaPrisms";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/SeaPrisms";
         public Color InitialColor;
         public bool AffectedByGravity;
         public bool FadeIn = false;

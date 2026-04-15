@@ -1,12 +1,12 @@
-﻿using CalamityMod.Projectiles.Typeless;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea
 {
     public class EutrophicSand : ModTile
     {

@@ -1,9 +1,9 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 
-namespace CalamityMod.Tiles.SunkenSea.Ambient
+namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
 {
 	public class DepthVines : ModTile
 	{

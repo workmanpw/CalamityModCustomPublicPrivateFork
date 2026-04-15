@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+using CalamityModCustomPublicPrivateFork.World;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu.BrainOfCthulhuAI;
+using static CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu.BrainOfCthulhuAI;
 
-namespace CalamityMod.Scenes.MusicScenes
+namespace CalamityModCustomPublicPrivateFork.Scenes.MusicScenes
 {
     public class RevBoCIntroMusicScene : ModSceneEffect
     {

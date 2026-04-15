@@ -1,12 +1,12 @@
-﻿
+
 using System;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace CalamityMod.Tiles.Ores
+namespace CalamityModCustomPublicPrivateFork.Tiles.Ores
 {
     public class PerennialOre : GlowMaskTile
     {

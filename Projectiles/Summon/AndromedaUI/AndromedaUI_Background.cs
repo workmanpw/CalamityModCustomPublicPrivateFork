@@ -1,5 +1,5 @@
-﻿using System.IO;
-using CalamityMod.Items.Weapons.Summon;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon.AndromedaUI
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.AndromedaUI
 {
     public class AndromedaUI_Background : ModProjectile, ILocalizedModType
     {
@@ -161,14 +161,14 @@ namespace CalamityMod.Projectiles.Summon.AndromedaUI
 
         public void DrawBrackets(SpriteBatch spriteBatch)
         {
-            Texture2D leftBracketTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/LeftBracket" + (LeftBracketActive ? "Lit" : "")).Value;
-            Texture2D leftBracketTextureHovered = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/LeftBracketHovered").Value;
+            Texture2D leftBracketTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/LeftBracket" + (LeftBracketActive ? "Lit" : "")).Value;
+            Texture2D leftBracketTextureHovered = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/LeftBracketHovered").Value;
 
-            Texture2D rightBracketTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/RightBracket" + (RightBracketActive ? "Lit" : "")).Value;
-            Texture2D rightBracketTextureHovered = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/RightBracketHovered").Value;
+            Texture2D rightBracketTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/RightBracket" + (RightBracketActive ? "Lit" : "")).Value;
+            Texture2D rightBracketTextureHovered = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/RightBracketHovered").Value;
 
-            Texture2D topBracketTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/TopBracket" + (BottomBracketActive ? "Lit" : "")).Value;
-            Texture2D topBracketTextureHovered = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/TopBracketHovered").Value;
+            Texture2D topBracketTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/TopBracket" + (BottomBracketActive ? "Lit" : "")).Value;
+            Texture2D topBracketTextureHovered = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/TopBracketHovered").Value;
 
             // Top bracket
             Vector2 topBracketPosition = Projectile.Bottom + TopBracketOffset;
@@ -266,8 +266,8 @@ namespace CalamityMod.Projectiles.Summon.AndromedaUI
         public void DrawLeftIcon(SpriteBatch spriteBatch)
         {
             // Define icons to draw
-            Texture2D smallIndicator = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/SmallIcon").Value;
-            Texture2D smallIndicatorLocked = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/Lock").Value;
+            Texture2D smallIndicator = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/SmallIcon").Value;
+            Texture2D smallIndicatorLocked = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/Lock").Value;
             Texture2D textureToDraw = smallIndicator;
 
             // An offset is required for said icons, as they have difference sizes. Don't touch them unless the sprites are modified.
@@ -319,10 +319,10 @@ namespace CalamityMod.Projectiles.Summon.AndromedaUI
         public void DrawRightIcon(SpriteBatch spriteBatch)
         {
             // Define icons to draw
-            Texture2D thunderIndicator = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/ThunderIcon").Value;
-            Texture2D thunderIndicatorHovered = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/ThunderIconHovered").Value;
-            Texture2D thunderIndicatorCharge = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/ThunderIconCharge").Value;
-            Texture2D thunderIndicatorLocked = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/Lock").Value;
+            Texture2D thunderIndicator = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/ThunderIcon").Value;
+            Texture2D thunderIndicatorHovered = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/ThunderIconHovered").Value;
+            Texture2D thunderIndicatorCharge = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/ThunderIconCharge").Value;
+            Texture2D thunderIndicatorLocked = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/Lock").Value;
             Texture2D textureToDraw = thunderIndicatorLocked;
 
             // An offset is required for said icons, as they have difference sizes. Don't touch them unless the sprites are modified.
@@ -369,7 +369,7 @@ namespace CalamityMod.Projectiles.Summon.AndromedaUI
                                 dust.noGravity = true;
                             }
                         }
-                        SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/MechGaussRifle"), Projectile.Center);
+                        SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MechGaussRifle"), Projectile.Center);
                     }
                 }
             }
@@ -398,11 +398,11 @@ namespace CalamityMod.Projectiles.Summon.AndromedaUI
         public void DrawTopIcon(SpriteBatch spriteBatch)
         {
             // Define icons to draw
-            Texture2D meleeIndicator = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/MeleeIcon").Value;
-            Texture2D rangedIndicator = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/RangedIcon").Value;
-            Texture2D attackIndicatorLocked = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/Lock").Value;
-            Texture2D meleeIndicatorHovered = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/MeleeIconHovered").Value;
-            Texture2D rangedIndicatorHovered = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AndromedaUI/RangedIconHovered").Value;
+            Texture2D meleeIndicator = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/MeleeIcon").Value;
+            Texture2D rangedIndicator = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/RangedIcon").Value;
+            Texture2D attackIndicatorLocked = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/Lock").Value;
+            Texture2D meleeIndicatorHovered = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/MeleeIconHovered").Value;
+            Texture2D rangedIndicatorHovered = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AndromedaUI/RangedIconHovered").Value;
             Texture2D textureToDraw = TopIconActive ? meleeIndicator : rangedIndicator;
 
             // An offset is required for said icons, as they have difference sizes. Don't touch them unless the sprites are modified.

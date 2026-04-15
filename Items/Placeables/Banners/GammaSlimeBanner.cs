@@ -1,7 +1,7 @@
-﻿using Terraria.ID;
+using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Placeables.Banners
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Banners
 {
     public class GammaSlimeBanner : BaseBanner
     {

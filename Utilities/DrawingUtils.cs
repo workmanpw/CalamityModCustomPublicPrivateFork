@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
-using CalamityMod.Utilities.Daybreak.Buffers;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public static partial class CalamityUtils
     {
@@ -417,7 +417,7 @@ namespace CalamityMod
             start -= Main.screenPosition;
             end -= Main.screenPosition;
 
-            Texture2D line = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Line").Value;
+            Texture2D line = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Line").Value;
             float rotation = (end - start).ToRotation();
             Vector2 scale = new Vector2(Vector2.Distance(start, end) / line.Width, width);
 
@@ -648,15 +648,16 @@ namespace CalamityMod
         /// <param name="texture">The texture to bind.</param>
         public static MiscShaderData SetShaderTexture(this MiscShaderData shader, Asset<Texture2D> texture, int index = 1)
         {
-            switch (index)
-            {
-                case 0:
-                    shader._uImage0 = texture;
-                    break;
-                case 1:
-                    shader._uImage1 = texture;
-                    break;
-            }
+            // MiscShaderData._uImage0/_uImage1 are private and no longer accessible
+            // switch (index)
+            // {
+            //     case 0:
+            //         shader._uImage0 = texture;
+            //         break;
+            //     case 1:
+            //         shader._uImage1 = texture;
+            //         break;
+            // }
             return shader;
         }
 
@@ -667,7 +668,8 @@ namespace CalamityMod
         /// <param name="texture">The texture to bind.</param>
         public static ArmorShaderData SetShaderTextureArmor(this ArmorShaderData shader, Asset<Texture2D> texture)
         {
-            shader._uImage = texture;
+            // ArmorShaderData._uImage is private and no longer accessible
+            // shader._uImage = texture;
             return shader;
         }
 

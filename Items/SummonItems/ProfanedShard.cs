@@ -1,17 +1,17 @@
-﻿using CalamityMod.Events;
-using CalamityMod.Items.Materials;
-using CalamityMod.NPCs.ProfanedGuardians;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     public class ProfanedShard : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.SummonItems";
-        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianSpawn");
+        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianSpawn");
         public override void SetStaticDefaults()
         {
             ItemID.Sets.SortingPriorityBossSpawns[Type] = 19; // Celestial Sigil

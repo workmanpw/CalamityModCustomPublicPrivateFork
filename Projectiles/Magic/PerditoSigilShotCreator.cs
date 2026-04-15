@@ -1,14 +1,14 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class PerditoSigilShotCreator : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public ref float FiringTimer => ref Projectile.ai[0];
         public ref float ShotsFiredCount => ref Projectile.ai[1];
@@ -42,10 +42,10 @@ namespace CalamityMod.Projectiles.Magic
                 ShotsFiredCount++;
                 if (ShotsFiredCount == TotalShots)
                 {
-                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/UnstableCastersGauntlet/PerditoSigilHit2") { Volume = 0.9f, PitchVariance = 0.1f }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/UnstableCastersGauntlet/PerditoSigilHit2") { Volume = 0.9f, PitchVariance = 0.1f }, Projectile.Center);
                 }
                 else
-                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/UnstableCastersGauntlet/PerditoSigilHit1") { Volume = 0.8f, PitchVariance = 0.1f }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/UnstableCastersGauntlet/PerditoSigilHit1") { Volume = 0.8f, PitchVariance = 0.1f }, Projectile.Center);
 
                 float startAngle = Main.rand.NextFloat(MathHelper.TwoPi);
                 Vector2 spawnOffset = startAngle.ToRotationVector2() * SpawnRadius;

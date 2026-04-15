@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using CalamityMod.NPCs.OldDuke;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.ForegroundDrawing.LoopingTextures
+namespace CalamityModCustomPublicPrivateFork.ForegroundDrawing.LoopingTextures
 {
     public class NuclearTorrentPlayer : ModPlayer
     {
@@ -50,7 +50,7 @@ namespace CalamityMod.ForegroundDrawing.LoopingTextures
 
             public void Draw(NuclearRaindrop drop, NuclearTorrentForeground foreground)
             {
-                Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityMod/ForegroundDrawing/LoopingTextures/NuclearTorrentRaindrop");
+                Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ForegroundDrawing/LoopingTextures/NuclearTorrentRaindrop");
 
                 float intensity = foreground.Intensity / foreground.IntensityMaximum / 4f;
 

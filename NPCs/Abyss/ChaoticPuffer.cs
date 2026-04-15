@@ -1,8 +1,8 @@
-﻿using CalamityMod.BiomeManagers;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Items.Placeables.Ores;
-using CalamityMod.Projectiles.Enemy;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
+using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityMod.NPCs.Abyss
+namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
 {
     public class ChaoticPuffer : ModNPC
     {
@@ -61,7 +61,7 @@ namespace CalamityMod.NPCs.Abyss
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
 
 				// Will move to localization whenever that is cleaned up.
-				new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.ChaoticPuffer")
+				new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.ChaoticPuffer")
             });
         }
 

@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class MidnightSunBeaconProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Items/Weapons/Summon/MidnightSunBeacon";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Summon/MidnightSunBeacon";
 
         public override void SetStaticDefaults()
         {

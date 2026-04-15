@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Skies;
+using System;
+using CalamityModCustomPublicPrivateFork.Skies;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Backgrounds
+namespace CalamityModCustomPublicPrivateFork.Backgrounds
 {
     public class AstralDesertSurfaceBGStyle : ModSurfaceBackgroundStyle
     {
@@ -32,18 +32,18 @@ namespace CalamityMod.Backgrounds
             }
         }
 
-        public override int ChooseFarTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralSurfaceHorizon");
+        public override int ChooseFarTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceHorizon");
 
-        public override int ChooseMiddleTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralDesertSurfaceFar");
+        public override int ChooseMiddleTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralDesertSurfaceFar");
 
-        public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b) => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Skies/AstralDesertSurfaceMiddle");
+        public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b) => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Skies/AstralDesertSurfaceMiddle");
 
         public override bool PreDrawCloseBackground(SpriteBatch spriteBatch)
         {
             //Please see AstralSurfaceBGStyle for comments, code is pretty much identical here
-            float screenOff = Main.instance.screenOff;
-            float scAdj = Main.instance.scAdj;
-            Color COSBMAplha = Main.ColorOfSurfaceBackgroundsModified;
+            float screenOff = 0f; // Main.instance.screenOff no longer exists
+            float scAdj = 0f; // Main.instance.scAdj no longer exists
+            Color COSBMAplha = Main.ColorOfTheSkies;
             Color ColorOfSurfaceBackgroundsModified = new Color(63, 51, 90, COSBMAplha.A);
             bool canBGDraw = false;
             if ((!Main.remixWorld || (Main.gameMenu && !WorldGen.remixWorldGen)) && (!WorldGen.remixWorldGen || !WorldGen.drunkWorldGen))

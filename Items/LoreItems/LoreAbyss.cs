@@ -1,8 +1,8 @@
-﻿using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.LoreItems
+namespace CalamityModCustomPublicPrivateFork.Items.LoreItems
 {
     [LegacyName("KnowledgeOcean")]
     public class LoreAbyss : LoreItem

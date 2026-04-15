@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Events;
-using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.UI.VanillaBossBars;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.UI.VanillaBossBars;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -15,13 +15,13 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Leviathan
+namespace CalamityModCustomPublicPrivateFork.NPCs.Leviathan
 {
     [AutoloadBossHead]
     public class Anahita : ModNPC
     {
-        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/AnahitaHit", 3);
-        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/AnahitaDeath");
+        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/AnahitaHit", 3);
+        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/AnahitaDeath");
 
         private int biomeEnrageTimer = CalamityGlobalNPC.biomeEnrageTimerMax;
         private bool spawnedLevi = false;
@@ -55,7 +55,7 @@ namespace CalamityMod.NPCs.Leviathan
             NPCID.Sets.NPCBestiaryDrawOffset[Type] = value;
             if (!Main.dedServ)
             {
-                ChargeTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/Leviathan/AnahitaStabbing", AssetRequestMode.AsyncLoad);
+                ChargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Leviathan/AnahitaStabbing", AssetRequestMode.AsyncLoad);
             }
         }
 
@@ -100,7 +100,7 @@ namespace CalamityMod.NPCs.Leviathan
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Anahita")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Anahita")
             });
         }
 
@@ -761,7 +761,7 @@ namespace CalamityMod.NPCs.Leviathan
                                     totalProjectiles = 6;
                                     type = ModContent.ProjectileType<SirenSong>();
                                     damage = SongDamage;
-                                    SoundStyle song = new("CalamityMod/Sounds/Item/HarpEnd");
+                                    SoundStyle song = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HarpEnd");
                                     SoundEngine.PlaySound(song with { Volume = 0.6f }, player.Center);
                                     break;
                             }

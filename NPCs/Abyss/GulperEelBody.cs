@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Abyss
+namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
 {
     [LongDistanceNetSync(SyncWith = typeof(GulperEelHead))]
     public class GulperEelBody : ModNPC

@@ -1,5 +1,5 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,11 +8,11 @@ using Terraria.GameContent;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Rubblemaker.SulphurousSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SulphurousSea
 {
     public class SulphurousRib2Echo : ModTile
     {
-        public override string Texture => "CalamityMod/Tiles/Abyss/SulphurousRib2";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/Abyss/SulphurousRib2";
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;

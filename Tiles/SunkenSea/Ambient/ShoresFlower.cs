@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.SunkenSea.Ambient
+namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
 {
     public class ShoresFlower : ModTile
     {
@@ -75,7 +75,7 @@ namespace CalamityMod.Tiles.SunkenSea.Ambient
             else if (tile.IsHalfBlock)
                 spriteBatch.Draw(glowmask, drawPosition + new Vector2(0f, 8f), new Rectangle(xFrameOffset, yFrameOffset, 18, 8), drawColour, 0.0f, Vector2.Zero, 1f, SpriteEffects.None, 0.0f);
 
-            CenterTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/Ambient/ShoresFlower_Center");
+            CenterTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/ShoresFlower_Center");
             CalamityUtils.DrawFlameEffect(CenterTexture.Value, i, j, 2);
 
             return false;

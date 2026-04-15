@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.CalPlayer;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -16,16 +16,16 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class WulfrumDroid : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public static readonly SoundStyle HelloSound = new("CalamityMod/Sounds/Custom/WulfrumDroidSpawnBeep") { PitchVariance = 0.4f };
-        public static readonly SoundStyle PewSound = new("CalamityMod/Sounds/Custom/WulfrumDroidFire") { PitchVariance = 0.4f, Volume = 0.6f, MaxInstances = 0 };
-        public static readonly SoundStyle RandomChirpSound = new("CalamityMod/Sounds/Custom/WulfrumDroidChirp", 4) { PitchVariance = 0.3f };
-        public static readonly SoundStyle HurrySound = new("CalamityMod/Sounds/Custom/WulfrumDroidHurry", 2) { PitchVariance = 0.3f };
-        public static readonly SoundStyle RepairSound = new("CalamityMod/Sounds/Custom/WulfrumDroidRepair") { Volume = 0.8f, PitchVariance = 0.3f, SoundLimitBehavior = SoundLimitBehavior.IgnoreNew };
+        public static readonly SoundStyle HelloSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumDroidSpawnBeep") { PitchVariance = 0.4f };
+        public static readonly SoundStyle PewSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumDroidFire") { PitchVariance = 0.4f, Volume = 0.6f, MaxInstances = 0 };
+        public static readonly SoundStyle RandomChirpSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumDroidChirp", 4) { PitchVariance = 0.3f };
+        public static readonly SoundStyle HurrySound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumDroidHurry", 2) { PitchVariance = 0.3f };
+        public static readonly SoundStyle RepairSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumDroidRepair") { Volume = 0.8f, PitchVariance = 0.3f, SoundLimitBehavior = SoundLimitBehavior.IgnoreNew };
         public int NewSoundDelay
         {
             get
@@ -527,7 +527,7 @@ namespace CalamityMod.Projectiles.Summon
                 Main.spriteBatch.End();
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
 
-                GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ZapTrail"));
+                GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ZapTrail"));
 
                 Vector2[] drawPos = new Vector2[] { Projectile.Center, Projectile.Center, healedPlayer.Center + (Projectile.Center - healedPlayer.Center) * 0.5f + Vector2.UnitY * 40f, healedPlayer.Center, healedPlayer.Center };
 
@@ -556,7 +556,7 @@ namespace CalamityMod.Projectiles.Summon
                 float opacity = (float)Math.Pow(NuzzleFlashTime / 20f, 1.7f);
 
                 if (SheenTex == null)
-                    SheenTex = ModContent.Request<Texture2D>("CalamityMod/Particles/HalfStar");
+                    SheenTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HalfStar");
 
                 Texture2D shineTex = SheenTex.Value;
                 Vector2 shineScale = new Vector2(1.2f, 2f - (opacity) * 1.33f);

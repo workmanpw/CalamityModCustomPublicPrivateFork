@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Accessories.Vanity;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Sounds;
-using CalamityMod.World;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,11 +13,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityMod.NPCs.NormalNPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
 {
     public class WulfrumAmplifier : ModNPC
     {
-        public static readonly SoundStyle Hit = new("CalamityMod/Sounds/NPCHit/WulfrumHit", 3);
+        public static readonly SoundStyle Hit = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/WulfrumHit", 3);
         public bool Charging
         {
             get => NPC.ai[0] != 0f;
@@ -72,7 +72,7 @@ namespace CalamityMod.NPCs.NormalNPCs
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.DayTime,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.WulfrumAmplifier")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.WulfrumAmplifier")
             });
         }
 

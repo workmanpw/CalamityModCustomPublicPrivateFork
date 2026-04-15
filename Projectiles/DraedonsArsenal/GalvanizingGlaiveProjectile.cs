@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class GalvanizingGlaiveProjectile : BaseSpearProjectile
     {
@@ -80,7 +80,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                 Vector2 offset = Projectile.Size * 0.5f + Projectile.Size.RotatedBy(Projectile.velocity.ToRotation() - MathHelper.PiOver4) * 0.4f;
                 Vector2 start = oldPositions[i] + offset - Main.screenPosition + Vector2.UnitY * Projectile.gfxOffY;
                 Vector2 end = oldPositions[i + 2] + offset - Main.screenPosition + Vector2.UnitY * Projectile.gfxOffY;
-                Utils.DrawLaser(Main.spriteBatch, ModContent.Request<Texture2D>("CalamityMod/Projectiles/LightningProj").Value, start, end, new Vector2(0.2f), new Utils.LaserLineFraming(DelegateMethods.LightningLaserDraw));
+                Utils.DrawLaser(Main.spriteBatch, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/LightningProj").Value, start, end, new Vector2(0.2f), new Utils.LaserLineFraming(DelegateMethods.LightningLaserDraw));
             }
         }
 

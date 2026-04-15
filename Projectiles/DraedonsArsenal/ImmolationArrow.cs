@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,12 +10,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class ImmolationArrow : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public ref float time => ref Projectile.ai[0];
 
         public NPC chosenTarget;
@@ -155,11 +155,11 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
 
                 storedVelocity = Projectile.velocity;
                 Projectile.velocity = Vector2.Zero;
-                SoundStyle sound = new("CalamityMod/Sounds/NPCHit/RavagerRockPillarHit1");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/RavagerRockPillarHit1");
                 SoundEngine.PlaySound(sound with { Volume = 0.25f, Pitch = Main.rand.NextFloat(-0.3f, -0.6f) }, Projectile.Center);
                 Projectile.rotation = storedVelocity.ToRotation() + MathHelper.PiOver2;
                 collideWithTiles = false;
-                SoundStyle sound2 = new("CalamityMod/Sounds/Item/ImmolatorPreExplode");
+                SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ImmolatorPreExplode");
                 SoundEngine.PlaySound(sound2 with { Volume = 0.3f, Pitch = 0.5f }, Projectile.Center);
                 SoundEngine.PlaySound(HolofibreImmolator.PlasmaSound with { Volume = 0.8f, Pitch = Main.rand.NextFloat(-0.3f, -0.4f) }, Projectile.Center);
             }
@@ -194,7 +194,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                     dust.color = Effects.ArsenalEffects.ArsenalPlasmaColor;
                     dust.fadeIn = 1.5f;
                 }
-                SoundStyle sound = new("CalamityMod/Sounds/Item/ImmolatorPreExplode");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ImmolatorPreExplode");
                 SoundEngine.PlaySound(sound with { Volume = 0.3f, Pitch = 0.5f }, Projectile.Center);
                 SoundEngine.PlaySound(HolofibreImmolator.PlasmaSound with { Volume = 0.8f, Pitch = Main.rand.NextFloat(-0.3f, -0.4f) }, Projectile.Center);
             }
@@ -205,10 +205,10 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             float explosionDamage = (stuckInGround ? 2.3f : 0.5f);
             Projectile blast = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), Projectile.Center, Vector2.Zero, ModContent.ProjectileType<ImmolationBurst>(), (int)(Projectile.damage * explosionDamage), Projectile.knockBack * 2, Projectile.owner, 0, stuckInGround ? 1 : 0);
             blast.scale = (stuckInGround ? 2 : 1);
-            Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalPlasmaColor * 0.75f, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 1.2f * bonus, 26);
+            Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalPlasmaColor * 0.75f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 1.2f * bonus, 26);
             GeneralParticleHandler.SpawnParticle(bolt2);
 
-            Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalPlasmaColor * 0.75f, "CalamityMod/Particles/WaterFoam", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.77f * bonus, 16);
+            Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalPlasmaColor * 0.75f, "CalamityModCustomPublicPrivateFork/Particles/WaterFoam", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.77f * bonus, 16);
             GeneralParticleHandler.SpawnParticle(bolt3);
 
             for (int i = 0; i < (int)(15 * bonus); i++)
@@ -222,7 +222,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                     dust.fadeIn = 2f;
             }
 
-            SoundStyle sound = new("CalamityMod/Sounds/Item/PlasmaBig");
+            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PlasmaBig");
             SoundEngine.PlaySound(sound with { Volume = 1f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f) }, Projectile.Center);
         }
         public override bool? CanDamage() => canDamage ? null : false;
@@ -231,8 +231,8 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             if (time < 1)
                 return false;
 
-            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/ImmolationArrow");
-            Asset<Texture2D> bloom = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/ImmolationArrow");
+            Asset<Texture2D> bloom = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
 
             float randSize = Main.rand.NextFloat(0.9f, 1f);
             float fadeIn = (float)Math.Pow(Utils.GetLerpValue(90, 5, stuckTimer, true), 3);

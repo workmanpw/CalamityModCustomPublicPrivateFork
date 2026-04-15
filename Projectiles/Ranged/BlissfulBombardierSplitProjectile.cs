@@ -1,15 +1,15 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.Projectiles.Ranged.BlissfulBombardierHoldout;
+using static CalamityModCustomPublicPrivateFork.Projectiles.Ranged.BlissfulBombardierHoldout;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class BlissfulBombardierSplitProjectile : ModProjectile, ILocalizedModType
     {
@@ -74,7 +74,7 @@ namespace CalamityMod.Projectiles.Ranged
             };
 
             bool isClusterRocket = (RocketID == ItemID.ClusterRocketI || RocketID == ItemID.ClusterRocketII);
-            SoundStyle fire = new("CalamityMod/Sounds/Custom/Providence/ProvidenceHolyBlastImpact");
+            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceHolyBlastImpact");
             SoundEngine.PlaySound(fire with { Volume = 0.6f, PitchVariance = 0.2f }, Projectile.Center);
 
             int blastRadius = (int)(MathHelper.Clamp(Projectile.RocketBehavior(info), 3, 100) * 0.5f);
@@ -83,10 +83,10 @@ namespace CalamityMod.Projectiles.Ranged
             Projectile.penetrate = -1;
             Projectile.Damage();
 
-            Particle orb5 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orange, "CalamityMod/Particles/SoftRoundExplosion", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.025f * blastRadius, 13);
+            Particle orb5 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orange, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.025f * blastRadius, 13);
             GeneralParticleHandler.SpawnParticle(orb5);
 
-            Particle orb3 = new CustomPulse(Projectile.Center, Vector2.Zero, staticEffectsColor, "CalamityMod/Particles/SmallBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.22f * blastRadius, 10, true);
+            Particle orb3 = new CustomPulse(Projectile.Center, Vector2.Zero, staticEffectsColor, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.22f * blastRadius, 10, true);
             GeneralParticleHandler.SpawnParticle(orb3);
 
             for (int i = 0; i < 8; i++)
@@ -99,13 +99,13 @@ namespace CalamityMod.Projectiles.Ranged
             }
             for (int i = 0; i < 4; i++)
             {
-                Particle spark = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(10, 10), (Projectile.velocity.SafeNormalize(Vector2.UnitX) * 10) * Main.rand.NextFloat(0.2f, 1f), "CalamityMod/Particles/ProvidenceMarkParticle", false, 15, Main.rand.NextFloat(1.35f, 1.6f), Main.rand.NextBool(4) ? Color.Khaki : effectsColor, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.45f, 0.55f));
+                Particle spark = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(10, 10), (Projectile.velocity.SafeNormalize(Vector2.UnitX) * 10) * Main.rand.NextFloat(0.2f, 1f), "CalamityModCustomPublicPrivateFork/Particles/ProvidenceMarkParticle", false, 15, Main.rand.NextFloat(1.35f, 1.6f), Main.rand.NextBool(4) ? Color.Khaki : effectsColor, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.45f, 0.55f));
                 GeneralParticleHandler.SpawnParticle(spark);
             }
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/BlissfulBombardierSplitProjectile").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/BlissfulBombardierSplitProjectile").Value;
 
             Projectile.DrawProjectileWithBackglow(staticEffectsColor with { A = 0 }, lightColor, 3f, texture);
             return false;

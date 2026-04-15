@@ -1,11 +1,11 @@
-﻿using CalamityMod.Systems;
-using CalamityMod.Tiles.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureShellstone
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureShellstone
 {
     public class ShellstoneSlab : ModTile
     {

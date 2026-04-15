@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -16,7 +16,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss.BrainOfCthulhu;
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss.BrainOfCthulhu;
 
 public class BloodBomb : ModNPC, ILocalizedModType
 {
@@ -28,7 +28,7 @@ public class BloodBomb : ModNPC, ILocalizedModType
     public override void SetStaticDefaults()
     {
         NPCID.Sets.ProjectileNPC[Type] = true;
-        BloodBombYellow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/BrainOfCthulhu/BloodBomb2");
+        BloodBombYellow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/BrainOfCthulhu/BloodBomb2");
     }
 
     internal static Texture2D GetBombGlow()
@@ -196,7 +196,7 @@ public class BloodBomb : ModNPC, ILocalizedModType
 public class BloodBombRTS : ModProjectile, ILocalizedModType
 {
     public new string LocalizationCategory => "Projectiles.Boss";
-    public override string Texture => "CalamityMod/Projectiles/Boss/BrainOfCthulhu/BloodBomb";
+    public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/BrainOfCthulhu/BloodBomb";
     public override void SetStaticDefaults()
     {
         ProjectileID.Sets.TrailCacheLength[Type] = 8;
@@ -233,10 +233,10 @@ public class BloodBombRTS : ModProjectile, ILocalizedModType
     {
         SoundEngine.PlaySound(SoundID.DD2_ExplosiveTrapExplode, Projectile.Center);
 
-        CustomPulse explosion1 = new(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(0f, MathHelper.Pi), 0f, 0.1f, 24);
+        CustomPulse explosion1 = new(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(0f, MathHelper.Pi), 0f, 0.1f, 24);
         GeneralParticleHandler.SpawnParticle(explosion1);
 
-        CustomPulse explosion2 = new(Projectile.Center, Vector2.Zero, Color.Red, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(0f, MathHelper.Pi), 0f, 0.075f, 24);
+        CustomPulse explosion2 = new(Projectile.Center, Vector2.Zero, Color.Red, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(0f, MathHelper.Pi), 0f, 0.075f, 24);
         GeneralParticleHandler.SpawnParticle(explosion2);
     }
 

@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing
 {
     public class GlimmeringGemfish : ModItem, ILocalizedModType
     {
@@ -62,13 +62,13 @@ namespace CalamityMod.Items.Fishing
             if (aquamarine is not null)
                 itemLoot.Add(aquamarine.Type, 4, gemMin, gemMax);
             else
-                CalamityMod.Log.Warn("Could not find Thorium Aquamarine gem. This item will not be added to Glimmering Gemfish.");
+                ModContent.GetInstance<CalamityMod>().Logger.Warn("Could not find Thorium Aquamarine gem. This item will not be added to Glimmering Gemfish.");
 
             var opal = thorium.Find<ModItem>("Opal");
             if (opal is not null)
                 itemLoot.Add(opal.Type, 4, gemMin, gemMax);
             else
-                CalamityMod.Log.Warn("Could not find Thorium Opal gem. This item will not be added to Glimmering Gemfish.");
+                ModContent.GetInstance<CalamityMod>().Logger.Warn("Could not find Thorium Opal gem. This item will not be added to Glimmering Gemfish.");
         }
 
         public override void ModifyTooltips(List<TooltipLine> list)

@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -16,7 +16,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.SupremeCalamitas
+namespace CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas
 {
     [AutoloadBossHead]
     public class SupremeCatastrophe : ModNPC
@@ -100,7 +100,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 new MoonLordPortraitBackgroundProviderBestiaryInfoElement(), // Gives black background
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.SupremeCatastrophe")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.SupremeCatastrophe")
             });
         }
 
@@ -209,7 +209,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                 if (EnrageRoar)
                 {
                     EnrageRoar = false;
-                    SoundStyle yell = new("CalamityMod/Sounds/NPCKilled/RavagerLimbLoss2");
+                    SoundStyle yell = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/RavagerLimbLoss2");
                     SoundEngine.PlaySound(yell with { Volume = 1.5f, Pitch = 0.3f }, NPC.Center);
                 }
                 Phase2 = true;
@@ -279,7 +279,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                         {
                             if (Main.zenithWorld)
                             {
-                                SoundStyle charge = new("CalamityMod/Sounds/Item/ExobladeBeamSlash");
+                                SoundStyle charge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ExobladeBeamSlash");
                                 SoundEngine.PlaySound(charge with { Volume = 0.85f, Pitch = -0.5f }, NPC.Center);
                                 NPC.velocity = NPC.DirectionTo(Target.Center) * 150f;
 
@@ -301,7 +301,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                             }
                             else
                             {
-                                SoundStyle slash = new("CalamityMod/Sounds/Item/MurasamaBigSwing");
+                                SoundStyle slash = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MurasamaBigSwing");
                                 SoundEngine.PlaySound(slash with { Volume = 0.55f, Pitch = -0.3f }, NPC.Center);
                                 Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + NPC.DirectionTo(Target.Center).RotatedBy(0.34f) * 130, NPC.DirectionTo(Target.Center).RotatedBy(0.34f) * 90f, type, TrailedSlashDamage, 0f, Main.myPlayer, 0f, 0, 50);
                                 Projectile.NewProjectile(NPC.GetSource_FromAI(), NPC.Center + NPC.DirectionTo(Target.Center).RotatedBy(-0.34f) * 130, NPC.DirectionTo(Target.Center).RotatedBy(-0.34f) * 90f, type, TrailedSlashDamage, 0f, Main.myPlayer, 0f, 0, 50);
@@ -394,7 +394,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                             }
                             else
                             {
-                                SoundStyle slash = new("CalamityMod/Sounds/Item/MurasamaBigSwing");
+                                SoundStyle slash = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MurasamaBigSwing");
                                 SoundEngine.PlaySound(slash with { Volume = 0.55f, Pitch = 0.4f }, NPC.Center);
 
                                 Projectile.NewProjectile(NPC.GetSource_FromAI(), slashSpawnPosition, firingVelocity * 0.2f, type, damage, 0f, Main.myPlayer, 0f, SlashingFromRight.ToInt(), Main.zenithWorld ? 0 : 3);
@@ -414,7 +414,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
             {
                 if (BigAttackTimer == PreBigAttackPause)
                 {
-                    SoundStyle charge = new("CalamityMod/Sounds/Custom/Ravager/RavagerPillarSummon");
+                    SoundStyle charge = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Ravager/RavagerPillarSummon");
                     SoundEngine.PlaySound(charge with { Volume = 0.85f, Pitch = 0.6f }, NPC.Center);
                 }
                 for (int i = 0; i < 7; i++)
@@ -455,14 +455,14 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                             damage = TrailedSlashDamage;
 
                         Projectile.NewProjectile(NPC.GetSource_FromAI(), slashSpawnPosition + firingVelocity * 130, (Phase2 ? NPC.DirectionTo(Target.Center) : firingVelocity) * 90f, ModContent.ProjectileType<SupremeCatastropheSlash>(), damage, 0f, Main.myPlayer, 0f, 5, 50);
-                        SoundStyle slash = new("CalamityMod/Sounds/Item/MurasamaBigSwing");
+                        SoundStyle slash = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MurasamaBigSwing");
                         SoundEngine.PlaySound(slash with { Volume = 0.55f, Pitch = -0.3f - BigAttackLimit * 0.1f }, NPC.Center);
                     }
                     else if (BigAttackLimit == 0 && Phase2)
                     {
                         if (Main.netMode != NetmodeID.MultiplayerClient)
                         {
-                            SoundStyle charge = new("CalamityMod/Sounds/Item/ExobladeBeamSlash");
+                            SoundStyle charge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ExobladeBeamSlash");
                             SoundEngine.PlaySound(charge with { Volume = 0.85f, Pitch = -0.5f }, NPC.Center);
                             NPC.velocity = firingVelocity * 90f;
                             dashAttackTimer = 30;
@@ -598,7 +598,7 @@ namespace CalamityMod.NPCs.SupremeCalamitas
                             Particle pulse2 = new DirectionalPulseRing(NPC.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.Magenta, 0.3f), new Vector2(1f, 1f), 0, 0.05f, 4f, 28);
                             GeneralParticleHandler.SpawnParticle(pulse2);
 
-                            SoundStyle respawn = new("CalamityMod/Sounds/NPCKilled/RavagerLimbLoss3");
+                            SoundStyle respawn = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/RavagerLimbLoss3");
                             SoundEngine.PlaySound(respawn with { Volume = 0.9f, Pitch = 0.3f }, NPC.Center);
 
                             CalamityUtils.SpawnBossBetter(NPC.Center, ModContent.NPCType<SupremeCataclysm>(), null, MovingUp ? -1 : 1);

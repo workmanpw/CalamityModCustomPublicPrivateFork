@@ -1,24 +1,24 @@
-﻿using System;
-using CalamityMod.Projectiles.DraedonsArsenal;
+using System;
+using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityMod.Particles;
-using CalamityMod.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 using Terraria.GameContent;
 using Terraria.Graphics.Shaders;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class IgnisSigilFireball : ModProjectile, ILocalizedModType
     {
         public ref float Time => ref Projectile.ai[0];
 
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
 
         public override void SetStaticDefaults()
@@ -110,7 +110,7 @@ namespace CalamityMod.Projectiles.Magic
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new PrimitiveSettings(WidthFunction, ColorFunction, (_,_) => Projectile.Size * 0.5f, pixelate: false, shader: GameShaders.Misc["CalamityMod:TrailStreak"]), 340);
 
 
@@ -125,7 +125,7 @@ namespace CalamityMod.Projectiles.Magic
 
         public override void OnKill(int timeLeft)
         {
-            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/UnstableCastersGauntlet/IgnisSigilHit") { Volume = 0.7f, PitchVariance = 0.1f }, Projectile.Center);
+            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/UnstableCastersGauntlet/IgnisSigilHit") { Volume = 0.7f, PitchVariance = 0.1f }, Projectile.Center);
 
             for (int i = 0; i < 40; i++)
             {
@@ -141,7 +141,7 @@ namespace CalamityMod.Projectiles.Magic
                 Projectile embers = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), Projectile.Center + (new Vector2(Main.rand.NextFloat(-22, -30), Main.rand.NextFloat(-4, 4)).RotatedBy(Projectile.rotation - MathHelper.PiOver2)), vel * 0.8f, ModContent.ProjectileType<IgnisSigilEmbers>(), Projectile.damage, Projectile.knockBack, Projectile.owner);
             }
 
-            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center + (new Vector2(-26, 0).RotatedBy(Projectile.rotation - MathHelper.PiOver2)), Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.265f, 21, true, 1f));
+            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center + (new Vector2(-26, 0).RotatedBy(Projectile.rotation - MathHelper.PiOver2)), Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.265f, 21, true, 1f));
 
             if (Projectile.owner == Main.myPlayer)
             {

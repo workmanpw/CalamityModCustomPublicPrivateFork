@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Net;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using ReLogic.Utilities;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class FrigidflashBoltProjectile : ModProjectile, ILocalizedModType
     {
@@ -78,7 +78,7 @@ namespace CalamityMod.Projectiles.Magic
 
                     SoundEngine.PlaySound(FrigidflashBolt.UseSound with { Volume = 1f, Pitch = (bigMagic ? -0.15f : 0.15f) }, Projectile.Center);
                     if (bigMagic)
-                        SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/HalleysInfernoShoot") with { Volume = 0.65f, Pitch = 0.45f }, Projectile.Center);
+                        SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/HalleysInfernoShoot") with { Volume = 0.65f, Pitch = 0.45f }, Projectile.Center);
                     for (int i = 0; i < (bigMagic ? 14 : 8); i++)
                     {
                         Dust dust = Dust.NewDustPerfect(Projectile.Center, ModContent.DustType<LightDust>(), Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(1.1f, 1.9f) * (bigMagic ? 2 : 1));
@@ -94,7 +94,7 @@ namespace CalamityMod.Projectiles.Magic
                             float fxScale = (Main.rand.NextFloat(1.5f, 1.7f) - Math.Abs(variance)) * 0.4f;
                             Vector2 fxVelocity = (Projectile.velocity * 2).RotatedBy(variance) * Main.rand.NextFloat(0.6f, 1f) * (1 - Math.Abs(variance)) * (bigMagic ? 2 : 1);
 
-                            Particle fx = new VelChangingSpark(Projectile.Center, fxVelocity * 1.3f, fxVelocity.RotatedBy(variance * 1.3f), "CalamityMod/Particles/FullStar", 22, fxScale, type ? fireColor : iceColor, new Vector2(2f, 1f), true, false, shrinkSpeed: 0.3f, lerpRate: 0.2f);
+                            Particle fx = new VelChangingSpark(Projectile.Center, fxVelocity * 1.3f, fxVelocity.RotatedBy(variance * 1.3f), "CalamityModCustomPublicPrivateFork/Particles/FullStar", 22, fxScale, type ? fireColor : iceColor, new Vector2(2f, 1f), true, false, shrinkSpeed: 0.3f, lerpRate: 0.2f);
                             GeneralParticleHandler.SpawnParticle(fx);
                         }
                     }
@@ -104,14 +104,14 @@ namespace CalamityMod.Projectiles.Magic
                 if (Main.rand.NextBool(bigMagic ? 3 : 8) && launchTime < 56)
                 {
                     bool type = Main.rand.NextBool();
-                    Particle fx = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(12, 12), -Projectile.velocity * 0.3f, type ? "CalamityMod/Particles/FireTypeParticle" : "CalamityMod/Particles/IceTypeParticle", false, 32, 0.9f, type ? fireColor : iceColor, new Vector2(0.8f, 1f), true, false, shrinkSpeed: type ? 0.2f : 0);
+                    Particle fx = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(12, 12), -Projectile.velocity * 0.3f, type ? "CalamityModCustomPublicPrivateFork/Particles/FireTypeParticle" : "CalamityModCustomPublicPrivateFork/Particles/IceTypeParticle", false, 32, 0.9f, type ? fireColor : iceColor, new Vector2(0.8f, 1f), true, false, shrinkSpeed: type ? 0.2f : 0);
                     GeneralParticleHandler.SpawnParticle(fx);
                 }
 
                 float velFade = Utils.GetLerpValue(1.5f, 6.5f, Projectile.velocity.Length(), true);
-                Particle iceTrail = new CustomSpark(Projectile.Center + (Vector2.One * 3 * Projectile.scale).RotatedBy(Projectile.rotation), -Projectile.velocity * 0.3f, "CalamityMod/Particles/BloomCircle", false, 7, 0.2f, iceColor * 0.9f, new Vector2(1, 1f), true, false, shrinkSpeed: 0.8f * velFade);
+                Particle iceTrail = new CustomSpark(Projectile.Center + (Vector2.One * 3 * Projectile.scale).RotatedBy(Projectile.rotation), -Projectile.velocity * 0.3f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 7, 0.2f, iceColor * 0.9f, new Vector2(1, 1f), true, false, shrinkSpeed: 0.8f * velFade);
                 GeneralParticleHandler.SpawnParticle(iceTrail);
-                Particle fireTrail = new CustomSpark(Projectile.Center - (Vector2.One * 3 * Projectile.scale).RotatedBy(Projectile.rotation), -Projectile.velocity * 0.3f, "CalamityMod/Particles/BloomCircle", false, 7, 0.2f, fireColor * 0.9f, new Vector2(1, 1f), true, false, shrinkSpeed: 0.8f * velFade);
+                Particle fireTrail = new CustomSpark(Projectile.Center - (Vector2.One * 3 * Projectile.scale).RotatedBy(Projectile.rotation), -Projectile.velocity * 0.3f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 7, 0.2f, fireColor * 0.9f, new Vector2(1, 1f), true, false, shrinkSpeed: 0.8f * velFade);
                 GeneralParticleHandler.SpawnParticle(fireTrail);
             }
             if (bigMagic)
@@ -198,7 +198,7 @@ namespace CalamityMod.Projectiles.Magic
                 for (int i = 0; i < 6; i++)
                 {
                     Vector2 velocity = (MathHelper.TwoPi * i / 6f).ToRotationVector2().RotatedBy(rot - MathHelper.ToRadians(90)) * 8f;
-                    Particle trail = new VelChangingSpark(Projectile.Center + velocity * 20, -velocity * 0.2f, -velocity * 5f, "CalamityMod/Particles/IceTypeParticle", 55, 1.8f, Color.Lerp(iceColor, Color.White, 0.5f), new Vector2(1.1f, 1f), true, false, shrinkSpeed: 0.15f, lerpRate: 0.01f);
+                    Particle trail = new VelChangingSpark(Projectile.Center + velocity * 20, -velocity * 0.2f, -velocity * 5f, "CalamityModCustomPublicPrivateFork/Particles/IceTypeParticle", 55, 1.8f, Color.Lerp(iceColor, Color.White, 0.5f), new Vector2(1.1f, 1f), true, false, shrinkSpeed: 0.15f, lerpRate: 0.01f);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
                 for (int n = 0; n < 15; n++)
@@ -244,7 +244,7 @@ namespace CalamityMod.Projectiles.Magic
             for (int i = 0; i < 6; i++)
             {
                 Vector2 velocity = (MathHelper.TwoPi * i / 6f).ToRotationVector2().RotatedBy(rot) * 6f;
-                Particle trail = new CustomSpark(Projectile.Center + velocity * 3, velocity * 0.5f, "CalamityMod/Particles/IceTypeParticle", false, 25, 1.3f, iceColor, new Vector2(1, 1.8f), true, false, shrinkSpeed: -0.45f);
+                Particle trail = new CustomSpark(Projectile.Center + velocity * 3, velocity * 0.5f, "CalamityModCustomPublicPrivateFork/Particles/IceTypeParticle", false, 25, 1.3f, iceColor, new Vector2(1, 1.8f), true, false, shrinkSpeed: -0.45f);
                 GeneralParticleHandler.SpawnParticle(trail);
 
                 Dust dust = Dust.NewDustPerfect(Projectile.Center, ModContent.DustType<LightDust>(), velocity * 1.5f);
@@ -256,7 +256,7 @@ namespace CalamityMod.Projectiles.Magic
             for (int i = 0; i < 6; i++)
             {
                 Vector2 velocity = (MathHelper.TwoPi * i / 6f).ToRotationVector2().RotatedBy(rot - MathHelper.ToRadians(90)) * 6f;
-                Particle trail = new CustomSpark(Projectile.Center + velocity * 6, velocity * 0.5f, "CalamityMod/Particles/FireTypeParticle", false, 25, 1.5f, fireColor, new Vector2(1.8f, 1f), true, false, shrinkSpeed: 0.25f);
+                Particle trail = new CustomSpark(Projectile.Center + velocity * 6, velocity * 0.5f, "CalamityModCustomPublicPrivateFork/Particles/FireTypeParticle", false, 25, 1.5f, fireColor, new Vector2(1.8f, 1f), true, false, shrinkSpeed: 0.25f);
                 GeneralParticleHandler.SpawnParticle(trail);
 
                 Dust dust = Dust.NewDustPerfect(Projectile.Center, ModContent.DustType<LightDust>(), velocity * 2f);

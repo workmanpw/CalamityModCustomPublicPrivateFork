@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureShellstone
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureShellstone
 {
     public class ShellTrimBrick : ModItem, ILocalizedModType
     {

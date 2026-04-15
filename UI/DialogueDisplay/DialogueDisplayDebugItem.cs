@@ -1,14 +1,14 @@
-﻿using Terraria.ID;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria;
-using CalamityMod.UI.DialogueDisplay.DisplayEffects;
+using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects;
 
-namespace CalamityMod.UI.DialogueDisplay
+namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay
 {
     public class DialogueDisplayDebugItem : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Debug";
-        public override string Texture => "CalamityMod/Items/Weapons/Summon/StaffOfNecrosteocytes";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Summon/StaffOfNecrosteocytes";
         public override void SetDefaults()
         {
             Item.width = 25;

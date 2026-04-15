@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.PlaguebringerGoliath
+namespace CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath
 {
     public class PbGScreenShaderData : ScreenShaderData
     {

@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityMod.Utilities.Daybreak.Buffers;
+namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 
 /// <summary>
 ///     Describes the creation parameters of a render target.

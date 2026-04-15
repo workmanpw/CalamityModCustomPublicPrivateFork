@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.CalPlayer;
-using CalamityMod.NPCs;
-using CalamityMod.Projectiles.Healing;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     [PierceResistException]
     public class FungalClumpMinion : ModProjectile, ILocalizedModType

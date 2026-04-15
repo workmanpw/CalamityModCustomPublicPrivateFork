@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class ScionsCurioMini : ModProjectile, ILocalizedModType
     {
@@ -84,7 +84,7 @@ namespace CalamityMod.Projectiles.Typeless
                         dust.color = Main.rand.NextBool() ? Color.Green : Color.Chartreuse;
                         dust.fadeIn = Main.rand.NextFloat(0.2f, 2f);
                     }
-                    Particle blastvfx = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Chartreuse * 0.9f, "CalamityMod/Particles/ShineExplosion1", Vector2.One, Main.rand.NextFloat(-10, 10), 0.05f * blastScale, 0.15f * blastScale, 10, true);
+                    Particle blastvfx = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Chartreuse * 0.9f, "CalamityModCustomPublicPrivateFork/Particles/ShineExplosion1", Vector2.One, Main.rand.NextFloat(-10, 10), 0.05f * blastScale, 0.15f * blastScale, 10, true);
                     GeneralParticleHandler.SpawnParticle(blastvfx);
                     SoundEngine.PlaySound(SoundID.DD2_ExplosiveTrapExplode with { Volume = 0.5f * blastScale, Pitch = Main.rand.NextFloat(0.5f, 0.7f), MaxInstances = 6 }, Projectile.Center);
 
@@ -145,7 +145,7 @@ namespace CalamityMod.Projectiles.Typeless
                 }
                 if (swineSecretTimer % 6 == 0 && swineSecretTimer > 30)
                 {
-                    SoundStyle snort = new("CalamityMod/Sounds/Item/Swine", 2);
+                    SoundStyle snort = new("CalamityModCustomPublicPrivateFork/Sounds/Item/Swine", 2);
                     SoundEngine.PlaySound(snort with { Volume = 0.6f, Pitch = Main.rand.NextFloat(-0.35f, 0.55f) }, Projectile.Center);
                     actionSpeed = Main.rand.NextFloat(0.5f, 1.5f);
                 }
@@ -164,7 +164,7 @@ namespace CalamityMod.Projectiles.Typeless
             {
                 CombatText.NewText(Projectile.Hitbox, usedColor, CalamityUtils.GetTextValue("Misc.SwineSecret0"), false, true);
                 actionSpeed = 1.1f;
-                SoundStyle snort = new("CalamityMod/Sounds/Item/Swine", 2);
+                SoundStyle snort = new("CalamityModCustomPublicPrivateFork/Sounds/Item/Swine", 2);
                 SoundEngine.PlaySound(snort with { Volume = 0.6f, Pitch = Main.rand.NextFloat(0.35f, 0.55f) }, Projectile.Center);
             }
             
@@ -216,8 +216,8 @@ namespace CalamityMod.Projectiles.Typeless
         public override bool PreDraw(ref Color lightColor)
         {
             Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
-            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
-            Texture2D cTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/HalfStar").Value;
+            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D cTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HalfStar").Value;
             Color drawColor = usedColor * Utils.GetLerpValue(0, 100, time, true);
             Color bodyColor = lightColor;
             float drawMult = 1;

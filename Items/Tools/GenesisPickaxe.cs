@@ -1,12 +1,12 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items.Materials;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Tools
+namespace CalamityModCustomPublicPrivateFork.Items.Tools
 {
     [LegacyName("GallantPickaxe")]
     public class GenesisPickaxe : ModItem, ILocalizedModType

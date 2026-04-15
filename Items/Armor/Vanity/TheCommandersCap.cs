@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Vanity
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Head)]
     public class TheCommandersCap : ModItem, ILocalizedModType

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using Microsoft.Xna.Framework;
@@ -9,7 +9,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon.Umbrella
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella
 {
     public class MagicUmbrella : ModProjectile, ILocalizedModType
     {

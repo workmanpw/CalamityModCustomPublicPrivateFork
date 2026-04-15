@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureMarnite
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMarnite
 {
     public class MarniteChandelier : ModItem, ILocalizedModType
     {

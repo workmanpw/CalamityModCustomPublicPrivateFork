@@ -1,23 +1,23 @@
-﻿using System;
-using CalamityMod.Systems.Graphic.PixelationSystem;
+using System;
+using CalamityModCustomPublicPrivateFork.Systems.Graphic.PixelationSystem;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Dusts
+namespace CalamityModCustomPublicPrivateFork.Dusts
 {
     public class SquareDust : ModDust
     {
         public static Asset<Texture2D> GlowSquare { get; private set; }
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void Load()
         {
             if (!Main.dedServ)
-                GlowSquare = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSquareParticleThick");
+                GlowSquare = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleThick");
         }
 
         public override void OnSpawn(Dust dust)
@@ -70,7 +70,7 @@ namespace CalamityMod.Dusts
 
     public class SquareDustPixelated : SquareDust
     {
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override bool PreDraw(Dust dust)
         {

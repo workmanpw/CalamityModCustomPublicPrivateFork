@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.NPCs;
-using CalamityMod.Utilities;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.GameContent.Shaders;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class AdamAcceleratorBeam : ModProjectile, ILocalizedModType
     {

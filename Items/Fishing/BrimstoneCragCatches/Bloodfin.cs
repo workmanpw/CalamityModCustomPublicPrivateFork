@@ -1,11 +1,11 @@
-﻿using CalamityMod.Buffs.Potions;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Buffs.Potions;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing.BrimstoneCragCatches
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCragCatches
 {
     public class Bloodfin : ModItem, ILocalizedModType
     {

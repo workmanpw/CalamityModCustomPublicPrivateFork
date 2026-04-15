@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.Ores;
-using CalamityMod.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Astral
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Astral
 {
     public class AstralBrick : ModItem, ILocalizedModType
     {

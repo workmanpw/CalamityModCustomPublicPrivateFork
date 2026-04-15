@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.Crags;
-using CalamityMod.Tiles.Furniture.CraftingStations;
-using CalamityMod.Tiles.FurnitureAncient;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAncient;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureAncient
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAncient
 {
     public class AncientDoor : ModItem, ILocalizedModType
     {

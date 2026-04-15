@@ -1,8 +1,8 @@
-﻿using CalamityMod.Items.Placeables.FurnitureAcidwood;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     public class AcidwoodSword : ModItem, ILocalizedModType
     {

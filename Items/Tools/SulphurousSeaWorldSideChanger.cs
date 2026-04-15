@@ -1,11 +1,11 @@
-﻿using CalamityMod.Events;
-using CalamityMod.Rarities;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.World;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Tools
+namespace CalamityModCustomPublicPrivateFork.Items.Tools
 {
     public class SulphurousSeaWorldSideChanger : ModItem, ILocalizedModType
     {
@@ -31,11 +31,11 @@ namespace CalamityMod.Items.Tools
         public override bool? UseItem(Player player)
         {
             CalamityNetcode.SyncWorld();
-            string key = "Mods.CalamityMod.Misc.SulphurSwitchLeft";
+            string key = "Mods.CalamityModCustomPublicPrivateFork.Misc.SulphurSwitchLeft";
             if (Abyss.AtLeftSideOfWorld)
             {
                 Abyss.AtLeftSideOfWorld = false;
-                key = "Mods.CalamityMod.Misc.SulphurSwitchRight";
+                key = "Mods.CalamityModCustomPublicPrivateFork.Misc.SulphurSwitchRight";
             }
             else
             {

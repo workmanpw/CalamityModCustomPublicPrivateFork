@@ -1,12 +1,12 @@
-﻿using CalamityMod.NPCs;
-using CalamityMod.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatDebuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs
 {
     public class Eutrophication : ModBuff
     {

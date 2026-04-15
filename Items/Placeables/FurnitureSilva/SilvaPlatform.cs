@@ -1,5 +1,5 @@
-﻿using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureSilva
+using Terraria.ModLoader;
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSilva
 {
     public class SilvaPlatform : ModItem, ILocalizedModType
     {

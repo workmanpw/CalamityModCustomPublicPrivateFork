@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class DaedalusLightning : ModProjectile, ILocalizedModType
     {

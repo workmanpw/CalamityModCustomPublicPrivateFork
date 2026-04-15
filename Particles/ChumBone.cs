@@ -1,20 +1,20 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class ChumBone : Particle
     {
-        public override string Texture => "CalamityMod/Particles/ChumBone1";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/ChumBone1";
 
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;
 
         private bool TexVariant;
-        public static string Texture2 => "CalamityMod/Particles/ChumBone2";
+        public static string Texture2 => "CalamityModCustomPublicPrivateFork/Particles/ChumBone2";
 
         public ChumBone(Vector2 position, Vector2 velocity, Color color, float rotation, float scale, int lifeTime, bool variant)
         {

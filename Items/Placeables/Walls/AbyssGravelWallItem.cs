@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.Abyss;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityMod.Walls;
+using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
 
-namespace CalamityMod.Items.Placeables.Walls
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
 {
     public class AbyssGravelWallItem : ModItem, ILocalizedModType
     {

@@ -1,7 +1,7 @@
-﻿using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.CalPlayer;
-using CalamityMod.Graphics.Primitives;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,12 +9,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class InfernadoRevenge : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public const int TornadoHeight = 8800;
         public override void SetStaticDefaults()
         {
@@ -91,7 +91,7 @@ namespace CalamityMod.Projectiles.Boss
 
             Main.spriteBatch.ExitShaderRegion();
             Main.spriteBatch.EnterShaderRegion();
-            Texture2D vortexNoise = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Cracks").Value;
+            Texture2D vortexNoise = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Cracks").Value;
             GameShaders.Misc["CalamityMod:DoGPortal"].UseOpacity(1f);
             GameShaders.Misc["CalamityMod:DoGPortal"].UseColor(Color.Gold);
             GameShaders.Misc["CalamityMod:DoGPortal"].UseSecondaryColor(Color.White);

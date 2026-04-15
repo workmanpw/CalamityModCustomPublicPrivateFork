@@ -1,14 +1,14 @@
-﻿using System;
-using CalamityMod.DataStructures;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.DamageOverTime
+namespace CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime
 {
     public class DemonicFlames : ModBuff
     {
@@ -58,7 +58,7 @@ namespace CalamityMod.Buffs.DamageOverTime
                 for (int i = 0; i < 2; i++)
                 {
                     Vector2 sparkVel = new Vector2(Main.rand.NextFloat(-6f, 6f), Main.rand.NextFloat(-1f, -3f));
-                    Particle sparks = new VelChangingSpark(Player.Center + new Vector2(Main.rand.NextFloat(-10f, 10f), Player.height / 2), sparkVel + Player.velocity, new Vector2(-sparkVel.X * 0.5f, sparkVel.Y * 2) * 3.5f, "CalamityMod/Particles/SmallBloom", Main.rand.Next(13, 20 + 1), Main.rand.NextFloat(0.1f, 0.25f) * 0.5f, (Main.rand.NextBool() ? Color.MediumOrchid : Color.BlueViolet) * 0.75f, new Vector2(0.7f, 1), true, false, 0, false, 0.45f, 0.055f);
+                    Particle sparks = new VelChangingSpark(Player.Center + new Vector2(Main.rand.NextFloat(-10f, 10f), Player.height / 2), sparkVel + Player.velocity, new Vector2(-sparkVel.X * 0.5f, sparkVel.Y * 2) * 3.5f, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", Main.rand.Next(13, 20 + 1), Main.rand.NextFloat(0.1f, 0.25f) * 0.5f, (Main.rand.NextBool() ? Color.MediumOrchid : Color.BlueViolet) * 0.75f, new Vector2(0.7f, 1), true, false, 0, false, 0.45f, 0.055f);
                     GeneralParticleHandler.SpawnParticle(sparks);
                 }
             }
@@ -78,7 +78,7 @@ namespace CalamityMod.Buffs.DamageOverTime
                 for (int i = 0; i < 2; i++)
                 {
                     Vector2 sparkVel = new Vector2(Main.rand.NextFloat(-npc.width / 6, npc.width / 6), Main.rand.NextFloat(-npc.height / 20, -npc.height / 17));
-                    Particle sparks = new VelChangingSpark(npc.Center + new Vector2(Main.rand.NextFloat(-10f, 10f), npc.height / 2) + sparkVel * 0.5f, sparkVel + npc.velocity, new Vector2(-sparkVel.X * 0.5f, sparkVel.Y * 2) * 3.5f, "CalamityMod/Particles/SmallBloom", Main.rand.Next(13, 20 + 1), Main.rand.NextFloat(0.1f, 0.25f) * MathHelper.Lerp(Math.Max(npc.height, npc.width) / 120, 0.5f, 0.7f), (Main.rand.NextBool() ? Color.MediumOrchid : Color.BlueViolet) * 0.75f, new Vector2(0.7f, 1), true, false, 0, false, 0.3f, 0.055f);
+                    Particle sparks = new VelChangingSpark(npc.Center + new Vector2(Main.rand.NextFloat(-10f, 10f), npc.height / 2) + sparkVel * 0.5f, sparkVel + npc.velocity, new Vector2(-sparkVel.X * 0.5f, sparkVel.Y * 2) * 3.5f, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", Main.rand.Next(13, 20 + 1), Main.rand.NextFloat(0.1f, 0.25f) * MathHelper.Lerp(Math.Max(npc.height, npc.width) / 120, 0.5f, 0.7f), (Main.rand.NextBool() ? Color.MediumOrchid : Color.BlueViolet) * 0.75f, new Vector2(0.7f, 1), true, false, 0, false, 0.3f, 0.055f);
                     GeneralParticleHandler.SpawnParticle(sparks);
                 }
             }

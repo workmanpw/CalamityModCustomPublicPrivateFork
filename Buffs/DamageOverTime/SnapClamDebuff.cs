@@ -1,9 +1,9 @@
-﻿using CalamityMod.DataStructures;
-using CalamityMod.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.DamageOverTime
+namespace CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime
 {
     public class SnapClamDebuff : ModBuff
     {

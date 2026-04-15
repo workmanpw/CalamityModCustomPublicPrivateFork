@@ -1,22 +1,22 @@
-﻿using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.Items.Weapons.Ranged.FlakKraken;
-using static CalamityMod.Projectiles.Ranged.FlakKrakenHoldout;
+using static CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged.FlakKraken;
+using static CalamityModCustomPublicPrivateFork.Projectiles.Ranged.FlakKrakenHoldout;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class FlakKrakenProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Projectiles/Summon/CalamarisLamentProjectile";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Summon/CalamarisLamentProjectile";
 
         public ref float RocketID => ref Projectile.ai[0];
         public ref float DistanceOwnerMouse => ref Projectile.ai[1];

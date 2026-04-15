@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Utilities.Daybreak.Buffers;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public abstract partial class TileBlendTexture : ModTexturedType
     {

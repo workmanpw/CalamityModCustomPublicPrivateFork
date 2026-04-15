@@ -1,18 +1,18 @@
-﻿using System;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Ranged;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     public class NitroExpressRifle : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Ranged";
-        public static readonly SoundStyle FireSound = new("CalamityMod/Sounds/Item/NitroExpressRifleFire") { Volume = 0.6f };
+        public static readonly SoundStyle FireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NitroExpressRifleFire") { Volume = 0.6f };
         public override void SetDefaults()
         {
             Item.width = 100;

@@ -1,11 +1,11 @@
-﻿using CalamityMod.Events;
-using CalamityMod.Items.Materials;
-using CalamityMod.NPCs.Bumblebirb;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.NPCs.Bumblebirb;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     [LegacyName("BirbPheromones")]
     public class ExoticPheromones : ModItem, ILocalizedModType

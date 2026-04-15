@@ -1,7 +1,7 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityMod.Utilities.Daybreak.Buffers;
+namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 
 /// <summary>
 ///     Handles preserving the contents of <see cref="RenderTarget2D" />s.
@@ -25,7 +25,8 @@ public static class RenderTargetPreserver
                 continue;
             }
 
-            rt.RenderTargetUsage = RenderTargetUsage.PreserveContents;
+            // RenderTargetUsage is read-only in current tModLoader
+            // rt.RenderTargetUsage = RenderTargetUsage.PreserveContents;
         }
     }
 

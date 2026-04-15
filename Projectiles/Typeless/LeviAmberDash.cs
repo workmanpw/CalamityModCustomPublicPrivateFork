@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Dusts;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,13 +10,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     [PierceResistException]
     public class LeviAmberDash : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         public Color effectsColor = Color.White;
         public float fxFade = 0;
@@ -25,7 +25,7 @@ namespace CalamityMod.Projectiles.Typeless
         public Vector2 aimVel;
         public bool visuals => Owner.Calamity().lAmbergrisVisual;
         private static float ExplosionRadius = 85f;
-        public static readonly SoundStyle Slap = new("CalamityMod/Sounds/Custom/WetSlap", 4) { Volume = 0.8f, PitchVariance = 0.3f };
+        public static readonly SoundStyle Slap = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WetSlap", 4) { Volume = 0.8f, PitchVariance = 0.3f };
         public override void SetDefaults()
         {
             Projectile.width = (int)ExplosionRadius;
@@ -43,9 +43,9 @@ namespace CalamityMod.Projectiles.Typeless
         {
             if (onSpawn && visuals)
             {
-                Particle pulse = new CustomSpark(Owner.Center, Owner.velocity.SafeNormalize(Vector2.UnitX) * 9, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 23, 0.095f, Color.MediumTurquoise, new Vector2(1f, 1.7f), shrinkSpeed: -0.2f);
+                Particle pulse = new CustomSpark(Owner.Center, Owner.velocity.SafeNormalize(Vector2.UnitX) * 9, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 23, 0.095f, Color.MediumTurquoise, new Vector2(1f, 1.7f), shrinkSpeed: -0.2f);
                 GeneralParticleHandler.SpawnParticle(pulse);
-                Particle pulse2 = new CustomSpark(Owner.Center, Owner.velocity.SafeNormalize(Vector2.UnitX) * 12, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 20, 0.065f, Color.DeepSkyBlue, new Vector2(1f, 1.7f), shrinkSpeed: -0.23f);
+                Particle pulse2 = new CustomSpark(Owner.Center, Owner.velocity.SafeNormalize(Vector2.UnitX) * 12, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 20, 0.065f, Color.DeepSkyBlue, new Vector2(1f, 1.7f), shrinkSpeed: -0.23f);
                 GeneralParticleHandler.SpawnParticle(pulse2);
                 onSpawn = false;
             }
@@ -99,7 +99,7 @@ namespace CalamityMod.Projectiles.Typeless
                 {
                     Vector2 sparkVelocity = safeVel.RotatedBy(dir * 1.5f * i) - safeVel * 3;
                     Vector2 sparkPlace = Owner.Center + (((safeVel * 15).RotatedBy(2f * dir * i) * 1.5f) + safeVel.RotatedBy(0.5f * i * dir) * 30) * fxFade;
-                    Particle spark = new CustomSpark(sparkPlace, sparkVelocity.RotatedByRandom(0.1f), "CalamityMod/Particles/BloomCircle", false, 6, sparkscale2, effectsColor * fxFade, new Vector2(0.8f, 2f), shrinkSpeed: 1.1f);
+                    Particle spark = new CustomSpark(sparkPlace, sparkVelocity.RotatedByRandom(0.1f), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 6, sparkscale2, effectsColor * fxFade, new Vector2(0.8f, 2f), shrinkSpeed: 1.1f);
                     GeneralParticleHandler.SpawnParticle(spark);
 
                     if (isAlive)
@@ -119,7 +119,7 @@ namespace CalamityMod.Projectiles.Typeless
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            SoundStyle sound = new("CalamityMod/Sounds/Item/WaterSplash", 2);
+            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WaterSplash", 2);
             SoundEngine.PlaySound(sound with { Volume = 0.2f, Pitch = Main.rand.NextFloat(0.35f, 0.5f), MaxInstances = -1 }, Projectile.Center);
 
             target.AddBuff(BuffID.Wet, 300);
@@ -149,7 +149,7 @@ namespace CalamityMod.Projectiles.Typeless
                 return false;
 
             float sine = MathHelper.Lerp(Math.Abs((float)Math.Sin(Main.GlobalTimeWrappedHourly * 50f / MathHelper.Pi)), 0.8f, 0.7f);
-            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmearRagged").Value;
+            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmearRagged").Value;
 
             for (int i = 0; i < 10; i++)
             {

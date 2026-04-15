@@ -1,12 +1,12 @@
-﻿using CalamityMod.Buffs.Potions;
-using CalamityMod.Items.Fishing.AstralCatches;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Buffs.Potions;
+using CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCatches;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Potions
+namespace CalamityModCustomPublicPrivateFork.Items.Potions
 {
     public class GravityNormalizerPotion : ModItem, ILocalizedModType
     {

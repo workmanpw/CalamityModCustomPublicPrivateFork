@@ -1,11 +1,11 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class GiantPearl : ModItem, ILocalizedModType
     {
@@ -55,7 +55,7 @@ namespace CalamityMod.Items.Accessories
                 smearBorder = new(player.Center, player.velocity, new Color(75, 164, 191) * opacity, player.miscCounter * (MathHelper.Pi / 30f) + MathHelper.Pi, AuraRadius * 0.01125f, Vector2.One, 2, true);
                 GeneralParticleHandler.SpawnParticle(smearBorder);
 
-                CustomPulse auraVisual = new(player.Center, player.velocity, new Color(75, 164, 191), "CalamityMod/Particles/BloomRing", Vector2.One, 0f, AuraRadius * 0.0105f, AuraRadius * 0.0105f, 2, true, opacity, false);
+                CustomPulse auraVisual = new(player.Center, player.velocity, new Color(75, 164, 191), "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, 0f, AuraRadius * 0.0105f, AuraRadius * 0.0105f, 2, true, opacity, false);
                 GeneralParticleHandler.SpawnParticle(auraVisual);
             }
         }

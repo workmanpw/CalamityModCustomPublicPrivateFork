@@ -1,10 +1,10 @@
-﻿using CalamityMod.Dusts.Furniture;
+using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureSilva
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSilva
 {
     public class SilvaCandelabra : ModTile
     {

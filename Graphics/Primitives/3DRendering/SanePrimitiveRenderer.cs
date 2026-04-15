@@ -1,4 +1,4 @@
-﻿#nullable enable
+#nullable enable
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 
-namespace CalamityMod.Graphics.Primitives;
+namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 
 public static class SanePrimitiveRenderer
 {

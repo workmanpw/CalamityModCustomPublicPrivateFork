@@ -1,4 +1,4 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -9,7 +9,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class RancorMagicCircle : ModProjectile, ILocalizedModType
     {
@@ -157,7 +157,7 @@ namespace CalamityMod.Projectiles.Magic
         {
             // Play charge-up sound.
             if (Time == 30)
-                SoundEngine.PlaySound(new("CalamityMod/Sounds/Custom/MoonLordLaserCharge"), Projectile.Center, _ => new ProjectileAudioTracker(Projectile).IsActiveAndInGame());
+                SoundEngine.PlaySound(new("CalamityModCustomPublicPrivateFork/Sounds/Custom/MoonLordLaserCharge"), Projectile.Center, _ => new ProjectileAudioTracker(Projectile).IsActiveAndInGame());
 
             // Create dust that fires parallel to the direction of the circle.
             if (Main.rand.NextBool(3))

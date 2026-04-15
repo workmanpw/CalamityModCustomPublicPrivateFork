@@ -1,4 +1,4 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
 // + Melee
 // |--> MeleeNoSpeed
@@ -6,7 +6,7 @@
 // '--+ TrueMelee
 //    '--> TrueMeleeNoSpeed
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     // True Melee is a subclass of Melee (that is, the one affected by melee speed).
     // You can give players regular melee speed and it will affect true melee weapons of this damage class.

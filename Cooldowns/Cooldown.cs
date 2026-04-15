@@ -1,4 +1,4 @@
-﻿namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     // This base version of Cooldown is never directly used. It is necessary due to C# language constraints.
     // All actual cooldowns are the below type, Cooldown<T>.

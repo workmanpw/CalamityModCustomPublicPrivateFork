@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Potions;
+using CalamityModCustomPublicPrivateFork.Items.Potions;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Potions
+namespace CalamityModCustomPublicPrivateFork.Buffs.Potions
 {
     public class CalciumBuff : ModBuff
     {

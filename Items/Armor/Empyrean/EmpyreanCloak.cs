@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Empyrean
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Empyrean
 {
     [AutoloadEquip(EquipType.Body)]
     [LegacyName("XerocPlateMail")]
@@ -20,8 +20,8 @@ namespace CalamityMod.Items.Armor.Empyrean
         {
             if (!Main.dedServ)
             {
-                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Empyrean/EmpyreanCloak_Neck", EquipType.Neck, this);
-                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Empyrean/EmpyreanCloak_Back", EquipType.Back, this);
+                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Empyrean/EmpyreanCloak_Neck", EquipType.Neck, this);
+                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Empyrean/EmpyreanCloak_Back", EquipType.Back, this);
             }
         }
 

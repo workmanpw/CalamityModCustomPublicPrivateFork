@@ -1,13 +1,13 @@
-﻿using CalamityMod.Items.Placeables.SunkenSea;
-using CalamityMod.Tiles.SunkenSea.Ambient;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
 {
     public class StalkCoralEcho : StalkCoral
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/StalkCoral";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/StalkCoral";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -18,7 +18,7 @@ namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 
     public class StalkCoral2Echo : StalkCoral2
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/StalkCoral2";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/StalkCoral2";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -28,7 +28,7 @@ namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
     }
     public class StalkCoral3Echo : StalkCoral3
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/StalkCoral3";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/StalkCoral3";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

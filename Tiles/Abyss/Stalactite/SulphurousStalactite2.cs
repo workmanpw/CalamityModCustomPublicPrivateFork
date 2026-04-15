@@ -1,4 +1,4 @@
-﻿using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -6,7 +6,7 @@ using Terraria.Enums;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Abyss.Stalactite
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss.Stalactite
 {
     public class SulphurousStalactite2 : ModTile
     {

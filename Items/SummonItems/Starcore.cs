@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Potions;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Potions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     public class Starcore : ModItem, ILocalizedModType
     {

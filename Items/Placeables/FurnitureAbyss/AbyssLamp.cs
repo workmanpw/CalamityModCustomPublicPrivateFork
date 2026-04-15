@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureAbyss
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAbyss
 {
     public class AbyssLamp : ModItem, ILocalizedModType
     {

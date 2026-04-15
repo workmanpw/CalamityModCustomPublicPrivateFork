@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +8,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss.BrainOfCthulhu;
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss.BrainOfCthulhu;
 
 public class IchorShower : ModProjectile, ILocalizedModType
 {
     public new string LocalizationCategory => "Projectiles.Boss";
-    public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+    public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
     public override void SetDefaults()
     {

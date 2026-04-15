@@ -1,17 +1,17 @@
-﻿using System;
-using CalamityMod.Sounds;
+using System;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class AdamantiteThrowingAxeProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/AdamantiteThrowingAxe";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/AdamantiteThrowingAxe";
 
         public override void SetDefaults()
         {

@@ -1,12 +1,12 @@
-﻿using CalamityMod.Dusts.WaterSplash;
-using CalamityMod.Gores.WaterDroplet;
+using CalamityModCustomPublicPrivateFork.Dusts.WaterSplash;
+using CalamityModCustomPublicPrivateFork.Gores.WaterDroplet;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Waters
+namespace CalamityModCustomPublicPrivateFork.Waters
 {
     public class AstralWaterflow : ModWaterfallStyle { }
 
@@ -21,7 +21,7 @@ namespace CalamityMod.Waters
         public override void SetStaticDefaults()
         {
             Instance = this;
-            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityMod/AstralWaterflow");
+            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityModCustomPublicPrivateFork/AstralWaterflow");
             SplashDust = ModContent.DustType<AstralSplash>();
             DropletGore = ModContent.GoreType<AstralWaterDroplet>();
         }
@@ -37,7 +37,7 @@ namespace CalamityMod.Waters
         public override int ChooseWaterfallStyle() => WaterfallStyle.Slot;
         public override int GetSplashDust() => SplashDust;
         public override int GetDropletGore() => DropletGore;
-        public override Asset<Texture2D> GetRainTexture() => RainTexture ??= ModContent.Request<Texture2D>("CalamityMod/Waters/AstralRain");
+        public override Asset<Texture2D> GetRainTexture() => RainTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Waters/AstralRain");
 
         public override byte GetRainVariant() => (byte)Main.rand.Next(3);
         public override Color BiomeHairColor() => new Color(93, 78, 107);

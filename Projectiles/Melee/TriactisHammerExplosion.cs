@@ -1,18 +1,18 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Particles;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class TriactisHammerExplosion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public ref float Timer => ref Projectile.ai[0];
         public Player Owner => Main.player[Projectile.owner];
@@ -39,11 +39,11 @@ namespace CalamityMod.Projectiles.Melee
             if (Timer == 0f)
             {
                 float rotation = Main.rand.NextFloat(0f, MathHelper.TwoPi);
-                Particle blastR = new CustomPulse(Projectile.Center, Vector2.Zero, TriactisHammerFlare.GetColor(1f) * 0.7f, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, rotation, 0f, 0.8f, 30);
+                Particle blastR = new CustomPulse(Projectile.Center, Vector2.Zero, TriactisHammerFlare.GetColor(1f) * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, rotation, 0f, 0.8f, 30);
                 GeneralParticleHandler.SpawnParticle(blastR);
-                Particle blastG = new CustomPulse(Projectile.Center, Vector2.Zero, TriactisHammerFlare.GetColor(2f) * 0.7f, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, rotation + MathHelper.ToRadians(120f), 0f, 0.6f, 27);
+                Particle blastG = new CustomPulse(Projectile.Center, Vector2.Zero, TriactisHammerFlare.GetColor(2f) * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, rotation + MathHelper.ToRadians(120f), 0f, 0.6f, 27);
                 GeneralParticleHandler.SpawnParticle(blastG);
-                Particle blastB = new CustomPulse(Projectile.Center, Vector2.Zero, TriactisHammerFlare.GetColor(3f) * 0.7f, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, rotation + MathHelper.ToRadians(240f), 0f, 0.4f, 24);
+                Particle blastB = new CustomPulse(Projectile.Center, Vector2.Zero, TriactisHammerFlare.GetColor(3f) * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, rotation + MathHelper.ToRadians(240f), 0f, 0.4f, 24);
                 GeneralParticleHandler.SpawnParticle(blastB);
                 Owner.SetScreenshake(40f);
             }
@@ -100,7 +100,7 @@ namespace CalamityMod.Projectiles.Melee
                 return false;
 
             Main.spriteBatch.EnterShaderRegion(BlendState.Additive);
-            GameShaders.Misc["CalamityMod:TeslaTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ZapTrail"));
+            GameShaders.Misc["CalamityMod:TeslaTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ZapTrail"));
             foreach (List<Vector2> points in crackTrails)
             {
                 PrimitiveRenderer.RenderTrail(points, new(WidthFunction, ColorFunction, smoothen: false, shader: GameShaders.Misc["CalamityMod:TeslaTrail"]), 60);

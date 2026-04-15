@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureDriftwood
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood
 {
     public class DriftwoodChair : ModItem, ILocalizedModType
     {

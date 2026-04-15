@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,12 +9,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class SupernovaBomb : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/Supernova";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/Supernova";
         public Color variedColor = Color.White;
         public Color mainColor = Color.LawnGreen;
         public Color randomColor = Color.White;
@@ -122,42 +122,42 @@ namespace CalamityMod.Projectiles.Rogue
                 if (target == null)
                 {
                     returning = true;
-                    SoundStyle lockon = new("CalamityMod/Sounds/Custom/ExoMechs/ApolloArtemisTargetSelection");
+                    SoundStyle lockon = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ApolloArtemisTargetSelection");
                     SoundEngine.PlaySound(lockon with { Pitch = -0.7f }, Projectile.Center);
                     return;
                 }
 
                 if (time >= 60 && time < 75 && Projectile.Calamity().stealthStrike)
                 {
-                    SoundStyle lockon = new("CalamityMod/Sounds/Custom/ExoMechs/ApolloArtemisTargetSelection");
+                    SoundStyle lockon = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ApolloArtemisTargetSelection");
                     if (time == 60)
                     {
                         SoundEngine.PlaySound(lockon with { Pitch = -0.6f }, Projectile.Center);
 
-                        Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityMod/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.95f, 0.2f, 10);
+                        Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.95f, 0.2f, 10);
                         GeneralParticleHandler.SpawnParticle(pulse);
 
-                        Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, randomColor * 0.7f, "CalamityMod/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.8f, 0.2f, 10);
+                        Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, randomColor * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.8f, 0.2f, 10);
                         GeneralParticleHandler.SpawnParticle(pulse2);
                     }
                     if (time == 67)
                     {
                         SoundEngine.PlaySound(lockon with { Pitch = -0.4f }, Projectile.Center);
 
-                        Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityMod/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.75f, 0.2f, 10);
+                        Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.75f, 0.2f, 10);
                         GeneralParticleHandler.SpawnParticle(pulse);
 
-                        Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, randomColor * 0.7f, "CalamityMod/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.6f, 0.2f, 10);
+                        Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, randomColor * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.6f, 0.2f, 10);
                         GeneralParticleHandler.SpawnParticle(pulse2);
                     }
                     if (time == 74)
                     {
                         SoundEngine.PlaySound(lockon with { Pitch = -0.1f }, Projectile.Center);
 
-                        Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityMod/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.65f, 0.2f, 10);
+                        Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.65f, 0.2f, 10);
                         GeneralParticleHandler.SpawnParticle(pulse);
 
-                        Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, randomColor * 0.7f, "CalamityMod/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.5f, 0.2f, 10);
+                        Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, randomColor * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.5f, 0.2f, 10);
                         GeneralParticleHandler.SpawnParticle(pulse2);
                     }
                 }
@@ -165,13 +165,13 @@ namespace CalamityMod.Projectiles.Rogue
                 {
                     if (!Projectile.Calamity().stealthStrike)
                     {
-                        SoundStyle lockon = new("CalamityMod/Sounds/Custom/ExoMechs/ApolloArtemisTargetSelection");
+                        SoundStyle lockon = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ApolloArtemisTargetSelection");
                         SoundEngine.PlaySound(lockon with { Pitch = -0.3f }, Projectile.Center);
 
-                        Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityMod/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.75f, 0.2f, 10);
+                        Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.75f, 0.2f, 10);
                         GeneralParticleHandler.SpawnParticle(pulse);
 
-                        Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, randomColor * 0.7f, "CalamityMod/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.6f, 0.2f, 10);
+                        Particle pulse2 = new CustomPulse(Projectile.Center, Vector2.Zero, randomColor * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1f, 1f), 0f, 0.6f, 0.2f, 10);
                         GeneralParticleHandler.SpawnParticle(pulse2);
                     }
                 }
@@ -299,7 +299,7 @@ namespace CalamityMod.Projectiles.Rogue
             Color auraColor = Projectile.GetAlpha(Color.Lerp(Color.White, randomColor, 0.3f)) * 0.25f;
             for (int i = 0; i < 7; i++)
             {
-                Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/Supernova").Value;
+                Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/Supernova").Value;
                 Vector2 rotationalDrawOffset = (MathHelper.TwoPi * i / 7f + Main.GlobalTimeWrappedHourly * 8f).ToRotationVector2();
                 rotationalDrawOffset *= MathHelper.Lerp(3f, 5.25f, (float)Math.Cos(Main.GlobalTimeWrappedHourly * 4f) * 0.5f + 0.5f);
                 Main.EntitySpriteDraw(centerTexture, Projectile.Center - Main.screenPosition + rotationalDrawOffset, null, auraColor, Projectile.rotation, centerTexture.Size() * 0.5f, Projectile.scale * 1.1f, SpriteEffects.None, 0f);

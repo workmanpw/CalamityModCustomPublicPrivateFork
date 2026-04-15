@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Balancing;
-using CalamityMod.CalPlayer;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.PermanentBoosters
+namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
 {
     public class InfernalBlood : ModItem, ILocalizedModType
     {

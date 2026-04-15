@@ -1,14 +1,14 @@
-﻿using System;
-using CalamityMod.NPCs.AcidRain;
-using CalamityMod.NPCs.Crags;
-using CalamityMod.NPCs.NormalNPCs;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
+using CalamityModCustomPublicPrivateFork.NPCs.Crags;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.RegularEnemies
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.RegularEnemies
 {
     public class SlimeAI : VanillaAIOverride
     {

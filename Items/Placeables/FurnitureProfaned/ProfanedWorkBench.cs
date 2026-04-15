@@ -1,8 +1,8 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
-using CalamityMod.Tiles.FurnitureProfaned;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureProfaned;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureProfaned
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureProfaned
 {
     [LegacyName("ProfanedWorkbench")]
     public class ProfanedWorkBench : ModItem, ILocalizedModType

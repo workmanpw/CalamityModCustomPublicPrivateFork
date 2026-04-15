@@ -1,20 +1,20 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
-using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Terraria.Audio;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class AmphibiansGuitarProjectile : ModProjectile, ILocalizedModType
     {
         public override string LocalizationCategory => "Projectiles.Summon";
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public bool IsHatNote => Projectile.ai[0] != 0f;
         public Color noteColor = Color.White;
@@ -101,9 +101,9 @@ namespace CalamityMod.Projectiles.Summon
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/Evernote");
-            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/EvernoteWall");
-            Asset<Texture2D> glow = ModContent.Request<Texture2D>("CalamityMod/Particles/Light");
+            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/Evernote");
+            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/EvernoteWall");
+            Asset<Texture2D> glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Light");
 
             Vector2 generalDrawPos = Projectile.Center - Main.screenPosition;
 

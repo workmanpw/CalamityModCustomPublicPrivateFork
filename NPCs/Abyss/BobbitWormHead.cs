@@ -1,9 +1,9 @@
-﻿using System;
-using CalamityMod.BiomeManagers;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Items.Tools;
+using System;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Abyss
+namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
 {
     [LongDistanceNetSync]
     public class BobbitWormHead : ModNPC
@@ -22,7 +22,7 @@ namespace CalamityMod.NPCs.Abyss
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 //Preferably would have its head animated, but this will do for now
-                CustomTexturePath = "CalamityMod/ExtraTextures/Bestiary/BobbitWorm_Bestiary"
+                CustomTexturePath = "CalamityModCustomPublicPrivateFork/ExtraTextures/Bestiary/BobbitWorm_Bestiary"
             };
             value.Position.Y += 40;
             NPCID.Sets.NPCBestiaryDrawOffset[Type] = value;
@@ -56,7 +56,7 @@ namespace CalamityMod.NPCs.Abyss
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.BobbitWorm")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.BobbitWorm")
             });
         }
 
@@ -239,9 +239,9 @@ namespace CalamityMod.NPCs.Abyss
                     drawPositionY = Main.npc[(int)NPC.ai[2]].Center.Y - center.Y;
                     drawPositionY += 4f;
                     Color color = Lighting.GetColor((int)center.X / 16, (int)(center.Y / 16f));
-                    Main.spriteBatch.Draw(ModContent.Request<Texture2D>("CalamityMod/NPCs/Abyss/BobbitWormSegment").Value, new Vector2(center.X - screenPos.X, center.Y - screenPos.Y),
-                        new Microsoft.Xna.Framework.Rectangle?(new Rectangle(0, 0, ModContent.Request<Texture2D>("CalamityMod/NPCs/Abyss/BobbitWormSegment").Value.Width, ModContent.Request<Texture2D>("CalamityMod/NPCs/Abyss/BobbitWormSegment").Value.Height)), color, rotation,
-                        new Vector2((float)ModContent.Request<Texture2D>("CalamityMod/NPCs/Abyss/BobbitWormSegment").Value.Width * 0.5f, (float)ModContent.Request<Texture2D>("CalamityMod/NPCs/Abyss/BobbitWormSegment").Value.Height * 0.5f), 1f, SpriteEffects.None, 0f);
+                    Main.spriteBatch.Draw(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Abyss/BobbitWormSegment").Value, new Vector2(center.X - screenPos.X, center.Y - screenPos.Y),
+                        new Microsoft.Xna.Framework.Rectangle?(new Rectangle(0, 0, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Abyss/BobbitWormSegment").Value.Width, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Abyss/BobbitWormSegment").Value.Height)), color, rotation,
+                        new Vector2((float)ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Abyss/BobbitWormSegment").Value.Width * 0.5f, (float)ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Abyss/BobbitWormSegment").Value.Height * 0.5f), 1f, SpriteEffects.None, 0f);
                 }
             }
             return true;

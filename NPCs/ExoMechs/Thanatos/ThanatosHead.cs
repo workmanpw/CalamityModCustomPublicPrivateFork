@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Events;
-using CalamityMod.Items.Potions;
-using CalamityMod.NPCs.ExoMechs.Ares;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.Skies;
-using CalamityMod.Sounds;
-using CalamityMod.UI.VanillaBossBars;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Potions;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Skies;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.UI.VanillaBossBars;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -20,7 +20,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.ExoMechs.Thanatos
+namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos
 {
     [HasPierceResist]
     [LongDistanceNetSync]
@@ -29,16 +29,16 @@ namespace CalamityMod.NPCs.ExoMechs.Thanatos
         public static int normalIconIndex;
         public static int vulnerableIconIndex;
 
-        public static readonly SoundStyle VentSound = new("CalamityMod/Sounds/Custom/ExoMechs/ThanatosVent");
+        public static readonly SoundStyle VentSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ThanatosVent");
 
-        public static readonly SoundStyle LaserSound = new("CalamityMod/Sounds/Custom/ExoMechs/THanosLaser");
+        public static readonly SoundStyle LaserSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/THanosLaser");
 
-        public static readonly SoundStyle GFBeam = new("CalamityMod/Sounds/Custom/ExoMechs/THanosGFBeam");
+        public static readonly SoundStyle GFBeam = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/THanosGFBeam");
 
 
-        public static readonly SoundStyle ThanatosHitSoundOpen = new("CalamityMod/Sounds/NPCHit/ThanatosHitOpen", 2) { Volume = 0.5f };
+        public static readonly SoundStyle ThanatosHitSoundOpen = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ThanatosHitOpen", 2) { Volume = 0.5f };
 
-        public static readonly SoundStyle ThanatosHitSoundClosed = new("CalamityMod/Sounds/NPCHit/ThanatosHitClosed", 3) { Volume = 0.4f };
+        public static readonly SoundStyle ThanatosHitSoundClosed = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ThanatosHitClosed", 3) { Volume = 0.4f };
 
         public SlotId LaserSoundSlot;
 
@@ -53,11 +53,11 @@ namespace CalamityMod.NPCs.ExoMechs.Thanatos
 
         public override void Load()
         {
-            string normalIconPath = "CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosNormalHead";
-            string vulnerableIconPath = "CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosVulnerableHead";
+            string normalIconPath = "CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosNormalHead";
+            string vulnerableIconPath = "CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosVulnerableHead";
             
-            normalIconIndex = CalamityMod.Instance.AddBossHeadTexture(normalIconPath, -1);
-            vulnerableIconIndex = CalamityMod.Instance.AddBossHeadTexture(vulnerableIconPath, -1);
+            normalIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(normalIconPath, -1);
+            vulnerableIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(vulnerableIconPath, -1);
         }
 
         public enum Phase
@@ -156,13 +156,13 @@ namespace CalamityMod.NPCs.ExoMechs.Thanatos
             if (!Main.dedServ)
             {
                 GlowTexture = ModContent.Request<Texture2D>(Texture + "Glow", AssetRequestMode.AsyncLoad);
-                ReticleLeftTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosReticleLeft", AssetRequestMode.AsyncLoad);
-                ReticleRightTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosReticleRight", AssetRequestMode.AsyncLoad);
-                ReticleTopTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosReticleTop", AssetRequestMode.AsyncLoad);
-                ReticleBottomTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosReticleHead", AssetRequestMode.AsyncLoad);
-                ReticleProngRightTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosReticleProngLeft", AssetRequestMode.AsyncLoad);
-                ReticleProngLeftTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosReticleProngRight", AssetRequestMode.AsyncLoad);
-                AuraTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/Thanatos/THanosAura", AssetRequestMode.AsyncLoad);
+                ReticleLeftTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosReticleLeft", AssetRequestMode.AsyncLoad);
+                ReticleRightTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosReticleRight", AssetRequestMode.AsyncLoad);
+                ReticleTopTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosReticleTop", AssetRequestMode.AsyncLoad);
+                ReticleBottomTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosReticleHead", AssetRequestMode.AsyncLoad);
+                ReticleProngRightTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosReticleProngLeft", AssetRequestMode.AsyncLoad);
+                ReticleProngLeftTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosReticleProngRight", AssetRequestMode.AsyncLoad);
+                AuraTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/THanosAura", AssetRequestMode.AsyncLoad);
             }
         }
 
@@ -201,7 +201,7 @@ namespace CalamityMod.NPCs.ExoMechs.Thanatos
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Thanatos")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Thanatos")
             });
         }
 

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Items.Materials;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Melee;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -12,7 +12,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework.Graphics;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     [LegacyName("GalacticaBlade")]
     public class GalactusBlade : ModItem, ILocalizedModType
@@ -121,7 +121,7 @@ namespace CalamityMod.Items.Weapons.Melee
             Vector2 partVel2 = dustVel2 * Main.rand.NextFloat(0.2f, 0.3f);
             for (int i = 0; i < 5; i++)
             {
-                Particle smoke2 = new CustomSpark(player.Center + dustVel2 * Main.rand.Next(1, swordSize + 1) + Main.rand.NextVector2Circular(12, 12), partVel2.RotatedBy(MathHelper.ToRadians(90f * swordDirection)).RotatedBy(-0.3 * swordDirection) * Main.rand.NextFloat(-1, -10), "CalamityMod/Particles/SmallBloom", false, 12, partScale2 * 0.5f, useColor * 0.4f, Vector2.One, true, false, 3, false, false);
+                Particle smoke2 = new CustomSpark(player.Center + dustVel2 * Main.rand.Next(1, swordSize + 1) + Main.rand.NextVector2Circular(12, 12), partVel2.RotatedBy(MathHelper.ToRadians(90f * swordDirection)).RotatedBy(-0.3 * swordDirection) * Main.rand.NextFloat(-1, -10), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 12, partScale2 * 0.5f, useColor * 0.4f, Vector2.One, true, false, 3, false, false);
                 GeneralParticleHandler.SpawnParticle(smoke2);
             }
             Lighting.AddLight(player.Center + dustVel2, Color.White.ToVector3() * 1.2f);

@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Threading;
-using CalamityMod.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public sealed partial class TileBlendMergeSystem : ModSystem
     {
@@ -88,20 +88,26 @@ namespace CalamityMod.Systems
             if (silcedConfigEnabled && Lighting.NotRetro && !tile.IsHalfBlock && !TileID.Sets.DontDrawTileSliced[tileType])
             {
                 var tileRenderer = Main.instance.TilesRenderer;
-                if (tileLight.IsAnyChannelGreaterThan(tileRenderer._highQualityLightingRequirement))
-                {
-                    sliceLength = 9;
-                    sliceRects = Rects9Slice;
-                    colorSliceBuffer = ColorSliceBuffer.Value;
-                    Lighting.GetColor9Slice(tileX, tileY, ref colorSliceBuffer);
-                }
-                else if (tileLight.IsAnyChannelGreaterThan(tileRenderer._mediumQualityLightingRequirement))
-                {
-                    sliceLength = 4;
-                    sliceRects = Rects4Slice;
-                    colorSliceBuffer = ColorSliceBuffer.Value;
-                    Lighting.GetColor4Slice(tileX, tileY, ref colorSliceBuffer);
-                }
+                // TileDrawing._highQualityLightingRequirement and _mediumQualityLightingRequirement are private and no longer accessible
+                // if (tileLight.IsAnyChannelGreaterThan(tileRenderer._highQualityLightingRequirement))
+                // {
+                //     sliceLength = 9;
+                //     sliceRects = Rects9Slice;
+                //     colorSliceBuffer = ColorSliceBuffer.Value;
+                //     Lighting.GetColor9Slice(tileX, tileY, ref colorSliceBuffer);
+                // }
+                // else if (tileLight.IsAnyChannelGreaterThan(tileRenderer._mediumQualityLightingRequirement))
+                // {
+                //     sliceLength = 4;
+                //     sliceRects = Rects4Slice;
+                //     colorSliceBuffer = ColorSliceBuffer.Value;
+                //     Lighting.GetColor4Slice(tileX, tileY, ref colorSliceBuffer);
+                // }
+                // Use default values since we can't access the private fields
+                sliceLength = 9;
+                sliceRects = Rects9Slice;
+                colorSliceBuffer = ColorSliceBuffer.Value;
+                Lighting.GetColor9Slice(tileX, tileY, ref colorSliceBuffer);
             }
 
             // If tile is Actuated, Set brightness to 40%

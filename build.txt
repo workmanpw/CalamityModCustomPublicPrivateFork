@@ -1,7 +1,7 @@
-author = The Calamity Dev Team
-version = 2.1.2
-displayName = Calamity Mod
-modReferences = CalamityModMusic
+author = Daedalus
+version = 2.4.5
+displayName = Calamity Mod Private Fork
+modReferences = CalamityModMusicCustomPublicPrivateFork
 homepage = https://calamitymod.com
 buildIgnore = .vs\*, Properties\*, *.csproj, *.user, obj\*, bin\*, *.config, .git\*, .github\*, LICENSE, README.md, .editorconfig, .gitignore, .gitattributes, Effects\Compiler\*
 hideCode = false

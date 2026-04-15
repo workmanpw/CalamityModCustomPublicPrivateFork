@@ -1,4 +1,4 @@
-﻿using CalamityMod.TileEntities;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.PlayerTurrets
+namespace CalamityModCustomPublicPrivateFork.Tiles.PlayerTurrets
 {
     public class PlayerLaserTurret : ModTile
     {
@@ -81,7 +81,7 @@ namespace CalamityMod.Tiles.PlayerTurrets
             int drawDirection = te.Direction;
             Color drawColor = Lighting.GetColor(i, j);
 
-            HeadTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/PlayerTurrets/LaserTurretHead");
+            HeadTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/PlayerTurrets/LaserTurretHead");
             Texture2D tex = HeadTexture.Value;
             Vector2 screenOffset = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
             Vector2 drawOffset = new Vector2(i * 16 - Main.screenPosition.X, j * 16 - Main.screenPosition.Y) + screenOffset;

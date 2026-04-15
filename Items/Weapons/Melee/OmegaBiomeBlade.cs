@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityMod.DataStructures;
-using CalamityMod.Items.Materials;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Melee;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -17,7 +17,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     // TODO -- CANNOT RENAME this and True Biome Blade to "TrueBiomeBlade" and "BiomeBlade" internally without corrupting existing items
     public class OmegaBiomeBlade : ModItem, ILocalizedModType
@@ -372,7 +372,7 @@ namespace CalamityMod.Items.Weapons.Melee
 
             position.Y -= 6f * scale;
 
-            Texture2D itemTexture = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/OmegaBiomeBladeExtra").Value;
+            Texture2D itemTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/OmegaBiomeBladeExtra").Value;
             Rectangle itemFrame = (Main.itemAnimations[Type] == null) ? itemTexture.Frame() : Main.itemAnimations[Type].GetFrame(itemTexture);
 
             // Draw all particles.
@@ -403,7 +403,7 @@ namespace CalamityMod.Items.Weapons.Melee
                 return true;
 
             //Draw the charged version if you can
-            Texture2D itemTexture = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/OmegaBiomeBladeExtra").Value;
+            Texture2D itemTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/OmegaBiomeBladeExtra").Value;
             spriteBatch.Draw(itemTexture, Item.Center - Main.screenPosition, null, lightColor, rotation, Item.Size * 0.5f, scale, SpriteEffects.None, 0f);
             return false;
         }

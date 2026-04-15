@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Backgrounds
+namespace CalamityModCustomPublicPrivateFork.Backgrounds
 {
     public class SunkenSeaBGStyle : ModUndergroundBackgroundStyle
     {
@@ -15,10 +15,10 @@ namespace CalamityMod.Backgrounds
             if (Main.dedServ)
                 return;
 
-            SSBG0 = BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/SunkenSeaBG0");
-            SSBG1 = BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/SunkenSeaBG1");
-            SSBG2 = BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/SunkenSeaBG2");
-            SSBG3 = BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/SunkenSeaBG3");
+            SSBG0 = BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/SunkenSeaBG0");
+            SSBG1 = BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/SunkenSeaBG1");
+            SSBG2 = BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/SunkenSeaBG2");
+            SSBG3 = BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/SunkenSeaBG3");
         }
 
         public override void FillTextureArray(int[] textureSlots)

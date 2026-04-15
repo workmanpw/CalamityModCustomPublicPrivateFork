@@ -1,10 +1,10 @@
-﻿using System.IO;
-using CalamityMod.BiomeManagers;
-using CalamityMod.Items.Placeables;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Items.Placeables.SunkenSea;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.NPCs.NormalNPCs;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Items.Placeables;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityMod.NPCs.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.NPCs.SunkenSea
 {
     public class BlindedAngler : ModNPC
     {
@@ -57,7 +57,7 @@ namespace CalamityMod.NPCs.SunkenSea
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.BlindedAngler")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.BlindedAngler")
             });
         }
 

@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.FurnitureAuric;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAuric;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureAuric
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric
 {
     public class AuricPlatformTile : ModTile
     {
@@ -15,7 +15,7 @@ namespace CalamityMod.Tiles.FurnitureAuric
         {
             if (!Main.dedServ)
             {
-                GlowTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureAuric/AuricPlatformTile_Glow", AssetRequestMode.ImmediateLoad).Value;
+                GlowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureAuric/AuricPlatformTile_Glow", AssetRequestMode.ImmediateLoad).Value;
             }
             this.SetUpPlatform(ModContent.ItemType<AuricPlatform>(), true);
         }

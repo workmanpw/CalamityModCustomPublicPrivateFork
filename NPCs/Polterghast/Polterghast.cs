@@ -1,26 +1,26 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.Items.Armor.Vanity;
-using CalamityMod.Items.LoreItems;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Furniture.BossRelics;
-using CalamityMod.Items.Placeables.Furniture.Paintings;
-using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Items.Potions;
-using CalamityMod.Items.TreasureBags;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.NPCs.Abyss;
-using CalamityMod.NPCs.NormalNPCs;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.LoreItems;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Items.Potions;
+using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.NPCs.Abyss;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -32,7 +32,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Polterghast
+namespace CalamityModCustomPublicPrivateFork.NPCs.Polterghast
 {
     public class Polterghast : ModNPC
     {
@@ -41,11 +41,11 @@ namespace CalamityMod.NPCs.Polterghast
 
         public override void Load()
         {
-            string phase1IconPath = "CalamityMod/NPCs/Polterghast/Polterghast_Head_Boss";
-            string phase3IconPath = "CalamityMod/NPCs/Polterghast/Necroplasm_Head_Boss";
+            string phase1IconPath = "CalamityModCustomPublicPrivateFork/NPCs/Polterghast/Polterghast_Head_Boss";
+            string phase3IconPath = "CalamityModCustomPublicPrivateFork/NPCs/Polterghast/Necroplasm_Head_Boss";
 
-            phase1IconIndex = CalamityMod.Instance.AddBossHeadTexture(phase1IconPath);
-            phase3IconIndex = CalamityMod.Instance.AddBossHeadTexture(phase3IconPath);
+            phase1IconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(phase1IconPath);
+            phase3IconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(phase3IconPath);
         }
 
         private const int DespawnTimerMax = 900;
@@ -53,11 +53,11 @@ namespace CalamityMod.NPCs.Polterghast
         private int soundTimer = 0;
         private bool reachedChargingPoint = false;
         private bool threeAM = false;
-        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/PolterghastHit");
-        public static readonly SoundStyle P2Sound = new("CalamityMod/Sounds/Custom/Polterghast/PolterghastP2Transition");
-        public static readonly SoundStyle P3Sound = new("CalamityMod/Sounds/Custom/Polterghast/PolterghastP3Transition");
-        public static readonly SoundStyle SpawnSound = new("CalamityMod/Sounds/Custom/Polterghast/PolterghastSpawn");
-        public static readonly SoundStyle PhantomSound = new("CalamityMod/Sounds/Custom/Polterghast/PolterghastPhantomSpawn");
+        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/PolterghastHit");
+        public static readonly SoundStyle P2Sound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Polterghast/PolterghastP2Transition");
+        public static readonly SoundStyle P3Sound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Polterghast/PolterghastP3Transition");
+        public static readonly SoundStyle SpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Polterghast/PolterghastSpawn");
+        public static readonly SoundStyle PhantomSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Polterghast/PolterghastPhantomSpawn");
 
         public static Asset<Texture2D> Texture_Glow;
         public static Asset<Texture2D> Texture_Glow2;
@@ -136,7 +136,7 @@ namespace CalamityMod.NPCs.Polterghast
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheDungeon,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Polterghast")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Polterghast")
             });
         }
 
@@ -951,14 +951,14 @@ namespace CalamityMod.NPCs.Polterghast
                 if (!Main.LocalPlayer.dead && Main.LocalPlayer.active)
                     SoundEngine.PlaySound(ReaperShark.SearchRoarSound, Main.LocalPlayer.Center);
 
-                string key = "Mods.CalamityMod.Status.Progression.GhostBossText";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.GhostBossText";
                 Color messageColor = Color.RoyalBlue;
-                string sulfSeaBoostMessage = "Mods.CalamityMod.Status.Progression.GhostBossText4";
+                string sulfSeaBoostMessage = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.GhostBossText4";
                 Color sulfSeaBoostColor = AcidRainEvent.TextColor;
 
                 if ((Main.rand.NextBool(20) && DateTime.Now.Month == 4 && DateTime.Now.Day == 1) || Main.zenithWorld)
                 {
-                    sulfSeaBoostMessage = "Mods.CalamityMod.Status.Progression.AprilFools2"; // Goddamn boomer duke moments
+                    sulfSeaBoostMessage = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.AprilFools2"; // Goddamn boomer duke moments
                 }
 
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);

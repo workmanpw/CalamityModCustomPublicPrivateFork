@@ -1,5 +1,5 @@
-﻿using CalamityMod.Events;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Signus
+namespace CalamityModCustomPublicPrivateFork.NPCs.Signus
 {
     public class SignusSky : CustomSky
     {

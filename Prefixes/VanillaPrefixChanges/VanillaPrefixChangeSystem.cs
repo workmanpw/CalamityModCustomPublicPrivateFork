@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using MonoMod.Cil;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Prefixes.VanillaPrefixChanges
+namespace CalamityModCustomPublicPrivateFork.Prefixes.VanillaPrefixChanges
 {
     public sealed class VanillaPrefixChangeSystem : ModSystem
     {
@@ -29,25 +29,25 @@ namespace CalamityMod.Prefixes.VanillaPrefixChanges
             var cursor = new ILCursor(il);
             if (!cursor.TryGotoNext(x => x.MatchCallOrCallvirt<ModPrefix>(nameof(ModPrefix.ModifyValue))))
             {
-                CalamityMod.Log.ILFailure("Vanilla Prefix Override", "Unable to locate callvirt (ModPrefix.ModifyValue)");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure("Vanilla Prefix Override", "Unable to locate callvirt (ModPrefix.ModifyValue)");
                 return;
             }
 
             if (!cursor.Prev.MatchLdloca(out var multLocaIdx))
             {
-                CalamityMod.Log.ILFailure("Vanilla Prefix Override", "Unable to locate Ldloca (mult)");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure("Vanilla Prefix Override", "Unable to locate Ldloca (mult)");
                 return;
             }
 
             if (!cursor.TryGotoPrev(x => x.MatchLdsfld<PrefixID>(nameof(PrefixID.Count))))
             {
-                CalamityMod.Log.ILFailure("Vanilla Prefix Override", "Unable to locate Ldsfld (PrefixID.Count)");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure("Vanilla Prefix Override", "Unable to locate Ldsfld (PrefixID.Count)");
                 return;
             }
 
             if (!cursor.Prev.MatchLdloc(out var prefixLocaIdx))
             {
-                CalamityMod.Log.ILFailure("Vanilla Prefix Override", "Unable to locate Ldloc (prefix)");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure("Vanilla Prefix Override", "Unable to locate Ldloc (prefix)");
                 return;
             }
 

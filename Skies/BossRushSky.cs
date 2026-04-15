@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Events;
+using System;
+using CalamityModCustomPublicPrivateFork.Events;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Skies
+namespace CalamityModCustomPublicPrivateFork.Skies
 {
     public class BossRushSky : CustomSky
     {
@@ -81,7 +81,7 @@ namespace CalamityMod.Skies
             // Make the entire background fade to white at the end of the event.
             if (BossRushEvent.EndTimer >= 100f)
             {
-                Texture2D whiteTexture = ModContent.Request<Texture2D>("CalamityMod/Skies/XerocLight").Value;
+                Texture2D whiteTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/XerocLight").Value;
                 Vector2 screenCenter = new Vector2(Main.screenWidth, Main.screenHeight) * 0.5f;
                 float fadeToWhite = Utils.GetLerpValue(110f, 140f, BossRushEvent.EndTimer, true);
                 screenCenter += new Vector2(Main.screenWidth, Main.screenHeight) * (Main.GameViewMatrix.Zoom - Vector2.One) * 0.5f;
@@ -107,7 +107,7 @@ namespace CalamityMod.Skies
                 Vector2 drawWorldPosition = new Vector2(Main.LocalPlayer.Center.X, 1120f);
                 Vector2 drawPosition = (drawWorldPosition - screenCenter) * 0.097f + screenCenter - Main.screenPosition - Vector2.UnitY * 100f;
 
-                Texture2D eyeTexture = ModContent.Request<Texture2D>("CalamityMod/Skies/XerocEye").Value;
+                Texture2D eyeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/XerocEye").Value;
                 Color baseColorDraw = Color.Lerp(baseXerocColor, Color.DimGray, IncrementalInterest);
                 Vector2 origin = eyeTexture.Size() * 0.5f;
 

@@ -1,12 +1,12 @@
-﻿using System.IO;
-using CalamityMod.Dusts;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class DesertScourgeSpit : ModProjectile, ILocalizedModType
     {

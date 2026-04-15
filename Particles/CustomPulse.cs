@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class CustomPulse : Particle
     {
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public bool UseAltVisual = true;
         public override bool UseAdditiveBlend => UseAltVisual;
         public override bool SetLifetime => true;
@@ -67,7 +67,7 @@ namespace CalamityMod.Particles
                 DateTime day = DateTime.Now;
                 if (day.DayOfWeek == DayOfWeek.Tuesday)
                 {
-                    Texture2D joke = ModContent.Request<Texture2D>("CalamityMod/Particles/MammothParticle").Value;
+                    Texture2D joke = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/MammothParticle").Value;
                     scaleMult = (MathHelper.Lerp(tex.Size().X / joke.Size().X, tex.Size().Y / joke.Size().Y, 0.5f));
                     tex = joke;
                     UseAltVisual = true;

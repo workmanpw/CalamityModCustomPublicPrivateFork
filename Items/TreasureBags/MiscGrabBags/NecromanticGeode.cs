@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.TreasureBags.MiscGrabBags
+namespace CalamityModCustomPublicPrivateFork.Items.TreasureBags.MiscGrabBags
 {
     [LegacyName("FleshyGeodeT2")]
     public class NecromanticGeode : ModItem, ILocalizedModType

@@ -1,7 +1,7 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Typeless;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Healing;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class ClaretCannonProj : ModProjectile, ILocalizedModType
     {
@@ -47,12 +47,12 @@ namespace CalamityMod.Projectiles.Typeless
         {
             if (Projectile.penetrate != -1)
                 return;
-            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/NPCKilled/PerfLargeDeath") { Volume = 0.5f }, Projectile.Center);
-            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/BloodPactCrit") { Volume = 0.5f }, Projectile.Center);
+            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/PerfLargeDeath") { Volume = 0.5f }, Projectile.Center);
+            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BloodPactCrit") { Volume = 0.5f }, Projectile.Center);
             float particleScale = 8f;
-            Particle bloodsplosion = new CustomPulse(Projectile.Center, Vector2.Zero, (!ChildSafety.Disabled ? Color.CornflowerBlue : Color.DarkRed), "CalamityMod/Particles/DetailedExplosion", Vector2.One, Main.rand.NextFloat(-15f, 15f), 0.16f * particleScale / 5f, 0.87f * particleScale / 5f, (int)(40 * 0.38f), false);
+            Particle bloodsplosion = new CustomPulse(Projectile.Center, Vector2.Zero, (!ChildSafety.Disabled ? Color.CornflowerBlue : Color.DarkRed), "CalamityModCustomPublicPrivateFork/Particles/DetailedExplosion", Vector2.One, Main.rand.NextFloat(-15f, 15f), 0.16f * particleScale / 5f, 0.87f * particleScale / 5f, (int)(40 * 0.38f), false);
             GeneralParticleHandler.SpawnParticle(bloodsplosion);
-            Particle bloodsplosion2 = new CustomPulse(Projectile.Center, Vector2.Zero, (!ChildSafety.Disabled ? Color.CornflowerBlue : new Color(255, 32, 32)), "CalamityMod/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-15f, 15f), 0.03f * particleScale / 5f, 0.155f * particleScale / 5f, 40);
+            Particle bloodsplosion2 = new CustomPulse(Projectile.Center, Vector2.Zero, (!ChildSafety.Disabled ? Color.CornflowerBlue : new Color(255, 32, 32)), "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-15f, 15f), 0.03f * particleScale / 5f, 0.155f * particleScale / 5f, 40);
             GeneralParticleHandler.SpawnParticle(bloodsplosion2);
             Projectile.netUpdate = true;
         }

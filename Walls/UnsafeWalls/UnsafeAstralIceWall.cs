@@ -1,12 +1,12 @@
-﻿
+
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Walls.UnsafeWalls
+namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
 {
     public class UnsafeAstralIceWall : ModWall
     {
-        public override string Texture => "CalamityMod/Walls/AstralIceWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/AstralIceWall";
         public override void SetStaticDefaults()
         {
             // TODO -- Change this dust to be one more befitting Astral Ice.

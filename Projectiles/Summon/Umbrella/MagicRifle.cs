@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Sounds;
+using System;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon.Umbrella
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella
 {
     public class MagicRifle : ModProjectile, ILocalizedModType
     {

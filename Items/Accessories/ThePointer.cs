@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Particles;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.GameInput;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class ThePointer : ModItem, ILocalizedModType
     {
@@ -51,7 +51,7 @@ namespace CalamityMod.Items.Accessories
         {
             if (LockOnHelper.AimedTarget == null)
                 return true;
-            var tex = ActiveTexture ??= ModContent.Request<Texture2D>("CalamityMod/Items/Accessories/ThePointer_Active");
+            var tex = ActiveTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Accessories/ThePointer_Active");
             CalamityUtils.DrawInventoryCustomScale(
                 spriteBatch,
                 tex.Value,

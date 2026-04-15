@@ -1,21 +1,21 @@
-﻿using System;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class TrueAncientBeam : ModProjectile, ILocalizedModType //The boring plain one
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/TrueArkoftheAncientsGlow";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/TrueArkoftheAncientsGlow";
 
         public override void SetStaticDefaults()
         {
@@ -87,8 +87,8 @@ namespace CalamityMod.Projectiles.Melee
             Main.spriteBatch.End();
             Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
 
-            Texture2D starTexture = Request<Texture2D>("CalamityMod/Particles/Sparkle").Value;
-            Texture2D bloomTexture = Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D starTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle").Value;
+            Texture2D bloomTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
             //Adjust the bloom's texture to be the same size as the star's
             float properBloomSize = (float)starTexture.Height / (float)bloomTexture.Height;
 

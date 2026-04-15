@@ -1,6 +1,6 @@
-﻿using CalamityMod.NPCs.ExoMechs.Ares;
-using CalamityMod.NPCs.ExoMechs.Artemis;
-using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.UI.VanillaBossBars
+namespace CalamityModCustomPublicPrivateFork.UI.VanillaBossBars
 {
     public class ExoMechsBossBar : ModBossBar
     {
@@ -33,15 +33,15 @@ namespace CalamityMod.UI.VanillaBossBars
             if (HideArtemis && HideThanatos && !HideAres)
                 return TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[NPCType<AresBody>()]];
             if (HideAres && HideThanatos && !HideArtemis)
-                return ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/Artemis/ArtemisHead");
+                return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Artemis/ArtemisHead");
             if (HideAres && HideArtemis && !HideThanatos)
-                return ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosNormalHead");
+                return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosNormalHead");
             // Otherwise, just run through alphabet sorting: Ares, Artemis, Thanatos
             if (!HideAres)
                 return TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[NPCType<AresBody>()]];
             if (!HideArtemis)
-                return ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/Artemis/ArtemisHead");
-            return ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosNormalHead");
+                return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Artemis/ArtemisHead");
+            return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosNormalHead");
         }
 
         public override bool? ModifyInfo(ref BigProgressBarInfo info, ref float life, ref float lifeMax, ref float shield, ref float shieldMax)

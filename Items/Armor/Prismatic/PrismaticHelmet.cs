@@ -1,14 +1,14 @@
-﻿using System;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Ores;
-using CalamityMod.Rarities;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Prismatic
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Prismatic
 {
     [AutoloadEquip(EquipType.Head)]
     public class PrismaticHelmet : ModItem, ILocalizedModType

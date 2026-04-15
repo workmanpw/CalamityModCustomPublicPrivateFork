@@ -1,10 +1,10 @@
-﻿#nullable enable
+#nullable enable
 
 using System;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.ILEditing;
+namespace CalamityModCustomPublicPrivateFork.ILEditing;
 
 internal readonly record struct ManipulatorContext(
     ManipulatorBatch PlayerUpdate

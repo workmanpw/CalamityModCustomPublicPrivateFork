@@ -1,24 +1,24 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Buffs;
-using CalamityMod.Buffs.Alcohol;
-using CalamityMod.Buffs.Cooldowns;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Buffs.Potions;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Buffs.Summon.Whips;
-using CalamityMod.DataStructures;
-using CalamityMod.Items.Accessories;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Buffs;
+using CalamityModCustomPublicPrivateFork.Buffs.Alcohol;
+using CalamityModCustomPublicPrivateFork.Buffs.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.Potions;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
 using ReLogic.Reflection;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Systems.Collections
+namespace CalamityModCustomPublicPrivateFork.Systems.Collections
 {
     [ReinitializeDuringResizeArrays]
     public static class CalamityBuffSets
     {
-        public static SetFactory Factory = new SetFactory(BuffLoader.BuffCount, "CalamityMod/BuffID", Search);
+        public static SetFactory Factory = new SetFactory(BuffLoader.BuffCount, "CalamityModCustomPublicPrivateFork/BuffID", Search);
         public static IdDictionary Search = IdDictionary.Create<BuffID, int>();
 
         /// <summary>

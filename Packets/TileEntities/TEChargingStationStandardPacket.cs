@@ -1,10 +1,10 @@
-﻿using System.IO;
-using CalamityMod.Items;
-using CalamityMod.TileEntities;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Items;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class TEChargingStationStandardPacket : CalamityPacket
     {

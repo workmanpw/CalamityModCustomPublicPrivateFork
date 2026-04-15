@@ -1,13 +1,13 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing.FishingRods
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.FishingRods
 {
     [LegacyName("ChaoticSpreadRod")]
     public class RiftReeler : ModItem, ILocalizedModType

@@ -1,7 +1,7 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Rarities
+namespace CalamityModCustomPublicPrivateFork.Rarities
 {
     // Draedon's Arsenal "Rust" / "Bronze" rarity
     public class DarkOrange : ModRarity

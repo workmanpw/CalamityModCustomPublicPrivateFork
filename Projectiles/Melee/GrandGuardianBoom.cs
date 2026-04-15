@@ -1,15 +1,15 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class GrandGuardianBoom : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public Color mainColor = Color.White;
         public int time = 0;
 
@@ -31,9 +31,9 @@ namespace CalamityMod.Projectiles.Melee
             if (mainColor == Color.White)
             {
                 mainColor = Main.rand.NextBool() ? Color.Cyan : Color.DarkOrchid;
-                Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor * 0.45f, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 2.56f, 35);
+                Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor * 0.45f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 2.56f, 35);
                 GeneralParticleHandler.SpawnParticle(bolt2);
-                Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, (mainColor == Color.Cyan ? Color.Orchid : Color.Cyan) * 0.65f, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 1.26f, 15);
+                Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, (mainColor == Color.Cyan ? Color.Orchid : Color.Cyan) * 0.65f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 1.26f, 15);
                 GeneralParticleHandler.SpawnParticle(bolt3);
 
                 for (int i = 0; i < 25; i++)
@@ -50,7 +50,7 @@ namespace CalamityMod.Projectiles.Melee
             }
             if (time == 6)
             {
-                //Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor * 0.65f, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 2.56f, 3.26f, 24);
+                //Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor * 0.65f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 2.56f, 3.26f, 24);
                 //GeneralParticleHandler.SpawnParticle(bolt2);
             }
             time++;

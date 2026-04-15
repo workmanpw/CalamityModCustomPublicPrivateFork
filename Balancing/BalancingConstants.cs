@@ -1,4 +1,4 @@
-﻿namespace CalamityMod.Balancing
+namespace CalamityModCustomPublicPrivateFork.Balancing
 {
     public static class BalancingConstants
     {

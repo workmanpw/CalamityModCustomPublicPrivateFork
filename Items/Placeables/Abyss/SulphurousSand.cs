@@ -1,8 +1,8 @@
-﻿using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Abyss
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss
 {
     public class SulphurousSand : ModItem, ILocalizedModType
     {

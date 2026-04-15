@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.LoreItems
+namespace CalamityModCustomPublicPrivateFork.Items.LoreItems
 {
     [LegacyName("KnowledgeYharon")]
     public class LoreYharon : LoreItem

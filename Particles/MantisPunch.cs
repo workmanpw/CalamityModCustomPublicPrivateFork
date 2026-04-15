@@ -1,17 +1,17 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using ReLogic.Content;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class MantisPunch : Particle
     {
         int Frame = 0;
         int FrameTimer = 0;
 
-        public override string Texture => "CalamityMod/Particles/MantisPunch";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/MantisPunch";
         public override bool UseCustomDraw => true;
         public override void CustomDraw(SpriteBatch spriteBatch)
         {

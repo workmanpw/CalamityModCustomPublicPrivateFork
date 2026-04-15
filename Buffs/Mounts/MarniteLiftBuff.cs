@@ -1,8 +1,8 @@
-﻿using CalamityMod.Items.Armor.MarniteArchitect;
+using CalamityModCustomPublicPrivateFork.Items.Armor.MarniteArchitect;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Mounts
+namespace CalamityModCustomPublicPrivateFork.Buffs.Mounts
 {
     public class MarniteLiftBuff : ModBuff
     {

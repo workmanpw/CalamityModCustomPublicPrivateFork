@@ -1,11 +1,11 @@
-﻿using System;
-using CalamityMod.DataStructures;
-using CalamityMod.Projectiles.Magic;
+using System;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatDebuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs
 {
     public class Irradiated : ModBuff
     {

@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,14 +10,14 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class OldDukeVortex : ModProjectile, ILocalizedModType
     {
         Vector2 cen = Vector2.Zero;
 
         public new string LocalizationCategory => "Projectiles.Boss";
-        public static SoundStyle SpawnSound = new("CalamityMod/Sounds/Custom/OldDukeVortex");
+        public static SoundStyle SpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeVortex");
         public SlotId SoundId;
 
         public override void SetStaticDefaults()
@@ -131,7 +131,7 @@ namespace CalamityMod.Projectiles.Boss
 
             if (Projectile.ai[0] % 10 == 1)
             {
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(cen, Vector2.Zero, new Color(55, 195, 0, 20), "CalamityMod/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), Projectile.scale * 0.9f, Projectile.scale * 0.4f, 40));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(cen, Vector2.Zero, new Color(55, 195, 0, 20), "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), Projectile.scale * 0.9f, Projectile.scale * 0.4f, 40));
             }
 
             if (Projectile.timeLeft <= 85)

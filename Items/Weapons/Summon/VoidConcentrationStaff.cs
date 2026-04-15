@@ -1,14 +1,14 @@
-﻿using CalamityMod.Buffs.Summon;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Projectiles.Summon;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Summon
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
 {
     public class VoidConcentrationStaff : ModItem, ILocalizedModType
     {

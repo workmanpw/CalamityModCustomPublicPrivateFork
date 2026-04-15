@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class GlowOrbParticle : Particle
     {
@@ -19,7 +19,7 @@ namespace CalamityMod.Particles
         public override bool UseAdditiveBlend => UseAltVisual;
         public override bool Important => imporant;
 
-        public override string Texture => "CalamityMod/Particles/GlowOrbParticle";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/GlowOrbParticle";
 
         public GlowOrbParticle(Vector2 relativePosition, Vector2 velocity, bool affectedByGravity, int lifetime, float scale, Color color, bool AddativeBlend = true, bool needed = false, bool GlowCenter = true)
         {

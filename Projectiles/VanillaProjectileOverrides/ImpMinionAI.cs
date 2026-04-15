@@ -1,9 +1,9 @@
-﻿using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityMod.Projectiles.VanillaProjectileOverrides
+namespace CalamityModCustomPublicPrivateFork.Projectiles.VanillaProjectileOverrides
 {
     public static class ImpMinionAI
     {

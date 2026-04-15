@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class GreenWater : ModProjectile, ILocalizedModType
     {
@@ -131,7 +131,7 @@ namespace CalamityMod.Projectiles.Melee
                 Particle spark = new AltSparkParticle(Projectile.Center, (Projectile.velocity * 4.5f).RotatedByRandom(0.7) * Main.rand.NextFloat(0.1f, 0.8f) + new Vector2(0, -2), true, 20, 0.5f, Color.DarkRed * 0.7f);
                 GeneralParticleHandler.SpawnParticle(spark);
             }
-            SoundStyle sound = new("CalamityMod/Sounds/NPCHit/PerfSmallHit", 3);
+            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/PerfSmallHit", 3);
             SoundEngine.PlaySound(sound with { Volume = 0.5f, Pitch = Main.rand.NextFloat(-0.2f, -0.3f) }, Projectile.Center);
         }
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)

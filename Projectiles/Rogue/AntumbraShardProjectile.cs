@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Enums;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,12 +9,12 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class AntumbraShardProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/ShardofAntumbra";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/ShardofAntumbra";
         public ref float time => ref Projectile.ai[0];
 
         // Vanilla sticky code is jank, So I did my own (for better or worse)
@@ -189,7 +189,7 @@ namespace CalamityMod.Projectiles.Rogue
                     for (int i = 0; i < Main.maxNPCs; i++)
                         Projectile.localNPCImmunity[i] = 0;
 
-                    SoundStyle sound = new("CalamityMod/Sounds/Item/MeldExplosion");
+                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MeldExplosion");
                     SoundEngine.PlaySound(sound with { Volume = 0.3f, Pitch = 0.8f }, Projectile.Center);
 
                     Projectile.ai[2] = 0;
@@ -220,7 +220,7 @@ namespace CalamityMod.Projectiles.Rogue
                         dust2.color = Color.LightGreen;
                     }
 
-                    Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen * 0.85f, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 1f, 18);
+                    Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen * 0.85f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 1f, 18);
                     GeneralParticleHandler.SpawnParticle(bolt2);
                     bolt2.DrawLayer = GeneralDrawLayer.AfterEverything;
 
@@ -240,7 +240,7 @@ namespace CalamityMod.Projectiles.Rogue
 
                 storedVelocity = Projectile.velocity;
                 Projectile.velocity = Vector2.Zero;
-                SoundStyle sound = new("CalamityMod/Sounds/NPCHit/RavagerRockPillarHit1");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/RavagerRockPillarHit1");
                 SoundEngine.PlaySound(sound with { Volume = 0.25f, Pitch = Main.rand.NextFloat(-0.3f, -0.6f) }, Projectile.Center);
                 Projectile.rotation = storedVelocity.ToRotation() + MathHelper.ToRadians(45f * (storedVelocity.X > 0 ? 1 : -1));
                 collideWithTiles = false;
@@ -278,7 +278,7 @@ namespace CalamityMod.Projectiles.Rogue
                 storedVelocity = Projectile.velocity;
                 Projectile.velocity = Vector2.Zero;
                 portalSpot = Projectile.Center + Main.rand.NextVector2CircularEdge(350, 350) * Main.rand.NextFloat(0.8f, 1.1f);
-                SoundStyle sound = new("CalamityMod/Sounds/Item/WulfrumKnifeTileHit2");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumKnifeTileHit2");
                 SoundEngine.PlaySound(sound with { Volume = 0.5f, Pitch = Main.rand.NextFloat(-0.3f, -0.4f) }, Projectile.Center);
                 for (int i = 0; i <= 11; i++)
                 {
@@ -293,9 +293,9 @@ namespace CalamityMod.Projectiles.Rogue
 
             if (!canStick)
             {
-                SoundStyle sound = new("CalamityMod/Sounds/Item/MeldSlice");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MeldSlice");
                 SoundEngine.PlaySound(sound with { Volume = 0.7f, Pitch = 0.4f }, Projectile.Center);
-                SoundStyle sound2 = new("CalamityMod/Sounds/Item/ExobladeBeamSlash");
+                SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ExobladeBeamSlash");
                 SoundEngine.PlaySound(sound2 with { Volume = 0.15f, Pitch = 0.7f }, Projectile.Center);
             }
         }
@@ -305,8 +305,8 @@ namespace CalamityMod.Projectiles.Rogue
             if (time <= 4)
                 return false;
             Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
-            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/ShardofAntumbraGhost");
-            Asset<Texture2D> portal = ModContent.Request<Texture2D>("CalamityMod/Particles/Light");
+            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/ShardofAntumbraGhost");
+            Asset<Texture2D> portal = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Light");
             float alpha = Utils.GetLerpValue(255, 0, Projectile.alpha);
             float fading = stuckInTarget ? Utils.GetLerpValue(0, 180, stuckTimer) : 0.5f;
             float portalFading = Utils.GetLerpValue(75, 0, stuckTimer, true);

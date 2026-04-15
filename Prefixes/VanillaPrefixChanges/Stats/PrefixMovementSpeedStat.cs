@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Prefixes.VanillaPrefixChanges.Stats
+namespace CalamityModCustomPublicPrivateFork.Prefixes.VanillaPrefixChanges.Stats
 {
     public struct PrefixMovementSpeedStat(float movementSpeedBonus) : IVanillaPrefixStat
     {

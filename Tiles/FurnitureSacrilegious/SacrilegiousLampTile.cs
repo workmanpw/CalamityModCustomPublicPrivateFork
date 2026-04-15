@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.FurnitureSacrilegious;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSacrilegious;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureSacrilegious
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious
 {
     public class SacrilegiousLampTile : ModTile
     {
@@ -49,7 +49,7 @@ namespace CalamityMod.Tiles.FurnitureSacrilegious
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureSacrilegious/SacrilegiousLampTileFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureSacrilegious/SacrilegiousLampTileFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j);
         }
     }

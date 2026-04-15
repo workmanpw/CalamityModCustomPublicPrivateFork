@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.NPCs.Cryogen;
+using System;
+using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Skies
+namespace CalamityModCustomPublicPrivateFork.Skies
 {
     public class CryogenSky : CustomSky
     {

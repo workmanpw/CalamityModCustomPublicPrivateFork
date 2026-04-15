@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Core;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     [Obsolete($"This is kept for {nameof(GeneralParticleHandler)}. Consider use ILoadable or ModType If possible.")]
     public static class ReflectionHelper

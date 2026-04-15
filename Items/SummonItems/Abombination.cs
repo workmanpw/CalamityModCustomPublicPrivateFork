@@ -1,21 +1,21 @@
-﻿using CalamityMod.CustomRecipes;
+using CalamityModCustomPublicPrivateFork.CustomRecipes;
 using System;
-using CalamityMod.Events;
-using CalamityMod.Items.Materials;
-using CalamityMod.NPCs.PlaguebringerGoliath;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using System.Collections.Generic;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     [LegacyName("Abomination")]
     public class Abombination : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.SummonItems";
-        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/PBGSummon");
+        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PBGSummon");
         public override void SetStaticDefaults()
         {
             ItemID.Sets.SortingPriorityBossSpawns[Type] = 17; // Solar Tablet (1 above Lihzahrd Power Cell)

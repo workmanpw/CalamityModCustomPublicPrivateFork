@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.Projectiles.Summon;
-using CalamityMod.Rarities;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,11 +9,11 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Summon
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
 {
     public class CalamarisLament : ModItem, ILocalizedModType
     {
-        public static readonly SoundStyle GFB = new("CalamityMod/Sounds/Item/Inkling", 5);
+        public static readonly SoundStyle GFB = new("CalamityModCustomPublicPrivateFork/Sounds/Item/Inkling", 5);
         public new string LocalizationCategory => "Items.Weapons.Summon";
 
         #region Minion Stats

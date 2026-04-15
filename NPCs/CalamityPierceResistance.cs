@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
-using CalamityMod.Balancing;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.NPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs
 {
     public sealed class PierceResistNPC : GlobalNPC
     {
@@ -97,7 +97,7 @@ namespace CalamityMod.NPCs
                 }
                 catch (Exception e)
                 {
-                    CalamityMod.Log.Error($"Exception thrown while evaluating type \"{projectile.FullName}\": {e}");
+                    ModContent.GetInstance<CalamityMod>().Logger.Error($"Exception thrown while evaluating type \"{projectile.FullName}\": {e}");
                 }
             }
 
@@ -119,7 +119,7 @@ namespace CalamityMod.NPCs
                 }
                 catch (Exception e)
                 {
-                    CalamityMod.Log.Error($"Exception thrown while evaluating type \"{npc.FullName}\": {e}");
+                    ModContent.GetInstance<CalamityMod>().Logger.Error($"Exception thrown while evaluating type \"{npc.FullName}\": {e}");
                 }
             }
         }

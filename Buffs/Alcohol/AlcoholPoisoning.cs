@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Alcohol
+namespace CalamityModCustomPublicPrivateFork.Buffs.Alcohol
 {
     public class AlcoholPoisoning : ModBuff
     {

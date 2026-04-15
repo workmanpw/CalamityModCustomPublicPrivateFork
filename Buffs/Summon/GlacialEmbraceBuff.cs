@@ -1,8 +1,8 @@
-﻿using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Summon
+namespace CalamityModCustomPublicPrivateFork.Buffs.Summon
 {
     public class GlacialEmbraceBuff : ModBuff
     {

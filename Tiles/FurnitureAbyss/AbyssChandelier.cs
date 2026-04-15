@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureAbyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAbyss
 {
     public class AbyssChandelier : ModTile
     {

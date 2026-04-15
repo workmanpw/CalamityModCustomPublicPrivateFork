@@ -1,9 +1,9 @@
-﻿#nullable enable
+#nullable enable
 using System;
 using System.Buffers;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityMod.Graphics.Primitives;
+namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 
 public sealed class PrimitiveMeshCache
 {

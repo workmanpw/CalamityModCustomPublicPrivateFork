@@ -1,6 +1,6 @@
-﻿using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Projectiles.Ranged;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     public class DragonsBreath : ModItem, ILocalizedModType
     {
@@ -18,10 +18,10 @@ namespace CalamityMod.Items.Weapons.Ranged
         public static int AmmoSavedPercent = 80;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(AmmoSavedPercent);
 
-        public static readonly SoundStyle FireballSound = new("CalamityMod/Sounds/Custom/Yharon/YharonFireball", 3) { PitchVariance = 0.3f, Volume = 0.75f };
-        public static readonly SoundStyle WeldingStart = new("CalamityMod/Sounds/Item/DragonsBreathStrongStart") { Volume = 1.75f };
-        public static readonly SoundStyle WeldingBurn = new("CalamityMod/Sounds/Item/WeldingBurn") { Volume = 0.65f };
-        public static readonly SoundStyle WeldingShoot = new("CalamityMod/Sounds/Item/WeldingShoot") { Volume = 0.45f };
+        public static readonly SoundStyle FireballSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Yharon/YharonFireball", 3) { PitchVariance = 0.3f, Volume = 0.75f };
+        public static readonly SoundStyle WeldingStart = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DragonsBreathStrongStart") { Volume = 1.75f };
+        public static readonly SoundStyle WeldingBurn = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WeldingBurn") { Volume = 0.65f };
+        public static readonly SoundStyle WeldingShoot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WeldingShoot") { Volume = 0.45f };
         public override void SetDefaults()
         {
             Item.width = 124;

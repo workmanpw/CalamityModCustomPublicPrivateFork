@@ -1,8 +1,8 @@
-﻿using CalamityMod.Cooldowns;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Materials;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -10,7 +10,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     [LegacyName("TrueForbiddenOathblade")]
     public class ExaltedOathblade : ModItem, ILocalizedModType, IHoldShiftTooltipItem
@@ -48,13 +48,13 @@ namespace CalamityMod.Items.Weapons.Melee
                 return;
             if (player.Calamity().mouseRight && !player.mouseInterface && player.Calamity().killModeCooldown == 0 && !Main.mapFullscreen && !Main.blockMouse)
             {
-                SoundStyle buff = new("CalamityMod/Sounds/Item/DemonSwordKillMode");
+                SoundStyle buff = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordKillMode");
                 SoundEngine.PlaySound(buff with { Volume = 0.95f }, player.Center);
 
                 for (int i = 0; i < 10; i++)
                 {
                     Vector2 vel = (MathHelper.TwoPi * i / 10f).ToRotationVector2() * 6.5f;
-                    Particle spark2 = new CustomSpark(player.Center + vel * 14, -vel * 0.1f, "CalamityMod/Particles/DemonSigilParticle", false, 22, 0.6f, (i % 2 == 0 ? Color.MediumOrchid : Color.BlueViolet) * 0.7f, new Vector2(1, 1), true, false, 0, false, false, -0.23f);
+                    Particle spark2 = new CustomSpark(player.Center + vel * 14, -vel * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/DemonSigilParticle", false, 22, 0.6f, (i % 2 == 0 ? Color.MediumOrchid : Color.BlueViolet) * 0.7f, new Vector2(1, 1), true, false, 0, false, false, -0.23f);
                     GeneralParticleHandler.SpawnParticle(spark2);
 
                     Dust c = Dust.NewDustPerfect(player.Center, ModContent.DustType<LightDust>());

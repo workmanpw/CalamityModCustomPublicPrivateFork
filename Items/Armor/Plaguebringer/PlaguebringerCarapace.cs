@@ -1,12 +1,12 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Plaguebringer
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Plaguebringer
 {
     [AutoloadEquip(EquipType.Body)]
     public class PlaguebringerCarapace : ModItem, ILocalizedModType

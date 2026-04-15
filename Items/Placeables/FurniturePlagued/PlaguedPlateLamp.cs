@@ -1,8 +1,8 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurniturePlagued
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurniturePlagued
 {
     public class PlaguedPlateLamp : ModItem, ILocalizedModType
     {

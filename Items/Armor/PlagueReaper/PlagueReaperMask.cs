@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Cooldowns;
-using CalamityMod.Items.Materials;
+using System;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,13 +8,13 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.PlagueReaper
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.PlagueReaper
 {
     [AutoloadEquip(EquipType.Head)]
     public class PlagueReaperMask : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Armor.Hardmode";
-        public static readonly SoundStyle ActivationSound = new("CalamityMod/Sounds/Custom/AbilitySounds/PlagueReaperAbility");
+        public static readonly SoundStyle ActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/PlagueReaperAbility");
 
         public static float RangedDamageBoost = 0.1f;
         public static int RangedCritBoost = 8;

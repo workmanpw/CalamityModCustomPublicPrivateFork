@@ -1,4 +1,4 @@
-﻿namespace CalamityMod.NPCs.VanillaNPCAIOverrides.RegularEnemies;
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.RegularEnemies;
 
 public static partial class RevengeanceAndDeathAI
 {

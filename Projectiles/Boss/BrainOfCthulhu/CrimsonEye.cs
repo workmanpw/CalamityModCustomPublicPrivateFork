@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,7 +12,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss.BrainOfCthulhu;
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss.BrainOfCthulhu;
 
 public class CrimsonEye : ModProjectile, ILocalizedModType
 {
@@ -161,7 +161,7 @@ public class CrimsonEye : ModProjectile, ILocalizedModType
             /*
             Main.spriteBatch.SetBlendState(BlendState.Additive);
 
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Particles/HollowCircleHardEdge").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HollowCircleHardEdge").Value;
             Color color = Color.Red * DistanceRatio;
             if (Time <= 65)
                 color *= (Time - 45) / 20f;
@@ -182,7 +182,7 @@ public class CrimsonEye : ModProjectile, ILocalizedModType
                 opacity *= Projectile.timeLeft / 20f;
 
             Main.spriteBatch.EnterShaderRegion();
-            Texture2D telegraphBase = ModContent.Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj").Value;
+            Texture2D telegraphBase = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj").Value;
 
             GameShaders.Misc["CalamityMod:CircularAoETelegraph"].UseOpacity(opacity);
             GameShaders.Misc["CalamityMod:CircularAoETelegraph"].UseColor(Color.Lerp(Color.Red, Color.OrangeRed, 0.7f * (float)Math.Pow(0.5 + 0.5 * Math.Sin(Main.GlobalTimeWrappedHourly), 3)));

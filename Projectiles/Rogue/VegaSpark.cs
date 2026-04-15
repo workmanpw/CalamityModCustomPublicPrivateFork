@@ -1,11 +1,11 @@
-﻿
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
+
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class VegaSpark : ModProjectile, ILocalizedModType
     {

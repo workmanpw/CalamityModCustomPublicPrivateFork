@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Schematics;
-using CalamityMod.Tiles.Abyss;
-using CalamityMod.Tiles.Astral;
-using CalamityMod.Tiles.FurnitureMonolith;
-using CalamityMod.Tiles.AstralDesert;
-using CalamityMod.Tiles.AstralSnow;
-using CalamityMod.Tiles.Ores;
-using CalamityMod.Walls;
-using CalamityMod.Walls.UnsafeWalls;
+using CalamityModCustomPublicPrivateFork.Schematics;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityModCustomPublicPrivateFork.Tiles.Astral;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith;
+using CalamityModCustomPublicPrivateFork.Tiles.AstralDesert;
+using CalamityModCustomPublicPrivateFork.Tiles.AstralSnow;
+using CalamityModCustomPublicPrivateFork.Tiles.Ores;
+using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -17,13 +17,13 @@ using Terraria.ModLoader;
 using Terraria.Utilities;
 using Terraria.WorldBuilding;
 
-namespace CalamityMod.World
+namespace CalamityModCustomPublicPrivateFork.World
 {
     public class AstralBiome
     {
         public static int YStart { get; set; } = (int)Main.worldSurface;
 
-        public static readonly SoundStyle MeteorSound = new("CalamityMod/Sounds/Custom/AstralStarFall");
+        public static readonly SoundStyle MeteorSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AstralStarFall");
         public static bool CanAstralMeteorSpawn()
         {
             int astralOreCount = 0;
@@ -196,7 +196,7 @@ namespace CalamityMod.World
                         // If the meteor actually dropped, post the message stating as such.
                         if (meteorDropped)
                         {
-                            string key = "Mods.CalamityMod.Status.Progression.AstralText";
+                            string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.AstralText";
                             Color messageColor = Color.Gold;
 
                             CalamityUtils.BroadcastLocalizedText(key, messageColor);

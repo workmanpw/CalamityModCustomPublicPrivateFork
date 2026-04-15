@@ -1,7 +1,7 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.NPCs;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,24 +12,24 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     [PierceResistException]
     public class PrismaticRay : BaseLaserbeamProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/Melee/PrismaticRayStart";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/PrismaticRayStart";
         public Player Owner => Main.player[Projectile.owner];
 
         public override Texture2D LaserBeginTexture => Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/PrismaticRayMid", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/PrismaticRayEnd", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/PrismaticRayMid", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/PrismaticRayEnd", AssetRequestMode.ImmediateLoad).Value;
         public override float MaxScale => 5f;
         public override float MaxLaserLength => 2400f;
         public override float Lifetime => 360f;
         public override Color LaserOverlayColor => Main.DiscoColor;
 
-        public static readonly SoundStyle HitSound = new SoundStyle("CalamityMod/Sounds/Item/ExobladeDashImpact") with { Volume = 0.8f };
+        public static readonly SoundStyle HitSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/ExobladeDashImpact") with { Volume = 0.8f };
         public int HitSoundCooldown = 0;
 
         public override void SetStaticDefaults()
@@ -117,8 +117,8 @@ namespace CalamityMod.Projectiles.Melee
                 drawPoints[i] = Vector2.Lerp(Projectile.Center, laserEnd, i / (float)(drawPoints.Length - 1f));
 
             GameShaders.Misc["CalamityMod:ArtemisLaser"].UseColor(Main.DiscoColor);
-            GameShaders.Misc["CalamityMod:ArtemisLaser"].UseImage1(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/MeltyNoise"));
-            GameShaders.Misc["CalamityMod:ArtemisLaser"].UseImage2(ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/LeviathanBomb"));
+            GameShaders.Misc["CalamityMod:ArtemisLaser"].UseImage1(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/MeltyNoise"));
+            GameShaders.Misc["CalamityMod:ArtemisLaser"].UseImage2(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/LeviathanBomb"));
 
             PrimitiveRenderer.RenderTrail(drawPoints, new(LaserWidthFunction, LaserColorFunction, shader: GameShaders.Misc["CalamityMod:ArtemisLaser"]), 60);
             Main.spriteBatch.ExitShaderRegion();

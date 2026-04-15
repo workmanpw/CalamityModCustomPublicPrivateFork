@@ -1,9 +1,9 @@
-﻿using CalamityMod.NPCs.AcidRain;
+using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Critters
+namespace CalamityModCustomPublicPrivateFork.Items.Critters
 {
     public class BabyFlakCrabItem : ModItem, ILocalizedModType
     {

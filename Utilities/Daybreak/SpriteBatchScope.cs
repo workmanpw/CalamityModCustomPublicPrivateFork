@@ -1,9 +1,9 @@
-﻿#nullable enable
+#nullable enable
 
 using System;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityMod.Utilities.Daybreak;
+namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
 
 /// <summary>
 ///     Starts a <see cref="SpriteBatch"/> and caches its old start parameters
@@ -25,10 +25,11 @@ internal readonly struct SpriteBatchScope : IDisposable
     {
         this.spriteBatch = spriteBatch;
 
-        if (!spriteBatch.beginCalled)
-        {
-            return;
-        }
+        // SpriteBatch.beginCalled no longer exists in current tModLoader
+        // if (!spriteBatch.beginCalled)
+        // {
+        //     return;
+        // }
 
         spriteBatch.End(out var old);
         oldState = old;

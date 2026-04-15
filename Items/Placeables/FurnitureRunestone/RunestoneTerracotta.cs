@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureRunestone
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureRunestone
 {
     public class RunestoneTerracotta : ModItem, ILocalizedModType
     {

@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Materials
+namespace CalamityModCustomPublicPrivateFork.Items.Materials
 {
     [LegacyName("EbonianGel")]
     public class BlightedGel : ModItem, ILocalizedModType
@@ -27,7 +27,7 @@ namespace CalamityMod.Items.Materials
         {
             if (Item.notAmmo)
             {
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Materials/BlightedGelRed").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Materials/BlightedGelRed").Value;
                 spriteBatch.Draw(texture, position, frame, Color.White, 0f, origin, scale, SpriteEffects.None, 0);
             }
             return !Item.notAmmo;
@@ -37,7 +37,7 @@ namespace CalamityMod.Items.Materials
         {
             if (Item.notAmmo)
             {
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Materials/BlightedGelRed").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Materials/BlightedGelRed").Value;
                 spriteBatch.Draw(texture, Item.position - Main.screenPosition, new Rectangle(0, 0, Item.width, Item.height), lightColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0);
             }
             return !Item.notAmmo;

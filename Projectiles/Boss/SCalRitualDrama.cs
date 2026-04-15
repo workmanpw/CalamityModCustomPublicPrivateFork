@@ -1,20 +1,20 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.NPCs.Cryogen;
-using CalamityMod.NPCs.SupremeCalamitas;
-using CalamityMod.Particles;
-using CalamityMod.Skies;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
+using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Skies;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class SCalRitualDrama : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public ref float Time => ref Projectile.ai[0];
         public const int TotalRitualTime = 270;
         public override void SetStaticDefaults()

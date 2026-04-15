@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Ranged;
+using System;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,16 +9,16 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     [LegacyName("PaintballBlaster")]
     public class SpeedBlaster : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Ranged";
-        public static readonly SoundStyle Shot = new("CalamityMod/Sounds/Item/Splatshot") { PitchVariance = 0.3f, Volume = 3.5f };
-        public static readonly SoundStyle Dash = new("CalamityMod/Sounds/Item/SplatshotDash") { PitchVariance = 0.3f, Volume = 5f };
-        public static readonly SoundStyle ShotBig = new("CalamityMod/Sounds/Item/SplatshotBig") { PitchVariance = 0.3f, Volume = 2f };
-        public static readonly SoundStyle Empty = new("CalamityMod/Sounds/Item/DudFire") { PitchVariance = 0.3f, Volume = 0.7f };
+        public static readonly SoundStyle Shot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/Splatshot") { PitchVariance = 0.3f, Volume = 3.5f };
+        public static readonly SoundStyle Dash = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SplatshotDash") { PitchVariance = 0.3f, Volume = 5f };
+        public static readonly SoundStyle ShotBig = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SplatshotBig") { PitchVariance = 0.3f, Volume = 2f };
+        public static readonly SoundStyle Empty = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire") { PitchVariance = 0.3f, Volume = 0.7f };
 
         public static float DashShotDamageMult = 4.5f;
         public static int DashCooldown = 300; // Also dictates how long shots are boosted (frames)

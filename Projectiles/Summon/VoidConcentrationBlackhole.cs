@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class VoidConcentrationBlackhole : ModProjectile, ILocalizedModType
     {

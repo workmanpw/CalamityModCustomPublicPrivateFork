@@ -1,6 +1,6 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,13 +8,13 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class TauCannonBolt : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public Color turquoiseColor = Color.MediumTurquoise;
         public Color coralColor = Color.Coral;
 
@@ -45,7 +45,7 @@ namespace CalamityMod.Projectiles.Ranged
                 trailDust.color = Main.rand.NextBool(3) ? coralColor : turquoiseColor;
             }
 
-            Particle orb = new CustomSpark(Projectile.Center, Projectile.velocity, "CalamityMod/Projectiles/StarProj",false, 2, 1f, Color.Lerp(turquoiseColor, Color.White, 0.7f), new Vector2(1f, 1f));
+            Particle orb = new CustomSpark(Projectile.Center, Projectile.velocity, "CalamityModCustomPublicPrivateFork/Projectiles/StarProj",false, 2, 1f, Color.Lerp(turquoiseColor, Color.White, 0.7f), new Vector2(1f, 1f));
             GeneralParticleHandler.SpawnParticle(orb);
 
             if (Projectile.ai[2] == 5)
@@ -75,7 +75,7 @@ namespace CalamityMod.Projectiles.Ranged
 
         public override bool PreDraw(ref Color lightColor)
         {
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ZapTrail"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ZapTrail"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(WidthFunction, ColorFunction, (_,_) => Projectile.Size * 0.5f, shader: GameShaders.Misc["CalamityMod:TrailStreak"]));
             return false;
         }

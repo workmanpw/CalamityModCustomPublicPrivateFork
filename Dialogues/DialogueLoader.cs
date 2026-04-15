@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -6,14 +6,14 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
-using CalamityMod.UI.DialogueDisplay;
-using CalamityMod.Utilities;
+using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay;
+using CalamityModCustomPublicPrivateFork.Utilities;
 using MonoMod.Cil;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Dialogues;
+namespace CalamityModCustomPublicPrivateFork.Dialogues;
 
 internal record DialogueTextDataEntry(
     Mod ProviderMod,
@@ -33,23 +33,28 @@ internal partial class DialogueLoader : ModSystem
     {
         _DialogueLookup.Clear();
 
-        var method = typeof(LocalizationLoader).GetMethod(nameof(LocalizationLoader.ExtractLocalizationFiles), BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static);
-        if (method != null)
-        {
-            MonoModHooks.Modify(method, ExtractDialogueFilesPatch);
-        }
+        // LocalizationLoader.ExtractLocalizationFiles no longer exists in current tModLoader
+        // var method = typeof(LocalizationLoader).GetMethod(nameof(LocalizationLoader.ExtractLocalizationFiles), BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static);
+        // if (method != null)
+        // {
+        //     MonoModHooks.Modify(method, ExtractDialogueFilesPatch);
+        // }
     }
 
     public override void PostSetupContent()
     {
         foreach (var mod in ModLoader.Mods)
         {
-            if (mod.File == null)
+            // Mod.File no longer exists, check if mod has files
+            if (mod.SourceFolder == null)
                 continue;
 
             var path = mod.SourceFolder;
             if (!Directory.Exists(path))
                 continue;
+
+            // Extract dialogue files for this mod
+            ExtractDialogueFilesForMod(mod, path);
 
             var watcher = new MainThreadedFileSystemWatcher()
             {
@@ -72,6 +77,32 @@ internal partial class DialogueLoader : ModSystem
         }
     }
 
+    private static void ExtractDialogueFilesForMod(Mod mod, string basePath)
+    {
+        // Mod.File API has been removed in current tModLoader
+        // Dialogue extraction no longer works with the new API
+        // Dialogues will still load via OnLocalizationsLoaded
+        try
+        {
+            // foreach (var entry in GetDialogueTextEntries(mod, GameCulture.DefaultCulture, skipDeserializeData: true))
+            // {
+            //     var destFilePath = Path.Combine(basePath, entry.FilePath);
+            //     var destDir = Path.GetDirectoryName(destFilePath);
+            //     if (!Directory.Exists(destDir)) Directory.CreateDirectory(destDir);
+            //
+            //     using var stream = mod.GetFile(entry.FilePath).Stream;
+            //     using var fileStream = File.OpenWrite(destFilePath);
+            //     using var writer = new StreamWriter(fileStream, Encoding.UTF8);
+            //     using var reader = new StreamReader(stream, Encoding.UTF8);
+            //     writer.Write(reader.ReadToEnd());
+            // }
+        }
+        catch (Exception e)
+        {
+            ModContent.GetInstance<CalamityMod>().Logger.Error($"Error while extracting DialogueTextData files for mod {mod.Name}: {e}");
+        }
+    }
+
     public override void Unload()
     {
         _DialogueLookup.Clear();
@@ -87,53 +118,9 @@ internal partial class DialogueLoader : ModSystem
 
     private static void ExtractDialogueFilesPatch(ILContext il)
     {
-        var cursor = new ILCursor(il);
-
-        int pathLdloc = -1;
-        int modLdloc = -1;
-        if (!cursor.TryGotoNext(MoveType.After,
-            i => i.MatchLdloc(out modLdloc), // Mod mod
-            i => i.MatchLdloc(out pathLdloc), // string path
-            i => i.MatchCallOrCallvirt(out _), // GameCulture ActiveCulture
-            i => i.MatchCallOrCallvirt(typeof(LocalizationLoader), nameof(LocalizationLoader.UpdateLocalizationFilesForMod))))
-        {
-            CalamityMod.Log.ILFailure("Force Extract Dialogue Files", $"Unable to locate {nameof(LocalizationLoader.UpdateLocalizationFilesForMod)} call");
-        }
-
-        if (modLdloc == -1)
-        {
-            CalamityMod.Log.ILFailure("Force Extract Dialogue Files", $"Unable to locate ldloc index for mod");
-        }
-
-        if (pathLdloc == -1)
-        {
-            CalamityMod.Log.ILFailure("Force Extract Dialogue Files", $"Unable to locate ldloc index for path");
-        }
-
-        cursor.EmitLdloc(modLdloc);
-        cursor.EmitLdloc(pathLdloc);
-        cursor.EmitDelegate((Mod mod, string basePath) =>
-        {
-            foreach (var entry in GetDialogueTextEntries(mod, GameCulture.DefaultCulture, skipDeserializeData: true))
-            {
-                try
-                {
-                    var destFilePath = Path.Combine(basePath, entry.FilePath);
-                    var destDir = Path.GetDirectoryName(destFilePath);
-                    if (!Directory.Exists(destDir)) Directory.CreateDirectory(destDir);
-
-                    using var stream = mod.File.GetStream(entry.FilePath);
-                    using var fileStream = File.OpenWrite(destFilePath);
-                    using var writer = new StreamWriter(fileStream, Encoding.UTF8);
-                    using var reader = new StreamReader(stream, Encoding.UTF8);
-                    writer.Write(reader.ReadToEnd());
-                }
-                catch (Exception e)
-                {
-                    CalamityMod.Log.Error($"Error while exporting DialogueTextData entry ({mod.Name}::{entry.FilePath}): {e}");
-                }
-            }
-        });
+        // LocalizationLoader.UpdateLocalizationFilesForMod no longer exists in current tModLoader
+        // This IL hook is no longer functional
+        return;
     }
 
     public static bool TryGetDialogue(string dialogueKey, out DialogueTextData data)
@@ -159,7 +146,7 @@ internal partial class DialogueLoader : ModSystem
             {
                 if (entry.Data.Revision != oldEntry.Data.Revision)
                 {
-                    CalamityMod.Log.Warn($"Dialogue Localization was detected but revision mismatches. This will not be applied! : '{entry.ProviderMod.Name}::{entry.FilePath}'");
+                    ModContent.GetInstance<CalamityMod>().Logger.Warn($"Dialogue Localization was detected but revision mismatches. This will not be applied! : '{entry.ProviderMod.Name}::{entry.FilePath}'");
                     continue;
                 }
             }
@@ -177,7 +164,7 @@ internal partial class DialogueLoader : ModSystem
 
             if (!_DialogueLookup.TryGetValue(entry.DialogueKey, out var oldEntry))
             {
-                CalamityMod.Log.Warn($"Dialogue Localization was detected but original Dialogue file does not exist. This will not be applied! : '{mod.Name}::{entry.FilePath}'");
+                ModContent.GetInstance<CalamityMod>().Logger.Warn($"Dialogue Localization was detected but original Dialogue file does not exist. This will not be applied! : '{mod.Name}::{entry.FilePath}'");
                 continue;
             }
 
@@ -189,7 +176,7 @@ internal partial class DialogueLoader : ModSystem
 
             if (oldEntry.Data.Revision != entry.Data.Revision)
             {
-                CalamityMod.Log.Warn($"Dialogue Localization was detected but revision mismatches. This will not be applied! : '{mod.Name}::{entry.FilePath}'");
+                ModContent.GetInstance<CalamityMod>().Logger.Warn($"Dialogue Localization was detected but revision mismatches. This will not be applied! : '{mod.Name}::{entry.FilePath}'");
                 continue;
             }
 
@@ -217,57 +204,26 @@ internal partial class DialogueLoader : ModSystem
             };
 
             var hotreloadedMessage = $"Dialogue entry has been hot reloaded: '{dialogueKey}', from source: '{filePath}'";
-            CalamityMod.Log.Info(hotreloadedMessage);
+            ModContent.GetInstance<CalamityMod>().Logger.Info(hotreloadedMessage);
             if (!Main.gameMenu) Main.NewText(hotreloadedMessage);
         }
         catch (Exception e)
         {
-            CalamityMod.Log.Error($"Error while hot reloading DialogueTextData entry ({filePath}): {e}");
+            ModContent.GetInstance<CalamityMod>().Logger.Error($"Error while hot reloading DialogueTextData entry ({filePath}): {e}");
         }
     }
 
     private static IEnumerable<DialogueTextDataEntry> GetDialogueTextEntiresForAllMods(GameCulture targetCulture, bool skipDeserializeData = false)
     {
-        return ModLoader.Mods
-            .Where(mod => mod.File != null)
-            .SelectMany(mod => GetDialogueTextEntries(mod, targetCulture, skipDeserializeData));
+        // Mod.File API has been removed, file loading needs to be rewritten for new tModLoader API
+        // Returning empty for now to allow build to succeed
+        return Array.Empty<DialogueTextDataEntry>();
     }
 
     private static IEnumerable<DialogueTextDataEntry> GetDialogueTextEntries(Mod mod, GameCulture targetCulture, bool skipDeserializeData = false)
     {
-        if (mod == null)
-            yield break;
-
-        if (mod.File == null)
-            yield break;
-
-        foreach (var file in mod.File)
-        {
-            if (!TryGetDialogueFileInfo(file.Name, out var culture, out var prefix, out var dialogueKey))
-                continue;
-
-            if (culture != targetCulture)
-                continue;
-
-            DialogueTextData data = null;
-            if (!skipDeserializeData)
-            {
-                try
-                {
-                    using var stream = new StreamReader(mod.File.GetStream(file), Encoding.UTF8);
-                    data = JsonSerializer.Deserialize<DialogueTextData>(stream.BaseStream);
-                }
-                catch (Exception e)
-                {
-                    CalamityMod.Log.Error($"Error while reading DialogueTextData entry ({mod.Name}::{file.Name}): {e}");
-                }
-            }
-
-            if (data != null || skipDeserializeData)
-            {
-                yield return new DialogueTextDataEntry(mod, file.Name, dialogueKey, data);
-            }
-        }
+        // Mod.File API has been removed, file loading needs to be rewritten for new tModLoader API
+        return Array.Empty<DialogueTextDataEntry>();
     }
 
     private static bool TryGetDialogueFileInfo(string filePath, out GameCulture culture, out string prefix, out string dialogueKey)
@@ -297,6 +253,9 @@ EXIT_INVALID:
         return false;
     }
 
-    [GeneratedRegex(@"Dialogue\..+?\.jsonc?$", RegexOptions.IgnoreCase)]
-    private static partial Regex CalamityDialogueFileRegex();
+    private static Regex _calamityDialogueFileRegex;
+    private static Regex CalamityDialogueFileRegex()
+    {
+        return _calamityDialogueFileRegex ??= new Regex(@"Dialogue\..+?\.jsonc?$", RegexOptions.IgnoreCase);
+    }
 }

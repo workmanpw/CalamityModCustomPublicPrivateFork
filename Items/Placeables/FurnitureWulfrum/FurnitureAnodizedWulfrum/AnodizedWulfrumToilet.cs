@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureWulfrum.FurnitureAnodizedWulfrum
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureWulfrum.FurnitureAnodizedWulfrum
 {
     public class AnodizedWulfrumToilet : ModItem, ILocalizedModType
     {

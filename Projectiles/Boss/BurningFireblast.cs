@@ -1,8 +1,8 @@
-﻿using CalamityMod.Events;
-using CalamityMod.Graphics.Metaballs;
-using CalamityMod.NPCs.CalClone;
-using CalamityMod.Particles;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
+using CalamityModCustomPublicPrivateFork.NPCs.CalClone;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -10,14 +10,14 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class BurningFireblast
         : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
-        public static readonly SoundStyle ImpactSound = new("CalamityMod/Sounds/Custom/SCalSounds/BrimstoneFireblastImpact");
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public static readonly SoundStyle ImpactSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/BrimstoneFireblastImpact");
         public int DartDamage = 0;
         public bool withinRange = false;
         public bool setLifetime = false;

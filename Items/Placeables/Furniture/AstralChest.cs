@@ -1,8 +1,8 @@
-﻿using CalamityMod.Tiles.Astral;
+using CalamityModCustomPublicPrivateFork.Tiles.Astral;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Furniture
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture
 {
     public class AstralChest : ModItem, ILocalizedModType
     {

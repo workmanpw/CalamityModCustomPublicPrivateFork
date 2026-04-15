@@ -1,9 +1,9 @@
-﻿using CalamityMod.NPCs.Polterghast;
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.NPCs.Polterghast;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class PolterghastSilentMusicScene : BaseMusicSceneEffect
     {

@@ -1,10 +1,10 @@
-﻿using CalamityMod.Enums;
+using CalamityModCustomPublicPrivateFork.Enums;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 
-namespace CalamityMod.CalPlayer.Dashes
+namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
 {
     public class CounterScarfDash : PlayerDashEffect
     {

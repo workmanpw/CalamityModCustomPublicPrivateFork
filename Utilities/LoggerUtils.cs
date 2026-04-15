@@ -1,6 +1,6 @@
-﻿using log4net;
+using log4net;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public static partial class CalamityUtils
     {

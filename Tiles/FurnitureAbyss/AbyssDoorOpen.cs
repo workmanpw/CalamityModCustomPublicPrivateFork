@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Placeables.FurnitureAbyss;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAbyss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureAbyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAbyss
 {
     public class AbyssDoorOpen : ModTile
     {

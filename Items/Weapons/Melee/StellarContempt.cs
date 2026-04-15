@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     [LegacyName("StellarContemptMelee", "StellarContemptRogue")]
     public class StellarContempt : ModItem, ILocalizedModType

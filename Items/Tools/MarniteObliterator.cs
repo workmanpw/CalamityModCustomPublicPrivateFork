@@ -1,16 +1,16 @@
-﻿using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Tools
+namespace CalamityModCustomPublicPrivateFork.Items.Tools
 {
     public class MarniteObliterator : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Tools";
-        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/MarniteObliteratorUse") { PitchVariance = 0.3f };
+        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MarniteObliteratorUse") { PitchVariance = 0.3f };
 
         public static int ArmorPenetration = 5;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(ArmorPenetration);

@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.ILEditing;
+using System;
+using CalamityModCustomPublicPrivateFork.ILEditing;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.GameContent.Liquid;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems.Graphic.LiquidSystem
+namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
 {
     [Autoload(Side = ModSide.Client)]
     public sealed partial class ModLavaStyleSystem : ModSystem
@@ -50,7 +50,9 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
             Textures[0] = LiquidRenderer.Instance._liquidTextures[1];
             SlopeTextures[0] = TextureAssets.LiquidSlope[1];
             BlockTextures[0] = TextureAssets.Liquid[1];
-            WaterfallTextures[0] = Main.instance.waterfallManager.waterfallTexture[1];
+            // WaterfallManager.waterfallTexture is private and no longer accessible
+            // WaterfallTextures[0] = Main.instance.waterfallManager.waterfallTexture[1];
+            WaterfallTextures[0] = null; // Will need to be updated with new API
 
             TextureArrayReady = true;
         }

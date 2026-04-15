@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Alcohol
+namespace CalamityModCustomPublicPrivateFork.Buffs.Alcohol
 {
     public class OldFashionedBuff : ModBuff
     {

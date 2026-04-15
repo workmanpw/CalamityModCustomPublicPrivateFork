@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class TrueAridGrandeurShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/Melee/MendedBiomeBlade_AridGrandeurExtra";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_AridGrandeurExtra";
         private bool initialized = false;
         Vector2 direction = Vector2.Zero;
         public ref float Shred => ref Projectile.ai[0];
@@ -78,7 +78,7 @@ namespace CalamityMod.Projectiles.Melee
 
             for (int i = 0; i < 4; i++) //Draw extra copies
             {
-                var tex = Request<Texture2D>("CalamityMod/Projectiles/Melee/MendedBiomeBlade_AridGrandeurExtra").Value;
+                var tex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_AridGrandeurExtra").Value;
 
                 float drawAngle = direction.ToRotation();
 

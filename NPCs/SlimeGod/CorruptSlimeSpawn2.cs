@@ -1,14 +1,14 @@
-﻿using System;
-using CalamityMod.Events;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.SlimeGod
+namespace CalamityModCustomPublicPrivateFork.NPCs.SlimeGod
 {
     public class CorruptSlimeSpawn2 : ModNPC
     {

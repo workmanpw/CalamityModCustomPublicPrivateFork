@@ -1,8 +1,8 @@
-﻿using System.Linq;
+using System.Linq;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.BaseTiles
+namespace CalamityModCustomPublicPrivateFork.Tiles.BaseTiles
 {
     public abstract class DoubleDirectionalTile : ModTile
     {

@@ -1,10 +1,10 @@
-﻿using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Dyes
+namespace CalamityModCustomPublicPrivateFork.Items.Dyes
 {
     public class ProfanedMoonlightDye : BaseDye
     {

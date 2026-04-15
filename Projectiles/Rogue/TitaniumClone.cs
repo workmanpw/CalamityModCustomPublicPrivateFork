@@ -1,13 +1,13 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class TitaniumClone : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/TitaniumShuriken";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/TitaniumShuriken";
 
         private static float RotationIncrement = 0.22f;
         public override void SetStaticDefaults()

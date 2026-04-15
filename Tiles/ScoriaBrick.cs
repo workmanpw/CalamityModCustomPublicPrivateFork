@@ -1,11 +1,11 @@
-﻿using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles
+namespace CalamityModCustomPublicPrivateFork.Tiles
 {
     [LegacyName("ChaoticBrick")]
     public class ScoriaBrick : GlowMaskTile

@@ -1,8 +1,8 @@
-﻿using CalamityMod.Tiles.FurnitureMonolith;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureMonolith
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMonolith
 {
     public class MonolithDoor : ModItem, ILocalizedModType
     {

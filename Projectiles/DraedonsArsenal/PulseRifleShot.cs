@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,12 +10,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class PulseRifleShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public ref float time => ref Projectile.ai[0];
         public bool isBeam => Projectile.ai[1] == 0;
@@ -85,7 +85,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             {
                 if (targetDist < 1400f && time > 0) // The main beam
                 {
-                    Particle mainBeam = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomCircle", false, 35, 0.55f * Projectile.scale, Effects.ArsenalEffects.ArsenalPulseColor * 0.5f, new Vector2(0.6f, 1f), true, true, shrinkSpeed: 0.2f, glowCenterScale: 0.7f, glowOpacity: 0.4f);
+                    Particle mainBeam = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 35, 0.55f * Projectile.scale, Effects.ArsenalEffects.ArsenalPulseColor * 0.5f, new Vector2(0.6f, 1f), true, true, shrinkSpeed: 0.2f, glowCenterScale: 0.7f, glowOpacity: 0.4f);
                     GeneralParticleHandler.SpawnParticle(mainBeam);
                     Projectile.scale += 0.007f;
 
@@ -156,10 +156,10 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                         if (startAttackEffects)
                         {
                             Projectile.velocity = Utils.DirectionTo(Projectile.Center, targeted.Center) * 10;
-                            SoundStyle pulse = new("CalamityMod/Sounds/Item/PulseSound");
+                            SoundStyle pulse = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PulseSound");
                             SoundEngine.PlaySound(pulse with { Volume = 0.35f, Pitch = Math.Max(0.5f, Main.rand.NextFloat(0.1f, 0.3f) + Projectile.numHits * 0.2f), MaxInstances = 5 }, Projectile.Center);
 
-                            Particle pulse3 = new CustomSpark(Projectile.Center, Projectile.velocity * 0.5f, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 13, 0.05f * Projectile.scale, Effects.ArsenalEffects.ArsenalPulseColor, new Vector2(1.2f, 0.7f), shrinkSpeed: 0.4f);
+                            Particle pulse3 = new CustomSpark(Projectile.Center, Projectile.velocity * 0.5f, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 13, 0.05f * Projectile.scale, Effects.ArsenalEffects.ArsenalPulseColor, new Vector2(1.2f, 0.7f), shrinkSpeed: 0.4f);
                             GeneralParticleHandler.SpawnParticle(pulse3);
 
                             for (int k = 0; k < 6; k++)
@@ -185,7 +185,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                 float squash = Utils.GetLerpValue(1, 3, Projectile.velocity.Length(), true);
                 if (targetDist < 1400f && squash > 0.1f && time > 5) // The trail
                 {
-                    Particle trail = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityMod/Particles/DualTrail", false, 13, 0.075f, Effects.ArsenalEffects.ArsenalPulseColor * 0.6f * squash, new Vector2(1 - 0.15f * squash, 1.5f), true, false, shrinkSpeed: 0.2f * squash);
+                    Particle trail = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/DualTrail", false, 13, 0.075f, Effects.ArsenalEffects.ArsenalPulseColor * 0.6f * squash, new Vector2(1 - 0.15f * squash, 1.5f), true, false, shrinkSpeed: 0.2f * squash);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
             }
@@ -240,9 +240,9 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                     }
                 }
                 Vector2 vel = Projectile.velocity.SafeNormalize(Vector2.UnitX);
-                Particle pulse3 = new CustomSpark(Projectile.Center, vel * 7, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 16, 0.065f, Effects.ArsenalEffects.ArsenalPulseColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.2f);
+                Particle pulse3 = new CustomSpark(Projectile.Center, vel * 7, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 16, 0.065f, Effects.ArsenalEffects.ArsenalPulseColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.2f);
                 GeneralParticleHandler.SpawnParticle(pulse3);
-                Particle pulse4 = new CustomSpark(Projectile.Center, vel * 13, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 12, 0.04f, Effects.ArsenalEffects.ArsenalPulseColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.2f);
+                Particle pulse4 = new CustomSpark(Projectile.Center, vel * 13, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 12, 0.04f, Effects.ArsenalEffects.ArsenalPulseColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.2f);
                 GeneralParticleHandler.SpawnParticle(pulse4);
             }
             // If it's hit targeted enemies enough, kill it
@@ -254,7 +254,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
         {
             if (isBeam)
                 return false;
-            Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+            Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
             Vector2 squash = new Vector2(Utils.Remap(Projectile.velocity.Length(), 5, 10, 1, 0.6f), Utils.Remap(Projectile.velocity.Length(), 5, 10, 1, 2f));
             float timeleftFade = (float)Math.Pow(Utils.GetLerpValue(0, 40 * Projectile.extraUpdates, Projectile.timeLeft, true), 5);
 

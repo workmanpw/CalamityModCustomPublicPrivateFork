@@ -1,7 +1,7 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.DraedonMisc;
-using CalamityMod.Items.Placeables.DraedonStructures;
-using CalamityMod.TileEntities;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -14,7 +14,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.DraedonStructures
+namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
 {
     public class PowerCellFactory : ModTile
     {

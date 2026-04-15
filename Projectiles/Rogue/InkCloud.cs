@@ -1,15 +1,15 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class InkCloud : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj"; // Will get overwritten by PreDraw
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj"; // Will get overwritten by PreDraw
         public override void SetDefaults()
         {
             Projectile.width = 36;
@@ -44,7 +44,7 @@ namespace CalamityMod.Projectiles.Rogue
 
         public override bool PreDraw(ref Color lightColor)
         {
-            string texPath = "CalamityMod/Projectiles/Rogue/InkCloud" + Projectile.ai[0].ToString();
+            string texPath = "CalamityModCustomPublicPrivateFork/Projectiles/Rogue/InkCloud" + Projectile.ai[0].ToString();
             Texture2D tex = ModContent.Request<Texture2D>(texPath).Value;
 
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, tex.Size() / 2f, Projectile.scale, SpriteEffects.None);

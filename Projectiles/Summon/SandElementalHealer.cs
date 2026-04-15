@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.CalPlayer;
-using CalamityMod.Projectiles.Healing;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class SandElementalHealer : ModProjectile, ILocalizedModType
     {

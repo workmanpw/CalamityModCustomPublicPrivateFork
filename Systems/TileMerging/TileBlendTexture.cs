@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     [Autoload(Side = ModSide.Client)]
     public abstract partial class TileBlendTexture : ModTexturedType

@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Ores
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Ores
 {
     [LegacyName("CharredOre")]
     public class InfernalSuevite : ModItem, ILocalizedModType

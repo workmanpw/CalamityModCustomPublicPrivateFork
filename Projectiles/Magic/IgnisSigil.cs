@@ -1,11 +1,11 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.Audio;
 using Terraria.ID;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class IgnisSigil : ModProjectile, ILocalizedModType
     {
@@ -74,7 +74,7 @@ namespace CalamityMod.Projectiles.Magic
         {
             // Get textures
             Texture2D mainTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D blankTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/BlankSigil").Value;
+            Texture2D blankTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/BlankSigil").Value;
 
             float finalScale = Projectile.scale;
             float alphaOpacity = 1f - (Projectile.alpha / 255f);

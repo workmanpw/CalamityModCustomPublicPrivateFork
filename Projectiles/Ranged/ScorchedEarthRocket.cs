@@ -1,13 +1,13 @@
-﻿using System.IO;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Typeless;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class ScorchedEarthRocket : ModProjectile, ILocalizedModType
     {
@@ -16,7 +16,7 @@ namespace CalamityMod.Projectiles.Ranged
         public bool BonusEffectMode;
         public bool HasHit = false;
         public bool SetLifetime = false;
-        public static readonly SoundStyle RocketExplosion = new("CalamityMod/Sounds/Item/AnomalysNanogunMPFBExplosion");
+        public static readonly SoundStyle RocketExplosion = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AnomalysNanogunMPFBExplosion");
         public ref float RocketID => ref Projectile.ai[0];
 
         public override void SetStaticDefaults()
@@ -62,7 +62,7 @@ namespace CalamityMod.Projectiles.Ranged
             //Ensures the prime sound only plays once
             if (time == 24)
             {
-                SoundStyle PrimeSound = new("CalamityMod/Sounds/Item/ScorchedEarthShot", 3) { Volume = 0.25f, MaxInstances = 8 };
+                SoundStyle PrimeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ScorchedEarthShot", 3) { Volume = 0.25f, MaxInstances = 8 };
                 SoundEngine.PlaySound(PrimeSound with { Pitch = -0.1f }, Projectile.Center);
             }
             //Be VERY CAREFUL changing this. The rocket quickly gains speed for a very limited amount of time to make sure it doesn't go too fast
@@ -187,15 +187,15 @@ namespace CalamityMod.Projectiles.Ranged
                 for (int i = 0; i < 2; i++)
                 {
                     //Explosion effect
-                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Main.rand.NextBool() ? Color.OrangeRed : Color.DarkGoldenrod * 0.8f, "CalamityMod/Particles/ShineExplosion1", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.2f, 20, true, 1.4f);
+                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Main.rand.NextBool() ? Color.OrangeRed : Color.DarkGoldenrod * 0.8f, "CalamityModCustomPublicPrivateFork/Particles/ShineExplosion1", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.2f, 20, true, 1.4f);
                     GeneralParticleHandler.SpawnParticle(blastRing);
-                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.18f, 20, true, 1f);
+                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.18f, 20, true, 1f);
                     GeneralParticleHandler.SpawnParticle(blastRing2);
-                    Particle blastRing3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Red, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f, 1.8f, 25, true);
+                    Particle blastRing3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Red, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f, 1.8f, 25, true);
                     GeneralParticleHandler.SpawnParticle(blastRing3);
-                    Particle blastRing4 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.5f, 0.8f, 25, true);
+                    Particle blastRing4 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.5f, 0.8f, 25, true);
                     GeneralParticleHandler.SpawnParticle(blastRing4);
-                    Particle blastRing5 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.13f, 20, true, 1f);
+                    Particle blastRing5 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.13f, 20, true, 1f);
                     GeneralParticleHandler.SpawnParticle(blastRing5);
                 }
 

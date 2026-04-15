@@ -1,6 +1,6 @@
-﻿using System.IO;
-using CalamityMod.CalPlayer;
-using CalamityMod.Items.Accessories;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityMod.NPCs.Leviathan
+namespace CalamityModCustomPublicPrivateFork.NPCs.Leviathan
 {
     public class LeviathanStart : ModNPC
     {
@@ -67,7 +67,7 @@ namespace CalamityMod.NPCs.Leviathan
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.LeviathanStart")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.LeviathanStart")
             });
         }
 

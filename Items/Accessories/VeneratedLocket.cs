@@ -1,8 +1,8 @@
-﻿using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     public class VeneratedLocket : ModItem, ILocalizedModType
     {

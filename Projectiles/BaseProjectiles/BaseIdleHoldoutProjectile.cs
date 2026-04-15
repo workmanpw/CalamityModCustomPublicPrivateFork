@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.BaseProjectiles
+namespace CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles
 {
     public abstract class BaseIdleHoldoutProjectile : ModProjectile
     {

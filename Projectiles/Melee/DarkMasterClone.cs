@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class DarkMasterClone : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public Player Owner => Main.player[Projectile.owner];
         public Player clone;
@@ -137,7 +137,7 @@ namespace CalamityMod.Projectiles.Melee
             // draw the sword
             if (Owner.ItemAnimationActive && Owner.altFunctionUse != 2)
             {
-                Texture2D Sword = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/TheDarkMaster").Value;
+                Texture2D Sword = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/TheDarkMaster").Value;
                 Vector2 distToPlayer = Projectile.position - Owner.position;
                 Main.EntitySpriteDraw(Sword, (Vector2)Owner.HandPosition + distToPlayer - Main.screenPosition, null, lightColor, Owner.direction == clone.direction ? Owner.itemRotation : -Owner.itemRotation, new Vector2(clone.direction == 1 ? 0 : Sword.Width, Sword.Height), 1f, clone.direction == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally);
             }

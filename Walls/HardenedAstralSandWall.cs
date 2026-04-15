@@ -1,13 +1,13 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Walls
+namespace CalamityModCustomPublicPrivateFork.Walls
 {
     [LegacyName("HardenedAstralSandWallSafe")]
     public class HardenedAstralSandWall : ModWall
     {
-        public override string Texture => "CalamityMod/Walls/HardenedAstralSandWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/HardenedAstralSandWall";
 
         public override void SetStaticDefaults()
         {

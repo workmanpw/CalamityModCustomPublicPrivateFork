@@ -1,22 +1,22 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class SeekingScorcherProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/SeekingScorcher";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/SeekingScorcher";
 
         public static int WindupSwingTime = 24;
         public static int MaxAirtime = 60;
@@ -198,7 +198,7 @@ namespace CalamityMod.Projectiles.Melee
 
             SoundEngine.PlaySound(SeekingScorcher.HitSound, Projectile.Center);
 
-            Particle boom = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed * 0.6f, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.1f, 24, true);
+            Particle boom = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed * 0.6f, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.1f, 24, true);
             GeneralParticleHandler.SpawnParticle(boom);
 
             for (int i = 0; i < 10; i++)
@@ -220,7 +220,7 @@ namespace CalamityMod.Projectiles.Melee
                 for (int i = 0; i < 7; i++)
                 {
                     Vector2 maxScale = new Vector2(Main.rand.NextFloat(1.5f, 4f), Main.rand.NextFloat(0.6f, 1.5f));
-                    CustomPulse crystal = new CustomPulse(Projectile.Center, Vector2.One, Color.MistyRose, "CalamityMod/Particles/BlastCone", maxScale, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.5f, 18);
+                    CustomPulse crystal = new CustomPulse(Projectile.Center, Vector2.One, Color.MistyRose, "CalamityModCustomPublicPrivateFork/Particles/BlastCone", maxScale, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.5f, 18);
                     GeneralParticleHandler.SpawnParticle(crystal);
                 }
 
@@ -249,7 +249,7 @@ namespace CalamityMod.Projectiles.Melee
                 for (int i = 0; i < 9; i++)
                 {
                     Vector2 maxScale = new Vector2(Main.rand.NextFloat(2f, 4.5f), Main.rand.NextFloat(1.4f, 2f));
-                    CustomPulse crystal = new CustomPulse(Projectile.Center, Vector2.One, Color.MistyRose, "CalamityMod/Particles/BlastCone", maxScale, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.5f, 18);
+                    CustomPulse crystal = new CustomPulse(Projectile.Center, Vector2.One, Color.MistyRose, "CalamityModCustomPublicPrivateFork/Particles/BlastCone", maxScale, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.5f, 18);
                     GeneralParticleHandler.SpawnParticle(crystal);
                 }
 
@@ -348,13 +348,13 @@ namespace CalamityMod.Projectiles.Melee
 
             Particle explosion = new DetailedExplosion(Projectile.Center, Vector2.Zero, Color.LightPink, Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.65f + 0.1f, 25);
             GeneralParticleHandler.SpawnParticle(explosion);
-            Particle explosion2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.MediumVioletRed, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.2f, 30);
+            Particle explosion2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.MediumVioletRed, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.2f, 30);
             GeneralParticleHandler.SpawnParticle(explosion2);
-            Particle explosion3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orchid, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.2f, 30);
+            Particle explosion3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orchid, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.2f, 30);
             GeneralParticleHandler.SpawnParticle(explosion3);
-            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 6f, 25, true);
+            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 6f, 25, true);
             GeneralParticleHandler.SpawnParticle(blastRing);
-            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0, 0.2f, 25, true, 0.9f);
+            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0, 0.2f, 25, true, 0.9f);
             GeneralParticleHandler.SpawnParticle(blastRing2);
 
             for (int i = 0; i < 24; i++)
@@ -364,12 +364,12 @@ namespace CalamityMod.Projectiles.Melee
             }
             for (int i = 0; i < 2; i++)
             {
-                Particle blast = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orchid, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.3f, 1.5f, 25, true);
+                Particle blast = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orchid, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.3f, 1.5f, 25, true);
                 GeneralParticleHandler.SpawnParticle(blast);
             }
             for (int i = 0; i < 2; i++)
             {
-                Particle blast2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.2f, 1.1f, 25, true);
+                Particle blast2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.2f, 1.1f, 25, true);
                 GeneralParticleHandler.SpawnParticle(blast2);
             }
         }

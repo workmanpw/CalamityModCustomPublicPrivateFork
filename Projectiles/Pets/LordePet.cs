@@ -1,5 +1,5 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.NPCs.Other;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.NPCs.Other;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,12 +7,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Pets
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 {
     public class LordePet : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Pets";
-        public override string Texture => "CalamityMod/NPCs/Other/THELORDE";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/Other/THELORDE";
         public override void SetStaticDefaults()
         {
             Main.projPet[Type] = true;

@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureOtherworldly
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureOtherworldly
 {
     [LegacyName("OccultPiano")]
     public class OtherworldlyPiano : ModItem, ILocalizedModType

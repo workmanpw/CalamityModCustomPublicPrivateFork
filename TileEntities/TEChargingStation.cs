@@ -1,17 +1,17 @@
-﻿using System.IO;
+using System.IO;
 using System.Reflection;
-using CalamityMod.CalPlayer;
-using CalamityMod.Items;
-using CalamityMod.Items.DraedonMisc;
-using CalamityMod.Packets;
-using CalamityMod.Tiles.DraedonStructures;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items;
+using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.TileEntities
+namespace CalamityModCustomPublicPrivateFork.TileEntities
 {
     public class TEChargingStation : ModTileEntity
     {

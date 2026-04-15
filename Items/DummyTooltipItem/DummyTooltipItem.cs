@@ -1,8 +1,8 @@
-﻿using Terraria.ID;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items
+namespace CalamityModCustomPublicPrivateFork.Items
 {
     /* EXPLANATION:
     These items are made to facilitate tooltip reading and serve no other functions

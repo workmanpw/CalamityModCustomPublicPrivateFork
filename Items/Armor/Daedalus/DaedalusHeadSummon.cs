@@ -1,13 +1,13 @@
-﻿using CalamityMod.Buffs.Summon;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Daedalus
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Daedalus
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("DaedalusHeadgear")]

@@ -1,14 +1,14 @@
-﻿using System;
-using CalamityMod.Buffs.Mounts;
-using CalamityMod.Items;
-using CalamityMod.Projectiles.Summon.AndromedaUI;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.Mounts;
+using CalamityModCustomPublicPrivateFork.Items;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon.AndromedaUI;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class GiantIbanRobotOfDoom : ModProjectile, ILocalizedModType
     {
@@ -329,7 +329,7 @@ namespace CalamityMod.Projectiles.Summon
             {
                 if (Projectile.owner == Main.myPlayer)
                 {
-                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/MechGaussRifle"), Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MechGaussRifle"), Projectile.Center);
                     int damage = (int)player.GetTotalDamage<SummonDamageClass>().ApplyTo(LaserBaseDamage);
 
                     // 15NOV2024: Ozzatron: clamped mouse position unnecessary, only used for direction
@@ -352,7 +352,7 @@ namespace CalamityMod.Projectiles.Summon
         public void ExitChargeModeEarly(Player player)
         {
             RightIconCooldown = RightIconAttackTime;
-            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/MechGaussRifle"), Projectile.Center);
+            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MechGaussRifle"), Projectile.Center);
             SpecialAttackExplosionDust(player);
         }
         public void SpecialAttackExplosionDust(Player player)

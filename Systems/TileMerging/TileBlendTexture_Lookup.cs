@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
-using static CalamityMod.Systems.BlendSideFlags;
+using static CalamityModCustomPublicPrivateFork.Systems.BlendSideFlags;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public abstract partial class TileBlendTexture : ModTexturedType
     {

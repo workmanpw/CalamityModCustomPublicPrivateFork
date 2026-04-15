@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.NPCs.Providence;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.NPCs.Providence;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class HolySpear : ModProjectile, ILocalizedModType
     {

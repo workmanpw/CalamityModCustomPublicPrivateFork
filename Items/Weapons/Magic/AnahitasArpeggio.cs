@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     [LegacyName("SirensSong")]
     public class AnahitasArpeggio : ModItem, ILocalizedModType
@@ -16,9 +16,9 @@ namespace CalamityMod.Items.Weapons.Magic
         public new string LocalizationCategory => "Items.Weapons.Magic";
         public float RotationOffset;
 
-        public static readonly SoundStyle CapSound = new("CalamityMod/Sounds/Item/HarpLV6");
-        public static readonly SoundStyle EndSound = new("CalamityMod/Sounds/Item/HarpEnd");
-        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/Item/HarpNoteHit");
+        public static readonly SoundStyle CapSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HarpLV6");
+        public static readonly SoundStyle EndSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HarpEnd");
+        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HarpNoteHit");
         public override void SetDefaults()
         {
             Item.width = 56;

@@ -1,8 +1,8 @@
-﻿using CalamityMod.NPCs.Leviathan;
+using CalamityModCustomPublicPrivateFork.NPCs.Leviathan;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class LeviathanBackgroundScene : ModSceneEffect
     {

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Dusts;
-using CalamityMod.Enums;
-using CalamityMod.Items.Tools;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class RelicOfConvergenceCrystal : ModProjectile
     {
@@ -69,13 +69,13 @@ namespace CalamityMod.Projectiles.Typeless
 
                 if (time >= CrystalsDrawTime)
                 {
-                    SoundStyle h = new("CalamityMod/Sounds/Item/NullHit");
+                    SoundStyle h = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NullHit");
                     SoundEngine.PlaySound(h with { Volume = 0.4f, Pitch = -0.3f + 0.7f * completion }, Projectile.Center);
 
                     float numberOfDusts = 10f;
                     for (int i = 0; i < numberOfDusts; i++)
                     {
-                        Particle energy = new VelChangingSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(9f, 18f), Utils.DirectionFrom(mousePos, Projectile.Center) * 35, "CalamityMod/Particles/BloomCircle", 25, Main.rand.NextFloat(0.1f, 0.35f) * completion, Color.Lerp(Color.Orange, Color.Orchid, completion), new Vector2(1f, 1f), lerpRate: 0.04f, shrinkSpeed: 0.15f);
+                        Particle energy = new VelChangingSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(9f, 18f), Utils.DirectionFrom(mousePos, Projectile.Center) * 35, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", 25, Main.rand.NextFloat(0.1f, 0.35f) * completion, Color.Lerp(Color.Orange, Color.Orchid, completion), new Vector2(1f, 1f), lerpRate: 0.04f, shrinkSpeed: 0.15f);
                         GeneralParticleHandler.SpawnParticle(energy);
                     }
                 }
@@ -104,14 +104,14 @@ namespace CalamityMod.Projectiles.Typeless
 
                             if (playSound)
                             {
-                                SoundStyle heal = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianHeal");
+                                SoundStyle heal = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianHeal");
                                 SoundEngine.PlaySound(heal with { Volume = 1, MaxInstances = -1 }, Projectile.Center);
                                 playSound = false;
                             }
 
                             for (int i = 0; i < 5; i++)
                             {
-                                Particle spark = new CustomSpark(player.Center + Main.rand.NextVector2Circular(15, 15), (-Vector2.UnitY * Main.rand.NextFloat(0.2f, 3f)), "CalamityMod/Particles/HealingPlus", false, Main.rand.Next(35, 50 + 1), Main.rand.NextFloat(1.1f, 1.9f), Color.Lerp(Color.Orchid, Color.White, i * 0.1f), Vector2.One, true, true, 0, false, false, 0.1f);
+                                Particle spark = new CustomSpark(player.Center + Main.rand.NextVector2Circular(15, 15), (-Vector2.UnitY * Main.rand.NextFloat(0.2f, 3f)), "CalamityModCustomPublicPrivateFork/Particles/HealingPlus", false, Main.rand.Next(35, 50 + 1), Main.rand.NextFloat(1.1f, 1.9f), Color.Lerp(Color.Orchid, Color.White, i * 0.1f), Vector2.One, true, true, 0, false, false, 0.1f);
                                 GeneralParticleHandler.SpawnParticle(spark);
                             }
                         }
@@ -157,7 +157,7 @@ namespace CalamityMod.Projectiles.Typeless
                 Vector2 drawPos = mousePos + angle.ToRotationVector2() * radius;
                 Color useColor = Color.Lerp(Color.Orange, Color.Orchid, completion) * (completion - 0.25f);
                 float particleScale = 0.01f + fade * 0.08f + completion * 0.08f;
-                Particle aura = new CustomSpark(drawPos, Utils.DirectionTo(mousePos, drawPos), "CalamityMod/Particles/SmallBloom", false, 4, particleScale, useColor, new Vector2(0.5f + completion, (2f - completion) * 7 - completion * 7));
+                Particle aura = new CustomSpark(drawPos, Utils.DirectionTo(mousePos, drawPos), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 4, particleScale, useColor, new Vector2(0.5f + completion, (2f - completion) * 7 - completion * 7));
                 GeneralParticleHandler.SpawnParticle(aura);
 
                 if (Main.rand.NextBool(70))

@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Abyss
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss
 {
     public class PlantyMush : ModItem, ILocalizedModType
     {

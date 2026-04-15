@@ -1,4 +1,4 @@
-﻿using CalamityMod.Buffs.Potions;
+using CalamityModCustomPublicPrivateFork.Buffs.Potions;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Potions.Food
+namespace CalamityModCustomPublicPrivateFork.Items.Potions.Food
 {
     public class Baguette : ModItem, ILocalizedModType
     {

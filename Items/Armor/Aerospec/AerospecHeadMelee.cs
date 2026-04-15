@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Aerospec
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Aerospec
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("AerospecHelm")]

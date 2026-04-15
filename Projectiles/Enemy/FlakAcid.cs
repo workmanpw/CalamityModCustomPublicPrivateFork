@@ -1,11 +1,11 @@
-﻿using System;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Dusts;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Enemy
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
 {
     public class FlakAcid : ModProjectile, ILocalizedModType
     {

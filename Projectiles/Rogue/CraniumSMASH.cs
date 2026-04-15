@@ -1,16 +1,16 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class CraniumSMASH : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {
@@ -68,7 +68,7 @@ namespace CalamityMod.Projectiles.Rogue
             }
             if (Projectile.ai[1] == 1f)
             {
-                CustomPulse boo = new(Projectile.Center, Vector2.Zero, Color.SkyBlue, "CalamityMod/Particles/GlowSquareParticleBig", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.1f, 1.1f, 10);
+                CustomPulse boo = new(Projectile.Center, Vector2.Zero, Color.SkyBlue, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleBig", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.1f, 1.1f, 10);
                 GeneralParticleHandler.SpawnParticle(boo);
             }
         }

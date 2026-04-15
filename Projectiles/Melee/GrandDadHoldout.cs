@@ -1,9 +1,9 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.PrimordialWyrm;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     [PierceResistException]
     public class GrandDadHoldout : BaseCustomUseStyleProjectile, ILocalizedModType
@@ -21,7 +21,7 @@ namespace CalamityMod.Projectiles.Melee
         public override int AssignedItemID => ModContent.ItemType<GrandDad>();
 
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<GrandDad>();
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/GrandDad";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GrandDad";
         public override float HitboxOutset => 125;
 
         public override Vector2 HitboxSize => new Vector2(190, 190);
@@ -144,7 +144,7 @@ namespace CalamityMod.Projectiles.Melee
 
                     if (time >= (int)(timeMax * 0.4f) && swingSound)
                     {
-                        SoundStyle fire = new("CalamityMod/Sounds/Item/HeavySwing");
+                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeavySwing");
                         SoundEngine.PlaySound(fire with { Volume = 0.8f, Pitch = Main.rand.NextFloat(0.2f, 0.32f) }, Projectile.Center);
                         swingSound = false;
                     }
@@ -216,15 +216,15 @@ namespace CalamityMod.Projectiles.Melee
 
             if (Main.zenithWorld && Projectile.numHits == 0 && target.type != ModContent.NPCType<PrimordialWyrmHead>() && Main.rand.NextBool(5))
             {
-                SoundStyle fire3 = new("CalamityMod/Sounds/Item/GFBScreams/Scream", 8);
+                SoundStyle fire3 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GFBScreams/Scream", 8);
                 SoundEngine.PlaySound(fire3 with { Volume = 0.8f }, Projectile.Center);
             }
             if (Projectile.numHits == 0)
             {
                 Owner.SetScreenshake(6.5f);
-                SoundStyle fire = new("CalamityMod/Sounds/NPCHit/ThanatosHitOpen1");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ThanatosHitOpen1");
                 SoundEngine.PlaySound(fire with { Volume = 0.75f, Pitch = -0.1f }, Projectile.Center);
-                SoundStyle fire2 = new("CalamityMod/Sounds/Item/FinalDawnSlash");
+                SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FinalDawnSlash");
                 SoundEngine.PlaySound(fire2 with { Volume = 0.65f, Pitch = Main.rand.NextFloat(-0.2f, -0.3f) }, Projectile.Center);
             }
 
@@ -239,7 +239,7 @@ namespace CalamityMod.Projectiles.Melee
                 if (target.type == ModContent.NPCType<PrimordialWyrmHead>())
                 {
                     CombatText.NewText(target.Hitbox, Color.Aqua, CalamityUtils.GetTextValue("Misc.HecBoop"));
-                    SoundStyle boop = new("CalamityMod/Sounds/Item/SnootBooped");
+                    SoundStyle boop = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SnootBooped");
                     SoundEngine.PlaySound(boop with { Pitch = Main.rand.NextFloat(-0.15f, 0.15f) }, Projectile.Center);
                 }
 
@@ -300,17 +300,17 @@ namespace CalamityMod.Projectiles.Melee
             if ((useAnim > 0 || DrawUnconditionally) && Owner.ItemAnimationActive)
             {
                 Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
-                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/GrandDadGlow");
+                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GrandDadGlow");
 
                 float r = FlipAsSword ? MathHelper.ToRadians(90) : 0f;
 
-                Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmearLarge");
+                Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmearLarge");
                 if (Animation > useAnim * 0.2f)
                     Main.EntitySpriteDraw(swoosh.Value, Projectile.Center - Main.screenPosition + new Vector2(0, Owner.gfxOffY), null, Color.DodgerBlue with { A = 0 } * fadeIn * 0.65f, (FinalRotation + MathHelper.ToRadians(45)) + MathHelper.ToRadians(Projectile.ai[1] == 1 ? -90 : 90) * -Owner.direction, swoosh.Size() * 0.5f, Projectile.scale * 0.6f, SpriteEffects.None);
 
                 for (int i = 0; i < 25; i++)
                 {
-                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/GrandDadGhost").Value;
+                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/GrandDadGhost").Value;
                     Color auraColor = Color.Gold with { A = 0 } * 0.15f * fadeIn;
                     Vector2 drawOffset = (MathHelper.TwoPi * i / 25f).ToRotationVector2() * 6 * fadeIn;
                     Main.EntitySpriteDraw(centerTexture, Projectile.Center - Main.screenPosition + drawOffset + new Vector2(0, Owner.gfxOffY), centerTexture.Frame(1, FrameCount, 0, Frame), auraColor, Projectile.rotation + RotationOffset + r, FlipAsSword ? new Vector2(tex.Width() - SpriteOrigin.X, SpriteOrigin.Y) : SpriteOrigin, Projectile.scale, spriteEffects != SpriteEffects.None ? spriteEffects : (FlipAsSword ? SpriteEffects.FlipHorizontally : SpriteEffects.None));

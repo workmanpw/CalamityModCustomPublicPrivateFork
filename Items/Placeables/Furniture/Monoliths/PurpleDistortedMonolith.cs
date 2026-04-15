@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
-using CalamityMod.Tiles.Furniture.Monoliths;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Monoliths;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.Furniture.Monoliths
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths
 {
     public class PurpleDistortedMonolith : ModItem, ILocalizedModType
     {

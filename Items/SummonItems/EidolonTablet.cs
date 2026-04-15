@@ -1,10 +1,10 @@
-﻿using System;
-using CalamityMod.Events;
+using System;
+using CalamityModCustomPublicPrivateFork.Events;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     public class EidolonTablet : ModItem, ILocalizedModType
     {

@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Armor.Silva;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Silva;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Vanity
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Head)]
     public class SilvaHelm : ModItem, ILocalizedModType

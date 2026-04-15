@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Fonts;
-using CalamityMod.NPCs.ExoMechs;
+using CalamityModCustomPublicPrivateFork.Fonts;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,9 +11,9 @@ using Terraria.GameInput;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 using Terraria.UI.Chat;
-using static CalamityMod.UI.DraedonSummoning.DraedonDialogRegistry;
+using static CalamityModCustomPublicPrivateFork.UI.DraedonSummoning.DraedonDialogRegistry;
 
-namespace CalamityMod.UI.DraedonSummoning
+namespace CalamityModCustomPublicPrivateFork.UI.DraedonSummoning
 {
     public partial class CodebreakerUI : ModSystem
     {
@@ -231,16 +231,16 @@ namespace CalamityMod.UI.DraedonSummoning
         /// <summary>
         /// The dialog hover sound.
         /// </summary>
-        public static readonly SoundStyle DialogOptionHoverSound = new("CalamityMod/Sounds/Custom/Codebreaker/DialogOptionHover");
+        public static readonly SoundStyle DialogOptionHoverSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/DialogOptionHover");
 
         /// <summary>
         /// Possible sounds Draedon can play when he speaks.
         /// </summary>
         public static readonly SoundStyle[] DraedonTalks = new SoundStyle[]
         {
-            new("CalamityMod/Sounds/Custom/Codebreaker/DraedonTalk1"),
-            new("CalamityMod/Sounds/Custom/Codebreaker/DraedonTalk2"),
-            new("CalamityMod/Sounds/Custom/Codebreaker/DraedonTalk3")
+            new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/DraedonTalk1"),
+            new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/DraedonTalk2"),
+            new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/DraedonTalk3")
         };
 
         public static void DisplayCommunicationPanel()
@@ -249,7 +249,7 @@ namespace CalamityMod.UI.DraedonSummoning
             float panelWidthScale = Utils.Remap(CommunicationPanelScale, 0f, 0.5f, 0.085f, 1f);
             float panelHeightScale = Utils.Remap(CommunicationPanelScale, 0.5f, 1f, 0.085f, 1f);
             Vector2 panelScale = GeneralScale * new Vector2(panelWidthScale, panelHeightScale) * 1.4f;
-            Texture2D panelTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DraedonContactPanel").Value;
+            Texture2D panelTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DraedonContactPanel").Value;
             float basePanelHeight = GeneralScale * panelTexture.Height * 1.4f;
             Vector2 panelCenter = new Vector2(Main.screenWidth * 0.5f, Main.screenHeight * 0.5f + panelTexture.Height * panelScale.Y * 0.5f - basePanelHeight * 0.5f);
             Rectangle panelArea = Utils.CenteredRectangle(panelCenter, panelTexture.Size() * panelScale);
@@ -264,7 +264,7 @@ namespace CalamityMod.UI.DraedonSummoning
 
                 // Apply a glitch shader.
                 MiscShaderData blueStatic = GameShaders.Misc["CalamityMod:BlueStatic"];
-                blueStatic.SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/SharpNoise"));
+                blueStatic.SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/SharpNoise"));
                 blueStatic.Shader.Parameters["useStaticLine"].SetValue(false);
                 blueStatic.Shader.Parameters["coordinateZoomFactor"].SetValue(0.5f);
                 blueStatic.Shader.Parameters["useTrueNoise"].SetValue(true);
@@ -291,8 +291,8 @@ namespace CalamityMod.UI.DraedonSummoning
         public static void DisplayDraedonFacePanel(Vector2 panelCenter, Vector2 panelScale)
         {
             // Draw a panel that has Draedon's face.
-            Texture2D iconTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DraedonIconBorder").Value;
-            Texture2D iconTextureInner = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DraedonIconBorderInner").Value;
+            Texture2D iconTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DraedonIconBorder").Value;
+            Texture2D iconTextureInner = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DraedonIconBorderInner").Value;
             float draedonIconDrawInterpolant = Utils.GetLerpValue(0.51f, 0.36f, DraedonScreenStaticInterpolant, true);
             Vector2 draedonIconDrawTopRight = panelCenter + new Vector2(-204f, -125f) * panelScale;
             draedonIconDrawTopRight += new Vector2(24f, 4f) * panelScale;
@@ -316,7 +316,7 @@ namespace CalamityMod.UI.DraedonSummoning
 
             Vector2 draedonScale = new Vector2(draedonIconDrawInterpolant, 1f) * Main.UIScale * 1.32f;
             SpriteEffects draedonDirection = SpriteEffects.FlipHorizontally;
-            Texture2D draedonFaceTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/HologramDraedon").Value;
+            Texture2D draedonFaceTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/HologramDraedon").Value;
 
             Main.spriteBatch.Draw(draedonFaceTexture, draedonIconCenter, null, Color.White * draedonIconDrawInterpolant, 0f, draedonFaceTexture.Size() * 0.5f, draedonScale, draedonDirection, 0f);
             Main.spriteBatch.ReleaseCutoffRegion(Matrix.Identity, SpriteSortMode.Immediate);
@@ -337,7 +337,7 @@ namespace CalamityMod.UI.DraedonSummoning
         {
             // Draw the outline for the text selection options.
             float selectionOptionsDrawInterpolant = Utils.GetLerpValue(0.3f, 0f, DraedonScreenStaticInterpolant, true);
-            Texture2D selectionOutline = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DraedonSelectionOutline").Value;
+            Texture2D selectionOutline = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DraedonSelectionOutline").Value;
             Vector2 selectionCenter = panelArea.BottomLeft() - new Vector2(selectionOutline.Width * -0.5f - 42f, selectionOutline.Height * 0.5f + 13f) * panelScale;
             Rectangle selectionArea = Utils.CenteredRectangle(selectionCenter, selectionOutline.Size() * panelScale);
             Main.spriteBatch.Draw(selectionOutline, selectionCenter, null, Color.White * selectionOptionsDrawInterpolant, 0f, selectionOutline.Size() * 0.5f, panelScale, 0, 0f);
@@ -374,7 +374,7 @@ namespace CalamityMod.UI.DraedonSummoning
 
             bool hoveringOverAnyOption = false;
             float opacity = OptionsTextOpacity * (1f - DraedonScreenStaticInterpolant);
-            Texture2D markerTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DraedonInquirySelector").Value;
+            Texture2D markerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DraedonInquirySelector").Value;
             Vector2 markerScale = panelScale * 0.24f;
             Vector2 markerDrawPositionOffset = Vector2.UnitX * markerTexture.Width * markerScale.X * 0.52f;
             Vector2 markerTextureSize = markerTexture.Size() * markerScale;
@@ -424,7 +424,7 @@ namespace CalamityMod.UI.DraedonSummoning
                     Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Additive, null, null, null, null, Matrix.Identity);
 
                     // Collect bloom flare draw information and draw based on it.
-                    Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/BloomFlare").Value;
+                    Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/BloomFlare").Value;
                     float bloomTexScale = MathF.Sin(Main.GlobalTimeWrappedHourly) * 0.05f + 0.26f;
                     float bloomTexRotation = Main.GlobalTimeWrappedHourly * 0.5f;
                     Main.spriteBatch.Draw(bloomTex, markerDrawPosition, null, Color.SteelBlue * dialog.BloomOpacity * opacity, bloomTexRotation, new Vector2(123f, 124f), bloomTexScale, 0, 0f);
@@ -475,7 +475,7 @@ namespace CalamityMod.UI.DraedonSummoning
                         WrittenDraedonText = string.Empty;
 
                         // Ensure that the player starts at the bottom of the scoller, now that new text is generating there.
-                        Texture2D dialogOutline = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DraedonDialogOutline").Value;
+                        Texture2D dialogOutline = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DraedonDialogOutline").Value;
                         Rectangle dialogArea = Utils.CenteredRectangle(selectionCenter, dialogOutline.Size() * panelScale);
                         float scaledLineSpacing = FontAssetSystem.CodebreakerDialog.Value.LineSpacing * panelScale.Y;
                         bottomPadding = scaledLineSpacing * 3f; 
@@ -509,7 +509,7 @@ namespace CalamityMod.UI.DraedonSummoning
         {
             // Draw the outline for the dialog history.
             float dialogHistoryDrawInterpolant = Utils.GetLerpValue(0.3f, 0f, DraedonScreenStaticInterpolant, true);
-            Texture2D dialogOutline = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DraedonDialogOutline").Value;
+            Texture2D dialogOutline = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DraedonDialogOutline").Value;
             Vector2 selectionCenter = panelArea.TopRight() - new Vector2(dialogOutline.Width * 0.5f + 12f, dialogOutline.Height * -0.5f - 12f) * panelScale;
             Rectangle dialogArea = Utils.CenteredRectangle(selectionCenter, dialogOutline.Size() * panelScale);
             Main.spriteBatch.Draw(dialogOutline, selectionCenter, null, Color.White * dialogHistoryDrawInterpolant, 0f, dialogOutline.Size() * 0.5f, panelScale, 0, 0f);
@@ -596,7 +596,7 @@ namespace CalamityMod.UI.DraedonSummoning
 
             // Display text in the box.
             var dialogEntries = DialogHistory.Where(d => !string.IsNullOrEmpty(d.Dialog));
-            Texture2D markerTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/DraedonInquirySelector").Value;
+            Texture2D markerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/DraedonInquirySelector").Value;
             Vector2 markerScale = panelScale * 0.24f;
             Vector2 markerDrawPositionOffset = Vector2.UnitX * markerTexture.Width * markerScale.X * 0.6f;
             float markerDrawPositionOffsetY = markerScale.Y * 24f;

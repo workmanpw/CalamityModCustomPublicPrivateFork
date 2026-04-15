@@ -1,17 +1,17 @@
-﻿using System.IO;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class AdamantiteAcceleratorHoldout : BaseGunHoldoutProjectile
     {
@@ -124,7 +124,7 @@ namespace CalamityMod.Projectiles.Ranged
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D gun = Request<Texture2D>("CalamityMod/Items/Weapons/Ranged/AdamantiteParticleAccelerator").Value;
+            Texture2D gun = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/AdamantiteParticleAccelerator").Value;
 
             SpriteEffects flip = Owner.direction < 0 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
 

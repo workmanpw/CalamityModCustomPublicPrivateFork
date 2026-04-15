@@ -1,17 +1,17 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Demonshade
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Demonshade
 {
     [AutoloadEquip(EquipType.Body)]
     public class DemonshadeBreastplate : ModItem, IDrawArmOverShoulderpad, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Armor.PostMoonLord";
-        public string FrontArmTexture => "CalamityMod/Items/Armor/Demonshade/DemonshadeBreastplate_Arms";
+        public string FrontArmTexture => "CalamityModCustomPublicPrivateFork/Items/Armor/Demonshade/DemonshadeBreastplate_Arms";
 
         public static int MaxManaBoost = 200;
         public static float AmmoReduction = 0.7f;

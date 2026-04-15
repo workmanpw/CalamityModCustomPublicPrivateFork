@@ -1,9 +1,9 @@
-﻿using System.IO;
-using CalamityMod.Systems;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class MusicEventSyncResponsePacket : CalamityPacket
     {

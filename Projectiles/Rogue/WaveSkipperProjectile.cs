@@ -1,15 +1,15 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     [LegacyName("DuneHopperProjectile")]
     public class WaveSkipperProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/WaveSkipper";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/WaveSkipper";
 
         public override void SetStaticDefaults()
         {

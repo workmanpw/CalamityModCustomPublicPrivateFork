@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Tools;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,14 +7,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class BobbitHead : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
 
         public static Asset<Texture2D> Chain;
-        public override void Load() => Chain = Request<Texture2D>("CalamityMod/Projectiles/Typeless/BobbitHookChain");
+        public override void Load() => Chain = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/BobbitHookChain");
 
         public override void SetDefaults() => Projectile.CloneDefaults(ProjectileID.GemHookAmethyst);
 

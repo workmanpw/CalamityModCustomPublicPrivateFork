@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     // HUGE credit to Dozezoze for lending his worm projectile code
     public class WhiteDragonHead : ModProjectile, ILocalizedModType
@@ -185,10 +185,10 @@ namespace CalamityMod.Projectiles.Summon
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D texBody = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/WhiteDragonBody").Value;
-            Texture2D texBody2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/WhiteDragonBody2").Value;
-            Texture2D texTail = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/WhiteDragonTail").Value;
-            Texture2D texTail2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/WhiteDragonTail2").Value;
+            Texture2D texBody = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/WhiteDragonBody").Value;
+            Texture2D texBody2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/WhiteDragonBody2").Value;
+            Texture2D texTail = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/WhiteDragonTail").Value;
+            Texture2D texTail2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/WhiteDragonTail2").Value;
             for (var i = segments.Count; i > 0; i--)
             {
                 if (segments.ContainsKey(i))

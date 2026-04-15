@@ -1,24 +1,24 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
-using CalamityMod.Sounds;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class ArkoftheCosmosSwungBlade : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/Melee/SunderingScissorsRight";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight";
 
         private bool initialized = false;
         Vector2 direction = Vector2.Zero;
@@ -175,17 +175,18 @@ namespace CalamityMod.Projectiles.Melee
                     float endRot = -(MathHelper.TwoPi + MathHelper.PiOver4 * 1.5f) * SwingDirection;
                     Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.Lerp(startRot, endRot, SwirlRatio());
                     DoParticleEffects(true);
+                }
 
-                    //Really important to use projectile.timeLeft -1 instead of simply projectile.timeLeft because if it spawns a bolt on its last frame of existence the primitive drawer will break and shit itself or something idk
-                    if (Owner.whoAmI == Main.myPlayer && (Projectile.timeLeft - 1) % Math.Ceiling(MaxSwingTime / ArkoftheCosmos.SwirlBoltAmount) == 0f)
-                    {
-                        //Slightly shift the blasts up so the final close shots don't go BELOW the cursor and instead go right on it.
-                        float adjustedBlastRotation = Projectile.rotation - MathHelper.PiOver4 * 1.15f * Owner.direction;
+                //Fire EonBolts during every swing (not just swirl swing)
+                //Really important to use projectile.timeLeft -1 instead of simply projectile.timeLeft because if it spawns a bolt on its last frame of existence the primitive drawer will break and shit itself or something idk
+                if (Owner.whoAmI == Main.myPlayer && (Projectile.timeLeft - 1) % Math.Ceiling(MaxSwingTime / ArkoftheCosmos.SwirlBoltAmount) == 0f)
+                {
+                    //Slightly shift the blasts up so the final close shots don't go BELOW the cursor and instead go right on it.
+                    float adjustedBlastRotation = Projectile.rotation - MathHelper.PiOver4 * 1.15f * Owner.direction;
 
-                        var source = Projectile.GetSource_FromThis();
-                        Projectile blast = Projectile.NewProjectileDirect(source, Owner.Center + adjustedBlastRotation.ToRotationVector2() * 10f, adjustedBlastRotation.ToRotationVector2() * 20f, ProjectileType<EonBolt>(), (int)(ArkoftheCosmos.SwirlBoltDamageMultiplier / ArkoftheCosmos.SwirlBoltAmount * Projectile.damage), 0f, Owner.whoAmI, 0.55f, MathHelper.Pi * 0.05f);
-                        blast.timeLeft = 100;
-                    }
+                    var source = Projectile.GetSource_FromThis();
+                    Projectile blast = Projectile.NewProjectileDirect(source, Owner.Center + adjustedBlastRotation.ToRotationVector2() * 10f, adjustedBlastRotation.ToRotationVector2() * 20f, ProjectileType<EonBolt>(), (int)(ArkoftheCosmos.SwirlBoltDamageMultiplier / ArkoftheCosmos.SwirlBoltAmount * Projectile.damage), 0f, Owner.whoAmI, 0.55f, MathHelper.Pi * 0.05f);
+                    blast.timeLeft = 100;
                 }
 
                 Projectile.scale = 1.2f + ((float)Math.Sin(SwingRatio() * MathHelper.Pi) * 0.6f) + (Charge / 10f) * 0.2f;
@@ -217,6 +218,15 @@ namespace CalamityMod.Projectiles.Melee
 
                 Projectile.rotation -= MathHelper.PiOver4 * 0.3f;
                 Projectile.scale = 1f + ThrowScaleRatio() * 0.5f;
+
+                //Fire random EonBolt every 20 frames during thrown spin attack
+                if (Owner.whoAmI == Main.myPlayer && Main.rand.NextBool() && Projectile.timeLeft % 20 == 0)
+                {
+                    float randomRotation = Projectile.rotation + Main.rand.NextFloat(-MathHelper.PiOver4, MathHelper.PiOver4);
+                    var source = Projectile.GetSource_FromThis();
+                    Projectile bolt = Projectile.NewProjectileDirect(source, Projectile.Center, randomRotation.ToRotationVector2() * 15f, ProjectileType<EonBolt>(), (int)(Projectile.damage * 0.3f), 0f, Owner.whoAmI, 0.55f, MathHelper.Pi * 0.05f);
+                    bolt.timeLeft = 80;
+                }
 
                 //Come back
                 if (Math.Abs(ThrowCompletion - SnapWindowEnd) <= 0.005f)
@@ -477,8 +487,8 @@ namespace CalamityMod.Projectiles.Melee
 
         public void DrawSingleSwungScissorBlade(Color lightColor)
         {
-            Texture2D sword = Request<Texture2D>(Combo == 0 ? "CalamityMod/Projectiles/Melee/SunderingScissorsRight" : "CalamityMod/Projectiles/Melee/SunderingScissorsLeft").Value;
-            Texture2D glowmask = Request<Texture2D>(Combo == 0 ? "CalamityMod/Projectiles/Melee/SunderingScissorsRightGlow" : "CalamityMod/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
+            Texture2D sword = Request<Texture2D>(Combo == 0 ? "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight" : "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeft").Value;
+            Texture2D glowmask = Request<Texture2D>(Combo == 0 ? "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRightGlow" : "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
 
             bool flipped = Owner.direction < 0;
             SpriteEffects flip = flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
@@ -506,7 +516,7 @@ namespace CalamityMod.Projectiles.Melee
 
             if (SwingCompletion > 0.5f && Combo == 0f)
             {
-                Texture2D smear = Request<Texture2D>("CalamityMod/Particles/TrientCircularSmear").Value;
+                Texture2D smear = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/TrientCircularSmear").Value;
 
                 Main.spriteBatch.End();
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
@@ -524,10 +534,10 @@ namespace CalamityMod.Projectiles.Melee
 
         public void DrawSwungScissors(Color lightColor)
         {
-            Texture2D frontBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeft").Value;
-            Texture2D frontBladeGlow = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
-            Texture2D backBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRight").Value;
-            Texture2D backBladeGlow = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRightGlow").Value;
+            Texture2D frontBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeft").Value;
+            Texture2D frontBladeGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
+            Texture2D backBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight").Value;
+            Texture2D backBladeGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRightGlow").Value;
 
             //Front blade
             bool flipped = Owner.direction < 0;
@@ -548,7 +558,7 @@ namespace CalamityMod.Projectiles.Melee
 
             if (CalamityClientConfig.Instance.Afterimages && SwingTimer > ProjectileID.Sets.TrailCacheLength[Type])
             {
-                Texture2D afterimage = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsGlow").Value;
+                Texture2D afterimage = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsGlow").Value;
 
                 for (int i = 1; i < Projectile.oldRot.Length; ++i)
                 {
@@ -567,7 +577,7 @@ namespace CalamityMod.Projectiles.Melee
 
             if (SwingCompletion > 0.5f && Combo == 0f)
             {
-                Texture2D smear = Request<Texture2D>("CalamityMod/Particles/TrientCircularSmear").Value;
+                Texture2D smear = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/TrientCircularSmear").Value;
 
                 Main.spriteBatch.End();
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
@@ -585,13 +595,13 @@ namespace CalamityMod.Projectiles.Melee
 
         public void DrawSingleThrownScissorBlade(Color lightColor)
         {
-            Texture2D sword = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeft").Value;
-            Texture2D glowmask = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
+            Texture2D sword = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeft").Value;
+            Texture2D glowmask = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
 
             if (Combo == 3f)
             {
-                Texture2D thrownSword = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRight").Value;
-                Texture2D thrownGlowmask = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRightGlow").Value;
+                Texture2D thrownSword = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight").Value;
+                Texture2D thrownGlowmask = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRightGlow").Value;
 
                 Vector2 drawPos2 = Vector2.SmoothStep(Owner.Center, Projectile.Center, MathHelper.Clamp(SnapEndCompletion + 0.25f, 0f, 1f));
                 float drawRotation2 = direction.ToRotation() + MathHelper.PiOver4;
@@ -611,10 +621,10 @@ namespace CalamityMod.Projectiles.Melee
 
         public void DrawThrownScissors(Color lightColor)
         {
-            Texture2D frontBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeft").Value;
-            Texture2D frontBladeGlow = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
-            Texture2D backBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRight").Value;
-            Texture2D backBladeGlow = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRightGlow").Value;
+            Texture2D frontBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeft").Value;
+            Texture2D frontBladeGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
+            Texture2D backBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight").Value;
+            Texture2D backBladeGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRightGlow").Value;
 
             Vector2 drawPos = Projectile.Center;
             Vector2 drawOrigin = new Vector2(32, 86);

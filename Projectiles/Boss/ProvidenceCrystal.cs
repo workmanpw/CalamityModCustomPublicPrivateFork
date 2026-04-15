@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.Providence;
-using CalamityMod.Particles;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.Providence;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class ProvidenceCrystal : ModProjectile, ILocalizedModType
     {
@@ -46,11 +46,11 @@ namespace CalamityMod.Projectiles.Boss
             Player proviTarget = Main.player[Main.npc[CalamityGlobalNPC.holyBoss].target];
             for (int i = 0; i < 7; i++)
             {
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, proviTarget.velocity, Color.Violet, "CalamityMod/Particles/BlastCone", new Vector2(Main.rand.NextFloat(2.5f, 6f), 3f), Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.5f, 20));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, proviTarget.velocity, Color.Violet, "CalamityModCustomPublicPrivateFork/Particles/BlastCone", new Vector2(Main.rand.NextFloat(2.5f, 6f), 3f), Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.5f, 20));
             }
             for (int i = 0; i < 4; i++)
             {
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, proviTarget.velocity, Color.Violet, "CalamityMod/Particles/BloomCircle", Vector2.One, 0f, 3f, 0f, 35));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, proviTarget.velocity, Color.Violet, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, 0f, 3f, 0f, 35));
             }
         }
 
@@ -185,7 +185,7 @@ namespace CalamityMod.Projectiles.Boss
             }
             else
             {
-                Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/ProvidenceCrystal_Halves");
+                Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/ProvidenceCrystal_Halves");
                 for (int i = 0; i < 2; i++)
                 {
                     float dir = i == 0 ? -1 : 1;

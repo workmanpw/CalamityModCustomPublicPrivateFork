@@ -1,13 +1,13 @@
-﻿using CalamityMod.Buffs.Summon;
-using CalamityMod.CalPlayer.Dashes;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Plaguebringer
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Plaguebringer
 {
     [AutoloadEquip(EquipType.Head)]
     public class PlaguebringerVisor : ModItem, ILocalizedModType

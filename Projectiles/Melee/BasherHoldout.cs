@@ -1,7 +1,7 @@
-﻿using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.NPCs;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     [PierceResistException]
     public class BasherHoldout : BaseCustomUseStyleProjectile, ILocalizedModType
@@ -19,7 +19,7 @@ namespace CalamityMod.Projectiles.Melee
         public override int AssignedItemID => ModContent.ItemType<Basher>();
 
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<Basher>();
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/Basher";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/Basher";
         public override float HitboxOutset => 60;
 
         public override Vector2 HitboxSize => new Vector2(80, 80);
@@ -180,7 +180,7 @@ namespace CalamityMod.Projectiles.Melee
             if ((damageDone <= 2 || (target.life <= 0 && target.realLife == -1)) && Projectile.numHits > 0)
                 Projectile.numHits -= 1;
 
-            SoundStyle fire = new("CalamityMod/Sounds/NPCHit/RavagerRockPillarHit", 3);
+            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/RavagerRockPillarHit", 3);
             SoundEngine.PlaySound(fire with { Volume = 0.65f, Pitch = -0.2f }, Projectile.Center);
             SoundEngine.PlaySound(SoundID.DrumTomHigh with { Volume = 0.45f, Pitch = -0.9f }, Projectile.Center);
 
@@ -194,7 +194,7 @@ namespace CalamityMod.Projectiles.Melee
             {
                 Owner.SetScreenshake(1.2f);
 
-                SoundStyle fire3 = new("CalamityMod/Sounds/Item/DampExplosion");
+                SoundStyle fire3 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DampExplosion");
                 SoundEngine.PlaySound(fire3 with { Volume = 0.35f, Pitch = 0.7f }, Projectile.Center);
                 for (int i = 0; i < MathHelper.Clamp(15 - Projectile.numHits * 3, 2, 15); i++)
                 {

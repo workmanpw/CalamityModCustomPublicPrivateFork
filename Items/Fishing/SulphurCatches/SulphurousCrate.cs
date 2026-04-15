@@ -1,14 +1,14 @@
-﻿using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Placeables.Furniture;
-using CalamityMod.Items.Tools.SpawnBlocker;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Tiles.Abyss;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Tools.SpawnBlocker;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing.SulphurCatches
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.SulphurCatches
 {
     [LegacyName("AbyssalCrate")]
     public class SulphurousCrate : ModItem, ILocalizedModType

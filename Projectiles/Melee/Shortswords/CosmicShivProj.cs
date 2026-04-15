@@ -1,19 +1,19 @@
 using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee.Shortswords
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Shortswords
 {
     public class CosmicShivProj : BaseShortswordProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<CosmicShiv>();
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/CosmicShiv";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/CosmicShiv";
         public bool MeleeEffect = false;
         public int NumHits = 0;
 

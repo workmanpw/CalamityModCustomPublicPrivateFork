@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.FurnitureAcidwood;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Sulphurous
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Sulphurous
 {
     [AutoloadEquip(EquipType.Legs)]
     [LegacyName("SulfurLeggings")]

@@ -1,8 +1,8 @@
-﻿using System.IO;
-using CalamityMod.CalPlayer;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Terraria;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class RightClickSyncPacket : CalamityPacket
     {

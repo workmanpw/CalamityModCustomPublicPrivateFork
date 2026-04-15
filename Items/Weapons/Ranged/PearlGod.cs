@@ -1,17 +1,17 @@
-﻿using CalamityMod.Particles;
-using CalamityMod.Projectiles;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles;
 using System;
-using CalamityMod.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria.Audio;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     public class PearlGod : ModItem, ILocalizedModType
     {
@@ -33,7 +33,7 @@ namespace CalamityMod.Items.Weapons.Ranged
             Item.knockBack = 3f;
             Item.value = CalamityGlobalItem.RarityPureGreenBuyPrice;
             Item.rare = ModContent.RarityType<PureGreen>();
-            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/GunShotSmall") with { Volume = 0.65f };
+            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/GunShotSmall") with { Volume = 0.65f };
             Item.autoReuse = true;
             Item.shootSpeed = 14f;
             Item.shoot = ProjectileID.PurificationPowder;

@@ -1,8 +1,8 @@
-﻿using System.IO;
-using CalamityMod.BiomeManagers;
-using CalamityMod.Items.Critters;
-using CalamityMod.Items.Fishing.SunkenSeaCatches;
-using CalamityMod.Items.Placeables.Banners;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Items.Critters;
+using CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityMod.NPCs.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.NPCs.SunkenSea
 {
     public class BabyGhostBell : ModNPC
     {
@@ -57,7 +57,7 @@ namespace CalamityMod.NPCs.SunkenSea
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.BabyGhostBell")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.BabyGhostBell")
             });
         }
 

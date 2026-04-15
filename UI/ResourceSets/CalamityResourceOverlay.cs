@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.CalPlayer;
-using CalamityMod.Utilities.Daybreak;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.GameContent;
 using Terraria.GameContent.UI.ResourceSets;
 using Terraria.ModLoader;
 
-namespace CalamityMod.UI.ResourceSets
+namespace CalamityModCustomPublicPrivateFork.UI.ResourceSets
 {
     public class CalamityResourceOverlay : ModResourceOverlay
     {

@@ -1,18 +1,18 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using System;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Terraria.ID;
 
-namespace CalamityMod.BiomeManagers
+namespace CalamityModCustomPublicPrivateFork.BiomeManagers
 {
     //this is just a global sunken sea biome to check if you are in any of the existing biomes
     public class SunkenSeaBiome : ModBiome
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BiomeHigh;
-        public override int Music => CalamityMod.Instance.GetMusicFromMusicMod("SunkenSea") ?? MusicID.OceanNight;
+        public override int Music => ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("SunkenSea") ?? MusicID.OceanNight;
         public override void Load()
         {
             //apply the drawblack edits here since all sunken sea biomes will have custom backgrounds
@@ -57,10 +57,10 @@ namespace CalamityMod.BiomeManagers
             }
         }
         
-        public override string BestiaryIcon => "CalamityMod/BiomeManagers/SunkenSeaIcon";
+        public override string BestiaryIcon => "CalamityModCustomPublicPrivateFork/BiomeManagers/SunkenSeaIcon";
         // Placeholder until we get a dedicated Sunken Sea background
-        public override string BackgroundPath => "CalamityMod/Backgrounds/MapBackgrounds/AbyssBGLayer1";
-        public override string MapBackground => "CalamityMod/Backgrounds/MapBackgrounds/AbyssBGLayer1";
+        public override string BackgroundPath => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AbyssBGLayer1";
+        public override string MapBackground => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AbyssBGLayer1";
 
         public override bool IsBiomeActive(Player player)
         {

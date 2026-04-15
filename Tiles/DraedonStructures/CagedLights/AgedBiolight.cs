@@ -1,6 +1,6 @@
-﻿using CalamityMod.ExtraTextures.GreyscaleGradients;
-using CalamityMod.Items.Placeables.DraedonStructures.CagedLights;
-using CalamityMod.Sounds;
+using CalamityModCustomPublicPrivateFork.ExtraTextures.GreyscaleGradients;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures.CagedLights;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.DraedonStructures.CagedLights
+namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures.CagedLights
 {
     public class AgedBiolight : ModTile
     {

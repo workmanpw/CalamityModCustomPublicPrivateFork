@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.FurnitureProfaned;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureProfaned;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Dyes
+namespace CalamityModCustomPublicPrivateFork.Items.Dyes
 {
     public class ProfanedRockDye : BaseDye
     {
         public override ArmorShaderData ShaderDataToBind => new ArmorShaderData(Mod.Assets.Request<Effect>("Effects/Dyes/ProfanedRockDyeShader"), "DyePass").
-            UseColor(new Color(79, 16, 16)).UseSecondaryColor(new Color(173, 116, 0)).UseImage(Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Veins"));
+            UseColor(new Color(79, 16, 16)).UseSecondaryColor(new Color(173, 116, 0)).UseImage(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Veins"));
         public override void SafeSetStaticDefaults()
         {
             Item.ResearchUnlockCount = 3;

@@ -1,18 +1,18 @@
-﻿using CalamityMod.Systems;
-using CalamityMod.Tiles.Abyss.AbyssAmbient;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Abyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
 {
     public class AbyssGravel : ModTile
     {
         int animationFrameWidth = 234;
 
-        public static readonly SoundStyle MineSound = new("CalamityMod/Sounds/Custom/AbyssGravelMine", 3);
+        public static readonly SoundStyle MineSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbyssGravelMine", 3);
 
         public override void SetStaticDefaults()
         {

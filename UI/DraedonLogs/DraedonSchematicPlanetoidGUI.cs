@@ -1,8 +1,8 @@
-﻿using CalamityMod.Items.DraedonMisc;
+using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityMod.UI.DraedonLogs
+namespace CalamityModCustomPublicPrivateFork.UI.DraedonLogs
 {
     public class DraedonSchematicPlanetoidGUI : DraedonsLogGUI
     {
@@ -13,7 +13,7 @@ namespace CalamityMod.UI.DraedonLogs
         }
         public override Texture2D GetTextureByPage()
         {
-            return ModContent.Request<Texture2D>("CalamityMod/UI/DraedonLogs/DraedonsLogPlanetoid").Value;
+            return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonLogs/DraedonsLogPlanetoid").Value;
         }
     }
 }

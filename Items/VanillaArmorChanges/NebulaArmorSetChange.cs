@@ -1,6 +1,6 @@
-﻿using Terraria.ID;
+using Terraria.ID;
 
-namespace CalamityMod.Items.VanillaArmorChanges
+namespace CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges
 {
     public class NebulaArmorSetChange : VanillaArmorChange
     {

@@ -1,6 +1,6 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Rogue;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,14 +8,14 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Rogue
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
 {
     [LegacyName("LuminousStriker")]
     public class RealityRupture : RogueWeapon
     {
-        public static readonly SoundStyle ThrowSound = new("CalamityMod/Sounds/Item/RealityRupture") { Volume = 0.3f, PitchVariance = 0.3f };
-        public static readonly SoundStyle ThrowSound2 = new("CalamityMod/Sounds/Item/LanceofDestinyStrong") { Volume = 0.4f, PitchVariance = 0.3f };
-        public static readonly SoundStyle ThrowSound3 = new("CalamityMod/Sounds/Item/RealityRuptureStealth") { Volume = 0.5f, PitchVariance = 0.3f };
+        public static readonly SoundStyle ThrowSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/RealityRupture") { Volume = 0.3f, PitchVariance = 0.3f };
+        public static readonly SoundStyle ThrowSound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LanceofDestinyStrong") { Volume = 0.4f, PitchVariance = 0.3f };
+        public static readonly SoundStyle ThrowSound3 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/RealityRuptureStealth") { Volume = 0.5f, PitchVariance = 0.3f };
         private bool BigSpear = false;
         public override void SetDefaults()
         {

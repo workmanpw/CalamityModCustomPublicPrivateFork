@@ -1,10 +1,10 @@
-﻿
-using CalamityMod.Dusts;
+
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.AstralDesert
+namespace CalamityModCustomPublicPrivateFork.Tiles.AstralDesert
 {
     public class AstralDesertStalactite : ModTile
     {

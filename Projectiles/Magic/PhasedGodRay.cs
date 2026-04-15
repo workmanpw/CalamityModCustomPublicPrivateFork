@@ -1,15 +1,15 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class PhasedGodRay : ModProjectile, ILocalizedModType
     {
@@ -23,7 +23,7 @@ namespace CalamityMod.Projectiles.Magic
         private const int WaveTwistFrames = 9;
         private ref float WaveFrameState => ref Projectile.ai[0];
 
-        public override string Texture => "CalamityMod/Projectiles/LaserProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/LaserProj";
 
         public override void SetStaticDefaults()
         {
@@ -108,10 +108,10 @@ namespace CalamityMod.Projectiles.Magic
             Color beamColor = Color.Lerp(AetherfluxCannon.accentColor, AetherfluxCannon.mainColor, fadeInLerp);
             Color subColor = Color.Lerp(AetherfluxCannon.accentColor, AetherfluxCannon.mainColor, Main.rand.NextFloat());
 
-            Particle beamBody = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityMod/Particles/BloomCircle", false, 7, 0.65f - 0.3f * fadeInLerp, beamColor * 0.8f, new Vector2(1.1f - 0.4f * fadeInLerp, 0.8f + 0.6f * fadeInLerp), true, false, shrinkSpeed: 0.6f);
+            Particle beamBody = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 7, 0.65f - 0.3f * fadeInLerp, beamColor * 0.8f, new Vector2(1.1f - 0.4f * fadeInLerp, 0.8f + 0.6f * fadeInLerp), true, false, shrinkSpeed: 0.6f);
             GeneralParticleHandler.SpawnParticle(beamBody);
 
-            Particle beamCore = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityMod/Particles/BloomCircle", false, 5, 0.35f - 0.15f * fadeInLerp, Color.Lerp(beamColor, Color.White, 0.6f), new Vector2(0.7f, 1.4f), true, false, shrinkSpeed: 0.6f);
+            Particle beamCore = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 5, 0.35f - 0.15f * fadeInLerp, Color.Lerp(beamColor, Color.White, 0.6f), new Vector2(0.7f, 1.4f), true, false, shrinkSpeed: 0.6f);
             GeneralParticleHandler.SpawnParticle(beamCore);
 
             if (Projectile.timeLeft == 280)
@@ -119,7 +119,7 @@ namespace CalamityMod.Projectiles.Magic
                 for (int i = 0; i < 3; i++)
                 {
                     subColor = Color.Lerp(AetherfluxCannon.accentColor, AetherfluxCannon.mainColor, Main.rand.NextFloat());
-                    Particle spark = new CustomSpark(Projectile.Center - Projectile.velocity * 2, (Projectile.velocity).RotatedByRandom(0.8f) * Main.rand.NextFloat(0.5f, 0.7f), "CalamityMod/Particles/SemiCircularSmearVerticalBlank", false, 10, 0.45f, subColor, new Vector2(0.8f, 1.2f), true, false, shrinkSpeed: 0.5f);
+                    Particle spark = new CustomSpark(Projectile.Center - Projectile.velocity * 2, (Projectile.velocity).RotatedByRandom(0.8f) * Main.rand.NextFloat(0.5f, 0.7f), "CalamityModCustomPublicPrivateFork/Particles/SemiCircularSmearVerticalBlank", false, 10, 0.45f, subColor, new Vector2(0.8f, 1.2f), true, false, shrinkSpeed: 0.5f);
                     GeneralParticleHandler.SpawnParticle(spark);
 
                     Dust dust2 = Dust.NewDustPerfect(Projectile.Center, ModContent.DustType<LightDust>());
@@ -137,11 +137,11 @@ namespace CalamityMod.Projectiles.Magic
             for (int i = 0; i< 2; i++)
             {
                 Color color = AetherfluxCannon.accentColor;
-                Particle orb2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 20, Main.rand.NextFloat(0.15f, 0.25f) * 3, color, new Vector2(1f, 1f), true, false);
+                Particle orb2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 20, Main.rand.NextFloat(0.15f, 0.25f) * 3, color, new Vector2(1f, 1f), true, false);
                 GeneralParticleHandler.SpawnParticle(orb2);
             }
             Projectile.timeLeft = 280;
-            SoundStyle hitSound = new("CalamityMod/Sounds/Item/MeldShoot");
+            SoundStyle hitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MeldShoot");
             SoundEngine.PlaySound(hitSound with { Volume = 0.4f, Pitch = Main.rand.NextFloat(0.5f, 0.65f) }, Projectile.Center);
             if (Projectile.damage > 1)
                 Projectile.damage = (int)(Projectile.damage * 0.865f);
@@ -165,7 +165,7 @@ namespace CalamityMod.Projectiles.Magic
                 float rot = Main.rand.NextFloat(-0.1f, 0.1f);
                 Vector2 startVel = (Projectile.velocity * 0.1f).RotatedBy(rot);
                 Vector2 endVel = startVel.RotatedBy(rot * 5) * 20;
-                Particle orb2 = new VelChangingSpark(Projectile.Center, startVel, endVel, "CalamityMod/Particles/BloomCircle", Main.rand.Next(15, 20 + 1), Main.rand.NextFloat(0.015f, 0.025f) * 15, subColor, new Vector2(1.1f, 1f), true, false, lerpRate: 0.015f, shrinkSpeed: 0.4f);
+                Particle orb2 = new VelChangingSpark(Projectile.Center, startVel, endVel, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Main.rand.Next(15, 20 + 1), Main.rand.NextFloat(0.015f, 0.025f) * 15, subColor, new Vector2(1.1f, 1f), true, false, lerpRate: 0.015f, shrinkSpeed: 0.4f);
                 GeneralParticleHandler.SpawnParticle(orb2);
             }
         }

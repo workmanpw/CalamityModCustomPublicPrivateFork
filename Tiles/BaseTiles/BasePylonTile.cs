@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.TileEntities;
+using System;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.Map;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Default;
 
-namespace CalamityMod.Tiles.BaseTiles
+namespace CalamityModCustomPublicPrivateFork.Tiles.BaseTiles
 {
     public abstract class BasePylonTile : ModPylon
     {

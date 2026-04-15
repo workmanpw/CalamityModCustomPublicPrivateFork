@@ -1,26 +1,26 @@
-﻿using System.Collections.Generic;
-using CalamityMod.NPCs.AquaticScourge;
-using CalamityMod.NPCs.AstrumDeus;
-using CalamityMod.NPCs.DesertScourge;
-using CalamityMod.NPCs.DevourerofGods;
-using CalamityMod.NPCs.ExoMechs.Ares;
-using CalamityMod.NPCs.ExoMechs.Thanatos;
-using CalamityMod.NPCs.NormalNPCs;
-using CalamityMod.NPCs.Perforator;
-using CalamityMod.NPCs.Ravager;
-using CalamityMod.NPCs.SlimeGod;
-using CalamityMod.NPCs.StormWeaver;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge;
+using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
+using CalamityModCustomPublicPrivateFork.NPCs.DesertScourge;
+using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.Perforator;
+using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
+using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
+using CalamityModCustomPublicPrivateFork.NPCs.StormWeaver;
 using ReLogic.Reflection;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Systems.Collections
+namespace CalamityModCustomPublicPrivateFork.Systems.Collections
 {
     [ReinitializeDuringResizeArrays]
     public static class CalamityNPCTypeSets
     {
-        public static SetFactory Factory = new SetFactory(NPCLoader.NPCCount, "CalamityMod/NPCType", Search);
+        public static SetFactory Factory = new SetFactory(NPCLoader.NPCCount, "CalamityModCustomPublicPrivateFork/NPCType", Search);
         public static IdDictionary Search = IdDictionary.Create<NPCID, int>();
 
         public static bool[] AngryBones = Factory.CreateBoolSet(NPCID.AngryBones, NPCID.AngryBonesBig, NPCID.AngryBonesBigMuscle, NPCID.AngryBonesBigHelmet);

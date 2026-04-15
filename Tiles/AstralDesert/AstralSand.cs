@@ -1,12 +1,12 @@
-﻿using CalamityMod.Projectiles.Typeless;
-using CalamityMod.Tiles.Astral;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Tiles.Astral;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.AstralDesert
+namespace CalamityModCustomPublicPrivateFork.Tiles.AstralDesert
 {
     public class AstralSand : ModTile
     {

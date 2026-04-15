@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class MantisClawHoldout : BaseCustomUseStyleProjectile, ILocalizedModType
     {
@@ -30,7 +30,7 @@ namespace CalamityMod.Projectiles.Melee
         public float BubbleSize = 0f;
         public int m2KillTimer = 0;
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/MantisClaws";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/MantisClaws";
 
         public override void SetDefaults()
         {
@@ -126,7 +126,7 @@ namespace CalamityMod.Projectiles.Melee
                 { 
                     if (SlashTimer % (int)(SlashSpeed / Owner.GetAttackSpeed<MeleeDamageClass>()) == 0)
                     {
-                        SoundStyle SlashStyle = new SoundStyle("CalamityMod/Sounds/Item/MantisSwipe", 2);
+                        SoundStyle SlashStyle = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MantisSwipe", 2);
                         SlashStyle.PitchVariance = 0.3f;
                         SlashStyle.Volume = 0.7f;
 
@@ -235,7 +235,7 @@ namespace CalamityMod.Projectiles.Melee
 
                 // Bubble texture drawing
 
-                Asset<Texture2D> Bubble = ModContent.Request<Texture2D>("CalamityMod/Particles/Bubble");
+                Asset<Texture2D> Bubble = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Bubble");
 
                 Main.EntitySpriteDraw(Bubble.Value, Projectile.Center - Main.screenPosition + new Vector2(0, Owner.gfxOffY) + new Vector2(20, 0).RotatedBy(Projectile.rotation + RotationOffset), Bubble.Frame(), lightColor, 0f, Bubble.Size() / 2, BubbleSize, SpriteEffects.None);
 

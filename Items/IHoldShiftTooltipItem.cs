@@ -1,6 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 
-namespace CalamityMod.Items
+namespace CalamityModCustomPublicPrivateFork.Items
 {
     // This interface is used on items where you can hold SHIFT for an expanded tooltip.
     // All actual implementation of this behavior is done in CalamityGlobalItemTooltip.

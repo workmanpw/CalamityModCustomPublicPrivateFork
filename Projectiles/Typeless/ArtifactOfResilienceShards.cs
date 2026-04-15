@@ -1,23 +1,23 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Dusts;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     [PierceResistException]
     public class ArtifactOfResilienceShards : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public ref float time => ref Projectile.ai[0];
         public bool orbiting => Projectile.ai[1] == 0;
         public Player Owner => Main.player[Projectile.owner];
@@ -125,7 +125,7 @@ namespace CalamityMod.Projectiles.Typeless
                             Projectile.Center += Utils.DirectionTo(Projectile.Center, Owner.Center) * 40f * Utils.GetLerpValue(90, 0, burstTimer);
                             if (time % 8 == 0)
                             {
-                                Particle spark = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(3, 8), "CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard" + Main.rand.Next(1, 6 + 1).ToString(), true, Main.rand.Next(20, 32 + 1), Main.rand.NextFloat(0.65f, 1.1f), Color.White * Main.rand.NextFloat(0.4f, 0.9f), Vector2.One, false, false, Main.rand.NextFloat(-5, 5), false, false);
+                                Particle spark = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(3, 8), "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard" + Main.rand.Next(1, 6 + 1).ToString(), true, Main.rand.Next(20, 32 + 1), Main.rand.NextFloat(0.65f, 1.1f), Color.White * Main.rand.NextFloat(0.4f, 0.9f), Vector2.One, false, false, Main.rand.NextFloat(-5, 5), false, false);
                                 GeneralParticleHandler.SpawnParticle(spark);
                             }
                         }
@@ -141,14 +141,14 @@ namespace CalamityMod.Projectiles.Typeless
 
                             if (Projectile.ai[2] == 1)
                             {
-                                SoundStyle boom = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianShieldDeactivate");
+                                SoundStyle boom = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianShieldDeactivate");
                                 SoundEngine.PlaySound(boom with { Volume = 0.7f, Pitch = 0.1f }, Owner.Center);
-                                SoundStyle boom2 = new("CalamityMod/Sounds/Item/MagicRockSound");
+                                SoundStyle boom2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockSound");
                                 SoundEngine.PlaySound(boom2 with { Volume = 0.7f, Pitch = 0f }, Owner.Center);
                             }
                             for (int i = 0; i < 3; i++)
                             {
-                                Particle spark = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(6, 28), "CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard" + Main.rand.Next(1, 6 + 1).ToString(), Main.rand.NextBool(3), Main.rand.Next(25, 55 + 1), Main.rand.NextFloat(1.2f, 1.7f), Color.White, new Vector2(0.9f, 1.1f), false, false, 0, false, false);
+                                Particle spark = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(6, 28), "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard" + Main.rand.Next(1, 6 + 1).ToString(), Main.rand.NextBool(3), Main.rand.Next(25, 55 + 1), Main.rand.NextFloat(1.2f, 1.7f), Color.White, new Vector2(0.9f, 1.1f), false, false, 0, false, false);
                                 GeneralParticleHandler.SpawnParticle(spark);
 
                                 Dust dust = Dust.NewDustPerfect(Projectile.Center, ModContent.DustType<LightDust>(), Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(5, 38));
@@ -192,12 +192,12 @@ namespace CalamityMod.Projectiles.Typeless
         {
             Texture2D tex = relicType switch
             {
-                1 => ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard1").Value,
-                2 => ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard2").Value,
-                3 => ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard3").Value,
-                4 => ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard4").Value,
-                5 => ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard5").Value,
-                _ => ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard6").Value
+                1 => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard1").Value,
+                2 => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard2").Value,
+                3 => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard3").Value,
+                4 => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard4").Value,
+                5 => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard5").Value,
+                _ => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard6").Value
             };
             if (isAttacking)
                 Projectile.DrawProjectileWithBackglow(Color.Goldenrod with { A = 0 } * Projectile.Opacity, Color.White * Projectile.Opacity, 3 * Projectile.scale, tex);

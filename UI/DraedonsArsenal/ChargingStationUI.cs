@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.CalPlayer;
-using CalamityMod.Items.DraedonMisc;
-using CalamityMod.TileEntities;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI;
 
-namespace CalamityMod.UI.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.UI.DraedonsArsenal
 {
     public class ChargingStationUI
     {
@@ -208,7 +208,7 @@ namespace CalamityMod.UI.DraedonsArsenal
 
         public static void DrawWeaponSlot(SpriteBatch spriteBatch, Item item, Vector2 drawPosition)
         {
-            Texture2D slotBackgroundTex = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonsArsenal/ChargerWeaponSlot").Value;
+            Texture2D slotBackgroundTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonsArsenal/ChargerWeaponSlot").Value;
             spriteBatch.Draw(slotBackgroundTex, drawPosition, null, Color.White, 0f, slotBackgroundTex.Size() * 0.5f, IconScale, SpriteEffects.None, 0f);
 
             if (!item.IsAir)

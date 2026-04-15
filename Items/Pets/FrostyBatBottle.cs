@@ -1,5 +1,5 @@
-﻿using CalamityMod.Buffs.Pets;
-using CalamityMod.Projectiles.Pets;
+using CalamityModCustomPublicPrivateFork.Buffs.Pets;
+using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Pets
+namespace CalamityModCustomPublicPrivateFork.Items.Pets
 {
     public class FrostyBatBottle : ModItem, ILocalizedModType
     {

@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Enums;
+using CalamityModCustomPublicPrivateFork.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Graphics.Metaballs
+namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
 {
     public class SignusMetaball : Metaball
     {
@@ -84,7 +84,7 @@ namespace CalamityMod.Graphics.Metaballs
                 return;
 
             // Load the layer asset wrapper.
-            LayerAsset = ModContent.Request<Texture2D>($"CalamityMod/Graphics/Metaballs/SignusLayer", AssetRequestMode.ImmediateLoad);
+            LayerAsset = ModContent.Request<Texture2D>($"CalamityModCustomPublicPrivateFork/Graphics/Metaballs/SignusLayer", AssetRequestMode.ImmediateLoad);
         }
 
         public override void Update()
@@ -129,7 +129,7 @@ namespace CalamityMod.Graphics.Metaballs
 
         public override void DrawInstances()
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicMess").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicMess").Value;
 
             foreach (CosmicParticle particle in Particles)
             {

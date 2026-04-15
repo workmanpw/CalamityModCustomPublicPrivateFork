@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Brimflame
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Brimflame
 {
     [AutoloadEquip(EquipType.Body)]
     public class BrimflameRobes : ModItem, ILocalizedModType

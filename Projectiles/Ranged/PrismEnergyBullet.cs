@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,14 +6,14 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class PrismEnergyBullet : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
         public ref float CurrentLaserLength => ref Projectile.ai[0];
         public ref float Time => ref Projectile.ai[1];
-        public override string Texture => "CalamityMod/Projectiles/LaserProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/LaserProj";
 
         public override void SetDefaults()
         {

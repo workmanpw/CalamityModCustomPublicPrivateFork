@@ -1,10 +1,10 @@
-﻿using CalamityMod.Events;
-using CalamityMod.NPCs.Ravager;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     [LegacyName("AncientMedallion")]
     public class DeathWhistle : ModItem, ILocalizedModType

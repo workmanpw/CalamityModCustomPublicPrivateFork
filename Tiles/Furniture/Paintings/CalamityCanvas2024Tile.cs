@@ -1,4 +1,4 @@
-﻿namespace CalamityMod.Tiles.Furniture.Paintings
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Paintings
 {
     public class CalamityCanvas2024Tile : BaseCanvasPainting
     {

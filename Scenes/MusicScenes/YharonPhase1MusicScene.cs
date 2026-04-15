@@ -1,16 +1,16 @@
-﻿using CalamityMod.NPCs;
-using CalamityMod.NPCs.Yharon;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class YharonPhase1MusicScene : BaseMusicSceneEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
 
         public override int NPCType => ModContent.NPCType<Yharon>();
-        public override int? MusicModMusic => CalamityMod.Instance.GetMusicFromMusicMod("YharonPhase1");
+        public override int? MusicModMusic => ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("YharonPhase1");
         public override int VanillaMusic => MusicID.Boss3;
         public override int OtherworldMusic => MusicID.OtherworldlyBoss2;
 

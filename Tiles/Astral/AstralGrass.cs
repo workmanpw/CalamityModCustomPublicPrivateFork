@@ -1,12 +1,12 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Astral
+namespace CalamityModCustomPublicPrivateFork.Tiles.Astral
 {
     public class AstralGrass : ModTile
     {

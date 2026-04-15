@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Rogue;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class SeraphimProjectile : ModProjectile, ILocalizedModType
     {
@@ -18,7 +18,7 @@ namespace CalamityMod.Projectiles.Rogue
 
         public ref float Time => ref Projectile.ai[0];
 
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/Seraphim";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/Seraphim";
 
         public override void SetDefaults()
         {

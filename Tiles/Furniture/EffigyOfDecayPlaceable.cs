@@ -1,5 +1,5 @@
-﻿using CalamityMod.Buffs.Placeables;
-using CalamityMod.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Buffs.Placeables;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -7,7 +7,7 @@ using Terraria.Enums;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Furniture
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
 {
     public class EffigyOfDecayPlaceable : ModTile
     {

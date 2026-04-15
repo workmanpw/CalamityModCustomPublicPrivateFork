@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class OpalStrikerHoldout : BaseGunHoldoutProjectile
     {
@@ -74,7 +74,7 @@ namespace CalamityMod.Projectiles.Ranged
 
                         for (int i = 0; i < 2; i++)
                         {
-                            Particle spark2 = new CustomSpark(GunTipPosition, Projectile.velocity * 18, "CalamityMod/Particles/BloomCircle", false, 18, 0.65f, Color.OrangeRed, new Vector2(1.2f, 0.8f), true, true, glowOpacity: 0.9f, shrinkSpeed: 0.6f);
+                            Particle spark2 = new CustomSpark(GunTipPosition, Projectile.velocity * 18, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 18, 0.65f, Color.OrangeRed, new Vector2(1.2f, 0.8f), true, true, glowOpacity: 0.9f, shrinkSpeed: 0.6f);
                             GeneralParticleHandler.SpawnParticle(spark2);
                         }
                     }
@@ -164,7 +164,7 @@ namespace CalamityMod.Projectiles.Ranged
 
             Main.EntitySpriteDraw(texture, drawPosition, null, Projectile.GetAlpha(lightColor), drawRotation, rotationPoint, Projectile.scale * Owner.gravDir, flipSprite);
 
-            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
 
             Main.EntitySpriteDraw(texture, drawPosition, null, Projectile.GetAlpha(lightColor), drawRotation, rotationPoint, Projectile.scale * Owner.gravDir, flipSprite);
 

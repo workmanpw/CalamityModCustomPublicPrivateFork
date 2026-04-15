@@ -1,15 +1,15 @@
-﻿using System.IO;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.Items.Weapons.Magic.Omicron;
+using static CalamityModCustomPublicPrivateFork.Items.Weapons.Magic.Omicron;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class OmicronHoldout : BaseGunHoldoutProjectile
     {
@@ -97,7 +97,7 @@ namespace CalamityMod.Projectiles.Magic
 
             if (yBeam)
             {
-                SoundStyle fire = new("CalamityMod/Sounds/Item/OmicronBeam");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/OmicronBeam");
                 SoundEngine.PlaySound(fire with { Volume = 0.9f }, Projectile.Center);
 
                 for (int k = 0; k < 6; k++)
@@ -118,7 +118,7 @@ namespace CalamityMod.Projectiles.Magic
             }
             else
             {
-                SoundStyle fire = new("CalamityMod/Sounds/Item/ArcNovaDiffuserBigShot");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserBigShot");
                 SoundEngine.PlaySound(fire with { Volume = 0.2f, Pitch = 0.9f }, Projectile.Center);
 
                 if (Main.myPlayer == Projectile.owner)

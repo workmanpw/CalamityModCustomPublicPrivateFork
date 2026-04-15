@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.VanillaArmorChanges
+namespace CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges
 {
     public class GoldArmorSetChange : VanillaArmorChange
     {

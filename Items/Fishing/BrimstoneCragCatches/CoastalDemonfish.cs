@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing.BrimstoneCragCatches
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCragCatches
 {
     public class CoastalDemonfish : ModItem, ILocalizedModType
     {

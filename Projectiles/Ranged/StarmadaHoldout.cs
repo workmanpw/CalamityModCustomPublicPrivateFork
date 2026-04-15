@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -14,7 +14,7 @@ using Terraria.Audio;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class StarmadaHoldout : BaseGunHoldoutProjectile
     {
@@ -117,7 +117,7 @@ namespace CalamityMod.Projectiles.Ranged
             if (Owner.whoAmI == Main.myPlayer && Main.mouseLeft && !hasAmmo && shake < 0.1f)
             {
                 shake = 0.8f;
-                SoundStyle click = new("CalamityMod/Sounds/Item/DudFire");
+                SoundStyle click = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire");
                 SoundEngine.PlaySound(click with { Volume = .6f, Pitch = -.2f}, Projectile.Center);
             }
 
@@ -126,9 +126,9 @@ namespace CalamityMod.Projectiles.Ranged
             if (rightShootChecks)
             {
                 Projectile.ForceNetUpdate();
-                SoundStyle blast1 = new("CalamityMod/Sounds/Item/StarfleetStarburst");
+                SoundStyle blast1 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/StarfleetStarburst");
                 AudSlot1 = SoundEngine.PlaySound(blast1 with { Volume = 0.7f + gunPower * 0.1f, Pitch = 0f, MaxInstances = 8 }, Projectile.Center);
-                SoundStyle blast2 = new("CalamityMod/Sounds/Item/StarfleetStarburst");
+                SoundStyle blast2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/StarfleetStarburst");
                 AudSlot2 = SoundEngine.PlaySound(blast2 with { Volume = 0.5f + gunPower * 0.1f, Pitch = -0.2f + gunPower * 0.2f, MaxInstances = 8 }, Projectile.Center);
                 lastGunPower = gunPower;
                 starburstTimer++;
@@ -216,18 +216,18 @@ namespace CalamityMod.Projectiles.Ranged
             {
                 shake = 4;
                 failedChain = true;
-                SoundStyle oops = new("CalamityMod/Sounds/Item/TaserLaunch");
-                SoundStyle oops2 = new("CalamityMod/Sounds/Item/LightMetal");
+                SoundStyle oops = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TaserLaunch");
+                SoundStyle oops2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LightMetal");
                 for (int i = 0; i < 2; i++)
                     SoundEngine.PlaySound((i == 0 ? oops : oops2) with { Volume = 1f, Pitch = (i == 0 ? 0.5f : -0.3f), MaxInstances = 2 }, Projectile.Center);
             }
             else
             {
-                SoundStyle shotgunFire = new("CalamityMod/Sounds/Item/StarmadaFire");
+                SoundStyle shotgunFire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/StarmadaFire");
                 for (int i = 0; i < (naildriver ? 2 : 1); i++)
                     SoundEngine.PlaySound(shotgunFire with { Volume = (naildriver && i == 0 ? 0.3f : 0.6f), Pitch = ((naildriver && i == 0) ? -0.2f : 0f), MaxInstances = 2 }, Projectile.Center);
                 if (naildriver)
-                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/HellkiteFullCharge") with { Volume = 0.7f, Pitch = 1.2f + 0.1f * gunPower, MaxInstances = 2 }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/HellkiteFullCharge") with { Volume = 0.7f, Pitch = 1.2f + 0.1f * gunPower, MaxInstances = 2 }, Projectile.Center);
                 for (int b = 0; b < 24; b++)
                 {
                     int parts2 = 4;
@@ -246,7 +246,7 @@ namespace CalamityMod.Projectiles.Ranged
 
                         if (b == 0)
                         {
-                            Particle aura = new CustomSpark(gunBackPosition, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, naildriver ? 35 : 20, (0.8f + 0.35f * gunPower) * 0.85f, shiftColor, new Vector2(0.65f, 1f), glowCenter: true, glowOpacity: 0.8f, glowCenterScale: 0.85f, extraRotation: Projectile.rotation + (i % 2 == 0 ? MathHelper.PiOver2 : 0), shrinkSpeed: 0.1f);
+                            Particle aura = new CustomSpark(gunBackPosition, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, naildriver ? 35 : 20, (0.8f + 0.35f * gunPower) * 0.85f, shiftColor, new Vector2(0.65f, 1f), glowCenter: true, glowOpacity: 0.8f, glowCenterScale: 0.85f, extraRotation: Projectile.rotation + (i % 2 == 0 ? MathHelper.PiOver2 : 0), shrinkSpeed: 0.1f);
                             GeneralParticleHandler.SpawnParticle(aura);
                         }
                     }
@@ -330,14 +330,14 @@ namespace CalamityMod.Projectiles.Ranged
             for (int i = 0; i < 20; i++)
             {
                 float dist = Main.rand.NextFloat(1, 4);
-                Particle forwardJet = new CustomSpark(GunTipPosition + Main.rand.NextVector2CircularEdge(dist * 3.5f, dist * 3.5f), Projectile.velocity * Main.rand.NextFloat(5, 6) * (8 - dist * 2) * gunPowerMult, "CalamityMod/Particles/ForwardSmear", false, (int)(Main.rand.Next(9, 15 + 1) + (dist * 3)), Main.rand.NextFloat(0.15f, 0.25f) * gunPowerMult, GetRandomColor(), new Vector2(1f, 1f), shrinkSpeed: 0.3f);
+                Particle forwardJet = new CustomSpark(GunTipPosition + Main.rand.NextVector2CircularEdge(dist * 3.5f, dist * 3.5f), Projectile.velocity * Main.rand.NextFloat(5, 6) * (8 - dist * 2) * gunPowerMult, "CalamityModCustomPublicPrivateFork/Particles/ForwardSmear", false, (int)(Main.rand.Next(9, 15 + 1) + (dist * 3)), Main.rand.NextFloat(0.15f, 0.25f) * gunPowerMult, GetRandomColor(), new Vector2(1f, 1f), shrinkSpeed: 0.3f);
                 GeneralParticleHandler.SpawnParticle(forwardJet);
             }
             for (int i = 0; i < 34; i++)
             {
                 float rot = Main.rand.NextFloat(0.05f, 0.35f) * (Main.rand.NextBool() ? -1 : 1);
                 Vector2 startVel = Projectile.velocity.RotatedBy(rot) * Main.rand.NextFloat(8, 18) * (Main.rand.NextBool(4) ? 2f : 1);
-                Particle stars = new VelChangingSpark(GunTipPosition, startVel * gunPowerMult, startVel.RotatedBy(rot * 5) * gunPowerMult, "CalamityMod/Particles/PulseStar", Main.rand.Next(25, 45 + 1), Main.rand.NextFloat(0.1f, 0.35f) * gunPowerMult, GetRandomColor(), new Vector2(1f, 1f), shrinkSpeed: Main.rand.NextFloat(0.02f, 0.06f), lerpRate: 0.02f, glowCenter: true);
+                Particle stars = new VelChangingSpark(GunTipPosition, startVel * gunPowerMult, startVel.RotatedBy(rot * 5) * gunPowerMult, "CalamityModCustomPublicPrivateFork/Particles/PulseStar", Main.rand.Next(25, 45 + 1), Main.rand.NextFloat(0.1f, 0.35f) * gunPowerMult, GetRandomColor(), new Vector2(1f, 1f), shrinkSpeed: Main.rand.NextFloat(0.02f, 0.06f), lerpRate: 0.02f, glowCenter: true);
                 GeneralParticleHandler.SpawnParticle(stars);
             }
             if (lastGunPower == 3)
@@ -354,7 +354,7 @@ namespace CalamityMod.Projectiles.Ranged
                     float width = Utils.GetLerpValue(0, 3 * Math.Sign(fxVel.X), fxVel.X, true);
                     Color clr = (size <= 0.5f ? Color.Lerp(c3, c2, size * 2) : Color.Lerp(c2, c1, size * 2 - 1f));
 
-                    Particle aura = new CustomSpark(fxPlace, fxVel * 1.2f, "CalamityMod/Particles/BloomCircle", false, (int)(15 + size * 5), 0.35f + size * 0.2f, clr * 0.7f, new Vector2(1f + width * size, 1f), glowCenter: true, glowOpacity: size * 0.85f, glowCenterScale: 0.75f);
+                    Particle aura = new CustomSpark(fxPlace, fxVel * 1.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, (int)(15 + size * 5), 0.35f + size * 0.2f, clr * 0.7f, new Vector2(1f + width * size, 1f), glowCenter: true, glowOpacity: size * 0.85f, glowCenterScale: 0.75f);
                     GeneralParticleHandler.SpawnParticle(aura);
 
                 }
@@ -373,7 +373,7 @@ namespace CalamityMod.Projectiles.Ranged
                     float width = Utils.GetLerpValue(0, 5 * Math.Sign(fxVel.X), fxVel.X, true);
                     Color clr = (size <= 0.5f ? Color.Lerp(c3, c2, size * 2) : Color.Lerp(c2, c1, size * 2 - 1f));
 
-                    Particle aura = new CustomSpark(fxPlace, fxVel * 1.2f, "CalamityMod/Particles/BloomCircle", false, (int)(19 + size * 6), 0.45f + size * 0.23f, clr * 0.7f, new Vector2(1f + width * size, 1f), glowCenter: true, glowOpacity: size * 0.85f, glowCenterScale: 0.75f);
+                    Particle aura = new CustomSpark(fxPlace, fxVel * 1.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, (int)(19 + size * 6), 0.45f + size * 0.23f, clr * 0.7f, new Vector2(1f + width * size, 1f), glowCenter: true, glowOpacity: size * 0.85f, glowCenterScale: 0.75f);
                     GeneralParticleHandler.SpawnParticle(aura);
 
                 }
@@ -392,7 +392,7 @@ namespace CalamityMod.Projectiles.Ranged
                     float width = Utils.GetLerpValue(0, 4 * Math.Sign(fxVel.X), fxVel.X, true);
                     Color clr = (size <= 0.5f ? Color.Lerp(c3, c2, size * 2) : Color.Lerp(c2, c1, size * 2 - 1f));
 
-                    Particle aura = new CustomSpark(fxPlace, fxVel * 1.2f, "CalamityMod/Particles/BloomCircle", false, (int)(18 + size * 5), 0.35f + size * 0.23f, clr * 0.7f, new Vector2(1f + width * size, 1f), glowCenter: true, glowOpacity: size * 0.85f, glowCenterScale: 0.75f);
+                    Particle aura = new CustomSpark(fxPlace, fxVel * 1.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, (int)(18 + size * 5), 0.35f + size * 0.23f, clr * 0.7f, new Vector2(1f + width * size, 1f), glowCenter: true, glowOpacity: size * 0.85f, glowCenterScale: 0.75f);
                     GeneralParticleHandler.SpawnParticle(aura);
 
                 }
@@ -415,13 +415,13 @@ namespace CalamityMod.Projectiles.Ranged
 
             gunBackPosition = Projectile.Center - Projectile.velocity * 38f + Projectile.velocity.RotatedBy(MathHelper.PiOver2 * Projectile.direction) * -2;
 
-            Texture2D orb = Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
-            Texture2D shine = Request<Texture2D>("CalamityMod/Particles/FadeStreak").Value;
+            Texture2D orb = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D shine = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/FadeStreak").Value;
 
-            Texture2D front = Request<Texture2D>("CalamityMod/Projectiles/Ranged/StarmadaFront").Value;
-            Texture2D frontGlow = Request<Texture2D>("CalamityMod/Projectiles/Ranged/StarmadaFrontGlow").Value;
-            Texture2D back = Request<Texture2D>("CalamityMod/Projectiles/Ranged/StarmadaBack").Value;
-            Texture2D backGlow = Request<Texture2D>("CalamityMod/Projectiles/Ranged/StarmadaBackGlow").Value;
+            Texture2D front = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/StarmadaFront").Value;
+            Texture2D frontGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/StarmadaFrontGlow").Value;
+            Texture2D back = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/StarmadaBack").Value;
+            Texture2D backGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/StarmadaBackGlow").Value;
 
             Vector2 drawPosition = Projectile.Center - Main.screenPosition + Main.rand.NextVector2Circular(8 * shake, 8 * shake);
             Color drawColor = Projectile.GetAlpha(lightColor);

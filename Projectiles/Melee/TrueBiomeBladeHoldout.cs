@@ -1,19 +1,19 @@
-﻿using System;
-using CalamityMod.DataStructures;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
-using CalamityMod.Sounds;
-using CalamityMod.Systems;
+using System;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class TrueBiomeBladeHoldout : ModProjectile, ILocalizedModType //Visuals
     {
@@ -28,7 +28,7 @@ namespace CalamityMod.Projectiles.Melee
         private Item associatedItem;
         const int ChannelTime = 120;
 
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/OmegaBiomeBlade";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/OmegaBiomeBlade";
         public bool drawIndrawHeldProjInFrontOfHeldItemAndArms = true;
         public override void SetDefaults()
         {

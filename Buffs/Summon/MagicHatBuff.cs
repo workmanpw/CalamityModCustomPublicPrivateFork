@@ -1,7 +1,7 @@
-﻿using CalamityMod.Projectiles.Summon.Umbrella;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Summon
+namespace CalamityModCustomPublicPrivateFork.Buffs.Summon
 {
     public class MagicHatBuff : BaseSummonBuff
     {

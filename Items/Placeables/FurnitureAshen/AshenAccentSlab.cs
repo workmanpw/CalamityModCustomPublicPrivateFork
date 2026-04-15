@@ -1,12 +1,12 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureAshen
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAshen
 {
     public class AshenAccentSlab : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Placeables";
-        public override string Texture => "CalamityMod/Items/Placeables/FurnitureAshen/AshenSlab";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Placeables/FurnitureAshen/AshenSlab";
 
         public override void SetStaticDefaults()
         {

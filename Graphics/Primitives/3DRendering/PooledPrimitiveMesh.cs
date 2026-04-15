@@ -1,8 +1,8 @@
-﻿#nullable enable
+#nullable enable
 using System;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityMod.Graphics.Primitives;
+namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 
 public readonly struct PooledPrimitiveMesh : IDisposable
 {

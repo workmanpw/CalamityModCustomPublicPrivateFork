@@ -1,8 +1,8 @@
-﻿using CalamityMod.Systems;
-using CalamityMod.Tiles.Abyss;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Merges
+namespace CalamityModCustomPublicPrivateFork.Tiles.Merges
 {
     public sealed class SulphurousSandMerge : TileBlendTexture
     {

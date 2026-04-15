@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     [Autoload(Side = ModSide.Client)]
     public sealed partial class TileBlendMergeSystem : ModSystem
@@ -92,7 +92,7 @@ namespace CalamityMod.Systems
             if (blendTextureSlot == TileBlendTextureLoader.EmptySlot)
             {
                 var tileName = TileLoader.GetTile(blendTileType)?.FullName ?? "Vanilla Tile";
-                CalamityMod.Log.Error($"[BlendMergeSystem] BlendTileType: {blendTileType} ({tileName}) does not have TileBlendTexture! StackTrace:\n{Environment.StackTrace}");
+                ModContent.GetInstance<CalamityMod>().Logger.Error($"[BlendMergeSystem] BlendTileType: {blendTileType} ({tileName}) does not have TileBlendTexture! StackTrace:\n{Environment.StackTrace}");
                 return;
             }
 

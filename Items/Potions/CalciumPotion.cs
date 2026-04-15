@@ -1,12 +1,12 @@
-﻿using CalamityMod.Buffs.Potions;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Buffs.Potions;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Potions
+namespace CalamityModCustomPublicPrivateFork.Items.Potions
 {
     public class CalciumPotion : ModItem, ILocalizedModType
     {

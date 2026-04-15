@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee.Yoyos
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
 {
     public class SmokingCometYoyo : ModProjectile
     {
@@ -176,8 +176,8 @@ namespace CalamityMod.Projectiles.Melee.Yoyos
                 }
 
                 float stringHelper = (float)Math.Atan2(yoyoYVel, yoyoXVel) - MathHelper.PiOver2;
-                Texture2D stringTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/Yoyos/SmokingCometChain").Value;
-                Main.spriteBatch.Draw(stringTexture, new Vector2(vector.X - Main.screenPosition.X + (float)ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/Yoyos/SmokingCometChain").Width() * 0.5f, vector.Y - Main.screenPosition.Y + (float)ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/Yoyos/SmokingCometChain").Height() * 0.5f) - new Vector2(6f, 0f), new Rectangle(0, 0, ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/Yoyos/SmokingCometChain").Width(), (int)chainWidth), Color.White, stringHelper, new Vector2((float)ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/Yoyos/SmokingCometChain").Width() * 0.5f, 0f), 1f, SpriteEffects.None, 0f);
+                Texture2D stringTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/Yoyos/SmokingCometChain").Value;
+                Main.spriteBatch.Draw(stringTexture, new Vector2(vector.X - Main.screenPosition.X + (float)ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/Yoyos/SmokingCometChain").Width() * 0.5f, vector.Y - Main.screenPosition.Y + (float)ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/Yoyos/SmokingCometChain").Height() * 0.5f) - new Vector2(6f, 0f), new Rectangle(0, 0, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/Yoyos/SmokingCometChain").Width(), (int)chainWidth), Color.White, stringHelper, new Vector2((float)ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/Yoyos/SmokingCometChain").Width() * 0.5f, 0f), 1f, SpriteEffects.None, 0f);
             }
 
             CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], lightColor, 1);

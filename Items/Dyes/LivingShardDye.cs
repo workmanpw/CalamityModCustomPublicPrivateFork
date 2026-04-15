@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Dyes
+namespace CalamityModCustomPublicPrivateFork.Items.Dyes
 {
     public class LivingShardDye : BaseDye
     {
         public override ArmorShaderData ShaderDataToBind => new ArmorShaderData(Mod.Assets.Request<Effect>("Effects/Dyes/LivingShardDyeShader"), "DyePass").
-            UseColor(new Color(118, 230, 29)).UseSecondaryColor(new Color(102, 209, 255)).UseImage(Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/OrnatePattern"));
+            UseColor(new Color(118, 230, 29)).UseSecondaryColor(new Color(102, 209, 255)).UseImage(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/OrnatePattern"));
         public override void SafeSetStaticDefaults()
         {
             Item.ResearchUnlockCount = 3;

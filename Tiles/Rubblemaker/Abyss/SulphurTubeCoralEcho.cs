@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.Abyss;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,11 +8,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Rubblemaker.Abyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.Abyss
 {
     public class SulphurTubeCoralEcho : ModTile
     {
-        public override string Texture => "CalamityMod/Tiles/Abyss/AbyssAmbient/SulphurTubeCoral";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/Abyss/AbyssAmbient/SulphurTubeCoral";
         public override void SetStaticDefaults()
         {
             Main.tileLighted[Type] = true;

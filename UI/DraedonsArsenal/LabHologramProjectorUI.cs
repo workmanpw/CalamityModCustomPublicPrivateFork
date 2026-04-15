@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using CalamityMod.CalPlayer;
-using CalamityMod.TileEntities;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ID;
 
-namespace CalamityMod.UI.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.UI.DraedonsArsenal
 {
     public class LabHologramProjectorUI
     {

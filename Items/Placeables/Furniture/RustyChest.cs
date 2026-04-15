@@ -1,8 +1,8 @@
-﻿using CalamityMod.Tiles.Abyss;
+using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.Furniture
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture
 {
     public class RustyChest : ModItem, ILocalizedModType
     {

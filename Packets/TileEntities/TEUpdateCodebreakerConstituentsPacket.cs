@@ -1,8 +1,8 @@
-﻿using System.IO;
-using CalamityMod.TileEntities;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Terraria;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal class TEUpdateCodebreakerConstituentsPacket : CalamityPacket
     {

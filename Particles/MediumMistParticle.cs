@@ -1,12 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class MediumMistParticle : Particle
     {
-        public override string Texture => "CalamityMod/Particles/MediumMist";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/MediumMist";
         public override int FrameVariants => 3;
         public override bool UseAdditiveBlend => true;
 

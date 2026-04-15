@@ -1,11 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class GastricBelcherVomit : ModProjectile, ILocalizedModType
     {
@@ -57,10 +57,10 @@ namespace CalamityMod.Projectiles.Summon
             switch (Projectile.ai[0])
             {
                 case 1f:
-                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/GastricBelcherVomit2").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/GastricBelcherVomit2").Value;
                     break;
                 case 2f:
-                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/GastricBelcherVomit3").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/GastricBelcherVomit3").Value;
                     break;
                 default:
                     texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;

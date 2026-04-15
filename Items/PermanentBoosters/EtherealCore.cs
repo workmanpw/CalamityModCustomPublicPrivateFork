@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using CalamityMod.CalPlayer;
-using CalamityMod.Items.Materials;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,12 +8,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.PermanentBoosters
+namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
 {
     public class EtherealCore : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Misc";
-        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/EtherealCoreUse");
+        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/EtherealCoreUse");
         public const int ManaBoost = 50;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(ManaBoost);
 
@@ -47,7 +47,7 @@ namespace CalamityMod.Items.PermanentBoosters
             {
                 if (player.whoAmI == Main.myPlayer)
                 {
-                    string key = "Mods.CalamityMod.Misc.EtherealCoreText";
+                    string key = "Mods.CalamityModCustomPublicPrivateFork.Misc.EtherealCoreText";
                     Color messageColor = Color.MediumVioletRed;
                     Main.NewText(Language.GetTextValue(key), messageColor);
                 }

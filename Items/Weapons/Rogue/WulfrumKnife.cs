@@ -1,6 +1,6 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,14 +8,14 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Rogue
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
 {
     public class WulfrumKnife : RogueWeapon
     {
-        public static readonly SoundStyle Throw3Sound = new("CalamityMod/Sounds/Item/WulfrumKnifeThrowFull") { Volume = 0.7f, PitchVariance = 0.4f };
-        public static readonly SoundStyle Throw2Sound = new("CalamityMod/Sounds/Item/WulfrumKnifeThrowTwo") { Volume = 0.7f, PitchVariance = 0.4f };
-        public static readonly SoundStyle Throw1Sound = new("CalamityMod/Sounds/Item/WulfrumKnifeThrowSingle") { Volume = 0.7f, PitchVariance = 0.4f };
-        public static readonly SoundStyle TileHitSound = new("CalamityMod/Sounds/Item/WulfrumKnifeTileHit", 2) { Volume = 0.7f, PitchVariance = 0.4f, MaxInstances = 3 };
+        public static readonly SoundStyle Throw3Sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumKnifeThrowFull") { Volume = 0.7f, PitchVariance = 0.4f };
+        public static readonly SoundStyle Throw2Sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumKnifeThrowTwo") { Volume = 0.7f, PitchVariance = 0.4f };
+        public static readonly SoundStyle Throw1Sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumKnifeThrowSingle") { Volume = 0.7f, PitchVariance = 0.4f };
+        public static readonly SoundStyle TileHitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumKnifeTileHit", 2) { Volume = 0.7f, PitchVariance = 0.4f, MaxInstances = 3 };
 
         public int shootCount = 0;
         public bool stealthStrikeStarted = false;

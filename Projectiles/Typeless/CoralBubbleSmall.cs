@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class CoralBubbleSmall : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/Typeless/CoralBubble";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/CoralBubble";
 
         public override void SetDefaults()
         {

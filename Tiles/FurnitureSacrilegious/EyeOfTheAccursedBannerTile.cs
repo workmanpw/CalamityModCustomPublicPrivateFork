@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,7 +8,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.FurnitureSacrilegious
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious
 {
     public class EyeOfTheAccursedBannerTile : ModTile
     {

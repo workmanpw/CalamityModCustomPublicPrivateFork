@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,12 +11,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.Player;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     [PierceResistException]
     public class LeviathanToothStealth : ModProjectile, ILocalizedModType
     {
-        public override string Texture => "CalamityMod/Projectiles/Rogue/LeviathanTooth";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Rogue/LeviathanTooth";
         public new string LocalizationCategory => "Projectiles.Rogue";
         public ref float time => ref Projectile.ai[0];
 
@@ -94,10 +94,10 @@ namespace CalamityMod.Projectiles.Rogue
             {
                 Owner.SetScreenshake(5f);
                 Owner.Calamity().ConsumeStealthByAttacking();
-                SoundStyle crunch = new("CalamityMod/Sounds/NPCKilled/PerfSmallDeath");
+                SoundStyle crunch = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/PerfSmallDeath");
                 for (int i = 0; i < 3; i++)
                     SoundEngine.PlaySound(crunch with { Volume = 0.4f, Pitch = -0.1f * i, MaxInstances = 3 }, Projectile.Center);
-                SoundStyle crunch2 = new("CalamityMod/Sounds/NPCHit/RavagerHurt3");
+                SoundStyle crunch2 = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/RavagerHurt3");
                 for (int i = 0; i < 2; i++)
                     SoundEngine.PlaySound(crunch2 with { Volume = 0.8f, Pitch = -0.4f * i, MaxInstances = 2 }, Projectile.Center);
                 canDamage = true;
@@ -170,7 +170,7 @@ namespace CalamityMod.Projectiles.Rogue
                         Dust dust = Dust.NewDustPerfect(finalDrawPos, !ChildSafety.Disabled ? DustID.Cloud : DustID.Blood, (rotation.ToRotationVector2().RotatedBy(MathHelper.PiOver2)).RotatedByRandom(0.5f).RotatedBy(1.2f * (isTopJaw ? -1 : 1)) * Main.rand.NextFloat(5f, 8f), 100, default, Main.rand.NextFloat(1.1f, 1.9f) * scale);
                         dust.noGravity = true;
                         dust.alpha = (int)(255 * (1 - toothOpacity));
-                        Particle blood = new CustomSpark(finalDrawPos, (rotation.ToRotationVector2().RotatedBy(MathHelper.PiOver2)).RotatedByRandom(0.4f).RotatedBy(1.2f * (isTopJaw ? -1 : 1)) * Main.rand.NextFloat(5f, 8f), "CalamityMod/Particles/LargeBloom", 
+                        Particle blood = new CustomSpark(finalDrawPos, (rotation.ToRotationVector2().RotatedBy(MathHelper.PiOver2)).RotatedByRandom(0.4f).RotatedBy(1.2f * (isTopJaw ? -1 : 1)) * Main.rand.NextFloat(5f, 8f), "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", 
                             false, 8, Main.rand.NextFloat(0.065f, 0.08f) * scale, (!ChildSafety.Disabled ? Color.CornflowerBlue : Color.Lerp(Color.DarkRed, Color.Black, Main.rand.NextFloat(0, 0.5f))) * 0.7f * toothOpacity, new Vector2(1f, 1f), false, shrinkSpeed: 0.9f);
                         GeneralParticleHandler.SpawnParticle(blood);
 

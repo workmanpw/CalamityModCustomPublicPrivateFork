@@ -1,4 +1,4 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,16 +7,16 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class VolterionOrb : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
 
-        public static readonly SoundStyle FireSound = new("CalamityMod/Sounds/Item/VolterionOrbShot") { Volume = 0.6f };
-        public static readonly SoundStyle ExplosionSound = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeImpact") { Volume = 0.5f };
+        public static readonly SoundStyle FireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/VolterionOrbShot") { Volume = 0.6f };
+        public static readonly SoundStyle ExplosionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeImpact") { Volume = 0.5f };
 
         // Explosion
         public static float ExplosionTime = 150f; // Time taken to explode
@@ -38,8 +38,8 @@ namespace CalamityMod.Projectiles.Magic
         public static Asset<Texture2D> Explosion;
         public override void Load()
         {
-            Bloom = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
-            Explosion = ModContent.Request<Texture2D>("CalamityMod/Particles/PlasmaExplosion");
+            Bloom = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+            Explosion = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/PlasmaExplosion");
         }
 
         public override void SetStaticDefaults()

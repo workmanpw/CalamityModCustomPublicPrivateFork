@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Sounds;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityMod.NPCs.NormalNPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
 {
     public class WulfrumRover : ModNPC
     {
@@ -74,7 +74,7 @@ namespace CalamityMod.NPCs.NormalNPCs
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.DayTime,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.WulfrumRover")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.WulfrumRover")
             });
         }
 
@@ -195,7 +195,7 @@ namespace CalamityMod.NPCs.NormalNPCs
             {
                 //old
                 /*
-                Texture2D shieldTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/NormalNPCs/WulfrumRoverShield").Value;
+                Texture2D shieldTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/NormalNPCs/WulfrumRoverShield").Value;
                 Rectangle frame = shieldTexture.Frame(1, 11, 0, (int)(Main.GlobalTimeWrappedHourly * 8) % 11);
                 spriteBatch.Draw(shieldTexture,
                                  NPC.Center - screenPos + Vector2.UnitY * (NPC.gfxOffY + 6f),
@@ -234,7 +234,7 @@ namespace CalamityMod.NPCs.NormalNPCs
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, shieldEffect, Main.GameViewMatrix.TransformationMatrix);
 
                 if (RoverDrive.NoiseTex == null)
-                    RoverDrive.NoiseTex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/TechyNoise");
+                    RoverDrive.NoiseTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/TechyNoise");
 
                 Texture2D tex = RoverDrive.NoiseTex.Value;
                 Vector2 pos = NPC.Center + NPC.gfxOffY * Vector2.UnitY - Main.screenPosition;

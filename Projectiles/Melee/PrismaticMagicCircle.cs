@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
@@ -6,12 +6,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class PrismaticMagicCircle : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public ref float Timer => ref Projectile.ai[1];
         public Player Owner => Main.player[Projectile.owner];
@@ -69,7 +69,7 @@ namespace CalamityMod.Projectiles.Melee
         {
             // Draw the awesome and cool magic circle to hide the fact that the laser gets cut off horribly
             Main.spriteBatch.EnterShaderRegion(BlendState.Additive);
-            Texture2D howNoisy = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/MeltyNoise").Value;
+            Texture2D howNoisy = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/MeltyNoise").Value;
             Vector2 squishScale = new Vector2(Projectile.width / howNoisy.Width * 0.55f, Projectile.height / howNoisy.Height * 2f) * Projectile.scale * 0.36f;
 
             GameShaders.Misc["CalamityMod:ExoVortex"].Apply();

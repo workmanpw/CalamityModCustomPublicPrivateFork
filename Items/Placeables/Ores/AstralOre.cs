@@ -1,9 +1,9 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Ores
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Ores
 {
     public class AstralOre : ModItem, ILocalizedModType
     {

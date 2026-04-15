@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Enums;
-using CalamityMod.Utilities.Daybreak.Buffers;
+using System;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Graphics.Renderers;
+namespace CalamityModCustomPublicPrivateFork.Graphics.Renderers;
 
 /// <summary>
 /// A class to handle drawing a visual effect to a rendertarget, then drawing the target to the screen at selected layer.

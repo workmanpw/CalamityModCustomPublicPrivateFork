@@ -1,26 +1,26 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Events;
-using CalamityMod.Items.Armor.Vanity;
-using CalamityMod.Items.LoreItems;
-using CalamityMod.Items.Mounts;
-using CalamityMod.Items.Placeables.Furniture.BossRelics;
-using CalamityMod.Items.Placeables.Furniture.Paintings;
-using CalamityMod.Items.Placeables.Furniture.Trophies;
-using CalamityMod.Items.Potions;
-using CalamityMod.Items.TreasureBags;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.NPCs.VanillaNPCAIOverrides.RegularEnemies;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
+using CalamityModCustomPublicPrivateFork.Items.LoreItems;
+using CalamityModCustomPublicPrivateFork.Items.Mounts;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityModCustomPublicPrivateFork.Items.Potions;
+using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.RegularEnemies;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -32,19 +32,19 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.AstrumAureus
+namespace CalamityModCustomPublicPrivateFork.NPCs.AstrumAureus
 {
     [AutoloadBossHead]
     [HasPierceResist(singleHitbox: true)]
     public class AstrumAureus : ModNPC
     {
-        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/AureusHit", 4);
-        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/AureusDeath");
-        public static readonly SoundStyle LaserSound = new("CalamityMod/Sounds/Custom/AstrumAureus/AureusShoot");
-        public static readonly SoundStyle FlameCrystalSound = new("CalamityMod/Sounds/Custom/AstrumAureus/AureusShootCrystal");
-        public static readonly SoundStyle StompSound = new("CalamityMod/Sounds/Custom/AstrumAureus/LegStomp");
-        public static readonly SoundStyle JumpSound = new("CalamityMod/Sounds/Custom/AstrumAureus/AureusJump");
-        public static readonly SoundStyle TeleportSound = new("CalamityMod/Sounds/Custom/AstrumAureus/AureusTeleport");
+        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/AureusHit", 4);
+        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/AureusDeath");
+        public static readonly SoundStyle LaserSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AstrumAureus/AureusShoot");
+        public static readonly SoundStyle FlameCrystalSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AstrumAureus/AureusShootCrystal");
+        public static readonly SoundStyle StompSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AstrumAureus/LegStomp");
+        public static readonly SoundStyle JumpSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AstrumAureus/AureusJump");
+        public static readonly SoundStyle TeleportSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AstrumAureus/AureusTeleport");
 
         public static Asset<Texture2D> JumpTexture;
         public static Asset<Texture2D> RechargeTexture;
@@ -127,7 +127,7 @@ namespace CalamityMod.NPCs.AstrumAureus
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.AstrumAureus")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.AstrumAureus")
             });
         }
 
@@ -1344,8 +1344,8 @@ namespace CalamityMod.NPCs.AstrumAureus
             // If Astrum Aureus has not yet been killed, notify players of new Astral enemy drops
             if (!DownedBossSystem.downedAstrumAureus)
             {
-                string key = "Mods.CalamityMod.Status.Progression.AureusBossText";
-                string key2 = "Mods.CalamityMod.Status.Progression.AureusBossText2";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.AureusBossText";
+                string key2 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.AureusBossText2";
                 Color messageColor = Color.Gold;
 
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);

@@ -1,13 +1,13 @@
-﻿using CalamityMod.Buffs.Summon;
-using CalamityMod.NPCs.NormalNPCs;
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Summon
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
 {
     public class StormjawStaff : ModItem, ILocalizedModType
     {

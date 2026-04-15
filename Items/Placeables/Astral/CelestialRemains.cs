@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Astral
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Astral
 {
     [LegacyName("AstralFossil")]
     public class CelestialRemains : ModItem, ILocalizedModType

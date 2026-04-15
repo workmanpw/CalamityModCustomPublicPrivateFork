@@ -1,13 +1,13 @@
-﻿using System.IO;
-using CalamityMod.Projectiles.Typeless;
-using CalamityMod.World;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.SupremeCalamitas
+namespace CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas
 {
     public class SepulcherBodyEnergyBall : ModNPC
     {

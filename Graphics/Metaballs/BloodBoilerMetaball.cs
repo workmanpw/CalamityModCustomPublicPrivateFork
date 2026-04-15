@@ -1,14 +1,14 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Effects;
-using CalamityMod.Enums;
+using CalamityModCustomPublicPrivateFork.Effects;
+using CalamityModCustomPublicPrivateFork.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Graphics.Metaballs
+namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
 {
     public class BloodBoilerMetaball : Metaball
     {
@@ -46,7 +46,7 @@ namespace CalamityMod.Graphics.Metaballs
         {
             get
             {
-                yield return ModContent.Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj").Value;
+                yield return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj").Value;
             }
         }
 
@@ -88,7 +88,7 @@ namespace CalamityMod.Graphics.Metaballs
         {
             float pureRedIntensity = 0.15f;
             float opacity = 1f;
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/SmallGreyscaleCircle").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/SmallGreyscaleCircle").Value;
 
             foreach (BloodBoilerParticle particle in Particles)
             {

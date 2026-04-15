@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Projectiles.Typeless;
-using CalamityMod.Sounds;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class EternityCrystal : ModProjectile, ILocalizedModType
     {

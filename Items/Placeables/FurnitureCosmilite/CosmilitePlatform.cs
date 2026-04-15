@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureCosmilite
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureCosmilite
 {
     public class CosmilitePlatform : ModItem, ILocalizedModType
     {

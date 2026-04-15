@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Backgrounds
+namespace CalamityModCustomPublicPrivateFork.Backgrounds
 {
     public class FloralParadiseBGStyle : ModUndergroundBackgroundStyle
     {

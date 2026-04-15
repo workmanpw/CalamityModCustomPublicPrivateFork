@@ -1,15 +1,15 @@
-﻿using CalamityMod.Buffs.StatBuffs;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Armor.Empyrean;
-using CalamityMod.Items.Materials;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Empyrean;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories.Wings
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Wings
 {
     [AutoloadEquip(EquipType.Wings)]
     public class ExodusWings : BaseWings

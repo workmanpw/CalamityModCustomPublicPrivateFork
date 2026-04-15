@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Dyes
+namespace CalamityModCustomPublicPrivateFork.Items.Dyes
 {
     public class MeldDye : BaseDye
     {
         public override ArmorShaderData ShaderDataToBind => new ArmorShaderData(Mod.Assets.Request<Effect>("Effects/Dyes/MeldDyeShader"), "DyePass").
-            UseColor(new Color(28, 135, 84)).UseSecondaryColor(new Color(52, 235, 149)).UseImage(Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Veins"));
+            UseColor(new Color(28, 135, 84)).UseSecondaryColor(new Color(52, 235, 149)).UseImage(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Veins"));
         public override void SafeSetStaticDefaults()
         {
             Item.ResearchUnlockCount = 3;

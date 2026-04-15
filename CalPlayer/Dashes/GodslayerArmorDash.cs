@@ -1,10 +1,10 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Enums;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Armor.GodSlayer;
-using CalamityMod.NPCs.DevourerofGods;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Armor.GodSlayer;
+using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using ReLogic.Utilities;
 using Terraria;
@@ -13,7 +13,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.CalPlayer.Dashes
+namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
 {
     public class GodslayerArmorDash : PlayerDashEffect
     {
@@ -21,7 +21,7 @@ namespace CalamityMod.CalPlayer.Dashes
 
         public SlotId GSDashSlot;
 
-        public static readonly SoundStyle Impact = new("CalamityMod/Sounds/NPCKilled/DevourerDeathImpact") { Volume = 0.5f };
+        public static readonly SoundStyle Impact = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/DevourerDeathImpact") { Volume = 0.5f };
 
         public override DashCollisionType CollisionType => DashCollisionType.ShieldSlam;
 

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -6,12 +6,12 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class NullFlash : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public ref float time => ref Projectile.ai[0];
         public Color baseColor = new Color(Main.DiscoR, Main.DiscoG, Main.DiscoB);
 
@@ -61,7 +61,7 @@ namespace CalamityMod.Projectiles.Ranged
             Player Owner = Main.player[Projectile.owner];
             if (Projectile.numHits == 0)
             {
-                SoundStyle fire = new("CalamityMod/Sounds/Item/NullImpact");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NullImpact");
                 SoundEngine.PlaySound(fire with { Volume = 0.5f, Pitch = 0.5f }, Projectile.Center);
             }
 
@@ -73,7 +73,7 @@ namespace CalamityMod.Projectiles.Ranged
             if (time < 1)
                 return false;
             Vector2 placement = Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 50;
-            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmear");
+            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmear");
             for (int i = 0; i < 3; i++)
             {
                 Vector2 scale = new Vector2(1 - (time * 0.025f) + i * 0.1f, 1 + (time * 0.025f) - i * 0.1f) * Projectile.scale * (0.7f - (i * 0.05f));

@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
-namespace CalamityMod.DataStructures
+namespace CalamityModCustomPublicPrivateFork.DataStructures
 {
     /// <summary>
     /// A <see cref="HeapDict{TKey, TValue}"/> is a Dictionary-like data structure 

@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Projectiles.Boss;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.NormalNPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
 {
     public class ProfanedEnergyLantern : ModNPC
     {
@@ -24,7 +24,7 @@ namespace CalamityMod.NPCs.NormalNPCs
             Main.npcFrameCount[Type] = 6;
             if (!Main.dedServ)
             {
-                ChainTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/NormalNPCs/ProfanedEnergySegment", AssetRequestMode.AsyncLoad);
+                ChainTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/NormalNPCs/ProfanedEnergySegment", AssetRequestMode.AsyncLoad);
             }
             NPCID.Sets.PositiveNPCTypesExcludedFromDeathTally[Type] = true; // You can't kill this thing but just in case anyway
         }

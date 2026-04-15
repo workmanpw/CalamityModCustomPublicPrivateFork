@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.Furniture.Fountains;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Fountains;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Furniture.Fountains
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Fountains
 {
     public class SunkenSeaFountain : ModItem, ILocalizedModType
     {

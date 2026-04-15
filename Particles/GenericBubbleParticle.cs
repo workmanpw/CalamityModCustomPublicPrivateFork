@@ -1,11 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     //This is mostly so i can easily get it to draw over the reed blowgun.
     public class GenericBubbleParticle : Particle
     {
-        public override string Texture => "CalamityMod/Particles/Bubble";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Bubble";
         public override bool UseHalfTransparency => true;
         public override bool SetLifetime => true;
         public override bool Important => true;

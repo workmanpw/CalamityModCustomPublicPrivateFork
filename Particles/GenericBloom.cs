@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class GenericBloom : Particle
     {
-        public override string Texture => "CalamityMod/Particles/Light";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Light";
         public bool UseAltVisual = true;
         public override bool UseAdditiveBlend => UseAltVisual;
         public override bool SetLifetime => true;

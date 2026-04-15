@@ -1,15 +1,15 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
 {
     public class SmallWideCoralEcho : ModTile
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/SmallWideCoral";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/SmallWideCoral";
 
         public override void SetStaticDefaults()
         {
@@ -39,7 +39,7 @@ namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 
     public class SmallWideCoral2Echo : SmallWideCoralEcho
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/SmallWideCoral2";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/SmallWideCoral2";
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {

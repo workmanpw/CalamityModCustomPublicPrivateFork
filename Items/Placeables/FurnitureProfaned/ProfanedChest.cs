@@ -1,7 +1,7 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureProfaned
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureProfaned
 {
     public class ProfanedChest : ModItem, ILocalizedModType
     {

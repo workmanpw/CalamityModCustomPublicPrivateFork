@@ -1,16 +1,16 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class GacruxianProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/GacruxianMollusk";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/GacruxianMollusk";
 
         public override void SetDefaults()
         {

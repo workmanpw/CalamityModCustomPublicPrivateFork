@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class TimeBoltKnife : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/TimeBolt";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/TimeBolt";
 
         private int maxPenetrate = 6;
         private int penetrationAmt = 6;

@@ -1,5 +1,5 @@
-﻿using System.IO;
-using CalamityMod.World;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.SupremeCalamitas
+namespace CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas
 {
     public class SepulcherArm : ModNPC
     {
@@ -69,8 +69,8 @@ namespace CalamityMod.NPCs.SupremeCalamitas
             this.HideFromBestiary();
             if (!Main.dedServ)
             {
-                HandTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/SepulcherHand", AssetRequestMode.AsyncLoad);
-                ForearmTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/SepulcherForearm", AssetRequestMode.AsyncLoad);
+                HandTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/SupremeCalamitas/SepulcherHand", AssetRequestMode.AsyncLoad);
+                ForearmTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/SupremeCalamitas/SepulcherForearm", AssetRequestMode.AsyncLoad);
             }
         }
 

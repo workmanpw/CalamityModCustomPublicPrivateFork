@@ -1,10 +1,10 @@
-﻿using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace CalamityMod.Tiles.FurniturePlaguedPlate
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurniturePlaguedPlate
 {
     public class PlaguedPlate : GlowMaskTile
     {

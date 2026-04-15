@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.FurnitureAcidwood;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -10,7 +10,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.FurnitureAcidwood
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAcidwood
 {
     public class AcidwoodChairTile : ModTile
     {

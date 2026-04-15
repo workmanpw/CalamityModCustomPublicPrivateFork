@@ -1,9 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureStratus
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStratus
 {
     public class StratusTable : ModTile
     {

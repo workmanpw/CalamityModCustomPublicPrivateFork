@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Buffs.Mounts;
+using CalamityModCustomPublicPrivateFork.Buffs.Mounts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Mounts
+namespace CalamityModCustomPublicPrivateFork.Items.Mounts
 {
     // TODO:
     // - don't render the player's arm
@@ -84,8 +84,8 @@ namespace CalamityMod.Items.Mounts
             if (!Main.dedServ)
             {
                 // 22JAN2026: Ozzatron: Drill itself was rendering behind the mount instead of in front of it
-                MountData.frontTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Mounts/OnyxExcavatorExtra2");
-                MountData.frontTextureExtra = ModContent.Request<Texture2D>("CalamityMod/Items/Mounts/OnyxExcavatorExtra");
+                MountData.frontTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Mounts/OnyxExcavatorExtra2");
+                MountData.frontTextureExtra = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Mounts/OnyxExcavatorExtra");
                 MountData.textureWidth = MountData.backTexture.Width();
                 MountData.textureHeight = MountData.backTexture.Height();
             }

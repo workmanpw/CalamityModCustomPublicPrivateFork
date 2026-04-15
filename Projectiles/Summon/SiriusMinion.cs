@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.CalPlayer;
-using CalamityMod.DataStructures;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Particles;
-using CalamityMod.Systems.Graphic.PixelationSystem;
-using CalamityMod.Systems.Mechanic;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Systems.Graphic.PixelationSystem;
+using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using rail;
@@ -18,12 +18,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class SiriusMinion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
 
         public CalamityPlayer moddedOwner => Owner.Calamity();
@@ -130,7 +130,7 @@ namespace CalamityMod.Projectiles.Summon
                     return;
                 offset.X *= Projectile.spriteDirection;
                 var star = new BloomParticle(SiriusPos + offset * Projectile.scale - (Owner.oldVelocity * Math.Clamp(offset.Length() * 0.001f,0,1) ), Vector2.Zero, Color.SlateBlue * ((Owner.miscCounter + flashOffset) % flashMod < 5 ? 0.75f : 1f), 2*SiriusScale * intensity, 2*SiriusScale * intensity, 2, false);
-                var star2 = new CustomSpark(SiriusPos + offset * Projectile.scale - (Owner.oldVelocity * Math.Clamp(offset.Length() * 0.001f, 0, 1)), Vector2.UnitX.RotatedBy(MathHelper.Pi * (Owner.miscCounter/300f)) * 0.1f, "CalamityMod/Particles/Sparkle", false, 2, 10*SiriusScale * intensity, Color.SkyBlue, Vector2.One);
+                var star2 = new CustomSpark(SiriusPos + offset * Projectile.scale - (Owner.oldVelocity * Math.Clamp(offset.Length() * 0.001f, 0, 1)), Vector2.UnitX.RotatedBy(MathHelper.Pi * (Owner.miscCounter/300f)) * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/Sparkle", false, 2, 10*SiriusScale * intensity, Color.SkyBlue, Vector2.One);
                 GeneralParticleHandler.SpawnParticle(star,false,Enums.GeneralDrawLayer.AfterProjectiles); 
                 GeneralParticleHandler.SpawnParticle(star2, false, Enums.GeneralDrawLayer.AfterProjectiles);
             }
@@ -261,7 +261,7 @@ namespace CalamityMod.Projectiles.Summon
 
                         for (int i = 0; i < 4; i++)
                         {
-                            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SkyBlue, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0, 0.5f + 0.05f, 25);
+                            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SkyBlue, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0, 0.5f + 0.05f, 25);
                             GeneralParticleHandler.SpawnParticle(blastRing);
                         }
                         moddedOwner.StratusStarburst -= 50;

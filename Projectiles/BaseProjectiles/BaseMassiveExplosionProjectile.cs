@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.BaseProjectiles
+namespace CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles
 {
     public abstract class BaseMassiveExplosionProjectile : ModProjectile
     {
@@ -19,7 +19,7 @@ namespace CalamityMod.Projectiles.BaseProjectiles
         public abstract Color GetCurrentExplosionColor(float pulseCompletionRatio);
 
         // Use the invisible projectile by default. This can be overridden in child types if desired.
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void AI()
         {

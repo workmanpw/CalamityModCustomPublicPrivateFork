@@ -1,12 +1,12 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class WaterGlobParticle : Particle
     {
-        public override string Texture => "CalamityMod/Particles/WaterGlob";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/WaterGlob";
 
         public override bool SetLifetime => true;
 

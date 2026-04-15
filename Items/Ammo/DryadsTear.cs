@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Ammo
+namespace CalamityModCustomPublicPrivateFork.Items.Ammo
 {
     [LegacyName("TerraBullet")]
     public class DryadsTear : ModItem, ILocalizedModType

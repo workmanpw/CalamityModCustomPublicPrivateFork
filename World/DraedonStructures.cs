@@ -1,21 +1,21 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Items.DraedonMisc;
-using CalamityMod.Items.LabFinders;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Schematics;
-using CalamityMod.Tiles.SunkenSea;
-using CalamityMod.Walls;
+using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityModCustomPublicPrivateFork.Items.LabFinders;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Schematics;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Walls;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using static CalamityMod.Schematics.SchematicManager;
+using static CalamityModCustomPublicPrivateFork.Schematics.SchematicManager;
 
-namespace CalamityMod.World
+namespace CalamityModCustomPublicPrivateFork.World
 {
     // TODO -- This can be made into a ModSystem with simple OnModLoad and Unload hooks.
     public static class DraedonStructures
@@ -589,7 +589,7 @@ namespace CalamityMod.World
                 contents.Add(new ChestItem(marineKelpPlanterBox.Type, WorldGen.genRand.Next(5, 9 + 1)));
             }
             else
-                CalamityMod.Log.Warn("Could not find Thorium Marine Kelp Planter Box. This item will not be added to the Draedon Planetoid Lab.");
+                ModContent.GetInstance<CalamityMod>().Logger.Warn("Could not find Thorium Marine Kelp Planter Box. This item will not be added to the Draedon Planetoid Lab.");
 
             //Adds the Jungle Seeking Mechanism
             contents.Insert(0, new ChestItem(ModContent.ItemType<GreenSeekingMechanism>(), 1));

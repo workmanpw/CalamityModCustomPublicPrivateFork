@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using CalamityMod.Items.Materials;
+using System.Linq;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.GameContent.NetModules;
@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Net;
 
-namespace CalamityMod.Items.Tools.ClimateChange
+namespace CalamityModCustomPublicPrivateFork.Items.Tools.ClimateChange
 {
     public class Cosmolight : ModItem, ILocalizedModType
     {

@@ -1,15 +1,15 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Melee;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.Graphics.Shaders;
 using Terraria.Localization;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class DarklightEnergy : CooldownHandler
     {
@@ -21,9 +21,9 @@ namespace CalamityMod.Cooldowns
         public override bool CanTickDown => false;
         public override bool ShouldDisplay => instance.player.HeldItem.type == ItemType<Lucrecia>();
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => $"CalamityMod/Cooldowns/{ID}";
-        public override string OutlineTexture => $"CalamityMod/Cooldowns/{ID}Outline";
-        public override string OverlayTexture => $"CalamityMod/Cooldowns/{ID}Overlay";
+        public override string Texture => $"CalamityModCustomPublicPrivateFork/Cooldowns/{ID}";
+        public override string OutlineTexture => $"CalamityModCustomPublicPrivateFork/Cooldowns/{ID}Outline";
+        public override string OverlayTexture => $"CalamityModCustomPublicPrivateFork/Cooldowns/{ID}Overlay";
 
         public override Color OutlineColor => Color.SlateGray;
         public override Color CooldownStartColor => Color.Lerp(Color.Purple, Color.SlateGray, instance.Completion);

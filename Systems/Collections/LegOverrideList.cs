@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Accessories.Vanity;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems.Collections
+namespace CalamityModCustomPublicPrivateFork.Systems.Collections
 {
     public sealed class LegOverrideList : ModSystem
     {
@@ -13,10 +13,10 @@ namespace CalamityMod.Systems.Collections
         {
             List =
             [
-                EquipLoader.GetEquipSlot(CalamityMod.Instance, nameof(ProfanedSoulCrystal), EquipType.Legs),
-                EquipLoader.GetEquipSlot(CalamityMod.Instance, nameof(AquaticHeart), EquipType.Legs),
-                //CalamityMod.Instance.GetEquipSlot(nameof(SirenLeg), EquipType.Legs), whate even was SirenLeg vs SirenLegAlt?
-                EquipLoader.GetEquipSlot(CalamityMod.Instance, nameof(Popo), EquipType.Legs)
+                EquipLoader.GetEquipSlot(ModContent.GetInstance<CalamityMod>(), nameof(ProfanedSoulCrystal), EquipType.Legs),
+                EquipLoader.GetEquipSlot(ModContent.GetInstance<CalamityMod>(), nameof(AquaticHeart), EquipType.Legs),
+                //CalamityModCustomPublicPrivateFork.Instance.GetEquipSlot(nameof(SirenLeg), EquipType.Legs), whate even was SirenLeg vs SirenLegAlt?
+                EquipLoader.GetEquipSlot(ModContent.GetInstance<CalamityMod>(), nameof(Popo), EquipType.Legs)
             ];
         }
 

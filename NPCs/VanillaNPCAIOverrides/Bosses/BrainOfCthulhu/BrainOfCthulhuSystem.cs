@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityMod.DataStructures;
-using CalamityMod.Particles;
-using CalamityMod.Scenes.MusicScenes;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Scenes.MusicScenes;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -17,7 +17,7 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
 
 public class BrainOfCthulhuSystem : ModSystem
 {
@@ -201,7 +201,7 @@ public class BrainOfCthulhuSystem : ModSystem
         {
             Main.QueueMainThreadAction(() =>
             {
-                var reference = ModContent.Request<Texture2D>("CalamityMod/NPCs/VanillaNPCAIOverrides/Bosses/BrainOfCthulhu/ReferenceBrainOfCthulhu", AssetRequestMode.ImmediateLoad).Value;
+                var reference = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/VanillaNPCAIOverrides/Bosses/BrainOfCthulhu/ReferenceBrainOfCthulhu", AssetRequestMode.ImmediateLoad).Value;
 
                 Main.instance.LoadNPC(NPCID.BrainofCthulhu);
                 var usedTexture = TextureAssets.Npc[NPCID.BrainofCthulhu].Value;
@@ -291,14 +291,14 @@ public class BrainOfCthulhuSystem : ModSystem
 
                             if (i == MathF.Ceiling(reelRatio))
                             {
-                                seg.position = startPoint - (Vector2.unitYVector * MathHelper.Lerp(0, 16, segmentRatio));
+                                seg.position = startPoint - (Vector2.UnitY * MathHelper.Lerp(0, 16, segmentRatio));
                             }
                             seg.locked = false;
                         }
 
                         if (reelRatio < 0.75f && Main.rand.NextBool(3))
                         {
-                            Vector2 dir = (vTendril[^1].position - vTendril[^2].position).SafeNormalize(Vector2.unitYVector);
+                            Vector2 dir = (vTendril[^1].position - vTendril[^2].position).SafeNormalize(Vector2.UnitY);
                             BloodParticle p = new(vTendril[^2].position, dir.RotatedBy(Main.rand.NextFloat(-MathHelper.Pi / 10f, MathHelper.Pi / 10f)) * Main.rand.NextFloat(4f, 8f), 16, Main.rand.NextFloat(0.5f, 0.75f), Color.Red * 0.75f);
                             GeneralParticleHandler.SpawnParticle(p);
                         }
@@ -358,8 +358,8 @@ public class BrainOfCthulhuSystem : ModSystem
                 float shieldScale = ai.ShieldScale;
                 targetPos = Vector2.Transform(targetPos - Main.screenPosition, Main.GameViewMatrix.ZoomMatrix) / Main.ScreenSize.ToVector2();
 
-                Texture2D voronoi = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/VoronoiShapes3").Value;
-                Texture2D depthNoise = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Veins").Value;
+                Texture2D voronoi = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/VoronoiShapes3").Value;
+                Texture2D depthNoise = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Veins").Value;
 
                 Filters.Scene["CalamityMod:BrainOfCthulhuForcefield"].GetShader().Shader.Parameters["voronoi"].SetValue(voronoi);
                 Filters.Scene["CalamityMod:BrainOfCthulhuForcefield"].GetShader().Shader.Parameters["depthNoise"].SetValue(depthNoise);

@@ -1,9 +1,9 @@
-﻿using CalamityMod.NPCs.DraedonLabThings;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.NPCs.DraedonLabThings;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Critters
+namespace CalamityModCustomPublicPrivateFork.Items.Critters
 {
     public class NanodroidPlagueRedItem : ModItem, ILocalizedModType
     {

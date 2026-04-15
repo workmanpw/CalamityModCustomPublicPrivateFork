@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.World;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,14 +9,14 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class DraedonSummonLaser : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
         public const float LaserLength = 3800f;
 
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         private const int Lifetime = CalamityWorld.DraedonSummonCountdownMax - 60;
 

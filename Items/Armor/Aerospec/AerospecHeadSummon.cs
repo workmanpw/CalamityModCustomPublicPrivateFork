@@ -1,12 +1,12 @@
-﻿using CalamityMod.Buffs.Summon;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Aerospec
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Aerospec
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("AerospecHelmet")]

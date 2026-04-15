@@ -1,20 +1,20 @@
-﻿using CalamityMod.NPCs;
-using CalamityMod.NPCs.ExoMechs;
-using CalamityMod.NPCs.ExoMechs.Apollo;
-using CalamityMod.NPCs.ExoMechs.Ares;
-using CalamityMod.NPCs.ExoMechs.Artemis;
-using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class ExoMechsMusicScene : BaseMusicSceneEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossHigh;
 
         public override int NPCType => ModContent.NPCType<Draedon>();
-        public override int? MusicModMusic => CalamityMod.Instance.GetMusicFromMusicMod("ExoMechs");
+        public override int? MusicModMusic => ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("ExoMechs");
         public override int VanillaMusic => MusicID.Boss3;
         public override int OtherworldMusic => MusicID.OtherworldlyBoss2;
         public override int[] AdditionalNPCs => new int[]

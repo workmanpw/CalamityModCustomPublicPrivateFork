@@ -1,9 +1,9 @@
-﻿using CalamityMod.Rarities;
-using CalamityMod.Tiles.DraedonStructures;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.DraedonStructures
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures
 {
     public class ChargingStationItem : ModItem, ILocalizedModType
     {

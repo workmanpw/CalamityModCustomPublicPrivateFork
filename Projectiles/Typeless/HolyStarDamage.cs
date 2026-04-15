@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Melee;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,13 +10,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class HolyStarDamage : ModProjectile, ILocalizedModType
     {
         bool started = false;
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/StarProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/StarProj";
 
         public int time = 0;
         public bool reachedMaxDamage = false;
@@ -42,7 +42,7 @@ namespace CalamityMod.Projectiles.Typeless
             if (!started)
             {
                 Color cl = Color.Goldenrod;
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, cl, "CalamityMod/Particles/BlastCone", new Vector2(Main.rand.NextFloat(2f, 4f), 1.5f), Vector2.Zero.AngleTo(Projectile.velocity), 1f * Projectile.scale, 0f, 30));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, cl, "CalamityModCustomPublicPrivateFork/Particles/BlastCone", new Vector2(Main.rand.NextFloat(2f, 4f), 1.5f), Vector2.Zero.AngleTo(Projectile.velocity), 1f * Projectile.scale, 0f, 30));
                 started = true;
             }
 
@@ -70,7 +70,7 @@ namespace CalamityMod.Projectiles.Typeless
                     Projectile.scale += 0.004f;
                 if (Projectile.scale >= 1.15 && !reachedMaxDamage)
                 {
-                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orchid, "CalamityMod/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.3f, 8);
+                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orchid, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.3f, 8);
                     GeneralParticleHandler.SpawnParticle(orb2);
                     reachedMaxDamage = true;
                 }
@@ -147,12 +147,12 @@ namespace CalamityMod.Projectiles.Typeless
             {
                 SoundEngine.PlaySound(SoundID.DD2_WitherBeastCrystalImpact with { Volume = 0.7f }, Projectile.Center);
 
-                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Goldenrod, "CalamityMod/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 1.5f, 10);
+                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Goldenrod, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 1.5f, 10);
                 GeneralParticleHandler.SpawnParticle(orb2);
 
                 for (int i = 0; i < 4; i++)
                 {
-                    Particle spark = new CustomSpark(Projectile.Center, new Vector2(12, 12).RotatedByRandom(100) * Main.rand.NextFloat(0.3f, 1f), "CalamityMod/Particles/ProvidenceMarkParticle", false, 17, Main.rand.NextFloat(1.15f, 1.3f), Color.Lerp(Color.Orchid, Color.White, Main.rand.NextFloat(0, 0.7f)), new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.3f, 0.4f));
+                    Particle spark = new CustomSpark(Projectile.Center, new Vector2(12, 12).RotatedByRandom(100) * Main.rand.NextFloat(0.3f, 1f), "CalamityModCustomPublicPrivateFork/Particles/ProvidenceMarkParticle", false, 17, Main.rand.NextFloat(1.15f, 1.3f), Color.Lerp(Color.Orchid, Color.White, Main.rand.NextFloat(0, 0.7f)), new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.3f, 0.4f));
                     GeneralParticleHandler.SpawnParticle(spark);
                 }
 

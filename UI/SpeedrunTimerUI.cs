@@ -1,27 +1,27 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.NPCs.AquaticScourge;
-using CalamityMod.NPCs.AstrumAureus;
-using CalamityMod.NPCs.AstrumDeus;
-using CalamityMod.NPCs.BrimstoneElemental;
-using CalamityMod.NPCs.Bumblebirb;
-using CalamityMod.NPCs.CalClone;
-using CalamityMod.NPCs.CeaselessVoid;
-using CalamityMod.NPCs.Crabulon;
-using CalamityMod.NPCs.Cryogen;
-using CalamityMod.NPCs.DesertScourge;
-using CalamityMod.NPCs.ExoMechs.Ares;
-using CalamityMod.NPCs.Leviathan;
-using CalamityMod.NPCs.OldDuke;
-using CalamityMod.NPCs.Perforator;
-using CalamityMod.NPCs.PlaguebringerGoliath;
-using CalamityMod.NPCs.PrimordialWyrm;
-using CalamityMod.NPCs.ProfanedGuardians;
-using CalamityMod.NPCs.Providence;
-using CalamityMod.NPCs.Ravager;
-using CalamityMod.NPCs.Signus;
-using CalamityMod.NPCs.SlimeGod;
-using CalamityMod.NPCs.Yharon;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge;
+using CalamityModCustomPublicPrivateFork.NPCs.AstrumAureus;
+using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
+using CalamityModCustomPublicPrivateFork.NPCs.BrimstoneElemental;
+using CalamityModCustomPublicPrivateFork.NPCs.Bumblebirb;
+using CalamityModCustomPublicPrivateFork.NPCs.CalClone;
+using CalamityModCustomPublicPrivateFork.NPCs.CeaselessVoid;
+using CalamityModCustomPublicPrivateFork.NPCs.Crabulon;
+using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
+using CalamityModCustomPublicPrivateFork.NPCs.DesertScourge;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityModCustomPublicPrivateFork.NPCs.Leviathan;
+using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
+using CalamityModCustomPublicPrivateFork.NPCs.Perforator;
+using CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath;
+using CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm;
+using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
+using CalamityModCustomPublicPrivateFork.NPCs.Providence;
+using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
+using CalamityModCustomPublicPrivateFork.NPCs.Signus;
+using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
+using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -29,7 +29,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.UI
+namespace CalamityModCustomPublicPrivateFork.UI
 {
     public class SpeedrunTimerUI
     {
@@ -92,7 +92,7 @@ namespace CalamityMod.UI
             4 => TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[ModContent.NPCType<Crabulon>()]].Value,
             5 => TextureAssets.NpcHeadBoss[2].Value, // Eater of Worlds
             6 => TextureAssets.NpcHeadBoss[23].Value, // Brain of Cthulhu
-            7 => ModContent.Request<Texture2D>("CalamityMod/NPCs/HiveMind/HiveMindP2_Head_Boss").Value,
+            7 => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/HiveMind/HiveMindP2_Head_Boss").Value,
             8 => TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[ModContent.NPCType<PerforatorHive>()]].Value,
             9 => TextureAssets.NpcHeadBoss[14].Value, // Queen Bee
             10 => TextureAssets.NpcHeadBoss[19].Value, // Skeletron
@@ -119,13 +119,13 @@ namespace CalamityMod.UI
             31 => TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[ModContent.NPCType<Dragonfolly>()]].Value,
             32 => TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[ModContent.NPCType<Providence>()]].Value,
             33 => TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[ModContent.NPCType<CeaselessVoid>()]].Value,
-            34 => ModContent.Request<Texture2D>("CalamityMod/NPCs/StormWeaver/StormWeaverHeadNaked_Head_Boss").Value,
+            34 => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/StormWeaver/StormWeaverHeadNaked_Head_Boss").Value,
             35 => TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[ModContent.NPCType<Signus>()]].Value,
-            36 => ModContent.Request<Texture2D>("CalamityMod/NPCs/Polterghast/Necroplasm_Head_Boss").Value,
+            36 => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Polterghast/Necroplasm_Head_Boss").Value,
             37 => TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[ModContent.NPCType<OldDuke>()]].Value,
-            38 => ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGodsHead_Head_Boss").Value,
+            38 => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/DevourerofGods/DevourerofGodsHead_Head_Boss").Value,
             39 => TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[ModContent.NPCType<Yharon>()]].Value,
-            40 => ModContent.Request<Texture2D>("CalamityMod/NPCs/SupremeCalamitas/HoodlessHeadIcon").Value,
+            40 => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/SupremeCalamitas/HoodlessHeadIcon").Value,
             41 => TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[ModContent.NPCType<AresBody>()]].Value,
             42 => TextureAssets.NpcHeadBoss[NPCID.Sets.BossHeadTextures[ModContent.NPCType<PrimordialWyrmHead>()]].Value,
             43 => TextureAssets.NpcHeadBoss[38].Value, // Queen Slime

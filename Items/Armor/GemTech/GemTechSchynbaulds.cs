@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items.Materials;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.GemTech
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.GemTech
 {
     [AutoloadEquip(EquipType.Legs)]
     public class GemTechSchynbaulds : ModItem, ILocalizedModType

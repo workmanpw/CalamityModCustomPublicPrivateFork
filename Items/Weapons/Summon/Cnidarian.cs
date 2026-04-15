@@ -1,9 +1,9 @@
-﻿using System.Linq;
-using CalamityMod.Buffs.Summon.Whips;
-using CalamityMod.DataStructures;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Summon;
-using CalamityMod.Systems.Collections;
+using System.Linq;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,12 +11,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Items.Weapons.Summon
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
 {
     public class Cnidarian : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Summon";
-        public override string Texture => "CalamityMod/Items/Weapons/Summon/CnidarianFishingRod";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Summon/CnidarianFishingRod";
 
         public static SummonTag summonTag = new()
         {
@@ -139,7 +139,7 @@ namespace CalamityMod.Items.Weapons.Summon
 
         public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
-            Texture2D properSprite = Request<Texture2D>("CalamityMod/Items/Weapons/Summon/Cnidarian").Value;
+            Texture2D properSprite = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Summon/Cnidarian").Value;
 
             spriteBatch.DrawNewInventorySprite(properSprite, new Vector2(42f, 34), position, drawColor, origin, scale);
             return false;
@@ -147,7 +147,7 @@ namespace CalamityMod.Items.Weapons.Summon
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
-            Texture2D properSprite = Request<Texture2D>("CalamityMod/Items/Weapons/Summon/Cnidarian").Value;
+            Texture2D properSprite = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Summon/Cnidarian").Value;
 
             spriteBatch.Draw(properSprite, Item.position - Main.screenPosition, null, lightColor, rotation, properSprite.Size() / 2f, scale, 0, 0);
             return false;

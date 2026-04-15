@@ -1,18 +1,18 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.CeaselessVoid;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.CeaselessVoid;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class DarkEnergyBall2 : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityMod/NPCs/CeaselessVoid/DarkEnergy";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/CeaselessVoid/DarkEnergy";
 
         public override void SetStaticDefaults()
         {

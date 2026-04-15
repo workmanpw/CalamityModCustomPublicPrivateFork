@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.UI;
+using CalamityModCustomPublicPrivateFork.UI;
 using Terraria;
+using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class CooldownInstance
     {
@@ -40,7 +41,7 @@ namespace CalamityMod.Cooldowns
             // It is possible this cooldown does not exist. If this occurs, log it, even though it will be (mostly) harmless.
             if (cd is null)
             {
-                CalamityMod.Log.Warn($"Cooldown \"{id}\" loaded from NBT, but was not found. This cooldown will not be applied to the player.");
+                ModContent.GetInstance<CalamityMod>().Logger.Warn($"Cooldown \"{id}\" loaded from NBT, but was not found. This cooldown will not be applied to the player.");
                 return;
             }
 
@@ -51,7 +52,7 @@ namespace CalamityMod.Cooldowns
             if (netID != registeredNetID)
             {
                 // Log when this occurs, even though it should be harmless.
-                CalamityMod.Log.Warn($"Cooldown \"{id}\" loaded from NBT with discrepant netID {netID}. This cooldown was registered with netID {registeredNetID}");
+                ModContent.GetInstance<CalamityMod>().Logger.Warn($"Cooldown \"{id}\" loaded from NBT with discrepant netID {netID}. This cooldown was registered with netID {registeredNetID}");
                 netID = registeredNetID;
             }
             player = p;

@@ -1,12 +1,12 @@
-﻿using CalamityMod.Dusts.WaterSplash;
-using CalamityMod.Gores.WaterDroplet;
-using CalamityMod.Systems.Graphic.LiquidSystem;
+using CalamityModCustomPublicPrivateFork.Dusts.WaterSplash;
+using CalamityModCustomPublicPrivateFork.Gores.WaterDroplet;
+using CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Waters
+namespace CalamityModCustomPublicPrivateFork.Waters
 {
     public class UpperAbyssWaterflow : ModWaterfallStyle, IWaterfallStyleModifyColor
     {
@@ -23,7 +23,7 @@ namespace CalamityMod.Waters
         public override void SetStaticDefaults()
         {
             Instance = this;
-            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityMod/UpperAbyssWaterflow");
+            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityModCustomPublicPrivateFork/UpperAbyssWaterflow");
             SplashDust = ModContent.DustType<SunkenSeaBurrowsSplash>();
             DropletGore = ModContent.GoreType<SunkenSeaBurrowsWaterDroplet>();
         }

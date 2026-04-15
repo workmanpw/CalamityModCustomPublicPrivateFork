@@ -1,12 +1,12 @@
-﻿using CalamityMod.DataStructures;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class PhosphorescentGauntletPunches : ModProjectile, ILocalizedModType
     {

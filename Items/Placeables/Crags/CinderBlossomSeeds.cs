@@ -1,10 +1,10 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Crags
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Crags
 {
     public class CinderBlossomSeeds : ModItem, ILocalizedModType
     {

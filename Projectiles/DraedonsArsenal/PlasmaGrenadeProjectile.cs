@@ -1,17 +1,17 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class PlasmaGrenadeProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Items/Weapons/DraedonsArsenal/PlasmaGrenade";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/PlasmaGrenade";
 
         private static readonly float Gravity = 0.09f;
         private float rotate = Main.rand.Next(360);

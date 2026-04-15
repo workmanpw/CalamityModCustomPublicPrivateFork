@@ -1,17 +1,17 @@
-﻿
-using CalamityMod.Dusts;
-using CalamityMod.Items.Placeables.Astral;
+
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Astral;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Rubblemake.Astral
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemake.Astral
 {
     public class AstralDesertMediumPilesEcho : ModTile
     {
-        public override string Texture => "CalamityMod/Tiles/AstralDesert/AstralDesertMediumPiles";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/AstralDesert/AstralDesertMediumPiles";
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;

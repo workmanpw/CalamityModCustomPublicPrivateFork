@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,11 +7,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
-namespace CalamityMod.Walls.UnsafeWalls
+namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
 {
     public class UnsafeScarletSeaGrassWall : ModWall, IVisibleThroughWater
     {
-        public override string Texture => "CalamityMod/Walls/ScarletSeaGrassWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/ScarletSeaGrassWall";
         public static Asset<Texture2D> leafTexture = null;
         int IVisibleThroughWater.WaterMapEntry { get; set; }
         public static Vector2 TileAdj => (Lighting.Mode == Terraria.Graphics.Light.LightMode.Retro || Lighting.Mode == Terraria.Graphics.Light.LightMode.Trippy) ? Vector2.Zero : Vector2.One * 12;
@@ -27,7 +27,7 @@ namespace CalamityMod.Walls.UnsafeWalls
             this.AddMapEntryWithWaterVisibility(new Color(96, 53, 116));
             if (!Main.dedServ)
             {
-                leafTexture = ModContent.Request<Texture2D>("CalamityMod/Walls/ScarletSeaGrassWall_Leaves");
+                leafTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Walls/ScarletSeaGrassWall_Leaves");
             }
         }
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

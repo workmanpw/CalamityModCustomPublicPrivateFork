@@ -1,11 +1,11 @@
-﻿using CalamityMod.Buffs.Pets;
-using CalamityMod.Projectiles.Pets;
+using CalamityModCustomPublicPrivateFork.Buffs.Pets;
+using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing.SunkenSeaCatches
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches
 {
     public class RustedJingleBell : ModItem, ILocalizedModType
     {

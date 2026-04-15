@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureBotanic
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureBotanic
 {
     public class BotanicPlatform : ModItem, ILocalizedModType
     {

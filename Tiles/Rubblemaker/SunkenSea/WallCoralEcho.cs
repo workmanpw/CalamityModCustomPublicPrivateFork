@@ -1,13 +1,13 @@
-﻿using CalamityMod.Items.Placeables.SunkenSea;
-using CalamityMod.Tiles.SunkenSea.Ambient;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
 {
     public class WallCoralEcho : WallCoral
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/WallCoral";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/WallCoral";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -18,7 +18,7 @@ namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 
     public class WallCoralLeftEcho : WallCoralLeft
     {
-        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/WallCoralLeft";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/WallCoralLeft";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

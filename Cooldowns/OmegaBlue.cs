@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,20 +8,20 @@ using Terraria.ID;
 using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class OmegaBlue : CooldownHandler
     {
         public static new string ID => "OmegaBlue";
         public override bool ShouldDisplay => true;
         public override LocalizedText DisplayName => CalamityUtils.GetText("UI.Cooldowns.OmegaBlue" + (instance.timeLeft > 1500 ? "Active" : "Cooldown"));
-        public override string Texture => instance.timeLeft > 1500 ? "CalamityMod/Cooldowns/OmegaBlueActive" : "CalamityMod/Cooldowns/OmegaBlue";
-        public override string OutlineTexture => "CalamityMod/Cooldowns/OmegaBlueOutline";
-        public override string OverlayTexture => "CalamityMod/Cooldowns/OmegaBlueOverlay";
+        public override string Texture => instance.timeLeft > 1500 ? "CalamityModCustomPublicPrivateFork/Cooldowns/OmegaBlueActive" : "CalamityModCustomPublicPrivateFork/Cooldowns/OmegaBlue";
+        public override string OutlineTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/OmegaBlueOutline";
+        public override string OverlayTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/OmegaBlueOverlay";
         public override Color OutlineColor => instance.timeLeft > 1500 ? new Color(231, 164, 1) : new Color(72, 135, 205);
         public override Color CooldownStartColor => instance.timeLeft > 1500 ? Color.Lerp(new Color(98, 110, 179), new Color(216, 176, 80), (instance.timeLeft - 1500) / 300f) : new Color(98, 110, 179);
         public override Color CooldownEndColor => instance.timeLeft > 1500 ? Color.Lerp(new Color(179, 132, 98), new Color(216, 176, 80), (instance.timeLeft - 1500) / 300f) : new Color(179, 132, 98);
-        public override SoundStyle? EndSound => new("CalamityMod/Sounds/Custom/AbilitySounds/OmegaBlueRecharge");
+        public override SoundStyle? EndSound => new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/OmegaBlueRecharge");
 
         public override void OnCompleted()
         {

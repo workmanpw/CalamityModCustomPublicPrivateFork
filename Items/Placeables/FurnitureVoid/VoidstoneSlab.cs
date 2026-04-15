@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.Walls;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureVoid
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureVoid
 {
     public class VoidstoneSlab : ModItem, ILocalizedModType
     {

@@ -1,10 +1,10 @@
-﻿using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea
 {
     public class MagentaCoral : ModTile
     {

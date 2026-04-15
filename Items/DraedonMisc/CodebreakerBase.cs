@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.DraedonStructures;
-using CalamityMod.Tiles.DraedonSummoner;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures;
+using CalamityModCustomPublicPrivateFork.Tiles.DraedonSummoner;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.DraedonMisc
+namespace CalamityModCustomPublicPrivateFork.Items.DraedonMisc
 {
     public class CodebreakerBase : ModItem, ILocalizedModType
     {

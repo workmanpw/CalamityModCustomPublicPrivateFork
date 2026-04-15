@@ -1,5 +1,5 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using ReLogic.Utilities;
 using Terraria;
 using Terraria.Audio;
@@ -7,13 +7,13 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Potions.Food
+namespace CalamityModCustomPublicPrivateFork.Items.Potions.Food
 {
     [LegacyName("Fabsoup")]
     public class LavaChickenBroth : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Potions";
-        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/SoupConsumption");
+        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SoupConsumption");
         public SlotId DrinkSoundSlot;
 
         public override void SetStaticDefaults()

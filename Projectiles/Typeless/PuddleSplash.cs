@@ -1,17 +1,17 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class PuddleSplash : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public ref float time => ref Projectile.ai[0];
         public Player Owner => Main.player[Projectile.owner];
         public override void SetDefaults()
@@ -34,7 +34,7 @@ namespace CalamityMod.Projectiles.Typeless
         {
             if (time == 0)
             {
-                SoundStyle waterSound = new("CalamityMod/Sounds/Item/WaterSplash" + (Main.rand.NextBool() ? "1" : "2"));
+                SoundStyle waterSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WaterSplash" + (Main.rand.NextBool() ? "1" : "2"));
                 SoundEngine.PlaySound(waterSound with { Volume = 0.2f, Pitch = Main.rand.NextFloat(0.9f, 1f) }, Projectile.Center);
                 for (int i = 0; i < 6; i++)
                 {
@@ -50,7 +50,7 @@ namespace CalamityMod.Projectiles.Typeless
                 }
                 for (int i = 0; i < 2; i++)
                 {
-                    Particle blastRing = new CustomSpark(Projectile.Center, -Vector2.UnitY * 0.1f, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, i == 0 ? 15 : 22, i == 0 ? 0.07f : 0.05f, i == 0 ? Color.CornflowerBlue : Color.SkyBlue, new Vector2(0.7f, i == 0 ? 1.3f : 0.9f), shrinkSpeed: i == 0 ? -0.6f : -0.5f);
+                    Particle blastRing = new CustomSpark(Projectile.Center, -Vector2.UnitY * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, i == 0 ? 15 : 22, i == 0 ? 0.07f : 0.05f, i == 0 ? Color.CornflowerBlue : Color.SkyBlue, new Vector2(0.7f, i == 0 ? 1.3f : 0.9f), shrinkSpeed: i == 0 ? -0.6f : -0.5f);
                     GeneralParticleHandler.SpawnParticle(blastRing);
                 }
             }

@@ -1,4 +1,4 @@
-﻿using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class AscendantAura : ModProjectile, ILocalizedModType
     {
@@ -102,14 +102,14 @@ namespace CalamityMod.Projectiles.Typeless
                 dust.color = Main.rand.NextBool(3) ? Color.LightGreen : Color.Khaki;
             }
 
-            SoundStyle s = new("CalamityMod/Sounds/Item/AscendantActivate");
+            SoundStyle s = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AscendantActivate");
             SoundEngine.PlaySound(s with { Volume = 0.3f, Pitch = -0.9f }, Projectile.Center);
         }
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D rTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/AscendantAura").Value;
-            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark").Value;
+            Texture2D rTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/AscendantAura").Value;
+            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark").Value;
             Color drawColor = Color.Lerp(Color.Khaki, Color.LightGreen, Utils.GetLerpValue(240, -100, Projectile.timeLeft, true));
 
             Vector2 bScale = new Vector2(Main.rand.NextFloat(0.15f, 0.2f), 0.5f) * Projectile.scale * 0.04f * Utils.GetLerpValue(0, 20, Projectile.timeLeft, true) * Main.rand.NextFloat(0.7f, 1.3f);

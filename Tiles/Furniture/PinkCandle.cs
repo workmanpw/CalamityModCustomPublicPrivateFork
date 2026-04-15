@@ -1,5 +1,5 @@
-﻿using CalamityMod.Buffs.Placeables;
-using CalamityMod.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Buffs.Placeables;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,12 +8,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Furniture
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
 {
     public class PinkCandle : ModTile
     {
         // TODO -- Unique sounds for each Candle.
-        public static readonly SoundStyle ActivationSound = new("CalamityMod/Sounds/Item/LouderPhantomPhoenix2");
+        public static readonly SoundStyle ActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LouderPhantomPhoenix2");
 
         public override void SetStaticDefaults()
         {

@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Placeables.Furniture.Fountains;
-using CalamityMod.Waters;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Fountains;
+using CalamityModCustomPublicPrivateFork.Waters;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Furniture.Fountains
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Fountains
 {
     public class SulphurousFountainTile : ModTile
     {
@@ -15,7 +15,7 @@ namespace CalamityMod.Tiles.Furniture.Fountains
 
         public override void NearbyEffects(int i, int j, bool closer)
         {
-            string waterColor = Main.zenithWorld ? "CalamityMod/PissWater" : "CalamityMod/SulphuricWater";
+            string waterColor = Main.zenithWorld ? "CalamityModCustomPublicPrivateFork/PissWater" : "CalamityModCustomPublicPrivateFork/SulphuricWater";
             if (!Main.dedServ && Main.tile[i, j].TileFrameX >= 36)
                 Main.SceneMetrics.ActiveFountainColor = Main.zenithWorld ? PissWater.Instance.Slot : SulphuricWater.Instance.Slot;
         }

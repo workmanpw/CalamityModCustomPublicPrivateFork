@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Reflection;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal abstract class CalamityPacket : ILoadable
     {
@@ -24,7 +24,7 @@ namespace CalamityMod.Packets
                 return;
 
             if (!instanceProperty.PropertyType.IsAssignableFrom(type))
-                CalamityMod.Log.Error($"Packet instance's 'Instance' property is not asssignable with given type! [Failed On: '{type.FullName}']");
+                ModContent.GetInstance<CalamityMod>().Logger.Error($"Packet instance's 'Instance' property is not asssignable with given type! [Failed On: '{type.FullName}']");
 
             instanceProperty.SetValue(null, this);
             _Prop_Static_Instance = instanceProperty; // We saving this for Unload Steps
@@ -57,7 +57,7 @@ namespace CalamityMod.Packets
 
         public ModPacket CreateBasePacket()
         {
-            var packet = CalamityMod.Instance.GetPacket();
+            var packet = ModContent.GetInstance<CalamityMod>().GetPacket();
             CalamityNetcode.WriteHandlerNetID(packet, _NetID);
             return packet;
         }

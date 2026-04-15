@@ -1,8 +1,8 @@
-﻿using CalamityMod.Graphics;
+using CalamityModCustomPublicPrivateFork.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Utilities.Daybreak.Buffers;
+namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 
 /// <summary>
 ///     Handles loading and unloading for the Daybreak buffers systems.

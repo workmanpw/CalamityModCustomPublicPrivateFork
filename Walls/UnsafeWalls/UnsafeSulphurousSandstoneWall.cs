@@ -1,13 +1,13 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Walls.UnsafeWalls
+namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
 {
     [LegacyName("SulphurousSandstoneWall")]
     public class UnsafeSulphurousSandstoneWall : ModWall
     {
-        public override string Texture => "CalamityMod/Walls/SulphurousSandstoneWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/SulphurousSandstoneWall";
         public override void SetStaticDefaults()
         {
             DustType = DustID.Sand;

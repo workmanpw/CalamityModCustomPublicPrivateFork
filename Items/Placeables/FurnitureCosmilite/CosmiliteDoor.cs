@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.Furniture.CraftingStations;
-using CalamityMod.Tiles.FurnitureCosmilite;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureCosmilite;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureCosmilite
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureCosmilite
 {
     public class CosmiliteDoor : ModItem, ILocalizedModType
     {

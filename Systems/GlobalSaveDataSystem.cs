@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class GlobalSaveDataSystem : ModSystem
     {
@@ -74,7 +74,7 @@ namespace CalamityMod.Systems
             // If the key already exists, log it as a warning and don't run any code.
             if (GlobalSaveDataKeys.Contains(key))
             {
-                CalamityMod.Log.Error($"WARNING! A global save data key \"{key}\" which has already been registered is attempting to be registered again. " +
+                ModContent.GetInstance<CalamityMod>().Logger.Error($"WARNING! A global save data key \"{key}\" which has already been registered is attempting to be registered again. " +
                     "Please report this to the Calamity Mod Team if you see this!");
                 return;
             }

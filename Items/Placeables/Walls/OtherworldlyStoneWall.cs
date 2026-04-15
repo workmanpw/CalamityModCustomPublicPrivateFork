@@ -1,8 +1,8 @@
-﻿using CalamityMod.Items.Placeables.FurnitureOtherworldly;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureOtherworldly;
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityMod.Walls;
-namespace CalamityMod.Items.Placeables.Walls
+using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
 {
     [LegacyName("OccultStoneWall")]
     public class OtherworldlyStoneWall : ModItem, ILocalizedModType

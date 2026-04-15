@@ -1,13 +1,13 @@
-﻿using CalamityMod.Graphics.Metaballs;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class SpeedBlasterShot : ModProjectile, ILocalizedModType
     {
@@ -19,8 +19,8 @@ namespace CalamityMod.Projectiles.Ranged
         public bool PostHit = false;
         public int time = 0;
 
-        public static readonly SoundStyle ShotImpact = new("CalamityMod/Sounds/Item/SplatshotImpact") { PitchVariance = 0.3f, Volume = 2.5f };
-        public static readonly SoundStyle ShotImpactBig = new("CalamityMod/Sounds/Item/SplatshotBigImpact") { PitchVariance = 0.3f, Volume = 4f };
+        public static readonly SoundStyle ShotImpact = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SplatshotImpact") { PitchVariance = 0.3f, Volume = 2.5f };
+        public static readonly SoundStyle ShotImpactBig = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SplatshotBigImpact") { PitchVariance = 0.3f, Volume = 4f };
 
         public override void SetStaticDefaults()
         {
@@ -118,7 +118,7 @@ namespace CalamityMod.Projectiles.Ranged
                 }
                 if (targetDist < 1400)
                 {
-                    Particle spark2 = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityMod/Particles/SmallBloom", false, 11, 0.15f, MainColor, new Vector2(0.7f, 1.1f), false, false, 0, false, false, 0.65f);
+                    Particle spark2 = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 11, 0.15f, MainColor, new Vector2(0.7f, 1.1f), false, false, 0, false, false, 0.65f);
                     GeneralParticleHandler.SpawnParticle(spark2);
                 }
 

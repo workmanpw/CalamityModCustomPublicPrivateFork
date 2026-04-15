@@ -1,14 +1,14 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class SnowflakeIceStar : ModProjectile, ILocalizedModType
     {
-        public override string Texture => "CalamityMod/Projectiles/Typeless/KelvinCatalystStar";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/KelvinCatalystStar";
         public new string LocalizationCategory => "Projectiles.Magic";
         public override void SetStaticDefaults()
         {

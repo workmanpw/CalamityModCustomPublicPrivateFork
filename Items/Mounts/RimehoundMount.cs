@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Buffs.Mounts;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.Mounts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Mounts
+namespace CalamityModCustomPublicPrivateFork.Items.Mounts
 {
     public class RimehoundMount : ModMount
     {

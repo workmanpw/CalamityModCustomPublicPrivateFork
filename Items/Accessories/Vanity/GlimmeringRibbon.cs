@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityMod.Items.BaseItems;
+using CalamityModCustomPublicPrivateFork.Items.BaseItems;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories.Vanity
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity
 {
     internal class GlimmeringRibbon : TransformationAccessory, ILocalizedModType
     {

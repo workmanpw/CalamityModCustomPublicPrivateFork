@@ -1,10 +1,10 @@
-﻿using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.AstralDesert
+namespace CalamityModCustomPublicPrivateFork.Tiles.AstralDesert
 {
     [LegacyName("AstralFossil")]
     public class CelestialRemains : ModTile

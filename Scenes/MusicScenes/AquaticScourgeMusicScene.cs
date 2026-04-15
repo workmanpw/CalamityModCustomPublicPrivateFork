@@ -1,18 +1,18 @@
-﻿using CalamityMod.Events;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.AquaticScourge;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class AquaticScourgeMusicScene : BaseMusicSceneEffect
     {
         public override SceneEffectPriority Priority => SceneEffectPriority.BossMedium;
 
         public override int NPCType => ModContent.NPCType<AquaticScourgeHead>();
-        public override int? MusicModMusic => CalamityMod.Instance.GetMusicFromMusicMod("AquaticScourge");
+        public override int? MusicModMusic => ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("AquaticScourge");
         public override int VanillaMusic => MusicID.Boss2;
         public override int OtherworldMusic => MusicID.OtherworldlyBoss2;
 

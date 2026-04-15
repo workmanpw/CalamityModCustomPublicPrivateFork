@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 
 /// <summary>
 /// Interface that can be used by items that need to hide the players front arm when held.

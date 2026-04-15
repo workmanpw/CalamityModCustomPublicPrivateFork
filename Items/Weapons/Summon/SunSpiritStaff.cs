@@ -1,14 +1,14 @@
-﻿using System.Linq;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Summon;
+using System.Linq;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Summon
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
 {
     public class SunSpiritStaff : ModItem, ILocalizedModType
     {

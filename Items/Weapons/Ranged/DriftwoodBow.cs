@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.FurnitureDriftwood;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     public class DriftwoodBow : ModItem, ILocalizedModType
     {

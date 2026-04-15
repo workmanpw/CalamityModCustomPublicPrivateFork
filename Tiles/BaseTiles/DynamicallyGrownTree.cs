@@ -1,4 +1,4 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -11,7 +11,7 @@ using Terraria.Enums;
 using ReLogic.Content;
 using Terraria.Utilities;
 
-namespace CalamityMod.Tiles.BaseTiles
+namespace CalamityModCustomPublicPrivateFork.Tiles.BaseTiles
 {
     public abstract class DynamicallyGrownTree : ModTile
     {

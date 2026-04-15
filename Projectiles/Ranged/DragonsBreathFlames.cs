@@ -1,19 +1,19 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class DragonsBreathFlames : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public int Time = 0;
         public float beamWidth = 1.1f;
@@ -93,9 +93,9 @@ namespace CalamityMod.Projectiles.Ranged
                     //ModContent.GetInstance<DragonsBreathFlameMetaball2>().SpawnParticle(Projectile.Center, Time * 0.9f);
                     //ModContent.GetInstance<DragonsBreathFlameMetaball>().SpawnParticle(Projectile.Center + Projectile.velocity, Time * 0.85f);
 
-                    Particle beam3 = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX), "CalamityMod/Particles/SmallBloom", false, 10, 0.1f + Time * 0.0015f, Color.OrangeRed * 0.5f, new Vector2(1f, 1), true, false, 0, false, false, 0.5f);
+                    Particle beam3 = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 10, 0.1f + Time * 0.0015f, Color.OrangeRed * 0.5f, new Vector2(1f, 1), true, false, 0, false, false, 0.5f);
                     GeneralParticleHandler.SpawnParticle(beam3);
-                    Particle beam33 = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX), "CalamityMod/Particles/SmallBloom", false, 10, 0.04f + Time * 0.0015f, Color.Lerp(Color.Orange, Color.White, 0.25f) * 0.5f, new Vector2(1f, 1), true, false, 0, false, false, 0.5f);
+                    Particle beam33 = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 10, 0.04f + Time * 0.0015f, Color.Lerp(Color.Orange, Color.White, 0.25f) * 0.5f, new Vector2(1f, 1), true, false, 0, false, false, 0.5f);
                     GeneralParticleHandler.SpawnParticle(beam33);
                 }
                 if (Time < 120)
@@ -122,9 +122,9 @@ namespace CalamityMod.Projectiles.Ranged
                         //ModContent.GetInstance<DragonsBreathBeamMetaball2>().SpawnParticle(Projectile.Center, beamWidth * 46 + bbbBONUSbeamSizeWOAHH);
                         //ModContent.GetInstance<DragonsBreathBeamMetaball>().SpawnParticle(Projectile.Center, beamWidth * 45 + bbbBONUSbeamSizeWOAHH);
 
-                        Particle beam3 = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX), "CalamityMod/Particles/SmallBloom", false, 8, (0.2f + bbbBONUSbeamSizeWOAHH * 0.0015f) * beamWidth, Color.OrangeRed, new Vector2(1f, 1), true, false, 0, false, false, 0.6f);
+                        Particle beam3 = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 8, (0.2f + bbbBONUSbeamSizeWOAHH * 0.0015f) * beamWidth, Color.OrangeRed, new Vector2(1f, 1), true, false, 0, false, false, 0.6f);
                         GeneralParticleHandler.SpawnParticle(beam3);
-                        Particle beam33 = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX), "CalamityMod/Particles/SmallBloom", false, 8, (0.1f + bbbBONUSbeamSizeWOAHH * 0.0015f) * beamWidth, Color.Lerp(Color.Orange, Color.White, 0.3f), new Vector2(1f, 1), true, false, 0, false, false, 0.6f);
+                        Particle beam33 = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 8, (0.1f + bbbBONUSbeamSizeWOAHH * 0.0015f) * beamWidth, Color.Lerp(Color.Orange, Color.White, 0.3f), new Vector2(1f, 1), true, false, 0, false, false, 0.6f);
                         GeneralParticleHandler.SpawnParticle(beam33);
                     }
                 }
@@ -165,9 +165,9 @@ namespace CalamityMod.Projectiles.Ranged
                     //Particle orb2 = new GenericBloom(target.Center, Vector2.Zero, Color.White, OrbSize + 0.2f, 8, true);
                     //GeneralParticleHandler.SpawnParticle(orb2);
 
-                    Particle blast = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/SmallBloom", false, 7, Main.rand.NextFloat(0.6f, 0.7f), Color.OrangeRed, Vector2.One, true, false);
+                    Particle blast = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 7, Main.rand.NextFloat(0.6f, 0.7f), Color.OrangeRed, Vector2.One, true, false);
                     GeneralParticleHandler.SpawnParticle(blast);
-                    Particle blast2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/SmallBloom", false, 7, Main.rand.NextFloat(0.4f, 0.5f), Color.OrangeRed, Vector2.One, true, true);
+                    Particle blast2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 7, Main.rand.NextFloat(0.4f, 0.5f), Color.OrangeRed, Vector2.One, true, true);
                     GeneralParticleHandler.SpawnParticle(blast2);
 
                     if (!postHit)
@@ -202,7 +202,7 @@ namespace CalamityMod.Projectiles.Ranged
                 }
 
                 float sine = MathHelper.Clamp(Math.Abs((float)Math.Sin((Time + Projectile.ai[1]) * 0.575f / MathHelper.Pi)), 0.2f + Time * 0.0022f, 1);
-                Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, Color.Lerp(Color.Orange, Color.OrangeRed, sine) * 0.7f, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10, 10), Main.rand.NextFloat(0.2f, 1.2f), 2.5f * Main.rand.NextFloat(0.9f, 1.2f), 15, true);
+                Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, Color.Lerp(Color.Orange, Color.OrangeRed, sine) * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10, 10), Main.rand.NextFloat(0.2f, 1.2f), 2.5f * Main.rand.NextFloat(0.9f, 1.2f), 15, true);
                 GeneralParticleHandler.SpawnParticle(blastRing);
 
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Vector2.Zero, ModContent.ProjectileType<DragonsBreathBurst>(), Projectile.damage, Projectile.knockBack, Projectile.owner);

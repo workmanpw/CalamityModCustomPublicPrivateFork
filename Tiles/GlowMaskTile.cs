@@ -1,8 +1,8 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles
+namespace CalamityModCustomPublicPrivateFork.Tiles
 {
     public abstract class GlowMaskTile : ModTile
     {
@@ -28,7 +28,7 @@ namespace CalamityMod.Tiles
         {
             if (GlowMask != null)
             {
-                CalamityMod.Log.Error($"{Name} has called {nameof(SetStaticDefaults)} themselve! This is not allowed!");
+                ModContent.GetInstance<CalamityMod>().Logger.Error($"{Name} has called {nameof(SetStaticDefaults)} themselve! This is not allowed!");
                 return;
             }
 

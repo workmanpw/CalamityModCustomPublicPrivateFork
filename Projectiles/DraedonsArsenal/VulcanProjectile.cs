@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class VulcanProjectile : ModProjectile, ILocalizedModType
     {
@@ -41,7 +41,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             {
                 if (true)
                 {
-                    Particle trail = new CustomSpark(Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.UnitX) * 6, Projectile.velocity * 0.2f, "CalamityMod/Particles/BloomCircle", false, 6, 0.15f, Effects.ArsenalEffects.ArsenalGaussColor * 0.9f, new Vector2(1f, 1f), true, true, glowCenterScale: 0.6f, glowOpacity: 0.8f, shrinkSpeed: 0.9f);
+                    Particle trail = new CustomSpark(Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.UnitX) * 6, Projectile.velocity * 0.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 6, 0.15f, Effects.ArsenalEffects.ArsenalGaussColor * 0.9f, new Vector2(1f, 1f), true, true, glowCenterScale: 0.6f, glowOpacity: 0.8f, shrinkSpeed: 0.9f);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
                 if (time % 17 == 0)
@@ -85,10 +85,10 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D proj = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/VulcanProjectile").Value;
-            proj = ModContent.Request<Texture2D>("CalamityMod/Particles/SquareRotated").Value;
+            Texture2D proj = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/VulcanProjectile").Value;
+            proj = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SquareRotated").Value;
 
-            Texture2D square = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSquareParticleThick").Value;
+            Texture2D square = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleThick").Value;
 
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Vector2 vel = Projectile.rotation.ToRotationVector2();

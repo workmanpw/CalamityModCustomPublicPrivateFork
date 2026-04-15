@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.Astral;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Astral;
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityMod.Walls;
+using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
 
-namespace CalamityMod.Items.Placeables.Walls
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
 {
     public class AstralDirtWall : ModItem, ILocalizedModType
     {

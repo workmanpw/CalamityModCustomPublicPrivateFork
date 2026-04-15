@@ -1,10 +1,10 @@
-﻿using CalamityMod.Dusts;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.LivingFire
+namespace CalamityModCustomPublicPrivateFork.Tiles.LivingFire
 {
     public class LivingGodSlayerFireBlockTile : ModTile
     {

@@ -1,17 +1,17 @@
-﻿using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class TenebreusTidesWaterSpear : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/Magic/UndinesRetributionSpear";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/UndinesRetributionSpear";
 
         private int penetrationAmt = 2;
         private bool dontDraw = false;

@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class LuxorsGiftSummon : ModProjectile, ILocalizedModType
     {
@@ -63,7 +63,7 @@ namespace CalamityMod.Projectiles.Summon
                 dust.velocity *= (sparkly ? 1 : 8);
             }
 
-            Particle spark = new CustomSpark(Projectile.Center - Projectile.velocity * 0.5f, -Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomCircle", false, 9, 0.18f, Color.Lime * 0.7f, new Vector2(0.9f, 1.2f), true, false, 0.4f);
+            Particle spark = new CustomSpark(Projectile.Center - Projectile.velocity * 0.5f, -Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 9, 0.18f, Color.Lime * 0.7f, new Vector2(0.9f, 1.2f), true, false, 0.4f);
             GeneralParticleHandler.SpawnParticle(spark);
         }
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)

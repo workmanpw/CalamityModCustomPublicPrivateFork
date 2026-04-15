@@ -1,8 +1,8 @@
-﻿using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Vanity
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Head)]
     public class AncientGodSlayerHelm : ModItem, ILocalizedModType

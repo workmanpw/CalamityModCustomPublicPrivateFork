@@ -1,6 +1,6 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Projectiles.Ranged;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     public class Leviatitan : ModItem, ILocalizedModType
     {
@@ -32,7 +32,7 @@ namespace CalamityMod.Items.Weapons.Ranged
             Item.knockBack = 5f;
             Item.value = CalamityGlobalItem.RarityLimeBuyPrice;
             Item.rare = ItemRarityID.Lime;
-            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/FlakKrakenShoot") { Pitch = 0.65f, Volume = 0.4f };
+            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/FlakKrakenShoot") { Pitch = 0.65f, Volume = 0.4f };
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<AquaBlast>();
             Item.shootSpeed = 13f;
@@ -48,7 +48,7 @@ namespace CalamityMod.Items.Weapons.Ranged
         }
         public override bool CanUseItem(Player player)
         {
-            Item.UseSound = player.altFunctionUse == 2 ? SoundID.NPCHit56 : new SoundStyle("CalamityMod/Sounds/Item/FlakKrakenShoot") { Pitch = 0.65f, Volume = 0.3f };
+            Item.UseSound = player.altFunctionUse == 2 ? SoundID.NPCHit56 : new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/FlakKrakenShoot") { Pitch = 0.65f, Volume = 0.3f };
             return base.CanUseItem(player);
         }
         public override float UseSpeedMultiplier(Player player) => player.altFunctionUse == 2 ? (1f / 3f) : 1f;

@@ -1,11 +1,11 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.PlagueReaper
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.PlagueReaper
 {
     [AutoloadEquip(EquipType.Body)]
     public class PlagueReaperVest : ModItem, ILocalizedModType

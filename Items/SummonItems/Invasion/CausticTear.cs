@@ -1,10 +1,10 @@
-﻿using CalamityMod.Events;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems.Invasion
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems.Invasion
 {
     public class CausticTear : ModItem, ILocalizedModType
     {

@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Linq;
-using CalamityMod.Systems;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics;
 
-namespace CalamityMod.Waters;
+namespace CalamityModCustomPublicPrivateFork.Waters;
 
 internal static class WaterStyleCommon
 {

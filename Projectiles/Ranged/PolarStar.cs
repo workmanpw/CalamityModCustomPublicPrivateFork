@@ -1,15 +1,15 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class PolarStar : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Projectiles/Ranged/PolarStar";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/PolarStar";
 
         public ref float Time => ref Projectile.ai[0];
         private static float HitboxSize = 30f;
@@ -87,7 +87,7 @@ namespace CalamityMod.Projectiles.Ranged
 
             if (Time > 4 && DoSlowdown) // Particle trail
             {
-                Particle spark = new CustomSpark(Projectile.Center - Projectile.velocity * 3f, -Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomLineFade", false, 6, 0.04f, EffectsColor * 0.8f, new Vector2(0.8f, 1), shrinkSpeed: 0.4f);
+                Particle spark = new CustomSpark(Projectile.Center - Projectile.velocity * 3f, -Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomLineFade", false, 6, 0.04f, EffectsColor * 0.8f, new Vector2(0.8f, 1), shrinkSpeed: 0.4f);
                 GeneralParticleHandler.SpawnParticle(spark);
             }
 
@@ -126,7 +126,7 @@ namespace CalamityMod.Projectiles.Ranged
                 Vector2 velocity = spinningPoint.RotatedBy(radians * k).RotatedBy(-0.45f);
                 //PointParticle spark = new PointParticle((Projectile.Center + velocity * 7.5f) + addedPlacement, velocity * 2.5f, false, 13, 1.2f, EffectsColor);
                 //GeneralParticleHandler.SpawnParticle(spark);
-                Particle spark3 = new CustomSpark((Projectile.Center + velocity * 7.5f) + addedPlacement, velocity * 2.5f, "CalamityMod/Particles/BloomLineFade", false, 13, 0.02f, EffectsColor * 0.8f, new Vector2(2.8f, 1), shrinkSpeed: 0.5f);
+                Particle spark3 = new CustomSpark((Projectile.Center + velocity * 7.5f) + addedPlacement, velocity * 2.5f, "CalamityModCustomPublicPrivateFork/Particles/BloomLineFade", false, 13, 0.02f, EffectsColor * 0.8f, new Vector2(2.8f, 1), shrinkSpeed: 0.5f);
                 GeneralParticleHandler.SpawnParticle(spark3);
             }
         }

@@ -1,11 +1,11 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class PlantationStaffSporeCloud : ModProjectile, ILocalizedModType
     {
@@ -54,9 +54,9 @@ namespace CalamityMod.Projectiles.Summon
         {
             Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (RandomTexture == 1f)
-                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/PlantationStaffSporeCloud2").Value;
+                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/PlantationStaffSporeCloud2").Value;
             if (RandomTexture == 2f)
-                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/PlantationStaffSporeCloud3").Value;
+                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/PlantationStaffSporeCloud3").Value;
 
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, tex.Size() / 2f, Projectile.scale, SpriteEffects.None, 0);
             return false;

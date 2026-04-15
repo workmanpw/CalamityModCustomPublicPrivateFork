@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Dusts;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Abyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
 {
     public class AcidWoodTreeSapling : ModTile
     {
@@ -57,7 +57,7 @@ namespace CalamityMod.Tiles.Abyss
             if (WorldGen.genRand.NextBool(20))
             {
                 int trueStartingPositionY = j;
-                while (TileID.Sets.TreeSapling[Main.tile[i, trueStartingPositionY].TileType])
+                while (trueStartingPositionY < Main.maxTilesY && TileID.Sets.TreeSapling[Main.tile[i, trueStartingPositionY].TileType])
                 {
                     trueStartingPositionY++;
                 }

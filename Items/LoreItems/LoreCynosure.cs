@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.LoreItems
+namespace CalamityModCustomPublicPrivateFork.Items.LoreItems
 {
     public class LoreCynosure : LoreItem
     {

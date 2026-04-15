@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Items.Tools;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,12 +9,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class MarniteDeconstructorProj : ModProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<MarniteDeconstructor>();
-        public override string Texture => "CalamityMod/Items/Tools/MarniteDeconstructor";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Tools/MarniteDeconstructor";
         public static Asset<Texture2D> GlowmaskTex;
         public static Asset<Texture2D> BloomTex;
         public static Asset<Texture2D> SelectionTex;
@@ -184,7 +184,7 @@ namespace CalamityMod.Projectiles.Melee
 
             //Draw some bloom over the tool
             if (GlowmaskTex == null)
-                GlowmaskTex = ModContent.Request<Texture2D>("CalamityMod/Items/Tools/MarniteDeconstructorBloom");
+                GlowmaskTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Tools/MarniteDeconstructorBloom");
             Texture2D glowTex = GlowmaskTex.Value;
             float bloomOpacity = (float)Math.Pow(Math.Clamp(Timer / 100f, 0f, 1f), 2) * (0.85f + (0.5f + 0.5f * (float)Math.Sin(Main.GlobalTimeWrappedHourly))) * 0.8f;
             Color bloomColor = Color.Lerp(Color.DeepSkyBlue, Color.Chocolate, 0.5f + 0.5f * (float)Math.Sin(SpeenBeams * 0.2f + 1.2f));
@@ -192,13 +192,13 @@ namespace CalamityMod.Projectiles.Melee
 
             //Add some bloom around the projectile's position
             if (BloomTex == null)
-                BloomTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+                BloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
             Texture2D bloomTex = BloomTex.Value;
             Main.EntitySpriteDraw(bloomTex, Projectile.Center - Main.screenPosition, null, Color.DeepSkyBlue * 0.3f, MathHelper.PiOver2, bloomTex.Size() / 2f, 0.3f * Projectile.scale, SpriteEffects.None, 0);
 
             //Draw a square selection
             if (SelectionTex == null)
-                SelectionTex = ModContent.Request<Texture2D>("CalamityMod/Items/Tools/MarniteDeconstructorSelection");
+                SelectionTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Tools/MarniteDeconstructorSelection");
             Texture2D selectionTex = SelectionTex.Value;
             CalamityUtils.DrawChromaticAberration(Vector2.UnitX, 2f, delegate (Vector2 offset, Color colorMod)
             {
@@ -207,7 +207,7 @@ namespace CalamityMod.Projectiles.Melee
 
 
             //Draw laser beams going around the selection
-            Texture2D beamTex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/SimpleGradient").Value;
+            Texture2D beamTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/SimpleGradient").Value;
 
             for (int i = 0; i < 2; i++)
             {

@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent;
@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Crags
+namespace CalamityModCustomPublicPrivateFork.Tiles.Crags
 {
     public class LiliesOfFinalityTile : ModTile
     {
@@ -25,7 +25,7 @@ namespace CalamityMod.Tiles.Crags
             TileID.Sets.DisableSmartCursor[Type] = true;
             RegisterItemDrop(ModContent.ItemType<LiliesOfFinality>());
             FlexibleTileWand.RubblePlacementLarge.AddVariations(ModContent.ItemType<LiliesOfFinality>(), Type, 0);
-            HitSound = new("CalamityMod/Sounds/Custom/LiliesOfFinalityTileHitSound");
+            HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/LiliesOfFinalityTileHitSound");
 
             DustType = DustID.GemDiamond;
         }

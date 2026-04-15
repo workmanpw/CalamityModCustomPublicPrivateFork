@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class VoidSparkParticle : Particle
     {
@@ -17,7 +17,7 @@ namespace CalamityMod.Particles
         public override bool UseCustomDraw => true;
         public override bool UseAdditiveBlend => false;
 
-        public override string Texture => "CalamityMod/Particles/GlowSpark2";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/GlowSpark2";
 
         public VoidSparkParticle(Vector2 relativePosition, Vector2 velocity, bool affectedByGravity, int lifetime, float scale, Color color, float shrinkSpeed = 1)
         {
@@ -51,7 +51,7 @@ namespace CalamityMod.Particles
         {
             Vector2 scale = new Vector2(Xlength, Ylength) * Scale;
             Texture2D texture = ModContent.Request<Texture2D>(Texture).Value;
-            Texture2D texture2 = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark").Value;
+            Texture2D texture2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark").Value;
 
             spriteBatch.Draw(texture2, Position - Main.screenPosition, null, Color with { A = 0 }, Rotation, texture.Size() * 0.5f, scale, 0, 0f);
             spriteBatch.Draw(texture, Position - Main.screenPosition, null, Color.Black, Rotation, texture.Size() * 0.5f, scale * new Vector2(0.75f, 0.9f), 0, 0f);

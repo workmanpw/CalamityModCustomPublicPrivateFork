@@ -1,15 +1,15 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class SHPExplosion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public const int Lifetime = 20;
         public ref float Timer => ref Projectile.ai[2];
 
@@ -45,9 +45,9 @@ namespace CalamityMod.Projectiles.Magic
                 // Light makes the explosion larger
                 float sizeScalar = lightSoul ? SHPC.LightExplosionSizeMult : 1f;
 
-                CustomPulse inner = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityMod/Particles/BloomCircle", Vector2.One, 0f, 0.4f, 1.5f * sizeScalar, Lifetime);
-                CustomPulse outer = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityMod/Particles/BloomRing", Vector2.One, 0f, 0.4f, 2.5f * sizeScalar, Lifetime);
-                CustomPulse explode = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityMod/Particles/PlasmaExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.026f, 0.26f * sizeScalar, Lifetime);
+                CustomPulse inner = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, 0f, 0.4f, 1.5f * sizeScalar, Lifetime);
+                CustomPulse outer = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, 0f, 0.4f, 2.5f * sizeScalar, Lifetime);
+                CustomPulse explode = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityModCustomPublicPrivateFork/Particles/PlasmaExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.026f, 0.26f * sizeScalar, Lifetime);
 
                 GeneralParticleHandler.SpawnParticle(inner);
                 GeneralParticleHandler.SpawnParticle(outer);
@@ -58,9 +58,9 @@ namespace CalamityMod.Projectiles.Magic
                 {
                     Projectile.timeLeft = (int)(Lifetime * SHPC.NightExplosionTimeMult);
 
-                    CustomPulse nightInner = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityMod/Particles/BloomCircle", Vector2.One, 0f, 0.4f, 1.5f, (int)(Lifetime * SHPC.NightExplosionTimeMult));
-                    CustomPulse nightOuter = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityMod/Particles/BloomRing", Vector2.One, 0f, 0.4f, 2.5f, (int)(Lifetime * SHPC.NightExplosionTimeMult));
-                    CustomPulse nightExplode = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityMod/Particles/PlasmaExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.026f, 0.26f, (int)(Lifetime * SHPC.NightExplosionTimeMult));
+                    CustomPulse nightInner = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, 0f, 0.4f, 1.5f, (int)(Lifetime * SHPC.NightExplosionTimeMult));
+                    CustomPulse nightOuter = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, 0f, 0.4f, 2.5f, (int)(Lifetime * SHPC.NightExplosionTimeMult));
+                    CustomPulse nightExplode = new(Projectile.Center, Vector2.Zero, particleColor, "CalamityModCustomPublicPrivateFork/Particles/PlasmaExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.026f, 0.26f, (int)(Lifetime * SHPC.NightExplosionTimeMult));
 
                     GeneralParticleHandler.SpawnParticle(nightInner);
                     GeneralParticleHandler.SpawnParticle(nightOuter);

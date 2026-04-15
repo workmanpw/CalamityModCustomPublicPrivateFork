@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using CalamityMod.Items.Armor.Demonshade;
-using CalamityMod.UI.ModeIndicator;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Demonshade;
+using CalamityModCustomPublicPrivateFork.UI.ModeIndicator;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -15,9 +15,9 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class DifficultyModeSystem : ModSystem
     {
@@ -123,7 +123,8 @@ namespace CalamityMod.Systems
                 if (power.GetIsUnlocked())
                 {
                     int effectiveVanillaDifficulty;
-                    var sliderValue = power._sliderCurrentValueCache;
+                    FieldInfo sliderCacheField = typeof(CreativePowers.DifficultySliderPower).GetField("_sliderCurrentValueCache", BindingFlags.Instance | BindingFlags.NonPublic);
+                    var sliderValue = (float)sliderCacheField.GetValue(power);
                     if (sliderValue == 1)
                     {
                         effectiveVanillaDifficulty = GameModeID.Master;
@@ -213,7 +214,8 @@ namespace CalamityMod.Systems
                 throw new ArgumentException("DifficultyModeSystemAlignJourneyDifficultySlider(): must be invoked in journey mode");
             }
             CreativePowers.DifficultySliderPower power = CreativePowerManager.Instance.GetPower<CreativePowers.DifficultySliderPower>();
-            var oldValue = power._sliderCurrentValueCache;
+                FieldInfo sliderCacheField = typeof(CreativePowers.DifficultySliderPower).GetField("_sliderCurrentValueCache", BindingFlags.Instance | BindingFlags.NonPublic);
+                var oldValue = (float)sliderCacheField.GetValue(power);
             if (compatitableValueRanges.TryGetValue(_newGameModeID, out var value))
             {
                 var (low, high) = value;
@@ -226,7 +228,7 @@ namespace CalamityMod.Systems
                 {
                     valueToSet = low;
                 }
-                power._sliderCurrentValueCache = valueToSet;
+                sliderCacheField.SetValue(power, valueToSet);
                 journeyDifficultyUpdateMethod.Invoke(power, null);
             }
             else
@@ -348,11 +350,11 @@ namespace CalamityMod.Systems
             }
         }
 
-        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Classic");
+        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Classic");
 
-        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Classic_Border");
+        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Classic_Border");
 
-        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Classic_Off");
+        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Classic_Off");
 
         public override SoundStyle ActivationSound => _activationSound ??= SoundID.MenuTick with { Volume = 1f };
 
@@ -386,10 +388,10 @@ namespace CalamityMod.Systems
             }
         }
 
-        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Expert");
-        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Expert_Border");
+        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Expert");
+        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Expert_Border");
 
-        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Expert_Off");
+        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Expert_Off");
 
         public override SoundStyle ActivationSound => _activationSound ??= SoundID.ForceRoarPitched;
 
@@ -423,10 +425,10 @@ namespace CalamityMod.Systems
             }
         }
 
-        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Master");
-        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Master_Border");
+        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Master");
+        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Master_Border");
 
-        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Master_Off");
+        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Master_Off");
 
         public override SoundStyle ActivationSound => _activationSound ??= SoundID.NPCDeath10;
 
@@ -462,12 +464,12 @@ namespace CalamityMod.Systems
             }
         }
 
-        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Legendary");
-        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Legendary_Border");
+        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Legendary");
+        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Legendary_Border");
 
-        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Legendary_Off");
+        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Legendary_Off");
 
-        public override SoundStyle ActivationSound => _activationSound ??= new("CalamityMod/Sounds/Custom/DifficultySelection/Legendary_Mode_Select");
+        public override SoundStyle ActivationSound => _activationSound ??= new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DifficultySelection/Legendary_Mode_Select");
 
         public override int BackBoneGameModeID => GameModeID.Master;
 
@@ -497,12 +499,12 @@ namespace CalamityMod.Systems
             }
         }
 
-        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Rev");
-        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Rev_Border");
+        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Rev");
+        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Rev_Border");
 
-        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Rev_Off");
+        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Rev_Off");
 
-        public override SoundStyle ActivationSound => _activationSound ??= new("CalamityMod/Sounds/Custom/DifficultySelection/Revengeance_Mode_Select");
+        public override SoundStyle ActivationSound => _activationSound ??= new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DifficultySelection/Revengeance_Mode_Select");
 
         public override int BackBoneGameModeID => Main.getGoodWorld ? GameModeID.Normal : GameModeID.Expert;
 
@@ -553,12 +555,12 @@ namespace CalamityMod.Systems
             }
         }
 
-        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Death");
-        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Death_Border");
+        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Death");
+        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Death_Border");
 
-        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Death_Off");
+        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Death_Off");
 
-        public override SoundStyle ActivationSound => _activationSound ??= new("CalamityMod/Sounds/Custom/DifficultySelection/Death_Mode_Select");
+        public override SoundStyle ActivationSound => _activationSound ??= new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DifficultySelection/Death_Mode_Select");
 
         public override int BackBoneGameModeID => Main.getGoodWorld ? GameModeID.Expert : GameModeID.Master;
 
@@ -614,12 +616,12 @@ namespace CalamityMod.Systems
             }
         }
 
-        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Malice");
-        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Malice_Border");
+        public override Asset<Texture2D> Texture => _texture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Malice");
+        public override Asset<Texture2D> OutlineTexture => _outlineTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Malice_Border");
 
-        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicator_Malice_Off");
+        public override Asset<Texture2D> TextureDisabled => _textureDisabled ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Malice_Off");
 
-        public override SoundStyle ActivationSound => _activationSound ??= new("CalamityMod/Sounds/Custom/DifficultySelection/Malice_Mode_Select");
+        public override SoundStyle ActivationSound => _activationSound ??= new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DifficultySelection/Malice_Mode_Select");
 
         public override int BackBoneGameModeID => GameModeID.Master;
 

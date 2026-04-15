@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.FluidSimulation
+namespace CalamityModCustomPublicPrivateFork.FluidSimulation
 {
     public class FluidFieldManager : ModSystem
     {

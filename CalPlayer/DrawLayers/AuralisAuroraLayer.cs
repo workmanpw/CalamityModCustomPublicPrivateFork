@@ -1,11 +1,11 @@
-﻿using System.Linq;
-using CalamityMod.Items.Dyes;
-using CalamityMod.Items.Weapons.Ranged;
+using System.Linq;
+using CalamityModCustomPublicPrivateFork.Items.Dyes;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityMod.CalPlayer.DrawLayers
+namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
 {
     public class AuralisAuroraLayer : PlayerDrawLayer
     {

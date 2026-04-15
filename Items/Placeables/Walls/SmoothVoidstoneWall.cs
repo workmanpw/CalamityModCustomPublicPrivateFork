@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.FurnitureVoid;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureVoid;
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityMod.Walls;
+using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
 
-namespace CalamityMod.Items.Placeables.Walls
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
 {
     public class SmoothVoidstoneWall : ModItem, ILocalizedModType
     {

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Linq;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.NPCs.TownNPCs;
-using CalamityMod.Packets;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.World;
 using Terraria;
 using Terraria.GameContent.Prefixes;
 using Terraria.ID;
@@ -12,7 +12,7 @@ using Terraria.Utilities;
 
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Prefixes
+namespace CalamityModCustomPublicPrivateFork.Prefixes
 {
     public sealed class ReforgeChange : GlobalItem
     {

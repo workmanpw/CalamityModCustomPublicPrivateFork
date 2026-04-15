@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.BaseItems;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.FurnitureAcidwood;
-using CalamityMod.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Items.BaseItems;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     public class Basher : CustomUseProjItem, ILocalizedModType
     {

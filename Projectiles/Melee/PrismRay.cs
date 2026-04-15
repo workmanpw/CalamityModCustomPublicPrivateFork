@@ -1,12 +1,12 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Utilities;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Utilities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class PrismRay : ModProjectile, ILocalizedModType
     {
@@ -17,7 +17,7 @@ namespace CalamityMod.Projectiles.Melee
         public ref float RayHue => ref Projectile.ai[0];
         public ref float Time => ref Projectile.localAI[1];
         public const int Lifetime = 30;
-        public override string Texture => "CalamityMod/Projectiles/StarProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/StarProj";
 
         public override void SetDefaults()
         {

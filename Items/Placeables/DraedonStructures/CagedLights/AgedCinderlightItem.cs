@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.DraedonStructures.CagedLights;
+using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures.CagedLights;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.DraedonStructures.CagedLights
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures.CagedLights
 {
     public class AgedCinderlightItem : ModItem, ILocalizedModType
     {

@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Pets;
-using CalamityMod.Items.Tools;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Packets;
-using CalamityMod.Projectiles.Rogue;
-using CalamityMod.World;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Pets;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -21,7 +21,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
-namespace CalamityMod.NPCs.TownNPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs.TownNPCs
 {
     [AutoloadHead]
     [LegacyName("THIEF")]
@@ -80,7 +80,7 @@ namespace CalamityMod.NPCs.TownNPCs
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Desert,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Bandit")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Bandit")
             });
         }
 

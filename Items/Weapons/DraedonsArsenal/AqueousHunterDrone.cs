@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.CustomRecipes;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.SunkenSea;
-using CalamityMod.Projectiles.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.CustomRecipes;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -11,16 +11,16 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal
 {
     public class AqueousHunterDrone : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.DraedonsArsenal";
-        public static readonly SoundStyle Fire = new("CalamityMod/Sounds/Item/ShrimpFire");
-        public static readonly SoundStyle Hit = new("CalamityMod/Sounds/Item/ShrimpMissileHit");
-        public static readonly SoundStyle Sound1 = new("CalamityMod/Sounds/Item/ShrimpSound1");
-        public static readonly SoundStyle Sound2 = new("CalamityMod/Sounds/Item/ShrimpSound2");
-        public static readonly SoundStyle Surprise = new("CalamityMod/Sounds/Item/ShrimpSurprise");
+        public static readonly SoundStyle Fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ShrimpFire");
+        public static readonly SoundStyle Hit = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ShrimpMissileHit");
+        public static readonly SoundStyle Sound1 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ShrimpSound1");
+        public static readonly SoundStyle Sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ShrimpSound2");
+        public static readonly SoundStyle Surprise = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ShrimpSurprise");
         public override void SetDefaults()
         {
             CalamityGlobalItem modItem = Item.Calamity();

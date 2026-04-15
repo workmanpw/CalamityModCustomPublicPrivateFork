@@ -1,4 +1,4 @@
-﻿using CalamityMod.Events;
+using CalamityModCustomPublicPrivateFork.Events;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.CalClone
+namespace CalamityModCustomPublicPrivateFork.NPCs.CalClone
 {
     public class CalSky : CustomSky
     {

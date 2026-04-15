@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Pets;
+using CalamityModCustomPublicPrivateFork.Items.Pets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent;
@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Abyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
 {
     public class AbyssFossilTile : ModTile
     {

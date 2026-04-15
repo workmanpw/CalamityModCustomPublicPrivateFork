@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class AerialTrackerLaser : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public float Time
         {
@@ -122,7 +122,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
 
             Player player = Main.player[Projectile.owner];
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Projectile.type].Value;
-            Texture2D lineTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineSoftEdge").Value;
+            Texture2D lineTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge").Value;
             float distance = Utils.Distance(laserStart, laserEnd);
             int drawSeperation = 10;
             int startSeperation = drawSeperation;
@@ -133,7 +133,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                 for (int y = 0; y < 2; y++)
                     Main.EntitySpriteDraw(lineTex, laserStart - Main.screenPosition + toPoint * i, null, (y == 1 ? Color.White : Effects.ArsenalEffects.ArsenalLaserColor) with { A = 0 } * fade, toPoint.ToRotation() + MathHelper.PiOver2, lineTex.Size() * 0.5f, new Vector2((y == 1 ? 0.3f : 1) * MathHelper.Max(fade, 0.3f) * completion, 1.3f) * Projectile.scale * 0.01f, SpriteEffects.None);
             }
-            Texture2D glowTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D glowTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
 
             Main.EntitySpriteDraw(glowTex, laserStart - Main.screenPosition, null, Effects.ArsenalEffects.ArsenalLaserColor with { A = 0 }, Projectile.rotation, glowTex.Size() * 0.5f, 0.3f * fade, SpriteEffects.None, 0);
             Main.EntitySpriteDraw(glowTex, laserStart - Main.screenPosition, null, Color.White with { A = 0 } * 0.65f, Projectile.rotation, glowTex.Size() * 0.5f, 0.15f * fade, SpriteEffects.None, 0);

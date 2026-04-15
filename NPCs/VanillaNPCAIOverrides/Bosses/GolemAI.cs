@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Events;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
 {
     public class GolemAI : VanillaAIOverride
     {
@@ -1419,7 +1419,7 @@ namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
                     spriteBatch.SetBlendState(BlendState.Additive);
                     for (int i = -1; i <= 1; i += 2)
                     {
-                        Texture2D sparkle = ModContent.Request<Texture2D>("CalamityMod/Particles/Sparkle2").Value;
+                        Texture2D sparkle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle2").Value;
                         Vector2 sparkleDraw = headDrawPosition + new Vector2(14f * i, -15f) * NPC.scale;
                         var drawFade = Color.Yellow * Utils.GetLerpValue(0, 30, 60f - NPC.ai[1], true);
                         spriteBatch.Draw(sparkle, sparkleDraw, null, drawFade, MathHelper.Pi * 0.02f * NPC.ai[1] * i, sparkle.Size() / 2f, 1.25f * NPC.scale, SpriteEffects.None, 0f);

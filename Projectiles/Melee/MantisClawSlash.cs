@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Buffs.DamageOverTime;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,12 +7,12 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class MantisClawSlash : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Particles/SlashSmear";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/SlashSmear";
 
         private const int TimerCap = 20;
         Color startColor;

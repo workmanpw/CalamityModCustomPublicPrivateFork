@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Effects;
-using CalamityMod.Enums;
+using CalamityModCustomPublicPrivateFork.Effects;
+using CalamityModCustomPublicPrivateFork.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Graphics.Metaballs
+namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
 {
     // CONSIDER -- Dominic 01NOV2023 This really should not be a metaball. Some sort of separately drawn fire effect would be far more suitable, and overall less awkward.
     // However, for consistency with the previous effect, I'll leave it as is.
@@ -51,7 +51,7 @@ namespace CalamityMod.Graphics.Metaballs
         {
             get
             {
-                yield return ModContent.Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj").Value;
+                yield return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj").Value;
             }
         }
 
@@ -98,7 +98,7 @@ namespace CalamityMod.Graphics.Metaballs
 
         public override void DrawInstances()
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/SmallGreyscaleCircle").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/SmallGreyscaleCircle").Value;
 
             // Draw all particles.
             foreach (LavaParticle particle in Particles)

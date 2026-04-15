@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Sounds;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon.SmallAresArms
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
 {
     public class ExoskeletonGaussNukeCannon : ExoskeletonCannon
     {
@@ -66,13 +66,13 @@ namespace CalamityMod.Projectiles.Summon.SmallAresArms
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonGaussNukeCannonGlowmask").Value;
+            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonGaussNukeCannonGlowmask").Value;
 
             // The two stabilizers have two different shades of lighting, thus necessitating two different textures.
-            Texture2D stabilizer = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonGaussNukeStabilizer").Value;
-            Texture2D stabilizer2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonGaussNukeStabilizerBottom").Value;
-            Texture2D crystal = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonGaussNukeCrystal").Value;
-            Texture2D core = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonGaussNukeCore").Value;
+            Texture2D stabilizer = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonGaussNukeStabilizer").Value;
+            Texture2D stabilizer2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonGaussNukeStabilizerBottom").Value;
+            Texture2D crystal = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonGaussNukeCrystal").Value;
+            Texture2D core = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonGaussNukeCore").Value;
             Rectangle frame = texture.Frame(1, Main.projFrames[Type], 0, Projectile.frame);
 
             float stabilizerRotationInterpolant = (float)Math.Pow(Utils.GetLerpValue(NukeRebuildTime * 0.75f, NukeRebuildTime * 0.92f, RebuildTimer, true), 1.7);

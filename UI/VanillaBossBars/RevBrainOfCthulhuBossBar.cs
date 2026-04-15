@@ -1,4 +1,4 @@
-﻿using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.GameContent.UI.BigProgressBar;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.UI.VanillaBossBars
+namespace CalamityModCustomPublicPrivateFork.UI.VanillaBossBars
 {
     internal class RevBrainOfCthulhuBossBar : ModBossBar
     {

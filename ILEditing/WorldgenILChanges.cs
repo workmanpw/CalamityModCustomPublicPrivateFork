@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.GameContent.UI.States;
 using Terraria.WorldBuilding;
 
-namespace CalamityMod.ILEditing
+namespace CalamityModCustomPublicPrivateFork.ILEditing
 {
     public partial class ILChanges
     {
@@ -140,7 +140,7 @@ namespace CalamityMod.ILEditing
         /// </summary>
         private static void SwapSmallDescriptionKey(ILContext il)
         {
-            // Objective: Swap the string "UI.WorldDescriptionSizeSmall" with "Mods.CalamityMod.UI.SmallWorldWarning".
+            // Objective: Swap the string "UI.WorldDescriptionSizeSmall" with "Mods.CalamityModCustomPublicPrivateFork.UI.SmallWorldWarning".
             var c = new ILCursor(il);
 
             // Position ourselves after "UI.WorldDescriptionSizeSmall".
@@ -152,8 +152,8 @@ namespace CalamityMod.ILEditing
             // Pop original value off.
             c.Emit(OpCodes.Pop);
 
-            // Emit our new string "Mods.CalamityMod.UI.SmallWorldWarning".
-            c.Emit(OpCodes.Ldstr, "Mods.CalamityMod.UI.SmallWorldWarning");
+            // Emit our new string "Mods.CalamityModCustomPublicPrivateFork.UI.SmallWorldWarning".
+            c.Emit(OpCodes.Ldstr, "Mods.CalamityModCustomPublicPrivateFork.UI.SmallWorldWarning");
         }
         #endregion
 

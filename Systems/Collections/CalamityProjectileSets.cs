@@ -1,20 +1,20 @@
-﻿using CalamityMod.Projectiles.Boss;
-using CalamityMod.Projectiles.Magic;
-using CalamityMod.Projectiles.Ranged;
-using CalamityMod.Projectiles.Rogue;
-using CalamityMod.Projectiles.Summon;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using ReLogic.Reflection;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Systems.Collections
+namespace CalamityModCustomPublicPrivateFork.Systems.Collections
 {
     [ReinitializeDuringResizeArrays]
     public static class CalamityProjectileSets
     {
-        public static SetFactory Factory = new SetFactory(ProjectileLoader.ProjectileCount, "CalamityMod/ProjectileID", Search);
+        public static SetFactory Factory = new SetFactory(ProjectileLoader.ProjectileCount, "CalamityModCustomPublicPrivateFork/ProjectileID", Search);
         public static IdDictionary Search = IdDictionary.Create<ProjectileID, int>();
 
         /// <summary>

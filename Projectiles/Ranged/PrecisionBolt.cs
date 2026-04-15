@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class PrecisionBolt : ModProjectile, ILocalizedModType
     {
@@ -25,7 +25,7 @@ namespace CalamityMod.Projectiles.Ranged
             Projectile.tileCollide = false;
 
         }
-        public override string Texture => "CalamityMod/Projectiles/Ranged/PrecisionBolt";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/PrecisionBolt";
 
         private Vector2 Recalibrate()
         {

@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing
 {
     [LegacyName("Xerocodile")]
     public class Gorecodile : ModItem, ILocalizedModType

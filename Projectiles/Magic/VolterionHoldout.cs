@@ -1,6 +1,6 @@
-﻿using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class VolterionHoldout : BaseGunHoldoutProjectile
     {
@@ -23,15 +23,15 @@ namespace CalamityMod.Projectiles.Magic
         public override float OffsetYUpwards => 6f;
         public override float OffsetYDownwards => 20f;
         public override Vector2 GunTipPosition => Projectile.Center + Vector2.UnitX.RotatedBy(Projectile.rotation) * Projectile.width * 0.3f;
-        public override string Texture => "CalamityMod/Projectiles/Magic/VolterionHoldout";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/VolterionHoldout";
 
-        public static readonly SoundStyle FireSound = new("CalamityMod/Sounds/Item/VolterionFire") { Volume = 0.35f };
+        public static readonly SoundStyle FireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/VolterionFire") { Volume = 0.35f };
         public SlotId FireSoundSlot;
 
         public ref float FlashTimer => ref Projectile.ai[0];
 
         public static Asset<Texture2D> MuzzleFlash;
-        public override void Load() => MuzzleFlash = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/VolterionHoldoutFlash");
+        public override void Load() => MuzzleFlash = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/VolterionHoldoutFlash");
 
         public override void SetStaticDefaults() => Main.projFrames[Type] = 15;
 

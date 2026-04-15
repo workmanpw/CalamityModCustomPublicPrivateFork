@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.PermanentBoosters;
+using CalamityModCustomPublicPrivateFork.Items.PermanentBoosters;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles
+namespace CalamityModCustomPublicPrivateFork.Tiles
 {
     public class BloodOrangePlant : ModTile
     {

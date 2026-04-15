@@ -1,5 +1,5 @@
-﻿using CalamityMod.Projectiles.Melee;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     [LegacyName("SoulEdge")]
     public class VoidEdge : ModItem, ILocalizedModType
@@ -85,7 +85,7 @@ namespace CalamityMod.Items.Weapons.Melee
         }
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            SoundStyle sound = new("CalamityMod/Sounds/Item/PhantomSpirit");
+            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PhantomSpirit");
             SoundEngine.PlaySound(sound with { Volume = 0.65f, PitchVariance = 0.3f, Pitch = -0.5f }, target.Center);
             for (int i = 0; i <= 30; i++)
             {

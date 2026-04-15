@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.CalPlayer;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Typeless;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -15,7 +15,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     [PierceResistException]
     public class RelicOfDeliveranceSpear : ModProjectile
@@ -178,7 +178,7 @@ namespace CalamityMod.Projectiles.Typeless
                 float sparkPower = Utils.GetLerpValue(0, 100, driftTimer);
                 if (time % Projectile.MaxUpdates * 2 == 0)
                 {
-                    SoundStyle sound = new("CalamityMod/Sounds/Item/NullImpact");
+                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NullImpact");
                     SoundEngine.PlaySound(sound with { Volume = 0.045f, Pitch = (Main.rand.NextFloat(-0.2f, -0.4f) + sparkPower * 0.4f) + (driftPower == 2 ? 0.3f : driftPower == 3 ? 0.7f : 0), MaxInstances = -1 }, Projectile.Center);
                 }
                 for (int i = 0; i < 2; i++)
@@ -186,7 +186,7 @@ namespace CalamityMod.Projectiles.Typeless
                     Color sparkColor = (driftPower == 2 ? Color.Orange : driftPower == 3 ? Color.OrangeRed : Color.Khaki);
                     Vector2 baseVel = Vector2.Lerp(Projectile.velocity, -idealVel, sparkPower);
                     Vector2 vel = baseVel.RotatedByRandom(1.5f - sparkPower * 0.5f) * Main.rand.NextFloat(0.5f, 3f);
-                    Particle energy = new VelChangingSpark(Projectile.Center + idealVel * 3, vel + baseVel.SafeNormalize(Vector2.UnitX) * 15, vel, "CalamityMod/Particles/BloomCircle", Main.rand.Next(6, 9 + 1), Main.rand.NextFloat(0.25f, 0.65f) * sparkPower, Color.Lerp(sparkColor, Color.Goldenrod, Main.rand.NextFloat(0, 0.3f)), new Vector2(0.2f, 1f), lerpRate: 0.35f, shrinkSpeed: 0.3f);
+                    Particle energy = new VelChangingSpark(Projectile.Center + idealVel * 3, vel + baseVel.SafeNormalize(Vector2.UnitX) * 15, vel, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Main.rand.Next(6, 9 + 1), Main.rand.NextFloat(0.25f, 0.65f) * sparkPower, Color.Lerp(sparkColor, Color.Goldenrod, Main.rand.NextFloat(0, 0.3f)), new Vector2(0.2f, 1f), lerpRate: 0.35f, shrinkSpeed: 0.3f);
                     GeneralParticleHandler.SpawnParticle(energy);
                 }
             }
@@ -198,7 +198,7 @@ namespace CalamityMod.Projectiles.Typeless
                     Owner.Calamity().rOfDelivarenceRam = true;
                     if (Main.rand.NextBool() || driftPower == 3)
                     {
-                        Particle spark = new CustomSpark(Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.UnitX) * 30 + Main.rand.NextVector2Circular(30, 30) * driftPowerScaling, Projectile.velocity * Main.rand.NextFloat(0.2f, 5), "CalamityMod/Particles/FullStar", false, Main.rand.Next(15, 25 + 1), Main.rand.NextFloat(0.6f, 1.2f), Color.Khaki, new Vector2(2, 1), true, false, 0, false, false, 0.8f);
+                        Particle spark = new CustomSpark(Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.UnitX) * 30 + Main.rand.NextVector2Circular(30, 30) * driftPowerScaling, Projectile.velocity * Main.rand.NextFloat(0.2f, 5), "CalamityModCustomPublicPrivateFork/Particles/FullStar", false, Main.rand.Next(15, 25 + 1), Main.rand.NextFloat(0.6f, 1.2f), Color.Khaki, new Vector2(2, 1), true, false, 0, false, false, 0.8f);
                         GeneralParticleHandler.SpawnParticle(spark);
                     }
                 }
@@ -229,22 +229,22 @@ namespace CalamityMod.Projectiles.Typeless
                         // 15NOV2024: Ozzatron: clamped mouse position unnecessary, only used for direction
                         Projectile.velocity = Utils.DirectionTo(Owner.Center, Owner.Calamity().mouseWorld) * speed * driftPower;
 
-                        Particle pulse2 = new CustomPulse(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX) * 3.1f * driftPower, Color.Goldenrod * 0.8f, "CalamityMod/Particles/BloomRing", new Vector2(0.4f, 1f), Projectile.velocity.ToRotation(), 0f, 1.33f * driftPower, 25);
+                        Particle pulse2 = new CustomPulse(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX) * 3.1f * driftPower, Color.Goldenrod * 0.8f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(0.4f, 1f), Projectile.velocity.ToRotation(), 0f, 1.33f * driftPower, 25);
                         GeneralParticleHandler.SpawnParticle(pulse2);
-                        Particle pulse = new CustomPulse(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX) * 8.4f * driftPower, Color.OrangeRed * 0.8f, "CalamityMod/Particles/BloomRing", new Vector2(0.4f, 1f), Projectile.velocity.ToRotation(), 0f, 0.92f * driftPower, 25);
+                        Particle pulse = new CustomPulse(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX) * 8.4f * driftPower, Color.OrangeRed * 0.8f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(0.4f, 1f), Projectile.velocity.ToRotation(), 0f, 0.92f * driftPower, 25);
                         GeneralParticleHandler.SpawnParticle(pulse);
 
                         float volume = 0.1f + 0.3f * driftPower;
-                        SoundStyle sound = new("CalamityMod/Sounds/Item/HolyColliderSmallHit");
+                        SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HolyColliderSmallHit");
                         SoundEngine.PlaySound(sound with { Volume = volume, Pitch = (-0.7f + 0.1f * driftPower) }, Projectile.Center);
                         if (driftPower > 1)
                         {
-                            SoundStyle sound2 = new("CalamityMod/Sounds/Item/LauncherHeavyShot");
+                            SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LauncherHeavyShot");
                             SoundEngine.PlaySound(sound2 with { Volume = volume * 2, Pitch = (-0.3f - 0.1f * driftPower) }, Projectile.Center);
                         }
                         if (driftPower > 2)
                         {
-                            SoundStyle sound3 = new("CalamityMod/Sounds/Item/OpalChargedFire");
+                            SoundStyle sound3 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/OpalChargedFire");
                             for (int i = 0; i < 3; i++)
                                 SoundEngine.PlaySound(sound3 with { Volume = 0.7f, Pitch = 0.4f, MaxInstances = 3 }, Projectile.Center);
                         }
@@ -273,13 +273,13 @@ namespace CalamityMod.Projectiles.Typeless
                     for (int i = 0; i < 2; i++)
                     {
                         offset = Projectile.velocity.SafeNormalize(Vector2.UnitX).RotatedBy(MathHelper.PiOver2) * sine * 15.5f * (i == 0 ? -1 : 1);
-                        Particle spark = new VelChangingSpark(tipPos + offset, (-Projectile.velocity.SafeNormalize(Vector2.UnitX) + offset * 0.05f) * 20.5f * mult, -Projectile.velocity.SafeNormalize(Vector2.UnitX), "CalamityMod/Particles/SmallBloom", 15, 0.11f * mult, bColor * 0.65f, new Vector2(1, 3.8f), true, false, shrinkSpeed: 0.42f, lerpRate: 0.4f);
+                        Particle spark = new VelChangingSpark(tipPos + offset, (-Projectile.velocity.SafeNormalize(Vector2.UnitX) + offset * 0.05f) * 20.5f * mult, -Projectile.velocity.SafeNormalize(Vector2.UnitX), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", 15, 0.11f * mult, bColor * 0.65f, new Vector2(1, 3.8f), true, false, shrinkSpeed: 0.42f, lerpRate: 0.4f);
                         GeneralParticleHandler.SpawnParticle(spark);
                     }
                     if (driftPower == 3)
                     {
                         Vector2 vel = Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(1, 10);
-                        Particle energy = new VelChangingSpark(Projectile.Center + vel, -Projectile.velocity.SafeNormalize(Vector2.UnitX), -Projectile.velocity.SafeNormalize(Vector2.UnitX) + vel * Main.rand.NextFloat(0.01f, 0.02f), "CalamityMod/Particles/BloomCircle", Main.rand.Next(12, 19 + 1), Main.rand.NextFloat(0.55f, 0.95f), Color.Lerp(Color.OrangeRed, Color.Goldenrod, Main.rand.NextFloat(0, 1f)), new Vector2(0.2f, 1f), lerpRate: 0.25f, shrinkSpeed: 0.35f);
+                        Particle energy = new VelChangingSpark(Projectile.Center + vel, -Projectile.velocity.SafeNormalize(Vector2.UnitX), -Projectile.velocity.SafeNormalize(Vector2.UnitX) + vel * Main.rand.NextFloat(0.01f, 0.02f), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Main.rand.Next(12, 19 + 1), Main.rand.NextFloat(0.55f, 0.95f), Color.Lerp(Color.OrangeRed, Color.Goldenrod, Main.rand.NextFloat(0, 1f)), new Vector2(0.2f, 1f), lerpRate: 0.25f, shrinkSpeed: 0.35f);
                         GeneralParticleHandler.SpawnParticle(energy);
                     }
                     if (time % Projectile.MaxUpdates == 0)
@@ -302,15 +302,15 @@ namespace CalamityMod.Projectiles.Typeless
             {
                 if (respawnTimer == 0 && time % Projectile.MaxUpdates == 0)
                 {
-                    SoundStyle digSound = new("CalamityMod/Sounds/Item/HeavyDig");
+                    SoundStyle digSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeavyDig");
                     digSoundSlot = SoundEngine.PlaySound(digSound with { Volume = 0.7f, IsLooped = true }, Projectile.Center);
                     if (digFXCooldown == 0)
                     {
-                        SoundStyle sound = new("CalamityMod/Sounds/Item/MagicRockImpact");
+                        SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockImpact");
                         SoundEngine.PlaySound(sound with { Volume = 0.4f, Pitch = Main.rand.NextFloat(0.3f, 0.7f) }, Projectile.Center);
                         for (int i = 0; i < 13; i++)
                         {
-                            Particle spark = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedByRandom(0.6f) * Main.rand.NextFloat(2f, 24f), "CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard6", true, Main.rand.Next(25, 35 + 1), Main.rand.NextFloat(0.85f, 2.3f), Color.White, new Vector2(1.1f, 0.8f), false, false, Main.rand.NextFloat(-5, 5), false, false);
+                            Particle spark = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedByRandom(0.6f) * Main.rand.NextFloat(2f, 24f), "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard6", true, Main.rand.Next(25, 35 + 1), Main.rand.NextFloat(0.85f, 2.3f), Color.White, new Vector2(1.1f, 0.8f), false, false, Main.rand.NextFloat(-5, 5), false, false);
                             GeneralParticleHandler.SpawnParticle(spark);
                             if (i % 2 == 0)
                             {
@@ -338,14 +338,14 @@ namespace CalamityMod.Projectiles.Typeless
                         Vector2 vel = (MathHelper.TwoPi * i / 15f).ToRotationVector2() * 15.5f * (i % 4 == 0 ? 0.88f : 1f) * Main.rand.NextFloat(0.8f, 1f);
                         float scale = Main.rand.NextFloat(1.3f, 1.6f) * 0.6f * (i % 4 == 0 ? 2.2f : 1.8f);
 
-                        Particle aura = new VelChangingSpark(respawnPoint, vel.RotatedBy(0.02f) * 3, -vel.RotatedBy(-0.04f) * 4, "CalamityMod/Particles/SmallBloom", 27, 0.2f, Color.Goldenrod, new Vector2(1.8f, 1.5f), lerpRate: 0.07f, shrinkSpeed: 0.25f);
+                        Particle aura = new VelChangingSpark(respawnPoint, vel.RotatedBy(0.02f) * 3, -vel.RotatedBy(-0.04f) * 4, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", 27, 0.2f, Color.Goldenrod, new Vector2(1.8f, 1.5f), lerpRate: 0.07f, shrinkSpeed: 0.25f);
                         GeneralParticleHandler.SpawnParticle(aura);
 
                     }
-                    Particle orb2 = new CustomPulse(respawnPoint, Vector2.Zero, Color.Khaki, "CalamityMod/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 2, 0.5f, 28);
+                    Particle orb2 = new CustomPulse(respawnPoint, Vector2.Zero, Color.Khaki, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 2, 0.5f, 28);
                     GeneralParticleHandler.SpawnParticle(orb2);
 
-                    SoundStyle sound = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianHeal");
+                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianHeal");
                     SoundEngine.PlaySound(sound with { Volume = 0.6f, Pitch = Main.rand.NextFloat(-0.7f, -0.9f) }, respawnPoint);
 
                     KillProj();
@@ -371,11 +371,11 @@ namespace CalamityMod.Projectiles.Typeless
                 {
                     if (digFXCooldown == 0)
                     {
-                        SoundStyle sound = new("CalamityMod/Sounds/Item/MagicRockSound");
+                        SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockSound");
                         SoundEngine.PlaySound(sound with { Volume = 0.4f, Pitch = Main.rand.NextFloat(0.3f, 0.7f) }, Projectile.Center);
                         for (int i = 0; i < 13; i++)
                         {
-                            Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedByRandom(0.6f) * Main.rand.NextFloat(2f, 24f), "CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard6", true, Main.rand.Next(25, 35 + 1), Main.rand.NextFloat(0.85f, 2.3f), Color.White, new Vector2(1.1f, 0.8f), false, false, Main.rand.NextFloat(-5, 5), false, false);
+                            Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedByRandom(0.6f) * Main.rand.NextFloat(2f, 24f), "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard6", true, Main.rand.Next(25, 35 + 1), Main.rand.NextFloat(0.85f, 2.3f), Color.White, new Vector2(1.1f, 0.8f), false, false, Main.rand.NextFloat(-5, 5), false, false);
                             GeneralParticleHandler.SpawnParticle(spark);
                             if (i % 2 == 0)
                             {
@@ -391,7 +391,7 @@ namespace CalamityMod.Projectiles.Typeless
 
                 if (time % Projectile.MaxUpdates * 2 == 0 && !drifting)
                 {
-                    SoundStyle sound = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianDash");
+                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianDash");
                     SoundEngine.PlaySound(sound with { Volume = 0.065f * driftPowerScaling, Pitch = Main.rand.NextFloat(-0.4f, -0.9f) + (driftPower == 3 ? 1.4f : 0), MaxInstances = -1 }, Owner.Center);
                 }
             }
@@ -476,12 +476,12 @@ namespace CalamityMod.Projectiles.Typeless
                     Particle spark = new GlowSparkParticle(Projectile.Center, Projectile.velocity, false, 18, 0.05f * driftPower, Color.Lerp(Color.White, Color.Orange, i * 0.2f) * 0.85f, new Vector2(4 + i * 0.55f, 0.4f + i * 0.1f), true, false, 1f);
                     GeneralParticleHandler.SpawnParticle(spark);
                 }
-                SoundStyle sound = new("CalamityMod/Sounds/Item/FinalDawnSlash");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FinalDawnSlash");
                 SoundEngine.PlaySound(sound with { Volume = 1, Pitch = Main.rand.NextFloat(0.2f, 0.4f) * damageMult }, Projectile.Center);
             }
             if (Projectile.soundDelay <= 0)
             {
-                SoundStyle sound = new("CalamityMod/Sounds/Item/HolyColliderBigHit");
+                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HolyColliderBigHit");
                 SoundEngine.PlaySound(sound with { Volume = 1, Pitch = Main.rand.NextFloat(-0.2f, -0.4f) * damageMult }, Projectile.Center);
                 Projectile.soundDelay = 25;
             }
@@ -495,9 +495,9 @@ namespace CalamityMod.Projectiles.Typeless
             //Asset<Texture2D> texBase = ModContent.Request<Texture2D>(Texture);
             //Main.EntitySpriteDraw(texBase.Value, drawPos, null, Color.White, Projectile.rotation, texBase.Size() * 0.5f, Projectile.scale, Math.Sign((drifting ? idealVel.X : Projectile.velocity.X)) == -1 ? Microsoft.Xna.Framework.Graphics.SpriteEffects.FlipVertically : Microsoft.Xna.Framework.Graphics.SpriteEffects.None);
 
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomRing").Value;
-            Texture2D texture2 = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark").Value;
-            Texture2D texture3 = ModContent.Request<Texture2D>("CalamityMod/Particles/HalfStar").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomRing").Value;
+            Texture2D texture2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark").Value;
+            Texture2D texture3 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HalfStar").Value;
             if (inTiles)
             {
                 float randSize = Main.rand.NextFloat(0.9f, 1.1f);
@@ -517,8 +517,8 @@ namespace CalamityMod.Projectiles.Typeless
             if (!drifting)
             {
                 Vector2 placement = Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.UnitX) * (-20 + 80 * (driftPowerScaling <= 1 ? driftPowerScaling : 1));
-                Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmear");
-                Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/SemiCircularSmearSwipe");
+                Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmear");
+                Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SemiCircularSmearSwipe");
                 for (int i = 0; i < 6; i++)
                 {
                     Vector2 scale = new Vector2(0.5f - i * 0.1f, (1.5f + i * 0.15f) * driftBadMult) * (0.75f * driftPowerScaling * Main.rand.NextFloat(0.9f, 1.1f) + 0.25f);

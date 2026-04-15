@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityMod.CalPlayer;
-using CalamityMod.CalPlayer.DrawLayers;
-using CalamityMod.DataStructures;
-using CalamityMod.Projectiles.Magic;
-using CalamityMod.Systems.Graphic.PixelationSystem;
-using CalamityMod.Utilities.Daybreak;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Systems.Graphic.PixelationSystem;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -16,7 +16,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems.Mechanic
+namespace CalamityModCustomPublicPrivateFork.Systems.Mechanic
 {
     public class StarburstEntity
     {

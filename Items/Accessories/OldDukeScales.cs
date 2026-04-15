@@ -1,10 +1,10 @@
-﻿using CalamityMod.Cooldowns;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     [LegacyName("DukeScales")]
     public class OldDukeScales : ModItem, ILocalizedModType, IHoldShiftTooltipItem
@@ -38,7 +38,7 @@ namespace CalamityMod.Items.Accessories
         public bool OldDukeScalesOn = false;
         public bool IsTired = false;
         public bool HasBoostedDashFirstFrame = false;
-        private SoundStyle TiredSound => new SoundStyle("CalamityMod/Sounds/Custom/OldDukeHuff") { PitchVariance = .1f, Volume = .8f };
+        private SoundStyle TiredSound => new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeHuff") { PitchVariance = .1f, Volume = .8f };
 
         public int Fatigue = 0;
         public int RecoverTimer = 0;

@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.MiniBosses
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.MiniBosses
 {
     public class DreadnautilusAI : VanillaAIOverride
     {

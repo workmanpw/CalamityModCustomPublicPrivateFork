@@ -1,10 +1,10 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.BiomeManagers
+namespace CalamityModCustomPublicPrivateFork.BiomeManagers
 {
     public class ArsenalLabBiome : ModBiome
     {
-        public override string BestiaryIcon => "CalamityMod/BiomeManagers/LaboratoryIcon";
+        public override string BestiaryIcon => "CalamityModCustomPublicPrivateFork/BiomeManagers/LaboratoryIcon";
         // Could use its own unique background if someone even bothers
         public override string BackgroundPath => "Terraria/Images/MapBG32";
 

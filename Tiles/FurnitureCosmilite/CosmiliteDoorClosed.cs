@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureCosmilite
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureCosmilite
 {
     public class CosmiliteDoorClosed : ModTile
     {

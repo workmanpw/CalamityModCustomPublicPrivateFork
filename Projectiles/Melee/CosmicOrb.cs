@@ -1,14 +1,14 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class CosmicOrb : ModProjectile, ILocalizedModType
     {
@@ -83,7 +83,7 @@ namespace CalamityMod.Projectiles.Melee
 
                     Vector2 lerpVel = Vector2.Lerp(start, end, 0.5f);
                     float scale = 0.015f;
-                    Particle spark = new CustomSpark(lerpVel, Projectile.SafeDirectionTo(target.Center), "CalamityMod/Particles/BloomLineThick", false, 14, scale, color * 0.75f, new Vector2(1, (Utils.Distance(start, end) * 0.034f)), true, false, shrinkSpeed: 0.25f, glowOpacity: 0.65f);
+                    Particle spark = new CustomSpark(lerpVel, Projectile.SafeDirectionTo(target.Center), "CalamityModCustomPublicPrivateFork/Particles/BloomLineThick", false, 14, scale, color * 0.75f, new Vector2(1, (Utils.Distance(start, end) * 0.034f)), true, false, shrinkSpeed: 0.25f, glowOpacity: 0.65f);
                     GeneralParticleHandler.SpawnParticle(spark);
                     targetCount++;
                 }

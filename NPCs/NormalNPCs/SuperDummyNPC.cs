@@ -1,12 +1,12 @@
-﻿using System.IO;
-using CalamityMod.NPCs.VanillaNPCAIOverrides.RegularEnemies;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.RegularEnemies;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.NormalNPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
 {
     public class SuperDummyNPC : ModNPC
     {

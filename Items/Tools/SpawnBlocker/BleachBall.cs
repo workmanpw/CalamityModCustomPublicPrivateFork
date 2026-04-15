@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.IO;
-using CalamityMod.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Items.Tools.SpawnBlocker
+namespace CalamityModCustomPublicPrivateFork.Items.Tools.SpawnBlocker
 {
     public class BleachBall : ModItem, ILocalizedModType
     {
@@ -69,12 +69,12 @@ namespace CalamityMod.Items.Tools.SpawnBlocker
             if (state)
             {
                 //Replace with enabled texture
-                texture = ModContent.Request<Texture2D>("CalamityMod/Items/BleachBall").Value;
+                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/BleachBall").Value;
                 spriteBatch.Draw(texture, position, null, Color.White, 0f, origin, scale, SpriteEffects.None, 0);
             }
             else
             {
-                texture = ModContent.Request<Texture2D>("CalamityMod/Items/BleachBall").Value;
+                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/BleachBall").Value;
                 spriteBatch.Draw(texture, position, null, Color.White, 0f, origin, scale, SpriteEffects.None, 0);
             }
 
@@ -88,12 +88,12 @@ namespace CalamityMod.Items.Tools.SpawnBlocker
             if (state)
             {
                 //Replace with enabled texture
-                texture = ModContent.Request<Texture2D>("CalamityMod/Items/BleachBall").Value;
+                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/BleachBall").Value;
                 spriteBatch.Draw(texture, Item.position - Main.screenPosition, null, lightColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0);
             }
             else
             {
-                texture = ModContent.Request<Texture2D>("CalamityMod/Items/BleachBall").Value;
+                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/BleachBall").Value;
                 spriteBatch.Draw(texture, Item.position - Main.screenPosition, null, lightColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0);
             }
             return false;

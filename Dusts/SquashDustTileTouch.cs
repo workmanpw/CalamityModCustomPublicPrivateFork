@@ -1,13 +1,13 @@
-﻿using CalamityMod.Systems.Graphic.PixelationSystem;
+using CalamityModCustomPublicPrivateFork.Systems.Graphic.PixelationSystem;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityMod.Dusts
+namespace CalamityModCustomPublicPrivateFork.Dusts
 {
     public class SquashDustTileTouch : SquashDust
     {
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void OnSpawn(Dust dust)
         {
@@ -52,7 +52,7 @@ namespace CalamityMod.Dusts
 
     public class SquashDustTileTouchPixelated : SquashDustTileTouch
     {
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override bool PreDraw(Dust dust)
         {

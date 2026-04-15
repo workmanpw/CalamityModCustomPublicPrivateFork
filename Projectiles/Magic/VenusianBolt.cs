@@ -1,11 +1,11 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class VenusianBolt : ModProjectile, ILocalizedModType
     {
@@ -87,14 +87,14 @@ namespace CalamityMod.Projectiles.Magic
                 SoundEngine.PlaySound(SoundID.Item74 with { Volume = 0.7f, Pitch = 1f }, Projectile.Center);
                 for (int i = 0; i < 6; i++)
                 {
-                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.Coral, Utils.GetLerpValue(-2, 6, i, true)), i == 5 ? "CalamityMod/Particles/FlameExplosion" : "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.1f + 0.03f * i, (int)(30 - i * 1.3f));
+                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.Coral, Utils.GetLerpValue(-2, 6, i, true)), i == 5 ? "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion" : "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.1f + 0.03f * i, (int)(30 - i * 1.3f));
                     GeneralParticleHandler.SpawnParticle(explosion);
                 }
                 for (int i = 0; i < 2; i++)
                 {
-                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f, 3f, 25, true);
+                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f, 3f, 25, true);
                     GeneralParticleHandler.SpawnParticle(blastRing);
-                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.5f, 1.5f, 25, true);
+                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.5f, 1.5f, 25, true);
                     GeneralParticleHandler.SpawnParticle(blastRing2);
                 }
                 for (int i = 0; i < 20; i++)

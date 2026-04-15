@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee.Spears
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears
 {
     public class StarnightLanceProjectile : BaseSpearProjectile
     {

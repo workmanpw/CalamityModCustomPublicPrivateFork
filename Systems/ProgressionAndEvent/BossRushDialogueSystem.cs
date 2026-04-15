@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Enums;
-using CalamityMod.Events;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Events;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class BossRushDialogueSystem : ModSystem
     {
@@ -65,75 +65,75 @@ namespace CalamityMod.Systems
             // Dialogue that occurs the first time you start Boss Rush
             BossRushDialogueEvent[] startDialogues = new BossRushDialogueEvent[]
             {
-                new("Mods.CalamityMod.Events.BossRushStartText_1", 330),
-                new("Mods.CalamityMod.Events.BossRushStartText_2", 405),
-                new("Mods.CalamityMod.Events.BossRushStartText_3", 210),
-                new("Mods.CalamityMod.Events.BossRushStartText_4", 405),
-                new("Mods.CalamityMod.Events.BossRushStartText_5", 450),
-                new("Mods.CalamityMod.Events.BossRushStartText_6", 240),
-                new("Mods.CalamityMod.Events.BossRushStartText_7", 435),
-                new("Mods.CalamityMod.Events.BossRushStartText_8", 450),
-                new("Mods.CalamityMod.Events.BossRushStartText_9", 300),
-                new("Mods.CalamityMod.Events.BossRushStartText_DoG", 150, skipFunc: () => !DownedBossSystem.downedDoG),
-                new("Mods.CalamityMod.Events.BossRushStartText_Yharon", 210, skipFunc: () => !DownedBossSystem.downedYharon),
-                new("Mods.CalamityMod.Events.BossRushStartText_DraedonSCal", 285, skipFunc: () => !DownedBossSystem.downedExoMechs || !DownedBossSystem.downedCalamitas),
-                new("Mods.CalamityMod.Events.BossRushStartText_10", 390),
-                new("Mods.CalamityMod.Events.BossRushStartText_11", 390),
-                new("Mods.CalamityMod.Events.BossRushStartText_12", 240),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_1", 330),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_2", 405),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_3", 210),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_4", 405),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_5", 450),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_6", 240),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_7", 435),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_8", 450),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_9", 300),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_DoG", 150, skipFunc: () => !DownedBossSystem.downedDoG),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_Yharon", 210, skipFunc: () => !DownedBossSystem.downedYharon),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_DraedonSCal", 285, skipFunc: () => !DownedBossSystem.downedExoMechs || !DownedBossSystem.downedCalamitas),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_10", 390),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_11", 390),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_12", 240),
             };
 
             // Dialogue that occurs when starting Boss Rush on repeat attempts
             BossRushDialogueEvent[] startDialoguesShort = new BossRushDialogueEvent[]
             {
-                new("Mods.CalamityMod.Events.BossRushStartText_Repeat", 90),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushStartText_Repeat", 90),
             };
 
             // Dialogue that occurs when beating Tier 1 of Boss Rush
             BossRushDialogueEvent[] tierOneDialogues = new BossRushDialogueEvent[]
             {
-                new("Mods.CalamityMod.Events.BossRushTierOneEndText_1", 330),
-                new("Mods.CalamityMod.Events.BossRushTierOneEndText_2", 225),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushTierOneEndText_1", 330),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushTierOneEndText_2", 225),
             };
 
             // Dialogue that occurs when beating Tier 2 of Boss Rush
             BossRushDialogueEvent[] tierTwoDialogues = new BossRushDialogueEvent[]
             {
-                new("Mods.CalamityMod.Events.BossRushTierTwoEndText_1", 225),
-                new("Mods.CalamityMod.Events.BossRushTierTwoEndText_2", 270),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushTierTwoEndText_1", 225),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushTierTwoEndText_2", 270),
             };
 
             // Dialogue that occurs when beating Tier 3 of Boss Rush
             BossRushDialogueEvent[] tierThreeDialogues = new BossRushDialogueEvent[]
             {
-                new("Mods.CalamityMod.Events.BossRushTierThreeEndText_1", 435),
-                new("Mods.CalamityMod.Events.BossRushTierThreeEndText_2", 300),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushTierThreeEndText_1", 435),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushTierThreeEndText_2", 300),
             };
 
             // Dialogue that occurs when beating Tier 4 of Boss Rush
             BossRushDialogueEvent[] tierFourDialogues = new BossRushDialogueEvent[]
             {
-                new("Mods.CalamityMod.Events.BossRushTierFourEndText_1", 135),
-                new("Mods.CalamityMod.Events.BossRushTierFourEndText_2", 300),
-                new("Mods.CalamityMod.Events.BossRushTierFourEndText_3", 270),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushTierFourEndText_1", 135),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushTierFourEndText_2", 300),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushTierFourEndText_3", 270),
             };
 
             // Dialogue that occurs the first time you beat Boss Rush
             BossRushDialogueEvent[] endDialogues = new BossRushDialogueEvent[]
             {
-                new("Mods.CalamityMod.Events.BossRushEndText_1", 510),
-                new("Mods.CalamityMod.Events.BossRushEndText_2", 435),
-                new("Mods.CalamityMod.Events.BossRushEndText_3", 330),
-                new("Mods.CalamityMod.Events.BossRushEndText_4", 255),
-                new("Mods.CalamityMod.Events.BossRushEndText_5", 390),
-                new("Mods.CalamityMod.Events.BossRushEndText_6", 390),
-                new("Mods.CalamityMod.Events.BossRushEndText_7", 195),
-                new("Mods.CalamityMod.Events.BossRushEndText_8", 105),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushEndText_1", 510),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushEndText_2", 435),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushEndText_3", 330),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushEndText_4", 255),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushEndText_5", 390),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushEndText_6", 390),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushEndText_7", 195),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushEndText_8", 105),
             };
 
             // Dialogue that occurs on subsequent times you beat Boss Rush
             BossRushDialogueEvent[] endDialoguesShort = new BossRushDialogueEvent[]
             {
-                new("Mods.CalamityMod.Events.BossRushEndText_Repeat", 480),
+                new("Mods.CalamityModCustomPublicPrivateFork.Events.BossRushEndText_Repeat", 480),
             };
 
             BossRushDialogue = new Dictionary<BossRushDialoguePhase, BossRushDialogueEvent[]>()

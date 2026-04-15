@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Effects;
-using CalamityMod.Enums;
+using CalamityModCustomPublicPrivateFork.Effects;
+using CalamityModCustomPublicPrivateFork.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Graphics.Metaballs
+namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
 {
     public class DragonsBreathFlameMetaball2 : DragonsBreathMetaball
     {
@@ -65,7 +65,7 @@ namespace CalamityMod.Graphics.Metaballs
         {
             get
             {
-                yield return ModContent.Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj").Value;
+                yield return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj").Value;
             }
         }
 
@@ -104,7 +104,7 @@ namespace CalamityMod.Graphics.Metaballs
         internal void DrawInstancesInternal(float opacity, float whiteSizeThreshold)
         {
             float pureWhiteIntensity = 0.16f;
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Graphics/Metaballs/MetaballMessy").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Graphics/Metaballs/MetaballMessy").Value;
 
             foreach (DragonsBreathParticle2 particle in Particles)
             {

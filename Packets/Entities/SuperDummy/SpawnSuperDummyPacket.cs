@@ -1,10 +1,10 @@
-﻿using System.IO;
-using CalamityMod.NPCs.NormalNPCs;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class SpawnSuperDummyPacket : CalamityPacket
     {

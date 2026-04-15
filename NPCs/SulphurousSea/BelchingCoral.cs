@@ -1,11 +1,11 @@
-﻿using System;
-using CalamityMod.BiomeManagers;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Projectiles.Enemy;
+using System;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,11 +13,11 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.SulphurousSea
+namespace CalamityModCustomPublicPrivateFork.NPCs.SulphurousSea
 {
     public class BelchingCoral : ModNPC
     {
-        public static readonly SoundStyle SAXOPHONE = new("CalamityMod/Sounds/Item/Saxophone/Sax", 6);
+        public static readonly SoundStyle SAXOPHONE = new("CalamityModCustomPublicPrivateFork/Sounds/Item/Saxophone/Sax", 6);
 
         public const float CheckDistance = 480f;
         public override void SetStaticDefaults()
@@ -55,7 +55,7 @@ namespace CalamityMod.NPCs.SulphurousSea
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.BelchingCoral")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.BelchingCoral")
             });
         }
 

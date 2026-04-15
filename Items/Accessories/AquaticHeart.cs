@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items.BaseItems;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items.BaseItems;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 {
     [LegacyName("SirensHeart")]
     public class AquaticHeart : TransformationAccessory, ILocalizedModType
@@ -18,7 +18,7 @@ namespace CalamityMod.Items.Accessories
         public static int IceShieldCooldown = CalamityUtils.SecondsToFrames(30);
         public static LocalizedText FullTooltip => CalamityUtils.GetText("Items.Accessories.AquaticHeart.FullTooltip").WithFormatArgs(WaterSpeedBoost.ToPercent(), IceShieldDamageReductionBoost.ToPercent(), IceShieldCooldown.FramesToSeconds());
 
-        public override string AssetPath => "CalamityMod/Items/Accessories/";
+        public override string AssetPath => "CalamityModCustomPublicPrivateFork/Items/Accessories/";
         public override (EquipType, string, string)[] EquipSlots =>
         [
             (EquipType.Head, "AquaticTrans", null),

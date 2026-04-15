@@ -1,16 +1,16 @@
-﻿using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class WavePounderProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Items/Weapons/DraedonsArsenal/WavePounder";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/WavePounder";
 
         public override void SetDefaults()
         {

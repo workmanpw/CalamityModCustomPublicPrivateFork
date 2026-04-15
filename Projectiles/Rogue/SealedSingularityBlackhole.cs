@@ -1,11 +1,11 @@
-﻿using CalamityMod.NPCs;
-using CalamityMod.NPCs.NormalNPCs;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class SealedSingularityBlackhole : ModProjectile, ILocalizedModType
     {

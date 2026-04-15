@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.FurnitureDriftwood;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Tools
+namespace CalamityModCustomPublicPrivateFork.Items.Tools
 {
     public class DriftwoodHammer : ModItem, ILocalizedModType
     {

@@ -1,6 +1,7 @@
-﻿using CalamityMod.Graphics;
-using CalamityMod.Systems.Graphic;
-using CalamityMod.Utilities.Daybreak.Buffers;
+using System;
+using CalamityModCustomPublicPrivateFork.Graphics;
+using CalamityModCustomPublicPrivateFork.Systems.Graphic;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +10,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Backgrounds
+namespace CalamityModCustomPublicPrivateFork.Backgrounds
 {
     public class SunkenSeaBurrowsBG : ModSystem
     {
@@ -33,6 +34,19 @@ namespace CalamityMod.Backgrounds
         public override void Unload()
         {
             GeneralDrawLayerSystem.OnPrepareDraw -= DrawToTarget;
+            On_Main.DrawBackgroundBlackFill -= On_Main_DrawBackgroundBlackFill;
+            Main.QueueMainThreadAction(() =>
+            {
+                try
+                {
+                    WaterDistortionTarget?.Dispose();
+                }
+                catch (ObjectDisposedException)
+                {
+                    // Pool may already be disposed during unload
+                }
+                WaterDistortionTarget = null;
+            });
         }
 
         /// <summary>
@@ -176,7 +190,7 @@ namespace CalamityMod.Backgrounds
             else
             {
                 MiscShaderData distortionShader = GameShaders.Misc["CalamityMod:BasicTextureDistortion"];
-                Asset<Texture2D> distortionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Swirls");
+                Asset<Texture2D> distortionTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Swirls");
 
                 // Apply a distortion shader to the Sunken Sea backgrounds to give them an underwater ripple-like effect.
                 Main.spriteBatch.End();
@@ -229,7 +243,7 @@ namespace CalamityMod.Backgrounds
                 for (int Layers = 4; Layers >= 0; Layers--)
                 {
                     // Get each background texture.
-                    Texture2D BGTexture = ModContent.Request<Texture2D>("CalamityMod/Backgrounds/SunkenSeaShoresBG" + Layers).Value;
+                    Texture2D BGTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/SunkenSeaShoresBG" + Layers).Value;
 
                     Vector2 vector2 = new Vector2(BGTexture.Width, BGTexture.Height) * 0.5f;
                     float num2 = (Layers * 2 + 3f);
@@ -319,7 +333,7 @@ namespace CalamityMod.Backgrounds
                 for (int Layers = 4; Layers >= 0; Layers--)
                 {
                     // Get each background texture.
-                    Texture2D BGTexture = ModContent.Request<Texture2D>("CalamityMod/Backgrounds/SunkenSeaBurrowsBG" + Layers).Value;
+                    Texture2D BGTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/SunkenSeaBurrowsBG" + Layers).Value;
 
                     Vector2 vector2 = new Vector2(BGTexture.Width, BGTexture.Height) * 0.5f;
                     float num2 = (Layers * 2 + 3f);

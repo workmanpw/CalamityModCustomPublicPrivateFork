@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Items.Tools;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class WulfrumDrillProj : ModProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<WulfrumDrill>();
-        public override string Texture => "CalamityMod/Items/Tools/WulfrumDrill";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Tools/WulfrumDrill";
 
         public Player Owner => Main.player[Projectile.owner];
 

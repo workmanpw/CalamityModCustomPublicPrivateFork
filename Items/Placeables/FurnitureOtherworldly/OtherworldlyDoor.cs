@@ -1,8 +1,8 @@
-﻿using CalamityMod.Tiles.FurnitureOtherworldly;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureOtherworldly;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Items.Placeables.FurnitureOtherworldly
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureOtherworldly
 {
     [LegacyName("OccultDoor")]
     public class OtherworldlyDoor : ModItem, ILocalizedModType

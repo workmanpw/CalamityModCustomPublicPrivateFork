@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Items.Placeables.FurnitureSacrilegious;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSacrilegious;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureSacrilegious
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious
 {
     public class SacrilegiousClockTile : ModTile
     {
@@ -58,7 +58,7 @@ namespace CalamityMod.Tiles.FurnitureSacrilegious
         // For drawing the floating clock icon
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            IconTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureSacrilegious/SacrilegiousClockTile_Icon");
+            IconTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureSacrilegious/SacrilegiousClockTile_Icon");
             Texture2D texture = IconTexture.Value;
             Tile tile = Main.tile[i, j];
             if (tile.IsTileActuallyInvisible())

@@ -1,7 +1,7 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.Banners;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.Sounds;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityMod.NPCs.NormalNPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
 {
     public class WildBumblebirb : ModNPC
     {
@@ -27,7 +27,7 @@ namespace CalamityMod.NPCs.NormalNPCs
             NPCID.Sets.NPCBestiaryDrawOffset[Type] = value;
         }
 
-        public override string Texture => "CalamityMod/NPCs/Bumblebirb/BumbleFolly";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/Bumblebirb/BumbleFolly";
 
         public override void SetDefaults()
         {
@@ -57,7 +57,7 @@ namespace CalamityMod.NPCs.NormalNPCs
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Jungle,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.WildBumblefuck")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.WildBumblefuck")
             });
         }
 

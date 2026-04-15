@@ -1,7 +1,7 @@
-﻿using Terraria.ID;
+using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.LoreItems
+namespace CalamityModCustomPublicPrivateFork.Items.LoreItems
 {
     [LegacyName("KnowledgeMoonLord")]
     public class LoreRequiem : LoreItem

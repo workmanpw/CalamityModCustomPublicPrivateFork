@@ -1,9 +1,9 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.ExtraJumps
+namespace CalamityModCustomPublicPrivateFork.ExtraJumps
 {
     public class GravityJump : ExtraJump
     {
@@ -33,7 +33,7 @@ namespace CalamityMod.ExtraJumps
                     Color color = new Color(94,229,163);
                     Vector2 stretch = new Vector2(0.5f,1.5f);
                     float shrink = -0.3f;
-                    Particle boostRing = new CustomSpark(position, velocity, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false,lifetime,scale,color,stretch,shrinkSpeed: shrink);
+                    Particle boostRing = new CustomSpark(position, velocity, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false,lifetime,scale,color,stretch,shrinkSpeed: shrink);
                     GeneralParticleHandler.SpawnParticle(boostRing);
                 }
         }

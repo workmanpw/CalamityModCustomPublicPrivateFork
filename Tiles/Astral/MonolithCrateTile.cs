@@ -1,11 +1,11 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items.Fishing.AstralCatches;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCatches;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Astral
+namespace CalamityModCustomPublicPrivateFork.Tiles.Astral
 {
     public class MonolithCrateTile : ModTile
     {

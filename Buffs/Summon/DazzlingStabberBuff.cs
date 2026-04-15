@@ -1,7 +1,7 @@
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Summon
+namespace CalamityModCustomPublicPrivateFork.Buffs.Summon
 {
     public class DazzlingStabberBuff : BaseSummonBuff
     {

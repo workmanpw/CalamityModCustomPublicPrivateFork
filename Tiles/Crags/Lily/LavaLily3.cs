@@ -1,4 +1,4 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Crags.Lily
+namespace CalamityModCustomPublicPrivateFork.Tiles.Crags.Lily
 {
     public class LavaLily3 : ModTile
     {
@@ -65,7 +65,7 @@ namespace CalamityMod.Tiles.Crags.Lily
             if (tile.IsTileActuallyInvisible())
                 return;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Lily/LavaLily3Glow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Lily/LavaLily3Glow");
             Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange, Main.offScreenRange);
 
             spriteBatch.Draw(GlowTexture.Value, new Vector2(i * 16, j * 16 + 2) - Main.screenPosition + zero, new Rectangle(tile.TileFrameX, tile.TileFrameY, 16, 16), Color.White);
@@ -73,8 +73,8 @@ namespace CalamityMod.Tiles.Crags.Lily
             //draw in the middle of the tile so it doesnt draw more than once
             if (Framing.GetTileSafely(i, j).TileFrameX == 36 && Framing.GetTileSafely(i, j).TileFrameY == 18)
             {
-                TopTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Lily/LavaLily3Top");
-                TopGlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Lily/LavaLily3TopGlow");
+                TopTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Lily/LavaLily3Top");
+                TopGlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Lily/LavaLily3TopGlow");
 
                 DrawLilyTop(i, j, TopTexture.Value, new Rectangle(0, 0, 178, 198), TileOffset.ToWorldCoordinates(), new Vector2(98, 199), false);
                 DrawLilyTop(i, j, TopGlowTexture.Value, new Rectangle(0, 0, 178, 198), TileOffset.ToWorldCoordinates(), new Vector2(98, 199), true);

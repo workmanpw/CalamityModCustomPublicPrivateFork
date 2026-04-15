@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Buffs.Cooldowns
 {
     public class Withered : ModBuff
     {

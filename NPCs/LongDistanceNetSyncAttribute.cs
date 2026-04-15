@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace CalamityMod.NPCs
+namespace CalamityModCustomPublicPrivateFork.NPCs
 {
     /// <summary>
     /// This attribute allows ModNPC to always sync for their position and rotation data at least every 45 frames

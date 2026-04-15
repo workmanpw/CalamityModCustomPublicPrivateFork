@@ -1,17 +1,17 @@
-﻿using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class ChronomancersScytheHoldout : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
         public Player Owner => Main.player[Projectile.owner];
-        public override string Texture => "CalamityMod/Items/Weapons/Magic/ChronomancersScythe";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/ChronomancersScythe";
         public static int ClockChance = 30;
 
         public override void SetDefaults()

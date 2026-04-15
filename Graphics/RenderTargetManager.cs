@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Graphics
+namespace CalamityModCustomPublicPrivateFork.Graphics
 {
     /// <summary>
     /// Manager class that handles all created instances of <see cref="ManagedRenderTarget"/>

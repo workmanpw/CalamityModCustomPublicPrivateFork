@@ -1,13 +1,13 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class VulcanSpear : ModProjectile, ILocalizedModType
     {
@@ -44,7 +44,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             {
                 if (time % 2 == 0)
                 {
-                    Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 14, Projectile.velocity * 0.2f, "CalamityMod/Particles/BloomCircle", false, 12, 0.065f, Effects.ArsenalEffects.ArsenalGaussColor, new Vector2(1f, 2.5f), true, true, glowCenterScale: 0.7f, shrinkSpeed: 0.4f);
+                    Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 14, Projectile.velocity * 0.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 12, 0.065f, Effects.ArsenalEffects.ArsenalGaussColor, new Vector2(1f, 2.5f), true, true, glowCenterScale: 0.7f, shrinkSpeed: 0.4f);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
             }
@@ -53,7 +53,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             {
                 Projectile.extraUpdates = 0;
                 stuckInGround = true;
-                SoundStyle hitTile = new("CalamityMod/Sounds/NPCHit/ExoHit3");
+                SoundStyle hitTile = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ExoHit3");
                 SoundEngine.PlaySound(hitTile with { Volume = 0.8f, Pitch = Main.rand.NextFloat(0.1f, 0.2f) }, Projectile.Center);
                 //Get stuck in the ground and fade
             }
@@ -88,16 +88,16 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             time++;
             if (Projectile.timeLeft == 35)
             {
-                SoundStyle sound2 = new("CalamityMod/Sounds/Item/VulcanRampUp");
+                SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/VulcanRampUp");
                 for (int i = 0; i < 2; i++)
                     SoundEngine.PlaySound(sound2 with { Volume = 0.9f, MaxInstances = 5, Pitch = -0.4f }, Projectile.Center);
             }
         }
         public override void OnKill(int timeLeft)
         {
-            SoundStyle die = new("CalamityMod/Sounds/NPCHit/ExoHit2");
+            SoundStyle die = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ExoHit2");
             SoundEngine.PlaySound(die with { Volume = 0.8f, Pitch = Main.rand.NextFloat(0.4f, 0.5f), MaxInstances = 5 }, Projectile.Center);
-            SoundStyle sound2 = new("CalamityMod/Sounds/Item/NidhoggFire");
+            SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NidhoggFire");
             for (int i = 0; i < 2; i++)
                 SoundEngine.PlaySound(sound2 with { Volume = 0.8f, MaxInstances = 5, Pitch = -0.1f }, Projectile.Center);
             foreach (Projectile p in Main.ActiveProjectiles)
@@ -121,9 +121,9 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
                     p.timeLeft = Main.rand.Next(100, 120 + 1);
                 }
             }
-            Particle bolt = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalGaussColor, "CalamityMod/Particles/GlowSquareParticleThick", Vector2.One, MathHelper.PiOver4, 0.1f, 0.7f, 15);
+            Particle bolt = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalGaussColor, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleThick", Vector2.One, MathHelper.PiOver4, 0.1f, 0.7f, 15);
             GeneralParticleHandler.SpawnParticle(bolt);
-            Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalGaussColor, "CalamityMod/Particles/GlowSquareParticleBig", Vector2.One, 0, 0.3f, 1.15f, 10);
+            Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalGaussColor, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleBig", Vector2.One, 0, 0.3f, 1.15f, 10);
             GeneralParticleHandler.SpawnParticle(bolt2);
         }
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
@@ -145,7 +145,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             {
                 //Stick
                 Projectile.extraUpdates = 0;
-                SoundStyle hitTile = new("CalamityMod/Sounds/NPCHit/ExoHit1");
+                SoundStyle hitTile = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ExoHit1");
                 SoundEngine.PlaySound(hitTile with { Volume = 0.8f, Pitch = Main.rand.NextFloat(0.1f, 0.2f) }, Projectile.Center);
                 targeted = target;
                 placementCenter = targeted.Center - Projectile.Center;
@@ -170,8 +170,8 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D proj = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/VulcanSpear").Value;
-            Texture2D glow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/VulcanSpearGlow").Value;
+            Texture2D proj = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/VulcanSpear").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/VulcanSpearGlow").Value;
 
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Vector2 vel = Projectile.rotation.ToRotationVector2();

@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Graphics.Primitives;
+using System;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class DynamicPursuerElectricity : ModProjectile, ILocalizedModType
     {

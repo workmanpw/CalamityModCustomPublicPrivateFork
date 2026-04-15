@@ -1,11 +1,11 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.DataStructures;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.DataStructures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Turret
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
 {
     public class PlagueExplosionGas : ModProjectile, IAdditiveDrawer, ILocalizedModType
     {
@@ -13,7 +13,7 @@ namespace CalamityMod.Projectiles.Turret
         public bool ableToHit = true;
         public float randomRotation1 = Main.rand.NextFloat(0f, MathHelper.TwoPi);
         public float randomRotation2 = Main.rand.NextFloat(0f, MathHelper.TwoPi);
-        public override string Texture => "CalamityMod/Projectiles/Summon/SmallAresArms/MinionPlasmaGas";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/MinionPlasmaGas";
         public override void SetDefaults()
         {
             Projectile.width = Projectile.height = 184;

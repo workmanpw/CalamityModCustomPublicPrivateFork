@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.DataStructures;
-using CalamityMod.Enums;
-using CalamityMod.Events;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Boss.BrainOfCthulhu;
-using CalamityMod.Utilities.Daybreak;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss.BrainOfCthulhu;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.CodeAnalysis;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -28,21 +28,21 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
 
 public class BrainOfCthulhuAI : VanillaAIOverride
 {
-    private static SoundStyle StunnedHit = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Stun_Hit", 3);
-    private static SoundStyle ShieldDown = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Shield_Down") with { PauseBehavior = PauseBehavior.PauseWithGame };
-    private static SoundStyle ShieldUp = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Shield_Up") with { PauseBehavior = PauseBehavior.PauseWithGame };
-    private static SoundStyle IntroRoar = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Roar") with { PauseBehavior = PauseBehavior.PauseWithGame };
-    private static SoundStyle Roar = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Short_Roar") with { PauseBehavior =  PauseBehavior.PauseWithGame};
-    public static SoundStyle Laugh = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Laugh") with { PauseBehavior = PauseBehavior.PauseWithGame, MaxInstances = 5 };
-    private static SoundStyle Growl = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Growl", 2) with { PauseBehavior = PauseBehavior.PauseWithGame };
-    private static SoundStyle Death = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Death_Roar") with { PauseBehavior = PauseBehavior.PauseWithGame };
-    private static SoundStyle BloodShot = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_BloodShot");
-    private static SoundStyle BloodBomb = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_BloodBomb");
-    private static SoundStyle BloodExplosion = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Explosion", 2);
+    private static SoundStyle StunnedHit = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Stun_Hit", 3);
+    private static SoundStyle ShieldDown = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Shield_Down") with { PauseBehavior = PauseBehavior.PauseWithGame };
+    private static SoundStyle ShieldUp = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Shield_Up") with { PauseBehavior = PauseBehavior.PauseWithGame };
+    private static SoundStyle IntroRoar = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Roar") with { PauseBehavior = PauseBehavior.PauseWithGame };
+    private static SoundStyle Roar = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Short_Roar") with { PauseBehavior =  PauseBehavior.PauseWithGame};
+    public static SoundStyle Laugh = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Laugh") with { PauseBehavior = PauseBehavior.PauseWithGame, MaxInstances = 5 };
+    private static SoundStyle Growl = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Growl", 2) with { PauseBehavior = PauseBehavior.PauseWithGame };
+    private static SoundStyle Death = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Death_Roar") with { PauseBehavior = PauseBehavior.PauseWithGame };
+    private static SoundStyle BloodShot = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_BloodShot");
+    private static SoundStyle BloodBomb = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_BloodBomb");
+    private static SoundStyle BloodExplosion = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Explosion", 2);
 
 
     internal static bool SummonedViaItem = false;
@@ -858,7 +858,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
                             float dirY = dir.Y;
                             dir.Y -= dirY * 0.5f;
                             dir.X += dirY * 0.5f * Math.Sign(dir.X);
-                            dir.SafeNormalize(Vector2.unitXVector * dirSign);
+                            dir.SafeNormalize(Vector2.UnitX * dirSign);
                         }
                         ai.AttackAngle = dir.ToRotation();
                         float rayDist = CalamityUtils.PreciseDistanceToTileCollisionHit(NPC.Center, ai.AttackAngle, 800, 4);
@@ -1286,7 +1286,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
             fromTarget = NPC.Center - Target.Center;          
         else
         {
-            Vector2 averagePlayerPos = Vector2.zeroVector;
+            Vector2 averagePlayerPos = Vector2.Zero;
             List<int> targets = GetAllValidTargets(NPC.Center);
             foreach (var p in targets)
                 averagePlayerPos += Main.player[p].Center;
@@ -1592,7 +1592,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
                 for (int j = 0; j < 20; j++)
                 {
                     Vector2 edgeBloodDir = Main.rand.NextVector2CircularEdge(1, 1);
-                    BloodParticle b = new(NPC.Center - (Vector2.unitYVector * 32) + (edgeBloodDir * new Vector2(16, 24)), edgeBloodDir.RotatedBy(Main.rand.NextFloat(-MathHelper.Pi / 10f, MathHelper.Pi / 10f)) * Main.rand.NextFloat(4f, 8f), 24, 0.75f, Color.Red);
+                    BloodParticle b = new(NPC.Center - (Vector2.UnitY * 32) + (edgeBloodDir * new Vector2(16, 24)), edgeBloodDir.RotatedBy(Main.rand.NextFloat(-MathHelper.Pi / 10f, MathHelper.Pi / 10f)) * Main.rand.NextFloat(4f, 8f), 24, 0.75f, Color.Red);
                     GeneralParticleHandler.SpawnParticle(b);
 
                     Dust.NewDustPerfect(Main.rand.NextVector2FromRectangle(NPC.Hitbox), DustID.Blood, Main.rand.NextVector2Circular(6f, 6f));
@@ -1794,7 +1794,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
             }
 
             if (Time == 30)
-                AttackPosition = Vector2.zeroVector;
+                AttackPosition = Vector2.Zero;
 
             //Make sure we have an accurate view on who the furthest players
             if (Main.netMode != NetmodeID.SinglePlayer && Time % 2 == 0)
@@ -1836,7 +1836,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
                 float xDist = furthestRight.Center.X - furthestLeft.Center.X;
                 float yDist = hoverCenter.Y - highestUp.Center.Y;
 
-                if (AttackPosition == Vector2.zeroVector)
+                if (AttackPosition == Vector2.Zero)
                     AttackPosition = hoverCenter;
                 else
                     AttackPosition += (hoverCenter - AttackPosition) / 30f;
@@ -2556,7 +2556,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
                 else
                 {
                     List<int> nearbyPlayers = GetAllValidTargets(NPC.Center);
-                    Vector2 averagePosition = Vector2.zeroVector;
+                    Vector2 averagePosition = Vector2.Zero;
                     foreach(int p in nearbyPlayers)
                     {
                         TargetsSet.Add(p);
@@ -2578,7 +2578,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
                     goalPos = Target.Center;
                 else
                 {
-                    Vector2 averagePosition = Vector2.zeroVector;
+                    Vector2 averagePosition = Vector2.Zero;
                     foreach (int who in TargetsSet)
                         averagePosition += Main.player[who].Center;
 
@@ -2592,7 +2592,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
                 if (distSq > 90000) //300^2
                 {
                     float dist = MathF.Sqrt(distSq);
-                    Vector2 dir = (goalPos - AttackPosition).SafeNormalize(Vector2.zeroVector);
+                    Vector2 dir = (goalPos - AttackPosition).SafeNormalize(Vector2.Zero);
                     AttackPosition += dir * (dist - 300) / 60f;
                 }
             }

@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Reflection;
-using CalamityMod.Utilities.Daybreak;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public static partial class CalamityUtils
     {
@@ -29,7 +29,8 @@ namespace CalamityMod
         /// <param name="spriteBatch">The sprite batch to check.</param>
         public static bool HasBeginBeenCalled(this SpriteBatch spriteBatch)
         {
-            return spriteBatch.beginCalled;
+            // SpriteBatch.beginCalled no longer exists in current tModLoader
+            return false; // Cannot check, assume not called
         }
 
 

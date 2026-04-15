@@ -1,17 +1,17 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class NidhoggRailgunBigShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public int time = 0;
         public override void SetDefaults()
         {
@@ -35,7 +35,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
             {
                 if (time % 2 == 0)
                 {
-                    Particle trail = new CustomSpark(Projectile.Center, Projectile.velocity * 0.2f, "CalamityMod/Particles/BloomCircle", false, 48, 0.375f, Effects.ArsenalEffects.ArsenalGaussColor, new Vector2(1f, 2f), true, true, glowCenterScale: 0.7f, shrinkSpeed: 0.05f);
+                    Particle trail = new CustomSpark(Projectile.Center, Projectile.velocity * 0.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 48, 0.375f, Effects.ArsenalEffects.ArsenalGaussColor, new Vector2(1f, 2f), true, true, glowCenterScale: 0.7f, shrinkSpeed: 0.05f);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
                 if (time % 3 == 0)
@@ -51,7 +51,7 @@ namespace CalamityMod.Projectiles.DraedonsArsenal
 
                 if (time % 12 == 0)
                 {
-                    Particle trail2 = new VelChangingSpark(Projectile.Center, -Projectile.velocity * 0.1f, -Projectile.velocity * 0.1f, "CalamityMod/Particles/GlowSquareFading", 35, 0.33f, Effects.ArsenalEffects.ArsenalGaussColor, new Vector2(1f, 0.8f), shrinkSpeed: 0f, lerpRate: 0.1f);
+                    Particle trail2 = new VelChangingSpark(Projectile.Center, -Projectile.velocity * 0.1f, -Projectile.velocity * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareFading", 35, 0.33f, Effects.ArsenalEffects.ArsenalGaussColor, new Vector2(1f, 0.8f), shrinkSpeed: 0f, lerpRate: 0.1f);
                     GeneralParticleHandler.SpawnParticle(trail2);
                 }
             }

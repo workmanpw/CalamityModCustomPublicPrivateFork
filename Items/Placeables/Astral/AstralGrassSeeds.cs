@@ -1,10 +1,10 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Astral
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Astral
 {
     public class AstralGrassSeeds : ModItem, ILocalizedModType
     {

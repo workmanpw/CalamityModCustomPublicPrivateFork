@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Vanity
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Body)]
     public class TheGrandGarment : ModItem, ILocalizedModType
@@ -12,7 +12,7 @@ namespace CalamityMod.Items.Armor.Vanity
         {
             if (!Main.dedServ)
             {
-                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Vanity/TheGrandGarment_Waist", EquipType.Waist, this);
+                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Vanity/TheGrandGarment_Waist", EquipType.Waist, this);
             }
         }
 

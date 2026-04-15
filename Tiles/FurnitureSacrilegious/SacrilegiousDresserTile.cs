@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.FurnitureSacrilegious;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSacrilegious;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureSacrilegious
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious
 {
     public class SacrilegiousDresserTile : ModTile
     {

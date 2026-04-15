@@ -1,9 +1,9 @@
-﻿using CalamityMod.Skies;
+using CalamityModCustomPublicPrivateFork.Skies;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class ExoMechBackgroundScene : ModSceneEffect
     {

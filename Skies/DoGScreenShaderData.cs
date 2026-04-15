@@ -1,11 +1,11 @@
-﻿using CalamityMod.NPCs.DevourerofGods;
+using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Skies
+namespace CalamityModCustomPublicPrivateFork.Skies
 {
     public class DoGScreenShaderData : ScreenShaderData
     {

@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Projectiles.Ranged;
+using System;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     public class Hydra : ModItem, ILocalizedModType
     {
@@ -100,7 +100,7 @@ namespace CalamityMod.Items.Weapons.Ranged
             {
                 int CurrentHeadCount = player.ownedProjectileCounts[HeadID];
                 //Exponentially louder the more heads, slightly
-                SoundStyle FireSound = new("CalamityMod/Sounds/Item/Hydra") { Volume = 0.3f + (float)(Math.Pow(CurrentHeadCount, 1.2D) * 0.15f) };
+                SoundStyle FireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/Hydra") { Volume = 0.3f + (float)(Math.Pow(CurrentHeadCount, 1.2D) * 0.15f) };
                 SoundEngine.PlaySound(FireSound, player.Center);
 
                 Vector2 spreadDirection = shootDirection.RotatedByRandom(MathHelper.ToRadians(ShotSpread / 2f));

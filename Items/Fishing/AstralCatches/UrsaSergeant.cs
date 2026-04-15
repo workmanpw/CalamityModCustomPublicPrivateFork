@@ -1,9 +1,9 @@
-﻿using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing.AstralCatches
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCatches
 {
     public class UrsaSergeant : ModItem, ILocalizedModType
     {

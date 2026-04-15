@@ -1,9 +1,9 @@
-﻿using CalamityMod.NPCs.StormWeaver;
+using CalamityModCustomPublicPrivateFork.NPCs.StormWeaver;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class StormWeaverBackgroundScene : ModSceneEffect
     {

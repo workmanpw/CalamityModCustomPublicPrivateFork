@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.BaseItems;
+using CalamityModCustomPublicPrivateFork.Items.BaseItems;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories.Vanity
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity
 {
     public class LucisSight : TransformationAccessory, ILocalizedModType
     {

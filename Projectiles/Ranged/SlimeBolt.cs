@@ -1,16 +1,16 @@
-﻿using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class SlimeBolt : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/ExtraTextures/TinyGreyscaleCircle";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/ExtraTextures/TinyGreyscaleCircle";
 
         public static int Lifetime => 270;
         public static float Fadetime => 225f;
@@ -146,8 +146,8 @@ namespace CalamityMod.Projectiles.Ranged
 
             if (Empowered)
             {
-                Texture2D shineTex = ModContent.Request<Texture2D>("CalamityMod/Particles/Sparkle").Value;
-                Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+                Texture2D shineTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle").Value;
+                Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
                 Main.EntitySpriteDraw(bloomTex, drawPosition, null, SlimeColor * 0.5f, Projectile.rotation, bloomTex.Size() * 0.5f, BloomPower * Projectile.scale * 0.3f, SpriteEffects.None);
                 Main.EntitySpriteDraw(shineTex, drawPosition, null, SlimeColor, Projectile.rotation, shineTex.Size() * 0.5f, BloomPower * Projectile.scale, SpriteEffects.None);
             }

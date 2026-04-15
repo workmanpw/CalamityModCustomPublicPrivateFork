@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Armor.Demonshade;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Demonshade;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatDebuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs
 {
     public class Enraged : ModBuff
     {

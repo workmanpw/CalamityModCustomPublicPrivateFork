@@ -1,4 +1,4 @@
-﻿using CalamityMod.NPCs.ProfanedGuardians;
+using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.UI.VanillaBossBars
+namespace CalamityModCustomPublicPrivateFork.UI.VanillaBossBars
 {
     public class ProfanedGuardianBossBar : ModBossBar
     {

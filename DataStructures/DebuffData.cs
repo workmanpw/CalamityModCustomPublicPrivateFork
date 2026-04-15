@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
-namespace CalamityMod.DataStructures
+namespace CalamityModCustomPublicPrivateFork.DataStructures
 {
     [ReinitializeDuringResizeArrays]
     public static class BuffDatasets
@@ -228,9 +228,9 @@ namespace CalamityMod.DataStructures
 
             //Ensure at least 25% effectiveness
             if (totalScaling.Multiplicative <= 0.25f)
-                totalScaling.Multiplicative = 0.25f; 
+                totalScaling = new StatModifier(1f, totalScaling.Additive, totalScaling.Flat);
             if (totalScaling.Additive < 0.25f)
-                totalScaling.Additive = 0.25f;
+                totalScaling = new StatModifier(totalScaling.Multiplicative, 0.25f, totalScaling.Flat);
 
             totalDPS = totalScaling.ApplyTo(totalDPS);
             var totalDPSAdjusted = totalDPS-EnemyVanillaRegenToCancelOut;
@@ -261,9 +261,9 @@ namespace CalamityMod.DataStructures
 
             //Ensure at least 25% effectiveness
             if (totalScaling.Multiplicative <= 0.25f)
-                totalScaling.Multiplicative = 0.25f;
+                totalScaling = new StatModifier(1f, totalScaling.Additive, totalScaling.Flat);
             if (totalScaling.Additive < 0.25f)
-                totalScaling.Additive = 0.25f;
+                totalScaling = new StatModifier(totalScaling.Multiplicative, 0.25f, totalScaling.Flat);
 
             totalDPS = totalScaling.ApplyTo(totalDPS);
             totalDPS *= (npc.velocity.X == 0 ? 1 : 4);

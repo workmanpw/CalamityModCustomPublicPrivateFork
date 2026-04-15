@@ -1,18 +1,18 @@
-﻿using System;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.DataStructures;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.DataStructures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class Ancient2 : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/Magic/PrimordialAncientProjectile";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/PrimordialAncientProjectile";
 
         public override void SetStaticDefaults()
         {

@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Balancing;
-using CalamityMod.Enums;
-using CalamityMod.Projectiles.Boss;
+using System;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
@@ -10,7 +10,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.ILEditing
+namespace CalamityModCustomPublicPrivateFork.ILEditing
 {
     public partial class ILChanges
     {

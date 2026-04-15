@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Dusts.Furniture
+namespace CalamityModCustomPublicPrivateFork.Dusts.Furniture
 {
     public class SilvaTileGold : ModDust
     {

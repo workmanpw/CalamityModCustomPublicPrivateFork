@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class VelChangingSpark : Particle
     {
@@ -18,7 +18,7 @@ namespace CalamityMod.Particles
         public float ShrinkSpeed = 0;
         public Vector2 EndVelocity;
         public float LerpRate = 0.1f;
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public bool AltVisual = true;
         public override bool UseAdditiveBlend => AltVisual;
         public override bool SetLifetime => true;
@@ -102,7 +102,7 @@ namespace CalamityMod.Particles
                 DateTime day = DateTime.Now;
                 if (day.DayOfWeek == DayOfWeek.Tuesday)
                 {
-                    Texture2D joke = ModContent.Request<Texture2D>("CalamityMod/Particles/MammothParticle").Value;
+                    Texture2D joke = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/MammothParticle").Value;
                     scaleMult = (MathHelper.Lerp(texture.Size().X / joke.Size().X, texture.Size().Y / joke.Size().Y, 0.5f));
                     texture = joke;
                     AltVisual = true;

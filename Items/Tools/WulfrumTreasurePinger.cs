@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Items.Materials;
-using CalamityMod.Particles;
-using CalamityMod.Systems;
-using CalamityMod.Systems.Mechanic;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,14 +12,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.Items.Tools
+namespace CalamityModCustomPublicPrivateFork.Items.Tools
 {
     public class WulfrumTreasurePinger : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Tools";
-        public static readonly SoundStyle ScanBeepSound = new("CalamityMod/Sounds/Item/WulfrumPing") { PitchVariance = 0.1f };
-        public static readonly SoundStyle ScanBeepBreakSound = new("CalamityMod/Sounds/Item/WulfrumPingBreak");
-        public static readonly SoundStyle RechargeBeepSound = new("CalamityMod/Sounds/Item/WulfrumPingReady") { PitchVariance = 0.1f };
+        public static readonly SoundStyle ScanBeepSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumPing") { PitchVariance = 0.1f };
+        public static readonly SoundStyle ScanBeepBreakSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumPingBreak");
+        public static readonly SoundStyle RechargeBeepSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumPingReady") { PitchVariance = 0.1f };
 
         public int usesLeft = maxUses;
         public const int maxUses = 20;
@@ -217,8 +217,8 @@ namespace CalamityMod.Items.Tools
 
             float barScale = 1.3f;
 
-            var barBG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
-            var barFG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
+            var barBG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
+            var barFG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
 
             Vector2 drawPos = position + Vector2.UnitY * (frame.Height - 2) * scale + Vector2.UnitX * (frame.Width - barBG.Width * barScale) * scale * 0.5f;
             Rectangle frameCrop = new Rectangle(0, 0, (int)(usesLeft / (float)maxUses * barFG.Width), barFG.Height);

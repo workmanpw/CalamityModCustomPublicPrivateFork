@@ -1,10 +1,10 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Gores.Trees;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Potions.Food;
-using CalamityMod.Items.Tools;
-using CalamityMod.NPCs.Astral;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Gores.Trees;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
+using CalamityModCustomPublicPrivateFork.NPCs.Astral;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Astral
+namespace CalamityModCustomPublicPrivateFork.Tiles.Astral
 {
     public class AstralTree : GlowMaskTree
     {
@@ -34,12 +34,12 @@ namespace CalamityMod.Tiles.Astral
             SpecialGroupMaximumSaturationValue = 1f
         };
 
-        public override Asset<Texture2D> GetTexture() => ModContent.Request<Texture2D>("CalamityMod/Tiles/Astral/AstralTree");
-        public override Asset<Texture2D> GetGlowTexture() => ModContent.Request<Texture2D>("CalamityMod/Tiles/Astral/AstralTreeGlow");
-        public override Asset<Texture2D> GetBranchTextures() => ModContent.Request<Texture2D>("CalamityMod/Tiles/Astral/AstralTree_Branches");
-        public override Asset<Texture2D> GetBranchGlowTextures() => ModContent.Request<Texture2D>("CalamityMod/Tiles/Astral/AstralTree_BranchesGlow");
-        public override Asset<Texture2D> GetTopTextures() => ModContent.Request<Texture2D>("CalamityMod/Tiles/Astral/AstralTree_Tops");
-        public override Asset<Texture2D> GetTopGlowTextures() => ModContent.Request<Texture2D>("CalamityMod/Tiles/Astral/AstralTree_TopsGlow");
+        public override Asset<Texture2D> GetTexture() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Astral/AstralTree");
+        public override Asset<Texture2D> GetGlowTexture() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Astral/AstralTreeGlow");
+        public override Asset<Texture2D> GetBranchTextures() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Astral/AstralTree_Branches");
+        public override Asset<Texture2D> GetBranchGlowTextures() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Astral/AstralTree_BranchesGlow");
+        public override Asset<Texture2D> GetTopTextures() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Astral/AstralTree_Tops");
+        public override Asset<Texture2D> GetTopGlowTextures() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Astral/AstralTree_TopsGlow");
 
         public override Color GetGlowColor(int i, int j)
         {
@@ -53,7 +53,7 @@ namespace CalamityMod.Tiles.Astral
             return Color.White * MathHelper.Lerp(0.1f, 1.0f, brightness);
         }
 
-        public override void SetTreeFoliageSettings(Tile tile, ref int xoffset, ref int treeFrame, ref int floorY, ref int topTextureFrameWidth, ref int topTextureFrameHeight)
+        public override void SetTreeFoliageSettings(int i, int j, Tile tile, int xoffset, ref int treeFrame, int floorY, ref int topTextureFrameWidth, ref int topTextureFrameHeight)
         {
             //What does this code do?
             //treeFrame = (i + j * j) % 3;

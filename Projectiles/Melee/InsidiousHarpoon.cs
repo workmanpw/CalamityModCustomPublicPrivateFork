@@ -1,9 +1,9 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     [PierceResistException]
     public class InsidiousHarpoon : ModProjectile, ILocalizedModType
@@ -74,16 +74,16 @@ namespace CalamityMod.Projectiles.Melee
                 strongTimer++;
                 if (strongTimer >= strongTimeMax)
                 {
-                    SoundStyle fire = new("CalamityMod/Sounds/Item/ImpalerLaunch");
+                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ImpalerLaunch");
                     SoundEngine.PlaySound(fire with { Volume = 0.8f, Pitch = Main.rand.NextFloat(0.2f, 0.3f) }, Projectile.Center);
 
                     targetedNPC = Projectile.Center.ClosestNPCAt(1200);
                     if (targetedNPC != null)
                         storedVel = (Projectile.Center - targetedNPC.Center).SafeNormalize(Vector2.UnitX) * -30;
                     Projectile.velocity = storedVel * 1.15f;
-                    Particle pulse2 = new CustomPulse(Projectile.Center - storedVel * 3, -storedVel * 0.1f, Color.Chartreuse * 0.7f, "CalamityMod/Particles/DustyCircleHardEdge", new Vector2(0.4f, 1f), storedVel.ToRotation(), 0f, 0.13f, 25);
+                    Particle pulse2 = new CustomPulse(Projectile.Center - storedVel * 3, -storedVel * 0.1f, Color.Chartreuse * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", new Vector2(0.4f, 1f), storedVel.ToRotation(), 0f, 0.13f, 25);
                     GeneralParticleHandler.SpawnParticle(pulse2);
-                    Particle pulse = new CustomPulse(Projectile.Center - storedVel * 3, -storedVel * 0.2f, Color.Chartreuse * 0.7f, "CalamityMod/Particles/FlameExplosion", new Vector2(0.4f, 1f), storedVel.ToRotation(), 0f, 0.25f, 25);
+                    Particle pulse = new CustomPulse(Projectile.Center - storedVel * 3, -storedVel * 0.2f, Color.Chartreuse * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", new Vector2(0.4f, 1f), storedVel.ToRotation(), 0f, 0.25f, 25);
                     GeneralParticleHandler.SpawnParticle(pulse);
                     Projectile.extraUpdates = 3;
                     strongTimer = 0;
@@ -101,7 +101,7 @@ namespace CalamityMod.Projectiles.Melee
                     }
                     if (time % 10 == 0)
                     {
-                        Particle pulse2 = new CustomPulse(Projectile.Center - Projectile.velocity, Projectile.velocity * 0.1f, Color.Chartreuse, "CalamityMod/Particles/DustyCircleHardEdge", new Vector2(0.4f, 1.1f), Projectile.velocity.ToRotation(), 0f, 0.075f, 14);
+                        Particle pulse2 = new CustomPulse(Projectile.Center - Projectile.velocity, Projectile.velocity * 0.1f, Color.Chartreuse, "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", new Vector2(0.4f, 1.1f), Projectile.velocity.ToRotation(), 0f, 0.075f, 14);
                         GeneralParticleHandler.SpawnParticle(pulse2);
                     }
 
@@ -149,9 +149,9 @@ namespace CalamityMod.Projectiles.Melee
                 if (!isPowered)
                 {
                     Projectile.velocity *= -1f;
-                    SoundStyle fire = new("CalamityMod/Sounds/NPCHit/NuclearTerrorHit");
+                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/NuclearTerrorHit");
                     SoundEngine.PlaySound(fire with { Volume = 0.8f, Pitch = 0.7f }, Projectile.Center);
-                    SoundStyle fir2e = new("CalamityMod/Sounds/NPCHit/PerfMediumHit2");
+                    SoundStyle fir2e = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/PerfMediumHit2");
                     SoundEngine.PlaySound(fir2e with { Volume = 0.65f, Pitch = -0.6f }, Projectile.Center);
                 }
             }

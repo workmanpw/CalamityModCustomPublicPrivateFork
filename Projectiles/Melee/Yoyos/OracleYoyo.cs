@@ -1,8 +1,8 @@
-﻿using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Typeless;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using ReLogic.Utilities;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee.Yoyos
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
 {
     public class OracleYoyo : ModProjectile
     {
@@ -166,7 +166,7 @@ namespace CalamityMod.Projectiles.Melee.Yoyos
                     }
                     else
                     {
-                        SoundStyle charge = new("CalamityMod/Sounds/Item/OracleHum");
+                        SoundStyle charge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/OracleHum");
                         Hum = SoundEngine.PlaySound(charge with { Volume = 0.01f, IsLooped = true }, Projectile.Center);
                     }
 

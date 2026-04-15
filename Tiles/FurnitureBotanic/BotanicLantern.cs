@@ -1,10 +1,10 @@
-﻿using CalamityMod.Dusts.Furniture;
+using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureBotanic
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureBotanic
 {
     public class BotanicLantern : ModTile
     {

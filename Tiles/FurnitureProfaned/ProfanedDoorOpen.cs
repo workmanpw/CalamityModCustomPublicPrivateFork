@@ -1,12 +1,12 @@
-﻿using CalamityMod.Dusts.Furniture;
-using CalamityMod.Items.Placeables.FurnitureProfaned;
+using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureProfaned;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureProfaned
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureProfaned
 {
     public class ProfanedDoorOpen : ModTile
     {

@@ -1,21 +1,21 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityMod.Buffs.Summon.Whips;
-using CalamityMod.DataStructures;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class CnidarianJellyfishOnTheString : ModProjectile, ILocalizedModType
     {
@@ -28,7 +28,7 @@ namespace CalamityMod.Projectiles.Summon
 
         //Sounds
         public static readonly SoundStyle ZapSound = SoundID.Item94 with { Volume = SoundID.Item94.Volume * 0.5f };
-        public static readonly SoundStyle SlapSound = new("CalamityMod/Sounds/Custom/WetSlap", 4);
+        public static readonly SoundStyle SlapSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WetSlap", 4);
 
         public List<VerletSimulatedSegment> Segments;
         public Player Owner => Main.player[Projectile.owner];
@@ -291,7 +291,7 @@ namespace CalamityMod.Projectiles.Summon
                 }
                 catch (Exception)
                 {
-                    CalamityMod.Log.Warn("IbanPlay Victide Cnidarian Position Netcode failed safely");
+                    ModContent.GetInstance<CalamityMod>().Logger.Warn("IbanPlay Victide Cnidarian Position Netcode failed safely");
                 }
             }
         }

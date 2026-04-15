@@ -1,35 +1,35 @@
-﻿using System;
+using System;
 using System.Linq;
-using CalamityMod.Balancing;
-using CalamityMod.CalPlayer;
-using CalamityMod.Cooldowns;
-using CalamityMod.DataStructures;
-using CalamityMod.Enums;
-using CalamityMod.Events;
-using CalamityMod.FluidSimulation;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Armor.Wulfrum;
-using CalamityMod.Items.Critters;
-using CalamityMod.Items.Dyes;
-using CalamityMod.Items.Placeables.FurniturePlagued;
-using CalamityMod.Items.Potions.Alcohol;
-using CalamityMod.NPCs;
-using CalamityMod.NPCs.Abyss;
-using CalamityMod.NPCs.Astral;
-using CalamityMod.NPCs.DraedonLabThings;
-using CalamityMod.NPCs.SunkenSea;
-using CalamityMod.Packets;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles;
-using CalamityMod.Projectiles.Ranged;
-using CalamityMod.Projectiles.Typeless;
-using CalamityMod.Systems;
-using CalamityMod.Systems.Collections;
-using CalamityMod.Systems.Mechanic;
-using CalamityMod.Tiles;
-using CalamityMod.Utilities.Daybreak;
-using CalamityMod.Walls;
-using CalamityMod.Walls.UnsafeWalls;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.FluidSimulation;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Wulfrum;
+using CalamityModCustomPublicPrivateFork.Items.Critters;
+using CalamityModCustomPublicPrivateFork.Items.Dyes;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurniturePlagued;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.Abyss;
+using CalamityModCustomPublicPrivateFork.NPCs.Astral;
+using CalamityModCustomPublicPrivateFork.NPCs.DraedonLabThings;
+using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
+using CalamityModCustomPublicPrivateFork.Tiles;
+using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Mono.Cecil.Cil;
@@ -49,7 +49,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI.Gamepad;
 
-namespace CalamityMod.ILEditing
+namespace CalamityModCustomPublicPrivateFork.ILEditing
 {
     public partial class ILChanges
     {
@@ -340,20 +340,10 @@ namespace CalamityMod.ILEditing
         {
             // Don't do town NPC spawning at the end (which lies after a !Main.dayTime return).
             // Do it at the beginning, without the arbitrary time restriction.
-            var cursor = new ILCursor(il);
-            cursor.EmitDelegate<Action>(() =>
-            {
-                if (Main.dayTime || CalamityServerConfig.Instance.TownNPCsSpawnAtNight)
-                    Main.UpdateTime_SpawnTownNPCs();
-            });
-
-            if (!cursor.TryGotoNext(MoveType.Before, i => i.MatchCallOrCallvirt<Main>(nameof(Main.UpdateTime_SpawnTownNPCs))))
-            {
-                CalamityMod.Log.Warn("Town NPC spawn editing code failed.");
-                return;
-            }
-
-            cursor.Emit(OpCodes.Ret);
+            // Main.UpdateTime_SpawnTownNPCs no longer exists in current tModLoader
+            // This IL hook is no longer functional
+            ModContent.GetInstance<CalamityMod>().Logger.Warn("Town NPC spawn editing code disabled - Main.UpdateTime_SpawnTownNPCs no longer exists.");
+            return;
         }
 
         private static void AlterTownNPCSpawnRate(On_Main.orig_UpdateTime_SpawnTownNPCs orig)

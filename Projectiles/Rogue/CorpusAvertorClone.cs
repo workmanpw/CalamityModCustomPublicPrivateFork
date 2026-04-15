@@ -1,16 +1,16 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class CorpusAvertorClone : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/CorpusAvertor";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/CorpusAvertor";
 
         public const int MaxClones = 3;
         private ref float CloneNum => ref Projectile.ai[0];

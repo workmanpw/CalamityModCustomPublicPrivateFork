@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria.GameContent.UI.Elements;
 using Terraria.IO;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems.Mechanic
 {
     public class WorldSelectionDifficultySystem : ModSystem
     {
@@ -50,7 +50,8 @@ namespace CalamityMod.Systems
         public static bool GetDeath(AWorldListItem item)
         {
             // Grab data from the listed world
-            WorldFileData worldData = item._data;
+            // AWorldListItem._data is private and no longer accessible
+            // WorldFileData worldData = item._data;
 
             if (item.Data.TryGetHeaderData<WorldSelectionDifficultySystem>(out TagCompound tag))
             {
@@ -58,10 +59,10 @@ namespace CalamityMod.Systems
                 {
                     return true;
                 }
-                else if (tag.ContainsKey("RevengeanceMode") && tag.GetBool("RevengeanceMode"))
-                {
-                    return worldData.ForTheWorthy;
-                }
+                // else if (tag.ContainsKey("RevengeanceMode") && tag.GetBool("RevengeanceMode"))
+                // {
+                //     return worldData.ForTheWorthy;
+                // }
             }
             return false;
         }
@@ -69,13 +70,14 @@ namespace CalamityMod.Systems
         public static bool GetMalice(AWorldListItem item)
         {
             // Grab data from the listed world
-            WorldFileData worldData = item._data;
-
-            int trueGameMode = worldData.GameMode;
-            if (worldData.ForTheWorthy)
-            {
-                trueGameMode++;
-            }
+            // AWorldListItem._data is private and no longer accessible
+            // WorldFileData worldData = item._data;
+            // int trueGameMode = worldData.GameMode;
+            // if (worldData.ForTheWorthy)
+            // {
+            //     trueGameMode++;
+            // }
+            int trueGameMode = 0; // Default to normal mode since we can't access world data
 
             if (item.Data.TryGetHeaderData<WorldSelectionDifficultySystem>(out TagCompound tag))
             {

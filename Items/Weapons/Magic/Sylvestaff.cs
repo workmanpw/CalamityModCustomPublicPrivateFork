@@ -1,7 +1,7 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Magic;
-using CalamityMod.Rarities;
-using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     [LegacyName("Fabstaff")]
     public class Sylvestaff : ModItem, ILocalizedModType
@@ -39,21 +39,21 @@ namespace CalamityMod.Items.Weapons.Magic
         /// <summary>
         ///     The sound played when Sylvestaff rays are fired.
         /// </summary>
-        public static readonly SoundStyle FireSound = new SoundStyle("CalamityMod/Sounds/Item/SylvestaffFire", 3) with { MaxInstances = 5 };
+        public static readonly SoundStyle FireSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SylvestaffFire", 3) with { MaxInstances = 5 };
 
         /// <summary>
         ///     The sound played when Sylvestaff rays bounce off of tiles.
         /// </summary>
-        public static readonly SoundStyle BounceSound = new SoundStyle("CalamityMod/Sounds/Item/SylvestaffProjectileBounce", 3) with { MaxInstances = 5 };
+        public static readonly SoundStyle BounceSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SylvestaffProjectileBounce", 3) with { MaxInstances = 5 };
 
         public override string Texture
         {
             get
             {
                 if (WorldGen.SavedOreTiers.Gold == TileID.Gold || Main.gameMenu)
-                    return "CalamityMod/Items/Weapons/Magic/SylvestaffGold";
+                    return "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/SylvestaffGold";
 
-                return "CalamityMod/Items/Weapons/Magic/SylvestaffPlatinum";
+                return "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/SylvestaffPlatinum";
             }
         }
 

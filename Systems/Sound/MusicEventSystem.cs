@@ -1,15 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading;
-using CalamityMod.Events;
-using CalamityMod.NPCs;
-using CalamityMod.Packets;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Packets;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public record class MusicEventEntry(string Id, int Song, TimeSpan Length, TimeSpan IntroSilence, TimeSpan OutroSilence, Func<bool> ShouldPlay, Func<bool> Enabled);
 
@@ -48,8 +48,12 @@ namespace CalamityMod.Systems
         {
             static void AddEntry(string eventId, string songName, TimeSpan length, Func<bool> shouldPlay, Func<bool> enabled, TimeSpan? introSilence = null, TimeSpan? outroSilence = null)
             {
-                MusicEventEntry entry = new(eventId, CalamityMod.Instance.GetMusicFromMusicMod(songName).Value, length, introSilence ?? TimeSpan.Zero, outroSilence ?? TimeSpan.Zero, shouldPlay, enabled);
-                EventCollection.Add(entry);
+                var musicId = ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod(songName);
+                if (musicId.HasValue)
+                {
+                    MusicEventEntry entry = new(eventId, musicId.Value, length, introSilence ?? TimeSpan.Zero, outroSilence ?? TimeSpan.Zero, shouldPlay, enabled);
+                    EventCollection.Add(entry);
+                }
             }
 
             AddEntry("CloneDefeated", "Interlude1", TimeSpan.FromSeconds(214.577d),

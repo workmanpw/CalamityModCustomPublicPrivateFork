@@ -1,7 +1,7 @@
-﻿using Terraria.ID;
+using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Vanity
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Legs)]
     public class TheFormalFootwear : ModItem, ILocalizedModType

@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.NPCs.Providence;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.NPCs.Providence;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,13 +9,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class HolyBurnOrb : ModProjectile, ILocalizedModType
     {
         bool started = false;
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityMod/Projectiles/StarProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/StarProj";
 
         public override void SetDefaults()
         {
@@ -40,7 +40,7 @@ namespace CalamityMod.Projectiles.Boss
             if (!started)
             {
                 Color cl = ProvUtils.GetProjectileColor(255);
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, cl, "CalamityMod/Particles/BlastCone", new Vector2(Main.rand.NextFloat(4f, 7f), 1.5f), Vector2.Zero.AngleTo(Projectile.velocity), 1f, 0f, 30));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, cl, "CalamityModCustomPublicPrivateFork/Particles/BlastCone", new Vector2(Main.rand.NextFloat(4f, 7f), 1.5f), Vector2.Zero.AngleTo(Projectile.velocity), 1f, 0f, 30));
                 started = true;
             }
 
@@ -74,7 +74,7 @@ namespace CalamityMod.Projectiles.Boss
             GlowOrbParticle p = new GlowOrbParticle(Projectile.Center, Projectile.velocity + new Vector2(Main.rand.NextFloat(vel * 2), 0).RotatedByRandom(MathHelper.TwoPi), false, 4, 1f, col);
             GeneralParticleHandler.SpawnParticle(p);
             //Trail for visibilty
-            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center + Projectile.velocity, Vector2.Zero, col, "CalamityMod/Particles/BlastCone", new Vector2(3f, 2f), Vector2.Zero.AngleFrom(Projectile.velocity), 1f, 0f, 3));
+            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center + Projectile.velocity, Vector2.Zero, col, "CalamityModCustomPublicPrivateFork/Particles/BlastCone", new Vector2(3f, 2f), Vector2.Zero.AngleFrom(Projectile.velocity), 1f, 0f, 3));
         }
 
         public override bool PreDraw(ref Color lightColor)
@@ -118,7 +118,7 @@ namespace CalamityMod.Projectiles.Boss
             SoundEngine.PlaySound(SoundID.Item14, Projectile.Center);
             Color particleColor = ProvUtils.GetProjectileColor(0);
             Color smokeColor = Color.Lerp(particleColor, Color.DarkSlateGray, 0.5f);
-            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, smokeColor, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.06f, 18);
+            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, smokeColor, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.06f, 18);
             GeneralParticleHandler.SpawnParticle(pulse);
             for (int i = 0; i < 7; i++)
             {

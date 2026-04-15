@@ -1,14 +1,14 @@
-﻿
+
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Walls
+namespace CalamityModCustomPublicPrivateFork.Walls
 {
     public class PyreMantleWallSafe : ModWall
     {
-        public override string Texture => "CalamityMod/Walls/PyreMantleWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/PyreMantleWall";
 
         public override void SetStaticDefaults()
         {

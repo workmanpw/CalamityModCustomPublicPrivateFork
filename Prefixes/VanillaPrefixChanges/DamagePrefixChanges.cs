@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Prefixes.VanillaPrefixChanges.Stats;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Prefixes.VanillaPrefixChanges.Stats;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityMod.Prefixes.VanillaPrefixChanges
+namespace CalamityModCustomPublicPrivateFork.Prefixes.VanillaPrefixChanges
 {
     public class JaggedPrefixChange : VanillaPrefixChange
     {

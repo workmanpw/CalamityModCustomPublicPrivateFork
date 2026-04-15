@@ -1,15 +1,15 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.DraedonsArsenal;
-using CalamityMod.Projectiles.Ranged;
-using CalamityMod.Projectiles.Typeless;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     [LegacyName("BladedgeGreatbow")]
     public class BladedgeRailbow : ModItem, ILocalizedModType

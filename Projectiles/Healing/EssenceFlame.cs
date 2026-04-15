@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Healing
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Healing
 {
     public class EssenceFlame : ModProjectile, ILocalizedModType
     {

@@ -1,10 +1,10 @@
-﻿using CalamityMod.NPCs;
-using CalamityMod.Particles;
-using CalamityMod.TileEntities;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class EntityUpdateInterceptionSystem : ModSystem
     {

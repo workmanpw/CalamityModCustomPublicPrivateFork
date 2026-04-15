@@ -1,11 +1,11 @@
-﻿using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.SummonItems
+namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 {
     [LegacyName("BossRush")]
     public class Terminus : ModItem, ILocalizedModType
@@ -40,7 +40,7 @@ namespace CalamityMod.Items.SummonItems
         #region Sprite Drawing
         public static void DrawTerminusGlow(SpriteBatch spriteBatch, Vector2 baseDrawPosition, Rectangle frame, float rotation, float baseScale)
         {
-            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/TerminusGlow").Value;
+            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/SummonItems/TerminusGlow").Value;
             Vector2 origin = frame.Size() * 0.5f;
 
             float pulseRate = Main.GlobalTimeWrappedHourly % 5f;
@@ -69,7 +69,7 @@ namespace CalamityMod.Items.SummonItems
 
         public static void DrawGlowInWorld(SpriteBatch spriteBatch, Vector2 baseDrawPosition, float rotation, float baseScale)
         {
-            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/TerminusGlow").Value;
+            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/SummonItems/TerminusGlow").Value;
             Rectangle frame = glowTexture.Bounds;
             DrawTerminusGlow(spriteBatch, baseDrawPosition + new Vector2(0, -1), frame, rotation, baseScale);
         }
@@ -81,12 +81,12 @@ namespace CalamityMod.Items.SummonItems
 
             if (Main.zenithWorld)
             {
-                texture = ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus_GFB").Value;
+                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/SummonItems/Terminus_GFB").Value;
                 spriteBatch.Draw(texture, position - new Vector2(-4, -1), null, Color.White, 0f, origin, invScale - 0.04f, 0, 0);
             }
             else
             {
-                texture = ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus").Value;
+                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/SummonItems/Terminus").Value;
                 spriteBatch.Draw(texture, position, null, Color.White, 0f, origin, invScale, 0, 0);
                 DrawTerminusGlow(spriteBatch, position, frame, 0f, invScale);
             }
@@ -98,7 +98,7 @@ namespace CalamityMod.Items.SummonItems
         {
             if (Main.zenithWorld)
             {
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus_GFB").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/SummonItems/Terminus_GFB").Value;
                 spriteBatch.Draw(texture, Item.position - Main.screenPosition, null, lightColor, rotation, Vector2.Zero, scale, 0, 0);
                 return false;
             }

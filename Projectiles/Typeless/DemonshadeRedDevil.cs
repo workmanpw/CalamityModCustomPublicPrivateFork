@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.CalPlayer;
-using CalamityMod.Dusts;
+using System;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class DemonshadeRedDevil : ModProjectile, ILocalizedModType
     {

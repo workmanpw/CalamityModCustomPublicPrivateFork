@@ -1,7 +1,7 @@
-﻿using Terraria;
+using Terraria;
 using System.Linq;
 using System.Collections.Generic;
-using CalamityMod.DataStructures;
+using CalamityModCustomPublicPrivateFork.DataStructures;
 using Terraria.Utilities;
 using Microsoft.Xna.Framework;
 using System;
@@ -10,7 +10,7 @@ using Terraria.DataStructures;
 using Terraria.ObjectData;
 using Terraria.Enums;
 
-namespace CalamityMod.Tiles.BaseTiles
+namespace CalamityModCustomPublicPrivateFork.Tiles.BaseTiles
 {
     public class BranchDrawer
     {

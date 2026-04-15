@@ -1,10 +1,10 @@
-﻿using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class HolyExplosionBoom : BaseMassiveExplosionProjectile, ILocalizedModType
     {
@@ -17,7 +17,7 @@ namespace CalamityMod.Projectiles.Boss
             Color explosionColor = Main.zenithWorld ? new Color(Main.DiscoR, Main.DiscoG, Main.DiscoB) : (Main.IsItDay() ? Color.Orange : Color.BlueViolet);
             return Color.Lerp(explosionColor * 1.6f, Color.White, MathHelper.Clamp(pulseCompletionRatio * 2.2f, 0f, 1f));
         }
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void SetStaticDefaults()
         {

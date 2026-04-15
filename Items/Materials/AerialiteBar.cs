@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.Ores;
-using CalamityMod.Tiles;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
+using CalamityModCustomPublicPrivateFork.Tiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Materials
+namespace CalamityModCustomPublicPrivateFork.Items.Materials
 {
     public class AerialiteBar : ModItem, ILocalizedModType
     {

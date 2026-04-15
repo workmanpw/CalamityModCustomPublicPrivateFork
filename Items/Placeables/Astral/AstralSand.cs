@@ -1,9 +1,9 @@
-﻿using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Astral
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Astral
 {
     public class AstralSand : ModItem, ILocalizedModType
     {

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Items;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Items;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Prefixes
+namespace CalamityModCustomPublicPrivateFork.Prefixes
 {
     [LegacyName("PointyWeaponPrefix")]
     public class Pointy : RogueWeaponPrefix

@@ -1,9 +1,9 @@
-﻿using CalamityMod.DataStructures;
-using CalamityMod.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.DamageOverTime
+namespace CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime
 {
     public class SagePoison : ModBuff
     {

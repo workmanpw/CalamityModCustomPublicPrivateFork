@@ -1,25 +1,25 @@
-﻿using System;
+using System;
 using System.Linq;
-using CalamityMod.Buffs.Alcohol;
-using CalamityMod.Buffs.StatBuffs;
-using CalamityMod.CalPlayer.Dashes;
-using CalamityMod.DataStructures;
-using CalamityMod.Enums;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Armor.Fearmonger;
-using CalamityMod.Items.Armor.Reaver;
-using CalamityMod.Items.Armor.Silva;
-using CalamityMod.Items.Armor.Tarragon;
-using CalamityMod.Items.Fishing.BrimstoneCragCatches;
-using CalamityMod.Items.Placeables.Furniture;
-using CalamityMod.Items.Potions;
-using CalamityMod.Items.Potions.Alcohol;
-using CalamityMod.Items.Potions.Food;
-using CalamityMod.NPCs;
-using CalamityMod.Projectiles.Typeless;
-using CalamityMod.Systems;
-using CalamityMod.Systems.Collections;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Buffs.Alcohol;
+using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
+using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Fearmonger;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Reaver;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Silva;
+using CalamityModCustomPublicPrivateFork.Items.Armor.Tarragon;
+using CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCragCatches;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityModCustomPublicPrivateFork.Items.Potions;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -27,7 +27,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.CalPlayer
+namespace CalamityModCustomPublicPrivateFork.CalPlayer
 {
     public partial class CalamityPlayer : ModPlayer
     {
@@ -711,7 +711,7 @@ namespace CalamityMod.CalPlayer
                     if (toxicHeartVisuals)
                     {
                         float soundVolume = Utils.Remap(Player.lifeRegen, minLifeRegen, maxLifeRegen, 1f, 0.3f, true);
-                        SoundStyle heartbeat = new("CalamityMod/Sounds/Item/Heartbeat");
+                        SoundStyle heartbeat = new("CalamityModCustomPublicPrivateFork/Sounds/Item/Heartbeat");
                         SoundEngine.PlaySound(heartbeat with { Volume = soundVolume, PitchVariance = 0.2f }, Player.Center);
                     }
                 }

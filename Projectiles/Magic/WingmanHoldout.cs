@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,12 +12,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class WingmanHoldout : ModProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<Wingman>();
-        public override string Texture => "CalamityMod/Items/Weapons/Magic/Wingman";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/Wingman";
 
         public Color StaticEffectsColor = Color.Orchid;
         private ref float ShootingTimer => ref Projectile.ai[0];
@@ -192,13 +192,13 @@ namespace CalamityMod.Projectiles.Magic
             Vector2 firingVelocity = shootDirection * 10;
             if (isGrenade)
             {
-                SoundStyle fire = new("CalamityMod/Sounds/Item/DeadSunExplosion");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DeadSunExplosion");
                 SoundEngine.PlaySound(fire with { Volume = 0.35f, Pitch = -0.4f, PitchVariance = 0.2f }, Projectile.Center);
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), tipPosition, (firingVelocity * 1.3f) * Utils.GetLerpValue(60, 10, FiringTime, true), ModContent.ProjectileType<WingmanGrenade>(), (int)(Projectile.damage * 6), Projectile.knockBack * 5, Projectile.owner, 0, (Projectile.ai[2] == 1 ? -1 : 0));
             }
             else
             {
-                SoundStyle fire = new("CalamityMod/Sounds/Item/MagnaCannonShot");
+                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagnaCannonShot");
                 SoundEngine.PlaySound(fire with { Volume = 0.25f, Pitch = 1f, PitchVariance = 0.35f }, Projectile.Center);
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), tipPosition, firingVelocity * Utils.GetLerpValue(80, 10, FiringTime, true), ModContent.ProjectileType<WingmanShot>(), Projectile.damage, Projectile.knockBack, Projectile.owner, 0, (Projectile.ai[2] == 1 ? -1 : 0));
             }
@@ -261,9 +261,9 @@ namespace CalamityMod.Projectiles.Magic
 
             Texture2D texture;
             if (Projectile.ai[2] == 1)
-                texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/Wingman").Value;
+                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/Wingman").Value;
             else
-                texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/WingmanAlt").Value;
+                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/WingmanAlt").Value;
 
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Projectile.GetAlpha(lightColor);

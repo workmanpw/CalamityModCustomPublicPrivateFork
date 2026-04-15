@@ -1,5 +1,5 @@
-﻿using CalamityMod.Tiles.DraedonStructures;
-using CalamityMod.Tiles.FurnitureExo;
+using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
+using CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent;
@@ -14,7 +14,7 @@ using Terraria.Graphics.CameraModifiers;
 using Terraria.Map;
 using Terraria.ModLoader;
 
-namespace CalamityMod.ILEditing
+namespace CalamityModCustomPublicPrivateFork.ILEditing
 {
     public partial class ILChanges : ILoadable
     {
@@ -57,7 +57,7 @@ namespace CalamityMod.ILEditing
 
             // NPC behavior
             IL_Main.UpdateTime += PermitNighttimeTownNPCSpawning;
-            On_Main.UpdateTime_SpawnTownNPCs += AlterTownNPCSpawnRate;
+            // On_Main.UpdateTime_SpawnTownNPCs += AlterTownNPCSpawnRate; // Method no longer exists in current tModLoader
             IL_NPC.DoDeathEvents += PreventVanillaBossDeathsInBossRush;
             On_NPC.NPCLoot += PreventDiabolistLootLogic;
             IL_Player.CollectTaxes += MakeTaxCollectorUseful;

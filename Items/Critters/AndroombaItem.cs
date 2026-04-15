@@ -1,9 +1,9 @@
-﻿using CalamityMod.NPCs.TownNPCs;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Critters
+namespace CalamityModCustomPublicPrivateFork.Items.Critters
 {
     public class AndroombaItem : ModItem, ILocalizedModType
     {

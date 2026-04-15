@@ -1,21 +1,21 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityMod.DataStructures;
-using CalamityMod.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class HydraHead : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Items/Weapons/Ranged/Hydra";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/Hydra";
 
         public Vector2 CurrentPositionOffset;
         public Vector2 IdealPositionOffset;
@@ -189,7 +189,7 @@ namespace CalamityMod.Projectiles.Ranged
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D chain = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/HydraHeadChain").Value;
+            Texture2D chain = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/HydraHeadChain").Value;
             Vector2 end = Projectile.Center + (Projectile.spriteDirection == 1).ToInt() * 10 * Vector2.UnitX;
 
             List<Vector2> controlPoints = new List<Vector2>

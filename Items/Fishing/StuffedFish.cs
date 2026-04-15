@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Placeables.Astral;
-using CalamityMod.Items.Placeables.Crags;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Astral;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing
 {
     public class StuffedFish : ModItem, ILocalizedModType
     {
@@ -111,11 +111,11 @@ namespace CalamityMod.Items.Fishing
                 itemLoot.Add(marineKelpSeeds.Type, 10, seedMin, seedMax);
             }
             else
-                CalamityMod.Log.Warn("Could not find either Marine Kelp or Marine Kelp Seeds from Thorium. These items will not be added to Stuffed Fish.");
+                ModContent.GetInstance<CalamityMod>().Logger.Warn("Could not find either Marine Kelp or Marine Kelp Seeds from Thorium. These items will not be added to Stuffed Fish.");
 
             // Ozzatron 30DEC2022: It is unlikely SoA will ever be ported to 1.4 and beyond. Commenting this out indefinitely.
             /*
-            Mod soa = CalamityMod.Instance.soa;
+            Mod soa = ModContent.GetInstance<CalamityMod>().soa;
             if (soa is not null)
             {
                 try
@@ -133,7 +133,7 @@ namespace CalamityMod.Items.Fishing
                 }
                 catch
                 {
-                    CalamityMod.Log.Debug("One of the items in this file got renamed internally. Please report this in the #bugs-read-pins channel of the official Calamity discord server.");
+                    ModContent.GetInstance<CalamityMod>().Logger.Debug("One of the items in this file got renamed internally. Please report this in the #bugs-read-pins channel of the official Calamity discord server.");
                 }
             }
             */

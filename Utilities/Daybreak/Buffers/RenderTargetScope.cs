@@ -2,7 +2,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityMod.Utilities.Daybreak.Buffers;
+namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 
 /// <summary>
 ///     Manages the scope of a render target to be rendered to, swapping out the

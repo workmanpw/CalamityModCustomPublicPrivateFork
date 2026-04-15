@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Graphics.Primitives;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Physics;
-using CalamityMod.Enums;
+using System;
+using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Physics;
+using CalamityModCustomPublicPrivateFork.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class SylvestaffHoldout : ModProjectile, IPixelatedPrimitiveRenderer
     {

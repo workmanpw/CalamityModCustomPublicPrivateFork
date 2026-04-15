@@ -1,8 +1,8 @@
-﻿using System.IO;
-using CalamityMod.NPCs.Abyss;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.NPCs.Abyss;
 using Terraria;
 
-namespace CalamityMod.Packets
+namespace CalamityModCustomPublicPrivateFork.Packets
 {
     internal sealed class SyncSlabCrabAIPacket : CalamityPacket
     {

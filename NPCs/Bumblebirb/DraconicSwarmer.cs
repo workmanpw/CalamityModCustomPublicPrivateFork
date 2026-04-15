@@ -1,5 +1,5 @@
-﻿using CalamityMod.Projectiles.Boss;
-using CalamityMod.Sounds;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Bumblebirb
+namespace CalamityModCustomPublicPrivateFork.NPCs.Bumblebirb
 {
     public class DraconicSwarmer : ModNPC
     {
@@ -19,7 +19,7 @@ namespace CalamityMod.NPCs.Bumblebirb
             this.HideFromBestiary();
         }
 
-        public override string Texture => "CalamityMod/NPCs/Bumblebirb/BumbleFolly";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/Bumblebirb/BumbleFolly";
 
         public override void SetDefaults()
         {

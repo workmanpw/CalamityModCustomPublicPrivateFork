@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.SunkenSea;
-using CalamityMod.Items.Placeables.Walls;
-using CalamityMod.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.FurnitureNavystone
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone
 {
     public class SmoothNavystone : ModItem, ILocalizedModType
     {

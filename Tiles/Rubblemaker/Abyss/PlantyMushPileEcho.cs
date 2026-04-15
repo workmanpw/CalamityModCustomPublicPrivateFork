@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.Abyss;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,11 +8,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Rubblemaker.Abyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.Abyss
 {
     public class PlantyMushPile1Echo : ModTile
     {
-        public override string Texture => "CalamityMod/Tiles/Abyss/AbyssAmbient/PlantyMushPile1";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/Abyss/AbyssAmbient/PlantyMushPile1";
         public override void SetStaticDefaults()
         {
             Main.tileLighted[Type] = true;
@@ -45,11 +45,11 @@ namespace CalamityMod.Tiles.Rubblemaker.Abyss
 
     public class PlantyMushPile2Echo : PlantyMushPile1Echo
     {
-        public override string Texture => "CalamityMod/Tiles/Abyss/AbyssAmbient/PlantyMushPile2";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/Abyss/AbyssAmbient/PlantyMushPile2";
     }
 
     public class PlantyMushPile3Echo : PlantyMushPile1Echo
     {
-        public override string Texture => "CalamityMod/Tiles/Abyss/AbyssAmbient/PlantyMushPile3";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/Abyss/AbyssAmbient/PlantyMushPile3";
     }
 }

@@ -1,9 +1,9 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.SnowRuffian
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.SnowRuffian
 {
     [AutoloadEquip(EquipType.Head)]
     public class SnowRuffianMask : ModItem, ILocalizedModType
@@ -21,7 +21,7 @@ namespace CalamityMod.Items.Armor.SnowRuffian
         {
             if (!Main.dedServ)
             {
-                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/SnowRuffian/SnowRuffianWings", EquipType.Wings, this, equipTexture: new SnowRuffianWings());
+                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/SnowRuffian/SnowRuffianWings", EquipType.Wings, this, equipTexture: new SnowRuffianWings());
             }
         }
 

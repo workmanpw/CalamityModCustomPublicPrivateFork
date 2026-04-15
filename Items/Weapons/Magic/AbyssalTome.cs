@@ -1,9 +1,9 @@
-﻿using CalamityMod.NPCs.SlimeGod;
-using CalamityMod.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     public class AbyssalTome : ModItem, ILocalizedModType
     {

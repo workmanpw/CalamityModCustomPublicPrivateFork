@@ -1,6 +1,6 @@
-﻿using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee.MaceFlails
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.MaceFlails
 {
     public class BallOFuguProj : BaseMaceFlailProjectile
     {
@@ -32,7 +32,7 @@ namespace CalamityMod.Projectiles.Melee.MaceFlails
         public ref float SpikeTimer => ref Projectile.ai[2];
 
         public static Asset<Texture2D> ChargeGlow;
-        public override void Load() => ChargeGlow = ModContent.Request<Texture2D>("CalamityMod/Particles/LargeBloom");
+        public override void Load() => ChargeGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/LargeBloom");
 
         public override void SetDefaults()
         {
@@ -74,7 +74,7 @@ namespace CalamityMod.Projectiles.Melee.MaceFlails
                 {
                     Vector2 maxScale = new Vector2(Main.rand.NextFloat(1f, 1.2f), Main.rand.NextFloat(0.6f, 0.75f)) * (i % 2 == 0 ? 1f : 1.35f);
                     float rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(30f * i);
-                    CustomPulse spike = new CustomPulse(Projectile.Center, Vector2.One, SpikeColor, "CalamityMod/Particles/BlastCone", maxScale, rotation, 1f, 0.5f, 12);
+                    CustomPulse spike = new CustomPulse(Projectile.Center, Vector2.One, SpikeColor, "CalamityModCustomPublicPrivateFork/Particles/BlastCone", maxScale, rotation, 1f, 0.5f, 12);
                     GeneralParticleHandler.SpawnParticle(spike);
                 }
 

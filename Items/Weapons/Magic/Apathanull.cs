@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     [LegacyName("TomeofFates")]
     public class Apathanull : ModItem, ILocalizedModType
@@ -29,7 +29,7 @@ namespace CalamityMod.Items.Weapons.Magic
             Item.knockBack = 5.5f;
             Item.value = CalamityGlobalItem.RarityRedBuyPrice;
             Item.rare = ItemRarityID.Red;
-            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/MeldBurn") with { Volume = 0.7f, Pitch = Main.rand.NextFloat(-0.45f, -0.6f) };
+            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MeldBurn") with { Volume = 0.7f, Pitch = Main.rand.NextFloat(-0.45f, -0.6f) };
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<CosmicTentacle>();
             Item.shootSpeed = 12f;

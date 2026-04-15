@@ -1,17 +1,17 @@
-﻿using CalamityMod.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class MutatedTruffleToothball : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
 
-        public override string Texture => "CalamityMod/NPCs/OldDuke/OldDukeToothBall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/OldDuke/OldDukeToothBall";
 
         public ref float TargetShotID => ref Projectile.ai[0];
 

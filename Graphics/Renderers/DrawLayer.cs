@@ -1,4 +1,4 @@
-﻿namespace CalamityMod.Graphics.Renderers
+namespace CalamityModCustomPublicPrivateFork.Graphics.Renderers
 {
     public enum DrawLayer
     {

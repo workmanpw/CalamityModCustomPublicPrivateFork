@@ -1,10 +1,10 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Gores.Trees;
-using CalamityMod.Items.Materials;
-using CalamityMod.Items.Placeables.FurnitureAcidwood;
-using CalamityMod.Items.Potions.Food;
-using CalamityMod.Items.Tools;
-using CalamityMod.NPCs.AcidRain;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Gores.Trees;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
+using CalamityModCustomPublicPrivateFork.Items.Tools;
+using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Abyss
+namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
 {
     public class AcidWoodTree : ModPalmTree
     {
@@ -34,11 +34,11 @@ namespace CalamityMod.Tiles.Abyss
             SpecialGroupMaximumSaturationValue = 1f
         };
 
-        public override Asset<Texture2D> GetTopTextures() => ModContent.Request<Texture2D>("CalamityMod/Tiles/Abyss/AcidWoodTreeTops");
-        public override Asset<Texture2D> GetTexture() => ModContent.Request<Texture2D>("CalamityMod/Tiles/Abyss/AcidWoodTree");
+        public override Asset<Texture2D> GetTopTextures() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Abyss/AcidWoodTreeTops");
+        public override Asset<Texture2D> GetTexture() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Abyss/AcidWoodTree");
 
         //I don't know what this means. Why do palm trees have branches?? Since when. Also acidwood trees arent meant to have oasis alts
-        public override Asset<Texture2D> GetOasisTopTextures() => ModContent.Request<Texture2D>("CalamityMod/Tiles/Abyss/AcidWoodTreeOasisTops");
+        public override Asset<Texture2D> GetOasisTopTextures() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Abyss/AcidWoodTreeOasisTops");
 
         public override int DropWood() => ModContent.ItemType<Acidwood>();
         public override int CreateDust() => (int)CalamityDusts.SulphurousSeaAcid;

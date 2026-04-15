@@ -1,6 +1,6 @@
-﻿using System.IO;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class CondemnationHoldout : BaseGunHoldoutProjectile
     {
@@ -97,7 +97,7 @@ namespace CalamityMod.Projectiles.Ranged
 
                     if (ArrowsLoaded >= Condemnation.MaxLoadedArrows)
                     {
-                        SoundStyle fire = new("CalamityMod/Sounds/Custom/AbilitySounds/BrimflameRecharge");
+                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/BrimflameRecharge");
                         for (int i = 0; i < 3; i++)
                             SoundEngine.PlaySound(fire with { Volume = 0.8f, Pitch = i * 0.25f, MaxInstances = 3 });
                         homing = true;

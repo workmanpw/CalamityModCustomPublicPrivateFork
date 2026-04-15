@@ -1,4 +1,4 @@
-﻿namespace CalamityMod.Dusts.WaterSplash
+namespace CalamityModCustomPublicPrivateFork.Dusts.WaterSplash
 {
     public class SulphuricDepthsSplash : SplashDust
     {

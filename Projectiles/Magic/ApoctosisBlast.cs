@@ -1,15 +1,15 @@
-﻿using System;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class ApoctosisBlast : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public ref float time => ref Projectile.ai[0];
         public bool chargeShot => Projectile.ai[2] == 5;
         public bool onSpawn = true;
@@ -49,7 +49,7 @@ namespace CalamityMod.Projectiles.Magic
                 Vector2 vel = -Projectile.velocity.SafeNormalize(Vector2.UnitX).RotatedByRandom(0.4f) * Main.rand.NextFloat(3.5f, 14f);
                 if (time % 2 == 0)
                 {
-                    Particle trail = new CustomSpark(placement + Main.rand.NextVector2Circular(9, 9), vel, "CalamityMod/Particles/GlowSquareParticle", false, Main.rand.Next(17, 42), Main.rand.NextFloat(1.4f, 3.5f), Main.rand.NextBool() ? Color.Lerp(Color.Crimson, Color.White, 0.5f) : Color.Crimson, new Vector2(1f, 1f), extraRotation: MathHelper.PiOver4);
+                    Particle trail = new CustomSpark(placement + Main.rand.NextVector2Circular(9, 9), vel, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticle", false, Main.rand.Next(17, 42), Main.rand.NextFloat(1.4f, 3.5f), Main.rand.NextBool() ? Color.Lerp(Color.Crimson, Color.White, 0.5f) : Color.Crimson, new Vector2(1f, 1f), extraRotation: MathHelper.PiOver4);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
             }
@@ -86,7 +86,7 @@ namespace CalamityMod.Projectiles.Magic
         {
             if (time == 0)
                 return false;
-            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark").Value;
+            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             float drawRotation = Projectile.rotation - MathHelper.PiOver2;
             float timeleftFade = Utils.GetLerpValue(0, 190, Projectile.timeLeft, true);

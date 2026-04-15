@@ -1,11 +1,11 @@
-﻿using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.World;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 using SandstormEvent = Terraria.GameContent.Events.Sandstorm;
 
-namespace CalamityMod.Items.Tools.ClimateChange
+namespace CalamityModCustomPublicPrivateFork.Items.Tools.ClimateChange
 {
     
 

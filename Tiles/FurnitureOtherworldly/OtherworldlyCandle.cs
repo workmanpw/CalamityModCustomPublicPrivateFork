@@ -1,10 +1,10 @@
-﻿using CalamityMod.Dusts.Furniture;
+using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureOtherworldly
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureOtherworldly
 {
     [LegacyName("OccultCandle")]
     public class OtherworldlyCandle : ModTile

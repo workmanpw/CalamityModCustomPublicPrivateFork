@@ -1,8 +1,8 @@
-﻿using CalamityMod.NPCs.NormalNPCs;
+using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Critters
+namespace CalamityModCustomPublicPrivateFork.Items.Critters
 {
     public class ShroombleItem : ModItem, ILocalizedModType
     {

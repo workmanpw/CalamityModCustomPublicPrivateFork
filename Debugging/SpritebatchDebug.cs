@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -8,7 +8,7 @@ using MonoMod.RuntimeDetour;
 using MonoMod.RuntimeDetour.HookGen;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Debugging
+namespace CalamityModCustomPublicPrivateFork.Debugging
 {
     public static class SpritebatchDebug
     {
@@ -60,7 +60,8 @@ namespace CalamityMod.Debugging
             Effect effect,
             Matrix transformMatrix)
         {
-            if (self.beginCalled) ModLoader.GetMod(nameof(CalamityMod)).Logger.Debug("[SPRITEBATCH DEBUG] Begin was last called here: " + SpritebatchDebug.Trace); 
+            // SpriteBatch.beginCalled no longer exists in current tModLoader
+            // if (self.beginCalled) ModLoader.GetMod(nameof(CalamityMod)).Logger.Debug("[SPRITEBATCH DEBUG] Begin was last called here: " + SpritebatchDebug.Trace); 
             SpritebatchDebug.Trace = Environment.StackTrace;
             
             orig(self, sortMode,
@@ -74,7 +75,8 @@ namespace CalamityMod.Debugging
 
         private static void End_Impl(Action<SpriteBatch> orig, SpriteBatch self)
         {
-            if (!self.beginCalled) ModLoader.GetMod(nameof(CalamityMod)).Logger.Debug("[SPRITEBATCH DEBUG] Doesn't seem like Begin was called. Here's the last end call: " + SpritebatchDebug.Trace); 
+            // SpriteBatch.beginCalled no longer exists in current tModLoader
+            // if (!self.beginCalled) ModLoader.GetMod(nameof(CalamityMod)).Logger.Debug("[SPRITEBATCH DEBUG] Doesn't seem like Begin was called. Here's the last end call: " + SpritebatchDebug.Trace); 
             SpritebatchDebug.Trace = Environment.StackTrace;
             
             orig(self);

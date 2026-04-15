@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.NPCs.SupremeCalamitas;
-using CalamityMod.Particles;
-using CalamityMod.Events;
-using CalamityMod.World;
+using System;
+using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class SupremeCataclysmFist : ModProjectile, ILocalizedModType
     {
@@ -109,10 +109,10 @@ namespace CalamityMod.Projectiles.Boss
                         float randSize = Main.rand.NextFloat(0.8f, 1.2f);
                         for (int i = 0; i < 2; i++)
                         {
-                            Particle bloom = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.Magenta, 0.5f), "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 1.7f * randSize, 0f, 10);
+                            Particle bloom = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.Magenta, 0.5f), "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 1.7f * randSize, 0f, 10);
                             GeneralParticleHandler.SpawnParticle(bloom);
                         }
-                        Particle bloom3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.9f, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 1.4f * randSize, 0f, 10);
+                        Particle bloom3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.9f, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 1.4f * randSize, 0f, 10);
                         GeneralParticleHandler.SpawnParticle(bloom3);
 
                         Projectile.velocity *= 0.945f;
@@ -258,7 +258,7 @@ namespace CalamityMod.Projectiles.Boss
         {
             if (Main.zenithWorld && Projectile.ai[2] >= 3)
             {
-                Texture2D ballTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/Basketball").Value;
+                Texture2D ballTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/Basketball").Value;
                 Main.EntitySpriteDraw(ballTexture, Projectile.Center - Main.screenPosition, null, lightColor, Projectile.rotation, ballTexture.Size() * 0.5f, Projectile.scale / 1.8f, SpriteEffects.None, 0);
                 return false;
             }
@@ -268,7 +268,7 @@ namespace CalamityMod.Projectiles.Boss
             SpriteEffects direction = Projectile.spriteDirection == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (Projectile.ai[1] == 1f)
-                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/SupremeCataclysmFistAlt").Value;
+                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/SupremeCataclysmFistAlt").Value;
 
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Rectangle frame = texture.Frame(1, Main.projFrames[Type], 0, Projectile.frame);
@@ -280,7 +280,7 @@ namespace CalamityMod.Projectiles.Boss
 
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
-            SoundStyle b = new("CalamityMod/Sounds/Custom/Kickball");
+            SoundStyle b = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Kickball");
             SoundEngine.PlaySound(b with { PitchVariance = 0.15f }, Projectile.Center);
 
             if (Projectile.velocity.X != oldVelocity.X)

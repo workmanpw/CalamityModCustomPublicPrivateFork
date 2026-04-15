@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Cooldowns;
-using CalamityMod.Packets;
+using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityModCustomPublicPrivateFork.Packets;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.CalPlayer
+namespace CalamityModCustomPublicPrivateFork.CalPlayer
 {
     public partial class CalamityPlayer : ModPlayer
     {

@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.FurnitureSacrilegious;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSacrilegious;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.FurnitureSacrilegious
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious
 {
     public class SacrilegiousChestTile : ModTile
     {
@@ -48,7 +48,7 @@ namespace CalamityMod.Tiles.FurnitureSacrilegious
             if (tile.IsTileActuallyInvisible())
                 return;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureSacrilegious/SacrilegiousChestTileGlow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureSacrilegious/SacrilegiousChestTileGlow");
             Texture2D texture = GlowTexture.Value;
 
             int x = i;

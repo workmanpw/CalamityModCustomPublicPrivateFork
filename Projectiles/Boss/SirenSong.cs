@@ -1,11 +1,11 @@
-﻿using System.IO;
-using CalamityMod.NPCs;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.NPCs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class SirenSong : ModProjectile, ILocalizedModType
     {

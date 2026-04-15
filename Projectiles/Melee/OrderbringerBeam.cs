@@ -1,16 +1,16 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class OrderbringerBeam : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Projectiles/Melee/OrderbringerBeam";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/OrderbringerBeam";
         public int time = 0;
         public Color mainColor = Color.White;
 
@@ -46,7 +46,7 @@ namespace CalamityMod.Projectiles.Melee
             float targetDist = Vector2.Distance(Owner.Center, Projectile.Center);
             if (Projectile.timeLeft % 12 == 0 && targetDist < 1400f)
             {
-                Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity * 0.2f, "CalamityMod/Particles/BloomCircle", false, 23, 0.25f, mainColor * 0.75f, new Vector2(1f, 7.35f), true, true, shrinkSpeed: 0.2f, glowOpacity: 0.7f);
+                Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity * 0.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 23, 0.25f, mainColor * 0.75f, new Vector2(1f, 7.35f), true, true, shrinkSpeed: 0.2f, glowOpacity: 0.7f);
                 GeneralParticleHandler.SpawnParticle(spark);
             }
             time++;

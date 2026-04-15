@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using System;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -12,7 +12,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     internal class VitriolicViperHoldout : BaseGunHoldoutProjectile
     {
@@ -20,7 +20,7 @@ namespace CalamityMod.Projectiles.Magic
         public override float MaxOffsetLengthFromArm => 40f;
         public override float BaseOffsetY => 0f;
         public override float RecoilResolveSpeed => 0.4f;
-        public override string Texture => "CalamityMod/Items/Weapons/Magic/VitriolicViper";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/VitriolicViper";
         public override Vector2 GunTipPosition => base.GunTipPosition - Vector2.UnitX.RotatedBy(Projectile.rotation) * -20;
         
         private ref float CurrentChargingFrames => ref Projectile.ai[0];
@@ -72,9 +72,9 @@ namespace CalamityMod.Projectiles.Magic
                     if (FullCharge)
                     {
                         OffsetLengthFromArm -= 25;
-                        SoundStyle fire = new("CalamityMod/Sounds/Item/ViperSpit");
+                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ViperSpit");
                         SoundEngine.PlaySound(fire with { Pitch = -0.3f + Main.rand.NextFloat(-0.1f, 0.1f) + (FirstCharge ? 0.2f : 0) }, Projectile.Center);
-                        SoundStyle fire2 = new("CalamityMod/Sounds/Item/MeldShoot");
+                        SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MeldShoot");
                         SoundEngine.PlaySound(fire2 with { Pitch = -0.3f, Volume = 0.5f }, Projectile.Center);
 
                         // Vipers can apparently have 33 teeth or something like that
@@ -85,7 +85,7 @@ namespace CalamityMod.Projectiles.Magic
                                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), GunTipPosition, (shootVelocity * 2).RotatedByRandom(0.5f) * Main.rand.NextFloat(0.8f, 1.2f), ModContent.ProjectileType<VitriolicViperFang>(), Projectile.damage / 10, Projectile.knockBack, Projectile.owner, 0);
                         }
 
-                        Particle pulse = new CustomPulse(GunTipPosition, Vector2.Zero, bColor, "CalamityMod/Particles/HighResFoggyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.05f, 14);
+                        Particle pulse = new CustomPulse(GunTipPosition, Vector2.Zero, bColor, "CalamityModCustomPublicPrivateFork/Particles/HighResFoggyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.05f, 14);
                         GeneralParticleHandler.SpawnParticle(pulse);
 
                         for (int i = 0; i < 17; i++)
@@ -116,7 +116,7 @@ namespace CalamityMod.Projectiles.Magic
                     else
                     {
                         OffsetLengthFromArm -= 15;
-                        SoundStyle fire = new("CalamityMod/Sounds/Item/ViperSpit");
+                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ViperSpit");
                         SoundEngine.PlaySound(fire with { Pitch = (chargePower * 0.3f) + Main.rand.NextFloat(-0.1f, 0.1f), Volume = 0.5f }, Projectile.Center);
 
                         if (Main.myPlayer == Projectile.owner)
@@ -174,7 +174,7 @@ namespace CalamityMod.Projectiles.Magic
                 // Full charge effects
                 if (CurrentChargingFrames == FirstChargeFrames && CurrentOverchargeFrames == 0)
                 {
-                    SoundStyle fire = new("CalamityMod/Sounds/NPCHit/NuclearTerrorHit");
+                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/NuclearTerrorHit");
                     SoundEngine.PlaySound(fire with { Volume = 1f, Pitch = -0.2f }, Projectile.Center);
                     for (int i = 0; i < 18; i++)
                     {
@@ -187,7 +187,7 @@ namespace CalamityMod.Projectiles.Magic
                 }
                 if (CurrentOverchargeFrames == FullyChargedFrames)
                 {
-                    SoundStyle fire = new("CalamityMod/Sounds/NPCHit/NuclearTerrorHit");
+                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/NuclearTerrorHit");
                     SoundEngine.PlaySound(fire with { Volume = 1f, Pitch = 0.2f }, Projectile.Center);
                     for (int i = 0; i < 12; i++)
                     {
@@ -226,7 +226,7 @@ namespace CalamityMod.Projectiles.Magic
             Vector2 rotationPoint = texture.Size() * 0.5f;
             SpriteEffects flipSprite = (Projectile.spriteDirection * Owner.gravDir == -1) ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
 
-            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleVortex").Value;
+            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleVortex").Value;
 
             // Glow Orb
             for (int i = 0; i < 3; i++)

@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Balancing;
-using CalamityMod.Buffs.StatDebuffs;
-using CalamityMod.Items.Pets;
-using CalamityMod.Items.Potions.Food;
-using CalamityMod.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityModCustomPublicPrivateFork.Items.Pets;
+using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -15,7 +15,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Other
+namespace CalamityModCustomPublicPrivateFork.NPCs.Other
 {
     [AutoloadBossHead]
     // I would like to say first and foremost, that 95% of this is directly ported from his code when he got removed in early 2018
@@ -36,7 +36,7 @@ namespace CalamityMod.NPCs.Other
 
         public bool Dying = false;
 
-        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/Lordeath");
+        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/Lordeath");
 
         public static Asset<Texture2D> DeathAnimationTexture;
 
@@ -498,7 +498,7 @@ namespace CalamityMod.NPCs.Other
 
             if (highestPossibleDamage > antiButcherLimit)
             {
-                string key = "Mods.CalamityMod.Status.Boss.EdgyBossText8";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.EdgyBossText8";
                 Color messageColor = Color.Cyan;
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);
 
@@ -518,7 +518,7 @@ namespace CalamityMod.NPCs.Other
 
             if (highestPossibleDamage > antiButcherLimit)
             {
-                string key = "Mods.CalamityMod.Status.Boss.EdgyBossText8";
+                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.EdgyBossText8";
                 Color messageColor = Color.Cyan;
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);
 

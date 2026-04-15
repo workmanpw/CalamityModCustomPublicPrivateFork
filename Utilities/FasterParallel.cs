@@ -1,11 +1,11 @@
-﻿#nullable enable
+#nullable enable
 
 using System;
 using System.Threading;
 
 using ReLogic.Threading;
 
-namespace CalamityMod.Utilities
+namespace CalamityModCustomPublicPrivateFork.Utilities
 {
     // Tomat: I have recycled this from my initial implementation I've given to
     // Nitrate.

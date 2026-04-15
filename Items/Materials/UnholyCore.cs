@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Placeables.Ores;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Materials
+namespace CalamityModCustomPublicPrivateFork.Items.Materials
 {
     public class UnholyCore : ModItem, ILocalizedModType
     {

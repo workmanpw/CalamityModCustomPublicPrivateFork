@@ -1,7 +1,7 @@
-﻿using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.NPCs;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     [PierceResistException]
     public class MajesticGuardHoldout : BaseCustomUseStyleProjectile, ILocalizedModType
@@ -19,7 +19,7 @@ namespace CalamityMod.Projectiles.Melee
         public override int AssignedItemID => ModContent.ItemType<MajesticGuard>();
 
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<MajesticGuard>();
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/MajesticGuard";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/MajesticGuard";
         public override float HitboxOutset => 105;
 
         public override Vector2 HitboxSize => new Vector2(140, 140);
@@ -138,7 +138,7 @@ namespace CalamityMod.Projectiles.Melee
 
                     if (time >= (int)(timeMax * 0.4f) && playSwingSound)
                     {
-                        SoundStyle fire = new("CalamityMod/Sounds/Item/HeavySwing");
+                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeavySwing");
                         SoundEngine.PlaySound(fire with { Volume = 0.8f, Pitch = Main.rand.NextFloat(0.35f, 0.55f) }, Projectile.Center);
                         swingCount++;
                         playSwingSound = false;
@@ -185,9 +185,9 @@ namespace CalamityMod.Projectiles.Melee
             if (damageDone <= 2)
                 armoredHits++;
 
-            SoundStyle fire = new("CalamityMod/Sounds/Item/CursedDaggerThrow");
+            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/CursedDaggerThrow");
             SoundEngine.PlaySound(fire with { Volume = 0.65f, Pitch = 0.8f }, Projectile.Center);
-            SoundStyle fire2 = new("CalamityMod/Sounds/Custom/DefenseDamage");
+            SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DefenseDamage");
             SoundEngine.PlaySound(fire2 with { Volume = 0.55f, Pitch = 0.4f }, Projectile.Center);
 
             int heal = (int)(MathHelper.Clamp(7 - Projectile.numHits * 5, 1, 7));
@@ -223,18 +223,18 @@ namespace CalamityMod.Projectiles.Melee
             if ((useAnim > 0 || DrawUnconditionally) && Owner.ItemAnimationActive)
             {
                 Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
-                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/MajesticGuardGlow");
+                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/MajesticGuardGlow");
 
                 float r = FlipAsSword ? MathHelper.ToRadians(90) : 0f;
 
                 for (int i = 0; i < 25; i++)
                 {
-                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/MajesticGuardGhost").Value;
+                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MajesticGuardGhost").Value;
                     Color auraColor = Color.Silver with { A = 0 } * 0.15f * fadeIn;
                     Vector2 drawOffset = (MathHelper.TwoPi * i / 25f).ToRotationVector2() * 5 * fadeIn;
                     Main.EntitySpriteDraw(centerTexture, Projectile.Center - Main.screenPosition + drawOffset + new Vector2(0, Owner.gfxOffY), centerTexture.Frame(1, FrameCount, 0, Frame), auraColor, Projectile.rotation + RotationOffset + r, FlipAsSword ? new Vector2(tex.Width() - SpriteOrigin.X, SpriteOrigin.Y) : SpriteOrigin, Projectile.scale, spriteEffects != SpriteEffects.None ? spriteEffects : (FlipAsSword ? SpriteEffects.FlipHorizontally : SpriteEffects.None));
                 }
-                Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmearLarge");
+                Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmearLarge");
 
                 if (swingCount > 0 && !playSwingSound)
                     Main.EntitySpriteDraw(swoosh.Value, Projectile.Center - Main.screenPosition + new Vector2(0, Owner.gfxOffY), null, Color.Silver with { A = 0 } * fadeIn * 0.4f, (FinalRotation + MathHelper.ToRadians(45)) + MathHelper.ToRadians(swingCount % 2 != 0 ? -55 : 55) * -Owner.direction, swoosh.Size() * 0.5f, Projectile.scale * 1.9f / 4, swingCount % 2 != 0 ? SpriteEffects.FlipHorizontally : SpriteEffects.None);

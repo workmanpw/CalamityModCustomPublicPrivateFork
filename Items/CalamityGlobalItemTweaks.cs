@@ -1,18 +1,18 @@
-﻿using System.Collections.Generic;
-using CalamityMod.Balancing;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Fishing.AstralCatches;
-using CalamityMod.Items.Placeables.Ores;
-using CalamityMod.Items.Weapons.Ranged;
-using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Items.Weapons.Summon;
-using CalamityMod.Items.Weapons.Typeless;
+using System.Collections.Generic;
+using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCatches;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items
+namespace CalamityModCustomPublicPrivateFork.Items
 {
     // TODO -- The item tweaks database and functions should be stored in a ModSystem.
     // ApplyTweaks(ref Item item) would be the one exposed function, which CalamityGlobalItem would call in SetDefaults.

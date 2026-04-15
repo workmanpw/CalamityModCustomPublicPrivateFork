@@ -1,14 +1,14 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class AbyssBall : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityMod/Projectiles/Boss/UnstableEbonianGlob";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/UnstableEbonianGlob";
 
         public override void SetDefaults()
         {

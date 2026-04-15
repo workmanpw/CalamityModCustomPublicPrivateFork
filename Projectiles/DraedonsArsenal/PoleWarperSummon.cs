@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Buffs.Summon;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.DraedonsArsenal
+namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 {
     public class PoleWarperSummon : ModProjectile, ILocalizedModType
     {

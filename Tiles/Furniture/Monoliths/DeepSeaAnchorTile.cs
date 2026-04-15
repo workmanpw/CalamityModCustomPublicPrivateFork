@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Placeables.Furniture.Monoliths;
-using CalamityMod.Tiles.BaseTiles;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths;
+using CalamityModCustomPublicPrivateFork.Tiles.BaseTiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.Furniture.Monoliths
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Monoliths
 {
     public class DeepSeaAnchorTile : BaseMonolith
     {

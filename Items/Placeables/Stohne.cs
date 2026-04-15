@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables
 {
     public class Stohne : ModItem, ILocalizedModType
     {

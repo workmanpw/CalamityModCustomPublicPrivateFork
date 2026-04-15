@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Gores.Trees
+namespace CalamityModCustomPublicPrivateFork.Gores.Trees
 {
     public class AstralLeaf : ModGore
     {

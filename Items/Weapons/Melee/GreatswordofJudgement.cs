@@ -1,7 +1,7 @@
-﻿using System;
-using CalamityMod.Items.Materials;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Melee;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Melee
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 {
     public class GreatswordofJudgement : ModItem, ILocalizedModType
     {
@@ -102,7 +102,7 @@ namespace CalamityMod.Items.Weapons.Melee
             {
                 if (playSound)
                 {
-                    SoundStyle swing = new("CalamityMod/Sounds/Item/SwooshMid");
+                    SoundStyle swing = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SwooshMid");
                     SoundEngine.PlaySound(swing with { Pitch = Main.rand.NextFloat(0.1f, 0.3f), Volume = 1f }, player.Center);
                     playSound = false;
                 }
@@ -111,7 +111,7 @@ namespace CalamityMod.Items.Weapons.Melee
                     if (!player.Calamity().bladeArmEnchant) // Manually remove projectiles when Tainted
                         Projectile.NewProjectile(player.GetSource_FromThis(), player.Center, shootDir, Item.shoot, Item.damage, Item.knockBack, player.whoAmI, 0f);
 
-                    Particle swipe = new CustomSpark(player.Center - shootDir * 5, shootDir.RotatedBy(0.4f * (dir * (swingCount % 2 == 0 ? 1 : -1))) * 2.5f, "CalamityMod/Particles/VerticalSmearLarge", false, (int)(14 / player.GetAttackSpeed(DamageClass.Melee)), 0.6f, clr, new Vector2(1f, 1f), true, false, 0, false, false);
+                    Particle swipe = new CustomSpark(player.Center - shootDir * 5, shootDir.RotatedBy(0.4f * (dir * (swingCount % 2 == 0 ? 1 : -1))) * 2.5f, "CalamityModCustomPublicPrivateFork/Particles/VerticalSmearLarge", false, (int)(14 / player.GetAttackSpeed(DamageClass.Melee)), 0.6f, clr, new Vector2(1f, 1f), true, false, 0, false, false);
                     GeneralParticleHandler.SpawnParticle(swipe);
 
                     SoundEngine.PlaySound(SoundID.Item60, player.Center);
@@ -150,7 +150,7 @@ namespace CalamityMod.Items.Weapons.Melee
         }
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/GreatswordofJudgementGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GreatswordofJudgementGlow").Value);
         }
         public override void AddRecipes()
         {

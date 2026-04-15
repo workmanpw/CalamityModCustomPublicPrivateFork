@@ -1,16 +1,16 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Ammo
+namespace CalamityModCustomPublicPrivateFork.Items.Ammo
 {
     public class HyperiusBullet : ModItem, ILocalizedModType
     {
         public static float overflowEfficency = 1.2f; // Multiplier applied to overflow damage done by other damage sources
-        public static readonly SoundStyle hit = new("CalamityMod/Sounds/Item/HyperiusOverflow");
+        public static readonly SoundStyle hit = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HyperiusOverflow");
         public new string LocalizationCategory => "Items.Ammo";
         public override void SetStaticDefaults()
         {

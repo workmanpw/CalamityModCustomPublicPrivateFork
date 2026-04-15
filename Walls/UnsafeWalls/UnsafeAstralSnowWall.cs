@@ -1,12 +1,12 @@
-﻿
+
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Walls.UnsafeWalls
+namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
 {
     public class UnsafeAstralSnowWall : ModWall
     {
-        public override string Texture => "CalamityMod/Walls/AstralSnowWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/AstralSnowWall";
         public override void SetStaticDefaults()
         {
             DustType = ModContent.DustType<Dusts.AstralBasic>();

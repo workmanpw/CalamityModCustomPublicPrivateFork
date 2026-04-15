@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Items.Weapons.Summon;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class AmphibiansGuitarHoldout : ModProjectile, ILocalizedModType
     {

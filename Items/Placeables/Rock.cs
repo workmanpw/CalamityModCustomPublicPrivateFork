@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.Furniture.Monoliths;
-using CalamityMod.Tiles;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths;
+using CalamityModCustomPublicPrivateFork.Tiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables
 {
     public class Rock : ModItem, ILocalizedModType
     {

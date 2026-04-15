@@ -1,31 +1,31 @@
-﻿using CalamityMod.Enums;
+using CalamityModCustomPublicPrivateFork.Enums;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod
+namespace CalamityModCustomPublicPrivateFork
 {
     public partial class CalamityUtils
     {
-        /// <param name="key">The language key. This will have "Mods.CalamityMod." appended behind it.</param>
+        /// <param name="key">The language key. This will have "Mods.CalamityModCustomPublicPrivateFork." appended behind it.</param>
         /// <returns>
-        /// A <see cref="LocalizedText"/> instance found using the provided key with "Mods.CalamityMod." appended behind it. 
+        /// A <see cref="LocalizedText"/> instance found using the provided key with "Mods.CalamityModCustomPublicPrivateFork." appended behind it. 
         /// <para>NOTE: Modded translations are not loaded until after PostSetupContent.</para>Caching the result is suggested.
         /// </returns>
         public static LocalizedText GetText(string key)
         {
-            return Language.GetOrRegister("Mods.CalamityMod." + key);
+            return Language.GetOrRegister("Mods.CalamityModCustomPublicPrivateFork." + key);
         }
 
-        /// <param name="key">The language key. This will have "Mods.CalamityMod." appended behind it.</param>
+        /// <param name="key">The language key. This will have "Mods.CalamityModCustomPublicPrivateFork." appended behind it.</param>
         /// <returns>
-        /// A <see cref="string"/> instance found using the provided key with "Mods.CalamityMod." appended behind it.
+        /// A <see cref="string"/> instance found using the provided key with "Mods.CalamityModCustomPublicPrivateFork." appended behind it.
         /// <para>NOTE: Modded translations are not loaded until after PostSetupContent.</para>Caching the result is suggested.
         /// </returns>
         public static string GetTextValue(string key)
         {
-            return Language.GetTextValue("Mods.CalamityMod." + key);
+            return Language.GetTextValue("Mods.CalamityModCustomPublicPrivateFork." + key);
         }
 
         /// <param name="itemID">The item's ID.</param>

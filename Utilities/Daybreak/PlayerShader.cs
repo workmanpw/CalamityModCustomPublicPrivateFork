@@ -1,6 +1,6 @@
-﻿using Terraria.DataStructures;
+using Terraria.DataStructures;
 
-namespace CalamityMod.Utilities.Daybreak;
+namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
 
 /// <summary>
 ///     A type-safe wrapper over a packed player shader integer.

@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Rarities;
+using System;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Materials
+namespace CalamityModCustomPublicPrivateFork.Items.Materials
 {
     [LegacyName("CalamitousEssence")]
     public class AshesofAnnihilation : ModItem, ILocalizedModType

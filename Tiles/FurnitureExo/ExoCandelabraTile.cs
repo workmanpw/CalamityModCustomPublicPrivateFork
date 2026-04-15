@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Placeables.FurnitureExo;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureExo
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
 {
     public class ExoCandelabraTile : ModTile
     {
@@ -50,7 +50,7 @@ namespace CalamityMod.Tiles.FurnitureExo
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureExo/ExoCandelabraTileFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureExo/ExoCandelabraTileFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j);
         }
     }

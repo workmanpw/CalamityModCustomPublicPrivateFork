@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class BloomRing : Particle
     {
-        public override string Texture => "CalamityMod/Particles/BloomRing";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/BloomRing";
         public override bool UseAdditiveBlend => true;
         public override bool SetLifetime => true;
 

@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class OldDukeHeadCorpse : ModProjectile, ILocalizedModType
     {
@@ -50,7 +50,7 @@ namespace CalamityMod.Projectiles.Summon
                     if (Main.rand.NextBool((int)(400 * Utils.GetLerpValue(0, 2000, GFBTimer)) + 1))
                     {
                         Projectile.velocity += (Vector2.One * 0.3f).RotatedByRandom(100);
-                        SoundStyle heartbeat = new("CalamityMod/Sounds/Item/Heartbeat");
+                        SoundStyle heartbeat = new("CalamityModCustomPublicPrivateFork/Sounds/Item/Heartbeat");
                         SoundEngine.PlaySound(heartbeat with { Volume = 0.5f, MaxInstances = -1 }, player.Center);
                         player.SetScreenshake(6.5f * Utils.GetLerpValue(600, 0, GFBTimer));
                         Projectile.velocity *= 0.99f;
@@ -58,7 +58,7 @@ namespace CalamityMod.Projectiles.Summon
                     GFBTimer--;
                     if (GFBTimer == 0)
                     {
-                        SoundStyle h = new("CalamityMod/Sounds/Custom/GFB/HeComes");
+                        SoundStyle h = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/GFB/HeComes");
                         SoundEngine.PlaySound(h with { Volume = 1f, SoundLimitBehavior = SoundLimitBehavior.IgnoreNew }, player.Center);
                     }
                 }
@@ -84,7 +84,7 @@ namespace CalamityMod.Projectiles.Summon
                         SoundEngine.PlaySound(SoundID.NPCDeath13 with { Volume = 0.85f, MaxInstances = -1 }, Projectile.Center);
                         if (far && Projectile.timeLeft % 30 == 0)
                         {
-                            SoundStyle h = new("CalamityMod/Sounds/Custom/GFB/YouAreNotSafe");
+                            SoundStyle h = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/GFB/YouAreNotSafe");
                             SoundEngine.PlaySound(h with { Volume = 0.8f, SoundLimitBehavior = SoundLimitBehavior.IgnoreNew }, player.Center);
 
                             Main.NewText(CalamityUtils.GetTextValue("Misc.NotSafe"), Color.Chartreuse);
@@ -108,7 +108,7 @@ namespace CalamityMod.Projectiles.Summon
                         {
                             for (int i = 0; i < 4; i++)
                             {
-                                SoundStyle heartbeat = new("CalamityMod/Sounds/Item/Heartbeat");
+                                SoundStyle heartbeat = new("CalamityModCustomPublicPrivateFork/Sounds/Item/Heartbeat");
                                 SoundEngine.PlaySound(heartbeat with { Volume = 0.8f, MaxInstances = -1 }, player.Center);
                             }
                             player.SetScreenshake(4.5f);

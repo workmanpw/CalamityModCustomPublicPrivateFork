@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Items.Accessories;
-using CalamityMod.Items.Placeables.Abyss;
-using CalamityMod.NPCs.AstrumDeus;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.Sounds;
-using CalamityMod.Tiles.Ores;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
+using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.Tiles.Ores;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -18,12 +18,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class DiamondOfTheDeepProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         public Color bColor = Color.White; // Shifting color, used for most effects
         public Color color1 = Color.White;
@@ -306,7 +306,7 @@ namespace CalamityMod.Projectiles.Typeless
                                 {
                                     for (float i = 1; i <= 1.4f; i += 0.4f)
                                     {
-                                        Particle pulse = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX) * 7 * i, "CalamityMod/Particles/BloomRing", false, 18, 0.5f / i, bColor, new Vector2(3f, 1f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
+                                        Particle pulse = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX) * 7 * i, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", false, 18, 0.5f / i, bColor, new Vector2(3f, 1f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
                                         GeneralParticleHandler.SpawnParticle(pulse);
                                     }
                                 }
@@ -320,7 +320,7 @@ namespace CalamityMod.Projectiles.Typeless
 
                                 if (visuals)
                                 {
-                                    Particle pulse = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX) * 5, "CalamityMod/Particles/BloomRing", false, 14, 0.35f, bColor, new Vector2(3f, 1f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
+                                    Particle pulse = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitX) * 5, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", false, 14, 0.35f, bColor, new Vector2(3f, 1f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
                                     GeneralParticleHandler.SpawnParticle(pulse);
                                 }
                             }
@@ -393,7 +393,7 @@ namespace CalamityMod.Projectiles.Typeless
             {
                 float scale = 0.55f * Projectile.scale * (projType == 1 && canDamage ? 2 : 1);
                 int lifetime = (int)(18 * (projType == 1 && canDamage ? 2.5f : 1));
-                Particle fadeInfx = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomCircle", false, lifetime, scale, bColor * 0.4f * squash, new Vector2(1 - 0.15f * squash, 1f), true, true, shrinkSpeed: 0.3f * squash, glowOpacity: 0.5f, glowCenterScale: 0.45f);
+                Particle fadeInfx = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, lifetime, scale, bColor * 0.4f * squash, new Vector2(1 - 0.15f * squash, 1f), true, true, shrinkSpeed: 0.3f * squash, glowOpacity: 0.5f, glowCenterScale: 0.45f);
                 GeneralParticleHandler.SpawnParticle(fadeInfx);
             }
 
@@ -422,7 +422,7 @@ namespace CalamityMod.Projectiles.Typeless
                         c.noLightEmittence = true;
                         c.fadeIn = 0.9f;
                     }
-                    Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, bColor * 0.7f, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10, 10), 0.5f, 1.8f, 13, true);
+                    Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, bColor * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10, 10), 0.5f, 1.8f, 13, true);
                     GeneralParticleHandler.SpawnParticle(blastRing);
                 }
 
@@ -519,7 +519,7 @@ namespace CalamityMod.Projectiles.Typeless
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+            Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
             float sine = (float)Math.Sin((Main.GlobalTimeWrappedHourly * 10) / MathHelper.Pi);
             Vector2 squash = new Vector2(Utils.Remap(Projectile.velocity.Length(), 1, 5, 1, 0.6f), Utils.Remap(Projectile.velocity.Length(), 1, 5, 1, 2f));
 
@@ -554,7 +554,7 @@ namespace CalamityMod.Projectiles.Typeless
             float velLerp = Utils.GetLerpValue(0.5f, 3f, Projectile.velocity.Length(), true);
             if (projType == 0 && visuals) // GRAVEL circle
             {
-                Asset<Texture2D> ring = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomRing");
+                Asset<Texture2D> ring = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomRing");
                 int orbs = 9;
                 for (int i = 1; i < orbs + 1; i++)
                 {

@@ -1,9 +1,9 @@
-﻿using CalamityMod.NPCs.DevourerofGods;
+using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems
+namespace CalamityModCustomPublicPrivateFork.Systems
 {
     public class DoGBackgroundScene : ModSceneEffect
     {

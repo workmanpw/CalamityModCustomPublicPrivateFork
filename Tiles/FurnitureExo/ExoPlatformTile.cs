@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Placeables.FurnitureExo;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureExo
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
 {
     public class ExoPlatformTile : ModTile
     {

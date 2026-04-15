@@ -1,13 +1,13 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class THanosSideLaser : ModProjectile, ILocalizedModType
     {
@@ -159,7 +159,7 @@ namespace CalamityMod.Projectiles.Boss
                 return false;
             }
 
-            Texture2D laserTelegraph = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/LaserWallTelegraphBeam").Value;
+            Texture2D laserTelegraph = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/LaserWallTelegraphBeam").Value;
 
             float yScale = 2f;
             if (TelegraphDelay < TelegraphFadeTime)

@@ -1,13 +1,13 @@
-﻿using System.IO;
-using CalamityMod.Events;
-using CalamityMod.World;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class HomingLaserDart : ModProjectile, ILocalizedModType
     {

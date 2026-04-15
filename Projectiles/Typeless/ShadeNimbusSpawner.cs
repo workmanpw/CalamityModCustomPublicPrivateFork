@@ -1,15 +1,15 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class ShadeNimbusSpawner : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/NPCs/HiveMind/DankCreeper";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/HiveMind/DankCreeper";
 
         public ref float EffectStrength => ref Projectile.ai[2]; // 1 Rotten Brain, 2 Amal Brain, 3 The Amalgam
 

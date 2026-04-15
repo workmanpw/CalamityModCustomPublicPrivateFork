@@ -1,8 +1,8 @@
-﻿using System;
-using CalamityMod.Buffs.DamageOverTime;
-using CalamityMod.Dusts;
-using CalamityMod.Packets.Entities;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Packets.Entities;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,14 +10,14 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class ExaltedOathbladeThrownBlade : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Items/Weapons/Melee/ExaltedOathblade";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/ExaltedOathblade";
 
         public int ChargeupTime => (int)Projectile.localAI[2];
         public int Lifetime = 150;
@@ -131,7 +131,7 @@ namespace CalamityMod.Projectiles.Melee
                         for (int i = 0; i < Main.maxNPCs; i++)
                             Projectile.localNPCImmunity[i] = 0;
                         Projectile.numHits = 0;
-                        SoundStyle unstuck = new("CalamityMod/Sounds/NPCHit/PerfLargeHit", 3);
+                        SoundStyle unstuck = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/PerfLargeHit", 3);
                         SoundEngine.PlaySound(unstuck with { Volume = 0.85f, Pitch = Main.rand.NextFloat(0.3f, 0.4f), MaxInstances = 3 }, Projectile.Center);
                     }
                 }
@@ -153,7 +153,7 @@ namespace CalamityMod.Projectiles.Melee
                     Vector2 dustVel = exitedTarget ? safeVel.RotatedBy(MathHelper.ToRadians(-90 * Projectile.direction) + Projectile.rotation) : safeVel.RotatedBy(MathHelper.ToRadians(70 * (i == 0 ? 1 : -1))) * 6;
                     if (!exitedTarget)
                     {
-                        Particle spark = new VelChangingSpark(Projectile.Center + safeVel * 75, -dustVel, -Projectile.velocity, "CalamityMod/Particles/BloomCircle", 9, 0.2f, (Main.rand.NextBool() ? Color.MediumOrchid : Color.BlueViolet) * 0.65f, new Vector2(1, 1f), true, false, 0, false, 1.0f, 0.2f);
+                        Particle spark = new VelChangingSpark(Projectile.Center + safeVel * 75, -dustVel, -Projectile.velocity, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", 9, 0.2f, (Main.rand.NextBool() ? Color.MediumOrchid : Color.BlueViolet) * 0.65f, new Vector2(1, 1f), true, false, 0, false, 1.0f, 0.2f);
                         GeneralParticleHandler.SpawnParticle(spark);
                     }
                     if (exitedTarget && i == 0 && Main.rand.NextBool())
@@ -166,7 +166,7 @@ namespace CalamityMod.Projectiles.Melee
                 
                 if (Main.rand.NextBool(4))
                 {
-                    Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity.RotatedByRandom(0.3f) * Main.rand.NextFloat(0.2f, 0.6f), "CalamityMod/Particles/DemonSigilParticle", false, 17, Main.rand.NextFloat(0.2f, 0.3f), Color.Lerp(Color.MediumOrchid, Color.BlueViolet, Main.rand.NextFloat(0, 0.7f)) * 0.6f, new Vector2(1, 1), true, false, Main.rand.NextFloat(-1f, 1f), false, false);
+                    Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity.RotatedByRandom(0.3f) * Main.rand.NextFloat(0.2f, 0.6f), "CalamityModCustomPublicPrivateFork/Particles/DemonSigilParticle", false, 17, Main.rand.NextFloat(0.2f, 0.3f), Color.Lerp(Color.MediumOrchid, Color.BlueViolet, Main.rand.NextFloat(0, 0.7f)) * 0.6f, new Vector2(1, 1), true, false, Main.rand.NextFloat(-1f, 1f), false, false);
                     GeneralParticleHandler.SpawnParticle(spark2);
                 }
             }
@@ -177,7 +177,7 @@ namespace CalamityMod.Projectiles.Melee
                 throwAnimation();
                 if (ChargeProgress >= 0.6f && time == 0)
                 {
-                    SoundStyle swing = new("CalamityMod/Sounds/Item/DemonSwordSwing", 2);
+                    SoundStyle swing = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordSwing", 2);
                     SoundEngine.PlaySound(swing with { Volume = 0.65f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f) }, Projectile.Center);
                     time++;
                 }
@@ -236,7 +236,7 @@ namespace CalamityMod.Projectiles.Melee
 
             if (!exitedTarget)
             {
-                SoundStyle stuck = new("CalamityMod/Sounds/Item/DemonSwordImpact", 2);
+                SoundStyle stuck = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordImpact", 2);
                 SoundEngine.PlaySound(stuck with { Volume = 0.75f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f), MaxInstances = 3 }, Projectile.Center);
 
                 Projectile.ai[2] = target.whoAmI;
@@ -310,7 +310,7 @@ namespace CalamityMod.Projectiles.Melee
                         Projectile.velocity = Projectile.velocity.SafeNormalize(Vector2.UnitX) * 8;
                     Projectile.velocity.Y *= 0.85f;
                     Projectile.velocity = Projectile.velocity.RotatedByRandom(0.2f);
-                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/CeramicImpact", 2) { Volume = 0.35f, Pitch = Main.rand.NextFloat(-0.4f, -0.5f) }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/CeramicImpact", 2) { Volume = 0.35f, Pitch = Main.rand.NextFloat(-0.4f, -0.5f) }, Projectile.Center);
                     bounces++;
                     Projectile.timeLeft = Lifetime;
                 }
@@ -328,7 +328,7 @@ namespace CalamityMod.Projectiles.Melee
             stuckInGround = true;
             Projectile.timeLeft = (int)(Lifetime - fadeOutTime * 0.3f);
             Projectile.tileCollide = false;
-            SoundStyle stuck = new("CalamityMod/Sounds/Item/DemonSwordImpact", 2);
+            SoundStyle stuck = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordImpact", 2);
             SoundEngine.PlaySound(stuck with { Volume = 0.75f, Pitch = Main.rand.NextFloat(0.2f, 0.3f), MaxInstances = 3 }, Projectile.Center);
         }
         public override bool? CanDamage()
@@ -341,7 +341,7 @@ namespace CalamityMod.Projectiles.Melee
         public override bool? Colliding(Rectangle projHitbox, Rectangle targetHitbox) => (Projectile.numHits > 0 && !exitedTarget) ? false : CalamityUtils.CircularHitboxCollision(Projectile.Center, Projectile.width / (exitedTarget ? 0.25f : 1), targetHitbox); // After exiting a target, the hitbox is larger
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ExaltedOathblade").Value;
+            Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/ExaltedOathblade").Value;
             Vector2 generalDrawPos = Projectile.Center - Main.screenPosition;
 
             float fadeScale = (1 - Projectile.Opacity);
@@ -353,8 +353,8 @@ namespace CalamityMod.Projectiles.Melee
             }
             if (exitedTarget && !stuckInGround)
             {
-                Asset<Texture2D> p = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularSmearSmokey");
-                Asset<Texture2D> p2 = ModContent.Request<Texture2D>("CalamityMod/Particles/SemiCircularSmearSwipe");
+                Asset<Texture2D> p = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmearSmokey");
+                Asset<Texture2D> p2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SemiCircularSmearSwipe");
 
                 Main.EntitySpriteDraw(p2.Value, generalDrawPos, null, Color.BlueViolet with { A = 0 } * 0.45f, Projectile.rotation * Main.rand.NextFloat(1.6f, 1.7f), p2.Size() * 0.5f, 1.2f * Main.rand.NextFloat(0.8f, 1.15f), SpriteEffects.None);
                 Main.EntitySpriteDraw(p.Value, generalDrawPos, null, Color.MediumOrchid with { A = 0 } * 0.65f, Projectile.rotation * Main.rand.NextFloat(1.2f, 1.3f), p.Size() * 0.5f, 0.95f, SpriteEffects.None);

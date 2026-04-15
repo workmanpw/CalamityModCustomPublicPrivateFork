@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
-using CalamityMod.Tiles.Furniture.Paintings;
+using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Paintings;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Furniture.Paintings
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings
 {
     public class ThankYouPainting : ModItem, ILocalizedModType
     {

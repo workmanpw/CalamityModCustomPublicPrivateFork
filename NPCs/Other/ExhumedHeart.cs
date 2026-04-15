@@ -1,10 +1,10 @@
-﻿using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.Other
+namespace CalamityModCustomPublicPrivateFork.NPCs.Other
 {
     public class ExhumedHeart : ModNPC
     {

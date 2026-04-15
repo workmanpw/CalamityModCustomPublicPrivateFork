@@ -1,6 +1,6 @@
-﻿using CalamityMod.BiomeManagers;
-using CalamityMod.Items.Critters;
-using CalamityMod.Items.Placeables.Banners;
+using CalamityModCustomPublicPrivateFork.BiomeManagers;
+using CalamityModCustomPublicPrivateFork.Items.Critters;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,14 +11,14 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.DraedonLabThings
+namespace CalamityModCustomPublicPrivateFork.NPCs.DraedonLabThings
 {
     public class Androomba : ModNPC
     {
 
         public static Asset<Texture2D> GlowTexture;
 
-        public SoundStyle HurrySound = new("CalamityMod/Sounds/Custom/WulfrumDroidHurry", 2) { PitchVariance = 0.3f };
+        public SoundStyle HurrySound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumDroidHurry", 2) { PitchVariance = 0.3f };
 
         public override void SetStaticDefaults()
         {
@@ -62,7 +62,7 @@ namespace CalamityMod.NPCs.DraedonLabThings
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Androomba")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Androomba")
             });
         }
 

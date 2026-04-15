@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.VanillaNPCAIOverrides.MiniBosses
+namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.MiniBosses
 {
     public class MothronAI : VanillaAIOverride
     {

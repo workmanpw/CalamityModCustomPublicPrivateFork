@@ -1,15 +1,15 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Walls.UnsafeWalls
+namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
 {
 
     [LegacyName("AbyssGravelWall")]
     public class UnsafeAbyssGravelWall : ModWall
     {
-        public override string Texture => "CalamityMod/Walls/AbyssGravelWall";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/AbyssGravelWall";
         public override void SetStaticDefaults()
         {
             DustType = DustID.Water;

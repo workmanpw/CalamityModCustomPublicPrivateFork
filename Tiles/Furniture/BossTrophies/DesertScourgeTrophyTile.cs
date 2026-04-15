@@ -1,6 +1,6 @@
-﻿using Terraria.ModLoader;
+using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Furniture.BossTrophies
+namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.BossTrophies
 {
     public class DesertScourgeTrophyTile : ModTile
     {

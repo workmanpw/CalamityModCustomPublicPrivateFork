@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class PearlParticle : Particle
     {
@@ -20,7 +20,7 @@ namespace CalamityMod.Particles
         public override bool UseCustomDraw => true;
         public override bool UseAdditiveBlend => false;
 
-        public override string Texture => "CalamityMod/Particles/PearlParticle";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/PearlParticle";
 
         public PearlParticle(Vector2 relativePosition, Vector2 velocity, bool affectedByGravity, int lifetime, float scale, Color color, float shrinkSpeed = 0.95f, float rotationSpeed = 0, bool hitTiles = false)
         {
@@ -74,7 +74,7 @@ namespace CalamityMod.Particles
         {
             Vector2 scale = new Vector2(1f, 1f) * Scale;
             Texture2D texture = ModContent.Request<Texture2D>(Texture).Value;
-            Texture2D texture2 = ModContent.Request<Texture2D>("CalamityMod/Particles/PearlParticleGlow").Value;
+            Texture2D texture2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/PearlParticleGlow").Value;
 
             spriteBatch.Draw(texture2, Position - Main.screenPosition, null, Color, Rotation, texture.Size() * 0.5f, scale, 0, 0f);
             spriteBatch.Draw(texture, Position - Main.screenPosition, null, Color.Lerp(Color.White, Color.Transparent, (float)Math.Pow(LifetimeCompletion, 3D)), Rotation, texture.Size() * 0.5f, scale, 0, 0f);

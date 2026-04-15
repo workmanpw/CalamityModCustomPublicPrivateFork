@@ -1,4 +1,4 @@
-﻿using CalamityMod.Items.Fishing.SunkenSeaCatches;
+using CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,14 +7,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     public class SerpentsBiteHook : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
 
         public static Asset<Texture2D> Chain;
-        public override void Load() => Chain = Request<Texture2D>("CalamityMod/Projectiles/Typeless/SerpentsBiteChain");
+        public override void Load() => Chain = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SerpentsBiteChain");
 
         public override void SetDefaults() => Projectile.CloneDefaults(ProjectileID.GemHookAmethyst);
 

@@ -1,18 +1,18 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class NorfleetComet : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public int time = 0;
 
@@ -81,7 +81,7 @@ namespace CalamityMod.Projectiles.Ranged
         {
             Player Owner = Main.player[Projectile.owner];
             Owner.SetScreenshake(7.5f);
-            SoundStyle fire = new("CalamityMod/Sounds/Item/ScorpioNukeHit");
+            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ScorpioNukeHit");
             SoundEngine.PlaySound(fire with { Volume = 0.75f, Pitch = 0.6f, PitchVariance = 0.2f }, Projectile.Center);
         }
 
@@ -95,9 +95,9 @@ namespace CalamityMod.Projectiles.Ranged
                 int partLifetime = 10;
                 float scale = 0.1f;
                 Vector2 spawnPos = Projectile.Center;
-                Particle blastRing = new CustomPulse(spawnPos, Vector2.Zero, partColor, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale, partLifetime);
+                Particle blastRing = new CustomPulse(spawnPos, Vector2.Zero, partColor, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale, partLifetime);
                 GeneralParticleHandler.SpawnParticle(blastRing);
-                Particle blastRing2 = new CustomPulse(spawnPos, Vector2.Zero, partColor * 0.4f, "CalamityMod/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale * 4, partLifetime);
+                Particle blastRing2 = new CustomPulse(spawnPos, Vector2.Zero, partColor * 0.4f, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale * 4, partLifetime);
                 GeneralParticleHandler.SpawnParticle(blastRing2);
                 for (int k = 0; k < 15; k++)
                 {
@@ -119,9 +119,9 @@ namespace CalamityMod.Projectiles.Ranged
                 int partLifetime = 10;
                 float scale = 0.1f;
                 Vector2 spawnPos = Projectile.Center;
-                Particle blastRing = new CustomPulse(spawnPos, Vector2.Zero, partColor, "CalamityMod/Particles/PlasmaExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale, partLifetime);
+                Particle blastRing = new CustomPulse(spawnPos, Vector2.Zero, partColor, "CalamityModCustomPublicPrivateFork/Particles/PlasmaExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale, partLifetime);
                 GeneralParticleHandler.SpawnParticle(blastRing);
-                Particle blastRing2 = new CustomPulse(spawnPos, Vector2.Zero, partColor * 0.4f, "CalamityMod/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale * 4, partLifetime);
+                Particle blastRing2 = new CustomPulse(spawnPos, Vector2.Zero, partColor * 0.4f, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale * 4, partLifetime);
                 GeneralParticleHandler.SpawnParticle(blastRing2);
                 for (int k = 0; k < 15; k++)
                 {
@@ -143,9 +143,9 @@ namespace CalamityMod.Projectiles.Ranged
                 int partLifetime = 10;
                 float scale = 0.1f;
                 Vector2 spawnPos = Projectile.Center;
-                Particle blastRing = new CustomPulse(spawnPos, Vector2.Zero, partColor, "CalamityMod/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale, partLifetime);
+                Particle blastRing = new CustomPulse(spawnPos, Vector2.Zero, partColor, "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale, partLifetime);
                 GeneralParticleHandler.SpawnParticle(blastRing);
-                Particle blastRing2 = new CustomPulse(spawnPos, Vector2.Zero, partColor * 0.4f, "CalamityMod/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale * 4, partLifetime);
+                Particle blastRing2 = new CustomPulse(spawnPos, Vector2.Zero, partColor * 0.4f, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale * 4, partLifetime);
                 GeneralParticleHandler.SpawnParticle(blastRing2);
                 for (int k = 0; k < 15; k++)
                 {
@@ -165,7 +165,7 @@ namespace CalamityMod.Projectiles.Ranged
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D vortexTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/SoulVortex").Value;
+            Texture2D vortexTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/SoulVortex").Value;
             for (int i = 0; i < 4; i++)
             {
                 float angle = MathHelper.TwoPi * i / 3f + Main.GlobalTimeWrappedHourly * MathHelper.TwoPi;
@@ -177,7 +177,7 @@ namespace CalamityMod.Projectiles.Ranged
                 Main.EntitySpriteDraw(vortexTexture, drawPosition, null, drawColor * Projectile.Opacity, -angle + MathHelper.PiOver2, vortexTexture.Size() * 0.5f, ((Projectile.scale * (1 - i * 0.07f)) * 0.18f) * Utils.GetLerpValue(0, 25, time, true), SpriteEffects.None, 0);
             }
 
-            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
             float randSize = Main.rand.NextFloat(0.8f, 1.2f);
             Color drawColor2 = Projectile.ai[1] == 0 ? Color.OrangeRed : Projectile.ai[1] == 1 ? Color.Cyan : Color.GreenYellow;
             Main.EntitySpriteDraw(rechargeTexture, Projectile.Center - Main.screenPosition, null, drawColor2 with { A = 0 }, Projectile.rotation, rechargeTexture.Size() * 0.5f, 0.25f * Utils.GetLerpValue(0, 25, time, true) * randSize, SpriteEffects.None, 0);

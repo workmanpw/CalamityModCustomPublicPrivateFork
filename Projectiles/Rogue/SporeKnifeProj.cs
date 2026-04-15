@@ -1,18 +1,18 @@
-﻿using CalamityMod.Items.Weapons.Rogue;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class SporeKnifeProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/SporeKnife";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/SporeKnife";
         public static int spinTime = 270;
 
         public override void SetDefaults()
@@ -78,9 +78,9 @@ namespace CalamityMod.Projectiles.Rogue
                 dust.alpha = Main.rand.Next(100, 120 + 1);
             }
             //Explosion effect
-            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.ForestGreen * 0.8f, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.04f, 0.09f, 20, true);
+            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.ForestGreen * 0.8f, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.04f, 0.09f, 20, true);
             GeneralParticleHandler.SpawnParticle(blastRing);
-            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Green * 0.8f, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.04f, 0.07f, 20, true);
+            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Green * 0.8f, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.04f, 0.07f, 20, true);
             GeneralParticleHandler.SpawnParticle(blastRing2);
             #endregion
             //On hit, expand the hitbox and hit again for 30% of the projectile's damage

@@ -1,10 +1,10 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Tiles.Astral;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Tiles.Astral;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Fishing.AstralCatches
+namespace CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCatches
 {
     public class AstralCrate : ModItem, ILocalizedModType
     {

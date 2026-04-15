@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class BlastBarrelProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/BlastBarrel";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/BlastBarrel";
 
         public float BounceEffectCooldown = 0f;
         public float OldVelocityX = 0f;

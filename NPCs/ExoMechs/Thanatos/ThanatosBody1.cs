@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Events;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.Sounds;
-using CalamityMod.World;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -15,7 +15,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.NPCs.ExoMechs.Thanatos
+namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos
 {
     [HasPierceResist]
     [LongDistanceNetSync(SyncWith = typeof(ThanatosHead))]
@@ -26,11 +26,11 @@ namespace CalamityMod.NPCs.ExoMechs.Thanatos
 
         public override void Load()
         {
-            string normalIconPath = "CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosNormalBody";
-            string vulnerableIconPath = "CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosVulnerableBody";
+            string normalIconPath = "CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosNormalBody";
+            string vulnerableIconPath = "CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosVulnerableBody";
             
-            normalIconIndex = CalamityMod.Instance.AddBossHeadTexture(normalIconPath, -1);
-            vulnerableIconIndex = CalamityMod.Instance.AddBossHeadTexture(vulnerableIconPath, -1);
+            normalIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(normalIconPath, -1);
+            vulnerableIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(vulnerableIconPath, -1);
         }
 
         // Whether the body is venting heat or not, it is vulnerable to damage during venting

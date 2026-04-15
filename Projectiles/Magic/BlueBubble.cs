@@ -1,5 +1,5 @@
-﻿using CalamityMod.Items.Weapons.Magic;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class BlueBubble : ModProjectile, ILocalizedModType
     {
@@ -71,7 +71,7 @@ namespace CalamityMod.Projectiles.Magic
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/BlueBubble").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/BlueBubble").Value;
 
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Color.Lerp(mainColor, Color.White, 0.2f) with { A = 0 };

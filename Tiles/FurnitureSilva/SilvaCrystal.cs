@@ -1,12 +1,12 @@
-﻿
-using CalamityMod.Dusts.Furniture;
-using CalamityMod.Systems;
+
+using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
+using CalamityModCustomPublicPrivateFork.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.FurnitureSilva
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSilva
 {
     public class SilvaCrystal : ModTile
     {

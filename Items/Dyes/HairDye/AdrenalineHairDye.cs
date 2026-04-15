@@ -1,11 +1,11 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Dyes;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Dyes.HairDye
+namespace CalamityModCustomPublicPrivateFork.Items.Dyes.HairDye
 {
     public class AdrenalineHairDye : ModItem, ILocalizedModType
     {

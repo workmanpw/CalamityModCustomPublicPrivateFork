@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.TileEntities;
-using CalamityMod.Tiles.DraedonStructures;
+using CalamityModCustomPublicPrivateFork.TileEntities;
+using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Schematics
+namespace CalamityModCustomPublicPrivateFork.Schematics
 {
     public sealed class SchematicManager : ModSystem
     {
@@ -190,7 +190,7 @@ namespace CalamityMod.Schematics
             // If no schematic exists with this name, cancel with a helpful log message.
             if (!TileMaps.TryGetValue(name, out SchematicMetaTile[,] schematic))
             {
-                CalamityMod.Log.Warn($"Tried to place a schematic with name \"{name}\". No matching schematic file found.");
+                ModContent.GetInstance<CalamityMod>().Logger.Warn($"Tried to place a schematic with name \"{name}\". No matching schematic file found.");
                 return;
             }
 
@@ -249,7 +249,7 @@ namespace CalamityMod.Schematics
             // Make sure that all four corners of the target area are actually in the world.
             if (!WorldGen.InWorld(cornerX, cornerY) || !WorldGen.InWorld(cornerX + width, cornerY + height))
             {
-                CalamityMod.Log.Warn("Schematic failed to place: Part of the target location is outside the game world.");
+                ModContent.GetInstance<CalamityMod>().Logger.Warn("Schematic failed to place: Part of the target location is outside the game world.");
                 return;
             }
 

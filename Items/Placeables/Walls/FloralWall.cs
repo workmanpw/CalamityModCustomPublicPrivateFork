@@ -1,7 +1,7 @@
-﻿using Terraria.ID;
+using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityMod.Walls;
-namespace CalamityMod.Items.Placeables.Walls
+using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
 {
     public class FloralWall : ModItem, ILocalizedModType
     {

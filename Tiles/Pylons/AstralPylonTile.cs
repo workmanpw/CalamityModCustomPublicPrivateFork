@@ -1,12 +1,12 @@
-﻿using CalamityMod.Items.Placeables.Pylons;
-using CalamityMod.Systems;
-using CalamityMod.Tiles.BaseTiles;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Pylons;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Tiles.BaseTiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Tiles.Pylons
+namespace CalamityModCustomPublicPrivateFork.Tiles.Pylons
 {
     public class AstralPylonTile : BasePylonTile
     {

@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Placeables.Ores;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 
-namespace CalamityMod.Items.Dyes
+namespace CalamityModCustomPublicPrivateFork.Items.Dyes
 {
     public class AstralOrangeDye : BaseDye
     {

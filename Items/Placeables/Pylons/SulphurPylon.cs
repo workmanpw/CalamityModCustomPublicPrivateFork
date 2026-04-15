@@ -1,9 +1,9 @@
-﻿using CalamityMod.Tiles.Pylons;
+using CalamityModCustomPublicPrivateFork.Tiles.Pylons;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Placeables.Pylons
+namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Pylons
 {
     public class SulphurPylon : ModItem, ILocalizedModType
     {

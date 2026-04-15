@@ -1,8 +1,8 @@
-﻿using CalamityMod.Buffs.DamageOverTime;
+using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Typeless
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 {
     // 13NOV2024: Ozzatron: Literally just a DirectStrike that inflicts holy flames.
     // Because it's a separate projectile, it has its own name in the localization files.

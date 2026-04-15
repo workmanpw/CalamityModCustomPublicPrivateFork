@@ -1,18 +1,18 @@
-﻿using System.IO;
-using CalamityMod.Events;
-using CalamityMod.World;
+using System.IO;
+using CalamityModCustomPublicPrivateFork.Events;
+using CalamityModCustomPublicPrivateFork.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Boss
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 {
     public class BigFlare2 : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public static readonly SoundStyle FlareSound = new("CalamityMod/Sounds/Custom/Yharon/YharonInfernado");
+        public static readonly SoundStyle FlareSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Yharon/YharonInfernado");
         public override void SetStaticDefaults()
         {
             Main.projFrames[Type] = 4;

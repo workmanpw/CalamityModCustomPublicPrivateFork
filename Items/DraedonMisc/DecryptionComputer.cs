@@ -1,21 +1,21 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.CustomRecipes;
-using CalamityMod.Items.Materials;
-using CalamityMod.TileEntities;
-using CalamityMod.Tiles.DraedonSummoner;
+using CalamityModCustomPublicPrivateFork.CustomRecipes;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.TileEntities;
+using CalamityModCustomPublicPrivateFork.Tiles.DraedonSummoner;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.DraedonMisc
+namespace CalamityModCustomPublicPrivateFork.Items.DraedonMisc
 {
     public class DecryptionComputer : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.DraedonItems";
-        public static readonly SoundStyle InstallSound = new("CalamityMod/Sounds/Custom/Codebreaker/DecryptionComputerInstall");
+        public static readonly SoundStyle InstallSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/DecryptionComputerInstall");
 
         public override void SetDefaults()
         {

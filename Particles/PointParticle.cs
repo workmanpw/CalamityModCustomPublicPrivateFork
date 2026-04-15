@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Particles
+namespace CalamityModCustomPublicPrivateFork.Particles
 {
     public class PointParticle : Particle
     {
@@ -15,7 +15,7 @@ namespace CalamityMod.Particles
         public override bool UseCustomDraw => true;
         public override bool UseAdditiveBlend => UseAltVisual;
 
-        public override string Texture => "CalamityMod/Particles/PointParticle";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/PointParticle";
 
         public PointParticle(Vector2 relativePosition, Vector2 velocity, bool affectedByGravity, int lifetime, float scale, Color color, bool AddativeBlend = true, bool affectedByLight = false)
         {

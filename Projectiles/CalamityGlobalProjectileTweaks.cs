@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles
+namespace CalamityModCustomPublicPrivateFork.Projectiles
 {
     // TODO -- The projectile tweaks database and functions should be stored in a ModSystem.
     // ApplyTweaks(ref Projectile proj) would be the one exposed function, which CalamityGlobalProjectile would call in SetDefaults.

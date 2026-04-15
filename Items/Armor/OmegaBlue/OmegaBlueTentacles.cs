@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Rarities;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.OmegaBlue
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.OmegaBlue
 {
     [AutoloadEquip(EquipType.Legs)]
     [LegacyName("OmegaBlueLeggings")]

@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityMod.Buffs.Summon.Whips;
-using CalamityMod.NPCs.Providence;
-using CalamityMod.NPCs.SupremeCalamitas;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Boss;
-using CalamityMod.Utilities;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips;
+using CalamityModCustomPublicPrivateFork.NPCs.Providence;
+using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Utilities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -14,10 +14,10 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.Items.Accessories.ProfanedSoulCrystal;
+using static CalamityModCustomPublicPrivateFork.Items.Accessories.ProfanedSoulCrystal;
 using Vector2 = Microsoft.Xna.Framework.Vector2;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     #region Mage Projectiles
 
@@ -25,7 +25,7 @@ namespace CalamityMod.Projectiles.Summon
     public class ProfanedCrystalMageFireball : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/Boss/HolyBlast";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolyBlast";
 
         public override void SetStaticDefaults()
         {
@@ -140,7 +140,7 @@ namespace CalamityMod.Projectiles.Summon
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = Main.dayTime ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/HolyBlastNight").Value;
+            Texture2D texture = Main.dayTime ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolyBlastNight").Value;
             int num214 = texture.Height / Main.projFrames[Type];
             int y6 = num214 * Projectile.frame;
             Projectile.DrawBackglow(ProvUtils.GetColorBasedOnEnrage(!Main.dayTime, Projectile.alpha, true), 4f, texture);
@@ -198,7 +198,7 @@ namespace CalamityMod.Projectiles.Summon
     public class ProfanedCrystalMageFireballSplit : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/Boss/HolyFire2";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolyFire2";
         private int damage;
         private int hits = 0;
         private NPC target = null;
@@ -329,7 +329,7 @@ namespace CalamityMod.Projectiles.Summon
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = Main.dayTime ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/HolyFire2Night").Value;
+            Texture2D texture = Main.dayTime ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolyFire2Night").Value;
             int num214 = texture.Height / Main.projFrames[Type];
             int y6 = num214 * Projectile.frame;
             Projectile.DrawBackglow(ProvUtils.GetColorBasedOnEnrage(!Main.dayTime, Projectile.alpha, true), 4f, texture);
@@ -404,7 +404,7 @@ namespace CalamityMod.Projectiles.Summon
     {
         public new string LocalizationCategory => "Projectiles.Summon";
 
-        public override string Texture => "CalamityMod/Projectiles/Boss/HolySpear";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolySpear";
 
         public override void SetStaticDefaults()
         {
@@ -739,7 +739,7 @@ namespace CalamityMod.Projectiles.Summon
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = Main.dayTime ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/ProfanedCrystalRangedHugesNight").Value;
+            Texture2D texture = Main.dayTime ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/ProfanedCrystalRangedHugesNight").Value;
             int num214 = texture.Height / Main.projFrames[Type];
             int y6 = num214 * Projectile.frame;
             Projectile.DrawBackglow(ProvUtils.GetColorBasedOnEnrage(!Main.dayTime, Projectile.alpha, true), 4f, texture);
@@ -1437,7 +1437,7 @@ namespace CalamityMod.Projectiles.Summon
     public class PscTransformAnimation : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
 
         public override void SetStaticDefaults()
         {
@@ -1556,7 +1556,7 @@ namespace CalamityMod.Projectiles.Summon
     public class PscTransformRocks : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard1";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard1";
 
         public override void SetStaticDefaults()
         {
@@ -1660,7 +1660,7 @@ namespace CalamityMod.Projectiles.Summon
     public class MiniGuardianSpear : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/Boss/HolySpear";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolySpear";
 
         public override void SetStaticDefaults()
         {
@@ -1837,7 +1837,7 @@ namespace CalamityMod.Projectiles.Summon
     public class MiniGuardianFireball : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/Boss/HolyBlast";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolyBlast";
 
         public override void SetStaticDefaults()
         {
@@ -1912,7 +1912,7 @@ namespace CalamityMod.Projectiles.Summon
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = Main.dayTime ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/HolyBlastNight").Value;
+            Texture2D texture = Main.dayTime ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolyBlastNight").Value;
             int num214 = texture.Height / Main.projFrames[Type];
             int y6 = num214 * Projectile.frame;
             Projectile.DrawBackglow(ProvUtils.GetColorBasedOnEnrage(!Main.dayTime, Projectile.alpha, true), 4f, texture);
@@ -1975,7 +1975,7 @@ namespace CalamityMod.Projectiles.Summon
     public class MiniGuardianFireballSplit : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/Boss/HolyFire2";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolyFire2";
 
         public override void SetStaticDefaults()
         {
@@ -2051,7 +2051,7 @@ namespace CalamityMod.Projectiles.Summon
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = Main.dayTime ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/HolyFire2Night").Value;
+            Texture2D texture = Main.dayTime ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolyFire2Night").Value;
             int num214 = texture.Height / Main.projFrames[Type];
             int y6 = num214 * Projectile.frame;
             Projectile.DrawBackglow(ProvUtils.GetColorBasedOnEnrage(!Main.dayTime, Projectile.alpha, true), 4f, texture);

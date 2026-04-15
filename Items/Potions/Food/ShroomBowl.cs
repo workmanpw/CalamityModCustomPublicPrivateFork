@@ -1,11 +1,11 @@
-﻿using CalamityMod.Items.Critters;
+using CalamityModCustomPublicPrivateFork.Items.Critters;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Potions.Food
+namespace CalamityModCustomPublicPrivateFork.Items.Potions.Food
 {
     public class ShroomBowl : ModItem, ILocalizedModType
     {

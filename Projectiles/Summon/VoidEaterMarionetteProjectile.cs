@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityMod.Buffs.Summon;
-using CalamityMod.CalPlayer;
-using CalamityMod.NPCs;
-using CalamityMod.Projectiles.BaseProjectiles;
-using CalamityMod.Projectiles.Boss;
+using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Summon
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 {
     public class VoidEaterMarionetteProjectile : BaseWormProjectile, ILocalizedModType
     {
@@ -30,13 +30,13 @@ namespace CalamityMod.Projectiles.Summon
 
         #endregion
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityMod/Projectiles/Summon/VoidEaterMarionetteHead";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Summon/VoidEaterMarionetteHead";
 
-        public override string GlowTexture => "CalamityMod/Projectiles/Summon/VoidEaterMarionetteHeadGlow";
+        public override string GlowTexture => "CalamityModCustomPublicPrivateFork/Projectiles/Summon/VoidEaterMarionetteHeadGlow";
         public override List<string> SegmentTextures => new()
         {
-            "CalamityMod/Projectiles/Summon/VoidEaterMarionetteBody",
-            "CalamityMod/Projectiles/Summon/VoidEaterMarionetteTail"
+            "CalamityModCustomPublicPrivateFork/Projectiles/Summon/VoidEaterMarionetteBody",
+            "CalamityModCustomPublicPrivateFork/Projectiles/Summon/VoidEaterMarionetteTail"
         };
 
         public override int SegmentCount => (int)(Projectile.minionSlots);
@@ -500,8 +500,8 @@ namespace CalamityMod.Projectiles.Summon
             {
                 DrawSegment(ref lightColor, Segments[i]);
             }
-            var jawTex = CalamityUtils.GetTextureEfficient(ref Jaws, "CalamityMod/Projectiles/Summon/VoidEaterMarionetteJaw").Value;
-            var jawGlowTex = CalamityUtils.GetTextureEfficient(ref JawGlow, "CalamityMod/Projectiles/Summon/VoidEaterMarionetteJawGlow").Value;
+            var jawTex = CalamityUtils.GetTextureEfficient(ref Jaws, "CalamityModCustomPublicPrivateFork/Projectiles/Summon/VoidEaterMarionetteJaw").Value;
+            var jawGlowTex = CalamityUtils.GetTextureEfficient(ref JawGlow, "CalamityModCustomPublicPrivateFork/Projectiles/Summon/VoidEaterMarionetteJawGlow").Value;
             Main.spriteBatch.Draw(TextureAssets.Projectile[Type].Value, Projectile.Center - Main.screenPosition, null, lightColor * Projectile.Opacity, Projectile.rotation, TextureAssets.Projectile[Type].Value.Size() / 2, Projectile.scale, SpriteEffects.None, 1);
             
             //This draws the jaws at the desired opening amount. The jaw glow doesn't draw during Divinity Devourer as that's the pink attack and this glow is blue
@@ -561,7 +561,7 @@ namespace CalamityMod.Projectiles.Summon
 
             if (Projectile.Opacity > 0 && CurrentAttack == AttackState.UltracosmicMaelstrom && AiTimer > 0)
             {
-                var tex = CalamityUtils.GetTextureEfficient(ref DoGJaws, "CalamityMod/Particles/Jaws").Value;
+                var tex = CalamityUtils.GetTextureEfficient(ref DoGJaws, "CalamityModCustomPublicPrivateFork/Particles/Jaws").Value;
                 Main.spriteBatch.SetBlendState(BlendState.Additive);
                 Main.spriteBatch.Draw(tex, Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.Zero) * 12 - Main.screenPosition, null, Color.Fuchsia, Projectile.velocity.ToRotation() + MathHelper.PiOver2, tex.Size() * 0.5f, 0.7f, SpriteEffects.None, 0);
                 Main.spriteBatch.Draw(tex, Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.Zero) * 12 - Main.screenPosition, null, Color.Aqua, Projectile.velocity.ToRotation() + MathHelper.PiOver2, tex.Size() * 0.5f, 0.6f, SpriteEffects.None, 0);

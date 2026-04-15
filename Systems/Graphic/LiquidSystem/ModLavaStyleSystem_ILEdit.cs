@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
-using CalamityMod.ILEditing;
+using CalamityModCustomPublicPrivateFork.ILEditing;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Mono.Cecil;
@@ -15,7 +15,7 @@ using Terraria.GameContent.Liquid;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Systems.Graphic.LiquidSystem
+namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
 {
     [Autoload(Side = ModSide.Client)]
     public sealed partial class ModLavaStyleSystem : ModSystem
@@ -26,7 +26,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
         {
             if (Tex2DAssetGetter == null)
             {
-                CalamityMod.Log.ILFailure("ModLavaStyle", "Cannot find Getter for Asset<Texture2D>::Value");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure("ModLavaStyle", "Cannot find Getter for Asset<Texture2D>::Value");
                 return;
             }
 
@@ -67,7 +67,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
 
             if (!patched)
             {
-                CalamityMod.Log.ILFailure(PatchName, "Unable to Locate Asset<Texture2D>::Value call");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Unable to Locate Asset<Texture2D>::Value call");
             }
         }
 
@@ -105,22 +105,22 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 }
                 else
                 {
-                    CalamityMod.Log.ILFailure(PatchName, $"Texture Array We referencing is [{textureArrayField.Name}] Which is not intended. Skipping");
+                    ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, $"Texture Array We referencing is [{textureArrayField.Name}] Which is not intended. Skipping");
                 }
             }
 
             // Finalizing Patch
             if (patchedCount <= 0)
             {
-                CalamityMod.Log.ILFailure(PatchName, "Unable to patch any of the texture reference");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Unable to patch any of the texture reference");
                 return;
             }
             else
             {
                 if (patchedCount != DesiredPatchCount)
                 {
-                    CalamityMod.Log.Warn($"We did patched into {patchedCount} entry which is unmatching with desired count ({DesiredPatchCount}) when designed this iledit. Please check if anything is broken, If not update the count accordingly to suppress this message!");
-                    CalamityMod.Log.Warn($"Location: ModLavaStyleSystem_ILEdit.cs :: DrawPartialLiquidPatch");
+                    ModContent.GetInstance<CalamityMod>().Logger.Warn($"We did patched into {patchedCount} entry which is unmatching with desired count ({DesiredPatchCount}) when designed this iledit. Please check if anything is broken, If not update the count accordingly to suppress this message!");
+                    ModContent.GetInstance<CalamityMod>().Logger.Warn($"Location: ModLavaStyleSystem_ILEdit.cs :: DrawPartialLiquidPatch");
                 }
             }
         }
@@ -159,22 +159,22 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 }
                 else
                 {
-                    CalamityMod.Log.ILFailure(PatchName, $"Texture Array We referencing is [{textureArrayField.Name}] Which is not intended. Skipping");
+                    ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, $"Texture Array We referencing is [{textureArrayField.Name}] Which is not intended. Skipping");
                 }
             }
 
             // Finalizing Patch
             if (patchedCount <= 0)
             {
-                CalamityMod.Log.ILFailure(PatchName, "Unable to patch any of the texture reference");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Unable to patch any of the texture reference");
                 return;
             }
             else
             {
                 if (patchedCount != DesiredPatchCount)
                 {
-                    CalamityMod.Log.Warn($"We did patched into {patchedCount} entry which is unmatching with desired count ({DesiredPatchCount}) when designed this iledit. Please check if anything is broken, If not update the count accordingly to suppress this message!");
-                    CalamityMod.Log.Warn($"Patch Name: {PatchName}");
+                    ModContent.GetInstance<CalamityMod>().Logger.Warn($"We did patched into {patchedCount} entry which is unmatching with desired count ({DesiredPatchCount}) when designed this iledit. Please check if anything is broken, If not update the count accordingly to suppress this message!");
+                    ModContent.GetInstance<CalamityMod>().Logger.Warn($"Patch Name: {PatchName}");
                 }
             }
         }
@@ -231,7 +231,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 i => i.MatchLdcI4(16),
                 i => i.MatchLdcI4(DustID.Lava)))
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not locate the bubble newdust parameters");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not locate the bubble newdust parameters");
                 return;
             }
 
@@ -243,7 +243,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 i => i.MatchLdcI4(8),
                 i => i.MatchLdcI4(DustID.Lava)))
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not locate the surface bubble newdust parameters");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not locate the surface bubble newdust parameters");
                 return;
             }
 
@@ -262,7 +262,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 i => i.MatchBneUn(out _),
                 i => i.MatchLdcI4(GoreID.LavaDrip)))
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not locate the lava droplet newgore parameters");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not locate the lava droplet newgore parameters");
                 return;
             }
 
@@ -283,7 +283,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 i => i.MatchLdcI4(24),
                 i => i.MatchLdcI4(DustID.Lava)))
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not locate the first lava bubble splashing");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not locate the first lava bubble splashing");
                 return;
             }
 
@@ -297,7 +297,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 i => i.MatchLdcI4(24),
                 i => i.MatchLdcI4(DustID.Lava)))
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not locate the second lava bubble splashing");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not locate the second lava bubble splashing");
                 return;
             }
 
@@ -321,7 +321,7 @@ namespace CalamityMod.Systems.Graphic.LiquidSystem
                 i => i.MatchLdcI4(0), // foodHack
                 i => i.MatchCall<Player>(nameof(Player.AddBuff))))
             {
-                CalamityMod.Log.ILFailure(PatchName, "Could not locate the infliction of the On Fire! debuff inside the Player Update code");
+                ModContent.GetInstance<CalamityMod>().Logger.ILFailure(PatchName, "Could not locate the infliction of the On Fire! debuff inside the Player Update code");
                 return;
             }
             cursor.EmitLdarg0(); // Player player

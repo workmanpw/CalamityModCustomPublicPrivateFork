@@ -1,5 +1,5 @@
-﻿using System;
-using CalamityMod.Particles;
+using System;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class PolarisGazeStar : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityMod/Particles/Sparkle";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Sparkle";
         private bool initialized = false;
         Vector2 direction = Vector2.Zero;
         public ref float Shred => ref Projectile.ai[0];
@@ -68,7 +68,7 @@ namespace CalamityMod.Projectiles.Melee
                 PolarStar = new GenericSparkle(Projectile.Center, Vector2.Zero, Color.White, Color.CornflowerBlue, Projectile.scale * 2f, 2, 0.1f, 5f, true);
                 GeneralParticleHandler.SpawnParticle(PolarStar);
 
-                CustomPulse poof = new(Projectile.Center, Vector2.Zero, Color.Indigo, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.1f, 0.2f, 10);
+                CustomPulse poof = new(Projectile.Center, Vector2.Zero, Color.Indigo, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.1f, 0.2f, 10);
                 GeneralParticleHandler.SpawnParticle(poof);
             }
             else
@@ -102,7 +102,7 @@ namespace CalamityMod.Projectiles.Melee
             Main.spriteBatch.End();
             Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
 
-            var tex = Request<Texture2D>("CalamityMod/Particles/Sparkle").Value;
+            var tex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle").Value;
             float opacityFade = Projectile.timeLeft > 15 ? 1 : Projectile.timeLeft / 15f;
 
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, Color.Lerp(Color.White, lightColor, 0.5f) * 0.5f * opacityFade, Main.GlobalTimeWrappedHourly * 10f + MathHelper.PiOver4, tex.Size() / 2f, Projectile.scale * 1.5f, 0f, 0);

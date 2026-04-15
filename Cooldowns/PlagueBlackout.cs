@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,18 +8,18 @@ using Terraria.ID;
 using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Cooldowns
+namespace CalamityModCustomPublicPrivateFork.Cooldowns
 {
     public class PlagueBlackout : CooldownHandler
     {
         public static new string ID => "PlagueBlackout";
         public override bool ShouldDisplay => instance.timeLeft <= 1500;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => "CalamityMod/Cooldowns/PlagueBlackout";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/PlagueBlackout";
         public override Color OutlineColor => new Color(174, 237, 122);
         public override Color CooldownStartColor => Color.DarkSlateGray;
         public override Color CooldownEndColor => Color.DarkSlateGray;
-        public override SoundStyle? EndSound => new("CalamityMod/Sounds/Custom/AbilitySounds/PlagueReaperRecharge");
+        public override SoundStyle? EndSound => new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/PlagueReaperRecharge");
 
         public override void OnCompleted()
         {

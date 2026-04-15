@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI;
 
-namespace CalamityMod.UI.DebuffSystem
+namespace CalamityModCustomPublicPrivateFork.UI.DebuffSystem
 {
     public class BestiaryDebuffInfo : IBestiaryInfoElement, IBestiaryPrioritizedElement, ICategorizedBestiaryInfoElement
     {
@@ -60,7 +60,7 @@ namespace CalamityMod.UI.DebuffSystem
             // Add all five elements to the panel, each one below the previous
             for (int i = 0; i < 5; i++)
             {
-                string path = "CalamityMod/UI/DebuffSystem/";
+                string path = "CalamityModCustomPublicPrivateFork/UI/DebuffSystem/";
                 switch (i)
                 {
                     case 0:

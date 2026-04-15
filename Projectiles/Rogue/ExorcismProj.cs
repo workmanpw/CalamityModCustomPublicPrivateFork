@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using CalamityMod.Dusts;
-using CalamityMod.Particles;
-using CalamityMod.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,12 +12,12 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class ExorcismProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityMod/Items/Weapons/Rogue/Exorcism";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/Exorcism";
 
         public ref float time => ref Projectile.ai[0];
         public Player Owner => Main.player[Projectile.owner];
@@ -99,7 +99,7 @@ namespace CalamityMod.Projectiles.Rogue
                     {
                         for (int i = 0; i < 2; i++)
                         {
-                            SoundStyle sound = new("CalamityMod/Sounds/Item/MissileNearing");
+                            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MissileNearing");
                             SoundEngine.PlaySound(sound with { Volume = 0.5f, Pitch = 0.8f, MaxInstances = 2 }, Projectile.Center);
                         }
                     }
@@ -114,16 +114,16 @@ namespace CalamityMod.Projectiles.Rogue
                             Projectile.netUpdate = true;
                             Projectile.extraUpdates = 3;
                             Projectile.ai[1] = -5;
-                            SoundStyle sound = new("CalamityMod/Sounds/NPCHit/ExoHit2");
+                            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ExoHit2");
                             SoundEngine.PlaySound(sound with { Volume = 0.6f, Pitch = Main.rand.NextFloat(0f, 0.1f) }, Projectile.Center);
-                            SoundStyle sound2 = new("CalamityMod/Sounds/NPCHit/RavagerRockPillarHit", 3);
+                            SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/RavagerRockPillarHit", 3);
                             SoundEngine.PlaySound(sound2 with { Volume = 0.7f, Pitch = -0.3f }, Projectile.Center);
                         }
 
                         Projectile.rotation = Projectile.velocity.ToRotation() - MathHelper.PiOver2;
 
                         float squash = Utils.GetLerpValue(1, 3, Projectile.velocity.Length(), true);
-                        Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 35, Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomCircle", false, 43, 0.4f, mainColor * 0.4f * squash, new Vector2(1 - 0.15f * squash, 1f), true, false, shrinkSpeed: 0.07f * squash);
+                        Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 35, Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 43, 0.4f, mainColor * 0.4f * squash, new Vector2(1 - 0.15f * squash, 1f), true, false, shrinkSpeed: 0.07f * squash);
                         GeneralParticleHandler.SpawnParticle(trail);
                     }
                     else
@@ -157,7 +157,7 @@ namespace CalamityMod.Projectiles.Rogue
                             if (Projectile.soundDelay == 0)
                             {
                                 Projectile.soundDelay = 5 * Projectile.MaxUpdates;
-                                SoundStyle sound = new("CalamityMod/Sounds/Item/SwooshMid");
+                                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SwooshMid");
                                 SoundEngine.PlaySound(sound with { MaxInstances = -1, Volume = 0.5f, Pitch = -0.2f }, Projectile.Center);
                             }
                             Projectile.rotation += 0.07f * Projectile.direction;
@@ -224,7 +224,7 @@ namespace CalamityMod.Projectiles.Rogue
                             Projectile.ai[1] = 5;
                         if (time % 6 == 0 && time > 12)
                         {
-                            Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 35 + Main.rand.NextVector2Circular(10, 10), -Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomCircle", false, 13, 0.2f, mainColor * 0.6f, new Vector2(0.6f, 1f), true, false, shrinkSpeed: 0.6f);
+                            Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 35 + Main.rand.NextVector2Circular(10, 10), -Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 13, 0.2f, mainColor * 0.6f, new Vector2(0.6f, 1f), true, false, shrinkSpeed: 0.6f);
                             GeneralParticleHandler.SpawnParticle(trail);
                         }
                     }
@@ -245,7 +245,7 @@ namespace CalamityMod.Projectiles.Rogue
                     float speed = 9;
                     Projectile.velocity = (stealth ? velocity : projToSky) * speed;
                     time = -1;
-                    SoundStyle w = new("CalamityMod/Sounds/Item/SwooshMid");
+                    SoundStyle w = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SwooshMid");
                     for (int i = 0; i < 2; i++)
                         SoundEngine.PlaySound(w with { Volume = 1f, Pitch = -0.4f + 0.2f * i, MaxInstances = 6 }, Projectile.Center);
 
@@ -296,7 +296,7 @@ namespace CalamityMod.Projectiles.Rogue
             }
             else if (Projectile.timeLeft > 1)
             {
-                SoundStyle choir = new("CalamityMod/Sounds/Item/HolyLoop");
+                SoundStyle choir = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HolyLoop");
                 AudSlot = SoundEngine.PlaySound(choir with { Volume = 0.01f, Pitch = 0 }, Projectile.Center);
             }
         }
@@ -320,9 +320,9 @@ namespace CalamityMod.Projectiles.Rogue
                 if (!stealth)
                 {
                     time = 0;
-                    SoundStyle sound = new("CalamityMod/Sounds/NPCHit/ExoHit4");
+                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ExoHit4");
                     SoundEngine.PlaySound(sound with { Volume = 0.7f, Pitch = Main.rand.NextFloat(0.15f, 0.25f) }, Projectile.Center);
-                    SoundStyle sound2 = new("CalamityMod/Sounds/NPCHit/ExoHit3");
+                    SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ExoHit3");
                     SoundEngine.PlaySound(sound2 with { Volume = 0.5f, Pitch = Main.rand.NextFloat(-0.1f, 0f) }, Projectile.Center);
                     Owner.SetScreenshake(5.5f);
                     Projectile.timeLeft = 300;
@@ -355,17 +355,17 @@ namespace CalamityMod.Projectiles.Rogue
                     for (int x = 0; x < Main.maxGore; x++)
                     { Gore gore = Main.gore[x]; if (gore.active) { gore.active = false; } }
 
-                    SoundStyle gong = new("CalamityMod/Sounds/Custom/GFB/Jesus");
+                    SoundStyle gong = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/GFB/Jesus");
                     for (int i = 0; i < 2; i++)
                         SoundEngine.PlaySound(gong with { Volume = 1f, MaxInstances = 2 }, Projectile.Center);
                 }
                 else
                 {
                     Owner.SetScreenshake(7f);
-                    SoundStyle soundBurst = new("CalamityMod/Sounds/Item/HolyBurst");
+                    SoundStyle soundBurst = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HolyBurst");
                     for (int i = 0; i < 3; i++)
                         SoundEngine.PlaySound(soundBurst with { Volume = 0.8f, Pitch = 0.2f * i, MaxInstances = 3 }, Projectile.Center);
-                    SoundStyle soundExplosion = new("CalamityMod/Sounds/Item/HolyColliderProjectileHit");
+                    SoundStyle soundExplosion = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HolyColliderProjectileHit");
                     SoundEngine.PlaySound(soundExplosion with { Volume = 0.65f, Pitch = 0.6f }, Projectile.Center);
 
                     for (int i = 0; i < 4; i++)
@@ -388,7 +388,7 @@ namespace CalamityMod.Projectiles.Rogue
                             }
                         }
                         Vector2 fxVel2 = Vector2.UnitY.RotatedBy(MathHelper.PiOver2 * i) * (i == 0 ? 1.7f : 1);
-                        Particle bigCross = new CustomSpark(crossCenter + fxVel2 * 145, fxVel2, "CalamityMod/Particles/BloomLineFade", false, 15, 0.15f, mainColor, new Vector2(1.8f, 1.2f), true, true, 0, false, false, 0.8f, 0.8f, 0.8f);
+                        Particle bigCross = new CustomSpark(crossCenter + fxVel2 * 145, fxVel2, "CalamityModCustomPublicPrivateFork/Particles/BloomLineFade", false, 15, 0.15f, mainColor, new Vector2(1.8f, 1.2f), true, true, 0, false, false, 0.8f, 0.8f, 0.8f);
                         GeneralParticleHandler.SpawnParticle(bigCross);
                     }
                 }
@@ -397,7 +397,7 @@ namespace CalamityMod.Projectiles.Rogue
             }
             else
             {
-                SoundStyle soundBurst = new("CalamityMod/Sounds/Item/HolyBurst");
+                SoundStyle soundBurst = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HolyBurst");
                 SoundEngine.PlaySound(soundBurst with { Volume = 1f, Pitch = 0 }, Projectile.Center);
                 Projectile crossBurst = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), crossCenter, Vector2.Zero, ModContent.ProjectileType<ExorcismShockwave>(), (int)(Projectile.damage * 0.35f), 0f, Owner.whoAmI);
                 for (int i = 0; i < 4; i++)
@@ -435,9 +435,9 @@ namespace CalamityMod.Projectiles.Rogue
             float throwCompletion = flung ? 1 : (float)Math.Pow(Math.Min(time / (Owner.HeldItem.useAnimation * 0.7f), 1), 5);
             Color glowColor = Color.Lerp(mainColor, Color.Khaki, glowUp - 1);
             Texture2D tex = TextureAssets.Projectile[Type].Value;
-            Asset<Texture2D> glowBlade = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowBlade");
-            Asset<Texture2D> glowBottom = ModContent.Request<Texture2D>("CalamityMod/Particles/SquareRotated");
-            Asset<Texture2D> woosh = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmearLarge");
+            Asset<Texture2D> glowBlade = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowBlade");
+            Asset<Texture2D> glowBottom = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SquareRotated");
+            Asset<Texture2D> woosh = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmearLarge");
 
             if (hitTiles || falling || stealth)
             {

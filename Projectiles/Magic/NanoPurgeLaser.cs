@@ -1,10 +1,10 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Particles;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityMod.Projectiles.Magic
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 {
     public class NanoPurgeLaser : ModProjectile, ILocalizedModType
     {
@@ -14,7 +14,7 @@ namespace CalamityMod.Projectiles.Magic
         public bool HasBounced = false;
         public int bounceTimer = 0;
 
-        public override string Texture => "CalamityMod/Projectiles/LaserProj";
+        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/LaserProj";
 
         public override void SetStaticDefaults() => ProjectileID.Sets.CultistIsResistantTo[Type] = true;
         public override void SetDefaults()
@@ -60,7 +60,7 @@ namespace CalamityMod.Projectiles.Magic
 
             if (Projectile.timeLeft % 2 == 0)
             {
-                Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityMod/Particles/GlowSpark", false, 4, 0.02f, Color.Lime, new Vector2(0.6f, 1.4f), true, false, shrinkSpeed: 0.95f);
+                Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityModCustomPublicPrivateFork/Particles/GlowSpark", false, 4, 0.02f, Color.Lime, new Vector2(0.6f, 1.4f), true, false, shrinkSpeed: 0.95f);
                 GeneralParticleHandler.SpawnParticle(spark2);
             }
             if (bounceTimer > 0)
@@ -73,7 +73,7 @@ namespace CalamityMod.Projectiles.Magic
             for (int i = 0; i < 2; i++)
             {
                 Color color = i == 0 ? Color.White : Color.Lime;
-                Particle orb2 = new CustomSpark(Projectile.Center, oldVelocity * 0.1f, "CalamityMod/Particles/BloomCircle", false, 15, Main.rand.NextFloat(0.15f, 0.25f) * (i == 0 ? 2 : 3), color, new Vector2(0.7f, 1.1f), true, false);
+                Particle orb2 = new CustomSpark(Projectile.Center, oldVelocity * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 15, Main.rand.NextFloat(0.15f, 0.25f) * (i == 0 ? 2 : 3), color, new Vector2(0.7f, 1.1f), true, false);
                 GeneralParticleHandler.SpawnParticle(orb2);
             }
             for (int i = 0; i < 5; i++)
@@ -141,7 +141,7 @@ namespace CalamityMod.Projectiles.Magic
 
         public override void OnKill(int timeLeft)
         {
-            Particle spark2 = new CustomSpark(Projectile.Center, Projectile.velocity * 0.3f, "CalamityMod/Particles/GlowSpark", false, 14, 0.018f, Color.Lime, new Vector2(1f, 1f), true, false, shrinkSpeed: 0.65f);
+            Particle spark2 = new CustomSpark(Projectile.Center, Projectile.velocity * 0.3f, "CalamityModCustomPublicPrivateFork/Particles/GlowSpark", false, 14, 0.018f, Color.Lime, new Vector2(1f, 1f), true, false, shrinkSpeed: 0.65f);
             GeneralParticleHandler.SpawnParticle(spark2);
             for (int i = 0; i < 3; i++)
             {

@@ -1,7 +1,7 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityMod.MainMenu
+namespace CalamityModCustomPublicPrivateFork.MainMenu
 {
     // Thanks to Nycro#0001 <@!262663471189983242> for this null background which cleanly ignores vanilla's parallax mechanics
     internal class NullSurfaceBackground : ModSurfaceBackgroundStyle
@@ -29,7 +29,7 @@ namespace CalamityMod.MainMenu
             }
         }
 
-        private static readonly string TexPath = "CalamityMod/Backgrounds/BlankPixel";
+        private static readonly string TexPath = "CalamityModCustomPublicPrivateFork/Backgrounds/BlankPixel";
         public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b) => BackgroundTextureLoader.GetBackgroundSlot(TexPath);
         public override int ChooseFarTexture() => BackgroundTextureLoader.GetBackgroundSlot(TexPath);
         public override int ChooseMiddleTexture() => BackgroundTextureLoader.GetBackgroundSlot(TexPath);

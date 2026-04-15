@@ -1,9 +1,9 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.Summon
+namespace CalamityModCustomPublicPrivateFork.Buffs.Summon
 {
     public class AmphibiansGuitarBuff : ModBuff
     {

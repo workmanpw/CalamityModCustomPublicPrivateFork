@@ -1,12 +1,12 @@
-﻿using System;
-using CalamityMod.Items.Weapons.DraedonsArsenal;
-using CalamityMod.NPCs.ExoMechs.Ares;
+using System;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
+using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Ranged
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 {
     public class CorinthPrimeAirburstGrenade : ModProjectile, ILocalizedModType
     {

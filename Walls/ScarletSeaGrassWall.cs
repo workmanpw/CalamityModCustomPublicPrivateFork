@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
-namespace CalamityMod.Walls
+namespace CalamityModCustomPublicPrivateFork.Walls
 {
     public class ScarletSeaGrassWall : ModWall, IVisibleThroughWater
     {
@@ -25,7 +25,7 @@ namespace CalamityMod.Walls
             this.AddMapEntryWithWaterVisibility(new Color(96, 53, 116));
             if (!Main.dedServ)
             {
-                leafTexture = ModContent.Request<Texture2D>("CalamityMod/Walls/ScarletSeaGrassWall_Leaves");
+                leafTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Walls/ScarletSeaGrassWall_Leaves");
             }
         }
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

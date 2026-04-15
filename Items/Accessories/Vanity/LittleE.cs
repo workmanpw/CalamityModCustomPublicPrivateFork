@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityMod.Items.BaseItems;
+using CalamityModCustomPublicPrivateFork.Items.BaseItems;
 using Humanizer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -15,7 +15,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Accessories.Vanity
+namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity
 {
     public class LittleE : TransformationAccessory, ILocalizedModType
     {
@@ -49,9 +49,9 @@ namespace CalamityMod.Items.Accessories.Vanity
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
-            string text = Language.GetTextValue("Mods.CalamityMod.Items.Accessories.LittleE.Tooltip").FormatWith(Main.LocalPlayer.name);       
+            string text = Language.GetTextValue("Mods.CalamityModCustomPublicPrivateFork.Items.Accessories.LittleE.Tooltip").FormatWith(Main.LocalPlayer.name);       
             if (Item.social)
-                tooltips.Insert(1, new(CalamityMod.Instance, "Tooltip", text));
+                tooltips.Insert(1, new(ModContent.GetInstance<CalamityMod>(), "Tooltip", text));
             else
                 tooltips[3].Text = text;
         }

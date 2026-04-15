@@ -1,11 +1,11 @@
-﻿using CalamityMod.CalPlayer;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Pets
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 {
     public class RotomPet : ModProjectile, ILocalizedModType
     {
@@ -120,25 +120,25 @@ namespace CalamityMod.Projectiles.Pets
         {
             Drawing(lightColor,
                 Terraria.GameContent.TextureAssets.Projectile[Type].Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomDex").Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomWash").Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomHeat").Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomFrost").Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomMow").Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomFan").Value);
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomDex").Value,
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomWash").Value,
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomHeat").Value,
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomFrost").Value,
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomMow").Value,
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomFan").Value);
             return false;
         }
 
         public override void PostDraw(Color lightColor)
         {
             Drawing(Color.White,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomPetGlow").Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomDexGlow").Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomWashGlow").Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomHeatGlow").Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomFrostGlow").Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomMowGlow").Value,
-                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/RotomFanGlow").Value);
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomPetGlow").Value,
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomDexGlow").Value,
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomWashGlow").Value,
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomHeatGlow").Value,
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomFrostGlow").Value,
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomMowGlow").Value,
+                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/RotomFanGlow").Value);
         }
 
         private void Drawing(Color color, Texture2D normal, Texture2D dex, Texture2D wash, Texture2D heat, Texture2D frost, Texture2D mow, Texture2D fan)

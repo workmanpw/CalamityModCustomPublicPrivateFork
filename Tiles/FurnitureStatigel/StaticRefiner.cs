@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.FurnitureStatigel
+namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStatigel
 {
     public class StaticRefiner : ModTile
     {

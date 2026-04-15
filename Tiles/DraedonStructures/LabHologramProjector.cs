@@ -1,6 +1,6 @@
-﻿using CalamityMod.CalPlayer;
-using CalamityMod.Items.Placeables.DraedonStructures;
-using CalamityMod.TileEntities;
+using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures;
+using CalamityModCustomPublicPrivateFork.TileEntities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Tiles.DraedonStructures
+namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
 {
     public class LabHologramProjector : ModTile
     {
@@ -133,7 +133,7 @@ namespace CalamityMod.Tiles.DraedonStructures
             int yPos = trackTile.TileFrameY;
             yPos += frame % 16 * 112;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonStructures/LabHologramProjector");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonStructures/LabHologramProjector");
             Texture2D tileTexture = GlowTexture.Value;
 
             Vector2 offset = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);

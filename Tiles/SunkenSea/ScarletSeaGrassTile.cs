@@ -1,6 +1,6 @@
-﻿using CalamityMod.Projectiles.Typeless;
-using CalamityMod.Systems;
-using CalamityMod.Tiles.SunkenSea.Ambient;
+using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.ModLoader;
 
 
 
-namespace CalamityMod.Tiles.SunkenSea
+namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea
 {
     public class ScarletSeaGrassTile : ModTile
     {
@@ -31,7 +31,7 @@ namespace CalamityMod.Tiles.SunkenSea
         private int extraFrameWidth = 90;
         public override void SetStaticDefaults()
         {
-            GrassTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/ScarletSeaGrass");
+            GrassTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/ScarletSeaGrass");
 
             TileID.Sets.GeneralPlacementTiles[Type] = false;
 

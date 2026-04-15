@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.IO;
 using Terraria.WorldBuilding;
 
-namespace CalamityMod.World.Planets
+namespace CalamityModCustomPublicPrivateFork.World.Planets
 {
     public class Planetoid : MicroBiome
     {

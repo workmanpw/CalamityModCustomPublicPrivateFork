@@ -1,7 +1,7 @@
-﻿using System.IO;
+using System.IO;
 using Terraria;
 
-namespace CalamityMod.Packets.Entities
+namespace CalamityModCustomPublicPrivateFork.Packets.Entities
 {
     internal sealed class DemonSwordImpalesSyncPacket : CalamityPacket
     {

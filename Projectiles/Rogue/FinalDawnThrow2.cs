@@ -1,5 +1,5 @@
-﻿using CalamityMod.Dusts;
-using CalamityMod.Items.Weapons.Rogue;
+using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Projectiles.Rogue
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 {
     public class FinalDawnThrow2 : ModProjectile, ILocalizedModType
     {
@@ -116,7 +116,7 @@ namespace CalamityMod.Projectiles.Rogue
             float scytheRotation = player.fullRotation;
 
             Texture2D scytheTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D glowScytheTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/FinalDawnThrow2_Glow").Value;
+            Texture2D glowScytheTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/FinalDawnThrow2_Glow").Value;
             int num214 = Terraria.GameContent.TextureAssets.Projectile[Type].Value.Height / Main.projFrames[Type];
             int y6 = num214 * Projectile.frame;
 

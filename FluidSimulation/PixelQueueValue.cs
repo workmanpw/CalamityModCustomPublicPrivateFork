@@ -1,6 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 
-namespace CalamityMod.FluidSimulation
+namespace CalamityModCustomPublicPrivateFork.FluidSimulation
 {
     public struct PixelQueueValue
     {

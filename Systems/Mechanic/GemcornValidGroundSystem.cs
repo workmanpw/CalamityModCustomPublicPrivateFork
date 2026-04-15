@@ -1,10 +1,10 @@
-﻿using System.Linq;
+using System.Linq;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityMod.Systems;
+namespace CalamityModCustomPublicPrivateFork.Systems;
 
 internal sealed class GemcornValidGroundSystem : ModSystem
 {
@@ -14,7 +14,7 @@ internal sealed class GemcornValidGroundSystem : ModSystem
 
     public override void PostSetupContent()
     {
-        ValidGemcornGrounds = [.. CalamityMod.Instance.GetContent<ModTile>()
+        ValidGemcornGrounds = [.. ModContent.GetInstance<CalamityMod>().GetContent<ModTile>()
             .Where(tile => WorldGen.GemTreeGroundTest(tile.Type))
             .Select(tile => (int)tile.Type)];
 

@@ -1,9 +1,9 @@
-﻿using CalamityMod.Items.Weapons.Magic;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Buffs.StatBuffs
+namespace CalamityModCustomPublicPrivateFork.Buffs.StatBuffs
 {
     public class SandsWindBuff : ModBuff
     {

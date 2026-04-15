@@ -1,20 +1,20 @@
-﻿using CalamityMod.Items.Materials;
-using CalamityMod.Projectiles.Ranged;
+using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Ranged
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 {
     [LegacyName("TheEmpyrean", "GodsBellows")]
     public class DeadSunsWind : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Ranged";
 
-        public static readonly SoundStyle ShootSound = new("CalamityMod/Sounds/Item/DeadSunShot") { PitchVariance = 0.35f, Volume = 0.4f };
-        public static readonly SoundStyle Ricochet = new("CalamityMod/Sounds/Item/DeadSunRicochet") { Volume = 0.35f };
-        public static readonly SoundStyle Explosion = new("CalamityMod/Sounds/Item/DeadSunExplosion") { Volume = 0.5f };
+        public static readonly SoundStyle ShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DeadSunShot") { PitchVariance = 0.35f, Volume = 0.4f };
+        public static readonly SoundStyle Ricochet = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DeadSunRicochet") { Volume = 0.35f };
+        public static readonly SoundStyle Explosion = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DeadSunExplosion") { Volume = 0.5f };
         public override void SetDefaults()
         {
             Item.width = 70;

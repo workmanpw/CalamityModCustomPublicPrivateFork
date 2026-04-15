@@ -1,8 +1,8 @@
-﻿using Terraria;
+using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Armor.Vanity
+namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Body)]
     [LegacyName("CalamityRobes")]
@@ -13,7 +13,7 @@ namespace CalamityMod.Items.Armor.Vanity
         {
             if (!Main.dedServ)
             {
-                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Vanity/RobesOfCalamity_Legs", EquipType.Legs, this);
+                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Vanity/RobesOfCalamity_Legs", EquipType.Legs, this);
             }
         }
 

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.IO;
-using CalamityMod.Graphics.Metaballs;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.Particles;
-using CalamityMod.Sounds;
+using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
+using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityModCustomPublicPrivateFork.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,10 +11,10 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityMod.CalamityUtils;
+using static CalamityModCustomPublicPrivateFork.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityMod.Projectiles.Melee
+namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 {
     public class ArkoftheCosmosBlast : ModProjectile, ILocalizedModType
     {
@@ -250,8 +250,8 @@ namespace CalamityMod.Projectiles.Melee
             //Draw the scissors
             if (HoldProgress <= 0.4f)
             {
-                Texture2D frontBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeft").Value;
-                Texture2D backBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRight").Value;
+                Texture2D frontBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeft").Value;
+                Texture2D backBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight").Value;
 
                 float snippingRotation = Projectile.rotation + MathHelper.PiOver4;
                 float drawRotation = MathHelper.Lerp(snippingRotation - MathHelper.PiOver4, snippingRotation, RotationRatio());

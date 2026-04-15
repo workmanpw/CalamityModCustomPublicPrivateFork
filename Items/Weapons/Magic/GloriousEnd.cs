@@ -1,10 +1,10 @@
-﻿using CalamityMod.Projectiles.Magic;
-using CalamityMod.Projectiles.Summon;
+using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityMod.Items.Weapons.Magic
+namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 {
     public class GloriousEnd : ModItem, ILocalizedModType
     {
