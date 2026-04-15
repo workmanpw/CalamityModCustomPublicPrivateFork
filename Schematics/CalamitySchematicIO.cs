@@ -702,7 +702,10 @@ PostAreaIteration:
                 else
                 {
                     ModContent.SplitName(tileFullName, out string mod, out string tileName);
-                    // This fork is treated as CalamityMod, so no name conversion needed
+                    // Convert "CalamityMod" to "CalamityModCustomPublicPrivateFork" for this fork
+                    if (mod == "CalamityMod")
+                        mod = "CalamityModCustomPublicPrivateFork";
+                    
                     Mod theMod = ModLoader.GetMod(mod);
 
                     // If that mod isn't loaded, spawn in a TML default UnloadedTile instead.
@@ -719,7 +722,10 @@ PostAreaIteration:
                 else
                 {
                     ModContent.SplitName(wallFullName, out string mod, out string wallName);
-                    // This fork is treated as CalamityMod, so no name conversion needed
+                    // Convert "CalamityMod" to "CalamityModCustomPublicPrivateFork" for this fork
+                    if (mod == "CalamityMod")
+                        mod = "CalamityModCustomPublicPrivateFork";
+                    
                     Mod theMod = ModLoader.GetMod(mod);
                     // If that mod isn't loaded, spawn in a TML default UnloadedWall instead.
                     smt.WallType = (ushort)(theMod is null ? ModContent.WallType<UnloadedWall>() : theMod.Find<ModWall>(wallName).Type);

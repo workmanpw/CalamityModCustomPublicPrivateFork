@@ -151,7 +151,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SlimeGod
             bool purpleSlimeAlive = false;
             bool redSlimeAlive = false;
 
-            if (CalamityGlobalNPC.slimeGodPurple != -1)
+            if (CalamityGlobalNPC.slimeGodPurple != -1 && CalamityGlobalNPC.slimeGodPurple < Main.maxNPCs)
             {
                 if (Main.npc[CalamityGlobalNPC.slimeGodPurple].active)
                 {
@@ -170,7 +170,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SlimeGod
                 }
             }
 
-            if (CalamityGlobalNPC.slimeGodRed != -1)
+            if (CalamityGlobalNPC.slimeGodRed != -1 && CalamityGlobalNPC.slimeGodRed < Main.maxNPCs)
             {
                 if (Main.npc[CalamityGlobalNPC.slimeGodRed].active)
                 {
@@ -181,7 +181,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SlimeGod
 
                     NPC.ai[1] = Main.npc[CalamityGlobalNPC.slimeGodRed].Center.X;
                     NPC.ai[2] = Main.npc[CalamityGlobalNPC.slimeGodRed].Center.Y;
-                    
+
                     // Despawn check
                     calamityGlobalNPC.newAI[3] = Main.npc[CalamityGlobalNPC.slimeGodRed].ai[0] == 3f ? 1f : 0f;
 

@@ -12,12 +12,12 @@ namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
     [Autoload(Side = ModSide.Client)]
     public sealed partial class ModLavaStyleSystem : ModSystem
     {
-        public static ModLavaStyle[] LavaStyles = new ModLavaStyle[ModLavaStyleLoader.VanillaCount];
-        public static Asset<Texture2D>[] Textures = new Asset<Texture2D>[ModLavaStyleLoader.VanillaCount];
-        public static Asset<Texture2D>[] BlockTextures = new Asset<Texture2D>[ModLavaStyleLoader.VanillaCount];
-        public static Asset<Texture2D>[] SlopeTextures = new Asset<Texture2D>[ModLavaStyleLoader.VanillaCount];
-        public static Asset<Texture2D>[] WaterfallTextures = new Asset<Texture2D>[ModLavaStyleLoader.VanillaCount];
-        public static float[] LavaAlpha = new float[ModLavaStyleLoader.VanillaCount];
+        public static ModLavaStyle[] LavaStyles = new ModLavaStyle[1];
+        public static Asset<Texture2D>[] Textures = new Asset<Texture2D>[1];
+        public static Asset<Texture2D>[] BlockTextures = new Asset<Texture2D>[1];
+        public static Asset<Texture2D>[] SlopeTextures = new Asset<Texture2D>[1];
+        public static Asset<Texture2D>[] WaterfallTextures = new Asset<Texture2D>[1];
+        public static float[] LavaAlpha = new float[1] { 1.0f };
 
         public static int LavaStyle = 2;
 
@@ -65,8 +65,29 @@ namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
             {
                 ManipulatorManager.ApplyEdits += ApplyEdits;
                 Main.QueueMainThreadAction(PrepareRT);
-                Main.OnPreDraw += UpdateRT;
                 Initialized = true;
+            }
+        }
+
+        public override void PostSetupContent()
+        {
+            // Don't hook UpdateRT here - wait for world load
+        }
+
+        public override void OnWorldLoad()
+        {
+            if (ExternalMods.biomeLava == null && Initialized)
+            {
+                ResizeArrays();
+                Main.OnPreDraw += UpdateRT;
+            }
+        }
+
+        public override void OnWorldUnload()
+        {
+            if (ExternalMods.biomeLava == null && Initialized)
+            {
+                Main.OnPreDraw -= UpdateRT;
             }
         }
 
@@ -84,6 +105,9 @@ namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
 
         public override void PreUpdatePlayers()
         {
+            if (LavaAlpha is null)
+                return;
+
             LavaStyle = 0;
             foreach (var lavaStyle in ModLavaStyleLoader.AllStyles)
             {
@@ -94,7 +118,10 @@ namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
                 }
             }
 
-            for (int type = 0; type < ModLavaStyleLoader.TotalCount; type++)
+            var totalCount = ModLavaStyleLoader.TotalCount;
+            var safeCount = Math.Min(totalCount, LavaAlpha.Length);
+
+            for (int type = 0; type < safeCount; type++)
             {
                 if (LavaStyle == type)
                 {

@@ -96,7 +96,10 @@ public class CreeperAI : VanillaAIOverride
         #endregion
 
         if(!Main.dedServ)
-            BrainOfCthulhuSystem.VerletTendrils[CreeperID].creeper = NPC.whoAmI;
+        {
+            if (CreeperID >= 0 && CreeperID < BrainOfCthulhuSystem.VerletTendrils.Length)
+                BrainOfCthulhuSystem.VerletTendrils[CreeperID].creeper = NPC.whoAmI;
+        }
 
         if (bocAI.AIState < BrainAIState.SurfaceSpawnAnimation)
             NPC.damage = 0;
@@ -761,16 +764,22 @@ public class CreeperAI : VanillaAIOverride
     {
         if (!Main.dedServ && NPC.life <= 0)
         {
-            List<VerletSimulatedSegment> verletTendril = BrainOfCthulhuSystem.VerletTendrils[CreeperID].tendril;
-            verletTendril[^1].position = NPC.Center;
-            verletTendril[^1].oldPosition = NPC.Center;
-            verletTendril[^1].locked = false;
-
-            for (int i = 0; i < 5; i++)
+            if (CreeperID >= 0 && CreeperID < BrainOfCthulhuSystem.VerletTendrils.Length)
             {
-                Vector2 dir = (verletTendril[^1].position - verletTendril[^2].position).SafeNormalize(Vector2.UnitY);
-                BloodParticle p = new(verletTendril[^2].position, dir.RotatedBy(Main.rand.NextFloat(-MathHelper.Pi / 10f, MathHelper.Pi / 10f)) * Main.rand.NextFloat(6f, 10f), 24, Main.rand.NextFloat(0.5f, 1f), Color.Yellow * 0.75f);
-                GeneralParticleHandler.SpawnParticle(p);
+                List<VerletSimulatedSegment> verletTendril = BrainOfCthulhuSystem.VerletTendrils[CreeperID].tendril;
+                if (verletTendril.Count >= 2)
+                {
+                    verletTendril[^1].position = NPC.Center;
+                    verletTendril[^1].oldPosition = NPC.Center;
+                    verletTendril[^1].locked = false;
+
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Vector2 dir = (verletTendril[^1].position - verletTendril[^2].position).SafeNormalize(Vector2.UnitY);
+                        BloodParticle p = new(verletTendril[^2].position, dir.RotatedBy(Main.rand.NextFloat(-MathHelper.Pi / 10f, MathHelper.Pi / 10f)) * Main.rand.NextFloat(6f, 10f), 24, Main.rand.NextFloat(0.5f, 1f), Color.Yellow * 0.75f);
+                        GeneralParticleHandler.SpawnParticle(p);
+                    }
+                }
             }
         }
     }

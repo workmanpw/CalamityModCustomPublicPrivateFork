@@ -1,0 +1,195 @@
+// Quest fish tooltips
+CaughtInAstral: Caught in the Astral Infection
+
+// Astral Infection Catches
+AldebaranAlewife: {
+}
+
+ArcturusAstroidean: {
+}
+
+AstralCrate: {
+}
+
+AstrophageItem: {
+}
+
+MonolithCrate: {
+}
+
+ProcyonidPrawn: {
+}
+
+TwinklingPollox: {
+}
+
+UrsaSergeant: {
+}
+
+// Brimstone Crag Catches
+Bloodfin: {
+}
+
+Brimlish.QuestDescription: Did you really defeat that big fire lady? Well, I heard that her children fled into the lava, and one of them mutated into a fish! I'm not burning my hands though, so you catch it and bring it to me for my lava-filled tank!
+
+BrimstoneCrate: {
+}
+
+CharredLasher: {
+}
+
+CoastalDemonfish: {
+}
+
+CragBullhead: {
+}
+
+DragoonDrizzlefish: {
+	TooltipNormal:
+		'''
+		Fires an assortment of hellfire and brimstone fireballs
+		Sometimes fires a larger splitting fireball
+		The brimstone sac appears to contain fuel
+		'Revenge is a dish best served flaming hot'
+		'''
+	TooltipGFB:
+		'''
+		Fires an assortment of hellfire and brimstone fireballs
+		Sometimes fires a larger splitting fireball
+		<right> to feed the little boy some tasty gel
+		'He is a hungry boy'
+		'''
+}
+
+Havocfish.QuestDescription: When you killed that gross flesh wall, so much chaos and havoc was infused into those ruinous crags that even the lava sprouted fish made of the pure essence! Go fetch it for me, pure havoc sounds like exactly what my next scheme needs!
+
+Shadowfish: {
+}
+
+SlagCrate: {
+}
+
+Slurpfish.QuestDescription: Hey {0}, wouldn't it be absolutely calamitous if I sent you to those ruins in the depths of hell? Well, I heard of a scary fish that can slurp the souls out of people! I want to keep my soul, so scram! The fish isn't going to catch itself!
+
+// Sunken Sea Catches
+CoralskinFoolfish: {
+}
+
+EutrophicCrate: {
+}
+
+EutrophicSandfish.QuestDescription: You ever wondered what would happen if a lizard that lived in the desert wandered too deep into those old Ilmeran areas? Well I know, and it looks super cool! But it's way too slippery for me to get my hands on, so you go and get it so I can keep it as a pet!
+
+GleamingCucumber: {
+}
+
+GreenwaveLoach: {
+}
+
+MoltenFishron: {
+}
+
+PrismCrate: {
+}
+
+PrismaticGuppy: {
+}
+
+RustedJingleBell: {
+}
+
+SerpentsBite: {
+}
+
+Serpentuna.QuestDescription: I'm tired of always losing my allowance to those serpents in the Ilmeran water! I wanna fish up all the baby serpents, and I need YOUR help to do it! ...What? No, I'm not trying to steal money from others...
+
+SparklingEmpress: {
+}
+
+SpecularSturgeon: {
+}
+
+Squidoom: {
+}
+
+SunkenSailfish: {
+}
+
+SurfClam.QuestDescription: Rumor has it that a massive swarm of clams has taken over that sea under the desert! Clams are a delicacy, so just hearing that makes me hungry! Will you help me curb my hunger? Of course you will! Just make sure my clam and you make it back in one piece!
+
+// Other Catches
+EnchantedStarfish: {
+}
+
+FishofEleum.QuestDescription: It's so unfair that all the cool fish only come out when you slay big demon guys! I mean that "cool" in two ways by the way. I've seen fish in the tundra materialized out of the essence of pure coldness! It's about time I get an ice pack for my fish, so fetch me that fish, or you're cold!
+
+FishofFlight: {
+}
+
+GlimmeringGemfish: {
+}
+
+Gorecodile: {
+}
+
+HydrothermalCrate: {
+}
+
+Spadefish: {
+}
+
+StuffedFish: {
+}
+
+SulphurousCrate: {
+}
+
+SunbeamFish.QuestDescription: Have you ever seen those sunskaters that float way above the clouds? Well, I'll let you in on my little secret: They began their lives as little fish! So what are you waiting for, go reach for the stars and pluck one down for me!
+
+// Fishing Rods
+EarlyBloomRod: {
+}
+
+FeralDoubleRod: {
+}
+
+HeronRod: {
+}
+
+NavyFishingRod: {
+}
+
+RiftReeler: {
+}
+
+SlurperPole: {
+}
+
+TheDevourerofCods: {
+}
+
+VerstaltiteFishingRod: {
+}
+
+WulfrumRod: {
+}
+
+// Bait
+GrandMarquisBait: {
+}
+
+// Bobbers
+ScrapBobber: {
+}
+
+NavystoneBobber: {
+}
+
+SkylineBobber: {
+}
+
+PerennialBobber: {
+}
+
+ScoriaBobber: {
+}

@@ -1,0 +1,911 @@
+// Alcohols (including Odd Mushroom)
+AlcoholPoisoning: {
+}
+
+BloodyMaryBuff: {
+}
+
+CaribbeanRumBuff: {
+}
+
+CinnamonRollBuff: {
+}
+
+PurpleHazeBuff: {
+}
+
+EverclearBuff: {
+}
+
+EvergreenGinBuff: {
+}
+
+FireballBuff: {
+}
+
+GrapeBeerBuff: {
+}
+
+ManhattanBuff: {
+}
+
+MargaritaBuff: {
+}
+
+MoonshineBuff: {
+}
+
+MoscowMuleBuff: {
+}
+
+OldFashionedBuff: {
+}
+
+RedWineBuff: {
+}
+
+RumBuff: {
+}
+
+ScrewdriverBuff: {
+}
+
+StarBeamRyeBuff: {
+}
+
+TequilaBuff: {
+}
+
+TequilaSunriseBuff: {
+}
+
+Trippy: {
+}
+
+VodkaBuff: {
+}
+
+WhiskeyBuff: {
+}
+
+WhiteWineBuff: {
+}
+
+// Cooldowns
+Withered: {
+}
+
+AstralInfectionDebuff.ItemTooltip: Sickness - 37.5 DPS
+AuricRebuke.ItemTooltip: Electric - 100 DPS. Deals 4x damage against moving targets
+BanishingFire.ItemTooltip: Heat - Deals DPS equal to 0.1% of max HP or 2000, whichever is greater
+BrimstoneFlames.ItemTooltip: Heat - 30 DPS
+BurningBlood.ItemTooltip: Sickness - 20 DPS
+BrainRot.ItemTooltip: Sickness - 20 DPS
+DemonicFlames.ItemTooltip: Heat - DPS depends on inflicting item
+ElementalMix.ItemTooltip: Typeless - 200 DPS
+CrushDepth.ItemTooltip: Water - 50 DPS
+RiptideDebuff.ItemTooltip: Water - 15 DPS
+Dragonfire.ItemTooltip: Heat - 480 DPS
+GodSlayerInferno.ItemTooltip: Heat - 250 DPS
+HeavyBleeding.ItemTooltip: Typeless - 40 DPS
+HolyFlames.ItemTooltip: Heat - 150 DPS
+
+HolyInferno: {
+}
+
+Laceration.ItemTooltip: Typeless - 200 DPS
+ManaBurn.ItemTooltip:
+	'''
+	Typeless
+	Every 100 negative mana reduces your life regen by 4 HP/s, but burns enemies for 3% of dealt damage
+	'''
+MiracleBlight.ItemTooltip: Typeless - 1500 DPS
+Nightwither.ItemTooltip: Cold - 100 DPS
+Plague.ItemTooltip: Sickness - 50 DPS
+SagePoison.ItemTooltip:
+	'''
+	Sickness - 25 DPS per Viral Sprout / 50 DPS per Virid Vanguard
+	Ignores 75% of enemy sickness weaknesses and resistances
+	'''
+SearingLava.ItemTooltip:
+	'''
+	Heat - 20 DPS
+	Ignores enemy heat weaknesses and resistances
+	Gains double effect from Heat debuff amplifiers
+	'''
+
+ShellfishClaps: {
+}
+
+Shred.ItemTooltip: ""
+
+SnapClamDebuff: {
+}
+
+StaticDischarge.ItemTooltip: Electric - 2.5 DPS. 4x damage to moving targets
+SulphuricPoisoning.ItemTooltip: Sickness - 120 DPS
+TrueVulnerabilityHex.ItemTooltip:
+	'''
+	Heat - 1998 DPS
+	Increases damage taken from all sources
+	Slows enemies
+	'''
+Vaporfied.ItemTooltip:
+	'''
+	Typeless - 15 DPS
+	Slows enemies
+	'''
+VermillionFlux.ItemTooltip: Electric - 50 DPS. Deals 4x damage against moving targets
+Voidfrost.ItemTooltip: Cold - 200 DPS
+VulnerabilityHex.ItemTooltip:
+	'''
+	Heat - 1332 DPS
+	Slows enemies
+	'''
+
+WeakBrimstoneFlames: {
+}
+
+// Mounts
+
+AndromedaBuff: {
+}
+
+AndromedaSmallBuff: {
+}
+
+BrimroseMount: {
+}
+
+BumbledogeMount: {
+}
+
+DraedonGamerChairBuff: {
+}
+
+ExoTankBuff: {
+}
+
+GazeOfCrysthamyrBuff: {
+}
+
+MarniteLiftBuff: {
+}
+
+OnyxExcavatorBuff: {
+}
+
+RimehoundBuff: {
+}
+
+SquishyBeanBuff: {
+}
+
+TheCartofGodsBuff: {
+}
+
+// Pets
+AkatoBuff: {
+}
+
+ArcherofLunamoon: {
+}
+
+AstrophageBuff: {
+}
+
+BabyGhostBellBuff: {
+}
+
+BearBuff: {
+}
+
+BloodBound: {
+}
+
+BrimlingBuff: {
+}
+
+ChibiiDoGBuff: {
+}
+
+ClassicSCalPetBuff: {
+}
+
+DannyDevito: {
+}
+
+Dreamfog: {
+}
+
+EidolonSnailBuff: {
+}
+
+ElectricTroublemaker: {
+}
+
+FlakHermitBuff: {
+}
+
+FoxPetBuff: {
+}
+
+FrostyBatBuff: {
+}
+
+FurtasticDuoBuff: {
+}
+
+GoldieBuff: {
+}
+
+Kendra: {
+}
+
+LadBuff: {
+}
+
+LeviBuff: {
+}
+
+LittleLightBuff: {
+}
+
+MiniMindBuff: {
+}
+
+OceanSpiritBuff: {
+}
+
+PineappleBuff: {
+}
+
+PlaguebringerBabBuff: {
+}
+
+RadiatorBuff: {
+}
+
+SparksBuff: {
+}
+
+ThirdSageBuff: {
+}
+
+ToastyBatBuff: {
+}
+
+YharonSonBuff: {
+}
+
+// Placeables
+ChaosCandleBuff: {
+}
+
+BlueCandleBuff: {
+}
+
+PinkCandleBuff: {
+}
+
+PurpleCandleBuff: {
+}
+
+YellowCandleBuff: {
+}
+
+CorruptionEffigyBuff: {
+}
+
+CrimsonEffigyBuff: {
+}
+
+EffigyOfDecayBuff: {
+}
+
+TranquilityCandleBuff: {
+}
+
+// Potions
+AnechoicCoatingBuff: {
+}
+
+AstralInjectionBuff: {
+}
+
+BaguetteBuff: {
+}
+
+BloodfinBoost: {
+}
+
+BoundingBuff: {
+}
+
+CalciumBuff: {
+}
+
+CeaselessHunger: {
+}
+
+GravityNormalizerBuff: {
+}
+
+Omniscience: {
+}
+
+PhotosynthesisBuff: {
+}
+
+ShadowBuff: {
+}
+
+Soaring: {
+}
+
+SulphurskinBuff: {
+}
+
+WeaponImbueBrimstone: {
+}
+
+WeaponImbueCrumbling: {
+}
+
+WeaponImbueHolyFlames: {
+}
+
+Zen: {
+}
+
+Zerg: {
+}
+
+AbsorberRegen.ItemTooltip: Increases life regeneration, damage, and damage reduction
+
+AbyssalDivingSuitBuff: {
+}
+
+AbyssalMadness: {
+}
+
+AdrenalineMode: {
+}
+
+AeolianEarthBuff: {
+}
+
+Afflicted: {
+}
+
+AmidiasBlessing: {
+}
+
+AquaticHeartBuff: {
+}
+
+AquaticHeartWaterSpeed: {
+}
+
+AvertorBonus: {
+}
+
+BloodflareBloodFrenzy: {
+}
+
+BossEffects.ZenDescription: Greatly reducing enemy spawn rates
+
+BrimflameFrenzyBuff: {
+}
+
+ChiBuff: {
+}
+
+ChiRegenBuff: {
+}
+
+CoralSymbiosis: {
+}
+
+CosmicFreeze.ItemTooltip: Increases regeneration, especially when standing still, and freezes nearby enemies
+
+DivineBless: {
+}
+
+EmpyreanWrath: {
+}
+
+Encased: {
+}
+
+GraxBoost: {
+}
+
+GreenJellyRegen: {
+}
+
+HallowedRuneDefense: {
+}
+
+HallowedRunePower: {
+}
+
+HallowedRuneRegeneration: {
+}
+
+Haste: {
+}
+
+IceShieldBuff: {
+}
+
+Mushy.ItemTooltip: Increases defense and life regeneration
+
+PhantomicEmpowerment: {
+}
+
+PhantomicRegen: {
+}
+
+PhantomicShield: {
+}
+
+PinkJellyRegen: {
+}
+
+ProfanedCrystalBuff: {
+	Offense: The {0} empowers your offensive capabilities
+	Lava: heat of the lava
+	Day: light of day
+	Defense: The {0} your flames, empowering your defensive capabilities
+	Water: water douses
+	Honey: honey cools
+	Night: darkness of night cools
+	Enrage: In the absence of the day's warmth, your flames burn brighter
+	Empowered:
+		'''
+		By forgoing any additional minion support, your full potential has been unleashed
+		[c/F05A5A:You are the last ace, in the lost hand of this campaign.]
+		'''
+	LockedSlots: Your profaned soul is constrained by your insufficient summoning powers
+	LockedExos: The soul within this crystal has been defiled by overwhelming energy waves from dangerous mechanations
+	LockedSCal: The profaned soul within has been defiled by the powerful magic of a supreme witch
+}
+
+ProfanedCrystalWhipDebuff: {
+}
+
+ProfanedCrystalWhipBuff.Empowered: Their full potential has been unleashed, and nobody is safe from their wrath
+
+RageMode: {
+}
+
+ReaverRage.ItemTooltip: Increased defense and damage
+
+SandsWindBuff: {
+}
+
+SilvaRevival: {
+}
+
+SpiritDefense: {
+}
+
+SpiritPower: {
+}
+
+SpiritRegen: {
+}
+
+TarragonCloak: {
+}
+
+TarragonImmunity: {
+}
+
+TarraLifeRegen.ItemTooltip: ""
+AbsorberAffliction.ItemTooltip: Sickness - 200 DPS
+
+AndromedaCripple: {
+}
+
+ArmorCrunch.ItemTooltip: Damage Reduction is 15% less effective
+Crumbling.ItemTooltip: Damage Reduction is 8% less effective
+
+Clamity: {
+}
+
+DoGExtremeGravity: {
+}
+
+Enraged: {
+}
+
+Eutrophication.ItemTooltip: Slows enemies
+
+ExoFreeze: {
+	DisplayName: Exo Freeze
+	Description: Cannot move
+}
+
+FishAlert: {
+}
+
+FrozenLungs: {
+}
+
+GalvanicCorrosion.ItemTooltip: Slows enemies
+GlacialState.ItemTooltip: Freezes enemies
+HadopelagicPressure.ItemTooltip: Water - 200 DPS
+
+IcarusFolly: {
+}
+
+Irradiated.ItemTooltip:
+	'''
+	Typeless - 10 DPS
+	Increases damage taken from Sickness debuffs
+	'''
+MarkedforDeath.ItemTooltip: Damage reduction is 50% less effective
+
+PearlAura: {
+}
+
+ProfanedWeakness: {
+}
+
+TemporalSadness.ItemTooltip: Freezes enemies
+TimeDistortion.ItemTooltip: Slows enemies
+
+Warped: {
+}
+
+WeakPetrification: {
+}
+
+WhisperingDeath.ItemTooltip: Reduced contact damage
+
+WitherDebuff: {
+}
+
+// Summons
+AbandonedSlimeBuff: {
+}
+
+AmphibiansGuitarBuff: {
+}
+
+AncientMineralSharkBuff: {
+}
+
+AquaticStar: {
+}
+
+AqueousHunterDroneBuff: {
+}
+
+AstralProbeBuff: {
+}
+
+BabyBloodCrawlerBuff: {
+}
+
+BabySlimeGodBuff: {
+}
+
+BabyStormlionBuff: {
+}
+
+BelladonnaSpiritBuff: {
+}
+
+BlackHawkBuff: {
+}
+
+BrimseekerBuff: {
+}
+
+BrimstoneElemental: {
+}
+
+BrittleStar: {
+}
+
+BurrowerBuff: {
+}
+
+CalamarisLamentBuff: {
+}
+
+CausticStaffBuff: {
+}
+
+CinderBlossomBuff: {
+}
+
+CloudElemental: {
+}
+
+Corroslime: {
+}
+
+CorvidHarbringerBuff: {
+}
+
+CosmicEnergy: {
+}
+
+CosmicViperEngineBuff: {
+}
+
+CosmilampBuff: {
+}
+
+Crimslime: {
+}
+
+DaedalusCrystalBuff: {
+}
+
+DaedalusGolemBuff: {
+}
+
+DankCreeperBuff: {
+}
+
+DazzlingStabberBuff: {
+}
+
+DemonshadeSetDevilBuff: {
+}
+
+EnchantedKnifeStaffBuff: {
+}
+
+EndoCooperBuff: {
+}
+
+EndoHydraBuff: {
+}
+
+EntropysVigilBuff: {
+}
+
+ExoskeletonCannons: {
+}
+
+EyeOfNightBuff: {
+}
+
+FieryDraconidBuff: {
+}
+
+FleshBallBuff: {
+}
+
+FlowersOfMortalityBuff: {
+}
+
+FrostBlossomBuff: {
+}
+
+FungalClumpBuff: {
+}
+
+GammaHydraBuff: {
+}
+
+GastricAberrationBuff: {
+}
+
+GlacialEmbraceBuff: {
+}
+
+HauntedDishesBuff: {
+}
+
+HermitCrab: {
+}
+
+Herring: {
+}
+
+HotE: {
+}
+
+HowlTrio: {
+}
+
+HydrothermicVentBuff: {
+}
+
+IceClasperBuff: {
+}
+
+IgneousExaltationBuff: {
+}
+
+KalandraMirrorBuff: {
+}
+
+KingofConstellationsBuff: {
+}
+
+LegionofCelestiaBuff: {
+}
+
+LiliesOfFinalityBuff: {
+}
+
+LilPlaguebringerBuff: {
+}
+
+LordeBuff: {
+}
+
+MagicHatBuff: {
+}
+
+VoidEaterMarionetteBuff: {
+}
+
+MidnightSunBuff: {
+}
+
+MiniatureEyeofCthulhu: {
+}
+
+MutatedTruffleBuff: {
+}
+
+MiniPlaguebringerBuff: {
+}
+
+MoonFistBuff: {
+}
+
+MountedScannerBuff: {
+}
+
+NOU: {
+}
+
+PerditionBuff: {
+}
+
+Phantom: {
+}
+
+PlantationStaffBuff: {
+}
+
+PoleWarperBuff: {
+}
+
+ProfanedSoulGuardians.VanityDescription: The Profaned Soul Guardians will accompany you!
+
+PuffWarriorBuff: {
+}
+
+RareSandElemental: {
+}
+
+ResurrectionButterflyBuff: {
+}
+
+SageSpiritBuff: {
+}
+
+Sandnado: {
+}
+
+SandElemental: {
+}
+
+SarosPossessionBuff: {
+}
+
+SeaSnailBuff: {
+}
+
+SepulcherMinionBuff: {
+}
+
+ShellfishBuff: {
+}
+
+SilvaCrystalBuff: {
+}
+
+SiriusBuff: {
+}
+
+SkeletalDragonsBuff: {
+}
+
+SmallSkeletonBuff: {
+}
+
+SnakeEyesBuff: {
+}
+
+SolarGodSpiritBuff: {
+}
+
+SolarSpirit: {
+}
+
+SoulSeekerBuff: {
+}
+
+StellarTorusBuff: {
+}
+
+TacticalPlagueEngineBuff: {
+}
+
+TundraFlameBlossomsBuff: {
+}
+
+ValkyrieBuff: {
+}
+
+VileFeederBuff: {
+}
+
+ViridVanguardBuff: {
+}
+
+ViriliBuff: {
+}
+
+VoidConcentrationBuff: {
+}
+
+WaterElemental: {
+}
+
+WitherBlossomsBuff: {
+}
+
+WulfrumDroidBuff: {
+}
+
+YoungDukeBuff: {
+	DisplayName: Baby Boomer
+	Description: The mutated fishron will intoxicate your foes
+}
+
+// Misc
+
+HyperiusCollapse: {
+	DisplayName: Hyperius Collapse
+	Description: You should never see this...
+}
+
+PopoBuff: {
+}
+
+PopoNoselessBuff: {
+}
+
+Daybroken: {
+	DisplayName: Daybroken
+	ItemTooltip: Heat - 100 DPS
+}
+
+Shadowflame: {
+	DisplayName: Shadowflame
+	ItemTooltip: Heat - 30 DPS
+}
+
+ForbiddenStealthSummonTagBuff: {
+}
+
+SeaKingsAssurance: {
+	DisplayName: Sea King's Assurance
+	Description: If you're seeing this, something assuredly went horribly wrong
+}
+
+CnidarianSummonTagBuff: {
+}

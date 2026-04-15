@@ -1,0 +1,77 @@
+// For general uses
+Abyss: Abyss
+AstralInfection: Astral Infection
+AstralSnow: Astral Snow
+BrimstoneCrags: Brimstone Crags
+SulphurousSea: Sulphurous Sea
+SunkenSea: Sunken Sea
+
+AstralDesert: {
+}
+
+AstralBiome: {
+	DisplayName: Astral Infection
+	TownNPCDialogueName: Astral Infection
+}
+
+AstralInfectionBiome: {
+}
+
+AstralIce: {
+}
+
+AbyssLayer1Biome: {
+}
+
+AbyssLayer2Biome: {
+}
+
+AbyssLayer3Biome: {
+}
+
+AbyssLayer4Biome: {
+}
+
+AcidRainBiome: {
+}
+
+ArsenalLabBiome: {
+}
+
+BrimstoneCragsBiome: {
+}
+
+SulphurousSeaBiome: {
+}
+
+SunkenSeaBiome: {
+}
+
+AstralUnderground: {
+}
+
+AstralCaveDesert: {
+}
+
+FloralParadiseBiome: {
+	DisplayName: Floral Paradise
+	TownNPCDialogueName: the Floral Paradise
+}
+
+BasaltGullyBiome: {
+}
+
+GleamingBurrowsBiome: {
+}
+
+PolypForestBiome: {
+}
+
+RadiantReefsBiome: {
+}
+
+TimelessShoresBiome: {
+}
+
+ClamDenBiome: {
+}

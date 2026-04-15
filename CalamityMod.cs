@@ -17,6 +17,8 @@ namespace CalamityModCustomPublicPrivateFork
 {
     public class CalamityMod : Mod
     {
+        public override string Name => "CalamityModCustomPublicPrivateFork";
+
         #region External Flags
         // External flag to disable Defense Damage
         // This can be edited by other mods using reflection if desired

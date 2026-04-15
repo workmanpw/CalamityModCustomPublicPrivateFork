@@ -1,0 +1,9 @@
+Accessory: {
+	// New modifier effects (this is only positive)
+	StealthGenTooltip: +{0}% stealth generation
+	LifeRegenTooltip: +{0} HP/s life regen
+	MaxLifeBoostTooltip: +{0} max life
+}
+
+// New modifier effects (plus sign added in-code)
+Weapon.StealthDamageTooltip: "{0}% stealth strike damage"

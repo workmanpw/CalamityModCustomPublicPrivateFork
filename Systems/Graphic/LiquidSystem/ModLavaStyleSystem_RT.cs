@@ -1,3 +1,4 @@
+using System;
 using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -55,8 +56,24 @@ namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
         
         private static void UpdateRT(GameTime time)
         {
-            
             if (!Initialized || !TextureArrayReady || Main.gameMenu)
+                return;
+
+            if (Textures is null || BlockTextures is null || SlopeTextures is null || WaterfallTextures is null)
+                return;
+
+            if (LavaAlpha is null)
+                return;
+
+            if (LavaRT is null || LavaBlockRT is null || LavaSlopeRT is null || LavaWaterfallRT is null)
+                return;
+
+            var totalCount = ModLavaStyleLoader.TotalCount;
+            
+            // Ensure arrays are properly sized
+            if (Textures.Length < totalCount || BlockTextures.Length < totalCount || 
+                SlopeTextures.Length < totalCount || WaterfallTextures.Length < totalCount ||
+                LavaAlpha.Length < totalCount)
                 return;
 
             using (LavaRT.Scope(clearColor: Color.Transparent))
@@ -108,15 +125,30 @@ namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
 
         private static void DrawTextures(Asset<Texture2D>[] textures)
         {
-            var totalCount = ModLavaStyleLoader.TotalCount;
-            for (int i = 0; i < totalCount; i++)
+            try
             {
-                var alpha = LavaAlpha[i];
-                if (alpha <= 0.0f)
-                    continue;
+                if (textures is null)
+                    return;
 
-                if (textures[i] is not null && textures[i].Value is not null)
-                    Main.spriteBatch.Draw(textures[i].Value, Vector2.Zero, null, Color.White * alpha);
+                if (LavaAlpha is null)
+                    return;
+
+                var totalCount = ModLavaStyleLoader.TotalCount;
+                var safeCount = Math.Min(totalCount, Math.Min(textures.Length, LavaAlpha.Length));
+                
+                for (int i = 0; i < safeCount; i++)
+                {
+                    var alpha = LavaAlpha[i];
+                    if (alpha <= 0.0f)
+                        continue;
+
+                    if (textures[i] is not null && textures[i].Value is not null)
+                        Main.spriteBatch.Draw(textures[i].Value, Vector2.Zero, null, Color.White * alpha);
+                }
+            }
+            catch
+            {
+                // Silently ignore any errors to prevent game crash
             }
         }
     }

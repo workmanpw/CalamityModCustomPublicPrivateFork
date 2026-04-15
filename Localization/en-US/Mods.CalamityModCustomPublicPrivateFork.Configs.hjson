@@ -1,0 +1,243 @@
+CalamityClientConfig: {
+	Headers: {
+	}
+
+	AbyssLayer3Alt: {
+	}
+
+	AdrenalineMeterPosX: {
+	}
+
+	AdrenalineMeterPosY: {
+	}
+
+	Afterimages: {
+	}
+
+	BossHealthBarExtraInfo: {
+	}
+
+	ChargeMeter: {
+	}
+
+	ChargeMeterPosX: {
+	}
+
+	ChargeMeterPosY: {
+	}
+
+	CooldownDisplay: {
+	}
+
+	DebuffDisplay: {
+	}
+
+	DevourerofGodsEulogy: {
+	}
+
+	DisableGravityScreenSwap: {
+	}
+
+	EnableVanillaTextureEdits: {
+	}
+
+	EnergyShieldOpacity: {
+	}
+
+	FancyBackgroundVisuals: {
+	}
+
+	FasterFallHotkey: {
+	}
+
+	FlightBar: {
+	}
+
+	FlightBarPosX: {
+	}
+
+	FlightBarPosY: {
+	}
+
+	Interludes: {
+	}
+
+	MeterPosLock: {
+	}
+
+	ParticleLimit: {
+	}
+
+	Photosensitivity: {
+	}
+
+	RageMeterPosX: {
+	}
+
+	RageMeterPosY: {
+	}
+
+	RipperMeterShake: {
+	}
+
+	ScreenshakePower: {
+	}
+
+	SetBonusDoubleTap: {
+	}
+
+	ShopNewAlert: {
+	}
+
+	SpeedrunTimer: {
+	}
+
+	SpeedrunTimerPosX: {
+	}
+
+	SpeedrunTimerPosY: {
+	}
+
+	StealthInvisibility: {
+		Label: "[i:LaserRuler] Stealth Invisibility"
+		Tooltip:
+			'''
+			Enables rendering afterimages for Calamity NPCs, projectiles, etc.
+			Disable to improve performance.
+			'''
+	}
+
+	InfiniteStealth: {
+		Label: "[i:LaserRuler] Infinite Stealth"
+		Tooltip:
+			'''
+			Makes stealth infinite and never consumed, even without rogue armor.
+			Stealth abilities can be used freely without restrictions.
+			'''
+	}
+
+	StealthMeter: {
+	}
+
+	StealthMeterPosX: {
+	}
+
+	StealthMeterPosY: {
+	}
+
+	StutterFix: {
+	}
+
+	SulphuricWaterMeterPosX: {
+	}
+
+	SulphuricWaterMeterPosY: {
+	}
+
+	SunkenSeaBackgroundDistortion: {
+	}
+
+	TextEffects: {
+	}
+
+	TileTextureBlendingQuality: {
+	}
+
+	VanillaCooldownDisplay: {
+	}
+
+	VCMMStatusMessage: {
+	}
+
+	WikiStatusMessage: {
+	}
+}
+
+CalamityServerConfig.Denied: You have no permission to change this config
+
+Headers: {
+}
+
+BossesStopWeather: {
+}
+
+BossHealthBoost: {
+}
+
+DefaultDashEnabled: {
+}
+
+BossZen: {
+}
+
+ChilledWaterRework: {
+}
+
+EarlyHardmodeProgressionRework: {
+}
+
+FasterBaseSpeed: {
+}
+
+FasterRopeClimbSpeed: {
+}
+
+FasterJumpSpeed: {
+}
+
+FasterTilePlacement: {
+}
+
+ForceTownSafety: {
+}
+
+NerfExpertDebuffs: {
+}
+
+RemoveLavaDropsFromLavaSlimes: {
+}
+
+RemoveReforgeRNG: {
+}
+
+PlayerRespawnTime_BossAlive: {
+}
+
+TownNPCSpawnRateMultiplier: {
+}
+
+TownNPCsSpawnAtNight: {
+}
+
+CooldownDisplayOptions: {
+	Full: {
+	}
+
+	Compact: {
+	}
+
+	Hidden: {
+	}
+}
+
+SetBonusDoubleTapOptions: {
+	On: {
+	}
+
+	Auto: {
+	}
+
+	Off: {
+	}
+}
+
+TileBlendingQuality: {
+	Disable: {
+	}
+
+	Normal: {
+	}
+
+	High: {
+	}
+}

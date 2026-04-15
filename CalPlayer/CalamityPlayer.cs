@@ -3615,7 +3615,8 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                     {
                         if (!Collision.SolidCollision(teleportLocation, Player.width, Player.height))
                         {
-                            rogueStealth -= rogueStealthMax * 0.25f;
+                            if (!CalamityClientConfig.Instance.InfiniteStealth)
+                                rogueStealth -= rogueStealthMax * 0.25f;
 
                             Player.Teleport(teleportLocation, 1);
                             NetMessage.SendData(MessageID.TeleportEntity, -1, -1, null, 0, (float)Player.whoAmI, teleportLocation.X, teleportLocation.Y, 1, 0, 0);
@@ -3644,7 +3645,8 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                 jetPackDash = blunderBooster ? 15 : 10;
                 jetPackDirection = Player.direction;
                 Player.AddCooldown(RogueBooster.ID, 60, true, blunderBooster ? "birb" : "default");
-                rogueStealth -= rogueStealthMax * 0.25f;
+                if (!CalamityClientConfig.Instance.InfiniteStealth)
+                    rogueStealth -= rogueStealthMax * 0.25f;
                 SoundEngine.PlaySound(SoundID.Item66, Player.Center);
                 SoundEngine.PlaySound(SoundID.Item34, Player.Center);
             }
@@ -5864,6 +5866,19 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
 
         public void UpdateRogueStealth()
         {
+            // Infinite stealth config: works without rogue armor and never consumes
+            if (CalamityClientConfig.Instance.InfiniteStealth)
+            {
+                // Set stealth to max if not already at max
+                if (rogueStealthMax <= 0f)
+                    rogueStealthMax = 1f;
+                if (rogueStealth < rogueStealthMax)
+                    rogueStealth = rogueStealthMax;
+                wearingRogueArmor = true; // Force wearingRogueArmor to true for stealth abilities
+                ProvideStealthStatBonuses();
+                return;
+            }
+
             if (temporaryStealthTimer > 0)
             {
                 if (rogueStealthMax < temporaryStealthMax)
@@ -6064,6 +6079,10 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
 
         public void ConsumeStealthByAttacking()
         {
+            // Infinite stealth config: never consume stealth
+            if (CalamityClientConfig.Instance.InfiniteStealth)
+                return;
+
             stealthStrikeThisFrame = true;
             stealthAcceleration = 1f; // Reset acceleration when you attack
 

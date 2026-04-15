@@ -1,0 +1,233 @@
+// Critters
+AlphaSeaMinnowItem: {
+	DisplayName: "{$NPCs.AlphaSeaMinnow.DisplayName}"
+	Tooltip: ""
+}
+
+AlphaSeaMinnowGoldItem: {
+	DisplayName: "{$NPCs.AlphaSeaMinnowGold.DisplayName}"
+	Tooltip: ""
+}
+
+AndroombaItem: {
+}
+
+BabyCannonballJellyfishItem: {
+}
+
+BabyFlakCrabItem: {
+}
+
+BabyGhostBellItem: {
+}
+
+BabyGhostBellGoldItem: {
+	DisplayName: "{$NPCs.GoldBabyGhostBell}"
+	Tooltip: ""
+}
+
+BabyGhostBellGreenItem: {
+	DisplayName: Green Baby Ghost Bell
+	Tooltip: ""
+}
+
+BabyGhostBellRadiantItem: {
+	DisplayName: "{$NPCs.RadiantBabyGhostBell}"
+	Tooltip: ""
+}
+
+BabyGhostBellPinkItem: {
+	DisplayName: Pink Baby Ghost Bell
+	Tooltip: ""
+}
+
+GildedAxolotlItem: {
+	DisplayName: Gilded Axolotl
+	Tooltip: ""
+}
+
+NanodroidDysfunctionalItem: {
+}
+
+NanodroidItem: {
+}
+
+NanodroidPlagueGreenItem: {
+}
+
+NanodroidPlagueRedItem: {
+}
+
+PearlpodBlackItem: {
+	DisplayName: Black Pearlpod
+	Tooltip: ""
+}
+
+PearlpodItem: {
+	DisplayName: White Pearlpod
+	Tooltip: ""
+}
+
+PearlpodPinkItem: {
+	DisplayName: Pink Pearlpod
+	Tooltip: ""
+}
+
+PolypPanaseaGoldItem: {
+	DisplayName: "{$NPCs.GoldPolypPanasea}"
+	Tooltip: ""
+}
+
+PolypPanaseaGreenItem: {
+	DisplayName: Green Polyp Panasea
+	Tooltip: ""
+}
+
+PolypPanaseaItem: {
+	DisplayName: Red Polyp Panasea
+	Tooltip: ""
+}
+
+PolypPanaseaPurpleItem: {
+	DisplayName: Purple Polyp Panasea
+	Tooltip: ""
+}
+
+PolypPanaseaRadiantItem: {
+	DisplayName: "{$NPCs.RadiantPolypPanasea}"
+	Tooltip: ""
+}
+
+PolypPanaseaTurquoiseItem: {
+	DisplayName: Turquoise Polyp Panasea
+	Tooltip: ""
+}
+
+PiggyItem: {
+}
+
+PrismaticGuppyBlueItem: {
+	DisplayName: Blue Prismatic Guppy
+	Tooltip: ""
+}
+
+PrismaticGuppyGoldItem: {
+	DisplayName: "{$NPCs.GoldPrismaticGuppy}"
+	Tooltip: ""
+}
+
+PrismaticGuppyGreenItem: {
+	DisplayName: Green Prismatic Guppy
+	Tooltip: ""
+}
+
+PrismaticGuppyPinkItem: {
+	DisplayName: Pink Prismatic Guppy
+	Tooltip: ""
+}
+
+PrismaticGuppyRadiantItem: {
+	DisplayName: "{$NPCs.RadiantPrismaticGuppy}"
+	Tooltip: ""
+}
+
+ProbesnoutGoldItem: {
+	DisplayName: "{$NPCs.ProbesnoutGold.DisplayName}"
+	Tooltip: ""
+}
+
+ProbesnoutItem: {
+	DisplayName: "{$NPCs.Probesnout.DisplayName}"
+	Tooltip: ""
+}
+
+RepairUnitItem: {
+}
+
+SeaFloatyItem: {
+	DisplayName: "{$NPCs.SeaFloaty.DisplayName}"
+	Tooltip: ""
+}
+
+SeaMinnowItem: {
+}
+
+SeaMinnowGoldItem: {
+	DisplayName: "{$NPCs.SeaMinnowGold.DisplayName}"
+	Tooltip: ""
+}
+
+SearslugItem: {
+	DisplayName: "{$NPCs.Searslug.DisplayName}"
+	Tooltip: ""
+}
+
+ShoreskipperItem: {
+	DisplayName: "{$NPCs.Shoreskipper.DisplayName}"
+	Tooltip: ""
+}
+
+ShroombleItem: {
+}
+
+SlugbunBurrowsItem: {
+	DisplayName: Burrows Slugbun
+	Tooltip: ""
+}
+
+SlugbunItem: {
+	DisplayName: Reef Slugbun
+	Tooltip: ""
+}
+
+SlugbunPolypItem: {
+	DisplayName: Polyp Slugbun
+	Tooltip: ""
+}
+
+SlugbunRadiantItem: {
+	DisplayName: "{$NPCs.RadiantSlugbun}"
+	Tooltip: ""
+}
+
+TwinklerItem: {
+}
+
+CelestialOnion: {
+}
+
+CometShard: {
+}
+
+EtherealCore: {
+}
+
+MiracleFruit: {
+}
+
+PhantomHeart: {
+}
+
+SacredStrawberry: {
+}
+
+SanguineTangerine: {
+}
+
+TaintedCloudberry: {
+}
+
+// Spawn Blockers
+SpawnBlockersOn: Spawns are currently disabled
+SpawnBlockersOff: Spawns are currently enabled
+// Uncategorized
+ExhumeShortTooltip:
+	'''
+	[c/C61B40:'Ah, are you curious what I saw within this item?']
+	[c/BABABA:Hold Shift to listen]
+	'''
+LegendaryShortTooltip:
+	'''
+	[c/FF6F00:Tales of legends past radiate around you...]
+	[c/BABABA:Hold Shift to listen closer]
+	'''

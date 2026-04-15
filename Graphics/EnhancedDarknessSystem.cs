@@ -80,15 +80,12 @@ namespace CalamityModCustomPublicPrivateFork.Graphics
                 Main.spriteBatch.End();
             }
 
-            using (Main.spriteBatch.Scope())
-            {
-                Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
-                var shader = GameShaders.Misc["CalamityMod:DozeLightingShader"];
-                shader.UseOpacity(mp.darknessIntensity);
-                shader.Apply();
-                Main.spriteBatch.Draw(lease.Target, Vector2.Zero, null, Color.White, 0, Vector2.Zero, 1, 0, 0);
-                spriteBatch.End();
-            }
+            Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
+            var shader = GameShaders.Misc["CalamityMod:DozeLightingShader"];
+            shader.UseOpacity(mp.darknessIntensity);
+            shader.Apply();
+            Main.spriteBatch.Draw(lease.Target, Vector2.Zero, null, Color.White, 0, Vector2.Zero, 1, 0, 0);
+            Main.spriteBatch.End();
         }
 
 

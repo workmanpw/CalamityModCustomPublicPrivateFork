@@ -1,0 +1,2660 @@
+FormattedBannerName: "{0} Banner"
+
+AstralPylon: {
+}
+
+CragsPylon: {
+}
+
+SulphurPylon: {
+}
+
+SunkenPylon: {
+}
+
+AbyssGravel: {
+}
+
+Acidwood: {
+}
+
+AerialiteBrick: {
+}
+
+AstralBrick: {
+}
+
+AstralClay: {
+}
+
+AstralDirt: {
+}
+
+AstralGrassSeeds: {
+}
+
+AstralIce: {
+}
+
+AstralMonolith: {
+}
+
+AstralSand: {
+}
+
+AstralSandstone: {
+}
+
+AstralSnow: {
+}
+
+AstralStone: {
+}
+
+BrimstoneSlab: {
+}
+
+BrimstoneSlag: {
+}
+
+CelestialRemains: {
+}
+
+CinderBlossomSeeds: {
+}
+
+CryonicBrick: {
+}
+
+//  Draedon Structures
+
+AgedLaboratoryConsoleItem: {
+}
+
+AgedLaboratoryContainmentBoxItem: {
+}
+
+AgedLaboratoryDisplayItem: {
+}
+
+AgedLaboratoryDoorItem: {
+}
+
+AgedLaboratoryElectricPanelItem: {
+}
+
+AgedLaboratoryScreenItem: {
+}
+
+AgedLaboratoryServerItem: {
+}
+
+AgedLaboratoryTerminalItem: {
+}
+
+AgedReinforcedCrateItem: {
+}
+
+AgedSecurityChest: {
+}
+
+ChargingStationItem: {
+}
+
+HazardChevronPanels: {
+}
+
+LabHologramProjectorItem: {
+}
+
+LaboratoryConsoleItem: {
+}
+
+LaboratoryContainmentBoxItem: {
+}
+
+LaboratoryDisplayItem: {
+}
+
+LaboratoryDoorItem: {
+}
+
+LaboratoryElectricPanelItem: {
+}
+
+LaboratoryPanels: {
+}
+
+LaboratoryPipePlating: {
+}
+
+LaboratoryPlating: {
+}
+
+LaboratoryScreenItem: {
+}
+
+LaboratoryServerItem: {
+}
+
+LaboratoryShelf: {
+}
+
+LaboratoryTerminalItem: {
+}
+
+PowerCellFactoryItem: {
+}
+
+ReinforcedCrateItem: {
+}
+
+Rock: {
+}
+
+RustedPipes: {
+}
+
+RustedPlating: {
+}
+
+RustedShelf: {
+}
+
+SecurityChest: {
+}
+
+// End of Draedon Structures
+
+EutrophicGlass: {
+}
+
+EutrophicSand: {
+}
+
+HardenedEutrophicSand: {
+}
+
+// Floral Paradise
+
+AlgalSlateItem: {
+	DisplayName: Algal Slate
+	Tooltip: ""
+}
+
+PeatItem: {
+	DisplayName: Peat
+	Tooltip: ""
+}
+
+PeatMossItem: {
+	DisplayName: Peat Moss
+	Tooltip: ""
+}
+
+ScintillatingBloom: {
+	DisplayName: Scintillating Bloom
+	Tooltip: ""
+}
+
+// End of Floral Paradise
+
+AbyssTreasureChest: {
+}
+
+AlgalPrismTorch: {
+}
+
+AstralBeaconItem: {
+}
+
+AstralChest: {
+}
+
+AstralTorch: {
+}
+
+AuricToilet: {
+}
+
+BabyCannonballJellyfishBowl: {
+}
+
+BabyFlakCrabCage: {
+}
+
+BabyGhostBellJar: {
+}
+
+AquaticScourgeRelic: {
+}
+
+AstrumAureusRelic: {
+}
+
+AstrumDeusRelic: {
+}
+
+BrimstoneElementalRelic: {
+}
+
+CalamitasCloneRelic: {
+}
+
+CalamitasRelic: {
+}
+
+CeaselessVoidRelic: {
+}
+
+CrabulonRelic: {
+}
+
+CragmawMireRelic: {
+}
+
+CryogenRelic: {
+}
+
+DesertScourgeRelic: {
+}
+
+DevourerOfGodsRelic: {
+}
+
+DraedonRelic: {
+}
+
+DragonfollyRelic: {
+}
+
+GiantClamRelic: {
+}
+
+GreatSandSharkRelic: {
+}
+
+HiveMindRelic: {
+}
+
+LeviathanAnahitaRelic: {
+}
+
+MaulerRelic: {
+}
+
+NuclearTerrorRelic: {
+}
+
+OldDukeRelic: {
+}
+
+PerforatorsRelic: {
+}
+
+PlaguebringerGoliathRelic: {
+}
+
+PolterghastRelic: {
+}
+
+ProfanedGuardiansRelic: {
+}
+
+ProvidenceRelic: {
+}
+
+RavagerRelic: {
+}
+
+SignusRelic: {
+}
+
+SlimeGodRelic: {
+}
+
+StormWeaverRelic: {
+}
+
+YharonRelic: {
+}
+
+CausticTorch: {
+}
+
+ChaosCandle: {
+}
+
+CorruptionEffigy: {
+}
+
+AltarOfTheAccursedItem: {
+}
+
+AshenAltar: {
+}
+
+CosmicAnvilItem: {
+}
+
+DraedonsForge: {
+}
+
+PlagueInfuser: {
+}
+
+ProfanedCrucible: {
+}
+
+VoidCondenser: {
+}
+
+CrimsonEffigy: {
+}
+
+EffigyOfDecay: {
+}
+
+AbyssFountainItem: {
+}
+
+AstralFountainItem: {
+}
+
+BrimstoneLavaFountainItem: {
+}
+
+SulphurousFountainItem: {
+}
+
+SunkenSeaFountain: {
+}
+
+GloomTorch: {
+}
+
+LanternCenter: {
+}
+
+AstralProjector: {
+}
+
+BlueDistortedMonolith: {
+}
+
+BossRushMonolith: {
+}
+
+DeepSeaAnchor: {
+}
+
+DraconicIncense: {
+}
+
+EldenDiorama: {
+}
+
+ExoObelisk: {
+}
+
+FrigidMonolith: {
+}
+
+KelpTorch: {
+}
+
+OtonilouStatue: {
+	DisplayName: Otonilou Memorial
+	Tooltip: ""
+}
+
+PlagueHumidifier: {
+}
+
+PurpleDistortedMonolith: {
+}
+
+NavyPrismTorch: {
+}
+
+CalamityCanvas2023: {
+}
+
+CalamityCanvas2024: {
+}
+
+ForgivenessPainting: {
+}
+
+ThankYouPainting: {
+}
+
+PiggyCage: {
+}
+
+RefractivePrismTorch: {
+}
+
+RepairUnitCage: {
+}
+
+ResilientCandle: {
+}
+
+RustyChest: {
+}
+
+SeaMinnowJar: {
+}
+
+SpitefulCandle: {
+}
+
+SulphurousTorch: {
+}
+
+ThaumaticChair: {
+}
+
+ThermalTorch: {
+}
+
+TranquilityCandle: {
+}
+
+VoidTorch: {
+}
+
+AnahitaTrophy: {
+}
+
+ApolloTrophy: {
+}
+
+AquaticScourgeTrophy: {
+}
+
+AresTrophy: {
+}
+
+ArtemisTrophy: {
+}
+
+AstrumAureusTrophy: {
+}
+
+AstrumDeusTrophy: {
+}
+
+BrimstoneElementalTrophy: {
+}
+
+CalamitasCloneTrophy: {
+}
+
+CataclysmTrophy: {
+}
+
+CatastropheTrophy: {
+}
+
+CeaselessVoidTrophy: {
+}
+
+CrabulonTrophy: {
+}
+
+CragmawMireTrophy: {
+}
+
+CryogenTrophy: {
+}
+
+DesertScourgeTrophy: {
+}
+
+DevourerofGodsTrophy: {
+}
+
+DragonfollyTrophy: {
+}
+
+GiantClamTrophy: {
+}
+
+GreatSandSharkTrophy: {
+}
+
+HiveMindTrophy: {
+}
+
+LeviathanTrophy: {
+}
+
+MaulerTrophy: {
+}
+
+NuclearTerrorTrophy: {
+}
+
+OldDukeTrophy: {
+}
+
+PerforatorTrophy: {
+}
+
+PlaguebringerGoliathTrophy: {
+}
+
+PolterghastTrophy: {
+}
+
+ProfanedGuardianTrophy: {
+}
+
+ProvidenceTrophy: {
+}
+
+RavagerTrophy: {
+}
+
+SignusTrophy: {
+}
+
+SlimeGodTrophy: {
+}
+
+SupremeCalamitasTrophy: {
+}
+
+SupremeCataclysmTrophy: {
+}
+
+SupremeCatastropheTrophy: {
+}
+
+ThanatosTrophy: {
+}
+
+WeaverTrophy: {
+}
+
+YharonTrophy: {
+}
+
+TwinklerInABottle: {
+}
+
+VigorousCandle: {
+}
+
+WeightlessCandle: {
+}
+
+WulfrumLureItem: {
+}
+
+ZenithThrone: {
+}
+
+AbyssBathtub: {
+}
+
+AbyssBed: {
+}
+
+AbyssBookcase: {
+}
+
+AbyssCandelabra: {
+}
+
+AbyssCandle: {
+}
+
+AbyssChair: {
+}
+
+AbyssChandelier: {
+}
+
+AbyssChest: {
+}
+
+AbyssClock: {
+}
+
+AbyssDoor: {
+}
+
+AbyssDresser: {
+}
+
+AbyssLamp: {
+}
+
+AbyssLantern: {
+}
+
+AbyssSink: {
+}
+
+AbyssSofa: {
+}
+
+AbyssSynth: {
+}
+
+AbyssTable: {
+}
+
+AbyssWorkBench: {
+}
+
+SmoothAbyssGravel: {
+}
+
+SmoothAbyssGravelPlatform: {
+}
+
+AcidwoodBathtub: {
+}
+
+AcidwoodBed: {
+}
+
+AcidwoodBench: {
+}
+
+AcidwoodBookcase: {
+}
+
+AcidwoodCandelabra: {
+}
+
+AcidwoodCandle: {
+}
+
+AcidwoodChair: {
+}
+
+AcidwoodChandelier: {
+}
+
+AcidwoodChest: {
+}
+
+AcidwoodClock: {
+}
+
+AcidwoodDoor: {
+}
+
+AcidwoodDresser: {
+}
+
+AcidwoodLamp: {
+}
+
+AcidwoodLantern: {
+}
+
+AcidwoodPiano: {
+}
+
+AcidwoodPlatform: {
+}
+
+AcidwoodSink: {
+}
+
+AcidwoodTable: {
+}
+
+AcidwoodWorkBench: {
+}
+
+AncientAltar: {
+}
+
+AncientBasin: {
+}
+
+AncientBathtub: {
+}
+
+AncientBed: {
+}
+
+AncientBookcase: {
+}
+
+AncientChair: {
+}
+
+AncientChandelier: {
+}
+
+AncientDoor: {
+}
+
+AncientDresser: {
+}
+
+AncientLamp: {
+}
+
+AncientLantern: {
+}
+
+AncientMonolith: {
+}
+
+AncientPipeOrgan: {
+}
+
+AncientSink: {
+}
+
+AncientSofa: {
+}
+
+AncientTable: {
+}
+
+AncientWorkBench: {
+}
+
+AshenAccentSlab: {
+}
+
+AshenBasin: {
+}
+
+AshenBathtub: {
+}
+
+AshenBed: {
+}
+
+AshenBookcase: {
+}
+
+AshenCandelabra: {
+}
+
+AshenCandle: {
+}
+
+AshenChair: {
+}
+
+AshenChandelier: {
+}
+
+AshenChest: {
+}
+
+AshenDoor: {
+}
+
+AshenDresser: {
+}
+
+AshenLamp: {
+}
+
+AshenLantern: {
+}
+
+AshenMonolith: {
+}
+
+AshenPipeOrgan: {
+}
+
+AshenPlatform: {
+}
+
+AshenSink: {
+}
+
+AshenSlab: {
+}
+
+AshenSofa: {
+}
+
+AshenTable: {
+}
+
+AshenWorkBench: {
+}
+
+SmoothBrimstoneSlag: {
+}
+
+ActivatedAuricPanel: {
+}
+
+AuricAbsorber: {
+}
+
+AuricConsole: {
+}
+
+AuricDisplay: {
+}
+
+AuricLandMine: {
+}
+
+AuricPanel: {
+}
+
+AuricPlatform: {
+}
+
+AuricReinforcedCrate: {
+}
+
+AuricRepulserPanel: {
+}
+
+AuricScreen: {
+}
+
+AuricServer: {
+}
+
+AuricTerminal: {
+}
+
+ExoAuricPanel: {
+}
+
+BotanicBathtub: {
+}
+
+BotanicBed: {
+}
+
+BotanicBench: {
+}
+
+BotanicBookcase: {
+}
+
+BotanicCandelabra: {
+}
+
+BotanicCandle: {
+}
+
+BotanicChair: {
+}
+
+BotanicChandelier: {
+}
+
+BotanicChest: {
+}
+
+BotanicClock: {
+}
+
+BotanicDoor: {
+}
+
+BotanicDresser: {
+}
+
+BotanicLamp: {
+}
+
+BotanicLantern: {
+}
+
+BotanicPiano: {
+}
+
+BotanicPlanter: {
+}
+
+BotanicPlatform: {
+}
+
+BotanicSink: {
+}
+
+BotanicTable: {
+}
+
+BotanicWorkBench: {
+}
+
+CosmiliteBasin: {
+}
+
+CosmiliteBathtub: {
+}
+
+CosmiliteBed: {
+}
+
+CosmiliteBookcase: {
+}
+
+CosmiliteBrick: {
+}
+
+CosmiliteCandelabra: {
+}
+
+CosmiliteCandle: {
+}
+
+CosmiliteChair: {
+}
+
+CosmiliteChandelier: {
+}
+
+CosmiliteChest: {
+}
+
+CosmiliteClock: {
+}
+
+CosmiliteDoor: {
+}
+
+CosmiliteDresser: {
+}
+
+CosmiliteLamp: {
+}
+
+CosmiliteLantern: {
+}
+
+CosmilitePiano: {
+}
+
+CosmilitePlatform: {
+}
+
+CosmiliteSconce: {
+}
+
+CosmiliteSink: {
+}
+
+CosmiliteSofa: {
+}
+
+CosmiliteTable: {
+}
+
+CosmiliteWorkBench: {
+}
+
+DriftwoodBaroqueCello: {
+}
+
+DriftwoodBathtub: {
+}
+
+DriftwoodBed: {
+}
+
+DriftwoodBookcase: {
+}
+
+DriftwoodCandelabra: {
+}
+
+DriftwoodCandle: {
+}
+
+DriftwoodChair: {
+}
+
+DriftwoodChandelier: {
+}
+
+DriftwoodChest: {
+}
+
+DriftwoodDoor: {
+}
+
+DriftwoodDresser: {
+}
+
+DriftwoodLamp: {
+}
+
+DriftwoodLantern: {
+}
+
+DriftwoodPlatform: {
+}
+
+DriftwoodSink: {
+}
+
+DriftwoodSofa: {
+}
+
+DriftwoodSundial: {
+}
+
+DriftwoodTable: {
+}
+
+DriftwoodToilet: {
+}
+
+DriftwoodWorkBench: {
+}
+
+AncientNavystoneBathtub: {
+}
+
+AncientNavystoneBed: {
+}
+
+AncientNavystoneBench: {
+}
+
+AncientNavystoneBookcase: {
+}
+
+AncientNavystoneCandelabra: {
+}
+
+AncientNavystoneCandle: {
+}
+
+AncientNavystoneChair: {
+}
+
+AncientNavystoneChandelier: {
+}
+
+AncientNavystoneChest: {
+}
+
+AncientNavystoneClock: {
+}
+
+AncientNavystoneDoor: {
+}
+
+AncientNavystoneDresser: {
+}
+
+AncientNavystoneLamp: {
+}
+
+AncientNavystoneLantern: {
+}
+
+AncientNavystonePiano: {
+}
+
+AncientNavystonePlatform: {
+}
+
+AncientNavystoneSink: {
+}
+
+AncientNavystoneTable: {
+}
+
+AncientNavystoneWorkBench: {
+}
+
+AncientSmoothNavystone: {
+}
+
+EutrophicShelf: {
+}
+
+NavystoneBathtub: {
+}
+
+NavystoneBed: {
+}
+
+NavystoneBookcase: {
+}
+
+NavystoneCandelabra: {
+}
+
+NavystoneCandle: {
+}
+
+NavystoneChair: {
+}
+
+NavystoneChandelier: {
+}
+
+NavystoneChest: {
+}
+
+NavystoneClock: {
+}
+
+NavystoneDoor: {
+}
+
+NavystoneDresser: {
+}
+
+NavystoneLamp: {
+}
+
+NavystoneLantern: {
+}
+
+NavystoneLyre: {
+}
+
+NavystonePlatform: {
+}
+
+NavystoneSink: {
+}
+
+NavystoneTable: {
+}
+
+NavystoneToilet: {
+}
+
+NavystoneTriclinium: {
+}
+
+NavystoneWorkBench: {
+}
+
+SmoothNavystone: {
+}
+
+ExoBathtub: {
+}
+
+ExoBed: {
+}
+
+ExoBookcase: {
+}
+
+ExoCandelabra: {
+}
+
+ExoCandle: {
+}
+
+ExoChair: {
+}
+
+ExoChandelier: {
+}
+
+ExoChest: {
+}
+
+ExoClock: {
+}
+
+ExoConsole: {
+}
+
+ExoDisplay: {
+}
+
+ExoDoor: {
+}
+
+ExoDresser: {
+}
+
+ExoKeyboard: {
+}
+
+ExoLamp: {
+}
+
+ExoLantern: {
+}
+
+ExoPlatform: {
+}
+
+ExoPlating: {
+}
+
+ExoPrismPanel: {
+}
+
+ExoPrismPlatform: {
+}
+
+ExoScreen: {
+}
+
+ExoServer: {
+}
+
+ExoSink: {
+}
+
+ExoSofa: {
+}
+
+ExoTable: {
+}
+
+ExoTerminal: {
+}
+
+ExoToilet: {
+}
+
+ExoWorkBench: {
+}
+
+MarniteChest: {
+}
+
+MarniteDresser: {
+}
+
+MarniteBathtub: {
+}
+
+MarniteBed: {
+}
+
+MarniteBookcase: {
+}
+
+MarniteCandelabra: {
+}
+
+MarniteCandle: {
+}
+
+MarniteChair: {
+}
+
+MarniteChandelier: {
+}
+
+MarniteClock: {
+}
+
+MarniteDoor: {
+}
+
+MarniteLamp: {
+}
+
+MarniteLantern: {
+}
+
+MarniteLight: {
+}
+
+MarniteOrgan: {
+}
+
+MarniteSink: {
+}
+
+MarniteSofa: {
+}
+
+MarniteTable: {
+}
+
+MarniteToilet: {
+}
+
+MarniteWorkBench: {
+}
+
+PolishedMarniteBlock: {
+}
+
+PolishedMarnitePlatform: {
+}
+
+PolishedMarniteWall: {
+}
+
+MonolithAmalgam: {
+}
+
+MonolithBathtub: {
+}
+
+MonolithBed: {
+}
+
+MonolithBench: {
+}
+
+MonolithBookcase: {
+}
+
+MonolithCandelabra: {
+}
+
+MonolithCandle: {
+}
+
+MonolithChair: {
+}
+
+MonolithChandelier: {
+}
+
+MonolithChest: {
+}
+
+MonolithClock: {
+}
+
+MonolithDoor: {
+}
+
+MonolithDresser: {
+}
+
+MonolithLamp: {
+}
+
+MonolithLantern: {
+}
+
+MonolithPiano: {
+}
+
+MonolithPlatform: {
+}
+
+MonolithSink: {
+}
+
+MonolithTable: {
+}
+
+MonolithWorkBench: {
+}
+
+OtherworldlyBathtub: {
+}
+
+OtherworldlyBed: {
+}
+
+OtherworldlyBookcase: {
+}
+
+OtherworldlyCandelabra: {
+}
+
+OtherworldlyCandle: {
+}
+
+OtherworldlyChair: {
+}
+
+OtherworldlyChandelier: {
+}
+
+OtherworldlyChest: {
+}
+
+OtherworldlyClock: {
+}
+
+OtherworldlyDoor: {
+}
+
+OtherworldlyDresser: {
+}
+
+OtherworldlyLamp: {
+}
+
+OtherworldlyLantern: {
+}
+
+OtherworldlyPiano: {
+}
+
+OtherworldlyPlatform: {
+}
+
+OtherworldlySink: {
+}
+
+OtherworldlySofa: {
+}
+
+OtherworldlyStone: {
+}
+
+OtherworldlyTable: {
+}
+
+OtherworldlyWorkBench: {
+}
+
+BrokenPlaguedBed: {
+}
+
+PlaguedContainmentBrick: {
+}
+
+PlaguedPlateBathtub: {
+}
+
+PlaguedPlateBed: {
+}
+
+PlaguedPlateBookcase: {
+}
+
+PlaguedPlateCandelabra: {
+}
+
+PlaguedPlateCandle: {
+}
+
+PlaguedPlateChair: {
+}
+
+PlaguedPlateChandelier: {
+}
+
+PlaguedPlateChest: {
+}
+
+PlaguedPlateClock: {
+}
+
+PlaguedPlateDoor: {
+}
+
+PlaguedPlateDresser: {
+}
+
+PlaguedPlateLamp: {
+}
+
+PlaguedPlateLantern: {
+}
+
+PlaguedPlatePiano: {
+}
+
+PlaguedPlatePlatform: {
+}
+
+PlaguedPlateSink: {
+}
+
+PlaguedPlateSofa: {
+}
+
+PlaguedPlateTable: {
+}
+
+PlaguedWorkBench: {
+}
+
+ProfanedBathtub: {
+}
+
+ProfanedBed: {
+}
+
+ProfanedBench: {
+}
+
+ProfanedBookcase: {
+}
+
+ProfanedCandelabra: {
+}
+
+ProfanedCandle: {
+}
+
+ProfanedChair: {
+}
+
+ProfanedChandelier: {
+}
+
+ProfanedChest: {
+}
+
+ProfanedClock: {
+}
+
+ProfanedCrystal: {
+}
+
+ProfanedDoor: {
+}
+
+ProfanedDresser: {
+}
+
+ProfanedLamp: {
+}
+
+ProfanedLantern: {
+}
+
+ProfanedPiano: {
+}
+
+ProfanedPlatform: {
+}
+
+ProfanedRock: {
+}
+
+ProfanedSink: {
+}
+
+ProfanedSlab: {
+}
+
+ProfanedTable: {
+}
+
+ProfanedWorkBench: {
+}
+
+RunicProfanedBrick: {
+}
+
+EyeOfTheAccursedBanner: {
+}
+
+LargeRitualCandle: {
+}
+
+MonolithOfTheAccursed: {
+}
+
+OccultBrickItem: {
+}
+
+OccultLegionnaireBanner: {
+}
+
+OccultPlatformItem: {
+}
+
+RitualCandle: {
+}
+
+SacrilegiousBathtub: {
+}
+
+SacrilegiousBed: {
+}
+
+SacrilegiousBench: {
+}
+
+SacrilegiousBookcase: {
+}
+
+SacrilegiousCandelabra: {
+}
+
+SacrilegiousCandle: {
+}
+
+SacrilegiousChair: {
+}
+
+SacrilegiousChandelier: {
+}
+
+SacrilegiousChest: {
+}
+
+SacrilegiousClock: {
+}
+
+SacrilegiousDoor: {
+}
+
+SacrilegiousDresser: {
+}
+
+SacrilegiousLamp: {
+}
+
+SacrilegiousLantern: {
+}
+
+SacrilegiousOrgan: {
+}
+
+SacrilegiousSink: {
+}
+
+SacrilegiousTable: {
+}
+
+SacrilegiousWorkBench: {
+}
+
+SilvaBasin: {
+}
+
+SilvaBathtub: {
+}
+
+SilvaBed: {
+}
+
+SilvaBench: {
+}
+
+SilvaBookcase: {
+}
+
+SilvaCandelabra: {
+}
+
+SilvaCandle: {
+}
+
+SilvaChair: {
+}
+
+SilvaChandelier: {
+}
+
+SilvaChest: {
+}
+
+SilvaClock: {
+}
+
+SilvaCrystal: {
+}
+
+SilvaDoor: {
+}
+
+SilvaDresser: {
+}
+
+SilvaLamp: {
+}
+
+SilvaLantern: {
+}
+
+SilvaPiano: {
+}
+
+SilvaPlatform: {
+}
+
+SilvaSink: {
+}
+
+SilvaTable: {
+}
+
+SilvaWorkBench: {
+}
+
+StaticRefiner: {
+}
+
+StatigelBathtub: {
+}
+
+StatigelBed: {
+}
+
+StatigelBlock: {
+}
+
+StatigelBookcase: {
+}
+
+StatigelCandelabra: {
+}
+
+StatigelCandle: {
+}
+
+StatigelChair: {
+}
+
+StatigelChandelier: {
+}
+
+StatigelChest: {
+}
+
+StatigelClock: {
+}
+
+StatigelDoor: {
+}
+
+StatigelDresser: {
+}
+
+StatigelLamp: {
+}
+
+StatigelLantern: {
+}
+
+StatigelPiano: {
+}
+
+StatigelPlatform: {
+}
+
+StatigelSink: {
+}
+
+StatigelSofa: {
+}
+
+StatigelTable: {
+}
+
+StatigelWorkBench: {
+}
+
+StratusBathtub: {
+}
+
+StratusBed: {
+}
+
+StratusBookcase: {
+}
+
+StratusBricks: {
+}
+
+StratusCandelabra: {
+}
+
+StratusCandle: {
+}
+
+StratusChair: {
+}
+
+StratusChandelier: {
+}
+
+StratusChest: {
+}
+
+StratusClock: {
+}
+
+StratusDoor: {
+}
+
+StratusDresser: {
+}
+
+StratusLamp: {
+}
+
+StratusLantern: {
+}
+
+StratusPiano: {
+}
+
+StratusPlatform: {
+}
+
+StratusSink: {
+}
+
+StratusSofa: {
+}
+
+StratusStarPlatformItem: {
+}
+
+StratusTable: {
+}
+
+StratusWorkBench: {
+}
+
+SmoothVoidstone: {
+}
+
+SmoothVoidstonePlatform: {
+}
+
+VoidBathtub: {
+}
+
+VoidBed: {
+}
+
+VoidBookcase: {
+}
+
+VoidCandelabra: {
+}
+
+VoidCandle: {
+}
+
+VoidChair: {
+}
+
+VoidChandelier: {
+}
+
+VoidChest: {
+}
+
+VoidDoor: {
+}
+
+VoidDresser: {
+}
+
+VoidLamp: {
+}
+
+VoidLantern: {
+}
+
+VoidObelisk: {
+}
+
+VoidPiano: {
+}
+
+VoidSink: {
+}
+
+VoidSofa: {
+}
+
+VoidstoneSlab: {
+}
+
+VoidTable: {
+}
+
+VoidWorkBench: {
+}
+
+ChargedWulfrumEnergyBarrier: {
+}
+
+ChargedWulfrumWallMountedBulb: {
+}
+
+WulfrumBathtub: {
+}
+
+WulfrumBed: {
+}
+
+WulfrumBookcase: {
+}
+
+WulfrumCandelabra: {
+}
+
+WulfrumCandle: {
+}
+
+WulfrumChair: {
+}
+
+WulfrumChandelier: {
+}
+
+WulfrumClock: {
+}
+
+WulfrumDresser: {
+}
+
+WulfrumEnergyBarrier: {
+}
+
+WulfrumLabstationItem: {
+}
+
+WulfrumLamp: {
+}
+
+WulfrumLantern: {
+}
+
+WulfrumPanels: {
+}
+
+WulfrumPiano: {
+}
+
+WulfrumPlatform: {
+}
+
+WulfrumPlating: {
+}
+
+WulfrumSheets: {
+}
+
+WulfrumSiding: {
+}
+
+WulfrumSink: {
+}
+
+WulfrumSofa: {
+}
+
+WulfrumTable: {
+}
+
+WulfrumToilet: {
+}
+
+WulfrumWallMountedBulb: {
+}
+
+WulfrumWorkBench: {
+}
+
+AnodizedWulfrumBathtub: {
+}
+
+AnodizedWulfrumBookcase: {
+}
+
+AnodizedWulfrumChair: {
+}
+
+AnodizedWulfrumChandelier: {
+}
+
+AnodizedWulfrumChest: {
+}
+
+AnodizedWulfrumDeskLight: {
+}
+
+AnodizedWulfrumDoor: {
+}
+
+AnodizedWulfrumDresser: {
+}
+
+AnodizedWulfrumJukebox: {
+}
+
+AnodizedWulfrumLamp: {
+}
+
+AnodizedWulfrumLantern: {
+}
+
+AnodizedWulfrumPanels: {
+}
+
+AnodizedWulfrumPlatform: {
+}
+
+AnodizedWulfrumSink: {
+}
+
+AnodizedWulfrumSleepingPod: {
+}
+
+AnodizedWulfrumSofa: {
+}
+
+AnodizedWulfrumTable: {
+}
+
+AnodizedWulfrumTrim: {
+}
+
+AnodizedWulfrumToilet: {
+}
+
+AnodizedWulfrumWorkBench: {
+}
+
+RoundedAnodizedWulfrumPanels: {
+}
+
+HardenedAstralSand: {
+}
+
+HardenedSulphurousSandstone: {
+}
+
+LivingBrimstoneFireBlock: {
+}
+
+LivingGodSlayerFireBlock: {
+}
+
+LivingHolyFireBlock: {
+}
+
+LivingPlagueFireBlock: {
+}
+
+// Music Boxes
+
+DraedonExoSelectMusicBox: {
+}
+
+DraedonTalkMusicBox: {
+}
+
+NovaeSlag: {
+}
+
+AerialiteOre: {
+}
+
+AerialiteOreDisenchanted: {
+}
+
+AstralOre: {
+}
+
+AuricOre: {
+}
+
+CryonicOre: {
+}
+
+ExodiumCluster: {
+}
+
+HallowedOre: {
+}
+
+InfernalSuevite: {
+}
+
+PerennialOre: {
+}
+
+ScoriaOre: {
+}
+
+UelibloomOre: {
+}
+
+PerennialBrick: {
+}
+
+PlantyMush: {
+}
+
+Cinderplate: {
+}
+
+Elumplate: {
+}
+
+Havocplate: {
+}
+
+Navyplate: {
+}
+
+Onyxplate: {
+}
+
+Plagueplate: {
+}
+
+PrismShard: {
+}
+
+PyreMantle: {
+}
+
+PyreMantleMolten: {
+}
+
+ScorchedBone: {
+}
+
+ScorchedRemains: {
+}
+
+ScoriaBrick: {
+}
+
+SeaPrism: {
+}
+
+SeaPrismBrick: {
+}
+
+SpineSapling: {
+}
+
+Stohne: {
+}
+
+SulphurousSand: {
+}
+
+SulphurousSandstone: {
+}
+
+SulphurousShale: {
+}
+
+// Sunken Sea
+
+Basalt: {
+}
+
+Driftwood: {
+}
+
+Dunesand: {
+}
+
+Navystone: {
+}
+
+Shellstone: {
+}
+
+PolishedNavystoneBrick: {
+}
+
+ShellstoneSlab: {
+}
+
+BlackPearlPile: {
+}
+
+PinkPearlPile: {
+}
+
+WhitePearlPile: {
+}
+
+CyanCoral: {
+}
+
+MagentaCoral: {
+}
+
+OrangeCoral: {
+}
+
+LimeCoral: {
+}
+
+YellowCoral: {
+}
+
+Runestone: {
+}
+
+RuneSand: {
+	DisplayName: Runesand
+	Tooltip: ""
+}
+
+Limestone: {
+}
+
+PolypSand: {
+}
+
+TableCoralLeft: {
+	DisplayName: Table Coral
+	Tooltip: ""
+}
+
+VolcanicSand: {
+}
+
+// End of Sunken Sea
+
+UelibloomBrick: {
+}
+
+VernalSoil: {
+}
+
+Voidstone: {
+}
+
+AbyssGravelWallItem: {
+}
+
+AcidwoodWallItem: {
+}
+
+AerialiteBrickWall: {
+}
+
+AncientSmoothNavystoneWall: {
+}
+
+AshenSlabWall: {
+}
+
+AstralBrickWall: {
+}
+
+AstralDirtWall: {
+}
+
+AstralGrassWall: {
+}
+
+AstralIceWall: {
+}
+
+AstralMonolithWall: {
+}
+
+AstralSandstoneWall: {
+}
+
+AstralSnowWall: {
+}
+
+AstralStoneWall: {
+}
+
+BrimstoneSlabWall: {
+}
+
+BrimstoneSlagWall: {
+}
+
+CelestialRemainsWall: {
+}
+
+CinderplateWall: {
+}
+
+CosmiliteBrickWall: {
+}
+
+CryonicBrickWall: {
+}
+
+// Draedon
+
+HazardChevronWall: {
+}
+
+LaboratoryPanelWall: {
+}
+
+LaboratoryPlateBeam: {
+}
+
+LaboratoryPlatePillar: {
+}
+
+LaboratoryPlatingWall: {
+}
+
+RustedPlateBeam: {
+}
+
+RustedPlatePillar: {
+}
+
+RustedPlatingWall: {
+}
+
+// End of Draedon
+
+AnodizedWulfrumTrimWall: {
+}
+
+ChargedWulfrumEnergyBarrierWall: {
+}
+
+DriftwoodWall: {
+}
+
+ElumplateWall: {
+}
+
+EutrophicGlassWall: {
+}
+
+ExoPlatingWallItem: {
+}
+
+ExoPrismPanelWallItem: {
+}
+
+FloralWall: {
+}
+
+HardenedAstralSandWall: {
+}
+
+HardenedSulphurousSandstoneWall: {
+}
+
+HavocplateWall: {
+}
+
+LimestoneWall: {
+}
+
+NavyplateWall: {
+}
+
+NavystoneWall: {
+}
+
+OccultBrickWallItem: {
+}
+
+OnyxplateWall: {
+}
+
+OtherworldlyStoneWall: {
+}
+
+PerennialBrickWall: {
+}
+
+PlagueContainmentCellsWall: {
+}
+
+PlaguedPlateWall: {
+}
+
+ProfanedCrystalWall: {
+}
+
+ProfanedRockWall: {
+}
+
+ProfanedSlabWall: {
+}
+
+PyreMantleWall: {
+}
+
+RoundedAnodizedWulfrumPanelWall: {
+}
+
+RunestoneWall: {
+}
+
+RunicProfanedBrickWall: {
+}
+
+ScorchedBoneWall: {
+}
+
+ScoriaBrickWall: {
+}
+
+ShellstoneSlabWall: {
+}
+
+ShellstoneWall: {
+}
+
+SilvaWall: {
+}
+
+SmoothAbyssGravelWall: {
+}
+
+SmoothBrimstoneSlagWall: {
+}
+
+SmoothNavystoneWall: {
+}
+
+SmoothVoidstoneWall: {
+}
+
+StatigelWall: {
+}
+
+StratusWall: {
+}
+
+SulphurousSandstoneWall: {
+}
+
+SulphurousSandWall: {
+}
+
+SulphurousShaleWall: {
+}
+
+UelibloomBrickWall: {
+}
+
+VoidstoneSlabWall: {
+}
+
+VoidstoneWall: {
+}
+
+WulfrumComplexPanelWall: {
+}
+
+WulfrumEnergyBarrierWall: {
+}
+
+WulfrumPanelWall: {
+}
+
+WulfrumPillar: {
+}
+
+WulfrumPlatingWall: {
+}
+
+WulfrumSheetWall: {
+}
+
+WulfrumSidingWall: {
+}
+
+FireTurret: {
+}
+
+HostileFireTurret: {
+}
+
+HostileIceTurret: {
+}
+
+HostileLabTurret: {
+}
+
+HostileLaserTurret: {
+}
+
+HostileOnyxTurret: {
+}
+
+HostilePlagueTurret: {
+}
+
+HostileWaterTurret: {
+}
+
+IceTurret: {
+}
+
+LabTurret: {
+}
+
+LaserTurret: {
+}
+
+OnyxTurret: {
+}
+
+PlagueTurret: {
+}
+
+WaterTurret: {
+}
+
+// Draedon lab lights
+
+CagedLablightItem: {
+}
+
+AgedLablightItem: {
+}
+
+MiniCagedLablightItem: {
+}
+
+MiniAgedLablightItem: {
+}
+
+CagedCinderlightItem: {
+}
+
+AgedCinderlightItem: {
+}
+
+MiniCagedCinderlightItem: {
+}
+
+MiniAgedCinderlightItem: {
+}
+
+CagedFlamelightItem: {
+}
+
+AgedFlamelightItem: {
+}
+
+MiniCagedFlamelightItem: {
+}
+
+MiniAgedFlamelightItem: {
+}
+
+CagedFrostlightItem: {
+}
+
+AgedFrostlightItem: {
+}
+
+MiniCagedFrostlightItem: {
+}
+
+MiniAgedFrostlightItem: {
+}
+
+CagedBiolightItem: {
+}
+
+AgedBiolightItem: {
+}
+
+MiniCagedBiolightItem: {
+}
+
+MiniAgedBiolightItem: {
+}
+
+CagedBlacklightItem: {
+}
+
+AgedBlacklightItem: {
+}
+
+MiniCagedBlacklightItem: {
+}
+
+MiniAgedBlacklightItem: {
+}
+
+CagedFloodlightItem: {
+}
+
+AgedFloodlightItem: {
+}
+
+MiniCagedFloodlightItem: {
+}
+
+MiniAgedFloodlightItem: {
+}
+
+AridSoil: {
+}
+
+RunestoneTerracotta: {
+}
+
+ShellTrimBrick: {
+}
+
+ShellTrimBrickWall: {
+}
+
+BasaltSlab: {
+}
+
+UnsafeNavystoneWall: {
+}
+
+MossyStone: {
+}
+
+EutrophicSandWall: {
+}
+
+EutrophicSandWallSafe: {
+}

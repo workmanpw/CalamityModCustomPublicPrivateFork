@@ -93,7 +93,6 @@ namespace CalamityModCustomPublicPrivateFork.Graphics.Renderers
                 if (!renderer.ShouldDraw)
                     continue;
 
-                using (Main.spriteBatch.Scope())
                 using (renderer.MainTarget.Scope(clearColor: Color.Transparent))
                 {
                     Main.spriteBatch.Begin(

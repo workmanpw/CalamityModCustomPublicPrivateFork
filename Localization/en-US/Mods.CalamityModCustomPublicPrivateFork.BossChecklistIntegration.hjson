@@ -1,0 +1,98 @@
+AcidRainT1.SpawnInfo: Use a [i:CalamityModCustomPublicPrivateFork/CausticTear] or wait for an acidic downpour to occur naturally after the Eye of Cthulhu is defeated.
+AcidRainT2.SpawnInfo: Use a [i:CalamityModCustomPublicPrivateFork/CausticTear] or wait for an acidic downpour to occur naturally after the Aquatic Scourge is defeated.
+AcidRainT3.SpawnInfo: Use a [i:CalamityModCustomPublicPrivateFork/CausticTear] or wait for an acidic downpour to occur naturally after Polterghast is defeated.
+
+AquaticScourge: {
+}
+
+AstrumAureus: {
+}
+
+AstrumDeus: {
+}
+
+BossRush.SpawnInfo: Use the [i:CalamityModCustomPublicPrivateFork/Terminus] found at the bottom of the Abyss.
+
+BrimstoneElemental: {
+}
+
+Calamitas: {
+}
+
+CalamitasClone: {
+}
+
+CeaselessVoid: {
+}
+
+Crabulon: {
+}
+
+CragmawMire: {
+}
+
+Cryogen: {
+}
+
+DesertScourge: {
+}
+
+DevourerofGods: {
+}
+
+Dragonfolly: {
+}
+
+ExoMechs: {
+}
+
+GiantClam: {
+}
+
+GreatSandShark: {
+}
+
+HiveMind: {
+}
+
+Leviathan: {
+}
+
+Mauler: {
+}
+
+NuclearTerror: {
+}
+
+OldDuke: {
+}
+
+Perforators: {
+}
+
+PlaguebringerGoliath: {
+}
+
+Polterghast: {
+}
+
+ProfanedGuardians: {
+}
+
+Providence: {
+}
+
+Ravager: {
+}
+
+Signus: {
+}
+
+SlimeGod: {
+}
+
+StormWeaver: {
+}
+
+Yharon: {
+}

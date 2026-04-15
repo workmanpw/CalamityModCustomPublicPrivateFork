@@ -1,0 +1,228 @@
+AstralBreastplate: {
+}
+
+AstralHelm.SetBonus:
+	'''
+	{$CommonItemTooltip.IncreasesMaxMinionsBy}
+	{$CommonItemTooltip.PercentIncreasedDamageCritChance@1}
+	Detects nearby creatures, enemy projectiles, danger sources, and treasure
+	Whenever you crit an enemy, a barrage of stars will rain down
+	This effect has a {2} {^2:second;seconds} cooldown before it can trigger again
+	'''
+
+AstralLeggings: {
+}
+
+BrimflameBoots: {
+}
+
+BrimflameCowl.SetBonus:
+	'''
+	{$CommonItemTooltip.PercentIncreasedMagicDamageCritChance}
+	[c/{1}:Brimflame Frenzy - {2} for {3} {^3:second;seconds} of {$CommonItemTooltip.PercentIncreasedMagicDamage@4}]
+	[c/FF9173:However, this inflicts rapid life loss and disables mana regeneration and mana potions]
+	[c/FF9173:This effect can be toggled off and has a cooldown of {5} {^5:second;seconds}]
+	'''
+
+BrimflameRobes: {
+}
+
+DaedalusBreastplate: {
+}
+
+DaedalusHeadMagic.SetBonus: You have a {0}% chance to heal back {1}% of taken damage
+DaedalusHeadMelee.SetBonus:
+	'''
+	{$Common.AggroBoost}
+	You reflect projectiles back at enemies, negating their damage
+	{$Common.ReflectInformation}
+	'''
+DaedalusHeadRanged.SetBonus: Getting hit causes you to emit a blast of crystal shards
+DaedalusHeadRogue.SetBonus:
+	'''
+	{$Common.RogueStealth}
+	Rogue projectiles throw out crystal shards as they travel
+	'''
+DaedalusHeadSummon.SetBonus:
+	'''
+	{$CommonItemTooltip.IncreasesMaxMinionsBy}
+	{$CommonItemTooltip.PercentIncreasedSummonDamage@1}
+	A daedalus crystal floats above you to protect you
+	'''
+
+DaedalusLeggings: {
+}
+
+FathomSwarmerBoots: {
+}
+
+FathomSwarmerBreastplate: {
+}
+
+FathomSwarmerVisage.SetBonus:
+	'''
+	{$CommonItemTooltip.IncreasesMaxMinionsBy}
+	{$CommonItemTooltip.PercentIncreasedSummonDamage@1}
+	Grants the ability to climb walls
+	{$CommonItemTooltip.PercentIncreasedSummonDamage@2}, +{3} defense and +{4} HP/s life regen while underwater
+	Provides a moderate amount of light and moderately reduces breath loss in the abyss
+	'''
+ForbiddenCirclet.SetBonus:
+	'''
+	{$Common.RogueStealth}
+	{1} to call an ancient storm to the cursor location
+	The ancient storm costs {2} mana and benefits from both summon and rogue bonuses
+	Rogue stealth strikes will tag enemies, causing summons to spawn homing eaters on hit
+	Using summon weapons no longer reset your stealth
+	Minions no longer deal less damage while wielding rogue weapons
+	'''
+HydrothermicArmor.CommonSetBonus:
+	'''
+	Inferno effect when below {0}% life
+	You emit a blazing explosion when you are hit
+	'''
+HydrothermicHeadMagic.SetBonus:
+	'''
+	Magic attacks summon damaging and healing flare orbs on hit
+	{$HydrothermicArmor.CommonSetBonus}
+	'''
+HydrothermicHeadMelee.SetBonus:
+	'''
+	{$Common.AggroBoost}
+	Melee attacks and projectiles cause chaos flames to erupt on enemy hits
+	{$HydrothermicArmor.CommonSetBonus}
+	'''
+HydrothermicHeadRanged.SetBonus:
+	'''
+	You fire a homing chaos flare when using ranged weapons every {0} seconds
+	{$HydrothermicArmor.CommonSetBonus@1}
+	'''
+HydrothermicHeadRogue.SetBonus:
+	'''
+	{$Common.RogueStealth}
+	Rogue weapons unleash a volley of homing chaos flames around the player every {1} seconds
+	{$HydrothermicArmor.CommonSetBonus@2}
+	'''
+HydrothermicHeadSummon.SetBonus:
+	'''
+	{$CommonItemTooltip.IncreasesMaxMinionsBy}
+	{$CommonItemTooltip.PercentIncreasedSummonDamage@1}
+	Summons a hydrothermic vent to protect you
+	{$HydrothermicArmor.CommonSetBonus@2}
+	'''
+
+HydrothermicSubligar: {
+}
+
+LunicCorpsBoots: {
+}
+
+LunicCorpsHelmet: {
+	SetBonus:
+		'''
+		{0}% increased jump speed
+		[c/{1}:MJOLNIR Shield - Projects a bubble shield that absorbs up to {2} damage]{3}
+		[c/52CBDE:The shield starts recharging {4} {^4:second;seconds} after being hit]
+		[c/52CBDE:Recharging from zero to full charge takes {5} {^5:second;seconds}]
+		[c/52CBDE:Being hit again while recharging restarts the charge timer]
+		[c/9EA67F:'Finish the fight']
+		'''
+	ShieldAdren: "[c/52CBDE:Halves Adrenaline lost on hit if the shield fully absorbs the hit]"
+}
+
+LunicCorpsVest: {
+}
+
+MolluskShelleggings: {
+}
+
+MolluskShellmet.SetBonus:
+	'''
+	{0}% increased damage reduction
+	Two shellfishes aid you in combat
+	'''
+
+MolluskShellplate: {
+}
+
+PlaguebringerCarapace: {
+}
+
+PlaguebringerPistons: {
+}
+
+PlaguebringerVisor.SetBonus:
+	'''
+	Grants a plague dash which can slam through enemies without taking damage
+	Summons a lil' plaguebringer which swarms your foes with little bees
+	Friendly bees inflict [cbuff:CalamityModCustomPublicPrivateFork/Plague]
+	'''
+PlagueReaperMask.SetBonus:
+	'''
+	{0}% increased flight time
+	Enemies afflicted by the Plague take {1}x damage from ranged projectiles
+	[c/{2}:Plague Blackout - {3} to greatly empower your damage but completely blind yourself]
+	[c/009418:{$CommonItemTooltip.PercentIncreasedRangedDamage@4} and {$CommonItemTooltip.PercentIncreasedRangedCritChance@5} while blacked out]
+	[c/009418:This effect lasts {6} {^6:second;seconds} and has a cooldown of {7} {^7:second;seconds}]
+	'''
+
+PlagueReaperStriders: {
+}
+
+PlagueReaperVest: {
+}
+
+ReaverCuisses: {
+}
+
+ReaverHeadExplore.SetBonus:
+	'''
+	Emits light and shows the location of treasure and ore
+	{$Common.AggroReduction} and grants underwater breathing
+	Greatly enhances visibility in the abyss
+	Increased block placement & tool range by {0}
+	Increases pickup range for items
+	'''
+ReaverHeadMobility.SetBonus:
+	'''
+	Grants immunity to fall damage and allows constant jumping
+	{0}% increased flight time and horizontal wing speed
+	Grappling hooks retract and pull the player {1}% faster
+	Reduces the cooldown of dashes by {2}%
+	'''
+ReaverHeadTank.SetBonus:
+	'''
+	{$Common.AggroBoost}
+	Reduces the life regen lost from damage over time debuffs by {0}%
+	{1}% decreased movement speed and flight time
+	Grants [cbuff:CalamityModCustomPublicPrivateFork/ReaverRage] for {2} {^2:second;seconds} after taking damage
+	'''
+
+ReaverScaleMail: {
+}
+
+TitanHeartBoots: {
+}
+
+TitanHeartMantle: {
+}
+
+TitanHeartMask.SetBonus:
+	'''
+	{$Common.RogueStealth}
+	Stealth strikes deal {1}x knockback and cause an astral explosion
+	{$Common.KnockbackImmunity}
+	'''
+
+UmbraphileBoots: {
+}
+
+UmbraphileHood.SetBonus:
+	'''
+	{$Common.RogueStealth}
+	Rogue weapons have a chance to create explosions on hit
+	Stealth strikes always create an explosion
+	'''
+
+UmbraphileRegalia: {
+}

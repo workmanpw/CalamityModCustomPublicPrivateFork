@@ -1,0 +1,474 @@
+AbyssalTome: {
+}
+
+AbyssShocker: {
+}
+
+AcidGun: {
+}
+
+AetherfluxCannon: {
+}
+
+AethersWhisper: {
+}
+
+AlulaAustralis: {
+}
+
+AlphaDraconis: {
+}
+
+AnahitasArpeggio: {
+	TooltipNormal:
+		'''
+		Holding <left> casts up to 6 treble clefs that orbit the player
+		Releasing <left> causes the treble clefs to converge at the cursor
+		After converging, treble clefs seek your cursor
+		'''
+	TooltipGFB:
+		'''
+		"NOOOOOOOO! You're supposed to obey me!!!!"
+		The seven treble clef souls:
+		'''
+}
+
+Apathanull: {
+}
+
+ApoctosisArray: {
+}
+
+Apotheosis: {
+}
+
+AquamarineStaff: {
+}
+
+ArchAmaryllis: {
+}
+
+ArcticBearPaw: {
+}
+
+ArtAttack: {
+}
+
+AstralachneaStaff: {
+}
+
+AstralStaff: {
+}
+
+Atlantis: {
+}
+
+AuguroftheVoid: {
+}
+
+BelchingSaxophone: {
+}
+
+Biofusillade: {
+}
+
+BlackAnurian: {
+}
+
+BloodBath: {
+}
+
+BrimroseStaff: {
+}
+
+BurningSea: {
+}
+
+ChronomancersScythe: {
+}
+
+ClothiersWrath: {
+}
+
+CoralSpout: {
+}
+
+CosmicRainbow: {
+}
+
+Cryophobia: {
+}
+
+DarkSpark: {
+}
+
+DeathValleyDuster: {
+}
+
+Downpour: {
+}
+
+Effervescence: {
+}
+
+EidolicWail: {
+}
+
+EidolonStaff: {
+}
+
+EldritchTome: {
+}
+
+Eternity: {
+}
+
+EventHorizon: {
+}
+
+EvergladeSpray: {
+}
+
+FaceMelter: {
+}
+
+FatesReveal: {
+}
+
+FlareBolt: {
+}
+
+ForbiddenSun: {
+}
+
+FrigidflashBolt: {
+}
+
+FrostBolt: {
+}
+
+Genesis: {
+}
+
+GhastlyVisage: {
+}
+
+GleamingMagnolia: {
+}
+
+GloriousEnd: {
+}
+
+GruesomeEminence.Calamitas:
+	'''
+	'Many will tell you that Yharim fell from grace as his Crusade went on, but that's far from the truth.
+	Sure, he was a good man when he was killing assassins drunk on power, but even as he dethroned dictators, entire kingdoms were leveled alongside.
+	I wish more people could bear witness to this "Polterghast". Maybe then, they would understand the pain he caused for the world.'
+	'''
+
+HadalUrn: {
+}
+
+HeliumFlash: {
+}
+
+HellwingStaff: {
+}
+
+Hematemesis: {
+}
+
+Heresy: {
+}
+
+HyperdeathRiftScepter: {
+}
+
+HyphaeRod: {
+}
+
+IceBarrage: {
+}
+
+IcicleStaff: {
+}
+
+IcicleTrident: {
+}
+
+InfernalRift: {
+}
+
+IonBlaster: {
+}
+
+Keelhaul: {
+}
+
+LashesofChaos: {
+}
+
+LightGodsBrilliance: {
+}
+
+MadAlchemistsCocktailGlove: {
+}
+
+MagneticMeltdown: {
+}
+
+ManaRose: {
+}
+
+Miasma: {
+}
+
+Mistlestorm: {
+}
+
+NanoPurge: {
+}
+
+NebulousCataclysm: {
+}
+
+NightsRay: {
+}
+
+NuclearFury: {
+}
+
+Nucleosynthesis: {
+}
+
+Omicron: {
+}
+
+ParasiticSceptor: {
+}
+
+PhantasmalFury: {
+}
+
+PhoenixFlameBarrage: {
+}
+
+Photosynthesis: {
+}
+
+PlagueStaff: {
+}
+
+PlasmaRifle: {
+}
+
+PlasmaRod: {
+}
+
+Poseidon: {
+}
+
+PrimordialAncient: {
+}
+
+PrimordialEarth: {
+}
+
+PurgeGuzzler: {
+}
+
+RainbowPartyCannon: {
+}
+
+Rancor.Calamitas:
+	'''
+	'Yharim told me it was Otonilou who unleashed the Brimstone Elemental unto Azafure.
+	I believed him at the time, being a child looking for someone to blame for all her woes.
+	So I unleashed upon them all the fury and scorn I thought they deserved, and only once it was too late did I see through his lies.'
+	'''
+
+RecitationoftheBeast: {
+}
+
+RelicofRuin: {
+}
+
+RougeSlash: {
+}
+
+SandstreamScepter: {
+}
+
+SanguineFlare: {
+}
+
+SeethingDischarge: {
+}
+
+Serpentine: {
+}
+
+ShadecrystalBarrage: {
+}
+
+ShaderainStaff: {
+}
+
+ShadowboltStaff: {
+}
+
+ShiftingSands: {
+}
+
+SHPC: {
+	TooltipNormal:
+		'''
+		Consumes Souls as ammo
+		Ejects orbs of unstable, concentrated soulpower that linger and explode
+		Orbs emit seeking souls and lingering pickup souls after collapse
+		Orbs have varying effects depending on Soul type used
+		{0}
+		Press <right> to use the machine as a vacuum, pulling in lingering souls
+		Once released, a torrent of soul lasers is discharged scaling with the number of souls pulled in
+		'''
+	// These are the soul effect descriptions, the number is the item ID of the soul
+	NoSoul: "[c/808080:There is currently no soul type injected into the weapon]"
+	SoulDesc520: "[c/F01DC4:Light-infused orbs create larger explosions]"
+	SoulDesc521: "[c/7B1DDC:Night-infused orbs create longer lasting explosions]"
+	SoulDesc575: "[c/6AF0FA:Flight-infused orbs travel faster and restore flight time on direct hits]"
+	SoulDesc548: "[c/0433DE:Might-infused orbs apply mighty knockback to enemies]"
+	SoulDesc549: "[c/4FFF7C:Sight-infused orbs seek out nearby enemies]"
+	SoulDesc547: "[c/FF6014:Fright-infused orbs deal extra flat damage with their hatred]"
+	LegendaryText:
+		'''
+		'Though soul-powered machines were a near failure, potential remained in souls as a form of fuel.
+		To avoid my last experiments' main flaw, the Soul-Harnessing Plasma Cannon was designed to expel souls as projectiles before they exert control over the weapon.
+		Each soul type appears to react differently to the base plasma. Yet, lacking volunteers, obtaining potential ammunition is currently too difficult to undergo further testing.
+		A shame, for a weapon that could have practically unlimited ammunition in the battlefield. Perhaps some day, its potential can be truly tested.'
+		'''
+	TooltipGFB: It scales again :)
+}
+
+SkyGlaze: {
+}
+
+SlitheringEels: {
+}
+
+SnowstormStaff: {
+}
+
+SoulPiercer: {
+}
+
+StaffofBlushie: {
+}
+
+StarShower: {
+}
+
+SubsumingVortex: {
+}
+
+Sylvestaff: {
+}
+
+TacticiansTrumpCard: {
+}
+
+TearsofHeaven: {
+}
+
+Teslastaff: {
+}
+
+TheCauldron: {
+}
+
+TheDanceofLight: {
+}
+
+ThePrince: {
+}
+
+TheSwarmer: {
+}
+
+TheWand: {
+}
+
+ThornBlossom: {
+}
+
+Tradewinds: {
+}
+
+UltraLiquidator: {
+}
+
+UndinesRetribution: {
+}
+
+UnstableCastersGauntlet.HoldShiftTooltip:
+	'''
+	[c/DBD7CA:Ordo] sigils always land critical strikes
+	[c/ABB6D4:Perdito] sigils ignore 25 points of enemy defense
+	[c/E89B8E:Ignis] sigils inflict Daybroken
+	[c/8ECBE8:Aqua] sigils inflict Crush Depth
+	[c/E1E88E:Aer] sigils boast substantial knockback
+	[c/ACCF9F:Terra] sigils split into sharp rocks
+	'''
+
+ValkyrieRay: {
+}
+
+VeeringWind: {
+}
+
+Vehemence: {
+}
+
+VenusianTrident: {
+}
+
+Vesuvius: {
+}
+
+Viscera: {
+}
+
+VitriolicViper: {
+}
+
+VividClarity: {
+}
+
+VoidVortex: {
+}
+
+VoltaicClimax: {
+}
+
+Volterion: {
+}
+
+Waywasher: {
+}
+
+Wingman: {
+}
+
+WintersFury: {
+}
+
+WulfrumProsthesis: {
+}
+
+WyvernsCall: {
+}
+
+YharimsCrystal: {
+	GFBName: yermes christal
+	TooltipNormal: Fires draconic beams of total annihilation
+	TooltipGFB: ...throughs a pice of dnimite
+}

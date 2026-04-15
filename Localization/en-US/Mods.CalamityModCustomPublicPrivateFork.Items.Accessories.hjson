@@ -1,0 +1,790 @@
+Abaddon: {
+}
+
+AbyssalDivingGear: {
+}
+
+AbyssalDivingSuit: {
+}
+
+AbyssalMirror: {
+	HoldShiftTooltip: "{$Common.DodgeInformation}"
+	FlavorTooltip: "'Light does not reach the depths of the ocean'"
+}
+
+AeroStone: {
+}
+
+Affliction: {
+}
+
+AlchemicalDecanter: {
+}
+
+AlluringBait: {
+}
+
+AmalgamatedBrain.HoldShiftTooltip: "{$Common.DodgeInformation}"
+
+AmbrosialAmpoule: {
+}
+
+AmidiasPendant: {
+}
+
+AncientFossil: {
+}
+
+AnechoicPlating: {
+}
+
+AngelicAlliance: {
+}
+
+AngelTreads: {
+}
+
+AquaticEmblem: {
+}
+
+AquaticHeart: {
+	LockedTooltip: "[c/F05A5A:The pearl's magic is suppressed by an ancient curse]"
+	FullTooltip:
+		'''
+		Wow, you can swim now!
+		Being underwater increases max speed and acceleration by {0}%
+		Greatly reduces breath loss and reduces the darkness intensity in the abyss
+		Attackers are inflicted with [cbuff:CalamityModCustomPublicPrivateFork/GlacialState]
+		Gain a fragile ice barrier that grants {1}% damage reduction for one hit
+		The ice shield regenerates after {2} seconds
+		'''
+}
+
+ArcFlashRing: {
+}
+
+ArchaicPowder: {
+}
+
+AscendantInsignia: {
+}
+
+AsgardianAegis: {
+}
+
+AsgardsValor: {
+}
+
+AuricSoulArtifact: {
+}
+
+BadgeofBravery: {
+}
+
+Baroclaw: {
+}
+
+BatholithBangle: {
+}
+
+BlackGlassBand: {
+}
+
+BlazingCore: {
+}
+
+BloodflareCore: {
+}
+
+BloodPact: {
+}
+
+BloodstainedGlove: {
+}
+
+BloodyWormScarf: {
+}
+
+BloodyWormTooth: {
+}
+
+BloomStone: {
+}
+
+BlunderBooster: {
+}
+
+Calamity: {
+}
+
+ChaliceOfTheBloodGod: {
+}
+
+ChaosStone: {
+}
+
+CleansingJelly: {
+}
+
+CoinofDeceit: {
+}
+
+CorrosiveSpine: {
+}
+
+CounterScarf: {
+}
+
+CrawCarapace: {
+}
+
+CrownJewel: {
+}
+
+CryoStone: {
+}
+
+DaawnlightSpiritOrigin: {
+	HoldShiftTooltip:
+		'''
+		All ranged weapons can supercrit when critical strike chance is over 100%
+		Marks nearby enemies and bosses with bullseyes which disappear shortly after being hit
+		Ranged attacks which strike bullseyes boost critical strike chance
+		Large projectiles and explosions cannot strike bullseyes
+		Slower weapons give a larger critical strike chance boost on hit
+		Extra critical strike chance quickly fades over time
+		The higher the boost, the more quickly it fades away
+		Summons a heroic spirit from another world if visibility is on or in vanity slots
+		'''
+	FlavorTooltip: "'A strand of a lost cosmos remains, waiting for its master'"
+}
+
+DarkMatterSheath: {
+}
+
+DarkSunRing: {
+	HoldShiftTooltip:
+		'''
+		  During the day, grants +2 HP/s life regen
+		  During the night, grants +16 defense
+		  During an eclipse, grants +1 HP/s life regen and +8 defense
+		'''
+	FlavorTooltip: "'Contains the power of the dark sun'"
+}
+
+DeadshotBrooch: {
+}
+
+DeepDiver: {
+}
+
+DeificAmulet.ToggleEffect: ", increases movement speed,"
+
+DepthCharm: {
+}
+
+DiamondOfTheDeep: {
+}
+
+DimensionalSoulArtifact: {
+}
+
+DraedonsHeart: {
+	NanomachinesAdd:
+		'''
+		Adds the Nanomachines meter
+		Nanomachines accumulate over time while fighting bosses, but taking damage stops the accumulation for {0} {^0:second;seconds}
+		'''
+	NanomachinesReplace:
+		'''
+		Replaces Adrenaline with the Nanomachines meter
+		Unlike Adrenaline, you lose no Nanomachines when you take damage, but they stop accumulating for {0} {^0:second;seconds}
+		'''
+}
+
+DragonScales: {
+}
+
+DynamoStemCells: {
+}
+
+EclipseMirror: {
+	HoldShiftTooltip: "{$Common.DodgeInformation}"
+	FlavorTooltip: "'Its reflection shows naught but darkness'"
+}
+
+EldritchSoulArtifact: {
+}
+
+ElectriciansGlove: {
+}
+
+ElementalGauntlet: {
+}
+
+ElementalinaBottle: {
+}
+
+ElysianAegis: {
+}
+
+EnchantedPearl: {
+}
+
+EtherealExtorter: {
+}
+
+EtherealTalisman: {
+}
+
+EvasionScarf: {
+}
+
+EyeoftheStorm: {
+}
+
+FeatherCrown: {
+}
+
+FilthyGlove: {
+}
+
+FlameLickedShell: {
+}
+
+FleshTotem: {
+}
+
+FrostBarrier: {
+}
+
+FrostFlare: {
+}
+
+FungalClump: {
+}
+
+FungalSymbiote: {
+}
+
+GiantPearl: {
+}
+
+GiantShell: {
+}
+
+GiantTortoiseShell: {
+}
+
+GladiatorsLocket: {
+}
+
+GloveOfPrecision: {
+}
+
+GloveOfRecklessness: {
+}
+
+GrandGelatin: {
+}
+
+HallowedRune.HoldShiftTooltip:
+	'''
+	[c/8ce0ff:  Hallowed Power] [c/ccf1ff: grants 10% increased summon damage and rains stars on enemies]
+	[c/d08aff:  Hallowed Defense] [c/eed4ff: grants 5 defense]
+	[c/ff8cb5:  Hallowed Regen] [c/ffccde: grants +1.5 HP/s life regen]
+	'''
+
+HarpyRing: {
+}
+
+HeartofDarkness: {
+}
+
+HeartoftheElements: {
+}
+
+HideofAstrumDeus: {
+}
+
+HoneyDew: {
+}
+
+HowlsHeart: {
+}
+
+IlmerisSpark: {
+}
+
+InfectedJewel: {
+}
+
+InkBomb: {
+}
+
+InterstellarStompers: {
+}
+
+IronBoots: {
+}
+
+IVDripOnTheRocks: {
+}
+
+JellyChargedBattery: {
+}
+
+Laudanum.HoldShiftTooltip:
+	'''
+	  Debuffs affected: Armor Crunch, Blackout, Bleeding, Broken Armor, Chilled, Confused,
+	  Cursed, Darkness, Distorted, Ichor, Silenced, Slow, Weak, and Whispering Death
+	'''
+
+LeviathanAmbergris: {
+}
+
+LifeJelly: {
+}
+
+LivingDew: {
+}
+
+LuxorsGift: {
+}
+
+ManaPolarizer: {
+}
+
+MarniteRepulsionShield: {
+}
+
+MirageMirror: {
+}
+
+MoonstoneCrown: {
+}
+
+Nanotech: {
+}
+
+NebulousCore: {
+}
+
+NecklaceofVexation: {
+}
+
+NuclearFuelRod: {
+}
+
+Nucleogenesis: {
+}
+
+OccultSkullCrown: {
+	HoldShiftTooltip:
+		'''
+		  Debuffs affected: Armor Crunch, Blackout, Bleeding, Broken Armor, Chilled, Confused,
+		  Cursed, Darkness, Distorted, Ichor, Silenced, Slow, Weak, and Whispering Death
+		'''
+	FlavorTooltip: "'Only a fool would ever wear this...'"
+}
+
+OceanCrest: {
+}
+
+OldDie: {
+}
+
+OldDukeScales.HoldShiftTooltip:
+	'''
+	[c/c3dfff:  Using any dash will consume 20% of your stamina]
+	[c/c3dfff:  Stamina will gradually restore after not dashing for 1.5 seconds]
+	[c/c3dfff:  Stamina recovers faster when you are stationary]
+	[c/c3dfff:  If your stamina reaches 0%, you become exhausted]
+	[c/e3545c:  While exhausted, this item's damage reduction and movement bonuses are negated]
+	[c/e3545c:  Being exhausted reduces movement speed by 30% and dash velocity by 50%]
+	[c/c3dfff:  This debuff lasts until your stamina reaches 100% again]
+	'''
+
+OrnateShield: {
+}
+
+PearlofEnthrallment: {
+}
+
+PermafrostsConcoction: {
+}
+
+PhantomicArtifact.HoldShiftTooltip:
+	'''
+	[c/8ce0ff:  Phantomic Empowerment] [c/ccf1ff: grants 10% increased summon damage and throws knives at enemies]
+	[c/d08aff:  Phantomic Shield] [c/eed4ff: grants 10 defense and a 20% damage reduction bulwark]
+	[c/ff8cb5:  Phantomic Regen] [c/ffccde: grants 1 HP/s life regen and occasionally drops phantom hearts which grant an additional 1 HP/s life regen]
+	'''
+
+PlaguedFuelPack: {
+}
+
+PlanebreakersPouch: {
+}
+
+ProfanedSoulArtifact.ShieldAdren: Halved Adrenaline loss if all damage is absorbed
+
+ProfanedSoulCrystal: {
+	Locked: "[c/F05A5A:The soul within this crystal has been defiled by {0}.]"
+	LockedBoth: "[c/F05A5A:The soul within this crystal has been defiled by {0} and {1}.]"
+	ExoMechsLock: indecipherable frequencies
+	CalamitasLock: powerful brimstone magic
+	Reject: Merchants will reject a tarnished item such as this.
+	FullTooltip:
+		'''
+		Provides passive buffs depending on the time of day
+		Greatly boosts the power of the Guardian's relics
+		Grants additional effects if you have {0} minion slots
+		Summons your own personal Guardians to fight alongside you
+		All non-summon attacks are transformed, and are empowered if no minions are active
+		[c/ffa680:Melee] [c/ffd2bf:attacks become a barrage of spears]
+		[c/99ffa7:Ranged] [c/bfffc8:attacks become a flurry of fireballs and meteors]
+		[c/8cbeff:Magic] [c/bfdbff:attacks become a giant splitting fireball, costing {1} mana]
+		[c/d791f2:Whips] [c/e1b6f2:become overtaken by profaned crystal]
+		[c/f285a2:Rogue] [c/f2b6c6:attacks become a deadly crystalline spiral]
+		Thinking back, it was a boring life
+		[c/FFBF49:And so we burn it all in the name of purity]
+		'''
+}
+
+ProtolithBangle: {
+}
+
+QuiverofNihility: {
+}
+
+Radiance.HoldShiftTooltip:
+	'''
+	[c/CDF69C:Grants +2 to +5 HP/s life regen based on missing health]
+	[c/CDF69C:Recover an additional 6 HP/s while inflicted with a debuff]
+	[c/CDF69C:This eventually slows to 1.33 HP/s when debuffed for an extended time period]
+	[c/CDF69C:Grants the Honey buff]
+	[c/CDF69C:Grants 15 defense while afflicted with any debuff]
+	[c/CDF69C:Each additional debuff grants 5 defense, which slowly decays while not debuffed]
+	[c/CDF69C:Weak damaging debuffs are harmless and halves the duration of most other debuffs]
+	'''
+
+RadiantOoze: {
+}
+
+RaidersTalisman: {
+}
+
+RampartofDeities.ToggleEffect: ", increases movement speed,"
+
+RareElementalinaBottle: {
+}
+
+ReaperToothNecklace: {
+}
+
+Regenerator: {
+}
+
+RogueEmblem: {
+}
+
+RoseStone: {
+}
+
+RottenBrain: {
+}
+
+RottenDogtooth: {
+}
+
+RoverDrive.ShieldAdren: Halved Adrenaline loss if all damage is absorbed
+
+RuinMedallion: {
+}
+
+SandCloak: {
+}
+
+SandSharkToothNecklace: {
+}
+
+ScionsCurio: {
+}
+
+ScuttlersJewel: {
+}
+
+SeaSpiritAmulet: {
+}
+
+ShatteredCommunity: {
+	RageAdd:
+		'''
+		Adds the Rage meter, which fills over time
+		Rage generates faster when in proximity of enemies
+		When Rage is maxed, press {0} for a temporary damage boost
+		'''
+	RageModified: You generate rage over time and rage does not fade out of combat
+	LevelUpText: The Community cracks...
+}
+
+ShieldoftheHighRuler: {
+	HoldShiftTooltip:
+		'''
+		  On Fire!, Chilled, Frostburn, Weak, Broken Armor, Bleeding
+		  Poisoned, Slow, Confused, Silenced, Cursed, Darkness,
+		  Mighty Wind, Stoned, Burning
+		'''
+	FlavorTooltip: "'For the fate of the kingdom'"
+}
+
+ShieldoftheOcean: {
+}
+
+SigilofCalamitas: {
+}
+
+SilencingSheath: {
+}
+
+SlagsplitterPauldron: {
+}
+
+SpectralVeil: {
+}
+
+SpelunkersAmulet: {
+}
+
+SpiritGlyph.HoldShiftTooltip:
+	'''
+	[c/8ce0ff:  Spirit Power] [c/ccf1ff:grants 10% increased summon damage]
+	[c/d08aff:  Spirit Defense] [c/eed4ff:grants 3 defense]
+	[c/ff8cb5:  Spirit Regen] [c/ffccde:grants +1 HP/s life regeneration]
+	'''
+
+StarbusterCore: {
+}
+
+StarTaintedGenerator: {
+}
+
+StatisBlessing: {
+}
+
+StatisCurse: {
+}
+
+StatisNinjaBelt: {
+	ToggleEffect: ", climb walls,"
+	HoldShiftTooltip: "{$Common.DodgeInformation}"
+}
+
+StatisVoidSash: {
+	ToggleEffect: ", climb walls,"
+	HoldShiftTooltip: "{$Common.DodgeInformation}"
+}
+
+// Be warned translators, this thing fucking sucks
+StatMeter: {
+	FoolsName: Pasta Strainer
+	RevStats:
+		'''
+		Rage Damage Boost: {0}% | Rage Mode Duration: {1} seconds
+		Adrenaline Damage Boost: {2}% | Adrenaline DR Boost: {3}%
+		'''
+
+	ClassNameOverride: {
+		Default: true damage
+		Generic: classless damage
+		NoSpeed: " (no speed)"
+		SummonMeleeSpeed: " (whip)"
+	}
+
+	DamageStats:
+		'''
+		Class: {0}
+		Damage: {1}
+		Armor Penetration: {2}
+		'''
+	DamageBase: "[{0} base] +"
+	DamageNormal: "{0}%"
+	DamageMult: " x{0}"
+	DamageFlat: " {0} flat"
+	Crit: " | Crit Chance: {0}%"
+	AttackSpeed: Attack Speed: {0}%
+	WhipMeleeInheritance: " [{0}% from melee]"
+	// Class stats
+	AmmoStats: Ammo Consumption Chance: {0}%
+	ManaStats: Mana Usage: {0}% | Mana Regen: {1}
+	SummonStats: Minion Slots: {0} | Sentry Slots: {1}
+	WhipStats: Whip Range: {0}%
+	RogueStats:
+		'''
+		Max Stealth: {0} | Standing Regen: {1} / sec | Moving Regen: {2} / sec
+		Rogue Velocity Boost: {3}%
+		'''
+	// Utility stats
+	ToolRange: Tool Range Bonus: ({0}, {1})
+	MiningSpeed: " | Mining Speed: {0}%"
+	PlacementRange: Placement Range Bonus: ({0}, {1})
+	TileSpeed: " | Block Placement Speed: {0}%"
+	WallSpeed: " | Wall Placement Speed: {0}%"
+	// Other stats
+	GenericStats:
+		'''
+		Defense: {0} | DR: {1}% | Life Regen: {2} HP/s
+		Move Speed: {3}% | Jump Boost: {4}%
+		'''
+	FlightTime: " | Wing Flight Time: {0} seconds"
+	MiscStats: Aggro: {0} | Luck: {1}%
+	AbyssStats:
+		'''
+		Abyss Darkness: {0} | Player Glow: {1}x | Flashlight Width: {2}x
+		Breath Loss Rate: {3}
+		Life Lost Per Tick at Zero Breath: {4}
+		Defense Lost From Pressure: {5}
+		'''
+	AbyssStatsHidden: Abyss stats are only displayed while in the Abyss
+}
+
+StressPills: {
+}
+
+SupremeBaitTackleBoxFishingStation: {
+}
+
+TeslasAmulet: {
+}
+
+TheAbsorber: {
+}
+
+TheAmalgam.HoldShiftTooltip: "{$Common.DodgeInformation}"
+
+TheBee: {
+}
+
+TheCamper: {
+}
+
+TheCommunity.StatsList:
+	'''
+	Increases damage by {0}% and critical strike chance by {1}%
+	Increases max health by {2}%, damage reduction by {3}%, and defense by {4}
+	+{5} HP/s life regen while suffering from damage over time debuffs
+	Increases movement speed by {6}% and flight time by {7}%
+	Become more powerful as you defeat bosses ({8}% Power)
+	'''
+
+TheEvolution: {
+}
+
+TheFirstShadowflame: {
+}
+
+ThePointer: {
+}
+
+TheSponge.ShieldAdren: Halved Adrenaline loss if all damage is absorbed
+
+TheTransformer: {
+	TooltipNormal:
+		'''
+		Generates an aura around you that creates morphing globs when projectiles pass through it or when enemies are killed
+		The globs encircle you and deal low damage and knockback to enemies they collide with
+		The circle can contain up to 30 globs at once
+		Press [KEY] to transform all globs into needles and launch them at your cursor
+		'How did this come out of the junk you cobbled together? You're lucky it doesn't transform you'
+		'''
+	TooltipGFB:
+		'''
+		Generates an aura around you that creates morphing globs when projectiles pass through it or when enemies are killed
+		The globs encircle you and deal low damage and knockback to enemies they collide with
+		The circle has no limit to the number of globs it can hold, but your PC might
+		Press [KEY] to transform all globs into needles and launch them at your cursor
+		'It's no Beeftank Doctrine, but it sure feels breakthrough!'
+		'''
+}
+
+ToxicHeart: {
+}
+
+TrinketofChi: {
+}
+
+UnholyTonic: {
+}
+
+UnstableGraniteCore: {
+}
+
+VampiricTalisman.YearningForBlood: THIS ENDLESS HUNGER WON'T END
+
+VeneratedLocket: {
+}
+
+ViciousTonic: {
+}
+
+VitalJelly: {
+}
+
+VoidofCalamity: {
+}
+
+VoidofExtinction: {
+}
+
+VoltaicJelly: {
+}
+
+WarbanneroftheRighteous: {
+}
+
+WulfrumAcrobaticsPack: {
+}
+
+WulfrumBattery: {
+}
+
+YharimsGift: {
+}
+
+// Vanity Accessories
+AbandonedWulfrumHelmet: {
+}
+
+GhostBracelet: {
+}
+
+HapuFruit: {
+}
+
+LittleE: {
+}
+
+LucisSight: {
+}
+
+OracleHeadphones: {
+}
+
+Popo: {
+}
+
+SharkyPlush: {
+}
+
+GlimmeringRibbon: {
+}
+
+TheComb: {
+}
+
+XyksBlessingBlue: {
+}
+
+XyksBlessingOrange: {
+}

@@ -1,0 +1,617 @@
+AbsoluteZero: {
+}
+
+AbyssBlade: {
+}
+
+AcidwoodSword: {
+}
+
+AegisBlade: {
+}
+
+AirSpinner: {
+}
+
+AmidiasTrident: {
+}
+
+AnarchyBlade: {
+}
+
+Aorta: {
+}
+
+ArkoftheCosmos: {
+	ComboInfo:
+		'''
+		<left> to perform a 5-swing combo that ends by throwing the blade
+		The thrown blade will follow your cursor
+		Releasing while the blade is out will cause an exploding snap
+		'''
+	ParryInfo:
+		'''
+		<right> to snip out the scissor blades in front of you
+		Hitting an enemy with it will parry them, granting you brief invulnerability
+		You can also parry projectiles to make them deal 160 less damage for a short period
+		Parrying will empower the next 16 swings of the sword
+		'''
+	BlastInfo: Double <right> with charges available to cause a Big Rip in spacetime and consume all charges
+}
+
+ArkoftheElements: {
+	ComboInfo:
+		'''
+		<left> to perform a 5-swing combo that ends by throwing the blade
+		Releasing while the blade is out will deal extra damage
+		'''
+	ParryInfo:
+		'''
+		<right> to snip out the scissor blades in front of you
+		Hitting an enemy with it will parry them, granting you brief invulnerability
+		You can parry projectiles to make them deal 100 less damage for a short period
+		Parrying will empower the next 10 swings of the sword, letting you use both blades at once
+		'''
+}
+
+AstralPike: {
+}
+
+AstralScythe: {
+}
+
+Ataraxia: {
+}
+
+Avalanche: {
+}
+
+BalefulHarvester: {
+}
+
+BallOFugu: {
+}
+
+BansheeHook: {
+}
+
+Basher: {
+}
+
+BladecrestOathsword.HoldShiftTooltip:
+	'''
+	[c/df0049:A ritual blade used by Demons for sacrifices.]
+	[c/df0049:The more blood taints the edge, the sharper it becomes.]
+	'''
+
+BlightedCleaver: {
+}
+
+Bonebreaker: {
+}
+
+BotanicPiercer: {
+}
+
+Brimlance: {
+}
+
+Brimlash: {
+}
+
+BrimstoneSword: {
+}
+
+BrinyBaron: {
+}
+
+BrokenBiomeBlade.DefaultFunction: Does nothing... yet
+
+BurningRevelation: {
+}
+
+BurntSienna: {
+}
+
+Carnage: {
+}
+
+CelestialClaymore: {
+}
+
+ClamCrusher: {
+}
+
+CometQuasher: {
+}
+
+CosmicDischarge: {
+}
+
+CosmicShiv: {
+}
+
+CrescentMoon: {
+}
+
+DarklightGreatsword: {
+}
+
+DeathsAscension: {
+}
+
+DefiledGreatsword: {
+}
+
+DepthCrusher: {
+}
+
+DevilsDevastation.HoldShiftTooltip:
+	'''
+	[c/d13ca2:The perfect blade of the Underworld, wielding the power of Brimstone directly.]
+	[c/d13ca2:Humans understand this force as Havoc, the inevitable sundering of all order in fire.]
+	[c/d13ca2:Perhaps this is why the Brimstone Elemental had strength unrivaled by her sisters.]
+	'''
+
+DevilsSunrise: {
+}
+
+DraconicDestruction: {
+}
+
+DragonPow: {
+}
+
+DragonRage: {
+}
+
+DriftwoodSword: {
+}
+
+Earth: {
+}
+
+EarthenPike: {
+}
+
+EmpyreanKnives: {
+}
+
+EntropicClaymore: {
+}
+
+EssenceFlayer: {
+}
+
+EvilSmasher: {
+}
+
+ExaltedOathblade.HoldShiftTooltip:
+	'''
+	[c/b63cd1:A sword fashioned from the legend of the Last Demon Lord.]
+	[c/b63cd1:Crowned through his overwhelming might, his sword bathed in the blood of Demons and the fires of hell.]
+	[c/b63cd1:Even long after his passing, none have dared to take the seat.]
+	[c/b63cd1:Demonkind has not known unity since.]
+	'''
+
+Exoblade: {
+}
+
+FallenPaladinsHammer: {
+}
+
+FaultLine: {
+}
+
+FeralthornClaymore: {
+}
+
+FlarefrostBlade: {
+}
+
+Floodtide: {
+}
+
+ForbiddenOathblade.HoldShiftTooltip:
+	'''
+	[c/b63cd1:A blade forged in the likeness of that granted to the Demon Lord.]
+	[c/b63cd1:The title was coveted by all demonkind. Only one may exist at a time.]
+	[c/b63cd1:Any claimant who seeks the throne has a simple goal: the head of the former Lord.]
+	'''
+
+ForsakenSaber: {
+}
+
+FourSeasonsGalaxia: {
+}
+
+FracturedArk.ParryInfo:
+	'''
+	<right> to extend the Ark out in front of you
+	Hitting an enemy with it will parry them, granting you a small window of invulnerability
+	Parrying empowers the next 10 swings of the sword, boosting damage and letting them throw projectiles
+	'''
+
+GaelsGreatsword: {
+}
+
+GalactusBlade: {
+}
+
+GalaxySmasher: {
+}
+
+GalileoGladius: {
+}
+
+GeliticBlade: {
+}
+
+GildedProboscis: {
+}
+
+GoldplumeSpear: {
+}
+
+GrandDad: {
+	TooltipNormal:
+		'''
+		An unfathomably heavy blade that rips through enemies using its sheer mass
+		Heals you on hit
+		Striking weaker enemies will launch them with incredible force
+		Launched enemies take immense damage when colliding with walls and floors
+		Holding <right> while swinging will heavily reduce the damage of the blade and increase its launch damage and velocity
+		[c/00B8DF:'How are you swinging something that has half the mass of a star?']
+		'''
+	TooltipGFB:
+		'''
+		A high quality blade that rips through enemies
+		Striking weaker enemies will yeet them with incredible force, often leaving them Stuck Inside tiles
+		Yeeted enemies will turn to JAM when SLAMMED into walls and floors
+		Holding <right> while swinging will heavily reduce the damage of the blade and increase its yeet damage and velocity, nice >:]
+		[c/00B8DF:'Please read the weapon description.']
+		'''
+}
+
+GrandGuardian: {
+}
+
+GreatswordofJudgement: {
+}
+
+Greentide: {
+}
+
+HellfireFlamberge: {
+}
+
+HellionFlowerSpear: {
+}
+
+Hellkite: {
+	TooltipNormal:
+		'''
+		An ancient blade created during the Draconic Era by Azafure's finest forgemaster
+		Swings a slow and heavy blade with powerful knockback
+		Holding <right> will begin charging a strengthened swing
+		Releasing <right> while fully charged will unleash a devastating slash that always critically strikes
+		[c/E1B65F:'Feel the strength of a blade forged through passion']
+		'''
+	TooltipGFB:
+		'''
+		An ancient blade created during the Draconic Era by Azafure's finest forgemaster
+		Swings a slow and heavy blade with powerful knockback
+		Holding <right> will begin charging a strengthened swing
+		Releasing <right> while fully charged will unleash a devastating slash that always critically strikes
+		[c/0C507F:'My beloved <3' -Xyk]
+		'''
+}
+
+HolyCollider: {
+}
+
+IllustriousKnives: {
+}
+
+InsidiousImpaler: {
+}
+
+Lacerator: {
+	TooltipNormal: Someone thought this was a viable weapon against DoG at one point lol
+	TooltipGFB: May be a viable weapon against DoG...
+}
+
+LifehuntScythe: {
+}
+
+Lightspeed: {
+}
+
+LionHeart: {
+}
+
+Lucrecia: {
+}
+
+MajesticGuard: {
+}
+
+MantisClaws: {
+}
+
+MawOfInfinity: {
+}
+
+MirrorBlade: {
+	HoldShiftTooltip:
+		'''
+		[c/aab7f1:Each shard reduces the damage of a projectile that hit the shield by 10%]
+		[c/aab7f1:The shield shatters after one projectile, launching the shards at enemies with increased damage]
+		[c/aab7f1:With all 10 shards, you gain a brief period of invulnerability when shattering the shield]
+		'''
+	FlavorTooltip: "[c/7b6d8d:'A blade taken from your own reflection within the Ceaseless Void']"
+}
+
+MonolithSword: {
+}
+
+MonstrousKnives: {
+}
+
+Mourningstar: {
+}
+
+Murasama: {
+}
+
+MycelialClaws: {
+}
+
+Nadir: {
+}
+
+Nebulash: {
+}
+
+NeptunesBounty: {
+}
+
+Oblivion: {
+}
+
+OldLordClaymore.HoldShiftTooltip:
+	'''
+	[c/df4420:A gift to outstanding Demons, a replica of the sword used by the greatest of all Demon Lords.]
+	[c/df4420:The prosperity he brought to their kind is unmatched even now that they alone rule the Underworld.]
+	'''
+
+OmegaBiomeBlade: {
+	DefaultFunction:
+		'''
+		Does nothing... yet
+		It seems that upgrading the blade expanded the scope of the previous attunements
+		'''
+	DefaultPassive: Your secondary attunement can now provide passive bonuses
+}
+
+Omniblade: {
+}
+
+Orderbringer: {
+}
+
+Ozzathoth: {
+}
+
+Pandemic: {
+}
+
+PerfectDark: {
+}
+
+PhosphorescentGauntlet: {
+}
+
+PhotonRipper: {
+}
+
+PrismaticBreaker: {
+}
+
+Pwnagehammer: {
+}
+
+Quagmire: {
+}
+
+RedSun: {
+}
+
+RemsRevenge: {
+}
+
+Respiteblock: {
+}
+
+Riptide: {
+}
+
+Roxcalibur.LockedInfo: The hellish Wall of Flesh holds the key to this weapon's power
+
+SaharaSlicers: {
+}
+
+SausageMaker: {
+}
+
+ScourgeoftheCosmos: {
+}
+
+SeashineSword: {
+}
+
+SeekingScorcher: {
+}
+
+Shimmerspark: {
+}
+
+SkytideDragoon: {
+}
+
+SmokingComet: {
+}
+
+SolsticeClaymore: {
+}
+
+SoulHarvester: {
+}
+
+SpineOfThanatos: {
+}
+
+StarnightLance: {
+}
+
+StellarContempt: {
+}
+
+StellarStriker: {
+}
+
+StormRuler: {
+}
+
+StormSaber: {
+}
+
+StreamGouge: {
+}
+
+StygianShield: {
+}
+
+SubmarineShocker: {
+}
+
+SulphurousGrabber: {
+}
+
+Swordsplosion: {
+}
+
+TaintedBlade: {
+}
+
+TeardropCleaver: {
+}
+
+TenebreusTides: {
+}
+
+Terratomere: {
+}
+
+TerrorBlade: {
+}
+
+TheBurningSky: {
+}
+
+TheDarkMaster: {
+}
+
+TheGodsGambit: {
+}
+
+TheLastMourning: {
+}
+
+TheMicrowave: {
+}
+
+TheMutilator: {
+}
+
+TheObliterator: {
+	TooltipNormal: Occasionally performs a miniature [c/ff00ff:Dimensional Drive] at nearby foes
+	TooltipGFB: just a slight bit of dust spam on this weapon im afraid
+}
+
+TheOracle: {
+}
+
+TitanArm: {
+}
+
+TriactisTruePaladinianMageHammerofMight: {
+}
+
+TrueArkoftheAncients.ParryInfo:
+	'''
+	<right> to extend the Ark out in front of you
+	Hitting an enemy with it will parry them, granting you brief invulnerability
+	You can also parry projectiles to make them deal 80 less damage for a short period
+	Parrying will empower the next 10 swings of the sword, letting it throw stronger projectiles
+	'''
+TrueBiomeBlade.DefaultFunction:
+	'''
+	Does nothing... yet
+	Repairing the blade seems to have improved its attuning capacities
+	'''
+
+TrueCausticEdge: {
+}
+
+Tumbleweed: {
+}
+
+TyphonsGreed: {
+}
+
+UltimusCleaver: {
+}
+
+UrchinMace: {
+}
+
+VanishingPoint: {
+	TooltipNormal:
+		'''
+		Fires a lance beam that splits multiple times as it travels
+		'Rend the cosmos asunder!'
+		'''
+	TooltipGFB:
+		'''
+		Fires a lance beam that splits, like, a LOT. Way more than it ever should.
+		'Rend the projectile limit asunder!'
+		'''
+}
+
+VeinBurster: {
+}
+
+Violence: {
+}
+
+Virulence: {
+}
+
+VoidEdge: {
+}
+
+VulcaniteLance: {
+}
+
+WindBlade: {
+}
+
+WulfrumScrewdriver: {
+}
+
+YateveoBloom: {
+}
+
+YinYo: {
+}

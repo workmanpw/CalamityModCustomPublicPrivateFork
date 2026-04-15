@@ -1,0 +1,163 @@
+AbyssalWarhammer: {
+}
+
+AcidwoodHammer: {
+}
+
+AerialHamaxe: {
+}
+
+AntiCystOintment: {
+}
+
+AntiTumorOintment: {
+}
+
+AridArtifact: {
+}
+
+AstralHamaxe: {
+}
+
+AstralPickaxe: {
+}
+
+AxeofPurity: {
+}
+
+Bakidon: {
+}
+
+BallAndChain: {
+	// This is "backwards" because enabling this disables dashes
+	TooltipEnabled: Dashes are currently disabled
+	TooltipDisabled: Dashes are currently enabled
+}
+
+BeastialPickaxe: {
+}
+
+BerserkerWaraxe: {
+}
+
+BleachBall: {
+}
+
+BlossomPickaxe: {
+}
+
+BobbitHook: {
+}
+
+BrimstoneLocus: {
+}
+
+BrokenWaterFilter: {
+}
+
+Cosmolight: {
+}
+
+CrystylCrusher: {
+}
+
+DisgustingMeat: {
+}
+
+DriftwoodHammer: {
+}
+
+FellerofEvergreens: {
+}
+
+Gelpick: {
+}
+
+GenesisPickaxe: {
+}
+
+Grax: {
+}
+
+GreatbayPickaxe: {
+}
+
+InfernaCutter: {
+}
+
+MarniteDeconstructor: {
+}
+
+MarniteObliterator: {
+}
+
+MomentumCapacitor: {
+	GFBName: Burden Breaker
+	TooltipNormal:
+		'''
+		While using the Momentum Capacitor,
+		your top speed will continuously and uncontrollably increase
+		This effect only works if there are no bosses alive
+		'''
+	TooltipGFB:
+		'''
+		The good time
+		Go fast
+		WARNING: May have disastrous results
+		Only works if there are no bosses alive
+		'''
+}
+
+MonolithHammer: {
+}
+
+NormalityRelocator: {
+}
+
+ReefclawHamaxe: {
+}
+
+RelicOfConvergence: {
+}
+
+RelicOfResilience: {
+}
+
+SeismicHampick: {
+}
+
+ShardlightPickaxe: {
+}
+
+SirenproofEarMuffs: {
+}
+
+SkyfringePickaxe: {
+}
+
+SulphurousSeaWorldSideChanger: {
+}
+
+SuperDummy: {
+}
+
+TectonicTruncator: {
+}
+
+TorrentialTear: {
+}
+
+VoodooDemonVoodooDoll: {
+}
+
+WulfrumDiggingTurtle: {
+}
+
+WulfrumDrill: {
+}
+
+WulfrumScaffoldKit: {
+}
+
+WulfrumTreasurePinger: {
+}

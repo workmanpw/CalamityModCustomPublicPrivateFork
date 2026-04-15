@@ -178,7 +178,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                                 }
                                 if (stealthPenaltyTimer >= 18)
                                 {
-                                    Owner.Calamity().rogueStealth -= Owner.Calamity().rogueStealthMax * 0.035f;
+                                    if (!CalamityClientConfig.Instance.InfiniteStealth)
+                                        Owner.Calamity().rogueStealth -= Owner.Calamity().rogueStealthMax * 0.035f;
                                     CheckStealth();
                                 }
                                 else

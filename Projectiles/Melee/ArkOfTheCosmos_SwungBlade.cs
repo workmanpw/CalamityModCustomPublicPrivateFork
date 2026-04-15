@@ -21,6 +21,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight";
 
         private bool initialized = false;
+        private bool snapTelegraphPlayed = false;
         Vector2 direction = Vector2.Zero;
         public ref float Combo => ref Projectile.ai[0];
         public ref float Charge => ref Projectile.ai[1];
@@ -61,7 +62,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         //Only used for the long range throw
         private bool OwnerCanShoot => !Owner.CantUseHoldout() && Owner.HeldItem.type == ItemType<ArkoftheCosmos>();
         public bool Thrown => Combo == 2 || Combo == 3;
-        public const float MaxThrowTime = 140;
+        public const float MaxThrowTime = 180;
         public float ThrowReach;
         public float ThrowTimer => MaxThrowTime - Projectile.timeLeft;
         public float ThrowCompletion => ThrowTimer / MaxThrowTime;
@@ -149,6 +150,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 direction.Normalize();
                 Projectile.velocity = direction;
                 Projectile.rotation = direction.ToRotation();
+                snapTelegraphPlayed = false;
 
                 if (SwirlSwing)
                     Projectile.localNPCHitCooldown = (int)(Projectile.localNPCHitCooldown / 4f);
@@ -183,9 +185,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 {
                     //Slightly shift the blasts up so the final close shots don't go BELOW the cursor and instead go right on it.
                     float adjustedBlastRotation = Projectile.rotation - MathHelper.PiOver4 * 1.15f * Owner.direction;
+                    float randomSpread = Main.rand.NextFloat(-MathHelper.Pi * 0.15f, MathHelper.Pi * 0.15f);
 
                     var source = Projectile.GetSource_FromThis();
-                    Projectile blast = Projectile.NewProjectileDirect(source, Owner.Center + adjustedBlastRotation.ToRotationVector2() * 10f, adjustedBlastRotation.ToRotationVector2() * 20f, ProjectileType<EonBolt>(), (int)(ArkoftheCosmos.SwirlBoltDamageMultiplier / ArkoftheCosmos.SwirlBoltAmount * Projectile.damage), 0f, Owner.whoAmI, 0.55f, MathHelper.Pi * 0.05f);
+                    Projectile blast = Projectile.NewProjectileDirect(source, Owner.Center + adjustedBlastRotation.ToRotationVector2() * 10f, (adjustedBlastRotation + randomSpread).ToRotationVector2() * 20f, ProjectileType<EonBolt>(), (int)(ArkoftheCosmos.SwirlBoltDamageMultiplier / ArkoftheCosmos.SwirlBoltAmount * Projectile.damage), 0f, Owner.whoAmI, 0.55f, MathHelper.Pi * 0.15f);
                     blast.timeLeft = 100;
                 }
 
@@ -195,11 +198,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             else
             {
                 //Telegraph the start of the snap window with a bit of leeway
-                if (Math.Abs(ThrowCompletion - SnapWindowStart + 0.1f) <= 0.005f && ChanceMissed == 0f && Main.myPlayer == Owner.whoAmI)
+                if (!snapTelegraphPlayed && ThrowCompletion >= 0.25f && ThrowCompletion < 0.26f && ChanceMissed == 0f && Main.myPlayer == Owner.whoAmI)
                 {
                     Particle pulse = new PulseRing(Projectile.Center, Vector2.Zero, Color.OrangeRed, 0.05f, 1.8f, 8);
                     GeneralParticleHandler.SpawnParticle(pulse);
-                    SoundEngine.PlaySound(SoundID.Item4);
+                    SoundEngine.PlaySound(SoundID.Item4, Projectile.Center);
+                    snapTelegraphPlayed = true;
 
                     //Spawn a constellation link
 
@@ -219,13 +223,20 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 Projectile.rotation -= MathHelper.PiOver4 * 0.3f;
                 Projectile.scale = 1f + ThrowScaleRatio() * 0.5f;
 
-                //Fire random EonBolt every 20 frames during thrown spin attack
-                if (Owner.whoAmI == Main.myPlayer && Main.rand.NextBool() && Projectile.timeLeft % 20 == 0)
+                //Fire random EonBolt every 10 frames during thrown spin attack
+                if (Owner.whoAmI == Main.myPlayer && Projectile.timeLeft % 10 == 0)
                 {
-                    float randomRotation = Projectile.rotation + Main.rand.NextFloat(-MathHelper.PiOver4, MathHelper.PiOver4);
+                    float randomRotation = Projectile.rotation + Main.rand.NextFloat(-MathHelper.PiOver2, MathHelper.PiOver2);
                     var source = Projectile.GetSource_FromThis();
-                    Projectile bolt = Projectile.NewProjectileDirect(source, Projectile.Center, randomRotation.ToRotationVector2() * 15f, ProjectileType<EonBolt>(), (int)(Projectile.damage * 0.3f), 0f, Owner.whoAmI, 0.55f, MathHelper.Pi * 0.05f);
+                    Projectile bolt = Projectile.NewProjectileDirect(source, Projectile.Center, randomRotation.ToRotationVector2() * 15f, ProjectileType<EonBolt>(), (int)(Projectile.damage * 0.3f), 0f, Owner.whoAmI, 0.55f, MathHelper.Pi * 0.1f);
                     bolt.timeLeft = 80;
+
+                    //Spawn extra constellation every 30 frames during throw
+                    if (Projectile.timeLeft % 30 == 0)
+                    {
+                        Projectile chain = Projectile.NewProjectileDirect(source, Projectile.Center, Vector2.Zero, ProjectileType<ArkoftheCosmosConstellation>(), (int)(Projectile.damage * ArkoftheCosmos.chainDamageMultiplier), 0, Owner.whoAmI, (int)(Projectile.timeLeft / 2f));
+                        chain.timeLeft = (int)(Projectile.timeLeft / 2f);
+                    }
                 }
 
                 //Come back
@@ -236,9 +247,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                     Projectile.Center = Owner.Center + direction * ThrowRatio();
 
 
-                //Snip
-                if (!OwnerCanShoot && Combo == 2 && ThrowCompletion >= (SnapWindowStart - 0.1f) && ThrowCompletion < SnapWindowEnd && ChanceMissed == 0f)
+                //Snip - instant snap when mouse button is released
+                if (!OwnerCanShoot && Combo == 2 && ChanceMissed == 0f)
                 {
+                    SoundEngine.PlaySound(CommonCalamitySounds.ScissorGuillotineSnapSound with { Volume = CommonCalamitySounds.ScissorGuillotineSnapSound.Volume * 1.3f }, Projectile.Center);
                     Particle snapSpark = new GenericSparkle(Projectile.Center, Owner.velocity - Utils.SafeNormalize(Projectile.velocity, Vector2.Zero), Color.White, Color.OrangeRed, Main.rand.NextFloat(1f, 2f), 10 + Main.rand.Next(10), 0.1f, 3f);
                     GeneralParticleHandler.SpawnParticle(snapSpark);
                     Main.LocalPlayer.SetScreenshake(3f);
@@ -262,8 +274,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                     Combo = 3f; //Mark the end of the regular throw
                     direction = Projectile.Center - Owner.Center; //At this point direction becomes also a marker for the last position it was in before snapping
                     Projectile.velocity = Projectile.rotation.ToRotationVector2();
-                    Projectile.timeLeft = (int)SnapEndTime;
-                    Projectile.localNPCHitCooldown = (int)SnapEndTime; //Only snap the enemies ONCE
+                    Projectile.timeLeft = 10; //Fast snap retraction
+                    Projectile.localNPCHitCooldown = 10; //Only snap the enemies ONCE
                 }
 
 

@@ -1,0 +1,536 @@
+AcesHigh: {
+}
+
+AcidwoodBow: {
+}
+
+AdamantiteParticleAccelerator: {
+}
+
+Alluvion: {
+}
+
+AngelicShotgun: {
+}
+
+Animosity: {
+	GFBName: Shotgun Full of Hate
+	TooltipNormal:
+		'''
+		Fires a shotgun blast with a tight spread which is imbued with Brimstone Flames
+		Press <right> to fire a powerful brimstone round that inflicts Whispering Death
+		'''
+	TooltipGFB:
+		'''
+		[c/9c0b0b:Fires a shotgun blast full of hatred... among other things]
+		[c/ac14ba:Press <right> to use a hexing rifle round instead]
+		[c/454545:By Cthulhu Eye, Yharon tooth...]
+		'''
+}
+
+AntiMaterielRifle: {
+}
+
+Arbalest: {
+}
+
+AquashardShotgun: {
+}
+
+Archerfish: {
+}
+
+ArcNovaDiffuser: {
+}
+
+Arietes41: {
+}
+
+ArterialAssault: {
+}
+
+AstralBlaster: {
+}
+
+AstrealDefeat: {
+}
+
+Auralis: {
+}
+
+AuroraBlazer: {
+}
+
+Barinade: {
+}
+
+Barinautical: {
+}
+
+BarracudaGun: {
+}
+
+BladedgeRailbow: {
+	TooltipNormal: Fires a spread of 4 arrows and 2 leaves at once
+	TooltipGFB: Fires a spread of 4 arrows... along with other various things
+}
+
+BlightSpewer: {
+}
+
+BlissfulBombardier: {
+}
+
+BloodBoiler: {
+}
+
+BlossomFlux.LegendaryText:
+	'''
+	'...I see... So frightened by the Godseeker were my children they chose to defile death for a warden in my image.
+	I am sorry. I could not gaze unto your hearts. The despair I inflicted upon you... I should have forseen the consequences of taking away your guardian.
+	But you shan't be neglected any longer.
+	Heed me, floral beast, on my authority. Ravage this place no longer, stand guard of the home and memories of the people who once lived here.
+	Channel all the might of this canopy and of the dead within you, so that no Godseeker, lowly or high, will ever trespass into this settlement.
+	Defend it till the last rays of the sun, so my hero shall yet have a home.'
+	'''
+
+BrimstoneFury: {
+}
+
+BulletFilledShotgun: {
+}
+
+Buzzkill: {
+}
+
+ChickenCannon: {
+}
+
+ChromaticEruption: {
+}
+
+ClamorRifle: {
+}
+
+CleansingBlaze: {
+}
+
+ClockworkBow: {
+}
+
+Condemnation: {
+}
+
+ConferenceCall: {
+}
+
+Contagion: {
+}
+
+ContinentalGreatbow: {
+}
+
+CorinthPrime: {
+}
+
+CorrodedCaustibow: {
+}
+
+CrackshotColt: {
+}
+
+DaemonsFlame: {
+}
+
+DarkechoGreatbow: {
+}
+
+DeadSunsWind: {
+}
+
+DeepcoreGK2: {
+}
+
+DragonsBreath: {
+}
+
+Drataliornus: {
+}
+
+DriftwoodBow: {
+}
+
+EternalBlizzard: {
+}
+
+Eviscerator: {
+}
+
+FetidEmesis: {
+}
+
+FirestormCannon: {
+}
+
+FlakKraken: {
+}
+
+FlakToxicannon: {
+}
+
+FlarewingBow: {
+}
+
+FlurrystormCannon: {
+}
+
+FreedomStar: {
+}
+
+FrostbiteBlaster: {
+}
+
+Fungicide: {
+}
+
+Galeforce: {
+}
+
+GoldenEagle: {
+}
+
+Goobow: {
+}
+
+GunkShot: {
+}
+
+HalibutCannon: {
+	TooltipNormal: "'Yes, it's still overpowered'"
+	TooltipGFB: "'No, it sucks now'"
+}
+
+HalleysInferno: {
+}
+
+HandheldTank: {
+}
+
+HavocsBreath: {
+}
+
+HeavenlyGale: {
+}
+
+Hellborn: {
+}
+
+Helstorm: {
+}
+
+HoarfrostBow: {
+}
+
+Hydra: {
+}
+
+Infinity: {
+}
+
+Karasawa: {
+}
+
+Kingsbane: {
+}
+
+Leviatitan: {
+}
+
+LunarianBow: {
+}
+
+M1Garand: {
+}
+
+MagnaCannon: {
+}
+
+MagnomalyCannon: {
+}
+
+Malevolence: {
+}
+
+MarksmanBow: {
+}
+
+Megalodon: {
+}
+
+Meowthrower: {
+}
+
+MidasPrime.UltrakillEasterEgg:
+	'''
+	MANKIND IS DEAD.
+	BLOOD IS FUEL.
+	HELL IS FULL.
+	'''
+
+MineralMortar: {
+}
+
+MonolithBow: {
+}
+
+Monsoon: {
+}
+
+Needler: {
+}
+
+NettlevineGreatbow: {
+}
+
+NitroExpressRifle: {
+}
+
+Norfleet: {
+}
+
+NullificationPistol: {
+}
+
+OntologicalDespoiler: {
+}
+
+OnyxChainBlaster: {
+}
+
+Onyxia: {
+}
+
+OpalStriker: {
+}
+
+OverloadedBlaster: {
+}
+
+P90: {
+}
+
+PearlGod: {
+}
+
+PestilentDefiler: {
+}
+
+Photoviscerator: {
+}
+
+PlagueTaintedSMG: {
+}
+
+PlanetaryAnnihilation: {
+}
+
+PolarisParrotfish: {
+	TooltipNormal:
+		'''
+		Rapidly fires an array of colorful star shots
+		Firing speed increases the closer you are to an enemy
+		'It carries the mark of the Northern Star'
+		'''
+	TooltipGFB:
+		'''
+		Rapidly fires an array of colorful star shots
+		Firing speed increases the closer you are to an enemy
+		<right> to give the little girl some attention
+		'She is a happy girl'
+		'''
+}
+
+PridefulHuntersPlanarRipper: {
+}
+
+PristineFury.LegendaryText:
+	'''
+	'I and many others lost everything in this world's darkest hour.
+	I saw a beast descend from the heavens. A hulking cosmic monstrosity that heralded countless angels of death.
+	My family was torn from me, my people forsake me. Even our supposed protectors did nothing to aid us.
+	And thus I swore to those I lost that I would do what is right, that my blaze's light would dwarf even that of Zeratros' Sun;
+	That one day, this cruel world would know nothing less than My perfect fury.'
+	'''
+
+Pumpler: {
+}
+
+RealmRavager: {
+}
+
+ReedBlowgun: {
+}
+
+Riftburst: {
+}
+
+RubicoPrime: {
+}
+
+Sandblaster: {
+}
+
+ScorchedEarth: {
+}
+
+Scorpio: {
+}
+
+SDFMG: {
+}
+
+Seadragon: {
+}
+
+SeasSearing: {
+}
+
+SepticSkewer: {
+}
+
+Shadethrower: {
+}
+
+Shellshooter: {
+}
+
+Shredder: {
+}
+
+Shroomer: {
+}
+
+SlagfireDouser: {
+}
+
+SlagMagnum: {
+}
+
+SomaPrime: {
+}
+
+SparkSpreader: {
+}
+
+SpectralstormCannon: {
+}
+
+SpeedBlaster: {
+}
+
+Spyker: {
+}
+
+Starfleet: {
+}
+
+Starmada: {
+}
+
+Starmageddon: {
+}
+
+StarSputter: {
+}
+
+StellarCannon: {
+}
+
+StormSurge: {
+}
+
+SulphuricAcidCannon: {
+}
+
+SuperradiantSlaughterer: {
+	MainInfo:
+		'''
+		Hold <left> to rev up an elemental buzzsaw that deals close-range damage
+		Release <left> to fire the buzzsaw which bounces off tiles, releasing homing bolts when returning depending on hits
+		Revving up the saw increases its damage and allows it to pierce more enemies
+		'''
+	AltInfo:
+		'''
+		Press <right> to eject a lingering buzzsaw towards the cursor on a {0} second cooldown
+		Double <right> to rapidly propel yourself in the direction you are moving
+		During the cooldown, buzzsaws home to the cursor and constantly release homing bolts while returning
+		'''
+}
+
+SurgeDriver: {
+}
+
+Svantechnical: {
+}
+
+TauCannon: {
+}
+
+TelluricGlare: {
+}
+
+TheBallista: {
+}
+
+TheHive: {
+}
+
+TheJailor: {
+}
+
+TheMaelstrom: {
+}
+
+ThePack: {
+}
+
+ThermoclineBlaster: {
+}
+
+TheSevensStriker.HoldShiftTooltip: "[c/ADD8E6:'LET'S GO GAMBLING!']"
+
+TheStorm: {
+}
+
+ThreadOfEradication: {
+}
+
+TitaniumRailgun: {
+}
+
+Toxibow: {
+}
+
+TyrannysEnd: {
+}
+
+Ultima: {
+}
+
+UniversalGenesis: {
+}
+
+VernalBolter: {
+}
+
+Voidragon: {
+}
+
+Vortexpopper: {
+}
+
+WildfireBloom: {
+}
+
+WulfrumBlunderbuss: {
+}

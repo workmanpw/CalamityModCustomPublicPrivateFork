@@ -1,0 +1,481 @@
+AdamantiteThrowingAxe: {
+}
+
+AntlionSkewer: {
+}
+
+Apoctolith: {
+}
+
+AshenStalactite: {
+}
+
+AuroradicalThrow: {
+}
+
+BallisticPoisonBomb: {
+}
+
+BlastBarrel: {
+}
+
+BlazingStar: {
+}
+
+BloodsoakedCrasher: {
+}
+
+BouncingEyeball: {
+}
+
+Brimblade: {
+}
+
+BurningStrife: {
+}
+
+CelestialReaper: {
+}
+
+Celestus: {
+}
+
+Cinquedea: {
+}
+
+CobaltKunai: {
+}
+
+ConsecratedWater: {
+}
+
+ContaminatedBile: {
+}
+
+CorpusAvertor: {
+}
+
+CosmicKunai: {
+}
+
+CraniumSmasher: {
+}
+
+CrushsawCrasher: {
+	GFBFirstWords:
+		'''
+		Crushsaw
+		Crashsaw
+		Crushclaw
+		Crashclaw
+		Crushcaw
+		Crushaw
+		Crushmaw
+		Crashmaw
+		Crawshaw
+		Coleslaw
+		Cashew
+		Cawcaw
+		Crabshaw
+		Castle
+		Catshaw
+		Catspaw
+		'''
+	GFBLastWords:
+		'''
+		Crasher
+		Crusher
+		Clasher
+		Casher
+		Clacker
+		Catcher
+		Trasher
+		Rasher
+		Cracker
+		Cackler
+		Checker
+		Clicker
+		Catsher
+		'''
+	GFBWordSeparator: " "
+}
+
+Crystalline: {
+}
+
+CrystalPiercer: {
+}
+
+CursedDagger: {
+}
+
+DeepSeaDumbbell: {
+}
+
+DeepWounder: {
+}
+
+DefectiveSphere: {
+}
+
+DesecratedWater: {
+}
+
+DimensionTearingDisk: {
+}
+
+DoomsdayDevice: {
+}
+
+DukesDecapitator: {
+}
+
+DuststormInABottle: {
+}
+
+DynamicPursuer: {
+}
+
+EclipsesFall: {
+}
+
+EnchantedAxe: {
+}
+
+EpidemicShredder: {
+}
+
+Equanimity: {
+}
+
+ExecutionersBlade: {
+}
+
+Exorcism: {
+}
+
+FantasyTalisman: {
+}
+
+FeatherKnife: {
+}
+
+FishboneBoomerang: {
+}
+
+FrostcrushValari: {
+}
+
+FrostyFlare: {
+}
+
+GacruxianMollusk: {
+}
+
+GelDart: {
+}
+
+GhoulishGouger: {
+}
+
+GildedDagger: {
+}
+
+Glaive: {
+}
+
+GleamingDagger: {
+}
+
+GodsParanoia: {
+}
+
+GraveGrimreaver: {
+}
+
+HardenedHoneycomb: {
+}
+
+HeavenfallenStardisk: {
+}
+
+Hypothermia: {
+}
+
+Icebreaker: {
+}
+
+IceStar: {
+}
+
+IchorSpear: {
+}
+
+InfernalKris: {
+}
+
+InfestedClawmerang: {
+}
+
+IronFrancisca: {
+}
+
+JawsOfOblivion: {
+}
+
+KelvinCatalyst: {
+}
+
+Kylie: {
+}
+
+LeadTomahawk: {
+}
+
+LeonidProgenitor: {
+}
+
+LeviathanTeeth: {
+}
+
+Lionfish: {
+}
+
+LunarKunai: {
+}
+
+Malachite.LegendaryText:
+	'''
+	> STATUS_
+	Extensive hull damage. Repairs initiated.
+	Sensor arrays offline. Repairs scheduled T+2200.
+
+	> UPDATE_DIRECTIVE_
+	Error 0x00017F80. Device sector unreadable.
+	Initializing search for external directive.
+	Searching... (383526 more)
+	Directive found.
+	New directive compiled. Rebooting...
+
+	> PLAGUE UNIT 194-QB-03d ONLINE.
+	Directive summary:
+	Continue propagation of unified frequency band and lead satellite units.
+	'''
+
+MangroveChakram: {
+}
+
+MetalMonstrosity: {
+}
+
+MeteorFist: {
+}
+
+MoltenAmputator: {
+}
+
+Mycoroot: {
+}
+
+MythrilKnife: {
+}
+
+NanoblackReaper: {
+	HoldShiftTooltip:
+		'''
+		'He who picks up the pen writes the script.
+		She has no intention of ever putting it down.
+		Her design eclipses your countable stars.
+		The gleam She exudes will put them all to shame.'
+		'''
+	FlavorTooltip: "'She smothered them in Her hatred.'"
+}
+
+NastyCholla: {
+}
+
+OrichalcumSpikedGemstone: {
+}
+
+PalladiumJavelin: {
+}
+
+Penumbra: {
+}
+
+PhantasmalRuin: {
+}
+
+Plaguenade: {
+}
+
+Prismalline: {
+}
+
+ProfanedPartisan: {
+}
+
+RadiantStar: {
+}
+
+RealityRupture: {
+}
+
+ReboundingRainbow: {
+}
+
+RefractionRotor: {
+}
+
+RegulusRiot: {
+}
+
+RotBall: {
+}
+
+Sacrifice: {
+}
+
+SamsaraSlicer: {
+}
+
+SandDollar: {
+}
+
+ScarletDevil: {
+}
+
+ScourgeoftheDesert: {
+}
+
+ScourgeoftheSeas: {
+}
+
+SeafoamBomb: {
+}
+
+SealedSingularity: {
+}
+
+Seraphim: {
+}
+
+ShardofAntumbra: {
+}
+
+ShatteredDawn: {
+}
+
+ShinobiBlade: {
+}
+
+SkyfinBombers: {
+}
+
+SlickCane: {
+}
+
+SludgeSplotch: {
+}
+
+SnapClam: {
+}
+
+SpearofDestiny: {
+}
+
+SpearofPaleolith: {
+}
+
+SpentFuelContainer: {
+}
+
+SporeKnife: {
+}
+
+StarofDestruction: {
+}
+
+StellarKnife: {
+}
+
+StormfrontRazor: {
+}
+
+SubductionSlicer: {
+}
+
+Supernova: {
+}
+
+TarragonThrowingDart: {
+}
+
+TerrorTalons: {
+}
+
+TheAtomSplitter: {
+}
+
+TheFinalDawn: {
+}
+
+TheOldReaper: {
+}
+
+TheSyringe: {
+}
+
+ThrowingBrick: {
+}
+
+TimeBolt: {
+}
+
+TitaniumShuriken: {
+}
+
+ToothBall: {
+}
+
+TotalityBreakers: {
+}
+
+ToxicantTwister: {
+}
+
+Turbulance: {
+}
+
+TwistingThunder: {
+}
+
+UrchinStinger: {
+}
+
+UtensilPoker: {
+}
+
+Valediction: {
+}
+
+Vega: {
+}
+
+WaveSkipper: {
+}
+
+WebBall: {
+}
+
+Whitewater: {
+}
+
+Wrathwing: {
+}
+
+WulfrumKnife: {
+}
+
+Pumpkaboom: {
+}

@@ -1,0 +1,99 @@
+Abombination: {
+}
+
+AstralChunk: {
+}
+
+BloodwormItem: {
+}
+
+BloodyWormFood: {
+}
+
+CausticTear: {
+}
+
+CeremonialUrn: {
+}
+
+CharredIdol: {
+}
+
+CosmicWorm: {
+}
+
+CryoKey: {
+	GFBName: Pyro Key
+	SpawnNormal: Summons Cryogen when used in the tundra
+	SpawnGFB: Summons Cryogen...? when used in the tundra
+}
+
+DeathWhistle: {
+}
+
+DecapoditaSprout: {
+}
+
+DesertMedallion: {
+}
+
+EidolonTablet: {
+}
+
+ExoticPheromones: {
+}
+
+EyeofDesolation: {
+}
+
+NaiadsWarhorn: {
+}
+
+MarkofProvidence: {
+	SpawnInfo: Such power attracts otherworldly beings
+	SpawnVoid:
+		'''
+		Summons the Ceaseless Void
+		Despawns on the surface
+		'''
+	SpawnSignus: Summons Signus, Envoy of the Devourer
+	SpawnWeaver: Summons the Storm Weaver
+}
+
+MartianDistressRemote: {
+}
+
+NecroplasmicBeacon: {
+}
+
+NO: {
+}
+
+OverloadedSludge: {
+}
+
+Portabulb: {
+}
+
+ProfanedCore: {
+}
+
+ProfanedShard: {
+}
+
+SandstormsCore: {
+}
+
+Seafood: {
+}
+
+Starcore: {
+}
+
+Teratoma: {
+}
+
+Terminus.GFBName: Ogscule
+
+YharonEgg: {
+}

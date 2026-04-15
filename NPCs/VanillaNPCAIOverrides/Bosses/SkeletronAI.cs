@@ -794,7 +794,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
 
                 NPC.spriteDirection = -(int)NPC.ai[0];
 
-                if (Main.npc[(int)NPC.ai[1]].ai[3] == -60f)
+                int skeletronIndex2 = (int)NPC.ai[1];
+                if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active && Main.npc[skeletronIndex2].ai[3] == -60f)
                 {
                     if (Main.netMode != NetmodeID.MultiplayerClient)
                     {
@@ -807,14 +808,18 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                         }
 
                         // New location
-                        NPC.Center = Main.npc[(int)NPC.ai[1]].Center;
+                        if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active)
+                            NPC.Center = Main.npc[skeletronIndex2].Center;
                         NPC.velocity = Vector2.Zero;
                         NPC.netUpdate = true;
                     }
                 }
 
                 float skeletronLifeRatio = 1f;
-                if (!Main.npc[(int)NPC.ai[1]].active || Main.npc[(int)NPC.ai[1]].aiStyle != NPCAIStyleID.SkeletronHead)
+                bool skeletronInvalid = skeletronIndex2 < 0 || skeletronIndex2 >= Main.maxNPCs;
+                if (!skeletronInvalid && (!Main.npc[skeletronIndex2].active || Main.npc[skeletronIndex2].aiStyle != NPCAIStyleID.SkeletronHead))
+                    skeletronInvalid = true;
+                if (skeletronInvalid)
                 {
                     NPC.ai[2] += 10f;
                     if (NPC.ai[2] > 50f || !Main.dedServ)
@@ -823,12 +828,18 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                         NPC.HitEffect(0, 10.0);
                         NPC.active = false;
                     }
+                    return false;
                 }
                 else
-                    skeletronLifeRatio = Main.npc[(int)NPC.ai[1]].life / (float)Main.npc[(int)NPC.ai[1]].lifeMax;
+                {
+                    if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active)
+                        skeletronLifeRatio = Main.npc[skeletronIndex2].life / (float)Main.npc[skeletronIndex2].lifeMax;
+                    else
+                        skeletronLifeRatio = 1f;
+                }
 
                 // This bool exists for fairness so the hands don't slap when Skeletron is in phase 3 and getting ready to do the new charge
-                bool cancelSlap = Main.npc[(int)NPC.ai[1]].ai[2] >= ChargeGateValue;
+                bool cancelSlap = skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active && Main.npc[skeletronIndex2].ai[2] >= ChargeGateValue;
 
                 // Fire skulls from hands at the end of each slap phase (master mode only)
                 bool phase2 = skeletronLifeRatio < 0.5f;
@@ -861,50 +872,53 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
 
                 if (NPC.ai[2] == 0f || NPC.ai[2] == 3f)
                 {
-                    if (Main.npc[(int)NPC.ai[1]].ai[1] == 3f && NPC.timeLeft > 10)
-                        NPC.timeLeft = 10;
-
-                    if (Main.npc[(int)NPC.ai[1]].ai[1] != 0f || cancelSlap)
+                    if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active)
                     {
-                        deceleration *= 0.75f;
-                        velocityIncrement *= 1.5f;
+                        if (Main.npc[skeletronIndex2].ai[1] == 3f && NPC.timeLeft > 10)
+                            NPC.timeLeft = 10;
 
-                        float maxX = velocityIncrement * 100f * velocityMultiplier;
-                        float maxY = velocityIncrement * 100f * velocityMultiplier;
+                        if (Main.npc[skeletronIndex2].ai[1] != 0f || cancelSlap)
+                        {
+                            deceleration *= 0.75f;
+                            velocityIncrement *= 1.5f;
 
-                        if (NPC.Top.Y > Main.npc[(int)NPC.ai[1]].Top.Y - 100f * yMultiplier)
-                        {
-                            if (NPC.velocity.Y > 0f)
-                                NPC.velocity.Y *= deceleration;
-                            NPC.velocity.Y -= velocityIncrement;
-                            if (NPC.velocity.Y > maxY)
-                                NPC.velocity.Y = maxY;
-                        }
-                        else if (NPC.Top.Y < Main.npc[(int)NPC.ai[1]].Top.Y - 100f * yMultiplier)
-                        {
-                            if (NPC.velocity.Y < 0f)
-                                NPC.velocity.Y *= deceleration;
-                            NPC.velocity.Y += velocityIncrement;
-                            if (NPC.velocity.Y < -maxY)
-                                NPC.velocity.Y = -maxY;
-                        }
+                            float maxX = velocityIncrement * 100f * velocityMultiplier;
+                            float maxY = velocityIncrement * 100f * velocityMultiplier;
 
-                        if (NPC.Center.X > Main.npc[(int)NPC.ai[1]].Center.X - 120f * NPC.ai[0])
-                        {
-                            if (NPC.velocity.X > 0f)
-                                NPC.velocity.X *= deceleration;
-                            NPC.velocity.X -= velocityIncrement;
-                            if (NPC.velocity.X > maxX)
-                                NPC.velocity.X = maxX;
-                        }
+                            if (NPC.Top.Y > Main.npc[skeletronIndex2].Top.Y - 100f * yMultiplier)
+                            {
+                                if (NPC.velocity.Y > 0f)
+                                    NPC.velocity.Y *= deceleration;
+                                NPC.velocity.Y -= velocityIncrement;
+                                if (NPC.velocity.Y > maxY)
+                                    NPC.velocity.Y = maxY;
+                            }
+                            else if (NPC.Top.Y < Main.npc[skeletronIndex2].Top.Y - 100f * yMultiplier)
+                            {
+                                if (NPC.velocity.Y < 0f)
+                                    NPC.velocity.Y *= deceleration;
+                                NPC.velocity.Y += velocityIncrement;
+                                if (NPC.velocity.Y < -maxY)
+                                    NPC.velocity.Y = -maxY;
+                            }
 
-                        if (NPC.Center.X < Main.npc[(int)NPC.ai[1]].Center.X - 120f * NPC.ai[0])
-                        {
-                            if (NPC.velocity.X < 0f)
-                                NPC.velocity.X *= deceleration;
-                            NPC.velocity.X += velocityIncrement;
-                            if (NPC.velocity.X < -maxX)
-                                NPC.velocity.X = -maxX;
+                            if (NPC.Center.X > Main.npc[skeletronIndex2].Center.X - 120f * NPC.ai[0])
+                            {
+                                if (NPC.velocity.X > 0f)
+                                    NPC.velocity.X *= deceleration;
+                                NPC.velocity.X -= velocityIncrement;
+                                if (NPC.velocity.X > maxX)
+                                    NPC.velocity.X = maxX;
+                            }
+
+                            if (NPC.Center.X < Main.npc[skeletronIndex2].Center.X - 120f * NPC.ai[0])
+                            {
+                                if (NPC.velocity.X < 0f)
+                                    NPC.velocity.X *= deceleration;
+                                NPC.velocity.X += velocityIncrement;
+                                if (NPC.velocity.X < -maxX)
+                                    NPC.velocity.X = -maxX;
+                            }
                         }
                     }
                     else
@@ -915,7 +929,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                             NPC.ai[3] += slapTimerIncrement;
                             if (NPC.ai[3] >= slapGateValue)
                             {
-                                NPC.target = Main.npc[(int)NPC.ai[1]].target;
+                                if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active)
+                                    NPC.target = Main.npc[skeletronIndex2].target;
                                 NPC.ai[2] += 1f;
                                 NPC.ai[3] = calamityGlobalNPC.newAI[2] = slapGateValue;
                                 calamityGlobalNPC.newAI[3] = 0f;
@@ -937,58 +952,64 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                         float maxX = velocityIncrement * 100f * velocityMultiplier;
                         float maxY = velocityIncrement * 100f * velocityMultiplier;
 
-                        if (NPC.Top.Y > Main.npc[(int)NPC.ai[1]].Top.Y + 230f * yMultiplier)
+                        if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active)
                         {
-                            if (NPC.velocity.Y > 0f)
-                                NPC.velocity.Y *= deceleration;
-                            NPC.velocity.Y -= velocityIncrement;
-                            if (NPC.velocity.Y > maxY)
-                                NPC.velocity.Y = maxY;
-                        }
-                        else if (NPC.Top.Y < Main.npc[(int)NPC.ai[1]].Top.Y + 230f * yMultiplier)
-                        {
-                            if (NPC.velocity.Y < 0f)
-                                NPC.velocity.Y *= deceleration;
-                            NPC.velocity.Y += velocityIncrement;
-                            if (NPC.velocity.Y < -maxY)
-                                NPC.velocity.Y = -maxY;
-                        }
+                            if (NPC.Top.Y > Main.npc[skeletronIndex2].Top.Y + 230f * yMultiplier)
+                            {
+                                if (NPC.velocity.Y > 0f)
+                                    NPC.velocity.Y *= deceleration;
+                                NPC.velocity.Y -= velocityIncrement;
+                                if (NPC.velocity.Y > maxY)
+                                    NPC.velocity.Y = maxY;
+                            }
+                            else if (NPC.Top.Y < Main.npc[skeletronIndex2].Top.Y + 230f * yMultiplier)
+                            {
+                                if (NPC.velocity.Y < 0f)
+                                    NPC.velocity.Y *= deceleration;
+                                NPC.velocity.Y += velocityIncrement;
+                                if (NPC.velocity.Y < -maxY)
+                                    NPC.velocity.Y = -maxY;
+                            }
 
-                        if (NPC.Center.X > Main.npc[(int)NPC.ai[1]].Center.X - 200f * NPC.ai[0])
-                        {
-                            if (NPC.velocity.X > 0f)
-                                NPC.velocity.X *= deceleration;
-                            NPC.velocity.X -= velocityIncrement;
-                            if (NPC.velocity.X > maxX)
-                                NPC.velocity.X = maxX;
-                        }
+                            if (NPC.Center.X > Main.npc[skeletronIndex2].Center.X - 200f * NPC.ai[0])
+                            {
+                                if (NPC.velocity.X > 0f)
+                                    NPC.velocity.X *= deceleration;
+                                NPC.velocity.X -= velocityIncrement;
+                                if (NPC.velocity.X > maxX)
+                                    NPC.velocity.X = maxX;
+                            }
 
-                        if (NPC.Center.X < Main.npc[(int)NPC.ai[1]].Center.X - 200f * NPC.ai[0])
-                        {
-                            if (NPC.velocity.X < 0f)
-                                NPC.velocity.X *= deceleration;
-                            NPC.velocity.X += velocityIncrement;
-                            if (NPC.velocity.X < -maxX)
-                                NPC.velocity.X = -maxX;
+                            if (NPC.Center.X < Main.npc[skeletronIndex2].Center.X - 200f * NPC.ai[0])
+                            {
+                                if (NPC.velocity.X < 0f)
+                                    NPC.velocity.X *= deceleration;
+                                NPC.velocity.X += velocityIncrement;
+                                if (NPC.velocity.X < -maxX)
+                                    NPC.velocity.X = -maxX;
+                            }
+
+                            Vector2 handCurrentPos = NPC.Center;
+                            float handIdleXPos = Main.npc[skeletronIndex2].Center.X - 200f * NPC.ai[0] - handCurrentPos.X;
+                            float handIdleYPos = Main.npc[skeletronIndex2].Top.Y + 230f - handCurrentPos.Y;
+                            float handIdleDist = (float)Math.Sqrt(handIdleXPos * handIdleXPos + handIdleYPos * handIdleYPos);
+                            NPC.rotation = (float)Math.Atan2(handIdleYPos, handIdleXPos) + MathHelper.PiOver2;
                         }
                     }
-
-                    Vector2 handCurrentPos = NPC.Center;
-                    float handIdleXPos = Main.npc[(int)NPC.ai[1]].Center.X - 200f * NPC.ai[0] - handCurrentPos.X;
-                    float handIdleYPos = Main.npc[(int)NPC.ai[1]].Top.Y + 230f - handCurrentPos.Y;
-                    float handIdleDist = (float)Math.Sqrt(handIdleXPos * handIdleXPos + handIdleYPos * handIdleYPos);
-                    NPC.rotation = (float)Math.Atan2(handIdleYPos, handIdleXPos) + MathHelper.PiOver2;
 
                     return false;
                 }
 
                 if (NPC.ai[2] == 1f)
                 {
-                    Vector2 handCurrentPosition = NPC.Center;
-                    float handDrawbackXPos = Main.npc[(int)NPC.ai[1]].Center.X - 200f * NPC.ai[0] - handCurrentPosition.X;
-                    float handDrawbackYPos = Main.npc[(int)NPC.ai[1]].Top.Y + 230f - handCurrentPosition.Y;
-                    float handDrawbackDist = (float)Math.Sqrt(handDrawbackXPos * handDrawbackXPos + handDrawbackYPos * handDrawbackYPos);
-                    NPC.rotation = (float)Math.Atan2(handDrawbackYPos, handDrawbackXPos) + MathHelper.PiOver2;
+                    if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active)
+                    {
+                        Vector2 handCurrentPosition = NPC.Center;
+                        float handDrawbackXPos = Main.npc[skeletronIndex2].Center.X - 200f * NPC.ai[0] - handCurrentPosition.X;
+                        float handDrawbackYPos = Main.npc[skeletronIndex2].Top.Y + 230f - handCurrentPosition.Y;
+                        float handDrawbackDist = (float)Math.Sqrt(handDrawbackXPos * handDrawbackXPos + handDrawbackYPos * handDrawbackYPos);
+                        NPC.rotation = (float)Math.Atan2(handDrawbackYPos, handDrawbackXPos) + MathHelper.PiOver2;
+                    }
                     NPC.velocity.X *= 0.95f;
                     NPC.velocity.Y -= velocityIncrement;
 
@@ -997,18 +1018,28 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                     else if (NPC.velocity.Y > 10f)
                         NPC.velocity.Y = 10f;
 
-                    if (NPC.Top.Y < Main.npc[(int)NPC.ai[1]].Top.Y - 200f)
+                    if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active && NPC.Top.Y < Main.npc[skeletronIndex2].Top.Y - 200f)
                     {
                         NPC.ai[2] = 2f;
                         NPC.ai[3] = 0f;
                         NPC.velocity = (Main.player[NPC.target].Center - NPC.Center).SafeNormalize(Vector2.UnitY) * handSwipeVelocity;
                         NPC.netUpdate = true;
                     }
+                    return false;
                 }
                 else if (NPC.ai[2] == 2f)
                 {
                     NPC.ai[3] += 1f;
-                    if (NPC.ai[3] >= handSwipeDuration || Vector2.Distance(Main.npc[(int)NPC.ai[1]].Center, NPC.Center) > handSwipeDistance || cancelSlap)
+                    bool shouldStop = false;
+                    if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active)
+                    {
+                        if (NPC.ai[3] >= handSwipeDuration || Vector2.Distance(Main.npc[skeletronIndex2].Center, NPC.Center) > handSwipeDistance || cancelSlap)
+                            shouldStop = true;
+                    }
+                    else
+                        shouldStop = true;
+
+                    if (shouldStop)
                     {
                         NPC.ai[2] = 3f;
                         NPC.ai[3] = 0f;
@@ -1030,14 +1061,18 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                             }
                         }
                     }
+                    return false;
                 }
                 else if (NPC.ai[2] == 4f)
                 {
-                    Vector2 handStrikeCurrentPos = NPC.Center;
-                    float handStrikeXPos = Main.npc[(int)NPC.ai[1]].Center.X - 200f * NPC.ai[0] - handStrikeCurrentPos.X;
-                    float handStrikeYPos = Main.npc[(int)NPC.ai[1]].Top.Y + 230f - handStrikeCurrentPos.Y;
-                    float handStrikeDist = (float)Math.Sqrt(handStrikeXPos * handStrikeXPos + handStrikeYPos * handStrikeYPos);
-                    NPC.rotation = (float)Math.Atan2(handStrikeYPos, handStrikeXPos) + MathHelper.PiOver2;
+                    if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active)
+                    {
+                        Vector2 handStrikeCurrentPos = NPC.Center;
+                        float handStrikeXPos = Main.npc[skeletronIndex2].Center.X - 200f * NPC.ai[0] - handStrikeCurrentPos.X;
+                        float handStrikeYPos = Main.npc[skeletronIndex2].Top.Y + 230f - handStrikeCurrentPos.Y;
+                        float handStrikeDist = (float)Math.Sqrt(handStrikeXPos * handStrikeXPos + handStrikeYPos * handStrikeYPos);
+                        NPC.rotation = (float)Math.Atan2(handStrikeYPos, handStrikeXPos) + MathHelper.PiOver2;
+                    }
                     NPC.velocity.Y *= 0.95f;
                     NPC.velocity.X += velocityIncrement * -NPC.ai[0];
 
@@ -1046,18 +1081,31 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                     else if (NPC.velocity.X > 14f)
                         NPC.velocity.X = 14f;
 
-                    if (NPC.Center.X < Main.npc[(int)NPC.ai[1]].Center.X - 500f || NPC.Center.X > Main.npc[(int)NPC.ai[1]].Center.X + 500f)
+                    if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active)
                     {
-                        NPC.ai[2] = 5f;
-                        NPC.ai[3] = 0f;
-                        NPC.velocity = (Main.player[NPC.target].Center - NPC.Center).SafeNormalize(Vector2.UnitY) * handSwipeVelocity;
-                        NPC.netUpdate = true;
+                        if (NPC.Center.X < Main.npc[skeletronIndex2].Center.X - 500f || NPC.Center.X > Main.npc[skeletronIndex2].Center.X + 500f)
+                        {
+                            NPC.ai[2] = 5f;
+                            NPC.ai[3] = 0f;
+                            NPC.velocity = (Main.player[NPC.target].Center - NPC.Center).SafeNormalize(Vector2.UnitY) * handSwipeVelocity;
+                            NPC.netUpdate = true;
+                        }
                     }
+                    return false;
                 }
                 else if (NPC.ai[2] == 5f)
                 {
                     NPC.ai[3] += 1f;
-                    if (NPC.ai[3] >= handSwipeDuration || Vector2.Distance(Main.npc[(int)NPC.ai[1]].Center, NPC.Center) > handSwipeDistance || cancelSlap)
+                    bool shouldStop = false;
+                    if (skeletronIndex2 >= 0 && skeletronIndex2 < Main.maxNPCs && Main.npc[skeletronIndex2].active)
+                    {
+                        if (NPC.ai[3] >= handSwipeDuration || Vector2.Distance(Main.npc[skeletronIndex2].Center, NPC.Center) > handSwipeDistance || cancelSlap)
+                            shouldStop = true;
+                    }
+                    else
+                        shouldStop = true;
+
+                    if (shouldStop)
                     {
                         NPC.ai[2] = 0f;
                         NPC.ai[3] = 0f;
@@ -1079,6 +1127,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                             }
                         }
                     }
+                    return false;
                 }
 
                 return false;

@@ -1,0 +1,324 @@
+AbandonedSlimeStaff: {
+}
+
+AmphibiansGuitar: {
+}
+
+AncientIceChunk: {
+}
+
+AquasScepter: {
+}
+
+AresExoskeleton: {
+}
+
+AtlasMunitionsBeacon: {
+}
+
+BelladonnaSpiritStaff: {
+}
+
+BlackHawkRemote: {
+}
+
+BorealisBomber: {
+}
+
+BrittleStarStaff: {
+}
+
+CadaverousCarrion: {
+}
+
+CalamarisLament: {
+	TooltipNormal:
+		'''
+		Summons a miniature squid that viciously inks enemies
+		At long distance, the squid will fire aggressively homing ink volleys
+		At close range, the squid will latch onto enemies and deal increased damage
+		'In the Abyss, all kinds of resources are scarce.
+		Every species is solitary. There simply is not enough to share.'
+		'''
+	TooltipGFB: "'Woomy!'"
+}
+
+CausticCroakerStaff: {
+}
+
+CausticStaff: {
+}
+
+CinderBlossomStaff: {
+}
+
+CindersOfLament.Calamitas:
+	'''
+	'My brothers perished in Azafure. I found their bodies near the center of the city, after they left for an expedition.
+	Before my power was what it is now, they were always alongside me and didn't allow anyone to harm me.
+	It may have been a problem sometimes, but they were surprisingly obedient.
+	And even after all that's happened, and even in death, they still look out for me. Isn't that sweet of them?'
+	'''
+
+Cnidarian: {
+}
+
+CorroslimeStaff: {
+}
+
+CorvidHarbringerStaff: {
+}
+
+CosmicImmaterializer: {
+}
+
+CosmicViperEngine: {
+}
+
+Cosmilamp: {
+}
+
+CrimslimeStaff: {
+}
+
+CryogenicStaff: {
+}
+
+DaedalusGolemStaff: {
+}
+
+DankStaff: {
+}
+
+DazzlingStabberStaff: {
+}
+
+DeathstareRod: {
+}
+
+DeepseaStaff: {
+}
+
+DormantBrimseeker: {
+}
+
+DragonbloodDisgorger: {
+}
+
+DreadmineStaff: {
+}
+
+EnchantedConch: {
+}
+
+EnchantedKnifeStaff: {
+}
+
+Endogenesis: {
+}
+
+EndoHydraStaff: {
+}
+
+EntropysVigil: {
+}
+
+EtherealSubjugator: {
+}
+
+EyeOfNight: {
+}
+
+FlamsteedRing: {
+	NoSpaceTextTop: Cannot Deploy
+	NoSpaceTextBottom: Insufficient space!
+}
+
+FleshOfInfidelity: {
+}
+
+FlowersOfMortality: {
+}
+
+ForgottenApexWand: {
+}
+
+FrostBlossomStaff: {
+}
+
+FuelCellBundle: {
+}
+
+GammaHeart: {
+}
+
+GastricBelcherStaff: {
+}
+
+GlacialEmbrace: {
+}
+
+GuidelightofOblivion: {
+}
+
+HarvestStaff: {
+}
+
+HauntedScroll: {
+}
+
+HerringStaff: {
+}
+
+HivePod: {
+}
+
+IgneousExaltation: {
+}
+
+InfectedRemote: {
+}
+
+KingofConstellationsTenryu: {
+}
+
+LegionofCelestia: {
+}
+
+LiliesOfFinality: {
+}
+
+Metastasis.Calamitas:
+	'''
+	'When I joined Yharim's ranks, the Devourer was one of the first to greet me. He seemed kind at first, but that mask did not last long.
+	He was arrogant, disrespectful and shady. If you hadn't killed him, I would've.
+	I made my Sepulcher as a mockery of his arrogance, but it seems the insult fell flat. You can add "slime-brained" to his list of fabricated titles.'
+	'''
+
+MidnightSunBeacon: {
+}
+
+MirrorofKalandra: {
+}
+
+MutatedTruffle: {
+}
+
+OrthoceraShell: {
+}
+
+Perdition: {
+}
+
+PlantationStaff: {
+}
+
+PolypLauncher: {
+}
+
+PuffShroom: {
+}
+
+ResurrectionButterfly: {
+}
+
+RustyBeaconPrototype: {
+}
+
+SanctifiedSpark: {
+}
+
+SandSharknadoStaff: {
+}
+
+SarosPossession: {
+}
+
+ScabRipper: {
+}
+
+ShellfishStaff: {
+}
+
+Sirius: {
+}
+
+SlimePuppetStaff: {
+}
+
+SpikecragStaff: {
+	TooltipNormal:
+		'''
+		{$CommonItemTooltip.Sentry}
+		Summons a bed of stalagmites to spray spikes at your enemies
+		'''
+	TooltipGFB:
+		'''
+		{$CommonItemTooltip.Sentry}
+		Summons a bed of stalagmites to spray spikes at your enemies
+		Defeating the Profaned Goddess unlocks its true power
+		'''
+}
+
+SquirrelSquireStaff: {
+}
+
+StaffOfNecrosteocytes: {
+}
+
+StarspawnHelixStaff: {
+}
+
+StellarTorusStaff: {
+}
+
+StormjawStaff: {
+}
+
+SunSpiritStaff: {
+}
+
+TacticalPlagueEngine: {
+}
+
+TemporalUmbrella: {
+}
+
+TundraFlameBlossomsStaff: {
+}
+
+UniverseSplitter: {
+}
+
+VengefulSunStaff: {
+}
+
+Vigilance: {
+}
+
+VileFeeder: {
+}
+
+ViralSprout: {
+}
+
+ViridVanguard: {
+}
+
+VoidConcentrationStaff: {
+}
+
+VoidEaterMarionette: {
+}
+
+WarloksMoonFist: {
+}
+
+WitherBlossomsStaff: {
+}
+
+WulfrumController: {
+}
+
+YharonsKindleStaff: {
+}

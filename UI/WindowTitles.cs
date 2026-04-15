@@ -24,22 +24,27 @@ namespace CalamityModCustomPublicPrivateFork.UI
                 List<LocalizedText> vanillaTitles = new();
                 List<LocalizedText> customTitles = new();
 
-                try
+                // Retry mechanism for Language.FindAll to handle collection modification during mod loading
+                for (int retry = 0; retry < 5; retry++)
                 {
-                    vanillaTitles = Language.FindAll(new Regex("^GameTitle\\.")).ToList();
-                }
-                catch (InvalidOperationException)
-                {
-                    // Collection may be modified during enumeration, skip vanilla titles
-                }
-
-                try
-                {
-                    customTitles = Language.FindAll(new Regex("^Mods\\.CalamityMod\\.UI\\.WindowTitle\\.")).ToList();
-                }
-                catch (InvalidOperationException)
-                {
-                    // Collection may be modified during enumeration, skip custom titles
+                    try
+                    {
+                        if (vanillaTitles.Count == 0)
+                            vanillaTitles = Language.FindAll(new Regex("^GameTitle\\.")).ToList();
+                        
+                        if (customTitles.Count == 0)
+                            customTitles = Language.FindAll(new Regex("^Mods\\.CalamityMod\\.UI\\.WindowTitle\\.")).ToList();
+                        
+                        // If both succeeded, break out of retry loop
+                        if (vanillaTitles.Count > 0 || customTitles.Count > 0)
+                            break;
+                    }
+                    catch (InvalidOperationException)
+                    {
+                        // Collection may be modified during enumeration, wait and retry
+                        if (retry < 4)
+                            System.Threading.Thread.Sleep(50);
+                    }
                 }
 
                 var allTitles = new List<LocalizedText>();
