@@ -115,7 +115,8 @@ namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
                 if (alpha <= 0.0f)
                     continue;
 
-                Main.spriteBatch.Draw(textures[i].Value, Vector2.Zero, null, Color.White * alpha);
+                if (textures[i] is not null && textures[i].Value is not null)
+                    Main.spriteBatch.Draw(textures[i].Value, Vector2.Zero, null, Color.White * alpha);
             }
         }
     }

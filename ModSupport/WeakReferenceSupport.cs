@@ -1125,10 +1125,10 @@ namespace CalamityModCustomPublicPrivateFork
             void AddToMutantShop(string bossName, string summonItemName, Func<bool> downed, int price)
             {
                 BossChecklistProgressionValues.TryGetValue(bossName, out float order);
-                fargos.Call("AddSummon", order, "CalamityMod", summonItemName, downed, price);
+                fargos.Call("AddSummon", order, CalamityMod.Instance.Name, summonItemName, downed, price);
             }
 
-            fargos.Call("AbominationnClearEvents", "CalamityMod", AcidRainEvent.AcidRainEventIsOngoing, true);
+            fargos.Call("AbominationnClearEvents", CalamityMod.Instance.Name, AcidRainEvent.AcidRainEventIsOngoing, true);
 
             AddToMutantShop("OldDuke", "BloodwormItem", DownedOldDuke, Item.buyPrice(platinum: 2));
         }
