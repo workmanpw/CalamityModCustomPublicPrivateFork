@@ -1358,16 +1358,23 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
             if (type == NPCID.Princess)
             {
                 Mod musicMod = ExternalMods.musicMod;
-                musicMod.TryFind("Interlude1MusicBox", out ModItem interlude1Box);
-                musicMod.TryFind("Interlude2MusicBox", out ModItem interlude2Box);
-                musicMod.TryFind("Interlude3MusicBox", out ModItem interlude3Box);
-                musicMod.TryFind("DevourerofGodsEulogyMusicBox", out ModItem eulogyBox);
+                if (musicMod is not null)
+                {
+                    musicMod.TryFind("Interlude1MusicBox", out ModItem interlude1Box);
+                    musicMod.TryFind("Interlude2MusicBox", out ModItem interlude2Box);
+                    musicMod.TryFind("Interlude3MusicBox", out ModItem interlude3Box);
+                    musicMod.TryFind("DevourerofGodsEulogyMusicBox", out ModItem eulogyBox);
 
-                shop.InsertAfter(ItemID.MusicBoxCredits, interlude1Box.Type, CalamityConditions.DownedCalamitasClone)
-                .InsertAfter(ItemID.MusicBoxCredits, interlude2Box.Type, Condition.DownedMoonLord)
-                .InsertAfter(ItemID.MusicBoxCredits, interlude3Box.Type, CalamityConditions.DownedYharon)
-                .InsertAfter(ItemID.MusicBoxCredits, eulogyBox.Type, CalamityConditions.DownedDevourerOfGods)
-                .AddWithCustomValue(ItemID.PrincessWeapon, Item.buyPrice(platinum: 1), Condition.Hardmode)
+                    if (interlude1Box is not null)
+                        shop.InsertAfter(ItemID.MusicBoxCredits, interlude1Box.Type, CalamityConditions.DownedCalamitasClone);
+                    if (interlude2Box is not null)
+                        shop.InsertAfter(ItemID.MusicBoxCredits, interlude2Box.Type, Condition.DownedMoonLord);
+                    if (interlude3Box is not null)
+                        shop.InsertAfter(ItemID.MusicBoxCredits, interlude3Box.Type, CalamityConditions.DownedYharon);
+                    if (eulogyBox is not null)
+                        shop.InsertAfter(ItemID.MusicBoxCredits, eulogyBox.Type, CalamityConditions.DownedDevourerOfGods);
+                }
+                shop.AddWithCustomValue(ItemID.PrincessWeapon, Item.buyPrice(platinum: 1), Condition.Hardmode)
                 .AddWithCustomValue(ItemType<ForgivenessPainting>(), Item.buyPrice(gold: 15), Condition.NpcIsPresent(NPCType<BrimstoneWitch>()))
                 .Add<LanternCenter>();
             }

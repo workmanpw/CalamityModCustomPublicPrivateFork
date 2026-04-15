@@ -123,7 +123,19 @@ internal sealed class ScreenspaceTargetPool : RenderTargetPool
     public override void Return(RenderTargetLease lease)
     {
         ArgumentNullException.ThrowIfNull(lease);
-        ObjectDisposedException.ThrowIf(disposed, this);
+        if (disposed)
+        {
+            // Pool is disposed, just dispose the target directly without returning to pool
+            try
+            {
+                lease.Target.Dispose();
+            }
+            catch
+            {
+                // Ignore disposal errors during unload
+            }
+            return;
+        }
 
         if (!cache.Remove(lease))
         {

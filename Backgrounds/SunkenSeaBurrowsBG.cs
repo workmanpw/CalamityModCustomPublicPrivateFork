@@ -39,11 +39,18 @@ namespace CalamityModCustomPublicPrivateFork.Backgrounds
             {
                 try
                 {
-                    WaterDistortionTarget?.Dispose();
+                    if (WaterDistortionTarget is not null)
+                    {
+                        WaterDistortionTarget.Dispose();
+                    }
                 }
                 catch (ObjectDisposedException)
                 {
                     // Pool may already be disposed during unload
+                }
+                catch (Exception)
+                {
+                    // Catch any other exceptions during unload
                 }
                 WaterDistortionTarget = null;
             });
