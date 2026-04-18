@@ -1,4 +1,4 @@
-# Calamity's Licesne (not mine):
+# Calamity's License (not mine):
 
 **The Calamity Mod and all associated source code, visual assets and audio assets, is all rights reserved (ARR).**
 
