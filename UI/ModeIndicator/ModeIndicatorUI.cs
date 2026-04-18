@@ -126,7 +126,14 @@ namespace CalamityModCustomPublicPrivateFork.UI.ModeIndicator
 
             if (!_hasCheckedItOutYet || GlowFadeTime > 0)
             {
-                spriteBatch.End();
+                try
+                {
+                    spriteBatch.End();
+                }
+                catch
+                {
+                    // spriteBatch was not begun, ignore
+                }
                 spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, null, null, null, null, Main.UIScaleMatrix);
 
                 Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/BloomFlare").Value;

@@ -100,7 +100,14 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Paintings
                 var fPX = (int)cube.framePosition.X;
                 var fPY = (int)cube.framePosition.Y;
                 var scale = (int)(texture.Width * 0.1f * cube.scale);
-                spriteBatch.End();
+                try
+                {
+                    spriteBatch.End();
+                }
+                catch
+                {
+                    // spriteBatch was not begun, ignore
+                }
                 spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null);
                 spriteBatch.Draw(texture, pos - Main.screenPosition, new Rectangle(fPX, fPY, scale, scale), Lighting.GetColor(i, j), 0, new Vector2(0, 0), 1 / cube.scale * Scale, 0, 0);
                 spriteBatch.End();

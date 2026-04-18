@@ -39,7 +39,14 @@ namespace CalamityModCustomPublicPrivateFork.UI
                     return;
                 if (GetActiveGUI.FadeTime == 1 && !GetActiveGUI.Active)
                 {
-                    spriteBatch.End();
+                    try
+                    {
+                        spriteBatch.End();
+                    }
+                    catch
+                    {
+                        // spriteBatch was not begun, ignore
+                    }
                     spriteBatch.Begin();
                     return;
                 }

@@ -75,7 +75,14 @@ namespace CalamityModCustomPublicPrivateFork.Skies
             if (maxDepth >= 0 && minDepth < 0 && GetIntensity() > 0f)
                 spriteBatch.Draw(TextureAssets.BlackTile.Value, new Rectangle(0, 0, Main.screenWidth * 2, Main.screenHeight * 2), GeneralColor * GetIntensity() * 0.5f);
 
-            Main.spriteBatch.End();
+            try
+            {
+                Main.spriteBatch.End();
+            }
+            catch
+            {
+                // spriteBatch was not begun, ignore
+            }
             Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive);
 
             // Make the entire background fade to white at the end of the event.
