@@ -39,7 +39,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
         public override void AI()
         {
-            NPC target = Main.npc[(int)Projectile.ai[0]];
+            int npcIndex = (int)Projectile.ai[0];
+            if (npcIndex < 0 || npcIndex >= Main.maxNPCs || !Main.npc[npcIndex].active)
+            {
+                Projectile.Kill();
+                return;
+            }
+            NPC target = Main.npc[npcIndex];
             Vector2 targetVector = target.Center - Projectile.Center;
             if (Projectile.localAI[0] == 0)
             {

@@ -59,7 +59,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
                 // Homing stars from burning revalation
                 if (Projectile.ai[2] != -1 && time > 20)
                 {
-                    NPC targeted = Projectile.ai[2] == -1 ? null : Main.npc[(int)Projectile.ai[2]];
+                    int npcIndex = (int)Projectile.ai[2];
+                    NPC targeted = (npcIndex < 0 || npcIndex >= Main.maxNPCs || !Main.npc[npcIndex].active) ? null : Main.npc[npcIndex];
                     if (targeted != null && (targeted.life <= 0 || !targeted.CanBeChasedBy(Projectile)))
                         targeted = null;
                     else

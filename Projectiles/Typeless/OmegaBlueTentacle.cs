@@ -110,7 +110,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
                             }
                         }
                     }
-                    if (target != -1)
+                    if (target != -1 && target < Main.maxNPCs && Main.npc[target].active)
                     {
                         Projectile.velocity = Vector2.Normalize(Main.npc[target].Center - Projectile.Center) * 13f + (Main.npc[target].velocity / 2f) - (playerVel / 2f);
                         Projectile.ai[0] *= -1f;

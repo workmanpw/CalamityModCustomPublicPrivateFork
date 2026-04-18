@@ -86,7 +86,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             {
                 Projectile.ai[1] += 1f;
                 int npcTrack = (int)Projectile.ai[0];
-                if (!Main.npc[npcTrack].active || !Main.npc[npcTrack].CanBeChasedBy(Projectile, false))
+                if (npcTrack < 0 || npcTrack >= Main.maxNPCs || !Main.npc[npcTrack].active || !Main.npc[npcTrack].CanBeChasedBy(Projectile, false))
                 {
                     Projectile.ai[1] = 1f;
                     Projectile.ai[0] = 0f;

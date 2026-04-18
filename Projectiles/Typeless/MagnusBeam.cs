@@ -70,7 +70,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
                     targetNPC = target.whoAmI;
                 }
             }
-            if (targetNPC > -1)
+            if (targetNPC > -1 && targetNPC < Main.maxNPCs && Main.npc[targetNPC].active)
             {
                 NPC target = Main.npc[targetNPC];
                 Vector2 idealVelocity = Projectile.SafeDirectionTo(target.Center) * 12f;
