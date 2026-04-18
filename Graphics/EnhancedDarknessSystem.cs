@@ -70,32 +70,39 @@ namespace CalamityModCustomPublicPrivateFork.Graphics
                 RenderTargetDescriptor.Default
             );
 
-            bool spriteBatchWasBegun = beginSpriteBatch;
-            if (spriteBatchWasBegun)
-                spriteBatch.End();
+            // Use Main.spriteBatch directly to avoid conflicts with mods like Radiance that hook into the drawing process
+            bool mainSpriteBatchWasBegun = true;
+            try
+            {
+                Main.spriteBatch.End();
+            }
+            catch
+            {
+                mainSpriteBatchWasBegun = false;
+            }
 
             using (lease.Scope(clearColor: Color.Black))
             {
-                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.Default, Main.Rasterizer, null, Matrix.Identity);
+                Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.Default, Main.Rasterizer, null, Matrix.Identity);
                 foreach (var item in lights)
                 {
-                    spriteBatch.Draw(item.texture, (item.center - Main.screenPosition), item.frame, item.color * item.opacity, item.rotation, item.frame is null ? item.texture.Size() * 0.5f : item.frame.Value.Size(), item.vectorScale * item.scale, SpriteEffects.None, 0);
+                    Main.spriteBatch.Draw(item.texture, (item.center - Main.screenPosition), item.frame, item.color * item.opacity, item.rotation, item.frame is null ? item.texture.Size() * 0.5f : item.frame.Value.Size(), item.vectorScale * item.scale, SpriteEffects.None, 0);
                 }
-                spriteBatch.End();
+                Main.spriteBatch.End();
             }
 
-            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
+            Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
             var shader = GameShaders.Misc["CalamityMod:DozeLightingShader"];
             if (shader != null)
             {
                 shader.UseOpacity(mp.darknessIntensity);
                 shader.Apply();
             }
-            spriteBatch.Draw(lease.Target, Vector2.Zero, null, Color.White, 0, Vector2.Zero, 1, 0, 0);
-            spriteBatch.End();
+            Main.spriteBatch.Draw(lease.Target, Vector2.Zero, null, Color.White, 0, Vector2.Zero, 1, 0, 0);
+            Main.spriteBatch.End();
 
-            if (spriteBatchWasBegun)
-                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.Default, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
+            if (mainSpriteBatchWasBegun)
+                Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.Default, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
         }
 
 
