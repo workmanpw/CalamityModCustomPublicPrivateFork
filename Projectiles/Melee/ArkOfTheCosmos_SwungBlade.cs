@@ -185,9 +185,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 {
                     //Slightly shift the blasts up so the final close shots don't go BELOW the cursor and instead go right on it.
                     float adjustedBlastRotation = Projectile.rotation - MathHelper.PiOver4 * 1.15f * Owner.direction;
+                    float randomSpread = Main.rand.NextFloat(-MathHelper.Pi * 0.15f, MathHelper.Pi * 0.15f);
 
                     var source = Projectile.GetSource_FromThis();
-                    Projectile blast = Projectile.NewProjectileDirect(source, Owner.Center + adjustedBlastRotation.ToRotationVector2() * 10f, adjustedBlastRotation.ToRotationVector2() * 20f, ProjectileType<EonBolt>(), (int)(ArkoftheCosmos.SwirlBoltDamageMultiplier / ArkoftheCosmos.SwirlBoltAmount * Projectile.damage), 0f, Owner.whoAmI, 0.55f, MathHelper.Pi * 0.05f);
+                    Projectile blast = Projectile.NewProjectileDirect(source, Owner.Center + adjustedBlastRotation.ToRotationVector2() * 10f, (adjustedBlastRotation + randomSpread).ToRotationVector2() * 20f, ProjectileType<EonBolt>(), (int)(ArkoftheCosmos.SwirlBoltDamageMultiplier / ArkoftheCosmos.SwirlBoltAmount * Projectile.damage), 0f, Owner.whoAmI, 0.55f, MathHelper.Pi * 0.15f);
                     blast.timeLeft = 100;
                 }
 
@@ -227,7 +228,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 {
                     float randomRotation = Projectile.rotation + Main.rand.NextFloat(-MathHelper.PiOver2, MathHelper.PiOver2);
                     var source = Projectile.GetSource_FromThis();
-                    Projectile bolt = Projectile.NewProjectileDirect(source, Projectile.Center, randomRotation.ToRotationVector2() * 15f, ProjectileType<EonBolt>(), (int)(Projectile.damage * 0.3f), 0f, Owner.whoAmI, 0.55f, MathHelper.Pi * 0.05f);
+                    Projectile bolt = Projectile.NewProjectileDirect(source, Projectile.Center, randomRotation.ToRotationVector2() * 15f, ProjectileType<EonBolt>(), (int)(Projectile.damage * 0.3f), 0f, Owner.whoAmI, 0.55f, MathHelper.Pi * 0.1f);
                     bolt.timeLeft = 80;
 
                     //Spawn extra constellation every 30 frames during throw

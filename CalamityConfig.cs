@@ -75,8 +75,6 @@ namespace CalamityModCustomPublicPrivateFork
 
         [BackgroundColor(192, 54, 64, 192)]
         [DefaultValue(true)]
-        [LabelKey("Mods.CalamityModCustomPublicPrivateFork.Configs.CalamityClientConfig.StealthInvisibility.Label")]
-        [TooltipKey("Mods.CalamityModCustomPublicPrivateFork.Configs.CalamityClientConfig.StealthInvisibility.Tooltip")]
         public bool StealthInvisibility { get; set; }
 
         [BackgroundColor(192, 54, 64, 192)]
@@ -268,8 +266,6 @@ namespace CalamityModCustomPublicPrivateFork
 
         [BackgroundColor(192, 54, 64, 192)]
         [DefaultValue(false)]
-        [LabelKey("Mods.CalamityModCustomPublicPrivateFork.Configs.CalamityClientConfig.InfiniteStealth.Label")]
-        [TooltipKey("Mods.CalamityModCustomPublicPrivateFork.Configs.CalamityClientConfig.InfiniteStealth.Tooltip")]
         public bool InfiniteStealth { get; set; }
 
         [BackgroundColor(192, 54, 64, 192)]
