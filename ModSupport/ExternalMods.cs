@@ -36,7 +36,7 @@ namespace CalamityModCustomPublicPrivateFork
         public override void Load()
         {
             musicMod = null;
-            ModLoader.TryGetMod("CalamityModMusic", out musicMod);
+            ModLoader.TryGetMod("CalamityModMusicCustomPublicPrivateFork", out musicMod);
             vcmm = null;
             ModLoader.TryGetMod("UnCalamityModMusic", out vcmm);
 

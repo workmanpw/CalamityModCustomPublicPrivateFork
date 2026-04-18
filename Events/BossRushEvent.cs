@@ -708,18 +708,36 @@ namespace CalamityModCustomPublicPrivateFork.Events
             // All Slime God entities must be killed to progress to the next stage.
             else if (npc.type == ModContent.NPCType<SlimeGodCore>())
             {
-                BossRushStage++;
-                CalamityUtils.KillAllHostileProjectiles();
-                HostileProjectileKillCounter = 3;
-
-                foreach (Player p in Main.ActivePlayers)
+                // Check if all permitted NPCs (paladins and spawns) are dead before progressing
+                bool allPermittedNPCsDead = true;
+                int currentBossIndex = Bosses.FindIndex(boss => boss.EntityID == ModContent.NPCType<SlimeGodCore>());
+                if (currentBossIndex >= 0)
                 {
-                    p.Calamity().BossRushReturnPosition = p.Center;
-                    Vector2? underworld = CalamityPlayer.GetUnderworldPosition(p);
-                    if (!underworld.HasValue)
-                        break;
-                    CalamityPlayer.ModTeleport(p, underworld.Value, false, TeleportationStyleID.TeleportationPotion);
-                    SoundEngine.PlaySound(TeleportSound with { Volume = 1.6f }, p.Center);
+                    foreach (int permittedNPCType in Bosses[currentBossIndex].HostileNPCsToNotDelete)
+                    {
+                        if (NPC.AnyNPCs(permittedNPCType))
+                        {
+                            allPermittedNPCsDead = false;
+                            break;
+                        }
+                    }
+                }
+
+                if (allPermittedNPCsDead)
+                {
+                    BossRushStage++;
+                    CalamityUtils.KillAllHostileProjectiles();
+                    HostileProjectileKillCounter = 3;
+
+                    foreach (Player p in Main.ActivePlayers)
+                    {
+                        p.Calamity().BossRushReturnPosition = p.Center;
+                        Vector2? underworld = CalamityPlayer.GetUnderworldPosition(p);
+                        if (!underworld.HasValue)
+                            break;
+                        CalamityPlayer.ModTeleport(p, underworld.Value, false, TeleportationStyleID.TeleportationPotion);
+                        SoundEngine.PlaySound(TeleportSound with { Volume = 1.6f }, p.Center);
+                    }
                 }
             }
 
