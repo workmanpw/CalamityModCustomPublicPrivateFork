@@ -3046,8 +3046,8 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                     double totalAbyssDepthFromLayer1 = Main.remixWorld ? (SulphurousSea.YStart - Main.maxTilesY * 0.05) : (Main.maxTilesY - 250D - abyssLevel1);
                     double playerAbyssDepth = Main.remixWorld ? (totalAbyssDepth - point.Y) : (point.Y - abyssSurface);
                     double playerAbyssDepthFromLayer1 = Main.remixWorld ? (abyssLevel1 - point.Y) : (point.Y - abyssLevel1);
-                    double depthRatio = playerAbyssDepth / totalAbyssDepth;
-                    double depthRatioFromAbyssLayer1 = playerAbyssDepthFromLayer1 / totalAbyssDepthFromLayer1;
+                    double depthRatio = totalAbyssDepth != 0 ? playerAbyssDepth / totalAbyssDepth : 0;
+                    double depthRatioFromAbyssLayer1 = totalAbyssDepthFromLayer1 != 0 ? playerAbyssDepthFromLayer1 / totalAbyssDepthFromLayer1 : 0;
 
                     // Darkness strength scales smoothly with how deep you are.
                     darknessIntensity = abyssDarkness + (float)depthRatio * 3;
