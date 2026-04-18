@@ -83,22 +83,22 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
             bool laserAlive = false;
             bool viceAlive = false;
             bool sawAlive = false;
-            if (CalamityGlobalNPC.primeCannon != -1)
+            if (CalamityGlobalNPC.primeCannon != -1 && CalamityGlobalNPC.primeCannon < Main.maxNPCs)
             {
                 if (Main.npc[CalamityGlobalNPC.primeCannon].active)
                     cannonAlive = true;
             }
-            if (CalamityGlobalNPC.primeLaser != -1)
+            if (CalamityGlobalNPC.primeLaser != -1 && CalamityGlobalNPC.primeLaser < Main.maxNPCs)
             {
                 if (Main.npc[CalamityGlobalNPC.primeLaser].active)
                     laserAlive = true;
             }
-            if (CalamityGlobalNPC.primeVice != -1)
+            if (CalamityGlobalNPC.primeVice != -1 && CalamityGlobalNPC.primeVice < Main.maxNPCs)
             {
                 if (Main.npc[CalamityGlobalNPC.primeVice].active)
                     viceAlive = true;
             }
-            if (CalamityGlobalNPC.primeSaw != -1)
+            if (CalamityGlobalNPC.primeSaw != -1 && CalamityGlobalNPC.primeSaw < Main.maxNPCs)
             {
                 if (Main.npc[CalamityGlobalNPC.primeSaw].active)
                     sawAlive = true;
@@ -435,17 +435,17 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                     if (NPC.IsMechQueenUp)
                     {
                         int mechdusaBossDespawning = NPC.FindFirstNPC(NPCID.Retinazer);
-                        if (mechdusaBossDespawning >= 0)
+                        if (mechdusaBossDespawning >= 0 && mechdusaBossDespawning < Main.maxNPCs)
                             Main.npc[mechdusaBossDespawning].EncourageDespawn(5);
 
                         mechdusaBossDespawning = NPC.FindFirstNPC(NPCID.Spazmatism);
-                        if (mechdusaBossDespawning >= 0)
+                        if (mechdusaBossDespawning >= 0 && mechdusaBossDespawning < Main.maxNPCs)
                             Main.npc[mechdusaBossDespawning].EncourageDespawn(5);
 
                         if (!NPC.AnyNPCs(NPCID.Retinazer) && !NPC.AnyNPCs(NPCID.Spazmatism))
                         {
                             mechdusaBossDespawning = NPC.FindFirstNPC(NPCID.TheDestroyer);
-                            if (mechdusaBossDespawning >= 0)
+                            if (mechdusaBossDespawning >= 0 && mechdusaBossDespawning < Main.maxNPCs)
                                 Main.npc[mechdusaBossDespawning].Transform(NPCID.TheDestroyerTail);
 
                             NPC.EncourageDespawn(5);
@@ -672,7 +672,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                 NPC.spriteDirection = -(int)NPC.ai[0];
 
                 // Despawn if head is gone
-                if (!Main.npc[(int)NPC.ai[1]].active || Main.npc[(int)NPC.ai[1]].aiStyle != NPCAIStyleID.SkeletronPrimeHead)
+                int headIndex = (int)NPC.ai[1];
+                if (headIndex >= 0 && headIndex < Main.maxNPCs && (!Main.npc[headIndex].active || Main.npc[headIndex].aiStyle != NPCAIStyleID.SkeletronPrimeHead))
                 {
                     NPC.ai[2] += 10f;
                     if (NPC.ai[2] > 50f || !Main.dedServ)
@@ -689,17 +690,17 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                 bool cannonAlive = false;
                 bool viceAlive = false;
                 bool sawAlive = false;
-                if (CalamityGlobalNPC.primeCannon != -1)
+                if (CalamityGlobalNPC.primeCannon != -1 && CalamityGlobalNPC.primeCannon < Main.maxNPCs)
                 {
                     if (Main.npc[CalamityGlobalNPC.primeCannon].active)
                         cannonAlive = true;
                 }
-                if (CalamityGlobalNPC.primeVice != -1)
+                if (CalamityGlobalNPC.primeVice != -1 && CalamityGlobalNPC.primeVice < Main.maxNPCs)
                 {
                     if (Main.npc[CalamityGlobalNPC.primeVice].active)
                         viceAlive = true;
                 }
-                if (CalamityGlobalNPC.primeSaw != -1)
+                if (CalamityGlobalNPC.primeSaw != -1 && CalamityGlobalNPC.primeSaw < Main.maxNPCs)
                 {
                     if (Main.npc[CalamityGlobalNPC.primeSaw].active)
                         sawAlive = true;
@@ -735,53 +736,58 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
                 float topVelocity = acceleration * 100f;
                 float deceleration = death ? 0.6f : 0.8f;
 
-                if (NPC.position.Y > Main.npc[(int)NPC.ai[1]].position.Y - 70f)
+                int headIndex2 = (int)NPC.ai[1];
+                if (headIndex2 >= 0 && headIndex2 < Main.maxNPCs)
                 {
-                    if (NPC.velocity.Y > 0f)
-                        NPC.velocity.Y *= deceleration;
+                    if (NPC.position.Y > Main.npc[headIndex2].position.Y - 70f)
+                    {
+                        if (NPC.velocity.Y > 0f)
+                            NPC.velocity.Y *= deceleration;
 
-                    NPC.velocity.Y -= acceleration;
+                        NPC.velocity.Y -= acceleration;
 
-                    if (NPC.velocity.Y > topVelocity)
-                        NPC.velocity.Y = topVelocity;
-                }
-                else if (NPC.position.Y < Main.npc[(int)NPC.ai[1]].position.Y - 100f)
-                {
-                    if (NPC.velocity.Y < 0f)
-                        NPC.velocity.Y *= deceleration;
+                        if (NPC.velocity.Y > topVelocity)
+                            NPC.velocity.Y = topVelocity;
+                    }
+                    else if (NPC.position.Y < Main.npc[headIndex2].position.Y - 100f)
+                    {
+                        if (NPC.velocity.Y < 0f)
+                            NPC.velocity.Y *= deceleration;
 
-                    NPC.velocity.Y += acceleration;
+                        NPC.velocity.Y += acceleration;
 
-                    if (NPC.velocity.Y < -topVelocity)
-                        NPC.velocity.Y = -topVelocity;
-                }
+                        if (NPC.velocity.Y < -topVelocity)
+                            NPC.velocity.Y = -topVelocity;
+                    }
 
-                if (NPC.Center.X > Main.npc[(int)NPC.ai[1]].Center.X - 130f * NPC.ai[0])
-                {
-                    if (NPC.velocity.X > 0f)
-                        NPC.velocity.X *= deceleration;
+                    if (NPC.Center.X > Main.npc[headIndex2].Center.X - 130f * NPC.ai[0])
+                    {
+                        if (NPC.velocity.X > 0f)
+                            NPC.velocity.X *= deceleration;
 
-                    NPC.velocity.X -= acceleration;
+                        NPC.velocity.X -= acceleration;
 
-                    if (NPC.velocity.X > topVelocity)
-                        NPC.velocity.X = topVelocity;
-                }
-                if (NPC.Center.X < Main.npc[(int)NPC.ai[1]].Center.X - 160f * NPC.ai[0])
-                {
-                    if (NPC.velocity.X < 0f)
-                        NPC.velocity.X *= deceleration;
+                        if (NPC.velocity.X > topVelocity)
+                            NPC.velocity.X = topVelocity;
+                    }
+                    if (NPC.Center.X < Main.npc[headIndex2].Center.X - 160f * NPC.ai[0])
+                    {
+                        if (NPC.velocity.X < 0f)
+                            NPC.velocity.X *= deceleration;
 
-                    NPC.velocity.X += acceleration;
+                        NPC.velocity.X += acceleration;
 
-                    if (NPC.velocity.X < -topVelocity)
-                        NPC.velocity.X = -topVelocity;
+                        if (NPC.velocity.X < -topVelocity)
+                            NPC.velocity.X = -topVelocity;
+                    }
                 }
 
                 // Phase 1
                 if (NPC.ai[2] == 0f)
                 {
                     // Despawn if head is despawning
-                    if (Main.npc[(int)NPC.ai[1]].ai[1] == 3f && NPC.timeLeft > 10)
+                    int headIndex3 = (int)NPC.ai[1];
+                    if (headIndex3 >= 0 && headIndex3 < Main.maxNPCs && Main.npc[headIndex3].ai[1] == 3f && NPC.timeLeft > 10)
                         NPC.timeLeft = 10;
 
                     // Go to other phase after 13.3 seconds (change this as each arm dies)
