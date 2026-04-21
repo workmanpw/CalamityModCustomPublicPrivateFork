@@ -155,7 +155,7 @@ PlaguebringerVisor.SetBonus:
 	'''
 	Grants a plague dash which can slam through enemies without taking damage
 	Summons a lil' plaguebringer which swarms your foes with little bees
-	Friendly bees inflict [cbuff:CalamityModCustomPublicPrivateFork/Plague]
+	Friendly bees inflict [cbuff:CalamityMod/Plague]
 	'''
 PlagueReaperMask.SetBonus:
 	'''
@@ -195,7 +195,7 @@ ReaverHeadTank.SetBonus:
 	{$Common.AggroBoost}
 	Reduces the life regen lost from damage over time debuffs by {0}%
 	{1}% decreased movement speed and flight time
-	Grants [cbuff:CalamityModCustomPublicPrivateFork/ReaverRage] for {2} {^2:second;seconds} after taking damage
+	Grants [cbuff:CalamityMod/ReaverRage] for {2} {^2:second;seconds} after taking damage
 	'''
 
 ReaverScaleMail: {

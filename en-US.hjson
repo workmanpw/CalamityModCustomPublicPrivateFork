@@ -1,5 +1,5 @@
 Mods: {
-	CalamityModCustomPublicPrivateFork: {
+	CalamityMod: {
 		Keybinds: {
 			ActivateAccessoryParry.DisplayName: Activate Accessory Parry
 			AdrenalineMode.DisplayName: Adrenaline Mode
@@ -23,81 +23,81 @@ Mods: {
 
 		UI: {
 			Exhumed: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Exhumed.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Exhumed.Description
+				DisplayName: Mods.CalamityMod.UI.Exhumed.DisplayName
+				Description: Mods.CalamityMod.UI.Exhumed.Description
 			}
 
 			Indignant: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Indignant.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Indignant.Description
+				DisplayName: Mods.CalamityMod.UI.Indignant.DisplayName
+				Description: Mods.CalamityMod.UI.Indignant.Description
 			}
 
 			Aflame: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Aflame.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Aflame.Description
+				DisplayName: Mods.CalamityMod.UI.Aflame.DisplayName
+				Description: Mods.CalamityMod.UI.Aflame.Description
 			}
 
 			Oblatory: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Oblatory.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Oblatory.Description
+				DisplayName: Mods.CalamityMod.UI.Oblatory.DisplayName
+				Description: Mods.CalamityMod.UI.Oblatory.Description
 			}
 
 			Resentful: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Resentful.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Resentful.Description
+				DisplayName: Mods.CalamityMod.UI.Resentful.DisplayName
+				Description: Mods.CalamityMod.UI.Resentful.Description
 			}
 
 			Bloodthirsty: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Bloodthirsty.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Bloodthirsty.Description
+				DisplayName: Mods.CalamityMod.UI.Bloodthirsty.DisplayName
+				Description: Mods.CalamityMod.UI.Bloodthirsty.Description
 			}
 
 			Ephemeral: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Ephemeral.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Ephemeral.Description
+				DisplayName: Mods.CalamityMod.UI.Ephemeral.DisplayName
+				Description: Mods.CalamityMod.UI.Ephemeral.Description
 			}
 
 			Hellbound: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Hellbound.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Hellbound.Description
+				DisplayName: Mods.CalamityMod.UI.Hellbound.DisplayName
+				Description: Mods.CalamityMod.UI.Hellbound.Description
 			}
 
 			Tainted: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Tainted.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Tainted.Description
+				DisplayName: Mods.CalamityMod.UI.Tainted.DisplayName
+				Description: Mods.CalamityMod.UI.Tainted.Description
 			}
 
 			Traitorous: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Traitorous.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Traitorous.Description
+				DisplayName: Mods.CalamityMod.UI.Traitorous.DisplayName
+				Description: Mods.CalamityMod.UI.Traitorous.Description
 			}
 
 			Withering: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Withering.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Withering.Description
+				DisplayName: Mods.CalamityMod.UI.Withering.DisplayName
+				Description: Mods.CalamityMod.UI.Withering.Description
 			}
 
 			Persecuted: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Persecuted.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Persecuted.Description
+				DisplayName: Mods.CalamityMod.UI.Persecuted.DisplayName
+				Description: Mods.CalamityMod.UI.Persecuted.Description
 			}
 
 			Lecherous: {
-				DisplayName: Mods.CalamityModCustomPublicPrivateFork.UI.Lecherous.DisplayName
-				Description: Mods.CalamityModCustomPublicPrivateFork.UI.Lecherous.Description
+				DisplayName: Mods.CalamityMod.UI.Lecherous.DisplayName
+				Description: Mods.CalamityMod.UI.Lecherous.Description
 			}
 
-			Disenchant: Mods.CalamityModCustomPublicPrivateFork.UI.Disenchant
+			Disenchant: Mods.CalamityMod.UI.Disenchant
 
 			ExtensionName: {
-				Segments: Mods.CalamityModCustomPublicPrivateFork.UI.ExtensionName.Segments
-				Creepers: Mods.CalamityModCustomPublicPrivateFork.UI.ExtensionName.Creepers
-				Hands: Mods.CalamityModCustomPublicPrivateFork.UI.ExtensionName.Hands
-				Arms: Mods.CalamityModCustomPublicPrivateFork.UI.ExtensionName.Arms
-				Guns: Mods.CalamityModCustomPublicPrivateFork.UI.ExtensionName.Guns
-				Cannons: Mods.CalamityModCustomPublicPrivateFork.UI.ExtensionName.Cannons
-				DarkEnergy: Mods.CalamityModCustomPublicPrivateFork.UI.ExtensionName.DarkEnergy
-				BodyParts: Mods.CalamityModCustomPublicPrivateFork.UI.ExtensionName.BodyParts
+				Segments: Mods.CalamityMod.UI.ExtensionName.Segments
+				Creepers: Mods.CalamityMod.UI.ExtensionName.Creepers
+				Hands: Mods.CalamityMod.UI.ExtensionName.Hands
+				Arms: Mods.CalamityMod.UI.ExtensionName.Arms
+				Guns: Mods.CalamityMod.UI.ExtensionName.Guns
+				Cannons: Mods.CalamityMod.UI.ExtensionName.Cannons
+				DarkEnergy: Mods.CalamityMod.UI.ExtensionName.DarkEnergy
+				BodyParts: Mods.CalamityMod.UI.ExtensionName.BodyParts
 			}
 		}
 
@@ -213,9 +213,9 @@ Mods: {
 		}
 
 		NPCs: {
-			PerforatorLarge: Mods.CalamityModCustomPublicPrivateFork.NPCs.PerforatorLarge
-			PerforatorMedium: Mods.CalamityModCustomPublicPrivateFork.NPCs.PerforatorMedium
-			PerforatorSmall: Mods.CalamityModCustomPublicPrivateFork.NPCs.PerforatorSmall
+			PerforatorLarge: Mods.CalamityMod.NPCs.PerforatorLarge
+			PerforatorMedium: Mods.CalamityMod.NPCs.PerforatorMedium
+			PerforatorSmall: Mods.CalamityMod.NPCs.PerforatorSmall
 			GiantClam.DisplayName: Giant Clam
 			Crabulon.DisplayName: Crabulon
 			HiveMind.DisplayName: Hive Mind
@@ -352,13 +352,13 @@ Mods: {
 			WulfrumHovercraft.DisplayName: Wulfrum Hovercraft
 			WulfrumRover.DisplayName: Wulfrum Rover
 			DevilFishAlt.DisplayName: Devil Fish Alt
-			BloodwormNormal.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.BloodwormNormal.DisplayName
-			AquaticScourgeHead.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.AquaticScourgeHead.DisplayName
+			BloodwormNormal.DisplayName: Mods.CalamityMod.NPCs.BloodwormNormal.DisplayName
+			AquaticScourgeHead.DisplayName: Mods.CalamityMod.NPCs.AquaticScourgeHead.DisplayName
 			AstralSeekerSpit.DisplayName: Astral Seeker Spit
 			Glomerling.DisplayName: Glomerling
 			Twinkler.DisplayName: Twinkler
 			AureusSpawn.DisplayName: Aureus Spawn
-			AstrumDeusHead.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.AstrumDeusHead.DisplayName
+			AstrumDeusHead.DisplayName: Mods.CalamityMod.NPCs.AstrumDeusHead.DisplayName
 			Brimling.DisplayName: Brimling
 			DraconicSwarmer.DisplayName: Draconic Swarmer
 			Cataclysm.DisplayName: Cataclysm
@@ -369,10 +369,10 @@ Mods: {
 			CrabShroom.DisplayName: Crab Shroom
 			ScryllarRage.DisplayName: Scryllar Rage
 			CryogenShield.DisplayName: Cryogen Shield
-			DesertNuisanceHead.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.DesertNuisanceHead.DisplayName
-			DesertNuisanceHeadYoung.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.DesertNuisanceHeadYoung.DisplayName
-			DesertScourgeHead.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.DesertScourgeHead.DisplayName
-			DevourerofGodsHead.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.DevourerofGodsHead.DisplayName
+			DesertNuisanceHead.DisplayName: Mods.CalamityMod.NPCs.DesertNuisanceHead.DisplayName
+			DesertNuisanceHeadYoung.DisplayName: Mods.CalamityMod.NPCs.DesertNuisanceHeadYoung.DisplayName
+			DesertScourgeHead.DisplayName: Mods.CalamityMod.NPCs.DesertScourgeHead.DisplayName
+			DevourerofGodsHead.DisplayName: Mods.CalamityMod.NPCs.DevourerofGodsHead.DisplayName
 			Nanodroid.DisplayName: Nanodroid
 			Apollo.DisplayName: Apollo
 			AresBody.DisplayName: Ares Body
@@ -382,7 +382,7 @@ Mods: {
 			AresTeslaCannon.DisplayName: Ares Tesla Cannon
 			Artemis.DisplayName: Artemis
 			Draedon.DisplayName: Draedon
-			ThanatosHead.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.ThanatosHead.DisplayName
+			ThanatosHead.DisplayName: Mods.CalamityMod.NPCs.ThanatosHead.DisplayName
 			DankCreeper.DisplayName: Dank Creeper
 			DarkHeart.DisplayName: Dark Heart
 			HiveBlob.DisplayName: Hive Blob
@@ -404,9 +404,9 @@ Mods: {
 			ExhumedHeart.DisplayName: Exhumed Heart
 			LecherousOrb.DisplayName: Lecherous Orb
 			THELORDE.DisplayName: T H E L O R D E
-			PerforatorHeadLarge.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.PerforatorHeadLarge.DisplayName
-			PerforatorHeadMedium.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.PerforatorHeadMedium.DisplayName
-			PerforatorHeadSmall.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.PerforatorHeadSmall.DisplayName
+			PerforatorHeadLarge.DisplayName: Mods.CalamityMod.NPCs.PerforatorHeadLarge.DisplayName
+			PerforatorHeadMedium.DisplayName: Mods.CalamityMod.NPCs.PerforatorHeadMedium.DisplayName
+			PerforatorHeadSmall.DisplayName: Mods.CalamityMod.NPCs.PerforatorHeadSmall.DisplayName
 			PerforatorCyst.DisplayName: Perforator Cyst
 			PerforatorHive.DisplayName: Perforator Hive
 			PlagueHomingMissile.DisplayName: Plague Homing Missile
@@ -415,7 +415,7 @@ Mods: {
 			Polterghast.DisplayName: Polterghast
 			PolterghastHook.DisplayName: Polterghast Hook
 			PolterPhantom.DisplayName: Polter Phantom
-			PrimordialWyrmHead.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrmHead.DisplayName
+			PrimordialWyrmHead.DisplayName: Mods.CalamityMod.NPCs.PrimordialWyrmHead.DisplayName
 			ProfanedGuardianCommander.DisplayName: Profaned Guardian Commander
 			ProfanedGuardianDefender.DisplayName: Profaned Guardian Defender
 			ProfanedGuardianHealer.DisplayName: Profaned Guardian Healer
@@ -436,10 +436,10 @@ Mods: {
 			SlimeGodCore.DisplayName: Slime God Core
 			SplitCrimulanPaladin.DisplayName: Split Crimulan Paladin
 			SplitEbonianPaladin.DisplayName: Split Ebonian Paladin
-			StormWeaverHead.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.StormWeaverHead.DisplayName
+			StormWeaverHead.DisplayName: Mods.CalamityMod.NPCs.StormWeaverHead.DisplayName
 			MicrobialCluster.DisplayName: Microbial Cluster
 			BrimstoneHeart.DisplayName: Brimstone Heart
-			SepulcherHead.DisplayName: Mods.CalamityModCustomPublicPrivateFork.NPCs.SepulcherHead.DisplayName
+			SepulcherHead.DisplayName: Mods.CalamityMod.NPCs.SepulcherHead.DisplayName
 			SoulSeekerSupreme.DisplayName: Soul Seeker Supreme
 			SupremeCalamitas.DisplayName: Supreme Calamitas
 			SupremeCataclysm.DisplayName: Supreme Cataclysm
@@ -530,48 +530,48 @@ Mods: {
 		}
 
 		Tiles: {
-			AbyssVent.MapEntry: Mods.CalamityModCustomPublicPrivateFork.Tiles.AbyssVent.MapEntry
-			PirateCrate: Mods.CalamityModCustomPublicPrivateFork.Tiles.PirateCrate
-			ThermalVent.MapEntry: Mods.CalamityModCustomPublicPrivateFork.Tiles.ThermalVent.MapEntry
-			Stalagmite: Mods.CalamityModCustomPublicPrivateFork.Tiles.Stalagmite
-			Stalactite: Mods.CalamityModCustomPublicPrivateFork.Tiles.Stalactite
-			SteamGeyser.MapEntry: Mods.CalamityModCustomPublicPrivateFork.Tiles.SteamGeyser.MapEntry
-			Fossil: Mods.CalamityModCustomPublicPrivateFork.Tiles.Fossil
-			Column: Mods.CalamityModCustomPublicPrivateFork.Tiles.Column
-			Ribs: Mods.CalamityModCustomPublicPrivateFork.Tiles.Ribs
+			AbyssVent.MapEntry: Mods.CalamityMod.Tiles.AbyssVent.MapEntry
+			PirateCrate: Mods.CalamityMod.Tiles.PirateCrate
+			ThermalVent.MapEntry: Mods.CalamityMod.Tiles.ThermalVent.MapEntry
+			Stalagmite: Mods.CalamityMod.Tiles.Stalagmite
+			Stalactite: Mods.CalamityMod.Tiles.Stalactite
+			SteamGeyser.MapEntry: Mods.CalamityMod.Tiles.SteamGeyser.MapEntry
+			Fossil: Mods.CalamityMod.Tiles.Fossil
+			Column: Mods.CalamityMod.Tiles.Column
+			Ribs: Mods.CalamityMod.Tiles.Ribs
 
 			AstralChestLocked: {
-				MapEntry0: Mods.CalamityModCustomPublicPrivateFork.Tiles.AstralChestLocked.MapEntry0
-				MapEntry1: Mods.CalamityModCustomPublicPrivateFork.Tiles.AstralChestLocked.MapEntry1
+				MapEntry0: Mods.CalamityMod.Tiles.AstralChestLocked.MapEntry0
+				MapEntry1: Mods.CalamityMod.Tiles.AstralChestLocked.MapEntry1
 			}
 
 			SpineSapling.MapEntry: Spine Sapling
 			SpineTree.MapEntry: Spine Tree
-			Console: Mods.CalamityModCustomPublicPrivateFork.Tiles.Console
-			ContainmentBox: Mods.CalamityModCustomPublicPrivateFork.Tiles.ContainmentBox
-			Display: Mods.CalamityModCustomPublicPrivateFork.Tiles.Display
-			ElectricPanel: Mods.CalamityModCustomPublicPrivateFork.Tiles.ElectricPanel
-			Screen: Mods.CalamityModCustomPublicPrivateFork.Tiles.Screen
-			Server: Mods.CalamityModCustomPublicPrivateFork.Tiles.Server
-			Terminal: Mods.CalamityModCustomPublicPrivateFork.Tiles.Terminal
-			ReinforcedCrate: Mods.CalamityModCustomPublicPrivateFork.Tiles.ReinforcedCrate
+			Console: Mods.CalamityMod.Tiles.Console
+			ContainmentBox: Mods.CalamityMod.Tiles.ContainmentBox
+			Display: Mods.CalamityMod.Tiles.Display
+			ElectricPanel: Mods.CalamityMod.Tiles.ElectricPanel
+			Screen: Mods.CalamityMod.Tiles.Screen
+			Server: Mods.CalamityMod.Tiles.Server
+			Terminal: Mods.CalamityMod.Tiles.Terminal
+			ReinforcedCrate: Mods.CalamityMod.Tiles.ReinforcedCrate
 			InactivePowerCellFactory.MapEntry: Inactive Power Cell Factory
 			OnyxExcavatorTile.MapEntry: Onyx Excavator Tile
 			CodebreakerTile.MapEntry: Codebreaker Tile
-			LavaFountain: Mods.CalamityModCustomPublicPrivateFork.Tiles.LavaFountain
-			Basin: Mods.CalamityModCustomPublicPrivateFork.Tiles.Basin
-			PipeOrgan: Mods.CalamityModCustomPublicPrivateFork.Tiles.PipeOrgan
+			LavaFountain: Mods.CalamityMod.Tiles.LavaFountain
+			Basin: Mods.CalamityMod.Tiles.Basin
+			PipeOrgan: Mods.CalamityMod.Tiles.PipeOrgan
 
 			AshenChest: {
-				MapEntry0: Mods.CalamityModCustomPublicPrivateFork.Tiles.AshenChest.MapEntry0
-				MapEntry1: Mods.CalamityModCustomPublicPrivateFork.Tiles.AshenChest.MapEntry1
+				MapEntry0: Mods.CalamityMod.Tiles.AshenChest.MapEntry0
+				MapEntry1: Mods.CalamityMod.Tiles.AshenChest.MapEntry1
 			}
 
-			Sconce: Mods.CalamityModCustomPublicPrivateFork.Tiles.Sconce
-			BaroqueCello: Mods.CalamityModCustomPublicPrivateFork.Tiles.BaroqueCello
+			Sconce: Mods.CalamityMod.Tiles.Sconce
+			BaroqueCello: Mods.CalamityMod.Tiles.BaroqueCello
 			PlaguedPlateBed.MapEntry: Plagued Plate Bed
-			Jukebox: Mods.CalamityModCustomPublicPrivateFork.Tiles.Jukebox
-			GiantBulb: Mods.CalamityModCustomPublicPrivateFork.Tiles.GiantBulb
+			Jukebox: Mods.CalamityMod.Tiles.Jukebox
+			GiantBulb: Mods.CalamityMod.Tiles.GiantBulb
 			AerialiteOre.MapEntry: Aerialite Ore
 			AerialiteOreDisenchanted.MapEntry: Aerialite Ore Disenchanted
 			AstralOre.MapEntry: Astral Ore
@@ -588,7 +588,7 @@ Mods: {
 		Items: {
 			Pets: {
 				AbyssShellFossil: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Pets.AbyssShellFossil.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Pets.AbyssShellFossil.DisplayName
 					Tooltip: ""
 				}
 
@@ -740,272 +740,272 @@ Mods: {
 
 			Placeables: {
 				AbyssTreasureChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AbyssTreasureChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AbyssTreasureChest.DisplayName
 					Tooltip: ""
 				}
 
 				PlantyMush: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.PlantyMush.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.PlantyMush.DisplayName
 					Tooltip: ""
 				}
 
 				RustyChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.RustyChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.RustyChest.DisplayName
 					Tooltip: ""
 				}
 
 				PrismShard: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.PrismShard.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.PrismShard.DisplayName
 					Tooltip: ""
 				}
 
 				AstralBeaconItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AstralBeaconItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AstralBeaconItem.DisplayName
 					Tooltip: ""
 				}
 
 				CelestialRemains: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.CelestialRemains.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.CelestialRemains.DisplayName
 					Tooltip: ""
 				}
 
 				AgedSecurityChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AgedSecurityChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AgedSecurityChest.DisplayName
 					Tooltip: ""
 				}
 
 				CagedLablightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.CagedLablightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.CagedLablightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniAgedLablightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniAgedLablightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniAgedLablightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniAgedBlacklightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniAgedBlacklightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniAgedBlacklightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniAgedCinderlightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniAgedCinderlightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniAgedCinderlightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniAgedFlamelightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniAgedFlamelightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniAgedFlamelightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniAgedFloodlightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniAgedFloodlightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniAgedFloodlightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniAgedFrostlightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniAgedFrostlightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniAgedFrostlightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniCagedBiolightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniCagedBiolightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniCagedBiolightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniCagedBlacklightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniCagedBlacklightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniCagedBlacklightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniCagedCinderlightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniCagedCinderlightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniCagedCinderlightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniCagedFlamelightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniCagedFlamelightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniCagedFlamelightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniCagedFloodlightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniCagedFloodlightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniCagedFloodlightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniCagedFrostlightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniCagedFrostlightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniCagedFrostlightItem.DisplayName
 					Tooltip: ""
 				}
 
 				MiniCagedLablightItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MiniCagedLablightItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MiniCagedLablightItem.DisplayName
 					Tooltip: ""
 				}
 
 				ChargingStationItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.ChargingStationItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.ChargingStationItem.DisplayName
 					Tooltip: ""
 				}
 
 				LabHologramProjectorItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.LabHologramProjectorItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.LabHologramProjectorItem.DisplayName
 					Tooltip: ""
 				}
 
 				PowerCellFactoryItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.PowerCellFactoryItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.PowerCellFactoryItem.DisplayName
 					Tooltip: ""
 				}
 
 				SecurityChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.SecurityChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.SecurityChest.DisplayName
 					Tooltip: ""
 				}
 
 				BabyCannonballJellyfishBowl: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.BabyCannonballJellyfishBowl.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.BabyCannonballJellyfishBowl.DisplayName
 					Tooltip: ""
 				}
 
 				BabyFlakCrabCage: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.BabyFlakCrabCage.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.BabyFlakCrabCage.DisplayName
 					Tooltip: ""
 				}
 
 				BabyGhostBellJar: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.BabyGhostBellJar.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.BabyGhostBellJar.DisplayName
 					Tooltip: ""
 				}
 
 				WeightlessCandle: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.WeightlessCandle.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.WeightlessCandle.DisplayName
 					Tooltip: ""
 				}
 
 				ChaosCandle: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.ChaosCandle.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.ChaosCandle.DisplayName
 					Tooltip: ""
 				}
 
 				CorruptionEffigy: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.CorruptionEffigy.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.CorruptionEffigy.DisplayName
 					Tooltip: ""
 				}
 
 				AshenAltar: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AshenAltar.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AshenAltar.DisplayName
 					Tooltip: ""
 				}
 
 				CosmicAnvilItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.CosmicAnvilItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.CosmicAnvilItem.DisplayName
 					Tooltip: ""
 				}
 
 				DraedonsForge: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonsForge.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.DraedonsForge.DisplayName
 					Tooltip: ""
 				}
 
 				PlagueInfuser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.PlagueInfuser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.PlagueInfuser.DisplayName
 					Tooltip: ""
 				}
 
 				ProfanedCrucible: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.ProfanedCrucible.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.ProfanedCrucible.DisplayName
 					Tooltip: ""
 				}
 
 				AltarOfTheAccursedItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AltarOfTheAccursedItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AltarOfTheAccursedItem.DisplayName
 					Tooltip: ""
 				}
 
 				VoidCondenser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.VoidCondenser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.VoidCondenser.DisplayName
 					Tooltip: ""
 				}
 
 				CrimsonEffigy: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.CrimsonEffigy.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.CrimsonEffigy.DisplayName
 					Tooltip: ""
 				}
 
 				EffigyOfDecay: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.EffigyOfDecay.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.EffigyOfDecay.DisplayName
 					Tooltip: ""
 				}
 
 				LanternCenter: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.LanternCenter.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.LanternCenter.DisplayName
 					Tooltip: ""
 				}
 
 				PiggyCage: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.PiggyCage.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.PiggyCage.DisplayName
 					Tooltip: ""
 				}
 
 				VigorousCandle: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.VigorousCandle.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.VigorousCandle.DisplayName
 					Tooltip: ""
 				}
 
 				ResilientCandle: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.ResilientCandle.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.ResilientCandle.DisplayName
 					Tooltip: ""
 				}
 
 				RepairUnitCage: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.RepairUnitCage.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.RepairUnitCage.DisplayName
 					Tooltip: ""
 				}
 
 				SeaMinnowJar: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.SeaMinnowJar.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.SeaMinnowJar.DisplayName
 					Tooltip: ""
 				}
 
 				TranquilityCandle: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.TranquilityCandle.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.TranquilityCandle.DisplayName
 					Tooltip: ""
 				}
 
 				TwinklerInABottle: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.TwinklerInABottle.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.TwinklerInABottle.DisplayName
 					Tooltip: ""
 				}
 
 				WulfrumLureItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.WulfrumLureItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.WulfrumLureItem.DisplayName
 					Tooltip: ""
 				}
 
 				SpitefulCandle: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.SpitefulCandle.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.SpitefulCandle.DisplayName
 					Tooltip: ""
 				}
 
 				AbyssChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AbyssChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AbyssChest.DisplayName
 					Tooltip: ""
 				}
 
 				AbyssDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AbyssDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AbyssDresser.DisplayName
 					Tooltip: ""
 				}
 
 				AcidwoodChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AcidwoodChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AcidwoodChest.DisplayName
 					Tooltip: ""
 				}
 
 				AcidwoodDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AcidwoodDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AcidwoodDresser.DisplayName
 					Tooltip: ""
 				}
 
@@ -1015,52 +1015,52 @@ Mods: {
 				}
 
 				AncientAltar: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AncientAltar.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AncientAltar.DisplayName
 					Tooltip: ""
 				}
 
 				AncientDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AncientDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AncientDresser.DisplayName
 					Tooltip: ""
 				}
 
 				AshenDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AshenDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AshenDresser.DisplayName
 					Tooltip: ""
 				}
 
 				BotanicChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.BotanicChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.BotanicChest.DisplayName
 					Tooltip: ""
 				}
 
 				BotanicDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.BotanicDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.BotanicDresser.DisplayName
 					Tooltip: ""
 				}
 
 				BotanicPlanter: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.BotanicPlanter.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.BotanicPlanter.DisplayName
 					Tooltip: ""
 				}
 
 				CosmiliteChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.CosmiliteChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.CosmiliteChest.DisplayName
 					Tooltip: ""
 				}
 
 				CosmiliteDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.CosmiliteDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.CosmiliteDresser.DisplayName
 					Tooltip: ""
 				}
 
 				DriftwoodChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.DriftwoodChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.DriftwoodChest.DisplayName
 					Tooltip: ""
 				}
 
 				DriftwoodDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.DriftwoodDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.DriftwoodDresser.DisplayName
 					Tooltip: ""
 				}
 
@@ -1070,217 +1070,217 @@ Mods: {
 				}
 
 				ExoChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.ExoChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.ExoChest.DisplayName
 					Tooltip: ""
 				}
 
 				ExoDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.ExoDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.ExoDresser.DisplayName
 					Tooltip: ""
 				}
 
 				MarniteChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MarniteChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MarniteChest.DisplayName
 					Tooltip: ""
 				}
 
 				MarniteDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MarniteDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MarniteDresser.DisplayName
 					Tooltip: ""
 				}
 
 				MonolithAmalgam: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MonolithAmalgam.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MonolithAmalgam.DisplayName
 					Tooltip: ""
 				}
 
 				MonolithChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MonolithChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MonolithChest.DisplayName
 					Tooltip: ""
 				}
 
 				MonolithDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MonolithDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MonolithDresser.DisplayName
 					Tooltip: ""
 				}
 
 				AncientNavystoneChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AncientNavystoneChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AncientNavystoneChest.DisplayName
 					Tooltip: ""
 				}
 
 				AncientNavystoneDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AncientNavystoneDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AncientNavystoneDresser.DisplayName
 					Tooltip: ""
 				}
 
 				EutrophicShelf: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.EutrophicShelf.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.EutrophicShelf.DisplayName
 					Tooltip: ""
 				}
 
 				NavystoneChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.NavystoneChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.NavystoneChest.DisplayName
 					Tooltip: ""
 				}
 
 				NavystoneDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.NavystoneDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.NavystoneDresser.DisplayName
 					Tooltip: ""
 				}
 
 				OtherworldlyChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.OtherworldlyChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.OtherworldlyChest.DisplayName
 					Tooltip: ""
 				}
 
 				OtherworldlyDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.OtherworldlyDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.OtherworldlyDresser.DisplayName
 					Tooltip: ""
 				}
 
 				PlaguedPlateChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.PlaguedPlateChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.PlaguedPlateChest.DisplayName
 					Tooltip: ""
 				}
 
 				PlaguedPlateDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.PlaguedPlateDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.PlaguedPlateDresser.DisplayName
 					Tooltip: ""
 				}
 
 				ProfanedChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.ProfanedChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.ProfanedChest.DisplayName
 					Tooltip: ""
 				}
 
 				ProfanedDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.ProfanedDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.ProfanedDresser.DisplayName
 					Tooltip: ""
 				}
 
 				LargeRitualCandle: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.LargeRitualCandle.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.LargeRitualCandle.DisplayName
 					Tooltip: ""
 				}
 
 				MonolithOfTheAccursed: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.MonolithOfTheAccursed.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.MonolithOfTheAccursed.DisplayName
 					Tooltip: ""
 				}
 
 				RitualCandle: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.RitualCandle.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.RitualCandle.DisplayName
 					Tooltip: ""
 				}
 
 				SacrilegiousChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.SacrilegiousChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.SacrilegiousChest.DisplayName
 					Tooltip: ""
 				}
 
 				SacrilegiousDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.SacrilegiousDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.SacrilegiousDresser.DisplayName
 					Tooltip: ""
 				}
 
 				SilvaBasin: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.SilvaBasin.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.SilvaBasin.DisplayName
 					Tooltip: ""
 				}
 
 				SilvaChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.SilvaChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.SilvaChest.DisplayName
 					Tooltip: ""
 				}
 
 				SilvaDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.SilvaDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.SilvaDresser.DisplayName
 					Tooltip: ""
 				}
 
 				StaticRefiner: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.StaticRefiner.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.StaticRefiner.DisplayName
 					Tooltip: ""
 				}
 
 				StatigelChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.StatigelChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.StatigelChest.DisplayName
 					Tooltip: ""
 				}
 
 				StatigelDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.StatigelDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.StatigelDresser.DisplayName
 					Tooltip: ""
 				}
 
 				StratusChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.StratusChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.StratusChest.DisplayName
 					Tooltip: ""
 				}
 
 				StratusDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.StratusDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.StratusDresser.DisplayName
 					Tooltip: ""
 				}
 
 				VoidChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.VoidChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.VoidChest.DisplayName
 					Tooltip: ""
 				}
 
 				VoidDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.VoidDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.VoidDresser.DisplayName
 					Tooltip: ""
 				}
 
 				ChargedWulfrumWallMountedBulb: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.ChargedWulfrumWallMountedBulb.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.ChargedWulfrumWallMountedBulb.DisplayName
 					Tooltip: ""
 				}
 
 				AnodizedWulfrumChest: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AnodizedWulfrumChest.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AnodizedWulfrumChest.DisplayName
 					Tooltip: ""
 				}
 
 				AnodizedWulfrumDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AnodizedWulfrumDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AnodizedWulfrumDresser.DisplayName
 					Tooltip: ""
 				}
 
 				WulfrumDresser: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.WulfrumDresser.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.WulfrumDresser.DisplayName
 					Tooltip: ""
 				}
 
 				WulfrumLabstationItem: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.WulfrumLabstationItem.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.WulfrumLabstationItem.DisplayName
 					Tooltip: ""
 				}
 
 				WulfrumWallMountedBulb: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.WulfrumWallMountedBulb.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.WulfrumWallMountedBulb.DisplayName
 					Tooltip: ""
 				}
 
 				AstralPylon: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.AstralPylon.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.AstralPylon.DisplayName
 					Tooltip: ""
 				}
 
 				CragsPylon: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.CragsPylon.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.CragsPylon.DisplayName
 					Tooltip: ""
 				}
 
 				SulphurPylon: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.SulphurPylon.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.SulphurPylon.DisplayName
 					Tooltip: ""
 				}
 
 				SunkenPylon: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenPylon.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Placeables.SunkenPylon.DisplayName
 					Tooltip: ""
 				}
 
@@ -1385,7 +1385,7 @@ Mods: {
 				}
 
 				AcidEelBanner.DisplayName: Acid Eel Banner
-				FormattedBannerTooltip: Mods.CalamityModCustomPublicPrivateFork.Items.Placeables.FormattedBannerTooltip
+				FormattedBannerTooltip: Mods.CalamityMod.Items.Placeables.FormattedBannerTooltip
 				AeroSlimeBanner.DisplayName: Aero Slime Banner
 				AmberCrawlerBanner.DisplayName: Amber Crawler Banner
 				AmethystCrawlerBanner.DisplayName: Amethyst Crawler Banner
@@ -5205,42 +5205,42 @@ Mods: {
 
 			Fishing: {
 				HydrothermalCrate: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.HydrothermalCrate.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Fishing.HydrothermalCrate.DisplayName
 					Tooltip: ""
 				}
 
 				SulphurousCrate: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.SulphurousCrate.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Fishing.SulphurousCrate.DisplayName
 					Tooltip: ""
 				}
 
 				AstralCrate: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCrate.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Fishing.AstralCrate.DisplayName
 					Tooltip: ""
 				}
 
 				MonolithCrate: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.MonolithCrate.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Fishing.MonolithCrate.DisplayName
 					Tooltip: ""
 				}
 
 				BrimstoneCrate: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCrate.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Fishing.BrimstoneCrate.DisplayName
 					Tooltip: ""
 				}
 
 				SlagCrate: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.SlagCrate.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Fishing.SlagCrate.DisplayName
 					Tooltip: ""
 				}
 
 				EutrophicCrate: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.EutrophicCrate.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Fishing.EutrophicCrate.DisplayName
 					Tooltip: ""
 				}
 
 				PrismCrate: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.PrismCrate.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Fishing.PrismCrate.DisplayName
 					Tooltip: ""
 				}
 
@@ -5300,8 +5300,8 @@ Mods: {
 				}
 
 				Brimlish.DisplayName: Brimlish
-				LocationTooltip: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.LocationTooltip
-				CaughtInBrimstoneCrag: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.CaughtInBrimstoneCrag
+				LocationTooltip: Mods.CalamityMod.Items.Fishing.LocationTooltip
+				CaughtInBrimstoneCrag: Mods.CalamityMod.Items.Fishing.CaughtInBrimstoneCrag
 
 				CharredLasher: {
 					DisplayName: Charred Lasher
@@ -5383,7 +5383,7 @@ Mods: {
 				}
 
 				FishofEleum.DisplayName: Fishof Eleum
-				CaughtInSnow: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.CaughtInSnow
+				CaughtInSnow: Mods.CalamityMod.Items.Fishing.CaughtInSnow
 
 				FishofFlight: {
 					DisplayName: Fishof Flight
@@ -5421,7 +5421,7 @@ Mods: {
 				}
 
 				SunbeamFish.DisplayName: Sunbeam Fish
-				CaughtInSpace: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.CaughtInSpace
+				CaughtInSpace: Mods.CalamityMod.Items.Fishing.CaughtInSpace
 
 				CoralskinFoolfish: {
 					DisplayName: Coralskin Foolfish
@@ -5429,7 +5429,7 @@ Mods: {
 				}
 
 				EutrophicSandfish.DisplayName: Eutrophic Sandfish
-				CaughtInSunkenSea: Mods.CalamityModCustomPublicPrivateFork.Items.Fishing.CaughtInSunkenSea
+				CaughtInSunkenSea: Mods.CalamityMod.Items.Fishing.CaughtInSunkenSea
 
 				GleamingCucumber: {
 					DisplayName: Gleaming Cucumber
@@ -5488,7 +5488,7 @@ Mods: {
 
 			Materials: {
 				Lumenyl: {
-					DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Materials.Lumenyl.DisplayName
+					DisplayName: Mods.CalamityMod.Items.Materials.Lumenyl.DisplayName
 					Tooltip: ""
 				}
 
@@ -5816,7 +5816,7 @@ Mods: {
 			Weapons: {
 				Summon: {
 					LiliesOfFinality: {
-						DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Weapons.Summon.LiliesOfFinality.DisplayName
+						DisplayName: Mods.CalamityMod.Items.Weapons.Summon.LiliesOfFinality.DisplayName
 						Tooltip: ""
 					}
 
@@ -6308,7 +6308,7 @@ Mods: {
 
 				Melee: {
 					Roxcalibur: {
-						DisplayName: Mods.CalamityModCustomPublicPrivateFork.Items.Weapons.Melee.Roxcalibur.DisplayName
+						DisplayName: Mods.CalamityMod.Items.Weapons.Melee.Roxcalibur.DisplayName
 						Tooltip: ""
 					}
 
@@ -11742,7 +11742,7 @@ Mods: {
 				}
 
 				Ectoheart.DisplayName: Ectoheart
-				AdrenalineBoosterTooltip: Mods.CalamityModCustomPublicPrivateFork.Items.Misc.AdrenalineBoosterTooltip
+				AdrenalineBoosterTooltip: Mods.CalamityMod.Items.Misc.AdrenalineBoosterTooltip
 				ElectrolyteGelPack.DisplayName: Electrolyte Gel Pack
 
 				EtherealCore: {
@@ -11751,7 +11751,7 @@ Mods: {
 				}
 
 				InfernalBlood.DisplayName: Infernal Blood
-				RageBoosterTooltip: Mods.CalamityModCustomPublicPrivateFork.Items.Misc.RageBoosterTooltip
+				RageBoosterTooltip: Mods.CalamityMod.Items.Misc.RageBoosterTooltip
 
 				MiracleFruit: {
 					DisplayName: Miracle Fruit
@@ -13311,175 +13311,175 @@ Mods: {
 
 		BossChecklistIntegration: {
 			DesertScourge: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.DesertScourge.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.DesertScourge.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.DesertScourge.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.DesertScourge.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.DesertScourge.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.DesertScourge.DespawnMessage
 			}
 
 			GiantClam: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.GiantClam.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.GiantClam.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.GiantClam.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.GiantClam.DespawnMessage
 			}
 
 			Crabulon: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Crabulon.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Crabulon.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Crabulon.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Crabulon.DespawnMessage
 			}
 
 			HiveMind: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.HiveMind.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.HiveMind.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.HiveMind.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.HiveMind.DespawnMessage
 			}
 
 			Perforators: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Perforators.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Perforators.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Perforators.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.Perforators.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Perforators.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Perforators.DespawnMessage
 			}
 
 			SlimeGod: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.SlimeGod.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.SlimeGod.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.SlimeGod.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.SlimeGod.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.SlimeGod.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.SlimeGod.DespawnMessage
 			}
 
 			Cryogen: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Cryogen.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Cryogen.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Cryogen.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Cryogen.DespawnMessage
 			}
 
 			AquaticScourge: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.AquaticScourge.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.AquaticScourge.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.AquaticScourge.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.AquaticScourge.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.AquaticScourge.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.AquaticScourge.DespawnMessage
 			}
 
 			CragmawMire: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.CragmawMire.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.CragmawMire.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.CragmawMire.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.CragmawMire.DespawnMessage
 			}
 
 			BrimstoneElemental: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.BrimstoneElemental.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.BrimstoneElemental.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.BrimstoneElemental.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.BrimstoneElemental.DespawnMessage
 			}
 
 			CalamitasClone: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.CalamitasClone.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.CalamitasClone.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.CalamitasClone.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.CalamitasClone.DespawnMessage
 			}
 
 			Calamitas: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Calamitas.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Calamitas.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Calamitas.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.Calamitas.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Calamitas.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Calamitas.DespawnMessage
 			}
 
 			GreatSandShark: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.GreatSandShark.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.GreatSandShark.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.GreatSandShark.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.GreatSandShark.DespawnMessage
 			}
 
 			Leviathan: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Leviathan.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Leviathan.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Leviathan.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.Leviathan.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Leviathan.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Leviathan.DespawnMessage
 			}
 
 			AstrumAureus: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.AstrumAureus.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.AstrumAureus.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.AstrumAureus.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.AstrumAureus.DespawnMessage
 			}
 
 			PlaguebringerGoliath: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.PlaguebringerGoliath.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.PlaguebringerGoliath.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.PlaguebringerGoliath.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.PlaguebringerGoliath.DespawnMessage
 			}
 
 			Ravager: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Ravager.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Ravager.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Ravager.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.Ravager.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Ravager.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Ravager.DespawnMessage
 			}
 
 			AstrumDeus: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.AstrumDeus.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.AstrumDeus.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.AstrumDeus.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.AstrumDeus.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.AstrumDeus.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.AstrumDeus.DespawnMessage
 			}
 
 			ProfanedGuardians: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.ProfanedGuardians.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.ProfanedGuardians.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.ProfanedGuardians.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.ProfanedGuardians.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.ProfanedGuardians.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.ProfanedGuardians.DespawnMessage
 			}
 
 			Dragonfolly: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Dragonfolly.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Dragonfolly.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Dragonfolly.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Dragonfolly.DespawnMessage
 			}
 
 			Providence: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Providence.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Providence.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Providence.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Providence.DespawnMessage
 			}
 
 			CeaselessVoid: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.CeaselessVoid.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.CeaselessVoid.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.CeaselessVoid.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.CeaselessVoid.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.CeaselessVoid.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.CeaselessVoid.DespawnMessage
 			}
 
 			StormWeaver: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.StormWeaver.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.StormWeaver.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.StormWeaver.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.StormWeaver.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.StormWeaver.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.StormWeaver.DespawnMessage
 			}
 
 			Signus: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Signus.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Signus.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Signus.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.Signus.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Signus.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Signus.DespawnMessage
 			}
 
 			Polterghast: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Polterghast.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Polterghast.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Polterghast.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.Polterghast.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Polterghast.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Polterghast.DespawnMessage
 			}
 
 			Mauler: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Mauler.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Mauler.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Mauler.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Mauler.DespawnMessage
 			}
 
 			NuclearTerror: {
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.NuclearTerror.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.NuclearTerror.DespawnMessage
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.NuclearTerror.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.NuclearTerror.DespawnMessage
 			}
 
 			OldDuke: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.OldDuke.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.OldDuke.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.OldDuke.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.OldDuke.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.OldDuke.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.OldDuke.DespawnMessage
 			}
 
 			DevourerofGods: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.DevourerofGods.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.DevourerofGods.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.DevourerofGods.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.DevourerofGods.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.DevourerofGods.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.DevourerofGods.DespawnMessage
 			}
 
 			Yharon: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Yharon.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Yharon.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.Yharon.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.Yharon.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.Yharon.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.Yharon.DespawnMessage
 			}
 
 			ExoMechs: {
-				EntryName: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.ExoMechs.EntryName
-				SpawnInfo: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.ExoMechs.SpawnInfo
-				DespawnMessage: Mods.CalamityModCustomPublicPrivateFork.BossChecklistIntegration.ExoMechs.DespawnMessage
+				EntryName: Mods.CalamityMod.BossChecklistIntegration.ExoMechs.EntryName
+				SpawnInfo: Mods.CalamityMod.BossChecklistIntegration.ExoMechs.SpawnInfo
+				DespawnMessage: Mods.CalamityMod.BossChecklistIntegration.ExoMechs.DespawnMessage
 			}
 
 			AcidRainT1.EntryName: Acid Rain T1
@@ -13491,1512 +13491,1512 @@ Mods: {
 		Buffs: {
 			AlcoholPoisoning: {
 				DisplayName: Alcohol Poisoning
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AlcoholPoisoning.Description
+				Description: Mods.CalamityMod.Buffs.AlcoholPoisoning.Description
 			}
 
 			BloodyMaryBuff: {
 				DisplayName: Bloody Mary Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BloodyMaryBuff.Description
+				Description: Mods.CalamityMod.Buffs.BloodyMaryBuff.Description
 			}
 
 			CaribbeanRumBuff: {
 				DisplayName: Caribbean Rum Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CaribbeanRumBuff.Description
+				Description: Mods.CalamityMod.Buffs.CaribbeanRumBuff.Description
 			}
 
 			CinnamonRollBuff: {
 				DisplayName: Cinnamon Roll Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CinnamonRollBuff.Description
+				Description: Mods.CalamityMod.Buffs.CinnamonRollBuff.Description
 			}
 
 			EverclearBuff: {
 				DisplayName: Everclear Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.EverclearBuff.Description
+				Description: Mods.CalamityMod.Buffs.EverclearBuff.Description
 			}
 
 			EvergreenGinBuff: {
 				DisplayName: Evergreen Gin Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.EvergreenGinBuff.Description
+				Description: Mods.CalamityMod.Buffs.EvergreenGinBuff.Description
 			}
 
 			FireballBuff: {
 				DisplayName: Fireball Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FireballBuff.Description
+				Description: Mods.CalamityMod.Buffs.FireballBuff.Description
 			}
 
 			GrapeBeerBuff: {
 				DisplayName: Grape Beer Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GrapeBeerBuff.Description
+				Description: Mods.CalamityMod.Buffs.GrapeBeerBuff.Description
 			}
 
 			ManhattanBuff: {
 				DisplayName: Manhattan Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ManhattanBuff.Description
+				Description: Mods.CalamityMod.Buffs.ManhattanBuff.Description
 			}
 
 			MargaritaBuff: {
 				DisplayName: Margarita Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MargaritaBuff.Description
+				Description: Mods.CalamityMod.Buffs.MargaritaBuff.Description
 			}
 
 			MoonshineBuff: {
 				DisplayName: Moonshine Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MoonshineBuff.Description
+				Description: Mods.CalamityMod.Buffs.MoonshineBuff.Description
 			}
 
 			MoscowMuleBuff: {
 				DisplayName: Moscow Mule Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MoscowMuleBuff.Description
+				Description: Mods.CalamityMod.Buffs.MoscowMuleBuff.Description
 			}
 
 			OldFashionedBuff: {
 				DisplayName: Old Fashioned Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.OldFashionedBuff.Description
+				Description: Mods.CalamityMod.Buffs.OldFashionedBuff.Description
 			}
 
 			PurpleHazeBuff: {
 				DisplayName: Purple Haze Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PurpleHazeBuff.Description
+				Description: Mods.CalamityMod.Buffs.PurpleHazeBuff.Description
 			}
 
 			RedWineBuff: {
 				DisplayName: Red Wine Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.RedWineBuff.Description
+				Description: Mods.CalamityMod.Buffs.RedWineBuff.Description
 			}
 
 			RumBuff: {
 				DisplayName: Rum Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.RumBuff.Description
+				Description: Mods.CalamityMod.Buffs.RumBuff.Description
 			}
 
 			ScrewdriverBuff: {
 				DisplayName: Screwdriver Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ScrewdriverBuff.Description
+				Description: Mods.CalamityMod.Buffs.ScrewdriverBuff.Description
 			}
 
 			StarBeamRyeBuff: {
 				DisplayName: Star Beam Rye Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.StarBeamRyeBuff.Description
+				Description: Mods.CalamityMod.Buffs.StarBeamRyeBuff.Description
 			}
 
 			TequilaBuff: {
 				DisplayName: Tequila Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TequilaBuff.Description
+				Description: Mods.CalamityMod.Buffs.TequilaBuff.Description
 			}
 
 			TequilaSunriseBuff: {
 				DisplayName: Tequila Sunrise Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TequilaSunriseBuff.Description
+				Description: Mods.CalamityMod.Buffs.TequilaSunriseBuff.Description
 			}
 
 			Trippy: {
 				DisplayName: Trippy
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Trippy.Description
+				Description: Mods.CalamityMod.Buffs.Trippy.Description
 			}
 
 			VodkaBuff: {
 				DisplayName: Vodka Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.VodkaBuff.Description
+				Description: Mods.CalamityMod.Buffs.VodkaBuff.Description
 			}
 
 			WhiskeyBuff: {
 				DisplayName: Whiskey Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WhiskeyBuff.Description
+				Description: Mods.CalamityMod.Buffs.WhiskeyBuff.Description
 			}
 
 			WhiteWineBuff: {
 				DisplayName: White Wine Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WhiteWineBuff.Description
+				Description: Mods.CalamityMod.Buffs.WhiteWineBuff.Description
 			}
 
 			Withered: {
 				DisplayName: Withered
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Withered.Description
+				Description: Mods.CalamityMod.Buffs.Withered.Description
 			}
 
 			AstralInfectionDebuff: {
 				DisplayName: Astral Infection Debuff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AstralInfectionDebuff.Description
+				Description: Mods.CalamityMod.Buffs.AstralInfectionDebuff.Description
 			}
 
 			AuricRebuke: {
 				DisplayName: Auric Rebuke
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AuricRebuke.Description
+				Description: Mods.CalamityMod.Buffs.AuricRebuke.Description
 			}
 
 			BanishingFire: {
 				DisplayName: Banishing Fire
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BanishingFire.Description
+				Description: Mods.CalamityMod.Buffs.BanishingFire.Description
 			}
 
 			BrainRot: {
 				DisplayName: Brain Rot
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BrainRot.Description
+				Description: Mods.CalamityMod.Buffs.BrainRot.Description
 			}
 
 			BrimstoneFlames: {
 				DisplayName: Brimstone Flames
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BrimstoneFlames.Description
+				Description: Mods.CalamityMod.Buffs.BrimstoneFlames.Description
 			}
 
 			BurningBlood: {
 				DisplayName: Burning Blood
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BurningBlood.Description
+				Description: Mods.CalamityMod.Buffs.BurningBlood.Description
 			}
 
 			CrushDepth: {
 				DisplayName: Crush Depth
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CrushDepth.Description
+				Description: Mods.CalamityMod.Buffs.CrushDepth.Description
 			}
 
 			DemonicFlames: {
 				DisplayName: Demonic Flames
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.DemonicFlames.Description
+				Description: Mods.CalamityMod.Buffs.DemonicFlames.Description
 			}
 
 			Dragonfire: {
 				DisplayName: Dragonfire
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Dragonfire.Description
+				Description: Mods.CalamityMod.Buffs.Dragonfire.Description
 			}
 
 			ElementalMix: {
 				DisplayName: Elemental Mix
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ElementalMix.Description
+				Description: Mods.CalamityMod.Buffs.ElementalMix.Description
 			}
 
 			GodSlayerInferno: {
 				DisplayName: God Slayer Inferno
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GodSlayerInferno.Description
+				Description: Mods.CalamityMod.Buffs.GodSlayerInferno.Description
 			}
 
 			HadopelagicPressure: {
 				DisplayName: Hadopelagic Pressure
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HadopelagicPressure.Description
+				Description: Mods.CalamityMod.Buffs.HadopelagicPressure.Description
 			}
 
 			HeavyBleeding: {
 				DisplayName: Heavy Bleeding
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HeavyBleeding.Description
+				Description: Mods.CalamityMod.Buffs.HeavyBleeding.Description
 			}
 
 			HolyFlames: {
 				DisplayName: Holy Flames
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HolyFlames.Description
+				Description: Mods.CalamityMod.Buffs.HolyFlames.Description
 			}
 
 			HolyInferno: {
 				DisplayName: Holy Inferno
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HolyInferno.Description
+				Description: Mods.CalamityMod.Buffs.HolyInferno.Description
 			}
 
 			Laceration: {
 				DisplayName: Laceration
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Laceration.Description
+				Description: Mods.CalamityMod.Buffs.Laceration.Description
 			}
 
 			ManaBurn: {
 				DisplayName: Mana Burn
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ManaBurn.Description
+				Description: Mods.CalamityMod.Buffs.ManaBurn.Description
 			}
 
 			MiracleBlight: {
 				DisplayName: Miracle Blight
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MiracleBlight.Description
+				Description: Mods.CalamityMod.Buffs.MiracleBlight.Description
 			}
 
 			Nightwither: {
 				DisplayName: Nightwither
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Nightwither.Description
+				Description: Mods.CalamityMod.Buffs.Nightwither.Description
 			}
 
 			Plague: {
 				DisplayName: Plague
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Plague.Description
+				Description: Mods.CalamityMod.Buffs.Plague.Description
 			}
 
 			RiptideDebuff: {
 				DisplayName: Riptide Debuff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.RiptideDebuff.Description
+				Description: Mods.CalamityMod.Buffs.RiptideDebuff.Description
 			}
 
 			SagePoison: {
 				DisplayName: Sage Poison
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SagePoison.Description
+				Description: Mods.CalamityMod.Buffs.SagePoison.Description
 			}
 
 			SearingLava: {
 				DisplayName: Searing Lava
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SearingLava.Description
+				Description: Mods.CalamityMod.Buffs.SearingLava.Description
 			}
 
 			ShellfishClaps: {
 				DisplayName: Shellfish Claps
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ShellfishClaps.Description
+				Description: Mods.CalamityMod.Buffs.ShellfishClaps.Description
 			}
 
 			Shred: {
 				DisplayName: Shred
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Shred.Description
+				Description: Mods.CalamityMod.Buffs.Shred.Description
 			}
 
 			SnapClamDebuff: {
 				DisplayName: Snap Clam Debuff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SnapClamDebuff.Description
+				Description: Mods.CalamityMod.Buffs.SnapClamDebuff.Description
 			}
 
 			StaticDischarge: {
 				DisplayName: Static Discharge
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.StaticDischarge.Description
+				Description: Mods.CalamityMod.Buffs.StaticDischarge.Description
 			}
 
 			SulphuricPoisoning: {
 				DisplayName: Sulphuric Poisoning
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SulphuricPoisoning.Description
+				Description: Mods.CalamityMod.Buffs.SulphuricPoisoning.Description
 			}
 
 			TrueVulnerabilityHex: {
 				DisplayName: True Vulnerability Hex
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TrueVulnerabilityHex.Description
+				Description: Mods.CalamityMod.Buffs.TrueVulnerabilityHex.Description
 			}
 
 			Vaporfied: {
 				DisplayName: Vaporfied
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Vaporfied.Description
+				Description: Mods.CalamityMod.Buffs.Vaporfied.Description
 			}
 
 			VermillionFlux: {
 				DisplayName: Vermillion Flux
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.VermillionFlux.Description
+				Description: Mods.CalamityMod.Buffs.VermillionFlux.Description
 			}
 
 			Voidfrost: {
 				DisplayName: Voidfrost
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Voidfrost.Description
+				Description: Mods.CalamityMod.Buffs.Voidfrost.Description
 			}
 
 			VulnerabilityHex: {
 				DisplayName: Vulnerability Hex
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.VulnerabilityHex.Description
+				Description: Mods.CalamityMod.Buffs.VulnerabilityHex.Description
 			}
 
 			WeakBrimstoneFlames: {
 				DisplayName: Weak Brimstone Flames
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WeakBrimstoneFlames.Description
+				Description: Mods.CalamityMod.Buffs.WeakBrimstoneFlames.Description
 			}
 
 			AndromedaBuff: {
 				DisplayName: Andromeda Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AndromedaBuff.Description
+				Description: Mods.CalamityMod.Buffs.AndromedaBuff.Description
 			}
 
 			AndromedaSmallBuff: {
 				DisplayName: Andromeda Small Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AndromedaSmallBuff.Description
+				Description: Mods.CalamityMod.Buffs.AndromedaSmallBuff.Description
 			}
 
 			BrimroseMount: {
 				DisplayName: Brimrose Mount
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BrimroseMount.Description
+				Description: Mods.CalamityMod.Buffs.BrimroseMount.Description
 			}
 
 			BumbledogeMount: {
 				DisplayName: Bumbledoge Mount
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BumbledogeMount.Description
+				Description: Mods.CalamityMod.Buffs.BumbledogeMount.Description
 			}
 
 			DraedonGamerChairBuff: {
 				DisplayName: Draedon Gamer Chair Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.DraedonGamerChairBuff.Description
+				Description: Mods.CalamityMod.Buffs.DraedonGamerChairBuff.Description
 			}
 
 			ExoTankBuff: {
 				DisplayName: Exo Tank Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ExoTankBuff.Description
+				Description: Mods.CalamityMod.Buffs.ExoTankBuff.Description
 			}
 
 			GazeOfCrysthamyrBuff: {
 				DisplayName: Gaze Of Crysthamyr Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GazeOfCrysthamyrBuff.Description
+				Description: Mods.CalamityMod.Buffs.GazeOfCrysthamyrBuff.Description
 			}
 
 			MarniteLiftBuff: {
 				DisplayName: Marnite Lift Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MarniteLiftBuff.Description
+				Description: Mods.CalamityMod.Buffs.MarniteLiftBuff.Description
 			}
 
 			OnyxExcavatorBuff: {
 				DisplayName: Onyx Excavator Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.OnyxExcavatorBuff.Description
+				Description: Mods.CalamityMod.Buffs.OnyxExcavatorBuff.Description
 			}
 
 			RimehoundBuff: {
 				DisplayName: Rimehound Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.RimehoundBuff.Description
+				Description: Mods.CalamityMod.Buffs.RimehoundBuff.Description
 			}
 
 			SquishyBeanBuff: {
 				DisplayName: Squishy Bean Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SquishyBeanBuff.Description
+				Description: Mods.CalamityMod.Buffs.SquishyBeanBuff.Description
 			}
 
 			TheCartofGodsBuff: {
 				DisplayName: The Cartof Gods Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TheCartofGodsBuff.Description
+				Description: Mods.CalamityMod.Buffs.TheCartofGodsBuff.Description
 			}
 
 			AkatoBuff: {
 				DisplayName: Akato Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AkatoBuff.Description
+				Description: Mods.CalamityMod.Buffs.AkatoBuff.Description
 			}
 
 			ArcherofLunamoon: {
 				DisplayName: Archerof Lunamoon
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ArcherofLunamoon.Description
+				Description: Mods.CalamityMod.Buffs.ArcherofLunamoon.Description
 			}
 
 			AstrophageBuff: {
 				DisplayName: Astrophage Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AstrophageBuff.Description
+				Description: Mods.CalamityMod.Buffs.AstrophageBuff.Description
 			}
 
 			BabyGhostBellBuff: {
 				DisplayName: Baby Ghost Bell Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BabyGhostBellBuff.Description
+				Description: Mods.CalamityMod.Buffs.BabyGhostBellBuff.Description
 			}
 
 			BearBuff: {
 				DisplayName: Bear Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BearBuff.Description
+				Description: Mods.CalamityMod.Buffs.BearBuff.Description
 			}
 
 			BloodBound: {
 				DisplayName: Blood Bound
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BloodBound.Description
+				Description: Mods.CalamityMod.Buffs.BloodBound.Description
 			}
 
 			BrimlingBuff: {
 				DisplayName: Brimling Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BrimlingBuff.Description
+				Description: Mods.CalamityMod.Buffs.BrimlingBuff.Description
 			}
 
 			BurrowerBuff: {
 				DisplayName: Burrower Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BurrowerBuff.Description
+				Description: Mods.CalamityMod.Buffs.BurrowerBuff.Description
 			}
 
 			ChibiiDoGBuff: {
 				DisplayName: Chibii Do G Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ChibiiDoGBuff.Description
+				Description: Mods.CalamityMod.Buffs.ChibiiDoGBuff.Description
 			}
 
 			ClassicSCalPetBuff: {
 				DisplayName: Classic S Cal Pet Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ClassicSCalPetBuff.Description
+				Description: Mods.CalamityMod.Buffs.ClassicSCalPetBuff.Description
 			}
 
 			DannyDevito: {
 				DisplayName: Danny Devito
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.DannyDevito.Description
+				Description: Mods.CalamityMod.Buffs.DannyDevito.Description
 			}
 
 			Dreamfog: {
 				DisplayName: Dreamfog
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Dreamfog.Description
+				Description: Mods.CalamityMod.Buffs.Dreamfog.Description
 			}
 
 			EidolonSnailBuff: {
 				DisplayName: Eidolon Snail Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.EidolonSnailBuff.Description
+				Description: Mods.CalamityMod.Buffs.EidolonSnailBuff.Description
 			}
 
 			ElectricTroublemaker: {
 				DisplayName: Electric Troublemaker
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ElectricTroublemaker.Description
+				Description: Mods.CalamityMod.Buffs.ElectricTroublemaker.Description
 			}
 
 			FlakHermitBuff: {
 				DisplayName: Flak Hermit Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FlakHermitBuff.Description
+				Description: Mods.CalamityMod.Buffs.FlakHermitBuff.Description
 			}
 
 			FoxPetBuff: {
 				DisplayName: Fox Pet Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FoxPetBuff.Description
+				Description: Mods.CalamityMod.Buffs.FoxPetBuff.Description
 			}
 
 			FrostyBatBuff: {
 				DisplayName: Frosty Bat Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FrostyBatBuff.Description
+				Description: Mods.CalamityMod.Buffs.FrostyBatBuff.Description
 			}
 
 			FurtasticDuoBuff: {
 				DisplayName: Furtastic Duo Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FurtasticDuoBuff.Description
+				Description: Mods.CalamityMod.Buffs.FurtasticDuoBuff.Description
 			}
 
 			GoldieBuff: {
 				DisplayName: Goldie Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GoldieBuff.Description
+				Description: Mods.CalamityMod.Buffs.GoldieBuff.Description
 			}
 
 			Kendra: {
 				DisplayName: Kendra
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Kendra.Description
+				Description: Mods.CalamityMod.Buffs.Kendra.Description
 			}
 
 			LadBuff: {
 				DisplayName: Lad Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.LadBuff.Description
+				Description: Mods.CalamityMod.Buffs.LadBuff.Description
 			}
 
 			LeviBuff: {
 				DisplayName: Levi Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.LeviBuff.Description
+				Description: Mods.CalamityMod.Buffs.LeviBuff.Description
 			}
 
 			LittleLightBuff: {
 				DisplayName: Little Light Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.LittleLightBuff.Description
+				Description: Mods.CalamityMod.Buffs.LittleLightBuff.Description
 			}
 
 			LordeBuff: {
 				DisplayName: Lorde Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.LordeBuff.Description
+				Description: Mods.CalamityMod.Buffs.LordeBuff.Description
 			}
 
 			MiniMindBuff: {
 				DisplayName: Mini Mind Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MiniMindBuff.Description
+				Description: Mods.CalamityMod.Buffs.MiniMindBuff.Description
 			}
 
 			OceanSpiritBuff: {
 				DisplayName: Ocean Spirit Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.OceanSpiritBuff.Description
+				Description: Mods.CalamityMod.Buffs.OceanSpiritBuff.Description
 			}
 
 			PineappleBuff: {
 				DisplayName: Pineapple Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PineappleBuff.Description
+				Description: Mods.CalamityMod.Buffs.PineappleBuff.Description
 			}
 
 			PlaguebringerBabBuff: {
 				DisplayName: Plaguebringer Bab Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PlaguebringerBabBuff.Description
+				Description: Mods.CalamityMod.Buffs.PlaguebringerBabBuff.Description
 			}
 
 			RadiatorBuff: {
 				DisplayName: Radiator Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.RadiatorBuff.Description
+				Description: Mods.CalamityMod.Buffs.RadiatorBuff.Description
 			}
 
 			SparksBuff: {
 				DisplayName: Sparks Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SparksBuff.Description
+				Description: Mods.CalamityMod.Buffs.SparksBuff.Description
 			}
 
 			ThirdSageBuff: {
 				DisplayName: Third Sage Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ThirdSageBuff.Description
+				Description: Mods.CalamityMod.Buffs.ThirdSageBuff.Description
 			}
 
 			ToastyBatBuff: {
 				DisplayName: Toasty Bat Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ToastyBatBuff.Description
+				Description: Mods.CalamityMod.Buffs.ToastyBatBuff.Description
 			}
 
 			YharonSonBuff: {
 				DisplayName: Yharon Son Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.YharonSonBuff.Description
+				Description: Mods.CalamityMod.Buffs.YharonSonBuff.Description
 			}
 
 			BlueCandleBuff: {
 				DisplayName: Blue Candle Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BlueCandleBuff.Description
+				Description: Mods.CalamityMod.Buffs.BlueCandleBuff.Description
 			}
 
 			ChaosCandleBuff: {
 				DisplayName: Chaos Candle Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ChaosCandleBuff.Description
+				Description: Mods.CalamityMod.Buffs.ChaosCandleBuff.Description
 			}
 
 			CorruptionEffigyBuff: {
 				DisplayName: Corruption Effigy Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CorruptionEffigyBuff.Description
+				Description: Mods.CalamityMod.Buffs.CorruptionEffigyBuff.Description
 			}
 
 			CrimsonEffigyBuff: {
 				DisplayName: Crimson Effigy Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CrimsonEffigyBuff.Description
+				Description: Mods.CalamityMod.Buffs.CrimsonEffigyBuff.Description
 			}
 
 			EffigyOfDecayBuff: {
 				DisplayName: Effigy Of Decay Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.EffigyOfDecayBuff.Description
+				Description: Mods.CalamityMod.Buffs.EffigyOfDecayBuff.Description
 			}
 
 			PinkCandleBuff: {
 				DisplayName: Pink Candle Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PinkCandleBuff.Description
+				Description: Mods.CalamityMod.Buffs.PinkCandleBuff.Description
 			}
 
 			PurpleCandleBuff: {
 				DisplayName: Purple Candle Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PurpleCandleBuff.Description
+				Description: Mods.CalamityMod.Buffs.PurpleCandleBuff.Description
 			}
 
 			TranquilityCandleBuff: {
 				DisplayName: Tranquility Candle Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TranquilityCandleBuff.Description
+				Description: Mods.CalamityMod.Buffs.TranquilityCandleBuff.Description
 			}
 
 			YellowCandleBuff: {
 				DisplayName: Yellow Candle Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.YellowCandleBuff.Description
+				Description: Mods.CalamityMod.Buffs.YellowCandleBuff.Description
 			}
 
 			PopoBuff: {
 				DisplayName: Popo Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PopoBuff.Description
+				Description: Mods.CalamityMod.Buffs.PopoBuff.Description
 			}
 
 			PopoNoselessBuff: {
 				DisplayName: Popo Noseless Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PopoNoselessBuff.Description
+				Description: Mods.CalamityMod.Buffs.PopoNoselessBuff.Description
 			}
 
 			AnechoicCoatingBuff: {
 				DisplayName: Anechoic Coating Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AnechoicCoatingBuff.Description
+				Description: Mods.CalamityMod.Buffs.AnechoicCoatingBuff.Description
 			}
 
 			AstralInjectionBuff: {
 				DisplayName: Astral Injection Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AstralInjectionBuff.Description
+				Description: Mods.CalamityMod.Buffs.AstralInjectionBuff.Description
 			}
 
 			BaguetteBuff: {
 				DisplayName: Baguette Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BaguetteBuff.Description
+				Description: Mods.CalamityMod.Buffs.BaguetteBuff.Description
 			}
 
 			BloodfinBoost: {
 				DisplayName: Bloodfin Boost
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BloodfinBoost.Description
+				Description: Mods.CalamityMod.Buffs.BloodfinBoost.Description
 			}
 
 			BoundingBuff: {
 				DisplayName: Bounding Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BoundingBuff.Description
+				Description: Mods.CalamityMod.Buffs.BoundingBuff.Description
 			}
 
 			CalciumBuff: {
 				DisplayName: Calcium Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CalciumBuff.Description
+				Description: Mods.CalamityMod.Buffs.CalciumBuff.Description
 			}
 
 			CeaselessHunger: {
 				DisplayName: Ceaseless Hunger
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CeaselessHunger.Description
+				Description: Mods.CalamityMod.Buffs.CeaselessHunger.Description
 			}
 
 			GravityNormalizerBuff: {
 				DisplayName: Gravity Normalizer Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GravityNormalizerBuff.Description
+				Description: Mods.CalamityMod.Buffs.GravityNormalizerBuff.Description
 			}
 
 			Omniscience: {
 				DisplayName: Omniscience
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Omniscience.Description
+				Description: Mods.CalamityMod.Buffs.Omniscience.Description
 			}
 
 			PhotosynthesisBuff: {
 				DisplayName: Photosynthesis Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PhotosynthesisBuff.Description
+				Description: Mods.CalamityMod.Buffs.PhotosynthesisBuff.Description
 			}
 
 			ShadowBuff: {
 				DisplayName: Shadow Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ShadowBuff.Description
+				Description: Mods.CalamityMod.Buffs.ShadowBuff.Description
 			}
 
 			Soaring: {
 				DisplayName: Soaring
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Soaring.Description
+				Description: Mods.CalamityMod.Buffs.Soaring.Description
 			}
 
 			SulphurskinBuff: {
 				DisplayName: Sulphurskin Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SulphurskinBuff.Description
+				Description: Mods.CalamityMod.Buffs.SulphurskinBuff.Description
 			}
 
 			WeaponImbueBrimstone: {
 				DisplayName: Weapon Imbue Brimstone
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WeaponImbueBrimstone.Description
+				Description: Mods.CalamityMod.Buffs.WeaponImbueBrimstone.Description
 			}
 
 			WeaponImbueCrumbling: {
 				DisplayName: Weapon Imbue Crumbling
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WeaponImbueCrumbling.Description
+				Description: Mods.CalamityMod.Buffs.WeaponImbueCrumbling.Description
 			}
 
 			WeaponImbueHolyFlames: {
 				DisplayName: Weapon Imbue Holy Flames
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WeaponImbueHolyFlames.Description
+				Description: Mods.CalamityMod.Buffs.WeaponImbueHolyFlames.Description
 			}
 
 			Zen: {
 				DisplayName: Zen
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Zen.Description
+				Description: Mods.CalamityMod.Buffs.Zen.Description
 			}
 
 			Zerg: {
 				DisplayName: Zerg
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Zerg.Description
+				Description: Mods.CalamityMod.Buffs.Zerg.Description
 			}
 
 			AbsorberRegen: {
 				DisplayName: Absorber Regen
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AbsorberRegen.Description
+				Description: Mods.CalamityMod.Buffs.AbsorberRegen.Description
 			}
 
 			AbyssalDivingSuitBuff: {
 				DisplayName: Abyssal Diving Suit Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AbyssalDivingSuitBuff.Description
+				Description: Mods.CalamityMod.Buffs.AbyssalDivingSuitBuff.Description
 			}
 
 			AbyssalMadness: {
 				DisplayName: Abyssal Madness
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AbyssalMadness.Description
+				Description: Mods.CalamityMod.Buffs.AbyssalMadness.Description
 			}
 
 			AdrenalineMode: {
 				DisplayName: Adrenaline Mode
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AdrenalineMode.Description
+				Description: Mods.CalamityMod.Buffs.AdrenalineMode.Description
 			}
 
 			AeolianEarthBuff: {
 				DisplayName: Aeolian Earth Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AeolianEarthBuff.Description
+				Description: Mods.CalamityMod.Buffs.AeolianEarthBuff.Description
 			}
 
 			Afflicted: {
 				DisplayName: Afflicted
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Afflicted.Description
+				Description: Mods.CalamityMod.Buffs.Afflicted.Description
 			}
 
 			AmidiasBlessing: {
 				DisplayName: Amidias Blessing
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AmidiasBlessing.Description
+				Description: Mods.CalamityMod.Buffs.AmidiasBlessing.Description
 			}
 
 			AquaticHeartBuff: {
 				DisplayName: Aquatic Heart Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AquaticHeartBuff.Description
+				Description: Mods.CalamityMod.Buffs.AquaticHeartBuff.Description
 			}
 
 			AquaticHeartWaterSpeed: {
 				DisplayName: Aquatic Heart Water Speed
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AquaticHeartWaterSpeed.Description
+				Description: Mods.CalamityMod.Buffs.AquaticHeartWaterSpeed.Description
 			}
 
 			AvertorBonus: {
 				DisplayName: Avertor Bonus
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AvertorBonus.Description
+				Description: Mods.CalamityMod.Buffs.AvertorBonus.Description
 			}
 
 			BloodflareBloodFrenzy: {
 				DisplayName: Bloodflare Blood Frenzy
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BloodflareBloodFrenzy.Description
+				Description: Mods.CalamityMod.Buffs.BloodflareBloodFrenzy.Description
 			}
 
 			BossEffects: {
 				DisplayName: Boss Effects
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BossEffects.Description
+				Description: Mods.CalamityMod.Buffs.BossEffects.Description
 			}
 
 			BrimflameFrenzyBuff: {
 				DisplayName: Brimflame Frenzy Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BrimflameFrenzyBuff.Description
+				Description: Mods.CalamityMod.Buffs.BrimflameFrenzyBuff.Description
 			}
 
 			ChiBuff: {
 				DisplayName: Chi Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ChiBuff.Description
+				Description: Mods.CalamityMod.Buffs.ChiBuff.Description
 			}
 
 			ChiRegenBuff: {
 				DisplayName: Chi Regen Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ChiRegenBuff.Description
+				Description: Mods.CalamityMod.Buffs.ChiRegenBuff.Description
 			}
 
 			CoralSymbiosis: {
 				DisplayName: Coral Symbiosis
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CoralSymbiosis.Description
+				Description: Mods.CalamityMod.Buffs.CoralSymbiosis.Description
 			}
 
 			CosmicFreeze: {
 				DisplayName: Cosmic Freeze
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CosmicFreeze.Description
+				Description: Mods.CalamityMod.Buffs.CosmicFreeze.Description
 			}
 
 			DivineBless: {
 				DisplayName: Divine Bless
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.DivineBless.Description
+				Description: Mods.CalamityMod.Buffs.DivineBless.Description
 			}
 
 			EmpyreanWrath: {
 				DisplayName: Empyrean Wrath
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.EmpyreanWrath.Description
+				Description: Mods.CalamityMod.Buffs.EmpyreanWrath.Description
 			}
 
 			Encased: {
 				DisplayName: Encased
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Encased.Description
+				Description: Mods.CalamityMod.Buffs.Encased.Description
 			}
 
 			GraxBoost: {
 				DisplayName: Grax Boost
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GraxBoost.Description
+				Description: Mods.CalamityMod.Buffs.GraxBoost.Description
 			}
 
 			GreenJellyRegen: {
 				DisplayName: Green Jelly Regen
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GreenJellyRegen.Description
+				Description: Mods.CalamityMod.Buffs.GreenJellyRegen.Description
 			}
 
 			HallowedRuneDefense: {
 				DisplayName: Hallowed Rune Defense
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HallowedRuneDefense.Description
+				Description: Mods.CalamityMod.Buffs.HallowedRuneDefense.Description
 			}
 
 			HallowedRunePower: {
 				DisplayName: Hallowed Rune Power
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HallowedRunePower.Description
+				Description: Mods.CalamityMod.Buffs.HallowedRunePower.Description
 			}
 
 			HallowedRuneRegeneration: {
 				DisplayName: Hallowed Rune Regeneration
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HallowedRuneRegeneration.Description
+				Description: Mods.CalamityMod.Buffs.HallowedRuneRegeneration.Description
 			}
 
 			Haste: {
 				DisplayName: Haste
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Haste.Description
+				Description: Mods.CalamityMod.Buffs.Haste.Description
 			}
 
 			IceShieldBuff: {
 				DisplayName: Ice Shield Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.IceShieldBuff.Description
+				Description: Mods.CalamityMod.Buffs.IceShieldBuff.Description
 			}
 
 			Mushy: {
 				DisplayName: Mushy
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Mushy.Description
+				Description: Mods.CalamityMod.Buffs.Mushy.Description
 			}
 
 			PhantomicEmpowerment: {
 				DisplayName: Phantomic Empowerment
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PhantomicEmpowerment.Description
+				Description: Mods.CalamityMod.Buffs.PhantomicEmpowerment.Description
 			}
 
 			PhantomicRegen: {
 				DisplayName: Phantomic Regen
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PhantomicRegen.Description
+				Description: Mods.CalamityMod.Buffs.PhantomicRegen.Description
 			}
 
 			PhantomicShield: {
 				DisplayName: Phantomic Shield
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PhantomicShield.Description
+				Description: Mods.CalamityMod.Buffs.PhantomicShield.Description
 			}
 
 			Phantom: {
 				DisplayName: Phantom
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Phantom.Description
+				Description: Mods.CalamityMod.Buffs.Phantom.Description
 			}
 
 			PinkJellyRegen: {
 				DisplayName: Pink Jelly Regen
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PinkJellyRegen.Description
+				Description: Mods.CalamityMod.Buffs.PinkJellyRegen.Description
 			}
 
 			ProfanedCrystalBuff: {
 				DisplayName: Profaned Crystal Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ProfanedCrystalBuff.Description
+				Description: Mods.CalamityMod.Buffs.ProfanedCrystalBuff.Description
 			}
 
 			RageMode: {
 				DisplayName: Rage Mode
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.RageMode.Description
+				Description: Mods.CalamityMod.Buffs.RageMode.Description
 			}
 
 			ReaverRage: {
 				DisplayName: Reaver Rage
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ReaverRage.Description
+				Description: Mods.CalamityMod.Buffs.ReaverRage.Description
 			}
 
 			SandsWindBuff: {
 				DisplayName: Sands Wind Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SandsWindBuff.Description
+				Description: Mods.CalamityMod.Buffs.SandsWindBuff.Description
 			}
 
 			SilvaRevival: {
 				DisplayName: Silva Revival
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SilvaRevival.Description
+				Description: Mods.CalamityMod.Buffs.SilvaRevival.Description
 			}
 
 			SpiritDefense: {
 				DisplayName: Spirit Defense
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SpiritDefense.Description
+				Description: Mods.CalamityMod.Buffs.SpiritDefense.Description
 			}
 
 			SpiritPower: {
 				DisplayName: Spirit Power
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SpiritPower.Description
+				Description: Mods.CalamityMod.Buffs.SpiritPower.Description
 			}
 
 			SpiritRegen: {
 				DisplayName: Spirit Regen
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SpiritRegen.Description
+				Description: Mods.CalamityMod.Buffs.SpiritRegen.Description
 			}
 
 			TarragonCloak: {
 				DisplayName: Tarragon Cloak
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TarragonCloak.Description
+				Description: Mods.CalamityMod.Buffs.TarragonCloak.Description
 			}
 
 			TarragonImmunity: {
 				DisplayName: Tarragon Immunity
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TarragonImmunity.Description
+				Description: Mods.CalamityMod.Buffs.TarragonImmunity.Description
 			}
 
 			TarraLifeRegen: {
 				DisplayName: Tarra Life Regen
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TarraLifeRegen.Description
+				Description: Mods.CalamityMod.Buffs.TarraLifeRegen.Description
 			}
 
 			AbsorberAffliction: {
 				DisplayName: Absorber Affliction
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AbsorberAffliction.Description
+				Description: Mods.CalamityMod.Buffs.AbsorberAffliction.Description
 			}
 
 			AndromedaCripple: {
 				DisplayName: Andromeda Cripple
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AndromedaCripple.Description
+				Description: Mods.CalamityMod.Buffs.AndromedaCripple.Description
 			}
 
 			ArmorCrunch: {
 				DisplayName: Armor Crunch
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ArmorCrunch.Description
+				Description: Mods.CalamityMod.Buffs.ArmorCrunch.Description
 			}
 
 			Clamity: {
 				DisplayName: Clamity
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Clamity.Description
+				Description: Mods.CalamityMod.Buffs.Clamity.Description
 			}
 
 			Crumbling: {
 				DisplayName: Crumbling
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Crumbling.Description
+				Description: Mods.CalamityMod.Buffs.Crumbling.Description
 			}
 
 			DoGExtremeGravity: {
 				DisplayName: Do G Extreme Gravity
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.DoGExtremeGravity.Description
+				Description: Mods.CalamityMod.Buffs.DoGExtremeGravity.Description
 			}
 
 			Enraged: {
 				DisplayName: Enraged
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Enraged.Description
+				Description: Mods.CalamityMod.Buffs.Enraged.Description
 			}
 
 			Eutrophication: {
 				DisplayName: Eutrophication
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Eutrophication.Description
+				Description: Mods.CalamityMod.Buffs.Eutrophication.Description
 			}
 
 			FishAlert: {
 				DisplayName: Fish Alert
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FishAlert.Description
+				Description: Mods.CalamityMod.Buffs.FishAlert.Description
 			}
 
 			FrozenLungs: {
 				DisplayName: Frozen Lungs
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FrozenLungs.Description
+				Description: Mods.CalamityMod.Buffs.FrozenLungs.Description
 			}
 
 			GalvanicCorrosion: {
 				DisplayName: Galvanic Corrosion
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GalvanicCorrosion.Description
+				Description: Mods.CalamityMod.Buffs.GalvanicCorrosion.Description
 			}
 
 			GlacialState: {
 				DisplayName: Glacial State
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GlacialState.Description
+				Description: Mods.CalamityMod.Buffs.GlacialState.Description
 			}
 
 			IcarusFolly: {
 				DisplayName: Icarus Folly
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.IcarusFolly.Description
+				Description: Mods.CalamityMod.Buffs.IcarusFolly.Description
 			}
 
 			Irradiated: {
 				DisplayName: Irradiated
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Irradiated.Description
+				Description: Mods.CalamityMod.Buffs.Irradiated.Description
 			}
 
 			MarkedforDeath: {
 				DisplayName: Markedfor Death
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MarkedforDeath.Description
+				Description: Mods.CalamityMod.Buffs.MarkedforDeath.Description
 			}
 
 			NOU: {
 				DisplayName: N O U
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.NOU.Description
+				Description: Mods.CalamityMod.Buffs.NOU.Description
 			}
 
 			PearlAura: {
 				DisplayName: Pearl Aura
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PearlAura.Description
+				Description: Mods.CalamityMod.Buffs.PearlAura.Description
 			}
 
 			ProfanedWeakness: {
 				DisplayName: Profaned Weakness
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ProfanedWeakness.Description
+				Description: Mods.CalamityMod.Buffs.ProfanedWeakness.Description
 			}
 
 			TemporalSadness: {
 				DisplayName: Temporal Sadness
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TemporalSadness.Description
+				Description: Mods.CalamityMod.Buffs.TemporalSadness.Description
 			}
 
 			TimeDistortion: {
 				DisplayName: Time Distortion
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TimeDistortion.Description
+				Description: Mods.CalamityMod.Buffs.TimeDistortion.Description
 			}
 
 			Warped: {
 				DisplayName: Warped
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Warped.Description
+				Description: Mods.CalamityMod.Buffs.Warped.Description
 			}
 
 			WeakPetrification: {
 				DisplayName: Weak Petrification
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WeakPetrification.Description
+				Description: Mods.CalamityMod.Buffs.WeakPetrification.Description
 			}
 
 			WhisperingDeath: {
 				DisplayName: Whispering Death
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WhisperingDeath.Description
+				Description: Mods.CalamityMod.Buffs.WhisperingDeath.Description
 			}
 
 			WitherDebuff: {
 				DisplayName: Wither Debuff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WitherDebuff.Description
+				Description: Mods.CalamityMod.Buffs.WitherDebuff.Description
 			}
 
 			AbandonedSlimeBuff: {
 				DisplayName: Abandoned Slime Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AbandonedSlimeBuff.Description
+				Description: Mods.CalamityMod.Buffs.AbandonedSlimeBuff.Description
 			}
 
 			AmphibiansGuitarBuff: {
 				DisplayName: Amphibians Guitar Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AmphibiansGuitarBuff.Description
+				Description: Mods.CalamityMod.Buffs.AmphibiansGuitarBuff.Description
 			}
 
 			AncientMineralSharkBuff: {
 				DisplayName: Ancient Mineral Shark Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AncientMineralSharkBuff.Description
+				Description: Mods.CalamityMod.Buffs.AncientMineralSharkBuff.Description
 			}
 
 			AquaticStar: {
 				DisplayName: Aquatic Star
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AquaticStar.Description
+				Description: Mods.CalamityMod.Buffs.AquaticStar.Description
 			}
 
 			AqueousHunterDroneBuff: {
 				DisplayName: Aqueous Hunter Drone Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AqueousHunterDroneBuff.Description
+				Description: Mods.CalamityMod.Buffs.AqueousHunterDroneBuff.Description
 			}
 
 			AstralProbeBuff: {
 				DisplayName: Astral Probe Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.AstralProbeBuff.Description
+				Description: Mods.CalamityMod.Buffs.AstralProbeBuff.Description
 			}
 
 			BabyBloodCrawlerBuff: {
 				DisplayName: Baby Blood Crawler Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BabyBloodCrawlerBuff.Description
+				Description: Mods.CalamityMod.Buffs.BabyBloodCrawlerBuff.Description
 			}
 
 			BabySlimeGodBuff: {
 				DisplayName: Baby Slime God Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BabySlimeGodBuff.Description
+				Description: Mods.CalamityMod.Buffs.BabySlimeGodBuff.Description
 			}
 
 			BabyStormlionBuff: {
 				DisplayName: Baby Stormlion Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BabyStormlionBuff.Description
+				Description: Mods.CalamityMod.Buffs.BabyStormlionBuff.Description
 			}
 
 			BelladonnaSpiritBuff: {
 				DisplayName: Belladonna Spirit Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BelladonnaSpiritBuff.Description
+				Description: Mods.CalamityMod.Buffs.BelladonnaSpiritBuff.Description
 			}
 
 			BlackHawkBuff: {
 				DisplayName: Black Hawk Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BlackHawkBuff.Description
+				Description: Mods.CalamityMod.Buffs.BlackHawkBuff.Description
 			}
 
 			BrimseekerBuff: {
 				DisplayName: Brimseeker Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BrimseekerBuff.Description
+				Description: Mods.CalamityMod.Buffs.BrimseekerBuff.Description
 			}
 
 			BrimstoneElemental: {
 				DisplayName: Brimstone Elemental
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BrimstoneElemental.Description
+				Description: Mods.CalamityMod.Buffs.BrimstoneElemental.Description
 			}
 
 			BrittleStar: {
 				DisplayName: Brittle Star
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.BrittleStar.Description
+				Description: Mods.CalamityMod.Buffs.BrittleStar.Description
 			}
 
 			CalamarisLamentBuff: {
 				DisplayName: Calamaris Lament Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CalamarisLamentBuff.Description
+				Description: Mods.CalamityMod.Buffs.CalamarisLamentBuff.Description
 			}
 
 			CausticStaffBuff: {
 				DisplayName: Caustic Staff Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CausticStaffBuff.Description
+				Description: Mods.CalamityMod.Buffs.CausticStaffBuff.Description
 			}
 
 			CinderBlossomBuff: {
 				DisplayName: Cinder Blossom Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CinderBlossomBuff.Description
+				Description: Mods.CalamityMod.Buffs.CinderBlossomBuff.Description
 			}
 
 			CloudElemental: {
 				DisplayName: Cloud Elemental
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CloudElemental.Description
+				Description: Mods.CalamityMod.Buffs.CloudElemental.Description
 			}
 
 			Corroslime: {
 				DisplayName: Corroslime
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Corroslime.Description
+				Description: Mods.CalamityMod.Buffs.Corroslime.Description
 			}
 
 			CorvidHarbringerBuff: {
 				DisplayName: Corvid Harbringer Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CorvidHarbringerBuff.Description
+				Description: Mods.CalamityMod.Buffs.CorvidHarbringerBuff.Description
 			}
 
 			CosmicEnergy: {
 				DisplayName: Cosmic Energy
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CosmicEnergy.Description
+				Description: Mods.CalamityMod.Buffs.CosmicEnergy.Description
 			}
 
 			CosmicViperEngineBuff: {
 				DisplayName: Cosmic Viper Engine Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CosmicViperEngineBuff.Description
+				Description: Mods.CalamityMod.Buffs.CosmicViperEngineBuff.Description
 			}
 
 			CosmilampBuff: {
 				DisplayName: Cosmilamp Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CosmilampBuff.Description
+				Description: Mods.CalamityMod.Buffs.CosmilampBuff.Description
 			}
 
 			Crimslime: {
 				DisplayName: Crimslime
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Crimslime.Description
+				Description: Mods.CalamityMod.Buffs.Crimslime.Description
 			}
 
 			DaedalusCrystalBuff: {
 				DisplayName: Daedalus Crystal Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.DaedalusCrystalBuff.Description
+				Description: Mods.CalamityMod.Buffs.DaedalusCrystalBuff.Description
 			}
 
 			DaedalusGolemBuff: {
 				DisplayName: Daedalus Golem Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.DaedalusGolemBuff.Description
+				Description: Mods.CalamityMod.Buffs.DaedalusGolemBuff.Description
 			}
 
 			DankCreeperBuff: {
 				DisplayName: Dank Creeper Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.DankCreeperBuff.Description
+				Description: Mods.CalamityMod.Buffs.DankCreeperBuff.Description
 			}
 
 			DazzlingStabberBuff: {
 				DisplayName: Dazzling Stabber Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.DazzlingStabberBuff.Description
+				Description: Mods.CalamityMod.Buffs.DazzlingStabberBuff.Description
 			}
 
 			DemonshadeSetDevilBuff: {
 				DisplayName: Demonshade Set Devil Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.DemonshadeSetDevilBuff.Description
+				Description: Mods.CalamityMod.Buffs.DemonshadeSetDevilBuff.Description
 			}
 
 			EnchantedKnifeStaffBuff: {
 				DisplayName: Enchanted Knife Staff Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.EnchantedKnifeStaffBuff.Description
+				Description: Mods.CalamityMod.Buffs.EnchantedKnifeStaffBuff.Description
 			}
 
 			EndoCooperBuff: {
 				DisplayName: Endo Cooper Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.EndoCooperBuff.Description
+				Description: Mods.CalamityMod.Buffs.EndoCooperBuff.Description
 			}
 
 			EndoHydraBuff: {
 				DisplayName: Endo Hydra Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.EndoHydraBuff.Description
+				Description: Mods.CalamityMod.Buffs.EndoHydraBuff.Description
 			}
 
 			EntropysVigilBuff: {
 				DisplayName: Entropys Vigil Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.EntropysVigilBuff.Description
+				Description: Mods.CalamityMod.Buffs.EntropysVigilBuff.Description
 			}
 
 			ExoskeletonCannons: {
 				DisplayName: Exoskeleton Cannons
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ExoskeletonCannons.Description
+				Description: Mods.CalamityMod.Buffs.ExoskeletonCannons.Description
 			}
 
 			EyeOfNightBuff: {
 				DisplayName: Eye Of Night Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.EyeOfNightBuff.Description
+				Description: Mods.CalamityMod.Buffs.EyeOfNightBuff.Description
 			}
 
 			FieryDraconidBuff: {
 				DisplayName: Fiery Draconid Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FieryDraconidBuff.Description
+				Description: Mods.CalamityMod.Buffs.FieryDraconidBuff.Description
 			}
 
 			FleshBallBuff: {
 				DisplayName: Flesh Ball Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FleshBallBuff.Description
+				Description: Mods.CalamityMod.Buffs.FleshBallBuff.Description
 			}
 
 			FlowersOfMortalityBuff: {
 				DisplayName: Flowers Of Mortality Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FlowersOfMortalityBuff.Description
+				Description: Mods.CalamityMod.Buffs.FlowersOfMortalityBuff.Description
 			}
 
 			FrostBlossomBuff: {
 				DisplayName: Frost Blossom Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FrostBlossomBuff.Description
+				Description: Mods.CalamityMod.Buffs.FrostBlossomBuff.Description
 			}
 
 			FungalClumpBuff: {
 				DisplayName: Fungal Clump Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.FungalClumpBuff.Description
+				Description: Mods.CalamityMod.Buffs.FungalClumpBuff.Description
 			}
 
 			GammaHydraBuff: {
 				DisplayName: Gamma Hydra Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GammaHydraBuff.Description
+				Description: Mods.CalamityMod.Buffs.GammaHydraBuff.Description
 			}
 
 			GastricAberrationBuff: {
 				DisplayName: Gastric Aberration Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GastricAberrationBuff.Description
+				Description: Mods.CalamityMod.Buffs.GastricAberrationBuff.Description
 			}
 
 			GlacialEmbraceBuff: {
 				DisplayName: Glacial Embrace Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.GlacialEmbraceBuff.Description
+				Description: Mods.CalamityMod.Buffs.GlacialEmbraceBuff.Description
 			}
 
 			HauntedDishesBuff: {
 				DisplayName: Haunted Dishes Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HauntedDishesBuff.Description
+				Description: Mods.CalamityMod.Buffs.HauntedDishesBuff.Description
 			}
 
 			HermitCrab: {
 				DisplayName: Hermit Crab
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HermitCrab.Description
+				Description: Mods.CalamityMod.Buffs.HermitCrab.Description
 			}
 
 			Herring: {
 				DisplayName: Herring
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Herring.Description
+				Description: Mods.CalamityMod.Buffs.Herring.Description
 			}
 
 			HotE: {
 				DisplayName: Hot E
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HotE.Description
+				Description: Mods.CalamityMod.Buffs.HotE.Description
 			}
 
 			HowlTrio: {
 				DisplayName: Howl Trio
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HowlTrio.Description
+				Description: Mods.CalamityMod.Buffs.HowlTrio.Description
 			}
 
 			HydrothermicVentBuff: {
 				DisplayName: Hydrothermic Vent Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.HydrothermicVentBuff.Description
+				Description: Mods.CalamityMod.Buffs.HydrothermicVentBuff.Description
 			}
 
 			IceClasperBuff: {
 				DisplayName: Ice Clasper Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.IceClasperBuff.Description
+				Description: Mods.CalamityMod.Buffs.IceClasperBuff.Description
 			}
 
 			IgneousExaltationBuff: {
 				DisplayName: Igneous Exaltation Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.IgneousExaltationBuff.Description
+				Description: Mods.CalamityMod.Buffs.IgneousExaltationBuff.Description
 			}
 
 			KalandraMirrorBuff: {
 				DisplayName: Kalandra Mirror Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.KalandraMirrorBuff.Description
+				Description: Mods.CalamityMod.Buffs.KalandraMirrorBuff.Description
 			}
 
 			KingofConstellationsBuff: {
 				DisplayName: Kingof Constellations Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.KingofConstellationsBuff.Description
+				Description: Mods.CalamityMod.Buffs.KingofConstellationsBuff.Description
 			}
 
 			LegionofCelestiaBuff: {
 				DisplayName: Legionof Celestia Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.LegionofCelestiaBuff.Description
+				Description: Mods.CalamityMod.Buffs.LegionofCelestiaBuff.Description
 			}
 
 			LiliesOfFinalityBuff: {
 				DisplayName: Lilies Of Finality Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.LiliesOfFinalityBuff.Description
+				Description: Mods.CalamityMod.Buffs.LiliesOfFinalityBuff.Description
 			}
 
 			LilPlaguebringerBuff: {
 				DisplayName: Lil Plaguebringer Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.LilPlaguebringerBuff.Description
+				Description: Mods.CalamityMod.Buffs.LilPlaguebringerBuff.Description
 			}
 
 			MagicHatBuff: {
 				DisplayName: Magic Hat Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MagicHatBuff.Description
+				Description: Mods.CalamityMod.Buffs.MagicHatBuff.Description
 			}
 
 			MidnightSunBuff: {
 				DisplayName: Midnight Sun Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MidnightSunBuff.Description
+				Description: Mods.CalamityMod.Buffs.MidnightSunBuff.Description
 			}
 
 			MiniatureEyeofCthulhu: {
 				DisplayName: Miniature Eyeof Cthulhu
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MiniatureEyeofCthulhu.Description
+				Description: Mods.CalamityMod.Buffs.MiniatureEyeofCthulhu.Description
 			}
 
 			MiniPlaguebringerBuff: {
 				DisplayName: Mini Plaguebringer Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MiniPlaguebringerBuff.Description
+				Description: Mods.CalamityMod.Buffs.MiniPlaguebringerBuff.Description
 			}
 
 			MoonFistBuff: {
 				DisplayName: Moon Fist Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MoonFistBuff.Description
+				Description: Mods.CalamityMod.Buffs.MoonFistBuff.Description
 			}
 
 			MountedScannerBuff: {
 				DisplayName: Mounted Scanner Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MountedScannerBuff.Description
+				Description: Mods.CalamityMod.Buffs.MountedScannerBuff.Description
 			}
 
 			MutatedTruffleBuff: {
 				DisplayName: Mutated Truffle Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.MutatedTruffleBuff.Description
+				Description: Mods.CalamityMod.Buffs.MutatedTruffleBuff.Description
 			}
 
 			PerditionBuff: {
 				DisplayName: Perdition Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PerditionBuff.Description
+				Description: Mods.CalamityMod.Buffs.PerditionBuff.Description
 			}
 
 			PlantationStaffBuff: {
 				DisplayName: Plantation Staff Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PlantationStaffBuff.Description
+				Description: Mods.CalamityMod.Buffs.PlantationStaffBuff.Description
 			}
 
 			PoleWarperBuff: {
 				DisplayName: Pole Warper Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PoleWarperBuff.Description
+				Description: Mods.CalamityMod.Buffs.PoleWarperBuff.Description
 			}
 
 			ProfanedSoulGuardians: {
 				DisplayName: Profaned Soul Guardians
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ProfanedSoulGuardians.Description
+				Description: Mods.CalamityMod.Buffs.ProfanedSoulGuardians.Description
 			}
 
 			PuffWarriorBuff: {
 				DisplayName: Puff Warrior Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.PuffWarriorBuff.Description
+				Description: Mods.CalamityMod.Buffs.PuffWarriorBuff.Description
 			}
 
 			RareSandElemental: {
 				DisplayName: Rare Sand Elemental
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.RareSandElemental.Description
+				Description: Mods.CalamityMod.Buffs.RareSandElemental.Description
 			}
 
 			ResurrectionButterflyBuff: {
 				DisplayName: Resurrection Butterfly Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ResurrectionButterflyBuff.Description
+				Description: Mods.CalamityMod.Buffs.ResurrectionButterflyBuff.Description
 			}
 
 			SageSpiritBuff: {
 				DisplayName: Sage Spirit Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SageSpiritBuff.Description
+				Description: Mods.CalamityMod.Buffs.SageSpiritBuff.Description
 			}
 
 			SandElemental: {
 				DisplayName: Sand Elemental
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SandElemental.Description
+				Description: Mods.CalamityMod.Buffs.SandElemental.Description
 			}
 
 			Sandnado: {
 				DisplayName: Sandnado
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.Sandnado.Description
+				Description: Mods.CalamityMod.Buffs.Sandnado.Description
 			}
 
 			SarosPossessionBuff: {
 				DisplayName: Saros Possession Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SarosPossessionBuff.Description
+				Description: Mods.CalamityMod.Buffs.SarosPossessionBuff.Description
 			}
 
 			SeaSnailBuff: {
 				DisplayName: Sea Snail Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SeaSnailBuff.Description
+				Description: Mods.CalamityMod.Buffs.SeaSnailBuff.Description
 			}
 
 			SepulcherMinionBuff: {
 				DisplayName: Sepulcher Minion Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SepulcherMinionBuff.Description
+				Description: Mods.CalamityMod.Buffs.SepulcherMinionBuff.Description
 			}
 
 			ShellfishBuff: {
 				DisplayName: Shellfish Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ShellfishBuff.Description
+				Description: Mods.CalamityMod.Buffs.ShellfishBuff.Description
 			}
 
 			SilvaCrystalBuff: {
 				DisplayName: Silva Crystal Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SilvaCrystalBuff.Description
+				Description: Mods.CalamityMod.Buffs.SilvaCrystalBuff.Description
 			}
 
 			SiriusBuff: {
 				DisplayName: Sirius Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SiriusBuff.Description
+				Description: Mods.CalamityMod.Buffs.SiriusBuff.Description
 			}
 
 			SkeletalDragonsBuff: {
 				DisplayName: Skeletal Dragons Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SkeletalDragonsBuff.Description
+				Description: Mods.CalamityMod.Buffs.SkeletalDragonsBuff.Description
 			}
 
 			SmallSkeletonBuff: {
 				DisplayName: Small Skeleton Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SmallSkeletonBuff.Description
+				Description: Mods.CalamityMod.Buffs.SmallSkeletonBuff.Description
 			}
 
 			SnakeEyesBuff: {
 				DisplayName: Snake Eyes Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SnakeEyesBuff.Description
+				Description: Mods.CalamityMod.Buffs.SnakeEyesBuff.Description
 			}
 
 			SolarGodSpiritBuff: {
 				DisplayName: Solar God Spirit Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SolarGodSpiritBuff.Description
+				Description: Mods.CalamityMod.Buffs.SolarGodSpiritBuff.Description
 			}
 
 			SolarSpirit: {
 				DisplayName: Solar Spirit
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SolarSpirit.Description
+				Description: Mods.CalamityMod.Buffs.SolarSpirit.Description
 			}
 
 			SoulSeekerBuff: {
 				DisplayName: Soul Seeker Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.SoulSeekerBuff.Description
+				Description: Mods.CalamityMod.Buffs.SoulSeekerBuff.Description
 			}
 
 			StellarTorusBuff: {
 				DisplayName: Stellar Torus Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.StellarTorusBuff.Description
+				Description: Mods.CalamityMod.Buffs.StellarTorusBuff.Description
 			}
 
 			TacticalPlagueEngineBuff: {
 				DisplayName: Tactical Plague Engine Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TacticalPlagueEngineBuff.Description
+				Description: Mods.CalamityMod.Buffs.TacticalPlagueEngineBuff.Description
 			}
 
 			TundraFlameBlossomsBuff: {
 				DisplayName: Tundra Flame Blossoms Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.TundraFlameBlossomsBuff.Description
+				Description: Mods.CalamityMod.Buffs.TundraFlameBlossomsBuff.Description
 			}
 
 			ValkyrieBuff: {
 				DisplayName: Valkyrie Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ValkyrieBuff.Description
+				Description: Mods.CalamityMod.Buffs.ValkyrieBuff.Description
 			}
 
 			VileFeederBuff: {
 				DisplayName: Vile Feeder Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.VileFeederBuff.Description
+				Description: Mods.CalamityMod.Buffs.VileFeederBuff.Description
 			}
 
 			ViridVanguardBuff: {
 				DisplayName: Virid Vanguard Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ViridVanguardBuff.Description
+				Description: Mods.CalamityMod.Buffs.ViridVanguardBuff.Description
 			}
 
 			ViriliBuff: {
 				DisplayName: Virili Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ViriliBuff.Description
+				Description: Mods.CalamityMod.Buffs.ViriliBuff.Description
 			}
 
 			VoidConcentrationBuff: {
 				DisplayName: Void Concentration Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.VoidConcentrationBuff.Description
+				Description: Mods.CalamityMod.Buffs.VoidConcentrationBuff.Description
 			}
 
 			VoidEaterMarionetteBuff: {
 				DisplayName: Void Eater Marionette Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.VoidEaterMarionetteBuff.Description
+				Description: Mods.CalamityMod.Buffs.VoidEaterMarionetteBuff.Description
 			}
 
 			WaterElemental: {
 				DisplayName: Water Elemental
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WaterElemental.Description
+				Description: Mods.CalamityMod.Buffs.WaterElemental.Description
 			}
 
 			CnidarianSummonTagBuff: {
 				DisplayName: Cnidarian Summon Tag Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.CnidarianSummonTagBuff.Description
+				Description: Mods.CalamityMod.Buffs.CnidarianSummonTagBuff.Description
 			}
 
 			ForbiddenStealthSummonTagBuff: {
 				DisplayName: Forbidden Stealth Summon Tag Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ForbiddenStealthSummonTagBuff.Description
+				Description: Mods.CalamityMod.Buffs.ForbiddenStealthSummonTagBuff.Description
 			}
 
 			ProfanedCrystalWhipBuff: {
 				DisplayName: Profaned Crystal Whip Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ProfanedCrystalWhipBuff.Description
+				Description: Mods.CalamityMod.Buffs.ProfanedCrystalWhipBuff.Description
 			}
 
 			ProfanedCrystalWhipDebuff: {
 				DisplayName: Profaned Crystal Whip Debuff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.ProfanedCrystalWhipDebuff.Description
+				Description: Mods.CalamityMod.Buffs.ProfanedCrystalWhipDebuff.Description
 			}
 
 			WitherBlossomsBuff: {
 				DisplayName: Wither Blossoms Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WitherBlossomsBuff.Description
+				Description: Mods.CalamityMod.Buffs.WitherBlossomsBuff.Description
 			}
 
 			WulfrumDroidBuff: {
 				DisplayName: Wulfrum Droid Buff
-				Description: Mods.CalamityModCustomPublicPrivateFork.Buffs.WulfrumDroidBuff.Description
+				Description: Mods.CalamityMod.Buffs.WulfrumDroidBuff.Description
 			}
 		}
 
@@ -16405,7 +16405,7 @@ Mods: {
 				MoonSigil.DisplayName: Moon Sigil
 				MycorootProj.DisplayName: Mycoroot Proj
 				MythrilKnifeProjectile.DisplayName: Mythril Knife Projectile
-				NanoblackLightspeedCarve.Standard: Mods.CalamityModCustomPublicPrivateFork.Projectiles.Rogue.NanoblackLightspeedCarve.Standard
+				NanoblackLightspeedCarve.Standard: Mods.CalamityMod.Projectiles.Rogue.NanoblackLightspeedCarve.Standard
 				NanoblackLightspeedCarveSlashVisual.DisplayName: Nanoblack Lightspeed Carve Slash Visual
 				NanoblackMain.DisplayName: Nanoblack Main
 				NanoblackPiercingStrike.DisplayName: Nanoblack Piercing Strike
@@ -17485,21 +17485,21 @@ Mods: {
 		}
 
 		Condition: {
-			HasFlareGun: Mods.CalamityModCustomPublicPrivateFork.Condition.HasFlareGun
-			LacewingBestiary: Mods.CalamityModCustomPublicPrivateFork.Condition.LacewingBestiary
+			HasFlareGun: Mods.CalamityMod.Condition.HasFlareGun
+			LacewingBestiary: Mods.CalamityMod.Condition.LacewingBestiary
 		}
 
 		Misc: {
-			Tier3ArsenalRecipeCondition: Mods.CalamityModCustomPublicPrivateFork.Misc.Tier3ArsenalRecipeCondition
-			Tier5ArsenalRecipeCondition: Mods.CalamityModCustomPublicPrivateFork.Misc.Tier5ArsenalRecipeCondition
-			Tier1ArsenalRecipeCondition: Mods.CalamityModCustomPublicPrivateFork.Misc.Tier1ArsenalRecipeCondition
-			UnderworldSchematicRecipeCondition: Mods.CalamityModCustomPublicPrivateFork.Misc.UnderworldSchematicRecipeCondition
-			IceSchematicRecipeCondition: Mods.CalamityModCustomPublicPrivateFork.Misc.IceSchematicRecipeCondition
-			JungleSchematicRecipeCondition: Mods.CalamityModCustomPublicPrivateFork.Misc.JungleSchematicRecipeCondition
-			PlanetoidSchematicRecipeCondition: Mods.CalamityModCustomPublicPrivateFork.Misc.PlanetoidSchematicRecipeCondition
-			SunkenSeaSchematicRecipeCondition: Mods.CalamityModCustomPublicPrivateFork.Misc.SunkenSeaSchematicRecipeCondition
-			Tier2ArsenalRecipeCondition: Mods.CalamityModCustomPublicPrivateFork.Misc.Tier2ArsenalRecipeCondition
-			Tier4ArsenalRecipeCondition: Mods.CalamityModCustomPublicPrivateFork.Misc.Tier4ArsenalRecipeCondition
+			Tier3ArsenalRecipeCondition: Mods.CalamityMod.Misc.Tier3ArsenalRecipeCondition
+			Tier5ArsenalRecipeCondition: Mods.CalamityMod.Misc.Tier5ArsenalRecipeCondition
+			Tier1ArsenalRecipeCondition: Mods.CalamityMod.Misc.Tier1ArsenalRecipeCondition
+			UnderworldSchematicRecipeCondition: Mods.CalamityMod.Misc.UnderworldSchematicRecipeCondition
+			IceSchematicRecipeCondition: Mods.CalamityMod.Misc.IceSchematicRecipeCondition
+			JungleSchematicRecipeCondition: Mods.CalamityMod.Misc.JungleSchematicRecipeCondition
+			PlanetoidSchematicRecipeCondition: Mods.CalamityMod.Misc.PlanetoidSchematicRecipeCondition
+			SunkenSeaSchematicRecipeCondition: Mods.CalamityMod.Misc.SunkenSeaSchematicRecipeCondition
+			Tier2ArsenalRecipeCondition: Mods.CalamityMod.Misc.Tier2ArsenalRecipeCondition
+			Tier4ArsenalRecipeCondition: Mods.CalamityMod.Misc.Tier4ArsenalRecipeCondition
 		}
 	}
 }

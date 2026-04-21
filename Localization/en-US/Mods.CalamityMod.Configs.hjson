@@ -108,7 +108,7 @@ CalamityClientConfig: {
 	}
 
 	InfiniteStealth: {
-		Label: "[i:CalamityModCustomPublicPrivateFork/UI/MiscTextures/StealthMeterBarFull] Infinite Stealth"
+		Label: "[i:CalamityMod/UI/MiscTextures/StealthMeterBarFull] Infinite Stealth"
 		Tooltip:
 			'''
 			Makes stealth infinite and never consumed, even without rogue armor.

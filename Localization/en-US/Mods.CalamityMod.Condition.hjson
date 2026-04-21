@@ -44,7 +44,7 @@ Drops: {
 	ProvidenceEnraged: Drops if Providence has been enraged
 	ProvidenceChallenge:
 		'''
-		Drops if Providence was defeated only with the [i:CalamityModCustomPublicPrivateFork/ProfanedSoulArtifact] Profaned Soul Artifact
+		Drops if Providence was defeated only with the [i:CalamityMod/ProfanedSoulArtifact] Profaned Soul Artifact
 		{$Bestiary_ItemDropConditions.IsExpert}
 		'''
 }
