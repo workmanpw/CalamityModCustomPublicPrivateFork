@@ -33,6 +33,13 @@ namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
         {
             CalamityGlobalNPC calamityGlobalNPC = NPC.Calamity();
 
+            // Validate target before proceeding
+            if (NPC.target < 0 || NPC.target >= Main.maxPlayers || !Main.player[NPC.target].active)
+                CalamityUtils.CalamityTargeting(NPC, CalamityTargetingParameters.BossDefaults);
+
+            if (NPC.target < 0 || NPC.target >= Main.maxPlayers || !Main.player[NPC.target].active)
+                return true;
+
             bool death = CalamityWorld.death || BossRushEvent.BossRushActive;
 
             // Percent life remaining
@@ -66,10 +73,6 @@ namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
 
             NPC.reflectsProjectiles = false;
 
-            // Get a target
-            if (NPC.target < 0 || NPC.target == Main.maxPlayers || Main.player[NPC.target].dead || !Main.player[NPC.target].active)
-                CalamityUtils.CalamityTargeting(NPC, CalamityTargetingParameters.BossDefaults);
-
             // Spawn hands
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {
@@ -81,7 +84,7 @@ namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
                 }
 
                 // Respawn hands
-                if (respawnHands && calamityGlobalNPC.newAI[0] == 0f && Vector2.Distance(Main.player[NPC.target].Center, NPC.Center) > 160f)
+                if (respawnHands && calamityGlobalNPC.newAI[0] == 0f && NPC.target >= 0 && NPC.target < Main.maxPlayers && Main.player[NPC.target].active && Vector2.Distance(Main.player[NPC.target].Center, NPC.Center) > 160f)
                 {
                     calamityGlobalNPC.newAI[0] = 1f;
                     SoundEngine.PlaySound(SoundID.ForceRoar with { Pitch = SoundID.ForceRoar.Pitch - 0.25f }, NPC.Center);
@@ -94,39 +97,51 @@ namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
                 void SpawnHands()
                 {
                     int skeletronHand = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y, NPCID.SkeletronHand, NPC.whoAmI);
-                    Main.npc[skeletronHand].ai[0] = death ? -1.3f : -1f;
-                    Main.npc[skeletronHand].ai[1] = NPC.whoAmI;
-                    Main.npc[skeletronHand].target = NPC.target;
-                    Main.npc[skeletronHand].netUpdate = true;
+                    if (skeletronHand >= 0 && skeletronHand < Main.maxNPCs)
+                    {
+                        Main.npc[skeletronHand].ai[0] = death ? -1.3f : -1f;
+                        Main.npc[skeletronHand].ai[1] = NPC.whoAmI;
+                        Main.npc[skeletronHand].target = NPC.target;
+                        Main.npc[skeletronHand].netUpdate = true;
+                    }
 
                     skeletronHand = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y, NPCID.SkeletronHand, NPC.whoAmI);
-                    Main.npc[skeletronHand].ai[0] = death ? 1.3f : 1f;
-                    Main.npc[skeletronHand].ai[1] = NPC.whoAmI;
-                    Main.npc[skeletronHand].ai[3] = 150f;
-                    Main.npc[skeletronHand].Calamity().newAI[2] = 150f;
-                    Main.npc[skeletronHand].target = NPC.target;
-                    Main.npc[skeletronHand].netUpdate = true;
+                    if (skeletronHand >= 0 && skeletronHand < Main.maxNPCs)
+                    {
+                        Main.npc[skeletronHand].ai[0] = death ? 1.3f : 1f;
+                        Main.npc[skeletronHand].ai[1] = NPC.whoAmI;
+                        Main.npc[skeletronHand].ai[3] = 150f;
+                        Main.npc[skeletronHand].Calamity().newAI[2] = 150f;
+                        Main.npc[skeletronHand].target = NPC.target;
+                        Main.npc[skeletronHand].netUpdate = true;
+                    }
 
                     // Spawn two additional hands with different attack timings
                     if (death)
                     {
                         skeletronHand = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y, NPCID.SkeletronHand, NPC.whoAmI);
-                        Main.npc[skeletronHand].ai[0] = -1.3f;
-                        Main.npc[skeletronHand].Calamity().newAI[0] = -1f;
-                        Main.npc[skeletronHand].ai[1] = NPC.whoAmI;
-                        Main.npc[skeletronHand].ai[3] = respawnHands ? -75f : 0f;
-                        Main.npc[skeletronHand].Calamity().newAI[2] = respawnHands ? -75f : 0f;
-                        Main.npc[skeletronHand].target = NPC.target;
-                        Main.npc[skeletronHand].netUpdate = true;
+                        if (skeletronHand >= 0 && skeletronHand < Main.maxNPCs)
+                        {
+                            Main.npc[skeletronHand].ai[0] = -1.3f;
+                            Main.npc[skeletronHand].Calamity().newAI[0] = -1f;
+                            Main.npc[skeletronHand].ai[1] = NPC.whoAmI;
+                            Main.npc[skeletronHand].ai[3] = respawnHands ? -75f : 0f;
+                            Main.npc[skeletronHand].Calamity().newAI[2] = respawnHands ? -75f : 0f;
+                            Main.npc[skeletronHand].target = NPC.target;
+                            Main.npc[skeletronHand].netUpdate = true;
+                        }
 
                         skeletronHand = NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.Center.Y, NPCID.SkeletronHand, NPC.whoAmI);
-                        Main.npc[skeletronHand].ai[0] = 1.3f;
-                        Main.npc[skeletronHand].Calamity().newAI[0] = -1f;
-                        Main.npc[skeletronHand].ai[1] = NPC.whoAmI;
-                        Main.npc[skeletronHand].ai[3] = respawnHands ? 75f : 150f;
-                        Main.npc[skeletronHand].Calamity().newAI[2] = respawnHands ? 75f : 150f;
-                        Main.npc[skeletronHand].target = NPC.target;
-                        Main.npc[skeletronHand].netUpdate = true;
+                        if (skeletronHand >= 0 && skeletronHand < Main.maxNPCs)
+                        {
+                            Main.npc[skeletronHand].ai[0] = 1.3f;
+                            Main.npc[skeletronHand].Calamity().newAI[0] = -1f;
+                            Main.npc[skeletronHand].ai[1] = NPC.whoAmI;
+                            Main.npc[skeletronHand].ai[3] = respawnHands ? 75f : 150f;
+                            Main.npc[skeletronHand].Calamity().newAI[2] = respawnHands ? 75f : 150f;
+                            Main.npc[skeletronHand].target = NPC.target;
+                            Main.npc[skeletronHand].netUpdate = true;
+                        }
                     }
                 }
             }
@@ -135,10 +150,10 @@ namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
             if (NPC.ai[1] != 3f)
             {
                 int despawnDistanceInTiles = 500;
-                if (Main.player[NPC.target].dead || Math.Abs(NPC.Center.X - Main.player[NPC.target].Center.X) / 16f > despawnDistanceInTiles)
+                if (NPC.target >= 0 && NPC.target < Main.maxPlayers && (Main.player[NPC.target].dead || Math.Abs(NPC.Center.X - Main.player[NPC.target].Center.X) / 16f > despawnDistanceInTiles))
                 {
                     CalamityUtils.CalamityTargeting(NPC, CalamityTargetingParameters.BossDefaults);
-                    if (Main.player[NPC.target].dead || Math.Abs(NPC.Center.X - Main.player[NPC.target].Center.X) / 16f > despawnDistanceInTiles)
+                    if (NPC.target >= 0 && NPC.target < Main.maxPlayers && (Main.player[NPC.target].dead || Math.Abs(NPC.Center.X - Main.player[NPC.target].Center.X) / 16f > despawnDistanceInTiles))
                         NPC.ai[1] = 3f;
                 }
                 else if (NPC.timeLeft < 1800)

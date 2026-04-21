@@ -99,12 +99,6 @@ CalamityClientConfig: {
 	}
 
 	StealthInvisibility: {
-		Label: "[i:LaserRuler] Stealth Invisibility"
-		Tooltip:
-			'''
-			Enables rendering afterimages for Calamity NPCs, projectiles, etc.
-			Disable to improve performance.
-			'''
 	}
 
 	InfiniteStealth: {
