@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class SummonAstralExplosion : ModProjectile, ILocalizedModType
     {

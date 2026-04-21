@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.LoreItems
+namespace CalamityMod.Items.LoreItems
 {
     [LegacyName("KnowledgeSkeletronPrime")]
     public class LoreSkeletronPrime : LoreItem

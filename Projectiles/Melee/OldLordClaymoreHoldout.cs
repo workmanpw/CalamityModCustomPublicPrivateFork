@@ -1,9 +1,9 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     [PierceResistException]
     public class OldLordClaymoreHoldout : BaseCustomUseStyleProjectile, ILocalizedModType
@@ -21,7 +21,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override int AssignedItemID => ModContent.ItemType<OldLordClaymore>();
 
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<OldLordClaymore>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/OldLordClaymore";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/OldLordClaymore";
         public float hitboxMult = 1.3f;
         public override float HitboxOutset => 60;
 
@@ -140,9 +140,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
                     if (time >= (int)(timeMax * 0.4f) && playSwingSound)
                     {
-                        SoundStyle swing = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordSwing", 2);
+                        SoundStyle swing = new("CalamityMod/Sounds/Item/DemonSwordSwing", 2);
                         SoundEngine.PlaySound(swing with { Volume = 0.85f, Pitch = Main.rand.NextFloat(-0.4f, -0.5f) }, Projectile.Center);
-                        SoundStyle swing2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeavySwing");
+                        SoundStyle swing2 = new("CalamityMod/Sounds/Item/HeavySwing");
                         SoundEngine.PlaySound(swing2 with { Volume = 0.65f, Pitch = Main.rand.NextFloat(0.4f, 0.5f) }, Projectile.Center);
                         playSwingSound = false;
                     }
@@ -218,7 +218,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             if (Projectile.numHits == 0)
             {
                 Owner.SetScreenshake(5f);
-                SoundStyle swing = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordStrongImpact");
+                SoundStyle swing = new("CalamityMod/Sounds/Item/DemonSwordStrongImpact");
                 SoundEngine.PlaySound(swing with { Volume = 0.95f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f) }, Projectile.Center);
             }
         }
@@ -235,8 +235,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             if ((useAnim > 0 || DrawUnconditionally) && Owner.ItemAnimationActive)
             {
                 Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
-                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/OldLordClaymoreGlow");
-                Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmearLarge");
+                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/OldLordClaymoreGlow");
+                Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmearLarge");
 
                 float r = FlipAsSword ? MathHelper.ToRadians(90) : 0f;
 

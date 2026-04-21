@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Skies;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Items.Potions;
+using CalamityMod.NPCs.ExoMechs.Ares;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Skies;
+using CalamityMod.Sounds;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -20,9 +20,9 @@ using Terraria.GameContent.Bestiary;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-using ArtemisBoss = CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis.Artemis;
+using ArtemisBoss = CalamityMod.NPCs.ExoMechs.Artemis.Artemis;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo
+namespace CalamityMod.NPCs.ExoMechs.Apollo
 {
     public class Apollo : ModNPC
     {
@@ -33,8 +33,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo
 
         public override void Load()
         {
-            string phase1IconPath = "CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Apollo/ApolloHead";
-            string phase2IconPath = "CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Apollo/ApolloPhase2Head";
+            string phase1IconPath = "CalamityMod/NPCs/ExoMechs/Apollo/ApolloHead";
+            string phase2IconPath = "CalamityMod/NPCs/ExoMechs/Apollo/ApolloPhase2Head";
             
             phase1IconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(phase1IconPath, -1);
             phase2IconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(phase2IconPath, -1);
@@ -121,7 +121,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo
 
         public static string NameToDisplay = "XS-03 Apollo";
 
-        public static readonly SoundStyle MissileLaunchSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ApolloMissileLaunch") { Volume = 1.3f };
+        public static readonly SoundStyle MissileLaunchSound = new("CalamityMod/Sounds/Custom/ExoMechs/ApolloMissileLaunch") { Volume = 1.3f };
 
         public override void SetStaticDefaults()
         {
@@ -176,7 +176,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] 
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Apollo")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Apollo")
             });
         }
 
@@ -1522,7 +1522,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo
         public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
         {
             // Prepare the flame trail shader with its map texture.
-            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
+            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
 
             int numAfterimages = ChargeComboFlash > 0f ? 0 : 5;
             Texture2D texture = TextureAssets.Npc[Type].Value;

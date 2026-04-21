@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
-using CalamityModCustomPublicPrivateFork.Items.Tools.SpawnBlocker;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Schematics;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss.Stalactite;
-using CalamityModCustomPublicPrivateFork.Walls;
-using CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Placeables.Furniture;
+using CalamityMod.Items.Tools.SpawnBlocker;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Schematics;
+using CalamityMod.Tiles.Abyss;
+using CalamityMod.Tiles.Abyss.AbyssAmbient;
+using CalamityMod.Tiles.Abyss.Stalactite;
+using CalamityMod.Walls;
+using CalamityMod.Walls.UnsafeWalls;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.RGB;
@@ -18,7 +18,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.World
+namespace CalamityMod.World
 {
     public class SulphurousSea
     {

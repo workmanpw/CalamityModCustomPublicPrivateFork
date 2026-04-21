@@ -1,13 +1,13 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityMod.CalPlayer;
+using CalamityMod.Enums;
+using CalamityMod.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles;
+namespace CalamityMod.Projectiles;
 
 internal static class CommonProjectileAI
 {

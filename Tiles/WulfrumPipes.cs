@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Items.Tools;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles
+namespace CalamityMod.Tiles
 {
     public class WulfrumPipes : ModTile, ISpecialTempTileDraw
     {

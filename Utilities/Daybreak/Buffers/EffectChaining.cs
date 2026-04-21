@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.Graphics.Shaders;
 
-namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
+namespace CalamityMod.Utilities.Daybreak.Buffers;
 
 /// <summary>
 ///     An entry in an effect chain which an arbitrary function to apply a

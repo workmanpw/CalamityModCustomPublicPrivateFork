@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone
+namespace CalamityMod.Items.Placeables.FurnitureNavystone
 {
     public class NavystoneSink : ModItem, ILocalizedModType
     {

@@ -9,9 +9,9 @@ using Terraria.DataStructures;
 using Terraria.GameContent.Events;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Items.Weapons.Summon.HarvestStaff;
+using static CalamityMod.Items.Weapons.Summon.HarvestStaff;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class HarvestStaffMinion : ModProjectile, ILocalizedModType
     {
@@ -154,19 +154,19 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             set => Projectile.spriteDirection = Projectile.direction = value;
         }
 
-        public static SoundStyle GrowSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PumpkinEmerge", 3);
+        public static SoundStyle GrowSound = new("CalamityMod/Sounds/Custom/PumpkinEmerge", 3);
 
-        public static SoundStyle IdleSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PumpkinIdle", 4);
+        public static SoundStyle IdleSound = new("CalamityMod/Sounds/Custom/PumpkinIdle", 4);
 
-        public static SoundStyle IdleRareSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PumpkinRareIdle") { Volume = 0.2f };
+        public static SoundStyle IdleRareSound = new("CalamityMod/Sounds/Custom/PumpkinRareIdle") { Volume = 0.2f };
 
-        public static SoundStyle ScreamSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PumpkinScream", 2) { Volume = 0.5f };
+        public static SoundStyle ScreamSound = new("CalamityMod/Sounds/Custom/PumpkinScream", 2) { Volume = 0.5f };
 
-        public static SoundStyle JumpSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PumpkinJump");
+        public static SoundStyle JumpSound = new("CalamityMod/Sounds/Custom/PumpkinJump");
 
-        public static SoundStyle BoomSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PumpkinExplode", 2) { Volume = 0.6f };
+        public static SoundStyle BoomSound = new("CalamityMod/Sounds/Custom/PumpkinExplode", 2) { Volume = 0.6f };
 
-        public static SoundStyle BoomSoundGFB = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PumpkinExplodeGFB", 2);
+        public static SoundStyle BoomSoundGFB = new("CalamityMod/Sounds/Custom/PumpkinExplodeGFB", 2);
 
         /// <summary>
         /// The owner of this minion.

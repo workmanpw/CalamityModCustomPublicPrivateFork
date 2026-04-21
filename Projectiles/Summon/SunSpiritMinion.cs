@@ -1,7 +1,7 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.CalPlayer;
+using CalamityMod.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class SunSpiritMinion : ModProjectile, ILocalizedModType
     {
@@ -130,7 +130,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
         public override bool PreDraw(ref Color lightColor)
         {
             var spTex = TextureAssets.Projectile[Type].Value;
-            var ciTex = CalamityUtils.GetTextureEfficient(ref circle, "CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleOpenCircleButBigger").Value;
+            var ciTex = CalamityUtils.GetTextureEfficient(ref circle, "CalamityMod/ExtraTextures/GreyscaleOpenCircleButBigger").Value;
 
             Main.spriteBatch.Draw(spTex, Projectile.Center - Main.screenPosition, null, Color.White, Main.GlobalTimeWrappedHourly, spTex.Size() * 0.5f, 0.75f, SpriteEffects.None, 0);
 

@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
+using CalamityMod.Enums;
+using CalamityMod.NPCs.SupremeCalamitas;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
+namespace CalamityMod.Graphics.Metaballs
 {
     public class ScalArenaMetaball : Metaball
     {
@@ -73,8 +73,8 @@ namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
             if (Main.dedServ)
                 return;
 
-            MainLayer = ModContent.Request<Texture2D>($"CalamityModCustomPublicPrivateFork/Graphics/Metaballs/ScalArenaLayerSmoke", AssetRequestMode.ImmediateLoad);
-            WavyLineLayer = ModContent.Request<Texture2D>($"CalamityModCustomPublicPrivateFork/Graphics/Metaballs/ScalArenaLayerWave", AssetRequestMode.ImmediateLoad).Value;
+            MainLayer = ModContent.Request<Texture2D>($"CalamityMod/Graphics/Metaballs/ScalArenaLayerSmoke", AssetRequestMode.ImmediateLoad);
+            WavyLineLayer = ModContent.Request<Texture2D>($"CalamityMod/Graphics/Metaballs/ScalArenaLayerWave", AssetRequestMode.ImmediateLoad).Value;
 
         }
         public override GeneralDrawLayer DrawLayer => GeneralDrawLayer.BeforeNPCs;
@@ -128,7 +128,7 @@ namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
         }
         public override void DrawInstances()
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicCircle").Value;
 
             foreach (Particle particle in Particles)
             {

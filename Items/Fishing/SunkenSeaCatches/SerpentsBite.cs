@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Projectiles.Typeless;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches
+namespace CalamityMod.Items.Fishing.SunkenSeaCatches
 {
     public class SerpentsBite : ModItem, ILocalizedModType
     {

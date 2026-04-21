@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.DataStructures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
+namespace CalamityMod.Projectiles.Turret
 {
     public class IceExplosion : ModProjectile, IAdditiveDrawer, ILocalizedModType
     {
@@ -14,7 +14,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
         public bool ableToHit = true;
         public float randomRotation1 = Main.rand.NextFloat(0f, MathHelper.TwoPi);
         public float randomRotation2 = Main.rand.NextFloat(0f, MathHelper.TwoPi);
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/MinionPlasmaGas";
+        public override string Texture => "CalamityMod/Projectiles/Summon/SmallAresArms/MinionPlasmaGas";
         public override void SetDefaults()
         {
             Projectile.width = Projectile.height = 184;

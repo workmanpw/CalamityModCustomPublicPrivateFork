@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
+using CalamityMod.Enums;
+using CalamityMod.Systems.Graphic;
+using CalamityMod.Utilities.Daybreak;
+using CalamityMod.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Renderers
+namespace CalamityMod.Graphics.Renderers
 {
     public class RendererManager : ModSystem
     {

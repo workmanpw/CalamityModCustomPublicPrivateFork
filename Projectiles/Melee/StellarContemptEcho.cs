@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,13 +8,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class StellarContemptEcho : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public static readonly SoundStyle SlamHamSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/StellarContemptImpact") { Volume = 0.6f };
-        public static readonly SoundStyle Kunk = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TF2PanHit") { Volume = 1.1f };
+        public static readonly SoundStyle SlamHamSound = new("CalamityMod/Sounds/Item/StellarContemptImpact") { Volume = 0.6f };
+        public static readonly SoundStyle Kunk = new("CalamityMod/Sounds/Item/TF2PanHit") { Volume = 1.1f };
         public float rotatehammer = 35f;
         public int ColorAlpha = 225;
         public float speed = 0f;
@@ -140,7 +140,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 Vector2 velOffset = new Vector2(40.8f, 10.5f).RotatedBy(rot);
                 if (i % 2 == 0)
                 {
-                    Particle orb = new CustomSpark(Projectile.Center + offset, velOffset * intensity * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/Sparkle", false, (int)(40 * intensity), intensity, Main.rand.NextBool(3) ? Color.PaleTurquoise : Color.Turquoise, new Vector2(1f, 2f), true, true);
+                    Particle orb = new CustomSpark(Projectile.Center + offset, velOffset * intensity * 0.7f, "CalamityMod/Particles/Sparkle", false, (int)(40 * intensity), intensity, Main.rand.NextBool(3) ? Color.PaleTurquoise : Color.Turquoise, new Vector2(1f, 2f), true, true);
                     GeneralParticleHandler.SpawnParticle(orb);
                 }
                 else
@@ -176,9 +176,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             Particle pulse3 = new GlowSparkParticle(Projectile.Center + Projectile.velocity, Projectile.velocity * 2, false, 12, 0.17f, Color.Turquoise, new Vector2(2.5f, 0.7f), true, true, 0.85f);
             GeneralParticleHandler.SpawnParticle(pulse3);
 
-            Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Turquoise, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(0.7f, 1), Projectile.velocity.ToRotation(), 0f, 3f, 25);
+            Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Turquoise, "CalamityMod/Particles/BloomRing", new Vector2(0.7f, 1), Projectile.velocity.ToRotation(), 0f, 3f, 25);
             GeneralParticleHandler.SpawnParticle(bolt2);
-            Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.PaleTurquoise, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(0.4f, 1), Projectile.velocity.ToRotation(), 0f, 4f, 25);
+            Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.PaleTurquoise, "CalamityMod/Particles/BloomRing", new Vector2(0.4f, 1), Projectile.velocity.ToRotation(), 0f, 4f, 25);
             GeneralParticleHandler.SpawnParticle(bolt3);
 
             Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity * 0f, ModContent.ProjectileType<StellarContemptBlast>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner, 0f);

@@ -4,7 +4,7 @@ using Terraria.GameContent.Generation;
 using Terraria.ID;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.World.Planets
+namespace CalamityMod.World.Planets
 {
     public class MudPlanet : Planetoid
     {

@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Buffs.Mounts;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Buffs.Mounts;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,7 +12,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Mounts
+namespace CalamityMod.Items.Mounts
 {
     public class ExoTank : ModMount
     {
@@ -24,7 +24,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Mounts
         public static int MissileAttackRate = 4;
         public static int MissileLauncherFrameCount = 8;
         public static int MissileReuseDelay = 28; // Total use time = AttackRate * FrameCount + ReuseDelay (AttackRate being the "use animation" for the clockwork weapon)
-        public static readonly SoundStyle MissileLaunchSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ArtemisApolloDash") { Volume = 0.5f };
+        public static readonly SoundStyle MissileLaunchSound = new("CalamityMod/Sounds/Custom/ExoMechs/ArtemisApolloDash") { Volume = 0.5f };
 
         public static int MinigunDamage = 400;
         public static int MinigunAttackRate = 4;
@@ -99,11 +99,11 @@ namespace CalamityModCustomPublicPrivateFork.Items.Mounts
             if (!Main.dedServ)
             {
                 // back (back layer) -> backExtra (gun) -> front (launcher) -> frontExtra (front layer)
-                MountData.backTextureExtra = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Mounts/ExoTank_BackGun");
-                MountData.backTextureExtraGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Mounts/ExoTank_BackGunGlow");
-                MountData.frontTextureGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Mounts/ExoTank_FrontGlow");
-                MountData.frontTextureExtra = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Mounts/ExoTank_FrontLayer");
-                MountData.frontTextureExtraGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Mounts/ExoTank_FrontLayerGlow");
+                MountData.backTextureExtra = ModContent.Request<Texture2D>("CalamityMod/Items/Mounts/ExoTank_BackGun");
+                MountData.backTextureExtraGlow = ModContent.Request<Texture2D>("CalamityMod/Items/Mounts/ExoTank_BackGunGlow");
+                MountData.frontTextureGlow = ModContent.Request<Texture2D>("CalamityMod/Items/Mounts/ExoTank_FrontGlow");
+                MountData.frontTextureExtra = ModContent.Request<Texture2D>("CalamityMod/Items/Mounts/ExoTank_FrontLayer");
+                MountData.frontTextureExtraGlow = ModContent.Request<Texture2D>("CalamityMod/Items/Mounts/ExoTank_FrontLayerGlow");
                 MountData.textureWidth = MountData.backTexture.Width();
                 MountData.textureHeight = MountData.backTexture.Height();
             }

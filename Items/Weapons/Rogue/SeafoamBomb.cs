@@ -1,14 +1,14 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
+namespace CalamityMod.Items.Weapons.Rogue
 {
     public class SeafoamBomb : RogueWeapon
     {

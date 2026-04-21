@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityMod.Items.Placeables.SunkenSea;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent;
@@ -6,11 +6,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
+namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 {
     public class BrainCoralEcho : ModTile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/BrainCoral";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/BrainCoral";
 
         public override void SetStaticDefaults()
         {

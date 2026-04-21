@@ -1,22 +1,22 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     // Photoviscerator left click side projectile (waving light)
     public class ExoLight : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public Vector2 InitialCenter;
         public Vector2 Destination;
@@ -72,7 +72,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
             if (oldPos != Vector2.Zero)
             {
-                Particle beam3 = new CustomSpark(Projectile.Center, (oldPos - Projectile.Center).SafeNormalize(Vector2.UnitX), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 13, 0.2f, sparkColor, new Vector2(1f, 1), true, true, 0, false, false, 0.3f);
+                Particle beam3 = new CustomSpark(Projectile.Center, (oldPos - Projectile.Center).SafeNormalize(Vector2.UnitX), "CalamityMod/Particles/SmallBloom", false, 13, 0.2f, sparkColor, new Vector2(1f, 1), true, true, 0, false, false, 0.3f);
                 GeneralParticleHandler.SpawnParticle(beam3);
             }
             oldPos = Projectile.Center;

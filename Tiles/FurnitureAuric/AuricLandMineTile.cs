@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric
+namespace CalamityMod.Tiles.FurnitureAuric
 {
     public class AuricLandMineTile : ModTile
     {
@@ -34,7 +34,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric
         public override void HitSwitch(int i, int j)
         {
             Vector2 tileCenter = new Vector2(i, j) * 16f + Vector2.One * 8f;
-            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire") with { Pitch = 0.8f }, tileCenter);
+            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/DudFire") with { Pitch = 0.8f }, tileCenter);
             GenericSparkle sparkle = new(tileCenter, Vector2.Zero, Color.Goldenrod, Color.Gold, 2.5f, 9, Main.rand.NextFloat(-0.01f, 0.01f), 2.68f);
             GeneralParticleHandler.SpawnParticle(sparkle);
             WorldGen.KillTile(i, j, noItem: true);

@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood;
+using CalamityMod.Items.Placeables.FurnitureAcidwood;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAcidwood
+namespace CalamityMod.Tiles.FurnitureAcidwood
 {
     public class AcidwoodDresserTile : ModTile
     {

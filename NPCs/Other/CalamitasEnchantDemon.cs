@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
+using CalamityMod.Projectiles.Healing;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Other
+namespace CalamityMod.NPCs.Other
 {
     public class CalamitasEnchantDemon : ModNPC
     {

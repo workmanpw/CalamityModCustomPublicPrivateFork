@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityMod.DataStructures;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime
+namespace CalamityMod.Buffs.DamageOverTime
 {
     public class Shadowflame : ModBuff
     {

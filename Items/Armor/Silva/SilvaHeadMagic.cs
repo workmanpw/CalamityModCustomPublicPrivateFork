@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Items.Armor.Silva.SilvaArmor;
+using static CalamityMod.Items.Armor.Silva.SilvaArmor;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Silva
+namespace CalamityMod.Items.Armor.Silva
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("SilvaMaskedCap")]

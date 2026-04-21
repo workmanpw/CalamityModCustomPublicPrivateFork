@@ -6,7 +6,7 @@ using ReLogic.Threading;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     /// <summary>
     /// Utility Class for using 1D Grayscale Texture as gradient

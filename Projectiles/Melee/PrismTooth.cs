@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class PrismTooth : ModProjectile, ILocalizedModType
     {
@@ -141,7 +141,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             generalOffset += Projectile.rotation.ToRotationVector2() * -5f * (float)Math.Sin(Projectile.rotation);
             generalOffset *= Vector2.Zero;
             Main.spriteBatch.EnterShaderRegion();
-            GameShaders.Misc["CalamityMod:PrismaticStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
+            GameShaders.Misc["CalamityMod:PrismaticStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
 
             // Photon Ripper tracks 90 positions in oldPos.
             // Provide 80 points for smoothing, but only render 22

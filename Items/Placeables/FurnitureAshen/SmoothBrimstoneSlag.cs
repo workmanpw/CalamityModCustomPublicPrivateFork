@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityMod.Items.Placeables.Crags;
+using CalamityMod.Items.Placeables.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAshen
+namespace CalamityMod.Items.Placeables.FurnitureAshen
 {
     public class SmoothBrimstoneSlag : ModItem, ILocalizedModType
     {

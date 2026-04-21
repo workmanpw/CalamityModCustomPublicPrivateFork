@@ -6,7 +6,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Gores.WaterDroplet
+namespace CalamityMod.Gores.WaterDroplet
 {
     public abstract class LiquidDropletGore : ModGore
     {

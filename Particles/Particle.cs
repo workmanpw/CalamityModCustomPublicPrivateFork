@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityMod.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public abstract class Particle
     {

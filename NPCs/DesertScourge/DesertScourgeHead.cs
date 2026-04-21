@@ -1,24 +1,24 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs.AquaticScourge;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -29,7 +29,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.DesertScourge
+namespace CalamityMod.NPCs.DesertScourge
 {
     [AutoloadBossHead]
     [HasPierceResist]
@@ -60,10 +60,10 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DesertScourge
 
         private const int OpenMouthStopFrame = 4;
 
-        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/DesertScourgeHit", 3);
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/DesertScourgeDeath");
-        public static readonly SoundStyle RoarSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DesertScourge/DesertScourgeRoar");
-        public static readonly SoundStyle SandBlastSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DesertScourge/DesertScourgeSandBlast");
+        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/DesertScourgeHit", 3);
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/DesertScourgeDeath");
+        public static readonly SoundStyle RoarSound = new("CalamityMod/Sounds/Custom/DesertScourge/DesertScourgeRoar");
+        public static readonly SoundStyle SandBlastSound = new("CalamityMod/Sounds/Custom/DesertScourge/DesertScourgeSandBlast");
 
         public override void SetStaticDefaults()
         {
@@ -131,7 +131,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DesertScourge
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Desert,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.DesertScourge")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.DesertScourge")
             });
         }
 
@@ -934,9 +934,9 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DesertScourge
             // If Desert Scourge has not been killed yet, notify players that the Sunken Sea is open and Sandstorms can happen.
             if (!DownedBossSystem.downedDesertScourge)
             {
-                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.OpenSunkenSea";
+                string key = "Mods.CalamityMod.Status.Progression.OpenSunkenSea";
                 Color messageColor = Color.Aquamarine;
-                string key2 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.SandstormTrigger";
+                string key2 = "Mods.CalamityMod.Status.Progression.SandstormTrigger";
                 Color messageColor2 = Color.PaleGoldenrod;
 
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);

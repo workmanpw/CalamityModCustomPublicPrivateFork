@@ -4,12 +4,12 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class InfernalBlade2 : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/InfernalBlade";
+        public override string Texture => "CalamityMod/Projectiles/Magic/InfernalBlade";
 
         public override void SetDefaults()
         {

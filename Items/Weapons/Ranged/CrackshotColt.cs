@@ -1,13 +1,13 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class CrackshotColt : ModItem, ILocalizedModType
     {

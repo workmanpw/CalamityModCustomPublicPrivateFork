@@ -4,7 +4,7 @@ using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath
+namespace CalamityMod.NPCs.PlaguebringerGoliath
 {
     public class PbGScreenShaderData : ScreenShaderData
     {

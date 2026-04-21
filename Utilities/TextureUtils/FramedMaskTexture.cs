@@ -6,7 +6,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public sealed class FramedMaskTexture : IDeferredLoadTexture
     {

@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.MainMenu
+namespace CalamityMod.MainMenu
 {
     public class CalamityMainMenu_Classic : ModMenu
     {
@@ -42,9 +42,9 @@ namespace CalamityModCustomPublicPrivateFork.MainMenu
         public float remixLogoRotation = 0f;
         public override string DisplayName => CalamityUtils.GetTextValue("UI.MainMenuClassic");
 
-        public override Asset<Texture2D> Logo => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/MainMenu/Logo");
-        public override Asset<Texture2D> SunTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/BlankPixel");
-        public override Asset<Texture2D> MoonTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Backgrounds/BlankPixel");
+        public override Asset<Texture2D> Logo => ModContent.Request<Texture2D>("CalamityMod/MainMenu/Logo");
+        public override Asset<Texture2D> SunTexture => ModContent.Request<Texture2D>("CalamityMod/Backgrounds/BlankPixel");
+        public override Asset<Texture2D> MoonTexture => ModContent.Request<Texture2D>("CalamityMod/Backgrounds/BlankPixel");
 
         public override int Music => ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("CalamityTitle") ?? MusicID.Title;
 
@@ -53,7 +53,7 @@ namespace CalamityModCustomPublicPrivateFork.MainMenu
         // Before drawing the logo, draw the entire Calamity background. This way, the typical parallax background is skipped entirely.
         public override bool PreDrawLogo(SpriteBatch spriteBatch, ref Vector2 logoDrawCenter, ref float logoRotation, ref float logoScale, ref Color drawColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/MainMenu/ClassicMenuBackground").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/MainMenu/ClassicMenuBackground").Value;
 
             // Calculate the draw position offset and scale in the event that someone is using a non-16:9 monitor
             Vector2 drawOffset = Vector2.Zero;
@@ -123,7 +123,7 @@ namespace CalamityModCustomPublicPrivateFork.MainMenu
             Cinders.RemoveAll(c => c.Time >= c.Lifetime);
 
             // Draw cinders.
-            Texture2D cinderTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/CalamitasCinder").Value;
+            Texture2D cinderTexture = ModContent.Request<Texture2D>("CalamityMod/Skies/CalamitasCinder").Value;
             for (int i = 0; i < Cinders.Count; i++)
             {
                 Vector2 drawPosition = Cinders[i].Center;

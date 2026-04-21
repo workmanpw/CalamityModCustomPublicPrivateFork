@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Rarities;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -17,7 +17,7 @@ using Terraria.ModLoader.IO;
 using static Terraria.ModLoader.ModContent;
 
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class FourSeasonsGalaxia : ModItem, ILocalizedModType
     {
@@ -63,7 +63,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
         public static float AriesAttunement_OnHitBoltDamageReduction = 0.5f;
         #endregion
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/Galaxia"; //Base sprite for stuff like item browser and shit. yeah
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/Galaxia"; //Base sprite for stuff like item browser and shit. yeah
 
         #region tooltip editing
 
@@ -246,8 +246,8 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
             if (mainAttunement == null)
                 mainAttunement = AttunementSystem.FindOrNull(AttunementID.Phoenix);
 
-            Texture2D itemTexture = Request<Texture2D>((mainAttunement.id == AttunementID.Polaris || mainAttunement.id == AttunementID.Andromeda) ? "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxiaDusk" : "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxiaDawn").Value;
-            Texture2D outlineTexture = Request<Texture2D>((mainAttunement.id == AttunementID.Polaris || mainAttunement.id == AttunementID.Andromeda) ? "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxiaDuskOutline" : "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxiaDawnOutline").Value;
+            Texture2D itemTexture = Request<Texture2D>((mainAttunement.id == AttunementID.Polaris || mainAttunement.id == AttunementID.Andromeda) ? "CalamityMod/Items/Weapons/Melee/GalaxiaDusk" : "CalamityMod/Items/Weapons/Melee/GalaxiaDawn").Value;
+            Texture2D outlineTexture = Request<Texture2D>((mainAttunement.id == AttunementID.Polaris || mainAttunement.id == AttunementID.Andromeda) ? "CalamityMod/Items/Weapons/Melee/GalaxiaDuskOutline" : "CalamityMod/Items/Weapons/Melee/GalaxiaDawnOutline").Value;
 
             int currentFrame = ((int)Math.Floor(Main.GlobalTimeWrappedHourly * 15f)) % 7;
             Rectangle animFrame = new Rectangle(0, 128 * currentFrame, 126, 126);
@@ -270,8 +270,8 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
             if (mainAttunement == null)
                 mainAttunement = AttunementSystem.FindOrNull(AttunementID.Phoenix);
 
-            Texture2D itemTexture = Request<Texture2D>((mainAttunement.id == AttunementID.Polaris || mainAttunement.id == AttunementID.Andromeda) ? "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxiaDusk" : "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxiaDawn").Value;
-            Texture2D outlineTexture = Request<Texture2D>((mainAttunement.id == AttunementID.Polaris || mainAttunement.id == AttunementID.Andromeda) ? "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxiaDuskOutline" : "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxiaDawnOutline").Value;
+            Texture2D itemTexture = Request<Texture2D>((mainAttunement.id == AttunementID.Polaris || mainAttunement.id == AttunementID.Andromeda) ? "CalamityMod/Items/Weapons/Melee/GalaxiaDusk" : "CalamityMod/Items/Weapons/Melee/GalaxiaDawn").Value;
+            Texture2D outlineTexture = Request<Texture2D>((mainAttunement.id == AttunementID.Polaris || mainAttunement.id == AttunementID.Andromeda) ? "CalamityMod/Items/Weapons/Melee/GalaxiaDuskOutline" : "CalamityMod/Items/Weapons/Melee/GalaxiaDawnOutline").Value;
 
             int currentFrame = ((int)Math.Floor(Main.GlobalTimeWrappedHourly * 15f)) % 7;
             Rectangle animFrame = new Rectangle(0, 128 * currentFrame, 126, 126);

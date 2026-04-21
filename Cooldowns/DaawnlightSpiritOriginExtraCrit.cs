@@ -1,13 +1,13 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.Localization;
-using static CalamityModCustomPublicPrivateFork.Items.Accessories.DaawnlightSpiritOrigin;
+using static CalamityMod.Items.Accessories.DaawnlightSpiritOrigin;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public class DaawnlightSpiritOriginExtraCrit : CooldownHandler
     {
@@ -30,7 +30,7 @@ namespace CalamityModCustomPublicPrivateFork.Cooldowns
 
         public override Color CooldownEndColor => new(Main.DiscoB, Main.DiscoR, Main.DiscoG);
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/" + ID;
+        public override string Texture => "CalamityMod/Cooldowns/" + ID;
 
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
 

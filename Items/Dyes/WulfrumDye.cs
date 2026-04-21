@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Dyes
+namespace CalamityMod.Items.Dyes
 {
     public class WulfrumDye : BaseDye
     {
         public override ArmorShaderData ShaderDataToBind => new ArmorShaderData(Mod.Assets.Request<Effect>("Effects/Dyes/WulfrumDyeShader"), "DyePass").
-            UseColor(new Color(89, 247, 166)).UseSecondaryColor(new Color(102, 242, 255)).UseImage(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/TechyNoise"));
+            UseColor(new Color(89, 247, 166)).UseSecondaryColor(new Color(102, 242, 255)).UseImage(Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/TechyNoise"));
         public override void SafeSetStaticDefaults()
         {
             Item.ResearchUnlockCount = 3;

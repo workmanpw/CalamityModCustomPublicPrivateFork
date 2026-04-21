@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
+using CalamityMod.Items.Tools;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     /// <summary>
     /// Useful for temporary tiles that may want to use custom drawing effects with a constant high update rate idependent of the lightning mode

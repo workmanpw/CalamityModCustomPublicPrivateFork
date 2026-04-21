@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMonolith;
+using CalamityMod.Items.Placeables.FurnitureMonolith;
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
+using WallTiles = CalamityMod.Walls;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
+namespace CalamityMod.Items.Placeables.Walls
 {
     public class AstralMonolithWall : ModItem, ILocalizedModType
     {

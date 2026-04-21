@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Environment;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityMod.Projectiles.Environment;
+using CalamityMod.Tiles.Abyss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Ores
+namespace CalamityMod.Tiles.Ores
 {
     [LegacyName("ChaoticOre")]
     public class ScoriaOre : GlowMaskTile

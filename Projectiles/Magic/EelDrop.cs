@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityMod.Buffs.StatDebuffs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class EelDrop : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Environment/AcidDrop";
+        public override string Texture => "CalamityMod/Projectiles/Environment/AcidDrop";
 
         public override void SetStaticDefaults()
         {

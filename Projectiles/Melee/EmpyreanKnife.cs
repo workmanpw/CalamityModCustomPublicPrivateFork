@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class EmpyreanKnife : ModProjectile, ILocalizedModType
     {

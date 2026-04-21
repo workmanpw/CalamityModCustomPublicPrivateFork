@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.Items.Weapons.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class MycelialClaws : ModItem, ILocalizedModType
     {

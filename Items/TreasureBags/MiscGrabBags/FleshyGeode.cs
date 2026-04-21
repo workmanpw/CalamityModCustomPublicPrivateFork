@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.TreasureBags.MiscGrabBags
+namespace CalamityMod.Items.TreasureBags.MiscGrabBags
 {
     [LegacyName("FleshyGeodeT1")]
     public class FleshyGeode : ModItem, ILocalizedModType

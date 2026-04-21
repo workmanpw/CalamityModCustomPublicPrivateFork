@@ -1,9 +1,9 @@
 
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureCosmilite
+namespace CalamityMod.Items.Placeables.FurnitureCosmilite
 {
     public class CosmiliteChair : ModItem, ILocalizedModType
     {

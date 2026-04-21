@@ -1,13 +1,13 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Accessories.Vanity;
+using CalamityMod.Items.Placeables.Banners;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
+namespace CalamityMod.NPCs.NormalNPCs
 {
     public class CrawlerDiamond : ModNPC
     {
@@ -44,7 +44,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Caverns,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.GemCrawler")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.GemCrawler")
             });
         }
 

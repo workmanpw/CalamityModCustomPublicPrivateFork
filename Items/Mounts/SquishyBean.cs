@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Mounts;
+using CalamityMod.Buffs.Mounts;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Mounts
+namespace CalamityMod.Items.Mounts
 {
     public class SquishyBean : ModMount
     {

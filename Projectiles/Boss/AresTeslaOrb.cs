@@ -1,17 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.ExoMechs.Ares;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class AresTeslaOrb : ModProjectile, ILocalizedModType
     {

@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Projectiles.Enemy;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -17,7 +17,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
+namespace CalamityMod.NPCs.NormalNPCs
 {
     public class CloudElemental : ModNPC
     {
@@ -97,7 +97,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Sky,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Events.Rain,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.CloudElemental")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.CloudElemental")
             });
         }
 
@@ -422,7 +422,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             if (Main.zenithWorld)
             {
                 // I ran out of ideas, so Cloud just gets a hat like how I wanted GSS to
-                Texture2D hattexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/WulfrumHat").Value;
+                Texture2D hattexture = ModContent.Request<Texture2D>("CalamityMod/Particles/WulfrumHat").Value;
                 SpriteEffects hatdirection = NPC.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;
                 int xoffset = NPC.direction == 1 ? 70 : 20;
                 Vector2 offset = new Vector2(xoffset, -10);

@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityMod.Items.Accessories;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class InkBombProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public static readonly SoundStyle Explode = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlantyMushMine", 3);
+        public static readonly SoundStyle Explode = new("CalamityMod/Sounds/Custom/PlantyMushMine", 3);
         public override void SetDefaults()
         {
             Projectile.width = 14;

@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Buffs.Summon
+namespace CalamityMod.Buffs.Summon
 {
     public class HotE : ModBuff
     {

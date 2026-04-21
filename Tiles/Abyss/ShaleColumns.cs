@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
+namespace CalamityMod.Tiles.Abyss
 {
     public class ShaleColumns : ModTile
     {

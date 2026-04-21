@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class ConstellationRingVFX : Particle //Also check out Split mod!
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/HollowCircleSoftEdge";
+        public override string Texture => "CalamityMod/Particles/HollowCircleSoftEdge";
         public override bool UseAdditiveBlend => true;
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;
@@ -43,8 +43,8 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public override void CustomDraw(SpriteBatch spriteBatch)
         {
             Texture2D ringTexture = ModContent.Request<Texture2D>(Texture).Value;
-            Texture2D starTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle").Value;
-            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D starTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/Sparkle").Value;
+            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
 
             spriteBatch.Draw(ringTexture, Position - Main.screenPosition, null, Color * Opacity, Rotation, ringTexture.Size() / 2f, Squish * Scale, SpriteEffects.None, 0);
 

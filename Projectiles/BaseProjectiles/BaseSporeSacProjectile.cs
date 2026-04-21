@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles
+namespace CalamityMod.Projectiles.BaseProjectiles
 {
     public abstract class BaseSporeSacProjectile : ModProjectile
     {

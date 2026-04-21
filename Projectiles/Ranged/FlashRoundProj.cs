@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class FlashRoundProj : ModProjectile, ILocalizedModType
     {
@@ -75,7 +75,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (time > 2 && time % 2 == 0 && targetDist < 1400)
             {
                 float trailSize = Utils.GetLerpValue(2, 5, Projectile.velocity.Length(), true);
-                Particle trail = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitX) * 0.5f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 5, 0.13f, Color.White * 0.6f, new Vector2(1f - 0.2f * trailSize, 1 + 2f * trailSize), true, false, shrinkSpeed: 0.8f * trailSize);
+                Particle trail = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitX) * 0.5f, "CalamityMod/Particles/BloomCircle", false, 5, 0.13f, Color.White * 0.6f, new Vector2(1f - 0.2f * trailSize, 1 + 2f * trailSize), true, false, shrinkSpeed: 0.8f * trailSize);
                 GeneralParticleHandler.SpawnParticle(trail);
             }
             if (Main.rand.NextBool(3))
@@ -138,8 +138,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         {
             float sine = (float)Math.Sin(Projectile.timeLeft * 0.175f / MathHelper.Pi);
             float trueSine = MathHelper.Lerp(sine, Math.Sign(sine) * 0.5f, 0.6f);
-            Asset<Texture2D> trail = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge");
-            Asset<Texture2D> shine = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+            Asset<Texture2D> trail = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineSoftEdge");
+            Asset<Texture2D> shine = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
 
             Main.EntitySpriteDraw(shine.Value, Projectile.Center - Main.screenPosition, null, Color.White with { A = 0 } * 0.6f, Projectile.rotation + shineRot, shine.Size() / 2f, new Vector2(1 + 0.9f * trueSine, 1 + 0.9f * -trueSine) * Projectile.scale * 0.13f, SpriteEffects.None, 0);
             Main.EntitySpriteDraw(shine.Value, Projectile.Center - Main.screenPosition, null, Color.White with { A = 0 } * 0.6f, Projectile.rotation + shineRot, shine.Size() / 2f, new Vector2(1 + 0.9f * -trueSine, 1 + 0.9f * trueSine) * Projectile.scale * 0.13f, SpriteEffects.None, 0);
@@ -160,7 +160,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             }
             for (int i = 0; i < 2; i++)
             {
-                Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.2f * (i), 0.45f * (i), 9, true, makeLight: 0);
+                Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.2f * (i), 0.45f * (i), 9, true, makeLight: 0);
                 GeneralParticleHandler.SpawnParticle(blastRing);
             }
             float rot = Main.rand.NextFloat(-5, 5);

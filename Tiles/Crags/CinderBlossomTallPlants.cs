@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Crags
+namespace CalamityMod.Tiles.Crags
 {
     public class CinderBlossomTallPlants : ModTile
     {

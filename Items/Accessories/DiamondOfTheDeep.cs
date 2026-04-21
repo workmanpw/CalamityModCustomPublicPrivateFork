@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Abyss;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     [LegacyName("LumenousAmulet")]
     [AutoloadEquip(EquipType.Neck)]

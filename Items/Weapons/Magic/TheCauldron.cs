@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityMod.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class TheCauldron : ModItem, ILocalizedModType
     {

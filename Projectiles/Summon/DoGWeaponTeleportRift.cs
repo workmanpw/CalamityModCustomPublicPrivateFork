@@ -5,12 +5,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class DoGWeaponTeleportRift : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/StarProj";
+        public override string Texture => "CalamityMod/Projectiles/StarProj";
 
         public ref float GeneralRotationalOffset => ref Projectile.ai[0];
         public override void SetStaticDefaults()

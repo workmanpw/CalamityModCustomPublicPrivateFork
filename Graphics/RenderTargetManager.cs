@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics
+namespace CalamityMod.Graphics
 {
     /// <summary>
     /// Manager class that handles all created instances of <see cref="ManagedRenderTarget"/>

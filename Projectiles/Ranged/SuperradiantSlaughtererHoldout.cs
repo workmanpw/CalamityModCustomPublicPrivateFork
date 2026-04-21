@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Cooldowns;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class SuperradiantSlaughtererHoldout : BaseGunHoldoutProjectile
     {
@@ -79,7 +79,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 if (Projectile.ai[1] >= 2f)
                 {
                     Owner.AddCooldown(SuperradiantSawBoost.ID, SuperradiantSlaughterer.DashCooldown);
-                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/MeatySlash"), GunTipPosition);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/MeatySlash"), GunTipPosition);
 
                     // Throws a lingering saw at the cursor that deals 3x damage (since the holdout already deals 2x)
                     if (Main.myPlayer == Projectile.owner)
@@ -122,7 +122,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
                 Projectile.ai[1] = 1f;
                 Projectile.timeLeft = Owner.HeldItem.useAnimation;
-                SoundStyle ShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SawShot", 2) { PitchVariance = 0.1f, Volume = 0.4f + SawPower * 0.5f };
+                SoundStyle ShootSound = new("CalamityMod/Sounds/Item/SawShot", 2) { PitchVariance = 0.1f, Volume = 0.4f + SawPower * 0.5f };
                 SoundEngine.PlaySound(ShootSound, GunTipPosition);
 
                 float sawDamageMult = MathHelper.Lerp(1f, 5f, SawPower) / 2f; // The damage must be divided by 2 to offset the holdout having 2x base damage.
@@ -208,12 +208,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (Time < ChargeupTime)
             {
                 if (Time == 30f && !NoSawOnHoldout)
-                    ChargeIdle = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BuzzsawCharge") { Volume = 0.3f }, GunTipPosition);
+                    ChargeIdle = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/BuzzsawCharge") { Volume = 0.3f }, GunTipPosition);
             }
             else
             {
                 if ((Time + 240) % 360 == 0)
-                    ChargeIdle = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BuzzsawIdle"), GunTipPosition);
+                    ChargeIdle = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/BuzzsawIdle"), GunTipPosition);
 
                 if (Time % 3 == 0)
                 {
@@ -256,7 +256,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         {
             target.AddBuff(ModContent.BuffType<Laceration>(), 300);
             target.AddBuff(ModContent.BuffType<ElementalMix>(), 150);
-            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/SwiftSlice") { Volume = 0.7f }, GunTipPosition);
+            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/SwiftSlice") { Volume = 0.7f }, GunTipPosition);
 
             // EPIC AND COOL RAINBOW PARTICLES WOOOO
             int SawLevel = (Time / ChargeupTime >= 1f).ToInt() + (Time / ChargeupTime >= 0.25f).ToInt();
@@ -283,11 +283,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Holdout ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SuperradiantSlaughtererHoldout");
+            Holdout ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/SuperradiantSlaughtererHoldout");
             Texture2D holdoutTexture = Holdout.Value;
-            LargeSlash ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SuperradiantSawLargeSlash");
+            LargeSlash ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/SuperradiantSawLargeSlash");
             Texture2D largeSlashTexture = LargeSlash.Value;
-            SmallSlash ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SuperradiantSawSmallSlash");
+            SmallSlash ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/SuperradiantSawSmallSlash");
             Texture2D smallSlashTexture = SmallSlash.Value;
             Color slashColor = new Color(200, 200, 200, 100);
 
@@ -304,7 +304,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             }
 
             // Mini saw drawn under the gun
-            MiniSaw ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SuperradiantSlaughtererHoldoutMiniSaw");
+            MiniSaw ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/SuperradiantSlaughtererHoldoutMiniSaw");
             Texture2D mini = MiniSaw.Value;
             Vector2 verticalOffset = Vector2.UnitY.RotatedBy(Projectile.rotation);
             if (Math.Cos(Projectile.rotation) < 0f)
@@ -315,7 +315,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             Main.EntitySpriteDraw(holdoutTexture, drawPosition, frame, Projectile.GetAlpha(lightColor), drawRotation, rotationPoint, Projectile.scale, flipSprite);
 
             // Glowmask
-            HoldoutGlow ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SuperradiantSlaughtererHoldoutGlow");
+            HoldoutGlow ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/SuperradiantSlaughtererHoldoutGlow");
             Texture2D glow = HoldoutGlow.Value;
             Main.EntitySpriteDraw(glow, drawPosition, frame, Color.White, drawRotation, rotationPoint, Projectile.scale, flipSprite);
 

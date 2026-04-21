@@ -7,7 +7,7 @@ using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
+namespace CalamityMod.Tiles.Abyss
 {
     public class SulphurousVines : ModTile
     {

@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class ShroomerangSpore : BaseSporeSacProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/FungiOrb";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/FungiOrb";
 
         private bool initialized = false;
         public override Color? LightColor => new Color(0f, 0.35f, 0.5f);

@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.HiveMind;
+using CalamityMod.NPCs.HiveMind;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class HiveMindMusicScene : BaseMusicSceneEffect
     {

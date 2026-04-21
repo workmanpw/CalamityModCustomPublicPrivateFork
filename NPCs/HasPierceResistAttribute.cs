@@ -1,6 +1,6 @@
 using System;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs
+namespace CalamityMod.NPCs
 {
     /// <summary>
     /// This attribute gives an NPC universal pierce resistance

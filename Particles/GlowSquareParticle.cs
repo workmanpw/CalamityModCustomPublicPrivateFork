@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class GlowSquareParticle : Particle
     {
@@ -17,7 +17,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public override bool UseCustomDraw => true;
         public override bool UseAdditiveBlend => true;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticle";
+        public override string Texture => "CalamityMod/Particles/GlowSquareParticle";
 
         public GlowSquareParticle(Vector2 relativePosition, Vector2 velocity, bool affectedByGravity, int lifetime, float scale, Color color, bool GlowCenter = true, float rotation = 0)
         {

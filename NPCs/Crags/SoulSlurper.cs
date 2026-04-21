@@ -1,10 +1,10 @@
 using System;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.FishingRods;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Fishing.FishingRods;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.NPCs.Crags
+namespace CalamityMod.NPCs.Crags
 {
     public class SoulSlurper : ModNPC
     {
@@ -64,7 +64,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Crags
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.SoulSlurper")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.SoulSlurper")
             });
         }
 

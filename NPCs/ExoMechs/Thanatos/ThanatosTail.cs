@@ -1,10 +1,10 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Sounds;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -15,7 +15,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos
+namespace CalamityMod.NPCs.ExoMechs.Thanatos
 {
     [HasPierceResist]
     [LongDistanceNetSync(SyncWith = typeof(ThanatosHead))]
@@ -26,8 +26,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos
 
         public override void Load()
         {
-            string normalIconPath = "CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosNormalTail";
-            string vulnerableIconPath = "CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Thanatos/ThanatosVulnerableTail";
+            string normalIconPath = "CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosNormalTail";
+            string vulnerableIconPath = "CalamityMod/NPCs/ExoMechs/Thanatos/ThanatosVulnerableTail";
             
             normalIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(normalIconPath, -1);
             vulnerableIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(vulnerableIconPath, -1);

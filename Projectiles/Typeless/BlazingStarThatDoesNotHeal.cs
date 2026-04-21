@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,15 +12,15 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class BlazingStarThatDoesNotHeal : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Sparkle";
+        public override string Texture => "CalamityMod/Particles/Sparkle";
 
         public static Asset<Texture2D> Bloom;
-        public override void Load() => Bloom = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+        public override void Load() => Bloom = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
 
         public override void SetStaticDefaults()
         {
@@ -59,7 +59,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
         public override bool PreDraw(ref Color lightColor)
         {
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(WidthFunction, ColorFunction, (_,_) => Projectile.Size * 0.5f, shader: GameShaders.Misc["CalamityMod:TrailStreak"]), 8);
 
             Main.spriteBatch.EnterShaderRegion(BlendState.Additive);
@@ -82,7 +82,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
         public override void OnKill(int timeLeft)
         {
             SoundEngine.PlaySound(SoundID.Item14, Projectile.Center);
-            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, ColorFunction(0f, Vector2.Zero), "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.04f, 15);
+            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, ColorFunction(0f, Vector2.Zero), "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.04f, 15);
             GeneralParticleHandler.SpawnParticle(pulse);
             Color smokeColor = Color.Lerp(ColorFunction(0f, Vector2.Zero), Color.DarkSlateGray, 0.5f);
             for (int i = 0; i < 7; i++)

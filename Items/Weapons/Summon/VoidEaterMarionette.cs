@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.NPCs.DevourerofGods;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
+namespace CalamityMod.Items.Weapons.Summon
 {
     [LegacyName("StaffoftheMechworm")]
     public class VoidEaterMarionette : ModItem, ILocalizedModType

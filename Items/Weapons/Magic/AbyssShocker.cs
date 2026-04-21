@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityMod.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class AbyssShocker : ModItem, ILocalizedModType
     {
@@ -36,7 +36,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/AbyssShocker_mask").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/AbyssShocker_mask").Value);
         }
 
         public override Vector2? HoldoutOffset() => new Vector2(-14, 0);

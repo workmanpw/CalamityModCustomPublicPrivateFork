@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Leviathan;
+using CalamityMod.NPCs.Leviathan;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class AnahitasLureMusicScene : BaseMusicSceneEffect
     {

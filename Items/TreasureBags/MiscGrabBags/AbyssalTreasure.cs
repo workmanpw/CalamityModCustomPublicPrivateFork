@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
+using CalamityMod.Items.Placeables.Furniture;
+using CalamityMod.Items.Potions;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.TreasureBags.MiscGrabBags
+namespace CalamityMod.Items.TreasureBags.MiscGrabBags
 {
     public class AbyssalTreasure : ModItem, ILocalizedModType
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,12 +13,12 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss.BrainOfCthulhu;
+namespace CalamityMod.Projectiles.Boss.BrainOfCthulhu;
 
 public class TelekineticBlast : ModProjectile, ILocalizedModType
 {
     public new string LocalizationCategory => "Projectiles.Boss";
-    public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+    public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
     public override void SetDefaults()
     {

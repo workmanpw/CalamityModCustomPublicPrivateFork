@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
+namespace CalamityMod.Projectiles.Pets
 {
     public class ChibiiDoggo : ModProjectile, ILocalizedModType
     {
@@ -52,7 +52,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
             if (Projectile.spriteDirection == -1)
                 spriteEffects = SpriteEffects.FlipHorizontally;
             Color colorArea = Lighting.GetColor((int)(Projectile.Center.X / 16), (int)(Projectile.Center.Y / 16));
-            Texture2D texture2D3 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/ChibiiDoggoMonochrome").Value;
+            Texture2D texture2D3 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/ChibiiDoggoMonochrome").Value;
             int textureArea = Terraria.GameContent.TextureAssets.Projectile[Type].Value.Height / Main.projFrames[Type];
             int y3 = textureArea * Projectile.frame;
             Rectangle rectangle = new Rectangle(0, y3, texture2D3.Width, textureArea);

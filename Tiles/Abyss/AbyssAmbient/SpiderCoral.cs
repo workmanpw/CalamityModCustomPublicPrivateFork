@@ -4,7 +4,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient
+namespace CalamityMod.Tiles.Abyss.AbyssAmbient
 {
     public class SpiderCoral1 : GlowMaskTile
     {

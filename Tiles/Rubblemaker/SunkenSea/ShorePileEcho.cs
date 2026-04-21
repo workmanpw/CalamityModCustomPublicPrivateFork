@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Tiles.SunkenSea.Ambient;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
+namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 {
     public class ShorePileEcho : ShorePile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/ShorePile";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/ShorePile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

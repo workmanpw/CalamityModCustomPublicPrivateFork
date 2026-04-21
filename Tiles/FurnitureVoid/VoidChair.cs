@@ -6,7 +6,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureVoid
+namespace CalamityMod.Tiles.FurnitureVoid
 {
     public class VoidChair : ModTile
     {

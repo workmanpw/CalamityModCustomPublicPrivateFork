@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Shortswords;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Projectiles.Melee.Shortswords;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class SubmarineShocker : ModItem, ILocalizedModType
     {

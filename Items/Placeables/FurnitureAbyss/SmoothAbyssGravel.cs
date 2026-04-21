@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.Items.Placeables.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAbyss
+namespace CalamityMod.Items.Placeables.FurnitureAbyss
 {
     public class SmoothAbyssGravel : ModItem, ILocalizedModType
     {

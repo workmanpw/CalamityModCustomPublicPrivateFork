@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureWulfrum
+namespace CalamityMod.Items.Placeables.FurnitureWulfrum
 {
     public class ChargedWulfrumWallMountedBulb : ModItem, ILocalizedModType
     {

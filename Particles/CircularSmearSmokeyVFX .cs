@@ -1,10 +1,10 @@
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class CircularSmearSmokeyVFX : Particle //Also check out random noise generation!
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/CircularSmearSmokey";
+        public override string Texture => "CalamityMod/Particles/CircularSmearSmokey";
         public override bool UseAdditiveBlend => true;
 
         public override bool SetLifetime => true;

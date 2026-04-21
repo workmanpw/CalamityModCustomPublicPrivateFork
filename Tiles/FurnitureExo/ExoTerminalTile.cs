@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
+namespace CalamityMod.Tiles.FurnitureExo
 {
     public class ExoTerminalTile : ModTile
     {
@@ -63,7 +63,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
             int xFrameOffset = Main.tile[i, j].TileFrameX;
             int yFrameOffset = Main.tile[i, j].TileFrameY;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureExo/ExoTerminalGlow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureExo/ExoTerminalGlow");
             Texture2D glowmask = GlowTexture.Value;
 
             Vector2 drawOffest = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);

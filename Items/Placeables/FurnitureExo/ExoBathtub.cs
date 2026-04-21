@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo;
+using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.FurnitureExo;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo
+namespace CalamityMod.Items.Placeables.FurnitureExo
 {
     public class ExoBathtub : ModItem, ILocalizedModType
     {

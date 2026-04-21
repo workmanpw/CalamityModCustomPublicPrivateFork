@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Balancing;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Balancing;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class SpectralVeil : ModItem, ILocalizedModType
     {

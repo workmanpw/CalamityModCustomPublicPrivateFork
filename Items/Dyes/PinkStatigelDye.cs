@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Dyes
+namespace CalamityMod.Items.Dyes
 {
     public class PinkStatigelDye : BaseDye
     {

@@ -4,12 +4,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class BlazingStarOrbital : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/BlazingStar";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/BlazingStar";
 
         private static int Lifetime = 300;
         public override void SetStaticDefaults()

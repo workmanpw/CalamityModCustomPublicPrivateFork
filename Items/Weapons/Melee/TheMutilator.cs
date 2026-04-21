@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class TheMutilator : BaseSwordHoldoutItem, ILocalizedModType
     {
@@ -61,8 +61,8 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 
             float barScale = 3f;
 
-            var barBG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
-            var barFG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
+            var barBG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
+            var barFG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
 
             Vector2 barOrigin = barBG.Size() * 0.5f;
             float yOffset = 44f;

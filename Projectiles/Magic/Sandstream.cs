@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class Sandstream : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public int Time = 0;
         public bool PostHit = false;
         public override void SetDefaults()

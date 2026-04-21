@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Magic;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,14 +10,14 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class VividClarity : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
 
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/VividClarityShoot") { Volume = 0.30f };
-        public static readonly SoundStyle BeamSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/VividClarityBeamAppear");
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/VividClarityShoot") { Volume = 0.30f };
+        public static readonly SoundStyle BeamSound = new("CalamityMod/Sounds/Item/VividClarityBeamAppear");
         public override void SetStaticDefaults()
         {
             Item.staff[Type] = true;
@@ -75,7 +75,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/VividClarityGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/VividClarityGlow").Value);
         }
 
         public override void AddRecipes()

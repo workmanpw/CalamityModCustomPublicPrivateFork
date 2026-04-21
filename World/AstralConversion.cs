@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralDesert;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralSnow;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
-using CalamityModCustomPublicPrivateFork.Walls;
-using CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls;
+using CalamityMod.Tiles.Astral;
+using CalamityMod.Tiles.AstralDesert;
+using CalamityMod.Tiles.AstralSnow;
+using CalamityMod.Tiles.FurnitureMonolith;
+using CalamityMod.Tiles.Ores;
+using CalamityMod.Walls;
+using CalamityMod.Walls.UnsafeWalls;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.World
+namespace CalamityMod.World
 {
     public class AstralConversion : ModBiomeConversion
     {

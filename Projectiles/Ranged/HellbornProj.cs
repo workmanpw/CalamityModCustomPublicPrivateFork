@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class HellbornProj : ModProjectile, ILocalizedModType
     {
@@ -123,12 +123,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 dust5.fadeIn = 1.7f;
             }
 
-            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1.2f, 1.7f, 16, true);
+            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed * 0.7f, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1.2f, 1.7f, 16, true);
             GeneralParticleHandler.SpawnParticle(blastRing);
-            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.7f, 0.9f, 16, true);
+            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.7f, 0.9f, 16, true);
             GeneralParticleHandler.SpawnParticle(blastRing2);
 
-            SoundStyle bigShot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HellbornImpact");
+            SoundStyle bigShot = new("CalamityMod/Sounds/Item/HellbornImpact");
             SoundEngine.PlaySound(bigShot with { PitchVariance = 0.15f, Volume = 0.8f }, Projectile.Center);
             if (Projectile.numHits == 0)
             {
@@ -157,7 +157,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/HellbornProj").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/HellbornProj").Value;
 
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f);
@@ -166,7 +166,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             Rectangle frame = texture.Frame(1, 6, 0, Projectile.frame);
             Vector2 origin = frame.Size() * 0.5f;
 
-            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
 
             // Glow Orb
             float randSize = Main.rand.NextFloat(0.8f, 1.2f);

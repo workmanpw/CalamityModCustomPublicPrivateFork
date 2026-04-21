@@ -1,23 +1,23 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class FallenPaladinsHammerProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/FallenPaladinsHammer";
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PwnagehammerSound") { Volume = 0.35f };
-        public static readonly SoundStyle UseSoundFunny = new("CalamityModCustomPublicPrivateFork/Sounds/Item/CalamityBell") { Volume = 1.5f };
-        public static readonly SoundStyle RedHamSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FallenPaladinsHammerClone") { Volume = 0.6f };
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/FallenPaladinsHammer";
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/PwnagehammerSound") { Volume = 0.35f };
+        public static readonly SoundStyle UseSoundFunny = new("CalamityMod/Sounds/Item/CalamityBell") { Volume = 1.5f };
+        public static readonly SoundStyle RedHamSound = new("CalamityMod/Sounds/Item/FallenPaladinsHammerClone") { Volume = 0.6f };
         public ref int EmpoweredHammer => ref Main.player[Projectile.owner].Calamity().PHAThammer;
         public int returnhammer = 0;
         public int time = 0;

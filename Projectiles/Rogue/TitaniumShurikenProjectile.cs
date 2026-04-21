@@ -4,12 +4,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class TitaniumShurikenProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/TitaniumShuriken";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/TitaniumShuriken";
 
         private static float RotationIncrement = 0.22f;
         private static float ReboundTime = 26f;

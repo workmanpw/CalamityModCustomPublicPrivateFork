@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class AstralSpray : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public ref float Time => ref Projectile.ai[0];
         public bool ShotFromTerraformer => Projectile.ai[1] == 1f;

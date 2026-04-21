@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,13 +12,13 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class BalefulHarvesterHoldout : BaseCustomUseStyleProjectile, ILocalizedModType
     {
         public override int AssignedItemID => ModContent.ItemType<BalefulHarvester>();
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<BalefulHarvester>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/BalefulHarvester";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/BalefulHarvester";
         public override float HitboxOutset => 90;
         public override Vector2 HitboxSize => new Vector2(140, 140);
         public override float HitboxRotationOffset => MathHelper.ToRadians(-45);
@@ -123,9 +123,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
                     if (time % (int)(timeMax * 0.33f) == 0)
                     {
-                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TerratomereSwing");
+                        SoundStyle fire = new("CalamityMod/Sounds/Item/TerratomereSwing");
                         SoundEngine.PlaySound(fire with { Volume = 0.4f, Pitch = Main.rand.NextFloat(0.75f, 0.85f) }, Projectile.Center);
-                        SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SwingMid");
+                        SoundStyle fire2 = new("CalamityMod/Sounds/Item/SwingMid");
                         SoundEngine.PlaySound(fire2 with { Volume = 0.6f, Pitch = Main.rand.NextFloat(0.25f, 0.35f) }, Projectile.Center);
                     }
 
@@ -162,7 +162,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 {
                     Vector2 sparkVel = Vector2.UnitY.RotatedBy(FinalRotation + MathHelper.ToRadians(-45)) * (3.5f * Owner.direction);
                     Vector2 sparkPos = Owner.Center + Vector2.UnitX.RotatedBy(FinalRotation + MathHelper.ToRadians(-45)) * Main.rand.Next(80, 140);
-                    CustomSprite critSpark = new(sparkPos, sparkVel, 15, "CalamityModCustomPublicPrivateFork/Particles/CritSpark", 1f, Color.Orange, frameCount: 4, frame: Main.rand.Next(4));
+                    CustomSprite critSpark = new(sparkPos, sparkVel, 15, "CalamityMod/Particles/CritSpark", 1f, Color.Orange, frameCount: 4, frame: Main.rand.Next(4));
                     GeneralParticleHandler.SpawnParticle(critSpark);
                 }
             }
@@ -180,7 +180,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             for (int i = 0; i < 4; i++)
             {
                 Vector2 sparkVel = Vector2.UnitY.RotatedByRandom(MathHelper.Pi) * Main.rand.NextFloat(4.5f, 6.5f);
-                CustomSprite critSpark = new(target.Center, sparkVel, 40, "CalamityModCustomPublicPrivateFork/Particles/CritSpark", 1f, new Color(255, 85, 0), frameCount: 4, frame: Main.rand.Next(4));
+                CustomSprite critSpark = new(target.Center, sparkVel, 40, "CalamityMod/Particles/CritSpark", 1f, new Color(255, 85, 0), frameCount: 4, frame: Main.rand.Next(4));
                 GeneralParticleHandler.SpawnParticle(critSpark);
             }
             DesertProwlerSkullParticle skullEffect = new(target.Center, Vector2.Zero, Color.OrangeRed, Color.Black, 1f, 180f);
@@ -218,7 +218,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             {
                 Asset<Texture2D> vanillaSmear = TextureAssets.Projectile[997];
                 Rectangle vanillaSmearFrame = vanillaSmear.Frame(1, 4, 0, 0);
-                Asset<Texture2D> smear = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SemiCircularSmearSwipe");
+                Asset<Texture2D> smear = ModContent.Request<Texture2D>("CalamityMod/Particles/SemiCircularSmearSwipe");
                 float smearOpacity = CalamityUtils.Convert01To010(time / timeMax);
                 Main.EntitySpriteDraw(vanillaSmear.Value, Projectile.Center - Main.screenPosition, vanillaSmearFrame, new Color(193, 83, 43) * smearOpacity * 0.75f, FinalRotation - MathHelper.PiOver2, vanillaSmearFrame.Size() / 2f, 1.25f, SpriteEffects.None);
                 Main.EntitySpriteDraw(smear.Value, Projectile.Center - Main.screenPosition, null, new Color(247, 115, 0) * smearOpacity, FinalRotation, smear.Size() / 2f, 1.8f, SpriteEffects.None);
@@ -226,9 +226,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 if (smearOpacity > 0.65f)
                 {
                     Vector2 sparklePos = Projectile.Center - Main.screenPosition - (Vector2.UnitY.RotatedBy(FinalRotation + MathHelper.PiOver4 * Owner.direction) * 120f);
-                    Asset<Texture2D> bloom = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+                    Asset<Texture2D> bloom = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
                     Main.EntitySpriteDraw(bloom.Value, sparklePos, null, Color.White * 0.75f, 0f, bloom.Size() / 2f, 0.2f, SpriteEffects.None);
-                    Asset<Texture2D> sparkle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/FullStar");
+                    Asset<Texture2D> sparkle = ModContent.Request<Texture2D>("CalamityMod/Particles/FullStar");
                     Main.EntitySpriteDraw(sparkle.Value, sparklePos, null, Color.Orange, 0f, sparkle.Size() / 2f, 2f, SpriteEffects.None);
                 }
             }

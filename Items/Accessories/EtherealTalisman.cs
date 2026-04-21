@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class EtherealTalisman : ModItem, ILocalizedModType
     {

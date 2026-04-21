@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Mounts;
+using CalamityMod.Items.Mounts;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Mounts
+namespace CalamityMod.Buffs.Mounts
 {
     public class GazeOfCrysthamyrBuff : ModBuff
     {

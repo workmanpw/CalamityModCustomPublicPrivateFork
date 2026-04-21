@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.Gores.WaterDroplet
+namespace CalamityMod.Gores.WaterDroplet
 {
     public class BasaltGullyLavaDroplet : LiquidDropletGore
     {

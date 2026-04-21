@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.BaseItems;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityMod.Items.BaseItems;
+using CalamityMod.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,17 +9,17 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class Hellkite : CustomUseProjItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Melee";
-        public static readonly SoundStyle SwingSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HellkiteSwing", 2);
-        public static readonly SoundStyle SwingSoundBig = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HellkiteHeavySwing");
-        public static readonly SoundStyle HitSoundSmall = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HellkiteSmallHit", 3);
-        public static readonly SoundStyle HitSoundBig = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HellkiteBigHit", 2);
-        public static readonly SoundStyle ChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HellkiteCharge");
-        public static readonly SoundStyle FullChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HellkiteFullCharge");
+        public static readonly SoundStyle SwingSound = new("CalamityMod/Sounds/Item/HellkiteSwing", 2);
+        public static readonly SoundStyle SwingSoundBig = new("CalamityMod/Sounds/Item/HellkiteHeavySwing");
+        public static readonly SoundStyle HitSoundSmall = new("CalamityMod/Sounds/Item/HellkiteSmallHit", 3);
+        public static readonly SoundStyle HitSoundBig = new("CalamityMod/Sounds/Item/HellkiteBigHit", 2);
+        public static readonly SoundStyle ChargeSound = new("CalamityMod/Sounds/Item/HellkiteCharge");
+        public static readonly SoundStyle FullChargeSound = new("CalamityMod/Sounds/Item/HellkiteFullCharge");
         public override void SetStaticDefaults() => ItemID.Sets.ItemsThatAllowRepeatedRightClick[Type] = true;
         public override void SetDefaults()
         {
@@ -54,7 +54,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
         }
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/HellkiteGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/HellkiteGlow").Value);
         }
         public override void ModifyTooltips(List<TooltipLine> list)
         {

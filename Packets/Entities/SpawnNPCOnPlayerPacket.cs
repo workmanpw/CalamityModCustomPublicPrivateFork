@@ -2,7 +2,7 @@ using System.IO;
 using Terraria;
 using Terraria.DataStructures;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class SpawnNPCOnPlayerPacket : CalamityPacket
     {

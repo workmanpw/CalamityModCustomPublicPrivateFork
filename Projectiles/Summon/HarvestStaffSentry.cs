@@ -5,9 +5,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Items.Weapons.Summon.HarvestStaff;
+using static CalamityMod.Items.Weapons.Summon.HarvestStaff;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class HarvestStaffSentry : ModProjectile, ILocalizedModType
     {

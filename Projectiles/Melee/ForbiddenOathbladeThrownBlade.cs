@@ -1,23 +1,23 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Packets.Entities;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Packets.Entities;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class ForbiddenOathbladeThrownBlade : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/ForbiddenOathblade";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/ForbiddenOathblade";
 
         public int ChargeupTime => (int)Projectile.localAI[2];
         public int Lifetime = 120;
@@ -176,7 +176,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                         for (int i = 0; i < Main.maxNPCs; i++)
                             Projectile.localNPCImmunity[i] = 0;
                         Projectile.numHits = 0;
-                        SoundStyle unstuck = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/PerfLargeHit", 3);
+                        SoundStyle unstuck = new("CalamityMod/Sounds/NPCHit/PerfLargeHit", 3);
                         SoundEngine.PlaySound(unstuck with { Volume = 0.85f, Pitch = Main.rand.NextFloat(0.3f, 0.4f), MaxInstances = 3 }, Projectile.Center);
                     }
                 }
@@ -214,7 +214,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 
                 if (Main.rand.NextBool(4))
                 {
-                    Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity.RotatedByRandom(0.3f) * Main.rand.NextFloat(0.2f, 0.6f), "CalamityModCustomPublicPrivateFork/Particles/DemonSigilParticle", false, 17, Main.rand.NextFloat(0.2f, 0.3f), Color.Lerp(Color.MediumOrchid, Color.BlueViolet, Main.rand.NextFloat(0, 0.7f)) * 0.6f, new Vector2(1, 1), true, false, Main.rand.NextFloat(-1f, 1f), false, false);
+                    Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity.RotatedByRandom(0.3f) * Main.rand.NextFloat(0.2f, 0.6f), "CalamityMod/Particles/DemonSigilParticle", false, 17, Main.rand.NextFloat(0.2f, 0.3f), Color.Lerp(Color.MediumOrchid, Color.BlueViolet, Main.rand.NextFloat(0, 0.7f)) * 0.6f, new Vector2(1, 1), true, false, Main.rand.NextFloat(-1f, 1f), false, false);
                     GeneralParticleHandler.SpawnParticle(spark2);
                 }
             }
@@ -232,7 +232,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 throwAnimation(chargeProgress);
                 if (ChargeProgress >= 0.6f && time == 0)
                 {
-                    SoundStyle swing = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordSwing", 2);
+                    SoundStyle swing = new("CalamityMod/Sounds/Item/DemonSwordSwing", 2);
                     SoundEngine.PlaySound(swing with { Volume = 0.65f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f) }, Projectile.Center);
                     time++;
                 }
@@ -293,7 +293,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
             if (!exitedTarget)
             {
-                SoundStyle stuck = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordImpact", 2);
+                SoundStyle stuck = new("CalamityMod/Sounds/Item/DemonSwordImpact", 2);
                 SoundEngine.PlaySound(stuck with { Volume = 0.75f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f), MaxInstances = 3 }, Projectile.Center);
 
                 Projectile.ai[2] = target.whoAmI;
@@ -366,7 +366,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                     if (Projectile.velocity.Length() < 8)
                         Projectile.velocity = Projectile.velocity.SafeNormalize(Vector2.UnitX) * 8;
                     Projectile.velocity.Y *= 0.85f;
-                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/CeramicImpact", 2) { Volume = 0.35f, Pitch = Main.rand.NextFloat(-0.4f, -0.5f) }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/CeramicImpact", 2) { Volume = 0.35f, Pitch = Main.rand.NextFloat(-0.4f, -0.5f) }, Projectile.Center);
                     bounces++;
                     Projectile.timeLeft = Lifetime;
                 }
@@ -384,7 +384,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             stuckInGround = true;
             Projectile.timeLeft = (int)(Lifetime - fadeOutTime * 0.3f);
             Projectile.tileCollide = false;
-            SoundStyle stuck = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordImpact", 2);
+            SoundStyle stuck = new("CalamityMod/Sounds/Item/DemonSwordImpact", 2);
             SoundEngine.PlaySound(stuck with { Volume = 0.75f, Pitch = Main.rand.NextFloat(0.2f, 0.3f), MaxInstances = 3 }, Projectile.Center);
             Projectile.netUpdate = true;
         }
@@ -398,7 +398,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override bool? Colliding(Rectangle projHitbox, Rectangle targetHitbox) => (Projectile.numHits > 0 && !exitedTarget) ? false : CalamityUtils.CircularHitboxCollision(Projectile.Center, Projectile.width / (exitedTarget ? 0.5f : 1), targetHitbox); // After exiting a target, the hitbox is larger
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/ForbiddenOathblade").Value;
+            Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/ForbiddenOathblade").Value;
             Vector2 generalDrawPos = Projectile.Center - Main.screenPosition;
 
             float fadeScale = (1 - Projectile.Opacity);

@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Items.Critters;
-using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Items.Critters;
+using CalamityMod.Items.DraedonMisc;
+using CalamityMod.Items.Placeables.Banners;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.DraedonLabThings
+namespace CalamityMod.NPCs.DraedonLabThings
 {
     public class RepairUnitCritter : ModNPC
     {
@@ -94,7 +94,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DraedonLabThings
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.RepairUnitCritter")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.RepairUnitCritter")
             });
         }
 

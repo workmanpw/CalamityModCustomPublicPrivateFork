@@ -1,13 +1,13 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class FlareBoltProjectile : ModProjectile, ILocalizedModType
     {
@@ -55,7 +55,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                     Projectile.velocity = staticSpeed;
                     endPoint = Owner.ClampedMouseWorld();
 
-                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/HalleysInfernoShoot") with { Volume = 0.45f, Pitch = 0.3f }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/HalleysInfernoShoot") with { Volume = 0.45f, Pitch = 0.3f }, Projectile.Center);
                     for (int i = 0; i < 20; i++)
                     {
                         Dust dust = Dust.NewDustPerfect(Projectile.Center, ModContent.DustType<LightDust>(), Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(1.5f, 3.5f));
@@ -69,7 +69,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                             float fxScale = Main.rand.NextFloat(1.5f, 1.7f) - Math.Abs(variance);
                             Vector2 fxVelocity = Projectile.velocity.RotatedBy(variance) * Main.rand.NextFloat(0.6f, 1f) * (1 - Math.Abs(variance));
 
-                            Particle fx = new CustomSpark(Projectile.Center, fxVelocity * 1.3f, "CalamityModCustomPublicPrivateFork/Particles/FireTypeParticle", false, 22, fxScale, Color.Lerp(bColor, Color.Red, 0.5f), new Vector2(1.8f, 1f), true, false, shrinkSpeed: 0.2f);
+                            Particle fx = new CustomSpark(Projectile.Center, fxVelocity * 1.3f, "CalamityMod/Particles/FireTypeParticle", false, 22, fxScale, Color.Lerp(bColor, Color.Red, 0.5f), new Vector2(1.8f, 1f), true, false, shrinkSpeed: 0.2f);
                             GeneralParticleHandler.SpawnParticle(fx);
                         }
                     }
@@ -78,7 +78,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 
                 if (Main.rand.NextBool(8) && launchTime < 56)
                 {
-                    Particle fx = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(8, 8), -Projectile.velocity * 0.9f, "CalamityModCustomPublicPrivateFork/Particles/FireTypeParticle", false, 32, 1.15f, Color.Lerp(bColor, Color.Red, 0.5f), new Vector2(0.8f, 1f), true, false);
+                    Particle fx = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(8, 8), -Projectile.velocity * 0.9f, "CalamityMod/Particles/FireTypeParticle", false, 32, 1.15f, Color.Lerp(bColor, Color.Red, 0.5f), new Vector2(0.8f, 1f), true, false);
                     GeneralParticleHandler.SpawnParticle(fx);
                 }
                 if (Main.rand.NextBool(6))
@@ -90,7 +90,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                     dust.noLightEmittence = true;
                 }
 
-                Particle trail = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.3f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 11, 0.3f, bColor * 0.9f, new Vector2(1, 1f), true, false, shrinkSpeed: 0.7f * velFade);
+                Particle trail = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.3f, "CalamityMod/Particles/BloomCircle", false, 11, 0.3f, bColor * 0.9f, new Vector2(1, 1f), true, false, shrinkSpeed: 0.7f * velFade);
                 GeneralParticleHandler.SpawnParticle(trail);
             }
 

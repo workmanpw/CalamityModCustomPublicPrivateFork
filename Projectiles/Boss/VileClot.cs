@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class VileClot : ModProjectile, ILocalizedModType
     {

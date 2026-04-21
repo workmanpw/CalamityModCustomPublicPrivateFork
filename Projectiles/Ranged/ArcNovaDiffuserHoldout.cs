@@ -1,8 +1,8 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class ArcNovaDiffuserHoldout : BaseGunHoldoutProjectile
     {
@@ -90,10 +90,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                         }
                         for (int i = 0; i < 2; i++)
                         {
-                            Particle spark2 = new CustomSpark(GunTipPosition, Projectile.velocity * 25, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 16, 0.95f, ArcNovaDiffuser.mainColor, new Vector2(1.8f, 0.8f), true, true, glowOpacity: 0.9f, shrinkSpeed: 0.8f);
+                            Particle spark2 = new CustomSpark(GunTipPosition, Projectile.velocity * 25, "CalamityMod/Particles/BloomCircle", false, 16, 0.95f, ArcNovaDiffuser.mainColor, new Vector2(1.8f, 0.8f), true, true, glowOpacity: 0.9f, shrinkSpeed: 0.8f);
                             GeneralParticleHandler.SpawnParticle(spark2);
                         }
-                        Particle spark = new CustomSpark(GunTipPosition, Projectile.velocity * 2, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", false, 12, 0.7f, ArcNovaDiffuser.mainColor, new Vector2(0.5f, 1.5f), true, false, extraRotation: -MathHelper.PiOver2, noShrink: true);
+                        Particle spark = new CustomSpark(GunTipPosition, Projectile.velocity * 2, "CalamityMod/Particles/BloomRing", false, 12, 0.7f, ArcNovaDiffuser.mainColor, new Vector2(0.5f, 1.5f), true, false, extraRotation: -MathHelper.PiOver2, noShrink: true);
                         GeneralParticleHandler.SpawnParticle(spark);
 
                         ShotsLoaded = 0;
@@ -243,8 +243,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 Vector2 drawOffset = (MathHelper.TwoPi * i / 10f).ToRotationVector2() * (2f + sine * 0.3f);
                 Main.EntitySpriteDraw(texture, drawPosition + drawOffset * chargeScale, null, color with { A = 0 } * Math.Min(chargeScale, 1) * 0.3f, drawRotation, rotationPoint, Projectile.scale, flipSprite, 0);
             }
-            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
-            Asset<Texture2D> tex3 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/ForwardSmear");
+            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+            Asset<Texture2D> tex3 = ModContent.Request<Texture2D>("CalamityMod/Particles/ForwardSmear");
 
             Main.EntitySpriteDraw(texture, drawPosition, null, Projectile.GetAlpha(lightColor), drawRotation, rotationPoint, Projectile.scale * Owner.gravDir, flipSprite);
 

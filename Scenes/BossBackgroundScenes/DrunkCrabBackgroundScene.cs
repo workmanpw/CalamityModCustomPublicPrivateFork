@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Crabulon;
+using CalamityMod.NPCs.Crabulon;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class DrunkCrabBackgroundScene : ModSceneEffect
     {

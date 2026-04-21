@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.UI.CalamitasEnchants;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Items.Tools;
+using CalamityMod.Projectiles.Magic;
+using CalamityMod.Systems.Collections;
+using CalamityMod.UI.CalamitasEnchants;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Bestiary;
@@ -17,9 +17,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 using static Terraria.ModLoader.ModContent;
-using SCalBoss = CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas.SupremeCalamitas;
+using SCalBoss = CalamityMod.NPCs.SupremeCalamitas.SupremeCalamitas;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.TownNPCs
+namespace CalamityMod.NPCs.TownNPCs
 {
     [AutoloadHead]
     [LegacyName("WITCH")]
@@ -75,7 +75,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.TownNPCs
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.BrimstoneWitch")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.BrimstoneWitch")
             });
         }
 

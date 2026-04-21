@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
+using CalamityMod.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
+namespace CalamityMod.Items.Weapons.Rogue
 {
     public class DefectiveSphere : RogueWeapon
     {

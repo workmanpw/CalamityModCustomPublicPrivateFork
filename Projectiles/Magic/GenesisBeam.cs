@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class GenesisBeam : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public ref float Time => ref Projectile.ai[0];
         public ref float IsSplit => ref Projectile.ai[1];
@@ -78,9 +78,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 
                 for (int k = 0; k < 3; k++)
                 {
-                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, MainColor, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.5f, 0.4f, 35);
+                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, MainColor, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.5f, 0.4f, 35);
                     GeneralParticleHandler.SpawnParticle(blastRing);
-                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.4f, 0.3f, 35);
+                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.4f, 0.3f, 35);
                     GeneralParticleHandler.SpawnParticle(blastRing2);
                 }
 
@@ -121,7 +121,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                     GeneralParticleHandler.SpawnParticle(subTrail);
                 }
 
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeImpact");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeImpact");
                 SoundEngine.PlaySound(fire with { Volume = 1.25f, Pitch = 0.4f, PitchVariance = 0.15f }, Projectile.Center);
             }
         }

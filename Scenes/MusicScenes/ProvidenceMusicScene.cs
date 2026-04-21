@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.Providence;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class ProvidenceMusicScene : BaseMusicSceneEffect
     {

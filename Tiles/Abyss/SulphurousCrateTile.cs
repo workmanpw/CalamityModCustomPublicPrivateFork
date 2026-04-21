@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Fishing.SulphurCatches;
+using CalamityMod.Items.Fishing.SulphurCatches;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
+namespace CalamityMod.Tiles.Abyss
 {
     [LegacyName("AbyssalCrateTile")]
     public class SulphurousCrateTile : ModTile

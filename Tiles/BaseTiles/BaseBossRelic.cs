@@ -10,7 +10,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.BaseTiles
+namespace CalamityMod.Tiles.BaseTiles
 {
     public abstract class BaseBossRelic : ModTile
     {
@@ -34,7 +34,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.BaseTiles
         }
 
         // All relics use the same pedestal texture, this one is copied from vanilla
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/BaseTiles/RelicPedestal";
+        public override string Texture => "CalamityMod/Tiles/BaseTiles/RelicPedestal";
 
         public override void Load()
         {

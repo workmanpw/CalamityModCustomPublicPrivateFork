@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     [Autoload(Side = ModSide.Client)]
     public sealed partial class TileBlendMergeSystem : ModSystem

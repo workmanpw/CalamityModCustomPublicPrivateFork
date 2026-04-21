@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Tools
+namespace CalamityMod.Items.Tools
 {
     public class WulfrumDiggingTurtle : ModItem, ILocalizedModType
     {

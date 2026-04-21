@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class ExecutionersBladeStealthProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/ExecutionersBlade";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/ExecutionersBlade";
 
         public override void SetStaticDefaults()
         {
@@ -42,7 +42,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public override void PostDraw(Color lightColor)
         {
             Vector2 origin = new Vector2(32f, 32f);
-            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/ExecutionersBladeGlow").Value, Projectile.Center - Main.screenPosition, null, Color.White, Projectile.rotation, origin, 1f, SpriteEffects.None, 0);
+            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/ExecutionersBladeGlow").Value, Projectile.Center - Main.screenPosition, null, Color.White, Projectile.rotation, origin, 1f, SpriteEffects.None, 0);
         }
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) => target.AddBuff(ModContent.BuffType<GodSlayerInferno>(), 240);

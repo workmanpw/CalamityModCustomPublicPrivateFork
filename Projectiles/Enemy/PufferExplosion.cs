@@ -1,15 +1,15 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
+namespace CalamityMod.Projectiles.Enemy
 {
     public class PufferExplosion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Enemy";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {

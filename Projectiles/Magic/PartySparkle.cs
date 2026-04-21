@@ -1,17 +1,17 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Magic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class PartySparkle : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/StarProj";
+        public override string Texture => "CalamityMod/Projectiles/StarProj";
 
         public float Time
         {

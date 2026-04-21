@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Dusts
+namespace CalamityMod.Dusts
 {
     public class AstralEnemy : ModDust
     {

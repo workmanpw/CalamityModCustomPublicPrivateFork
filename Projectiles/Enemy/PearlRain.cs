@@ -3,12 +3,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
+namespace CalamityMod.Projectiles.Enemy
 {
     public class PearlRain : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Enemy";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Enemy/PearlBurst";
+        public override string Texture => "CalamityMod/Projectiles/Enemy/PearlBurst";
 
         public override void SetStaticDefaults()
         {

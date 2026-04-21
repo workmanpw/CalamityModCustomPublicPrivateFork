@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Events;
+using CalamityMod.Items.Materials;
+using CalamityMod.NPCs.Yharon;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     [LegacyName("ChickenEgg", "JungleDragonEgg")]
     public class YharonEgg : ModItem, ILocalizedModType

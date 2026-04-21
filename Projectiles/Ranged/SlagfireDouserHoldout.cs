@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Dusts.WaterSplash;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Dusts;
+using CalamityMod.Dusts.WaterSplash;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -16,7 +16,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class SlagfireDouserHoldout : BaseGunHoldoutProjectile
     {
@@ -26,8 +26,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
         public static Asset<Texture2D> pistilTexture;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SlagfireDouserHoldout";
-        public static string TexturePathPistil => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SlagfireDouserPistil";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/SlagfireDouserHoldout";
+        public static string TexturePathPistil => "CalamityMod/Projectiles/Ranged/SlagfireDouserPistil";
         private float pistilJigglePhysicsTimer = 0;
 
         // Positioning overrides

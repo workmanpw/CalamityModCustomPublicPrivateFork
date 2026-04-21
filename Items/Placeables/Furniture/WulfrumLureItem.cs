@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture;
+using CalamityMod.Items.Materials;
+using CalamityMod.Tiles.Furniture;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture
+namespace CalamityMod.Items.Placeables.Furniture
 {
     public class WulfrumLureItem : ModItem, ILocalizedModType
     {

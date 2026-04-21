@@ -1,19 +1,19 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class ValariBoomerang : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/FrostcrushValari";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/FrostcrushValari";
 
         // Used for the stealth strike
         public int TileCollideDelay = 0;
@@ -168,7 +168,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             // Stealth visuals and hit sound
             if (Projectile.Calamity().stealthStrike)
             {
-                SoundStyle freeze = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/CryogenPhaseTransitionCrack");
+                SoundStyle freeze = new("CalamityMod/Sounds/NPCHit/CryogenPhaseTransitionCrack");
                 SoundEngine.PlaySound(freeze with { Volume = 0.4f, Pitch = 1f }, Projectile.Center);
 
                 float randOffset = Main.rand.NextFloat(MathHelper.TwoPi);

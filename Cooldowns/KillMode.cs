@@ -7,7 +7,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public class KillMode : CooldownHandler
     {
@@ -16,13 +16,13 @@ namespace CalamityModCustomPublicPrivateFork.Cooldowns
         public static int cooldownMax = 300;
         public static int buffMax = 180;
         public override LocalizedText DisplayName => CalamityUtils.GetText("UI.Cooldowns.KillMode" + (instance.timeLeft > cooldownMax ? "Active" : "Cooldown"));
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/KillMode";
-        public override string OutlineTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/KillModeOutline";
-        public override string OverlayTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/KillModeOverlay";
+        public override string Texture => "CalamityMod/Cooldowns/KillMode";
+        public override string OutlineTexture => "CalamityMod/Cooldowns/KillModeOutline";
+        public override string OverlayTexture => "CalamityMod/Cooldowns/KillModeOverlay";
         public override Color OutlineColor => instance.timeLeft > cooldownMax ? Color.MediumOrchid : Color.BlueViolet;
         public override Color CooldownStartColor => instance.timeLeft > cooldownMax ? Color.Lerp(Color.Indigo, Color.DarkMagenta, (instance.timeLeft - cooldownMax) / buffMax) : Color.MediumOrchid;
         public override Color CooldownEndColor => instance.timeLeft > cooldownMax ? Color.Lerp(Color.BlueViolet, Color.DarkOrchid, (instance.timeLeft - cooldownMax) / buffMax) : Color.DarkOrchid;
-        public override SoundStyle? EndSound => new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordKillModeOffCooldown");
+        public override SoundStyle? EndSound => new("CalamityMod/Sounds/Item/DemonSwordKillModeOffCooldown");
 
         //Charge down at first, and then charge back up
         private float AdjustedCompletion => instance.timeLeft > cooldownMax ? Utils.GetLerpValue(cooldownMax, cooldownMax + buffMax, instance.timeLeft) : Utils.GetLerpValue(cooldownMax, 0, instance.timeLeft);

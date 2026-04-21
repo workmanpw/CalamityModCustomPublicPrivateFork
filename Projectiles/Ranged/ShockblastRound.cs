@@ -1,11 +1,11 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
+using CalamityMod.Projectiles.Healing;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class ShockblastRound : ModProjectile, ILocalizedModType
     {

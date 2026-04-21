@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge;
+using CalamityMod.Events;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.AquaticScourge;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class AquaticScourgeMusicScene : BaseMusicSceneEffect
     {

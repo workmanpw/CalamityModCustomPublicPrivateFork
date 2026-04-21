@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
+namespace CalamityMod.CalPlayer.Dashes
 {
     public sealed class PlayerDashManager : ModSystem
     {

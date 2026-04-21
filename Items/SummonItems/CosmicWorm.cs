@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Events;
+using CalamityMod.Items.Materials;
+using CalamityMod.NPCs.DevourerofGods;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     public class CosmicWorm : ModItem, ILocalizedModType
     {

@@ -1,15 +1,15 @@
 using System;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Items.Critters;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Items.Critters;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.NPCs.NormalNPCs;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.SunkenSea
+namespace CalamityMod.NPCs.SunkenSea
 {
     public class SeaMinnow : ModNPC
     {
@@ -44,7 +44,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SunkenSea
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.SeaMinnow")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.SeaMinnow")
             });
         }
 

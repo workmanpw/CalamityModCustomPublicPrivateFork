@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.MaceFlails;
+using CalamityMod.Projectiles.Melee.MaceFlails;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class BallOFugu : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Melee";
 
-        public static readonly SoundStyle BlowSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FuguBlow") { PitchVariance = 0.1f };
+        public static readonly SoundStyle BlowSound = new("CalamityMod/Sounds/Item/FuguBlow") { PitchVariance = 0.1f };
 
         public override void SetStaticDefaults() => ItemID.Sets.ToolTipDamageMultiplier[Type] = 2f;
         public override void SetDefaults()

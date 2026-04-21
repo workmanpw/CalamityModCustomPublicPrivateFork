@@ -1,25 +1,25 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs.AcidRain;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Projectiles.Enemy;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -30,9 +30,9 @@ using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityMod.Systems.Collections;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge
+namespace CalamityMod.NPCs.AquaticScourge
 {
     [AutoloadBossHead]
     [HasPierceResist]
@@ -100,7 +100,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 new BossBestiaryInfoElement(),
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.AquaticScourge")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.AquaticScourge")
             });
         }
 
@@ -721,7 +721,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge
                 if (!Main.LocalPlayer.dead && Main.LocalPlayer.active)
                     SoundEngine.PlaySound(Mauler.RoarSound, Main.LocalPlayer.Center);
 
-                string sulfSeaBoostKey = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.WetWormBossText";
+                string sulfSeaBoostKey = "Mods.CalamityMod.Status.Progression.WetWormBossText";
                 Color sulfSeaBoostColor = AcidRainEvent.TextColor;
 
                 CalamityUtils.BroadcastLocalizedText(sulfSeaBoostKey, sulfSeaBoostColor);

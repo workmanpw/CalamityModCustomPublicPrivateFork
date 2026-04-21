@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Paintings;
+using CalamityMod.Tiles.Furniture.Paintings;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings
+namespace CalamityMod.Items.Placeables.Furniture.Paintings
 {
     public class CalamityCanvas2024 : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Placeables";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Placeables/Furniture/Paintings/CalamityCanvas";
+        public override string Texture => "CalamityMod/Items/Placeables/Furniture/Paintings/CalamityCanvas";
 
         public override void SetDefaults()
         {

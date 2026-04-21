@@ -5,7 +5,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class StaticGlowLine : Particle
     {
@@ -24,7 +24,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public override bool UseCustomDraw => true;
         public override bool UseAdditiveBlend => true;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/GlowSpark";
+        public override string Texture => "CalamityMod/Particles/GlowSpark";
 
         public StaticGlowLine(Vector2 start, Vector2 dest, Vector2 velocity, int lifetime, float xScale, float xShrink, Color color, bool glow = true)
         {

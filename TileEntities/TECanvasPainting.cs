@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Packets;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Paintings;
+using CalamityMod.Packets;
+using CalamityMod.Tiles.Furniture.Paintings;
 using Microsoft.Xna.Framework;
 using System.IO;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.TileEntities
+namespace CalamityMod.TileEntities
 {
     public class TECanvasPainting : ModTileEntity
     {

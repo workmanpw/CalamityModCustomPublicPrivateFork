@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class MistArrowFrostMist : ModProjectile, ILocalizedModType
     {
@@ -55,10 +55,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 case 0:
                     break;
                 case 1:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/MistArrowFrostMist2").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/MistArrowFrostMist2").Value;
                     break;
                 case 2:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/MistArrowFrostMist3").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/MistArrowFrostMist3").Value;
                     break;
                 default:
                     break;

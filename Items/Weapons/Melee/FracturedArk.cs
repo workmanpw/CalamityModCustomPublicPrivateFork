@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     [LegacyName("ArkoftheAncients")]
     public class FracturedArk : ModItem, ILocalizedModType
@@ -123,8 +123,8 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 
             float barScale = 1.34f;
 
-            var barBG = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
-            var barFG = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
+            var barBG = Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
+            var barFG = Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
 
             Vector2 barOrigin = barBG.Size() * 0.5f;
             float yOffset = 23f;

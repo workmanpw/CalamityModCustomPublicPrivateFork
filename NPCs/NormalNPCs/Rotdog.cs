@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Placeables.Banners;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
+namespace CalamityMod.NPCs.NormalNPCs
 {
     public class Rotdog : ModNPC
     {
@@ -43,7 +43,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Rotdog")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Rotdog")
             });
         }
 

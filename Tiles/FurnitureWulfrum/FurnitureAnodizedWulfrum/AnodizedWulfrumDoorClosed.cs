@@ -4,7 +4,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum.FurnitureAnodizedWulfrum
+namespace CalamityMod.Tiles.FurnitureWulfrum.FurnitureAnodizedWulfrum
 {
     public class AnodizedWulfrumDoorClosed : ModTile
     {

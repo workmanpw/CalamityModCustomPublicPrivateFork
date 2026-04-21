@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
+using CalamityMod.Items.Placeables.Crags;
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
+using WallTiles = CalamityMod.Walls;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
+namespace CalamityMod.Items.Placeables.Walls
 {
     public class BrimstoneSlagWall : ModItem, ILocalizedModType
     {

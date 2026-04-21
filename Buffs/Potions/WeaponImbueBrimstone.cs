@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Potions
+namespace CalamityMod.Buffs.Potions
 {
     public class WeaponImbueBrimstone : ModBuff
     {

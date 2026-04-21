@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class SoulHarvester : ModItem, ILocalizedModType
     {

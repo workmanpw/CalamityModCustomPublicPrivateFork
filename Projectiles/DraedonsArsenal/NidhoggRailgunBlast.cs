@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class NidhoggRailgunBlast : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public int time = 0;
         public override void SetDefaults()
         {
@@ -33,7 +33,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             {
                 if (time % 3 == 0)
                 {
-                    Particle trail = new CustomSpark(Projectile.Center, Projectile.velocity * 0.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 8, 0.15f, Effects.ArsenalEffects.ArsenalGaussColor, new Vector2(1f, 2.5f), true, true, glowCenterScale: 0.7f, shrinkSpeed: 0.4f);
+                    Particle trail = new CustomSpark(Projectile.Center, Projectile.velocity * 0.2f, "CalamityMod/Particles/BloomCircle", false, 8, 0.15f, Effects.ArsenalEffects.ArsenalGaussColor, new Vector2(1f, 2.5f), true, true, glowCenterScale: 0.7f, shrinkSpeed: 0.4f);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
                 if (time % 3 == 0)
@@ -57,7 +57,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 
             if (Projectile.numHits == 0)
             {
-                Particle bolt2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleThick", false, 8, 1f, Effects.ArsenalEffects.ArsenalGaussColor * 0.6f, Vector2.One, true, true, glowOpacity: 0.5f, glowCenterScale: 1.15f, extraRotation: MathHelper.PiOver4);
+                Particle bolt2 = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/GlowSquareParticleThick", false, 8, 1f, Effects.ArsenalEffects.ArsenalGaussColor * 0.6f, Vector2.One, true, true, glowOpacity: 0.5f, glowCenterScale: 1.15f, extraRotation: MathHelper.PiOver4);
                 GeneralParticleHandler.SpawnParticle(bolt2);
 
                 foreach (Projectile p in Main.ActiveProjectiles)

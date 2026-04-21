@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityMod.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -6,14 +6,14 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class PlasmaRifle : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
 
-        public static readonly SoundStyle HeavyShotSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PlasmaRifleMain");
-        public static readonly SoundStyle FastShotSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PlasmaRifleAlt");
+        public static readonly SoundStyle HeavyShotSound = new("CalamityMod/Sounds/Item/PlasmaRifleMain");
+        public static readonly SoundStyle FastShotSound = new("CalamityMod/Sounds/Item/PlasmaRifleAlt");
 
         public override void SetStaticDefaults()
         {

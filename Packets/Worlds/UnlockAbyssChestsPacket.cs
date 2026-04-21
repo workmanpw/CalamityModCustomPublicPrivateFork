@@ -1,7 +1,7 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.World;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class UnlockAbyssChestsPacket : CalamityPacket
     {

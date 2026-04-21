@@ -5,19 +5,19 @@ using Terraria.Audio;
 using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public class BrimflameFrenzy : CooldownHandler
     {
         public static new string ID => "BrimflameFrenzy";
         public override bool ShouldDisplay => true;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/BrimflameFrenzy";
+        public override string Texture => "CalamityMod/Cooldowns/BrimflameFrenzy";
         public override Color OutlineColor => new Color(211, 124, 93);
         public override Color CooldownStartColor => Color.Lerp(new Color(107, 6, 6), new Color(228, 78, 78), 1 - instance.Completion);
         public override Color CooldownEndColor => Color.Lerp(new Color(107, 6, 6), new Color(228, 78, 78), 1 - instance.Completion);
 
-        public override SoundStyle? EndSound => new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/BrimflameRecharge");
+        public override SoundStyle? EndSound => new("CalamityMod/Sounds/Custom/AbilitySounds/BrimflameRecharge");
 
 
         //Add red eyes to the icon

@@ -2,16 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.UI.CalamitasEnchants;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.DataStructures;
+using CalamityMod.UI.CalamitasEnchants;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public static partial class CalamityUtils
     {

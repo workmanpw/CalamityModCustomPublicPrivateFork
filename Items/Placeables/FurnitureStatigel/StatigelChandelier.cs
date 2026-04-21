@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureStatigel
+namespace CalamityMod.Items.Placeables.FurnitureStatigel
 {
     public class StatigelChandelier : ModItem, ILocalizedModType
     {

@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class CustomSprite : Particle
     {
@@ -23,7 +23,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public override bool UseCustomDraw => true;
         public override bool UseAdditiveBlend => addBlend;
         public override bool Important => important;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/CuteStars";
+        public override string Texture => "CalamityMod/Particles/CuteStars";
         public override int FrameVariants => frames;
 
         public CustomSprite(Vector2 relativePosition, Vector2 velocity, int lifetime, string tex, float scale, Color color, float grav = 0f, bool AddativeBlend = true, bool needed = false, int frameCount = 1, int frame = 0)

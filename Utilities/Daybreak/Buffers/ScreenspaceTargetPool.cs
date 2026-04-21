@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
+namespace CalamityMod.Utilities.Daybreak.Buffers;
 
 /// <summary>
 ///     A <see cref="RenderTargetPool"/> that provides APIs for creating

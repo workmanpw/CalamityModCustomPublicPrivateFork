@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class YinYoLight : ModProjectile, ILocalizedModType
     {

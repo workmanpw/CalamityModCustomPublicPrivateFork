@@ -1,14 +1,14 @@
 using System;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Events;
+using CalamityMod.Items.SummonItems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
+namespace CalamityMod.NPCs.AcidRain
 {
     public class BloodwormNormal : ModNPC
     {
@@ -82,7 +82,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Bloodworm")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Bloodworm")
             });
         }
 

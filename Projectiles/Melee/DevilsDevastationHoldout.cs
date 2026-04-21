@@ -1,14 +1,14 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Packets.Entities;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Cooldowns;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs;
+using CalamityMod.Packets.Entities;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -20,7 +20,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     [PierceResistException]
     public class DevilsDevastationHoldout : BaseCustomUseStyleProjectile, ILocalizedModType
@@ -28,7 +28,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override int AssignedItemID => ModContent.ItemType<DevilsDevastation>();
 
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<DevilsDevastation>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/DevilsDevastation";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/DevilsDevastation";
         public float hitboxMult = 1.3f;
         public Color clr = Color.Lerp(Color.DeepPink, Color.Orange, 0.5f);
         public SlotId SoundSlot;
@@ -112,7 +112,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             if (lastHitTarget != null && lastHitTarget.life > 0 && lastHitTarget.active && Owner.HeldItem.type == AssignedItemID && Main.myPlayer == Projectile.owner)
             {
                 Owner.SetScreenshake(12.5f);
-                Particle blastRing = new CustomPulse(lastHitTarget.Center, Vector2.Zero, clr, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.05f, 0.6f, 20, true);
+                Particle blastRing = new CustomPulse(lastHitTarget.Center, Vector2.Zero, clr, "CalamityMod/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.05f, 0.6f, 20, true);
                 GeneralParticleHandler.SpawnParticle(blastRing);
                 for (int i = 0; i < 4; i++)
                 {
@@ -121,7 +121,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 }
                 Projectile strike = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), lastHitTarget.Center, Vector2.Zero, ModContent.ProjectileType<DirectStrike>(), (int)(Projectile.damage * 1.666f), 0f, Owner.whoAmI, lastHitTarget.whoAmI, 0);
                 strike.DamageType = DamageClass.Melee;
-                SoundStyle dieSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LanceofDestinyStrong");
+                SoundStyle dieSound = new("CalamityMod/Sounds/Item/LanceofDestinyStrong");
                 SoundEngine.PlaySound(dieSound with { Volume = 0.9f, Pitch = 0.3f }, lastHitTarget.Center);
 
                 int bonusDamage = 4000;
@@ -257,7 +257,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                     if (lastHitTarget != null)
                     {
                         useAnim = 115;
-                        SoundStyle dieSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordFinalStrike");
+                        SoundStyle dieSound = new("CalamityMod/Sounds/Item/DemonSwordFinalStrike");
                         SoundSlot = SoundEngine.PlaySound(dieSound with { Volume = 1f, Pitch = 0 }, lastHitTarget.Center);
                     }
                 }
@@ -285,14 +285,14 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                     float randRot = Main.rand.NextFloat(-30, 30);
                     Vector2 dustVel = -Vector2.One.RotatedBy(Projectile.rotation + RotationOffset + MathHelper.ToRadians(90)).RotatedByRandom(0.3f) * Main.rand.NextFloat(7, 17) - Owner.velocity * 0.8f;
                     Vector2 placement = Owner.Center + (new Vector2(Main.rand.NextFloat(70, 500) * deathFade, 0).RotatedBy(FinalRotation + MathHelper.ToRadians(-45)));
-                    GeneralParticleHandler.SpawnParticle(new CustomSpark(placement, dustVel, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 13, Main.rand.NextFloat(0.04f, 0.06f) * 10, (Main.rand.NextBool() ? Color.MediumOrchid : clr) * deathFade, new Vector2(0.9f, 1), shrinkSpeed: 0.95f));
+                    GeneralParticleHandler.SpawnParticle(new CustomSpark(placement, dustVel, "CalamityMod/Particles/BloomCircle", false, 13, Main.rand.NextFloat(0.04f, 0.06f) * 10, (Main.rand.NextBool() ? Color.MediumOrchid : clr) * deathFade, new Vector2(0.9f, 1), shrinkSpeed: 0.95f));
                 }
                 if (lastHitTarget != null && lastHitTarget.life > 0 && lastHitTarget.active)
                 {
                     float growth = (1 - (willDie ? Utils.GetLerpValue(0, postSwingCooldownMax, postSwingCooldown, true) : 1)) * 15;
                     for (int i = 0; i < 2; i++)
                     {
-                        GeneralParticleHandler.SpawnParticle(new CustomSpark(lastHitTarget.Center, Vector2.One.RotatedBy(i == 0 ? MathHelper.ToRadians(90) : 0) * Main.rand.NextFloat(-3 - growth, 3 + growth), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 13, Main.rand.NextFloat(0.04f, 0.06f) * (10 + growth), Main.rand.NextBool() ? Color.MediumOrchid : clr, new Vector2(0.7f, 1), shrinkSpeed: 0.8f));
+                        GeneralParticleHandler.SpawnParticle(new CustomSpark(lastHitTarget.Center, Vector2.One.RotatedBy(i == 0 ? MathHelper.ToRadians(90) : 0) * Main.rand.NextFloat(-3 - growth, 3 + growth), "CalamityMod/Particles/BloomCircle", false, 13, Main.rand.NextFloat(0.04f, 0.06f) * (10 + growth), Main.rand.NextBool() ? Color.MediumOrchid : clr, new Vector2(0.7f, 1), shrinkSpeed: 0.8f));
                     }
                 }
                 if (holding)
@@ -316,9 +316,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
                     if (time >= (int)(timeMax * 0.4f) && playSwingSound)
                     {
-                        SoundStyle swing = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordSwing", 2);
+                        SoundStyle swing = new("CalamityMod/Sounds/Item/DemonSwordSwing", 2);
                         SoundEngine.PlaySound(swing with { Volume = 0.85f, Pitch = Main.rand.NextFloat(-0.4f, -0.5f) }, Projectile.Center);
-                        SoundStyle swing2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeavySwing");
+                        SoundStyle swing2 = new("CalamityMod/Sounds/Item/HeavySwing");
                         SoundEngine.PlaySound(swing2 with { Volume = 0.65f, Pitch = Main.rand.NextFloat(0.2f, 0.3f) }, Projectile.Center);
                         playSwingSound = false;
                         if (isOwner)
@@ -357,7 +357,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                             float randRot = Main.rand.NextFloat(-20, -100);
                             Vector2 dustVel = (new Vector2(0, 11 * -Projectile.ai[1] * Owner.direction)).RotatedBy(FinalRotation + MathHelper.ToRadians(randRot));
                             Vector2 placement = Owner.Center + (new Vector2(560, 0).RotatedBy(FinalRotation + MathHelper.ToRadians(-45)).RotatedByRandom(0.3f));
-                            GeneralParticleHandler.SpawnParticle(new CustomSpark(placement, dustVel, "CalamityModCustomPublicPrivateFork/Particles/DemonSigilParticle", false, 33, Main.rand.NextFloat(0.43f, 0.56f), Main.rand.NextBool() ? Color.MediumOrchid : clr, new Vector2(1, 1), shrinkSpeed: 0.1f));
+                            GeneralParticleHandler.SpawnParticle(new CustomSpark(placement, dustVel, "CalamityMod/Particles/DemonSigilParticle", false, 33, Main.rand.NextFloat(0.43f, 0.56f), Main.rand.NextBool() ? Color.MediumOrchid : clr, new Vector2(1, 1), shrinkSpeed: 0.1f));
                         }
                     }   
                 }
@@ -414,9 +414,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
                 for (int i = 0; i < 2; i++)
                 {
-                    Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, Color.BlueViolet, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.7f * (i + 1), 1.3f, 18, true);
+                    Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, Color.BlueViolet, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.7f * (i + 1), 1.3f, 18, true);
                     GeneralParticleHandler.SpawnParticle(blastRing);
-                    Particle blastRing2 = new CustomPulse(target.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.35f * (i + 1), 0.8f, 18, true);
+                    Particle blastRing2 = new CustomPulse(target.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.35f * (i + 1), 0.8f, 18, true);
                     GeneralParticleHandler.SpawnParticle(blastRing2);
                 }
             }
@@ -444,20 +444,20 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             {
                 Owner.SetScreenshake(12f);
                 for (int i = 0; i < 5; i++)
-                    GeneralParticleHandler.SpawnParticle(new CustomSpark(target.Center + launchVel * 15, launchVel.RotatedBy((0.15f - 0.05f * i) * (i % 2 == 0 ? -1 : 1)) * (10 + 10 * i), "CalamityModCustomPublicPrivateFork/Particles/DemonSigilParticle", false, 11, 0.7f - 0.15f * i, Main.rand.NextBool() ? clr : Color.MediumOrchid, new Vector2(1.5f, 1), extraRotation: MathHelper.ToRadians(i % 2 == 0 ? 90 : 0), shrinkSpeed: (i % 2 == 0 ? -0.8f : 0.8f)));
+                    GeneralParticleHandler.SpawnParticle(new CustomSpark(target.Center + launchVel * 15, launchVel.RotatedBy((0.15f - 0.05f * i) * (i % 2 == 0 ? -1 : 1)) * (10 + 10 * i), "CalamityMod/Particles/DemonSigilParticle", false, 11, 0.7f - 0.15f * i, Main.rand.NextBool() ? clr : Color.MediumOrchid, new Vector2(1.5f, 1), extraRotation: MathHelper.ToRadians(i % 2 == 0 ? 90 : 0), shrinkSpeed: (i % 2 == 0 ? -0.8f : 0.8f)));
 
                 for (int i = 0; i < 20; i++)
                 {
                     float distPow = Main.rand.NextFloat(0, 15);
                     Vector2 sparkVel = launchVel.RotatedByRandom(distPow * 0.01f) * Main.rand.NextFloat(5, 35 + distPow);
-                    Particle sparks = new CustomSpark(target.Center + (Vector2.One * distPow).RotatedByRandom(MathHelper.Pi), sparkVel, "CalamityModCustomPublicPrivateFork/Particles/GlowSpark", false, Main.rand.Next(13, 20 + 1) * 2, (Main.rand.NextFloat(0.5f, 0.85f) - distPow * 0.12f) * 0.2f, (Main.rand.NextBool() ? clr : Color.BlueViolet) * 0.75f, new Vector2(1.3f, 0.4f), true, false, 0, false, shrinkSpeed: 0.5f);
+                    Particle sparks = new CustomSpark(target.Center + (Vector2.One * distPow).RotatedByRandom(MathHelper.Pi), sparkVel, "CalamityMod/Particles/GlowSpark", false, Main.rand.Next(13, 20 + 1) * 2, (Main.rand.NextFloat(0.5f, 0.85f) - distPow * 0.12f) * 0.2f, (Main.rand.NextBool() ? clr : Color.BlueViolet) * 0.75f, new Vector2(1.3f, 0.4f), true, false, 0, false, shrinkSpeed: 0.5f);
                     GeneralParticleHandler.SpawnParticle(sparks);
                 }
 
 
-                SoundStyle swing = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordInsaneImpact");
+                SoundStyle swing = new("CalamityMod/Sounds/Item/DemonSwordInsaneImpact");
                 SoundEngine.PlaySound(swing with { Volume = 0.8f, Pitch = MathHelper.Clamp(swingCount * 0.05f, -0.25f, 0.5f) }, Projectile.Center);
-                SoundStyle swing2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HellkiteBigHit1");
+                SoundStyle swing2 = new("CalamityMod/Sounds/Item/HellkiteBigHit1");
                 SoundEngine.PlaySound(swing2 with { Volume = 0.8f, Pitch = MathHelper.Clamp(swingCount * 0.025f, 0.4f, 0.65f) }, Projectile.Center);
             }
         }
@@ -472,14 +472,14 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         {
             // Only draw the projectile if the projectile's owner is currently using the item this projectile is attached to.
             Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
-            Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmearLarge");
-            Asset<Texture2D> swoosh2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularTrail");
+            Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmearLarge");
+            Asset<Texture2D> swoosh2 = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularTrail");
 
             float r = FlipAsSword ? MathHelper.ToRadians(90) : 0f;
             float deathFade = willDie ? Utils.GetLerpValue(0, postSwingCooldownMax, postSwingCooldown, true) : 1;
             if (true)
             {
-                Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineAngled");
+                Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineAngled");
                 int draws = 30;
                 for (int i = 0; i < draws; i++)
                 {

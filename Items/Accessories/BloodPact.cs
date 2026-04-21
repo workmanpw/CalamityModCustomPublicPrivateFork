@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.CalPlayer;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class BloodPact : ModItem, ILocalizedModType
     {

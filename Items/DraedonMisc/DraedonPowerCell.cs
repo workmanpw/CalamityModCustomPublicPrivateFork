@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.DraedonMisc
+namespace CalamityMod.Items.DraedonMisc
 {
     [LegacyName("PowerCell")]
     public class DraedonPowerCell : ModItem, ILocalizedModType

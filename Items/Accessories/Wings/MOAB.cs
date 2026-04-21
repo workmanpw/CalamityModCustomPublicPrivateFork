@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Wings
+namespace CalamityMod.Items.Accessories.Wings
 {
     [AutoloadEquip(EquipType.Wings)]
     public class MOAB : BaseWings

@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Walls.DraedonStructures
+namespace CalamityMod.Walls.DraedonStructures
 {
     public class LaboratoryPlateBeam : ModWall
     {

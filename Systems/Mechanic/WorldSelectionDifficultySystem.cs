@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria.GameContent.UI.Elements;
 using Terraria.IO;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Mechanic
+namespace CalamityMod.Systems.Mechanic
 {
     public class WorldSelectionDifficultySystem : ModSystem
     {

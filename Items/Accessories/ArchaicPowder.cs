@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Crags;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class ArchaicPowder : ModItem, ILocalizedModType
     {

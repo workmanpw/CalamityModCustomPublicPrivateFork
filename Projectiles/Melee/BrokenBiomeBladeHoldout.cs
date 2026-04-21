@@ -1,18 +1,18 @@
 using System;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class BrokenBiomeBladeHoldout : ModProjectile, ILocalizedModType //Visuals
     {
@@ -31,7 +31,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override void SetStaticDefaults()
         {
         }
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/BrokenBiomeBlade";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/BrokenBiomeBlade";
         public bool drawIndrawHeldProjInFrontOfHeldItemAndArms = true;
         public override void SetDefaults()
         {

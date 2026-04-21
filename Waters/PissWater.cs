@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Waters
+namespace CalamityMod.Waters
 {
     public class PissWaterflow : ModWaterfallStyle { }
 
@@ -16,7 +16,7 @@ namespace CalamityModCustomPublicPrivateFork.Waters
         public override void SetStaticDefaults()
         {
             Instance = this;
-            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityModCustomPublicPrivateFork/PissWaterflow");
+            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityMod/PissWaterflow");
             SplashDust = DustID.Water_Desert;
             DropletGore = GoreID.WaterDripDesert;
         }

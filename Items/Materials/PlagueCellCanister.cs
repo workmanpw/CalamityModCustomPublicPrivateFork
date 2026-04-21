@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Materials
+namespace CalamityMod.Items.Materials
 {
     [LegacyName("PlagueCellCluster")]
     public class PlagueCellCanister : ModItem, ILocalizedModType

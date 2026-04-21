@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class SnowflakeSparkle : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/HalfIceStar";
+        public override string Texture => "CalamityMod/Particles/HalfIceStar";
 
         public override bool UseAdditiveBlend => true;
 
@@ -49,7 +49,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public override void CustomDraw(SpriteBatch spriteBatch)
         {
             Texture2D spokesTexture = ModContent.Request<Texture2D>(Texture).Value;
-            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
             // Ajust the bloom's texture to be the same size as the star's.
             float properBloomSize = (float)spokesTexture.Height / (float)bloomTexture.Height;
             float halvedOpacity = opacity * 0.5f;

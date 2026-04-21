@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,12 +8,12 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class SamsaraSlicerProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/SamsaraSlicer";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/SamsaraSlicer";
 
         //These are the same number, but will be left as two seperate variables for future tuning purposes
         public float ReboundVelocity => 30;
@@ -136,22 +136,22 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
                     for (int i = 1; i <= 3; i++)
                     {
-                        GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, oldVelocity * MathHelper.Lerp(2f, 1f, (float)i / 3f) / 4, Color.LimeGreen, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", new Vector2(0.6f, 1f), oldVelocity.ToRotation(), 0.02f, 0.05f * i, 30));
+                        GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, oldVelocity * MathHelper.Lerp(2f, 1f, (float)i / 3f) / 4, Color.LimeGreen, "CalamityMod/Particles/SoftRoundExplosion", new Vector2(0.6f, 1f), oldVelocity.ToRotation(), 0.02f, 0.05f * i, 30));
                     }
 
                     for (int i = -10; i <= 20; i++)
                     {
-                        GeneralParticleHandler.SpawnParticle(new CustomSpark(Projectile.Center, new Vector2(i * 2, 0).RotatedBy(Projectile.velocity.ToRotation()), "CalamityModCustomPublicPrivateFork/Particles/ThinEndedLine", false, 10, Main.rand.NextFloat(0.3f, 1f), Main.rand.NextBool() ? new Color(1f, 0.8f, 0.1f) : Color.LimeGreen, new Vector2(Main.rand.NextFloat(0.4f, 1f), 1f)));
+                        GeneralParticleHandler.SpawnParticle(new CustomSpark(Projectile.Center, new Vector2(i * 2, 0).RotatedBy(Projectile.velocity.ToRotation()), "CalamityMod/Particles/ThinEndedLine", false, 10, Main.rand.NextFloat(0.3f, 1f), Main.rand.NextBool() ? new Color(1f, 0.8f, 0.1f) : Color.LimeGreen, new Vector2(Main.rand.NextFloat(0.4f, 1f), 1f)));
                     }
                 }
                 else
                 {
                     for (int i = 1; i <= 2; i++)
-                        GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, new Vector2(i == 1 ? 2 : 6, 0).RotatedBy(Projectile.velocity.ToRotation()), Color.LimeGreen, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(0.5f, 1f), Projectile.velocity.ToRotation(), 0.1f, 0.5f - (i * 0.1f), 20));
+                        GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, new Vector2(i == 1 ? 2 : 6, 0).RotatedBy(Projectile.velocity.ToRotation()), Color.LimeGreen, "CalamityMod/Particles/BloomRing", new Vector2(0.5f, 1f), Projectile.velocity.ToRotation(), 0.1f, 0.5f - (i * 0.1f), 20));
                 }
 
                 for (int i = 0; i <= 5; i++)
-                    GeneralParticleHandler.SpawnParticle(new CustomSpark(Projectile.Center, new Vector2(Main.rand.NextFloat(-2f, 2f), Main.rand.NextFloat(-10f, 10f)).RotatedBy(Projectile.velocity.ToRotation()), "CalamityModCustomPublicPrivateFork/Particles/ThinEndedLine", false, 10, Main.rand.NextFloat(0.3f, 1f), Main.rand.NextBool() ? new Color(1f, 0.8f, 0.1f) : Color.LimeGreen, new Vector2(Main.rand.NextFloat(0.4f, 1f), 1f)));
+                    GeneralParticleHandler.SpawnParticle(new CustomSpark(Projectile.Center, new Vector2(Main.rand.NextFloat(-2f, 2f), Main.rand.NextFloat(-10f, 10f)).RotatedBy(Projectile.velocity.ToRotation()), "CalamityMod/Particles/ThinEndedLine", false, 10, Main.rand.NextFloat(0.3f, 1f), Main.rand.NextBool() ? new Color(1f, 0.8f, 0.1f) : Color.LimeGreen, new Vector2(Main.rand.NextFloat(0.4f, 1f), 1f)));
             }
 
             if (Projectile.ai[0] <= 0 && Projectile.ai[0] > -4)
@@ -182,7 +182,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                 }
 
                 for (int i = 0; i <= 2; i++)
-                    GeneralParticleHandler.SpawnParticle(new CustomSpark(Projectile.Center + new Vector2(25, 0).RotatedBy(oldVelocity.ToRotation()), new Vector2(Main.rand.NextFloat(-2f, 2f), Main.rand.NextFloat(-10f, 10f)).RotatedBy(oldVelocity.ToRotation()), "CalamityModCustomPublicPrivateFork/Particles/ThinEndedLine", false, 10, Main.rand.NextFloat(0.3f, 1f), Main.rand.NextBool() ? new Color(1f, 0.8f, 0.1f) : Color.LimeGreen, new Vector2(Main.rand.NextFloat(0.4f, 1f), 1f)));
+                    GeneralParticleHandler.SpawnParticle(new CustomSpark(Projectile.Center + new Vector2(25, 0).RotatedBy(oldVelocity.ToRotation()), new Vector2(Main.rand.NextFloat(-2f, 2f), Main.rand.NextFloat(-10f, 10f)).RotatedBy(oldVelocity.ToRotation()), "CalamityMod/Particles/ThinEndedLine", false, 10, Main.rand.NextFloat(0.3f, 1f), Main.rand.NextBool() ? new Color(1f, 0.8f, 0.1f) : Color.LimeGreen, new Vector2(Main.rand.NextFloat(0.4f, 1f), 1f)));
             }
             
             if (Projectile.ai[2] > -150)
@@ -226,11 +226,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
             if (Projectile.ai[2] < 0)
             {
-                CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], new Color(0f, 0.6f, 0f, 0f), 2, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/SamsaraSlicerGlow").Value);
+                CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], new Color(0f, 0.6f, 0f, 0f), 2, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/SamsaraSlicerGlow").Value);
             }
             else
             {
-                Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/SamsaraSlicerGlow").Value, Projectile.Center - Main.screenPosition + randVec, tex.Frame(), new Color(0f, 1f, 0f, 0f), Projectile.rotation, tex.Frame().Center(), 1f, SpriteEffects.None);
+                Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/SamsaraSlicerGlow").Value, Projectile.Center - Main.screenPosition + randVec, tex.Frame(), new Color(0f, 1f, 0f, 0f), Projectile.rotation, tex.Frame().Center(), 1f, SpriteEffects.None);
             }
             return false;
         }

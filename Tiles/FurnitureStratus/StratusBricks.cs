@@ -1,11 +1,11 @@
 
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStratus
+namespace CalamityMod.Tiles.FurnitureStratus
 {
     public class StratusBricks : GlowMaskTile
     {

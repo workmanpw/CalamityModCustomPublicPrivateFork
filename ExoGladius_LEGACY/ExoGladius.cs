@@ -1,21 +1,21 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using System.Collections.Generic;
 
-namespace CalamityModCustomPublicPrivateFork.ExoGladius_LEGACY
+namespace CalamityMod.ExoGladius_LEGACY
 {
     public class ExoGladiusLegacy : ModItem
     {
         public const int OnHitIFrames = 3;
         
-        public override string Texture => "CalamityModCustomPublicPrivateFork/ExoGladius_LEGACY/ExoGladius";
+        public override string Texture => "CalamityMod/ExoGladius_LEGACY/ExoGladius";
         
         public override void SetStaticDefaults()
         {

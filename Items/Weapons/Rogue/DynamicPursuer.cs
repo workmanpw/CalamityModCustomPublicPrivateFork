@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
+namespace CalamityMod.Items.Weapons.Rogue
 {
     public class DynamicPursuer : RogueWeapon
     {

@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Events;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,12 +10,12 @@ using Terraria.GameContent;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class RavagerNuke : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public static readonly SoundStyle ExplosionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Ravager/RavagerMissileExplosion");
+        public static readonly SoundStyle ExplosionSound = new("CalamityMod/Sounds/Custom/Ravager/RavagerMissileExplosion");
         public override void SetStaticDefaults()
         {
             Main.projFrames[Type] = 5;

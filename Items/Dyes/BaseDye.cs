@@ -3,7 +3,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Dyes
+namespace CalamityMod.Items.Dyes
 {
     public abstract class BaseDye : ModItem, ILocalizedModType
     {

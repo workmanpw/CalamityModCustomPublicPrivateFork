@@ -1,17 +1,17 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.Utilities;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class SilvaCrystalExplosion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/StarProj";
+        public override string Texture => "CalamityMod/Projectiles/StarProj";
 
         public ref float OwnerCheck => ref Projectile.ai[1];
         public override void SetStaticDefaults() => ProjectileID.Sets.MinionShot[Type] = true;

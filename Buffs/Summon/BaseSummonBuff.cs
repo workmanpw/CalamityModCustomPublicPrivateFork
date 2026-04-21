@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Summon
+namespace CalamityMod.Buffs.Summon
 {
     /// <summary>
     /// An abstract class that gives the baseline code needed to make a buff dedicated to a minion.

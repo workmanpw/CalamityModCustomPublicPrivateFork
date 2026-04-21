@@ -2,12 +2,12 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class CrystalPiercerProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/CrystalPiercer";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/CrystalPiercer";
 
         public override void SetStaticDefaults()
         {

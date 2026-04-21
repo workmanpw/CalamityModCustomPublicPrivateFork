@@ -4,7 +4,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMarnite
+namespace CalamityMod.Tiles.FurnitureMarnite
 {
     public class MarniteBed : ModTile
     {

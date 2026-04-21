@@ -1,7 +1,7 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     //Based off Virid Vanguard projectile code for circling and drawing logic
     public class IgneousBlade : ModProjectile, ILocalizedModType
@@ -264,7 +264,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             Main.EntitySpriteDraw(texture, drawPosition, frame, Projectile.GetAlpha(lightColor), rotation, origin, Projectile.scale, direction, 0);
 
             // Draw the gleam at the tip of the blade.
-            Texture2D shineTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HalfStar").Value;
+            Texture2D shineTex = ModContent.Request<Texture2D>("CalamityMod/Particles/HalfStar").Value;
             Vector2 shineScale = new Vector2(1.67f, 3f) * Projectile.scale;
             shineScale *= MathHelper.Lerp(0.9f, 1.1f, (float)Math.Cos(Main.GlobalTimeWrappedHourly * 7.4f + Projectile.identity) * 0.5f + 0.5f);
 

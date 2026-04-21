@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Tools
+namespace CalamityMod.Items.Tools
 {
     public class GreatbayPickaxe : ModItem, ILocalizedModType
     {

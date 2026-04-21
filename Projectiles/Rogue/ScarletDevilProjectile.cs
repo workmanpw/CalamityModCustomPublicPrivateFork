@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityMod.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,13 +8,13 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class ScarletDevilProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
         public ref float ShootTimer => ref Projectile.ai[0];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/ScarletDevil";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/ScarletDevil";
 
         public override void SetStaticDefaults()
         {
@@ -170,7 +170,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             }
             else
             {
-                GameShaders.Misc["CalamityMod:OverpoweredTouhouSpearShader"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
+                GameShaders.Misc["CalamityMod:OverpoweredTouhouSpearShader"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
                 PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(WidthFunction, ColorFunction, (_,_) => Projectile.Size * 0.5f + Projectile.velocity.SafeNormalize(Vector2.Zero) * 86f, false,
                     shader: GameShaders.Misc["CalamityMod:OverpoweredTouhouSpearShader"]), 60);
 

@@ -3,12 +3,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Walls
+namespace CalamityMod.Walls
 {
     [LegacyName("SulphurousShaleWallSafe")]
     public class SulphurousShaleWall : ModWall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/SulphurousShaleWall";
+        public override string Texture => "CalamityMod/Walls/SulphurousShaleWall";
         public override void SetStaticDefaults()
         {
             Main.wallHouse[Type] = true;

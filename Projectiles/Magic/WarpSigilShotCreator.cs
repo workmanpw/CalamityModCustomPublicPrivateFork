@@ -3,12 +3,12 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class WarpSigilShotCreator : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public ref float FiringTimer => ref Projectile.ai[0];
         public ref float ParentIndex => ref Projectile.ai[1];
@@ -46,7 +46,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             FiringTimer++;
             if (FiringTimer % DelayBetweenShots == 0)
             {
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/UnstableCastersGauntlet/VisNeedleFire") { Volume = 0.35f, Pitch = -0.3f, PitchVariance = 0.1f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/UnstableCastersGauntlet/VisNeedleFire") { Volume = 0.35f, Pitch = -0.3f, PitchVariance = 0.1f }, Projectile.Center);
 
                 // Shoot blasts from random angles, then pass a given point to target
                 Vector2 fixedTargetOffset = Main.rand.NextVector2Circular(36f, 36f);

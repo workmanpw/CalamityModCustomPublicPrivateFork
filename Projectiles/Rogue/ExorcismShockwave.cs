@@ -4,12 +4,12 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class ExorcismShockwave : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public override void SetDefaults()
         {
             Projectile.width = 5;
@@ -47,7 +47,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         {
             Player Owner = Main.player[Projectile.owner];
             float fade = Utils.GetLerpValue(0, 9, Projectile.timeLeft, true);
-            Asset<Texture2D> him = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Jesus");
+            Asset<Texture2D> him = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Jesus");
 
             if (Projectile.Calamity().stealthStrike && Main.zenithWorld)
             {

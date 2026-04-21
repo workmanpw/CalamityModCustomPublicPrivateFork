@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
+using CalamityMod.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -7,7 +7,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureProfaned
+namespace CalamityMod.Tiles.FurnitureProfaned
 {
     public class ProfanedBench : ModTile
     {

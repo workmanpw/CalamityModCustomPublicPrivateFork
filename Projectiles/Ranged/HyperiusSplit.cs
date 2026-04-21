@@ -1,18 +1,18 @@
 using System;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class HyperiusSplit : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         private Color currentColor = Color.Black;
         private int rotDirection = 1;
         private float rotIntensity;
@@ -71,7 +71,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
             if (Projectile.localAI[0] > 4 && Projectile.localAI[0] % 2 == 0 && !photosen)
             {
-                Particle trail = new CustomSpark(Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.UnitX) * 9, -Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, trailLifetime, 0.15f, currentColor, new Vector2(0.8f, 1.3f), true, true, shrinkSpeed: 0.6f / rotIntensity, glowCenterScale: 0.8f, glowOpacity: 0.7f);
+                Particle trail = new CustomSpark(Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.UnitX) * 9, -Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomCircle", false, trailLifetime, 0.15f, currentColor, new Vector2(0.8f, 1.3f), true, true, shrinkSpeed: 0.6f / rotIntensity, glowCenterScale: 0.8f, glowOpacity: 0.7f);
                 GeneralParticleHandler.SpawnParticle(trail);
             }
 
@@ -95,7 +95,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark").Value;
 
             Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, currentColor with { A = 0 } * (photosen ? 0.4f : 1), Projectile.rotation, texture.Size() * 0.5f, new Vector2(0.9f, 1.5f) * Projectile.scale, SpriteEffects.None);
             return false;

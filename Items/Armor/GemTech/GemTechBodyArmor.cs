@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.GemTech
+namespace CalamityMod.Items.Armor.GemTech
 {
     [AutoloadEquip(EquipType.Body)]
     public class GemTechBodyArmor : ModItem, ILocalizedModType

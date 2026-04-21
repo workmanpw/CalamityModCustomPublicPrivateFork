@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class SepulcherSoul : ModProjectile, ILocalizedModType
     {

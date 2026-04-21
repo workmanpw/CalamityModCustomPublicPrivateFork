@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityMod.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -9,15 +9,15 @@ using Terraria.DataStructures;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Items.Weapons.Summon.LiliesOfFinality;
+using static CalamityMod.Items.Weapons.Summon.LiliesOfFinality;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class LiliesOfFinalityBolt : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         private ref float RandomColorOffset => ref Projectile.localAI[0];
 
@@ -101,7 +101,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             // Since we don't want all the projectiles on screen to cycle through the same colors at the same time, we set an initial offset to the color.
             RandomColorOffset = Main.rand.NextFloat(100f);
 
-            LoopingSound = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/ArianeShot") with { Volume = 0.2f }, Projectile.Center);
+            LoopingSound = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/ArianeShot") with { Volume = 0.2f }, Projectile.Center);
         }
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
@@ -127,7 +127,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 
         public override bool PreDraw(ref Color lightColor)
         {
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new PrimitiveSettings(WidthFunction, ColorFunction, (_,_) => Projectile.Size * 0.5f, pixelate: false, shader: GameShaders.Misc["CalamityMod:TrailStreak"]), 32);
             return false;
         }

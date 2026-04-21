@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,12 +12,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class SanguineFury : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_SanguineFury";
+        public override string Texture => "CalamityMod/Projectiles/Melee/TrueBiomeBlade_SanguineFury";
         private bool initialized = false;
         Vector2 direction = Vector2.Zero;
         public ref float Shred => ref Projectile.ai[0]; //How much the attack is, attacking
@@ -258,8 +258,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D handle = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/OmegaBiomeBlade").Value;
-            Texture2D blade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_SanguineFury").Value;
+            Texture2D handle = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/OmegaBiomeBlade").Value;
+            Texture2D blade = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_SanguineFury").Value;
 
             int bladeAmount = 4;
 
@@ -287,7 +287,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
             for (int i = 0; i < bladeAmount; i++) //Draw extra copies
             {
-                blade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_SanguineFuryExtra").Value;
+                blade = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_SanguineFuryExtra").Value;
 
                 drawAngle = direction.ToRotation();
 

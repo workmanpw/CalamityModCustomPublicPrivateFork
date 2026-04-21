@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor.GemTech;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.GemTech;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.DataStructures
+namespace CalamityMod.DataStructures
 {
     public class GemTechArmorState
     {

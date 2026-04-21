@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Walls
+namespace CalamityMod.Walls
 {
     [LegacyName("AstralIceWallSafe")]
     public class AstralIceWall : ModWall

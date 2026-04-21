@@ -8,7 +8,7 @@ using MonoMod.RuntimeDetour;
 using MonoMod.RuntimeDetour.HookGen;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Debugging
+namespace CalamityMod.Debugging
 {
     public static class SpritebatchDebug
     {

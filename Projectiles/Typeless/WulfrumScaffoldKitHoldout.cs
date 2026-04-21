@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Tools;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class WulfrumScaffoldKitHoldout : ModProjectile
     {
@@ -66,7 +66,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
         public static int tileGlowTime = 10;
 
         public Dictionary<Point, int> SelectedTiles = new Dictionary<Point, int>(); //Might need some cloning stuff for mp? idk, probably not
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {

@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Enums;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,7 +9,7 @@ using Terraria.DataStructures;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
+namespace CalamityMod.CalPlayer.Dashes
 {
     public class DeepDiverDash : PlayerDashEffect
     {
@@ -78,7 +78,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
 
         public override void OnHitEffects(Player player, NPC npc, IEntitySource source, ref DashHitContext hitContext)
         {
-            SoundStyle hit = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/PerfSmallHit3");
+            SoundStyle hit = new("CalamityMod/Sounds/NPCHit/PerfSmallHit3");
             SoundEngine.PlaySound(hit with { Pitch = 0.7f, Volume = 0.4f }, player.Center);
             for (int i = 0; i <= 6; i++)
             {

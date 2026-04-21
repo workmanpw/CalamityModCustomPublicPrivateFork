@@ -5,7 +5,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Materials
+namespace CalamityMod.Items.Materials
 {
     [LegacyName("EssenceofChaos")]
     public class EssenceofHavoc : ModItem, ILocalizedModType

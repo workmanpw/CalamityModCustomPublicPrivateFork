@@ -5,13 +5,13 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 
-namespace CalamityModCustomPublicPrivateFork.ExoGladius_LEGACY
+namespace CalamityMod.ExoGladius_LEGACY
 {
 	public class ExoGladSpearsLegacy : ModProjectile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/ExoGladius_LEGACY/ExoGladius";
+        public override string Texture => "CalamityMod/ExoGladius_LEGACY/ExoGladius";
 
         private Color currentColor = Color.Black;
 

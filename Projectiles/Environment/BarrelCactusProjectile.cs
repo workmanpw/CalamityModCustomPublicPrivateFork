@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Environment
+namespace CalamityMod.Projectiles.Environment
 {
     public class BarrelCactusProjectile : ModProjectile, ILocalizedModType
     {   //I tried, someone else figure it out I bet YuH could do it

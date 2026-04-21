@@ -1,7 +1,7 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityMod.CalPlayer;
+using CalamityMod.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class TaintedBladeSlasher : ModProjectile, ILocalizedModType
     {
@@ -102,7 +102,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             }
         }
         public float BladeRotationOffset => MathHelper.Lerp(MathHelper.PiOver2, 0f, Utils.GetLerpValue(0f, 0.17f, 1f - AttackCompletionRatio, true)) * -Owner.direction;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetStaticDefaults()
         {
@@ -210,15 +210,15 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D forearmTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TaintedForearm").Value;
-            Texture2D armTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TaintedArm").Value;
-            Texture2D handTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TaintedHand").Value;
+            Texture2D forearmTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/TaintedForearm").Value;
+            Texture2D armTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/TaintedArm").Value;
+            Texture2D handTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/TaintedHand").Value;
 
             // Reflect the 1st hand variant horizontally.
             SpriteEffects handDirection = SpriteEffects.None;
             if (Variant == (Owner.direction == -1).ToInt())
             {
-                handTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TaintedHand2").Value;
+                handTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/TaintedHand2").Value;
                 handDirection = SpriteEffects.FlipHorizontally;
             }
             Texture2D bladeTexture = TextureAssets.Item[(int)SwordItemID].Value;
@@ -239,7 +239,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             // Draw the trail behind the blade.
             if (Owner.itemAnimation > 0)
             {
-                GameShaders.Misc["CalamityMod:FadingSolidTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/BladeTrailUVMap"));
+                GameShaders.Misc["CalamityMod:FadingSolidTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/BladeTrailUVMap"));
                 GameShaders.Misc["CalamityMod:FadingSolidTrail"].Shader.Parameters["shouldFlip"].SetValue((float)(Owner.direction == -1).ToInt());
 
                 Vector2 bottom = BladeCenterPosition - BladeOffsetDirection * BladeFrame.Height * 0.5f - Main.screenPosition;

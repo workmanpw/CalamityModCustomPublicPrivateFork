@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Placeables.FurnitureAcidwood;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAcidwood
+namespace CalamityMod.Tiles.FurnitureAcidwood
 {
     public class AcidwoodLanternTile : ModTile
     {

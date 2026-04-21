@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.NPCs.ProfanedGuardians;
+using CalamityMod.NPCs.Providence;
+using CalamityMod.Particles;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class ProvidenceHolyRay : ModProjectile, ILocalizedModType
     {
@@ -158,11 +158,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 
             bool standardTexture = ProvUtils.StandardAI();
             Texture2D texture2D19 = standardTexture ? ModContent.Request<Texture2D>(Texture, AssetRequestMode.ImmediateLoad).Value :
-                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/ProvidenceHolyRayNight", AssetRequestMode.ImmediateLoad).Value;
-            Texture2D texture2D20 = standardTexture ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/ProvidenceHolyRayMid", AssetRequestMode.ImmediateLoad).Value :
-                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/ProvidenceHolyRayMidNight", AssetRequestMode.ImmediateLoad).Value;
-            Texture2D texture2D21 = standardTexture ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/ProvidenceHolyRayEnd", AssetRequestMode.ImmediateLoad).Value :
-                ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/ProvidenceHolyRayEndNight", AssetRequestMode.ImmediateLoad).Value;
+                ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/ProvidenceHolyRayNight", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D texture2D20 = standardTexture ? ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/ProvidenceHolyRayMid", AssetRequestMode.ImmediateLoad).Value :
+                ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/ProvidenceHolyRayMidNight", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D texture2D21 = standardTexture ? ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/ProvidenceHolyRayEnd", AssetRequestMode.ImmediateLoad).Value :
+                ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/ProvidenceHolyRayEndNight", AssetRequestMode.ImmediateLoad).Value;
 
             float rayDrawLength = Projectile.localAI[1]; //length of laser
             Color baseColor = ProvUtils.GetProjectileColor(lightColor);
@@ -173,8 +173,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
             Vector2 projCenter = Projectile.Center;
             projCenter += Projectile.velocity * Projectile.scale * texture2D19.Height / 2f;
 
-            Texture2D GlowBallTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
-            Texture2D GlowRingTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomRing").Value;
+            Texture2D GlowBallTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D GlowRingTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomRing").Value;
 
             Projectile.localAI[2]++;
 

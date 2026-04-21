@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class FinalDawnProjectile : ModProjectile, ILocalizedModType
     {
@@ -159,7 +159,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D scytheTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/FinalDawnProjectile_Glow").Value;
+            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/FinalDawnProjectile_Glow").Value;
             int height = Terraria.GameContent.TextureAssets.Projectile[Type].Value.Height / Main.projFrames[Type];
             int yStart = height * Projectile.frame;
             Main.spriteBatch.Draw(scytheTexture,

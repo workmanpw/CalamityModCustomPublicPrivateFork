@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,14 +12,14 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Perforator
+namespace CalamityMod.NPCs.Perforator
 {
     [HasPierceResist]
     [LongDistanceNetSync(SyncWith = typeof(PerforatorHeadMedium))]
     public class PerforatorTailMedium : ModNPC
     {
-        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/PerfMediumHit", 3);
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/PerfMediumDeath");
+        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/PerfMediumHit", 3);
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/PerfMediumDeath");
 
         public static Asset<Texture2D> GlowTexture;
 

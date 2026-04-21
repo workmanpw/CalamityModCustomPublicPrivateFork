@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.IO;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.CustomRecipes
+namespace CalamityMod.CustomRecipes
 {
     public static class RecipeUnlockHandler
     {

@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Projectiles.Melee.Spears;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class Brimlance : ModItem, ILocalizedModType
     {

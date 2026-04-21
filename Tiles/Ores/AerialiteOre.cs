@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,18 +7,18 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Ores
+namespace CalamityMod.Tiles.Ores
 {
     public class AerialiteOre : ModTile
     {
-        public static readonly SoundStyle MineSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/MagicalRockMine", 3);
+        public static readonly SoundStyle MineSound = new("CalamityMod/Sounds/Custom/MagicalRockMine", 3);
         internal static Texture2D GlowTexture;
 
 
         public override void SetStaticDefaults()
         {
             if (!Main.dedServ)
-                GlowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Ores/AerialiteOre", AssetRequestMode.ImmediateLoad).Value;
+                GlowTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/Ores/AerialiteOre", AssetRequestMode.ImmediateLoad).Value;
             Main.tileOreFinderPriority[Type] = 450;
             Main.tileBlockLight[Type] = false;
             Main.tileSolid[Type] = true;

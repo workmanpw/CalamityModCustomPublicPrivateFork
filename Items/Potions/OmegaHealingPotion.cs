@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Potions
+namespace CalamityMod.Items.Potions
 {
     public class OmegaHealingPotion : ModItem, ILocalizedModType
     {

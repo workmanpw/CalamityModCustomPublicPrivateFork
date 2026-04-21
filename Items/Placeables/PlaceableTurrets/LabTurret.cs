@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CustomRecipes;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Tiles.PlayerTurrets;
+using CalamityMod.CustomRecipes;
+using CalamityMod.Items.Materials;
+using CalamityMod.Tiles.PlayerTurrets;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.PlaceableTurrets
+namespace CalamityMod.Items.Placeables.PlaceableTurrets
 {
     public class LabTurret : ModItem, ILocalizedModType
     {

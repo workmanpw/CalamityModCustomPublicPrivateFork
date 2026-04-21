@@ -1,8 +1,8 @@
 
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
+using CalamityMod.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using rail;
@@ -11,12 +11,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class LyraConstellation : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public static int lifetime = 150;
 
         public override void SetStaticDefaults()
@@ -54,7 +54,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                 offset += new Vector2(35.666f, -53.166f); //this centers the constellation
                 offset.X *= Projectile.spriteDirection;
                 var star = new BloomParticle(DrawCenter + offset.RotatedBy(Projectile.rotation) * Projectile.scale - (Owner.oldVelocity * Math.Clamp(offset.Length() * 0.001f, 0, 1)), Vector2.Zero, Color.SkyBlue * ((Owner.miscCounter + flashOffset) % flashMod < 5 ? 0.75f : 1f), StarScale * intensity, StarScale * intensity, 2, false);
-                var star2 = new CustomSpark(DrawCenter + offset.RotatedBy(Projectile.rotation) * Projectile.scale - (Owner.oldVelocity * Math.Clamp(offset.Length() * 0.001f, 0, 1)), Vector2.UnitX.RotatedBy(MathHelper.Pi * ((Owner.miscCounter + flashOffset) / 300f)) * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/Sparkle", false, 2, 4 * StarScale * intensity, Color.White, Vector2.One);
+                var star2 = new CustomSpark(DrawCenter + offset.RotatedBy(Projectile.rotation) * Projectile.scale - (Owner.oldVelocity * Math.Clamp(offset.Length() * 0.001f, 0, 1)), Vector2.UnitX.RotatedBy(MathHelper.Pi * ((Owner.miscCounter + flashOffset) / 300f)) * 0.1f, "CalamityMod/Particles/Sparkle", false, 2, 4 * StarScale * intensity, Color.White, Vector2.One);
                 GeneralParticleHandler.SpawnParticle(star);
                 GeneralParticleHandler.SpawnParticle(star2);
             }

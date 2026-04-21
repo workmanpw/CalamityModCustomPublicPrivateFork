@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureOtherworldly
+namespace CalamityMod.Items.Placeables.FurnitureOtherworldly
 {
     [LegacyName("OccultBookcase")]
     public class OtherworldlyBookcase : ModItem, ILocalizedModType

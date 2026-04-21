@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     [LegacyName("Regenator")]
     public class Regenerator : ModItem, ILocalizedModType

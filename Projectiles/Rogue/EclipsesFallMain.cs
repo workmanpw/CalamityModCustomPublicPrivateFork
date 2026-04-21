@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class EclipsesFallMain : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/EclipsesFall";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/EclipsesFall";
 
         // these also affect KB
         public static float RainDamageMult = 0.4f;

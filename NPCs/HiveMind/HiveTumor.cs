@@ -4,7 +4,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.HiveMind
+namespace CalamityMod.NPCs.HiveMind
 {
     public class HiveTumor : ModNPC
     {
@@ -41,7 +41,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.HiveMind
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundCorruption,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.HiveTumor")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.HiveTumor")
             });
         }
 

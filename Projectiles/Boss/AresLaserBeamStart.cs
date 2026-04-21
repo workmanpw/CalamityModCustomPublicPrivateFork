@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityMod.Dusts;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.ExoMechs.Ares;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class AresLaserBeamStart : ModProjectile, ILocalizedModType
     {
@@ -150,8 +150,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
                 return false;
 
             Texture2D beamStart = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D beamMiddle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/AresLaserBeamMiddle", AssetRequestMode.ImmediateLoad).Value;
-            Texture2D beamEnd = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/AresLaserBeamEnd", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D beamMiddle = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/AresLaserBeamMiddle", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D beamEnd = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/AresLaserBeamEnd", AssetRequestMode.ImmediateLoad).Value;
 
             float drawLength = Projectile.localAI[1];
             Color color = new Color(250, 250, 250, 100);

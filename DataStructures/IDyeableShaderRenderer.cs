@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.DataStructures
+namespace CalamityMod.DataStructures
 {
     /// <summary>
     /// Allows for custom shader drawing used by accessories or armor set bonuses to have dyes applied to them.

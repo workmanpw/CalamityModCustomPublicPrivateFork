@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     [LegacyName("CalamitasInferno")]
     public class LashesofChaos : ModItem, ILocalizedModType

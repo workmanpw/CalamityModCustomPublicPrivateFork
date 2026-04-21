@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityMod.Events;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.Providence;
+using CalamityMod.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     [LegacyName("ProfanedCoreUnlimited")]
     public class ProfanedCore : ModItem, ILocalizedModType

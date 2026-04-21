@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.NPCs.ExoMechs.Ares;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -12,11 +12,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
+namespace CalamityMod.NPCs.NormalNPCs
 {
     public class Sunskater : ModNPC
     {
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/Sunskater") { Volume = 0.9f };
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/Sunskater") { Volume = 0.9f };
 
         private bool hasBeenHit = false;
 
@@ -53,7 +53,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Sky,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Sunskater")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Sunskater")
             });
         }
 

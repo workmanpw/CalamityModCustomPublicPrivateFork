@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityMod.Enums;
+using CalamityMod.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,13 +7,13 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class LiliesOfEternityBullet : ModProjectile, ILocalizedModType, IPixelatedPrimitiveRenderer
     {
         public new string LocalizationCategory => "Projectiles.Summon";
         
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetStaticDefaults()
         {
@@ -63,7 +63,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 
         public void RenderPixelatedPrimitives(SpriteBatch spriteBatch, GeneralDrawLayer layer)
         {
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(PrimitiveWidthFunction, PrimitiveColorFunction, (_,_) => Projectile.Size * 0.5f, pixelate: true, shader: GameShaders.Misc["CalamityMod:TrailStreak"]));
         }
     }

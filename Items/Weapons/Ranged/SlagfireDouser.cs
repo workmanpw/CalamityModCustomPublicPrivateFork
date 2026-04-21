@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class SlagfireDouser : ModItem, ILocalizedModType
     {
@@ -23,7 +23,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.noMelee = true;
             Item.knockBack = 2f;
-            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire") with { Volume = .4f, Pitch = -.95f, PitchVariance = 0.1f };
+            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/DudFire") with { Volume = .4f, Pitch = -.95f, PitchVariance = 0.1f };
             Item.value = CalamityGlobalItem.RarityOrangeBuyPrice;
             Item.rare = ItemRarityID.Orange;
             Item.autoReuse = false; // Because holdout

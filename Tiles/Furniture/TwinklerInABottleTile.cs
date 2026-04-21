@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityMod.Items.Placeables.Furniture;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
+namespace CalamityMod.Tiles.Furniture
 {
     public class TwinklerInABottleTile : ModTile
     {

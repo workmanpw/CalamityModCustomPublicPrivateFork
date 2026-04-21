@@ -1,15 +1,15 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
+namespace CalamityMod.Projectiles.Turret
 {
     public class DraedonLaser : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/LaserProj";
+        public override string Texture => "CalamityMod/Projectiles/LaserProj";
 
         // The DrawBeam method relies on localAI[0] for its calculations. A different parameter won't work.
         public float TrailLength

@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.MaceFlails;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Melee.MaceFlails;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class Tumbleweed : ModItem, ILocalizedModType
     {

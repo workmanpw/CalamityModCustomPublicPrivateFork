@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class GenericBloom : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Light";
+        public override string Texture => "CalamityMod/Particles/Light";
         public bool UseAltVisual = true;
         public override bool UseAdditiveBlend => UseAltVisual;
         public override bool SetLifetime => true;

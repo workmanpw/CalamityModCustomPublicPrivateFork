@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class DaemonsFlame : ModItem, ILocalizedModType
     {
@@ -47,7 +47,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/DaemonsFlameGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Ranged/DaemonsFlameGlow").Value);
         }
 
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)

@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
-using CalamityModCustomPublicPrivateFork.Skies;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.NPCs.ExoMechs.Ares;
+using CalamityMod.Skies;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,7 +12,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class AresGaussNukeProjectile : ModProjectile, ILocalizedModType
     {
@@ -154,7 +154,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
         public override bool PreDraw(ref Color lightColor)
         {
             Main.spriteBatch.EnterShaderRegion();
-            Texture2D telegraphBase = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj").Value;
+            Texture2D telegraphBase = ModContent.Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj").Value;
 
             GameShaders.Misc["CalamityMod:CircularAoETelegraph"].UseOpacity(0.2f * MathHelper.Clamp((1 - Projectile.timeLeft / (float)timeLeft) * 8f, 0, 1));
             GameShaders.Misc["CalamityMod:CircularAoETelegraph"].UseColor(Color.Lerp(Color.Goldenrod, Color.Gold, 0.7f * (float)Math.Pow(0.5 + 0.5 * Math.Sin(Main.GlobalTimeWrappedHourly), 3)));
@@ -178,7 +178,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
             int height = texture.Height / Main.projFrames[Type];
             int drawStart = height * Projectile.frame;
             Vector2 origin = Projectile.Size / 2;
-            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/AresGaussNukeProjectileGlow").Value, Projectile.Center - Main.screenPosition, new Microsoft.Xna.Framework.Rectangle?(new Rectangle(0, drawStart, texture.Width, height)), Color.White, Projectile.rotation, origin, Projectile.scale, SpriteEffects.None, 0);
+            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/AresGaussNukeProjectileGlow").Value, Projectile.Center - Main.screenPosition, new Microsoft.Xna.Framework.Rectangle?(new Rectangle(0, drawStart, texture.Width, height)), Color.White, Projectile.rotation, origin, Projectile.scale, SpriteEffects.None, 0);
         }
 
         // Does not do damage by itself, only through the explosion

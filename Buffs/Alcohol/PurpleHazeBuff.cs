@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Alcohol
+namespace CalamityMod.Buffs.Alcohol
 {
     public class PurpleHazeBuff : ModBuff
     {

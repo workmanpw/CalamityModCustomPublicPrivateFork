@@ -1,10 +1,10 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.Projectiles.Enemy;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -16,7 +16,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
+namespace CalamityMod.NPCs.Abyss
 {
     public class ToxicMinnow : ModNPC
     {
@@ -63,7 +63,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.ToxicMinnow")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.ToxicMinnow")
             });
         }
 

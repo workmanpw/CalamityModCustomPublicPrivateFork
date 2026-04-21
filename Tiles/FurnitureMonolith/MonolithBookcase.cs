@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith
+namespace CalamityMod.Tiles.FurnitureMonolith
 {
     public class MonolithBookcase : ModTile
     {
@@ -32,7 +32,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith
             int xPos = Main.tile[i, j].TileFrameX;
             int yPos = Main.tile[i, j].TileFrameY;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureMonolith/MonolithBookcaseGlow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureMonolith/MonolithBookcaseGlow");
             Texture2D glowmask = GlowTexture.Value;
 
             Color drawColour = CalamityUtils.ApplyPaint(Main.tile[i, j].TileColor, new Color(100, 100, 100, 100));

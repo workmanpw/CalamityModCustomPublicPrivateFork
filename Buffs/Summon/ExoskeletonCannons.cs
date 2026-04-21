@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Weapons.Summon;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Summon
+namespace CalamityMod.Buffs.Summon
 {
     public class ExoskeletonCannons : ModBuff
     {

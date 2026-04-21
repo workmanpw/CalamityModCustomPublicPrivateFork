@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.NPCs.OldDuke;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class OldDukeGore : ModProjectile, ILocalizedModType
     {

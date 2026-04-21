@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
+namespace CalamityMod.Items.Weapons.Summon
 {
     public class DreadmineStaff : ModItem, ILocalizedModType
     {

@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     [PierceResistException]
     public class LeviathanTooth : ModProjectile, ILocalizedModType
@@ -71,7 +71,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                 {
                     Dust dust = Dust.NewDustPerfect(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 3 + Main.rand.NextVector2Circular(6, 6), !ChildSafety.Disabled ? DustID.Cloud : DustID.Blood, (-Projectile.velocity.SafeNormalize(Vector2.UnitX) * 4).RotatedByRandom(0.3f) * Main.rand.NextFloat(0.1f, 0.8f), 100, default, Main.rand.NextFloat(0.8f, 1.4f) * (canStick ? 1 : 1.3f));
                     dust.noGravity = true;
-                    Particle blood = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitX).RotatedByRandom(canStick ? 0.3f : 0.1f) * Main.rand.NextFloat(5f, 8f), "CalamityModCustomPublicPrivateFork/Particles/LargeBloom",
+                    Particle blood = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitX).RotatedByRandom(canStick ? 0.3f : 0.1f) * Main.rand.NextFloat(5f, 8f), "CalamityMod/Particles/LargeBloom",
                             false, 8, Main.rand.NextFloat(0.055f, 0.07f), (!ChildSafety.Disabled ? Color.CornflowerBlue : Color.Lerp(Color.DarkRed, Color.Black, Main.rand.NextFloat(0, 0.5f))) * 0.7f, new Vector2(0.7f, 1f), false, shrinkSpeed: 0.8f);
                     GeneralParticleHandler.SpawnParticle(blood);
                 }
@@ -120,7 +120,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                         Particle spark = new AltSparkParticle(Projectile.Center, (storedVelocity * 4.5f).RotatedByRandom(0.7) * Main.rand.NextFloat(0.1f, 0.8f) + new Vector2(0, -2), true, 20, 0.5f, (!ChildSafety.Disabled ? Color.CornflowerBlue : Color.DarkRed) * 0.7f);
                         GeneralParticleHandler.SpawnParticle(spark);
                     }
-                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/PerfSmallHit", 3);
+                    SoundStyle sound = new("CalamityMod/Sounds/NPCHit/PerfSmallHit", 3);
                     SoundEngine.PlaySound(sound with { Volume = 0.5f, Pitch = Main.rand.NextFloat(-0.2f, -0.3f) }, Projectile.Center);
                 }
                     
@@ -137,7 +137,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                 stuckInGround = true;
                 storedVelocity = Projectile.velocity.SafeNormalize(Vector2.UnitX);
                 Projectile.velocity = Vector2.Zero;
-                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/RavagerRockPillarHit1");
+                SoundStyle sound = new("CalamityMod/Sounds/NPCHit/RavagerRockPillarHit1");
                 SoundEngine.PlaySound(sound with { Volume = 0.25f, Pitch = Main.rand.NextFloat(-0.3f, -0.6f) }, Projectile.Center);
                 collideWithTiles = false;
             }
@@ -176,11 +176,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         {
             Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (Projectile.ai[1] == 2)
-                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/LeviathanTooth2").Value;
+                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/LeviathanTooth2").Value;
             if (Projectile.ai[1] == 3)
-                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/LeviathanTooth3").Value;
+                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/LeviathanTooth3").Value;
             if (Projectile.ai[1] == 4)
-                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/GreenWater").Value;
+                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/GreenWater").Value;
 
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition + vibrate, null, Projectile.GetAlpha(lightColor), Projectile.rotation, tex.Size() / 2f, Projectile.scale, toothDirection ? SpriteEffects.FlipHorizontally : SpriteEffects.None, 0);
             

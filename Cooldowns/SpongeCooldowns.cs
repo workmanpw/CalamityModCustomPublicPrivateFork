@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Accessories;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,10 +8,10 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.Graphics.Shaders;
 using Terraria.Localization;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public class SpongeDurability : CooldownHandler
     {
@@ -24,9 +24,9 @@ namespace CalamityModCustomPublicPrivateFork.Cooldowns
         public override bool CanTickDown => !instance.player.Calamity().sponge || instance.timeLeft <= 0;
         public override bool ShouldDisplay => instance.player.Calamity().sponge;
         public override LocalizedText DisplayName => GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/SpongeDurability";
-        public override string OutlineTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/SpongeOutline";
-        public override string OverlayTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/SpongeOverlay";
+        public override string Texture => "CalamityMod/Cooldowns/SpongeDurability";
+        public override string OutlineTexture => "CalamityMod/Cooldowns/SpongeOutline";
+        public override string OverlayTexture => "CalamityMod/Cooldowns/SpongeOverlay";
         public override Color OutlineColor => new Color(133, 204, 237);
         public override Color CooldownStartColor => Color.Lerp(ringColorLerpStart, ringColorLerpEnd, instance.Completion);
         public override Color CooldownEndColor => Color.Lerp(ringColorLerpStart, ringColorLerpEnd, instance.Completion);
@@ -81,9 +81,9 @@ namespace CalamityModCustomPublicPrivateFork.Cooldowns
         public static new string ID => "SpongeRecharge";
         public override bool ShouldDisplay => true;
         public override LocalizedText DisplayName => GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/SpongeRecharge";
-        public override string OutlineTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/SpongeOutline";
-        public override string OverlayTexture => "CalamityModCustomPublicPrivateFork/Cooldowns/SpongeOverlay";
+        public override string Texture => "CalamityMod/Cooldowns/SpongeRecharge";
+        public override string OutlineTexture => "CalamityMod/Cooldowns/SpongeOutline";
+        public override string OverlayTexture => "CalamityMod/Cooldowns/SpongeOverlay";
         public override bool SavedWithPlayer => false;
         public override bool PersistsThroughDeath => false;
         public override Color OutlineColor => new Color(133, 204, 237);

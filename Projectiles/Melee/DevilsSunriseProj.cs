@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,14 +10,14 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     [PierceResistException]
     public class DevilsSunriseProj : ModProjectile
     {
-        public static readonly SoundStyle HitSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MantisSwipe", 2) with { Pitch = 0.8f };
-        public static readonly SoundStyle FullChargeSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/HellbornImpact");
-        public static readonly SoundStyle ThrowSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SwingMid") with { Pitch = 1.2f };
+        public static readonly SoundStyle HitSound = new SoundStyle("CalamityMod/Sounds/Item/MantisSwipe", 2) with { Pitch = 0.8f };
+        public static readonly SoundStyle FullChargeSound = new SoundStyle("CalamityMod/Sounds/Item/HellbornImpact");
+        public static readonly SoundStyle ThrowSound = new SoundStyle("CalamityMod/Sounds/Item/SwingMid") with { Pitch = 1.2f };
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<DevilsSunrise>();
 
         public ref float Timer => ref Projectile.ai[1];

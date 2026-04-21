@@ -1,6 +1,6 @@
 using Terraria.ModLoader.Default;
 
-namespace CalamityModCustomPublicPrivateFork.TileEntities
+namespace CalamityMod.TileEntities
 {
     /// Copied from ExampleMod for documentation if needed for later
     /// <summary>

@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -7,11 +7,11 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.ExoGladius_LEGACY
+namespace CalamityMod.ExoGladius_LEGACY
 {
     public class ExoGladiusBeamLegacy : ModProjectile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/ExoGladius_LEGACY/ExoGladius";
+        public override string Texture => "CalamityMod/ExoGladius_LEGACY/ExoGladius";
 
         private int penetrationAmt = 6;
         private Color currentColor = Color.Black;

@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurniturePlaguedPlate
+namespace CalamityMod.Tiles.FurniturePlaguedPlate
 {
     public class PlaguedPlateBasin : ModTile
     {

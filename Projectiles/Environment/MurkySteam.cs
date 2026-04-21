@@ -1,18 +1,18 @@
-using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityMod.DataStructures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Environment
+namespace CalamityMod.Projectiles.Environment
 {
     public class MurkySteam : ModProjectile, IAdditiveDrawer, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
         public const int Lifetime = 90;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/MinionPlasmaGas";
+        public override string Texture => "CalamityMod/Projectiles/Summon/SmallAresArms/MinionPlasmaGas";
 
         public override void SetStaticDefaults()
         {

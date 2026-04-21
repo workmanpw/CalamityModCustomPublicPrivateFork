@@ -1,11 +1,11 @@
 using System;
 using System.Reflection;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityMod.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public static partial class CalamityUtils
     {

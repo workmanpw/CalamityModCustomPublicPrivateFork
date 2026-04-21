@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityMod.Projectiles.Summon;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Summon
+namespace CalamityMod.Buffs.Summon
 {
     public class TacticalPlagueEngineBuff : BaseSummonBuff
     {

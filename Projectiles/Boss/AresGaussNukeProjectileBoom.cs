@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class AresGaussNukeProjectileBoom : BaseMassiveExplosionProjectile, ILocalizedModType
     {
@@ -28,7 +28,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 
             return opacity * 0.85f;
         }
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         private List<int> PlayersHit = new List<int>() { -1 };
 

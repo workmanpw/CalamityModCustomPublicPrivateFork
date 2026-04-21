@@ -3,11 +3,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class SemiCircularSmearVFX : Particle //Also check out Split mod!
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/SemiCircularSmear";
+        public override string Texture => "CalamityMod/Particles/SemiCircularSmear";
         public override bool UseAdditiveBlend => true;
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;

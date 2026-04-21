@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurniturePlaguedPlate
+namespace CalamityMod.Tiles.FurniturePlaguedPlate
 {
     public class PlaguedPlateDresser : ModTile
     {

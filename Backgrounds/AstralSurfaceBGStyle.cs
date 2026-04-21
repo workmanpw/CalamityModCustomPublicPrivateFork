@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Skies;
+using CalamityMod.Skies;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Backgrounds
+namespace CalamityMod.Backgrounds
 {
     //this is just a blank background, so each custom background will draw over it
     public class AstralSurfaceBGStyle : ModSurfaceBackgroundStyle
@@ -38,11 +38,11 @@ namespace CalamityModCustomPublicPrivateFork.Backgrounds
             }
         }
 
-        public override int ChooseFarTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceHorizon"); //5th layer (Horizon)
+        public override int ChooseFarTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralSurfaceHorizon"); //5th layer (Horizon)
 
-        public override int ChooseMiddleTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceFar"); //4th layer (Far)
+        public override int ChooseMiddleTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralSurfaceFar"); //4th layer (Far)
 
-        public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b) => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Skies/AstralSurfaceMiddle"); //Fallback texture, not nessesarily needed since predraw returns false
+        public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b) => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Skies/AstralSurfaceMiddle"); //Fallback texture, not nessesarily needed since predraw returns false
 
         public override bool PreDrawCloseBackground(SpriteBatch spriteBatch) //Taken from vanilla to draw the front 3 layers, edited to fit tmod and astral background needs
         {

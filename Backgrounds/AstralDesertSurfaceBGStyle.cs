@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Skies;
+using CalamityMod.Skies;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Backgrounds
+namespace CalamityMod.Backgrounds
 {
     public class AstralDesertSurfaceBGStyle : ModSurfaceBackgroundStyle
     {
@@ -32,11 +32,11 @@ namespace CalamityModCustomPublicPrivateFork.Backgrounds
             }
         }
 
-        public override int ChooseFarTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralSurfaceHorizon");
+        public override int ChooseFarTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralSurfaceHorizon");
 
-        public override int ChooseMiddleTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralDesertSurfaceFar");
+        public override int ChooseMiddleTexture() => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralDesertSurfaceFar");
 
-        public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b) => BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Skies/AstralDesertSurfaceMiddle");
+        public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b) => BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Skies/AstralDesertSurfaceMiddle");
 
         public override bool PreDrawCloseBackground(SpriteBatch spriteBatch)
         {

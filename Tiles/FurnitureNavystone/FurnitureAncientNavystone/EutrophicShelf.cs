@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone.FurnitureAncientNavystone
+namespace CalamityMod.Tiles.FurnitureNavystone.FurnitureAncientNavystone
 {
     [LegacyName("EutrophicCrafting")]
     public class EutrophicShelf : ModTile

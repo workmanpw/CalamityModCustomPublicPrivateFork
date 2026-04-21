@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     [PierceResistException]
     public class OmnibladeSwing : ModProjectile, ILocalizedModType

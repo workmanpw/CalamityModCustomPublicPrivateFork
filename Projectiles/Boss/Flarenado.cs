@@ -1,13 +1,13 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.NPCs.Yharon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class Flarenado : ModProjectile, ILocalizedModType
     {

@@ -3,12 +3,12 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class TumbleweedRolling : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/MaceFlails/TumbleweedFlail";
+        public override string Texture => "CalamityMod/Projectiles/Melee/MaceFlails/TumbleweedFlail";
 
         public static int Lifetime = 120;
         public static int Rolltime = 30; // How long it remains gravity-defiant if it doesn't hit tiles

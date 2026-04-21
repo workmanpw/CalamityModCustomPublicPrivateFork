@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityMod.NPCs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class VeriumBoltProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Ammo/VeriumBolt";
+        public override string Texture => "CalamityMod/Items/Ammo/VeriumBolt";
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.TrailCacheLength[Type] = 12;

@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class DevilsStrike : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<DevilsDevastation>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public int time = 0;
         public float fade = 0;
@@ -57,7 +57,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             }
             if (time % 6 == 0)
             {
-                GeneralParticleHandler.SpawnParticle(new CustomSpark(Projectile.Center, Projectile.velocity * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 20, Main.rand.NextFloat(0.05f, 0.055f) * deathLerp * Projectile.ai[0], (Main.rand.NextBool() ? Color.MediumOrchid : clr) * (CalamityClientConfig.Instance.Photosensitivity ? 0.25f : 0.7f), new Vector2(0.8f, 1), shrinkSpeed: 0.2f));
+                GeneralParticleHandler.SpawnParticle(new CustomSpark(Projectile.Center, Projectile.velocity * 0.1f, "CalamityMod/Particles/BloomCircle", false, 20, Main.rand.NextFloat(0.05f, 0.055f) * deathLerp * Projectile.ai[0], (Main.rand.NextBool() ? Color.MediumOrchid : clr) * (CalamityClientConfig.Instance.Photosensitivity ? 0.25f : 0.7f), new Vector2(0.8f, 1), shrinkSpeed: 0.2f));
             }
             if (angleTimer % 60 == 0 && Projectile.ai[0] > 0.7f)
             {

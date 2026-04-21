@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems;
-using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Furniture;
+using CalamityMod.Items.SummonItems;
+using CalamityMod.NPCs.AstrumDeus;
+using CalamityMod.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,14 +13,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Astral
+namespace CalamityMod.Tiles.Astral
 {
     public class AstralBeacon : ModTile
     {
         public const int Width = 5;
         public const int Height = 4;
 
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AstralBeaconUse");
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Custom/AstralBeaconUse");
 
         public override void SetStaticDefaults()
         {

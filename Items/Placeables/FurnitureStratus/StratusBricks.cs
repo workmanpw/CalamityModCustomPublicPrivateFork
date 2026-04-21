@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Ores;
+using CalamityMod.Items.Placeables.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureStratus
+namespace CalamityMod.Items.Placeables.FurnitureStratus
 {
     public class StratusBricks : ModItem, ILocalizedModType
     {

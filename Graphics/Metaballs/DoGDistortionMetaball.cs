@@ -1,14 +1,14 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Effects;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic;
+using CalamityMod.Effects;
+using CalamityMod.Enums;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Systems.Graphic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
+namespace CalamityMod.Graphics.Metaballs
 {
     public class DoGDistortionMetaball : Metaball
     {
@@ -44,7 +44,7 @@ namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
         {
             get
             {
-                yield return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj").Value;
+                yield return ModContent.Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj").Value;
             }
         }
 
@@ -82,8 +82,8 @@ namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
 
         public override void DrawInstances()
         {
-            Texture2D metaballTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle").Value;
-            Texture2D squareTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Square").Value;
+            Texture2D metaballTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicCircle").Value;
+            Texture2D squareTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/Square").Value;
 
             foreach (DistortionParticle particle in Particles)
             {

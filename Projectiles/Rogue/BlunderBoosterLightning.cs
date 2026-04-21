@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class BlunderBoosterLightning : ModProjectile, ILocalizedModType
     {
@@ -82,9 +82,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         {
             Texture2D sprite;
             if (Projectile.ai[0] == 0f)
-                sprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/BlunderBoosterLightning").Value;
+                sprite = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/BlunderBoosterLightning").Value;
             else
-                sprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/BlunderBoosterLightning2").Value;
+                sprite = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/BlunderBoosterLightning2").Value;
             Color drawColour = Color.White;
 
             Vector2 origin = new Vector2(frameWidth / 2, frameHeight / 2);

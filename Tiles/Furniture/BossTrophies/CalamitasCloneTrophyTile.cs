@@ -1,6 +1,6 @@
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.BossTrophies
+namespace CalamityMod.Tiles.Furniture.BossTrophies
 {
     [LegacyName("CalamitasTrophyTile")]
     public class CalamitasCloneTrophyTile : ModTile

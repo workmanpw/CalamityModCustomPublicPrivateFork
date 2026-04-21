@@ -1,15 +1,15 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.ExoMechs.Apollo;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class ApolloFireball : ModProjectile, ILocalizedModType
     {

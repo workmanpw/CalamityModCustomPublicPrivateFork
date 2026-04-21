@@ -3,9 +3,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Events.BossRushEvent;
+using static CalamityMod.Events.BossRushEvent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class BossRushTierAnimation : ModProjectile, ILocalizedModType
     {
@@ -18,7 +18,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
         public const int TotalFrames = 41;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/BossRushTier1Animation";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/BossRushTier1Animation";
 
         public override void SetDefaults()
         {
@@ -70,7 +70,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>($"CalamityModCustomPublicPrivateFork/Projectiles/Typeless/BossRushTier{Tier}Animation").Value;
+            Texture2D texture = ModContent.Request<Texture2D>($"CalamityMod/Projectiles/Typeless/BossRushTier{Tier}Animation").Value;
             Rectangle frame = texture.Frame(TotalFrames, 1, Projectile.frame % TotalFrames, Projectile.frame / TotalFrames);
             Vector2 origin = frame.Size() * 0.5f;
             Main.spriteBatch.Draw(texture, Projectile.Center - Main.screenPosition, frame, Projectile.GetAlpha(lightColor), 0f, origin, Projectile.scale, 0, 0f);

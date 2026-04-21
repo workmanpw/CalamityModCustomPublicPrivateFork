@@ -2,7 +2,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing
+namespace CalamityMod.Items.Fishing
 {
     public abstract class BaseQuestFish : ModItem, ILocalizedModType
     {

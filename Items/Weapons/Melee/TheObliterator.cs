@@ -1,14 +1,14 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.NPCs.DevourerofGods;
+using CalamityMod.Projectiles.Melee.Yoyos;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class TheObliterator : ModItem, ILocalizedModType
     {

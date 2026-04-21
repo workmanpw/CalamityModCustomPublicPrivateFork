@@ -5,7 +5,7 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient
+namespace CalamityMod.Tiles.Abyss.AbyssAmbient
 {
     public class BulbTree1 : GlowMaskTile
     {

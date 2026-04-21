@@ -5,7 +5,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Other
+namespace CalamityMod.NPCs.Other
 {
     public class LecherousOrb : ModNPC
     {

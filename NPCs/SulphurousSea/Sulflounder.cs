@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Items.Potions;
+using CalamityMod.NPCs.NormalNPCs;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.SulphurousSea
+namespace CalamityMod.NPCs.SulphurousSea
 {
     public class Sulflounder : ModNPC
     {
@@ -51,7 +51,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SulphurousSea
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Sulflounder")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Sulflounder")
             });
         }
 

@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.BaseItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.BaseItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -19,7 +19,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     [LegacyName("BiomeBlade")]
     public class BrokenBiomeBlade : CustomUseProjItem, ILocalizedModType

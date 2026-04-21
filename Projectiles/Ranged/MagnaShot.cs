@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class MagnaShot : ModProjectile, ILocalizedModType
     {
@@ -35,7 +35,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             Vector2 trailPos = Projectile.Center + Main.rand.NextVector2Circular(4, 4) - Projectile.velocity;
             float trailScale = Main.rand.NextFloat(0.04f, 0.05f);
             Color trailColor = Main.rand.NextBool(3) ? Color.DodgerBlue : Color.RoyalBlue;
-            Particle Trail = new CustomSpark(trailPos, Projectile.velocity.RotatedByRandom(0.03f) * Main.rand.NextFloat(0.1f, 0.4f), "CalamityModCustomPublicPrivateFork/Particles/SquareRotated", false, Main.rand.NextBool(7) ? 35 : 6, trailScale, trailColor, new Vector2(1f, 1f), true, true, glowOpacity: 0.5f, extraRotation: Main.rand.NextFloat(0, MathHelper.TwoPi));
+            Particle Trail = new CustomSpark(trailPos, Projectile.velocity.RotatedByRandom(0.03f) * Main.rand.NextFloat(0.1f, 0.4f), "CalamityMod/Particles/SquareRotated", false, Main.rand.NextBool(7) ? 35 : 6, trailScale, trailColor, new Vector2(1f, 1f), true, true, glowOpacity: 0.5f, extraRotation: Main.rand.NextFloat(0, MathHelper.TwoPi));
             GeneralParticleHandler.SpawnParticle(Trail);
             
         }

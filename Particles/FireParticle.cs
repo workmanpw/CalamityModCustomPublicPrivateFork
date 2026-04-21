@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class FireParticle : Particle
     {
@@ -12,7 +12,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public Color BrightColor;
         public Color DarkColor;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Fire";
+        public override string Texture => "CalamityMod/Particles/Fire";
 
         public FireParticle(Vector2 relativePosition, int lifetime, float scale, float relativePower, Color brightColor, Color darkColor)
         {

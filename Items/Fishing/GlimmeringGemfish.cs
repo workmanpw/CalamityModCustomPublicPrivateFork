@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing
+namespace CalamityMod.Items.Fishing
 {
     public class GlimmeringGemfish : ModItem, ILocalizedModType
     {

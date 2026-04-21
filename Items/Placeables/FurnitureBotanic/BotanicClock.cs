@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureBotanic
+namespace CalamityMod.Items.Placeables.FurnitureBotanic
 {
     public class BotanicClock : ModItem, ILocalizedModType
     {

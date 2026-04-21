@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.FluidSimulation
+namespace CalamityMod.FluidSimulation
 {
     public class FluidFieldManager : ModSystem
     {

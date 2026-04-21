@@ -4,9 +4,9 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-using BlendSidesReg = System.Collections.Generic.Dictionary<int, CalamityModCustomPublicPrivateFork.Systems.BlendSideFlags>;
+using BlendSidesReg = System.Collections.Generic.Dictionary<int, CalamityMod.Systems.BlendSideFlags>;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public sealed partial class TileBlendMergeSystem : ModSystem
     {

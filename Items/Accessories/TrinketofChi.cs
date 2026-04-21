@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.CalPlayer;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class TrinketofChi : ModItem, ILocalizedModType
     {

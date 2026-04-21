@@ -1,15 +1,15 @@
 using System.IO;
 using System.Reflection;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Packets;
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
+using CalamityMod.CalPlayer;
+using CalamityMod.Packets;
+using CalamityMod.Tiles.DraedonStructures;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.TileEntities
+namespace CalamityMod.TileEntities
 {
     public class TELabHologramProjector : ModTileEntity
     {

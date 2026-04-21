@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,17 +8,17 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using LeviathanNPC = CalamityModCustomPublicPrivateFork.NPCs.Leviathan.Leviathan;
+using LeviathanNPC = CalamityMod.NPCs.Leviathan.Leviathan;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class LeviathanSpawner : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
         internal ref float Time => ref Projectile.ai[0];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
-        public static readonly SoundStyle RumbleSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/LeviathanRumble");
+        public static readonly SoundStyle RumbleSound = new("CalamityMod/Sounds/Custom/LeviathanRumble");
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.DrawScreenCheckFluff[Type] = 10000;

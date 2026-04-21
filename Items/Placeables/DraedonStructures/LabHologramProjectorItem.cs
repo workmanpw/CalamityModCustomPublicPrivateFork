@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
+using CalamityMod.Items.DraedonMisc;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.DraedonStructures;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures
+namespace CalamityMod.Items.Placeables.DraedonStructures
 {
     public class LabHologramProjectorItem : ModItem, ILocalizedModType
     {

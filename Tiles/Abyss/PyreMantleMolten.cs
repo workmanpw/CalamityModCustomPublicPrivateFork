@@ -1,13 +1,13 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient;
+using CalamityMod.Sounds;
+using CalamityMod.Tiles.Abyss.AbyssAmbient;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
+namespace CalamityMod.Tiles.Abyss
 {
     public class PyreMantleMolten : GlowMaskTile
     {

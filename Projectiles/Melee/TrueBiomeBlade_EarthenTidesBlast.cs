@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class EarthenTidesBlast : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/PrimordialAncientProjectile";
+        public override string Texture => "CalamityMod/Projectiles/Magic/PrimordialAncientProjectile";
         public Player Owner => Main.player[Projectile.owner];
 
         public override void SetStaticDefaults() => Main.projFrames[Type] = 6;

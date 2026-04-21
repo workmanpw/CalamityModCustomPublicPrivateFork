@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.ExtraJumps;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.ExtraJumps;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Statigel
+namespace CalamityMod.Items.Armor.Statigel
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("StatigelHood")]

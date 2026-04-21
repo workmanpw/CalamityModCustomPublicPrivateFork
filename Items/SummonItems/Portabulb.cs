@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables;
+using CalamityMod.Events;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     [LegacyName("BulbofDoom")]
     public class Portabulb : ModItem, ILocalizedModType

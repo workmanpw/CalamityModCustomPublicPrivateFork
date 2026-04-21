@@ -1,49 +1,49 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.EntitySources;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.ExtraTextures;
-using CalamityModCustomPublicPrivateFork.Graphics;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Ammo;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Daedalus;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Reaver;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.FishingRods;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems;
-using CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
-using CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses;
-using CalamityModCustomPublicPrivateFork.Packets.Entities;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Projectiles.VanillaProjectileOverrides;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralDesert;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralSnow;
-using CalamityModCustomPublicPrivateFork.Tiles.Crags.Tree;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.CalPlayer;
+using CalamityMod.Dusts;
+using CalamityMod.EntitySources;
+using CalamityMod.Enums;
+using CalamityMod.Events;
+using CalamityMod.ExtraTextures;
+using CalamityMod.Graphics;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Ammo;
+using CalamityMod.Items.Armor.Daedalus;
+using CalamityMod.Items.Armor.Reaver;
+using CalamityMod.Items.Fishing.FishingRods;
+using CalamityMod.Items.Potions.Alcohol;
+using CalamityMod.Items.SummonItems;
+using CalamityMod.Items.VanillaArmorChanges;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.OldDuke;
+using CalamityMod.NPCs.PlagueEnemies;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses;
+using CalamityMod.Packets.Entities;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Projectiles.Healing;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Projectiles.VanillaProjectileOverrides;
+using CalamityMod.Systems.Collections;
+using CalamityMod.Systems.Mechanic;
+using CalamityMod.Tiles.Abyss;
+using CalamityMod.Tiles.Astral;
+using CalamityMod.Tiles.AstralDesert;
+using CalamityMod.Tiles.AstralSnow;
+using CalamityMod.Tiles.Crags.Tree;
+using CalamityMod.Tiles.FurnitureAuric;
+using CalamityMod.Tiles.Ores;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -56,9 +56,9 @@ using Terraria.ModLoader.IO;
 using Terraria.Utilities;
 using Terraria.WorldBuilding;
 using static Terraria.ModLoader.ModContent;
-using NanotechProjectile = CalamityModCustomPublicPrivateFork.Projectiles.Typeless.Nanotech;
+using NanotechProjectile = CalamityMod.Projectiles.Typeless.Nanotech;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles
+namespace CalamityMod.Projectiles
 {
     public partial class CalamityGlobalProjectile : GlobalProjectile
     {
@@ -3092,7 +3092,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles
 
                             if (owner.whoAmI == Main.myPlayer)
                             {
-                                var particle = new CustomSpark(projectile.Center, Vector2.UnitX.RotatedBy(PersistentFishingData * MathHelper.PiOver2) * 10, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 45 - speedup, 0.04f, Color.Blue, new(1, 2), shrinkSpeed: -0.2f);
+                                var particle = new CustomSpark(projectile.Center, Vector2.UnitX.RotatedBy(PersistentFishingData * MathHelper.PiOver2) * 10, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 45 - speedup, 0.04f, Color.Blue, new(1, 2), shrinkSpeed: -0.2f);
                                 GeneralParticleHandler.SpawnParticle(particle);
                             }
                         }
@@ -3125,12 +3125,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles
                                 {
                                     if (playerDir >= 0)
                                     {
-                                        var particle = new CustomSpark(projectile.Center, Vector2.UnitX.RotatedBy(playerDir * MathHelper.PiOver2) * 10, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 15, 0.04f, Color.Red, new(1, 2), shrinkSpeed: -0.2f);
+                                        var particle = new CustomSpark(projectile.Center, Vector2.UnitX.RotatedBy(playerDir * MathHelper.PiOver2) * 10, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 15, 0.04f, Color.Red, new(1, 2), shrinkSpeed: -0.2f);
                                         GeneralParticleHandler.SpawnParticle(particle);
                                     }
                                     else
                                     {
-                                        var particle = new CustomSpark(projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", false, 15, 0.06f, Color.Red, Vector2.One);
+                                        var particle = new CustomSpark(projectile.Center, Vector2.Zero, "CalamityMod/Particles/HighResHollowCircleHardEdge", false, 15, 0.06f, Color.Red, Vector2.One);
                                         GeneralParticleHandler.SpawnParticle(particle);
                                     }
                                 }
@@ -3259,7 +3259,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles
                             //When in lava, give the bobber a particle over it to show its location
                             if (projectile.lavaWet && owner.whoAmI == Main.myPlayer)
                             {
-                                var particle = new CustomSpark(projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", false, 2, 0.01f, Color.DarkGray, Vector2.One);
+                                var particle = new CustomSpark(projectile.Center, Vector2.Zero, "CalamityMod/Particles/HighResHollowCircleHardEdge", false, 2, 0.01f, Color.DarkGray, Vector2.One);
                                 GeneralParticleHandler.SpawnParticle(particle);
                             }
                             List<(Vector2, int)> validRifts = new();
@@ -3431,7 +3431,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles
                         {
                             Splash();
                             PersistentFishingData = Main.rand.Next(0, 2);
-                            var particle = new CustomSpark(projectile.Center, Vector2.UnitX.RotatedBy(PersistentFishingData * MathHelper.Pi) * 10, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 45 - speedup, 0.04f, Color.Blue, new(1, 2), shrinkSpeed: -0.2f);
+                            var particle = new CustomSpark(projectile.Center, Vector2.UnitX.RotatedBy(PersistentFishingData * MathHelper.Pi) * 10, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 45 - speedup, 0.04f, Color.Blue, new(1, 2), shrinkSpeed: -0.2f);
                             GeneralParticleHandler.SpawnParticle(particle);
                         }
                         if (CatchTime < 0 && CatchTime % totalTime == -15)
@@ -3455,12 +3455,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles
                                 {
                                     if (playerDir >= 0)
                                     {
-                                        var particle = new CustomSpark(projectile.Center, Vector2.UnitX.RotatedBy(playerDir * MathHelper.Pi) * 10, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 15, 0.04f, Color.Red, new(1, 2), shrinkSpeed: -0.2f);
+                                        var particle = new CustomSpark(projectile.Center, Vector2.UnitX.RotatedBy(playerDir * MathHelper.Pi) * 10, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 15, 0.04f, Color.Red, new(1, 2), shrinkSpeed: -0.2f);
                                         GeneralParticleHandler.SpawnParticle(particle);
                                     }
                                     else
                                     {
-                                        var particle = new CustomSpark(projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", false, 15, 0.06f, Color.Red, Vector2.One);
+                                        var particle = new CustomSpark(projectile.Center, Vector2.Zero, "CalamityMod/Particles/HighResHollowCircleHardEdge", false, 15, 0.06f, Color.Red, Vector2.One);
                                         GeneralParticleHandler.SpawnParticle(particle);
                                     }
                                 }
@@ -3578,7 +3578,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles
                         //When in lava, give the bobber a particle over it to show its location
                         if (projectile.lavaWet && owner.whoAmI == Main.myPlayer)
                         {
-                            var particle = new CustomSpark(projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", false, 2, 0.01f, Color.DarkGray, Vector2.One);
+                            var particle = new CustomSpark(projectile.Center, Vector2.Zero, "CalamityMod/Particles/HighResHollowCircleHardEdge", false, 2, 0.01f, Color.DarkGray, Vector2.One);
                             GeneralParticleHandler.SpawnParticle(particle);
                         }
                         if (projectile.ai[0] == 0)
@@ -3650,7 +3650,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles
                             if (PersistentFishingDataVector2 != Vector2.Zero && owner.miscCounter % 15 == 0 && owner.whoAmI == Main.myPlayer)
                             {
 
-                                var particle = new CustomSpark(PersistentFishingDataVector2, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", false, 25, 0.02f, Color.Green, Vector2.One);
+                                var particle = new CustomSpark(PersistentFishingDataVector2, Vector2.Zero, "CalamityMod/Particles/HighResHollowCircleHardEdge", false, 25, 0.02f, Color.Green, Vector2.One);
                                 GeneralParticleHandler.SpawnParticle(particle);
                             }
                             List<(Vector2, int)> validRifts = new();
@@ -4031,7 +4031,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles
 
                         var yeetVec = Vector2.Normalize(projectile.Center - touchedTile.ToWorldCoordinates());
                         projectile.velocity += yeetVec * 40f;
-                        SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/TeslaShoot1") with { Pitch = 0.4f });
+                        SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/ExoMechs/TeslaShoot1") with { Pitch = 0.4f });
                     }
                 }
             }
@@ -4521,7 +4521,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles
                 for (int i = 0; i < 8; i++)
                 {
                     Particle floweyFromHitGameUndertale = new CustomSpark(player.Center, Utils.DirectionTo(player.Center, player.Calamity().mouseWorld).RotatedByRandom(0.6f) * Main.rand.NextFloat(4f, 11f), 
-                        "CalamityModCustomPublicPrivateFork/Particles/MiniFlower", false, Main.rand.Next(65, 78 + 1), Main.rand.NextFloat(1.8f, 2.8f), 
+                        "CalamityMod/Particles/MiniFlower", false, Main.rand.Next(65, 78 + 1), Main.rand.NextFloat(1.8f, 2.8f), 
                         Color.Lerp(Color.HotPink, Color.Plum, Main.rand.NextFloat(0, 0.65f)), new Vector2(1f, 1f), true, extraRotation: Main.rand.NextFloat(0, MathHelper.TwoPi));
                     GeneralParticleHandler.SpawnParticle(floweyFromHitGameUndertale);
 

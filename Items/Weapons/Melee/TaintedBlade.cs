@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood;
+using CalamityMod.Items.Placeables.FurnitureAcidwood;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     [LegacyName("CausticEdge")]
     public class TaintedBlade : ModItem, ILocalizedModType

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Sounds;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
+namespace CalamityMod.Tiles.DraedonStructures
 {
     public class LaboratoryPipePlating : ModTile
     {

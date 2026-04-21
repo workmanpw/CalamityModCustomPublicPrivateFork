@@ -1,26 +1,26 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Mounts;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Schematics;
-using CalamityModCustomPublicPrivateFork.Tiles;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureVoid;
-using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Mounts;
+using CalamityMod.Items.Placeables.Furniture;
+using CalamityMod.Items.Potions.Alcohol;
+using CalamityMod.Items.Potions.Food;
+using CalamityMod.Items.SummonItems;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Schematics;
+using CalamityMod.Tiles;
+using CalamityMod.Tiles.FurnitureVoid;
+using CalamityMod.Walls;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using static CalamityModCustomPublicPrivateFork.Schematics.SchematicManager;
+using static CalamityMod.Schematics.SchematicManager;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.World
+namespace CalamityMod.World
 {
     public class UndergroundShrines
     {

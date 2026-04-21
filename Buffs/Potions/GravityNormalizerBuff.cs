@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Potions
+namespace CalamityMod.Buffs.Potions
 {
     public class GravityNormalizerBuff : ModBuff
     {

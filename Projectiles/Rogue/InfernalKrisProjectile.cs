@@ -4,12 +4,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class InfernalKrisProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/InfernalKris";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/InfernalKris";
         private bool hasSpawnedCinders = false;
 
         public override void SetStaticDefaults()

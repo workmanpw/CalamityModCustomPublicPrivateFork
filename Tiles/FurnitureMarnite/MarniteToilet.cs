@@ -9,7 +9,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMarnite
+namespace CalamityMod.Tiles.FurnitureMarnite
 {
     public class MarniteToilet : ModTile
     {

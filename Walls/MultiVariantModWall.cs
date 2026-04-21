@@ -1,6 +1,6 @@
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Walls
+namespace CalamityMod.Walls
 {
     public abstract class MultiVariantModWall : ModWall
     {

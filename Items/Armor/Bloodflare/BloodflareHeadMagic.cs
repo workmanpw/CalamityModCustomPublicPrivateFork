@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Bloodflare
+namespace CalamityMod.Items.Armor.Bloodflare
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("BloodflareHornedMask")]

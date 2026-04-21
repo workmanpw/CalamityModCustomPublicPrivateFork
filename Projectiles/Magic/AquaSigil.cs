@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.Audio;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class AquaSigil : ModProjectile, ILocalizedModType
     {
@@ -43,7 +43,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 
                 if (Projectile.localAI[0] == 35 && !spawnedProjectile)
                 {
-                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/UnstableCastersGauntlet/AquaSigilShot") { Volume = 1.5f, PitchVariance = 0.1f }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/UnstableCastersGauntlet/AquaSigilShot") { Volume = 1.5f, PitchVariance = 0.1f }, Projectile.Center);
 
                     Player owner = Main.player[Projectile.owner];
                     Vector2 targetDirection = Projectile.Center.DirectionTo(Main.MouseWorld).SafeNormalize(Vector2.UnitX);
@@ -72,7 +72,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D mainTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D blankTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/BlankSigil").Value;
+            Texture2D blankTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/BlankSigil").Value;
 
             float finalScale = Projectile.scale;
             float alphaOpacity = 1f - (Projectile.alpha / 255f);

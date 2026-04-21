@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Items.Weapons.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class ExoLightningBolt : ModProjectile, ILocalizedModType
     {
@@ -31,7 +31,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         public ref float BranchingIteration => ref Projectile.localAI[1];
 
         public virtual float LightningTurnRandomnessFactor { get; } = 2f;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/LightningProj";
+        public override string Texture => "CalamityMod/Projectiles/LightningProj";
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.DrawScreenCheckFluff[Type] = 10000;

@@ -1,16 +1,16 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Ammo;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Accessories.Vanity;
+using CalamityMod.Items.Ammo;
+using CalamityMod.Items.Placeables.Furniture.Monoliths;
+using CalamityMod.Items.Potions.Food;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -22,7 +22,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.TownNPCs
+namespace CalamityMod.NPCs.TownNPCs
 {
     [AutoloadHead]
     [LegacyName("DILF")]
@@ -75,7 +75,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.TownNPCs
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Snow,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Archmage")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Archmage")
             });
         }
 

@@ -3,11 +3,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class RoundedStarParticle : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/RoundedStar";
+        public override string Texture => "CalamityMod/Particles/RoundedStar";
 
         public float RotationSpeed;
         public float Deceleration;

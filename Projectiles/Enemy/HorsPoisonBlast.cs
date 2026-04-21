@@ -6,12 +6,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
+namespace CalamityMod.Projectiles.Enemy
 {
     public class HorsPoisonBlast : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Enemy";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/VitriolicViperSpit";
+        public override string Texture => "CalamityMod/Projectiles/Magic/VitriolicViperSpit";
         public override void SetDefaults()
         {
             Projectile.width = 6;

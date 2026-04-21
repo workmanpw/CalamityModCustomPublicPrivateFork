@@ -1,19 +1,19 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Plates;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Placeables.Ores;
+using CalamityMod.Items.Placeables.Plates;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Tools
+namespace CalamityMod.Items.Tools
 {
     public class NormalityRelocator : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Tools";
-        public static readonly SoundStyle TeleportSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NormalityRelocator", 3);
+        public static readonly SoundStyle TeleportSound = new("CalamityMod/Sounds/Item/NormalityRelocator", 3);
         public override void SetStaticDefaults()
         {
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(6, 7));

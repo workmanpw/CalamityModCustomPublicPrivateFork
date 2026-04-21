@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CalamityModCustomPublicPrivateFork.Balancing;
+using CalamityMod.Balancing;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Wings
+namespace CalamityMod.Items.Accessories.Wings
 {
     public abstract class BaseWings : ModItem, ILocalizedModType
     {

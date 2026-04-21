@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityMod.Buffs.StatDebuffs;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     [LegacyName("NuclearRod")]
     public class NuclearFuelRod : ModItem, ILocalizedModType

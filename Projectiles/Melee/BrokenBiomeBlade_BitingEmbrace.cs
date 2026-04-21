@@ -1,24 +1,24 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class BitingEmbrace : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_BitingEmbraceSmall";
+        public override string Texture => "CalamityMod/Projectiles/Melee/BrokenBiomeBlade_BitingEmbraceSmall";
 
         private bool initialized = false;
         Vector2 direction = Vector2.Zero;
@@ -208,11 +208,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D handle = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/BrokenBiomeBlade").Value;
+            Texture2D handle = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/BrokenBiomeBlade").Value;
 
             if (SwingMode != 2)
             {
-                Texture2D blade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_BitingEmbrace" + (SwingMode == 0 ? "Small" : "Big")).Value;
+                Texture2D blade = Request<Texture2D>("CalamityMod/Projectiles/Melee/BrokenBiomeBlade_BitingEmbrace" + (SwingMode == 0 ? "Small" : "Big")).Value;
                 float drawAngle = rotation;
                 float drawRotation = rotation + MathHelper.PiOver4;
                 Vector2 drawOrigin = new Vector2(0f, handle.Height);
@@ -232,7 +232,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             }
             else
             {
-                Texture2D blade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_BitingEmbraceThrust").Value;
+                Texture2D blade = Request<Texture2D>("CalamityMod/Projectiles/Melee/BrokenBiomeBlade_BitingEmbraceThrust").Value;
                 Vector2 thrustDisplace = direction * (ThrustDisplaceRatio() * 60);
 
                 float drawAngle = rotation;

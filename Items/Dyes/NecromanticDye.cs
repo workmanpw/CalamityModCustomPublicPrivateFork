@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags.MiscGrabBags;
+using CalamityMod.Items.TreasureBags.MiscGrabBags;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Dyes
+namespace CalamityMod.Items.Dyes
 {
     public class NecromanticDye : BaseDye
     {
         public override ArmorShaderData ShaderDataToBind => new ArmorShaderData(Mod.Assets.Request<Effect>("Effects/Dyes/NecromanticDyeShader"), "DyePass").
-            UseColor(new Color(71, 23, 26)).UseSecondaryColor(new Color(10, 198, 255)).UseImage(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/SharpNoise"));
+            UseColor(new Color(71, 23, 26)).UseSecondaryColor(new Color(10, 198, 255)).UseImage(Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/SharpNoise"));
         public override void SafeSetStaticDefaults()
         {
             Item.ResearchUnlockCount = 3;

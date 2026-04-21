@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.DataStructures;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs
+namespace CalamityMod.Buffs.StatDebuffs
 {
     public class AbsorberAffliction : ModBuff
     {
@@ -37,7 +37,7 @@ namespace CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs
 
             if (Main.rand.NextBool(3))
             {
-                Particle fx = new CustomSpark(npcSize, Vector2.UnitY * Main.rand.NextFloat(4, -4), "CalamityModCustomPublicPrivateFork/Particles/Sparkle", false, (int)(Main.rand.Next(16, 26 + 1)), Main.rand.NextFloat(1.5f, 2f), fxColor, new Vector2(0.5f, 1.1f), extraRotation: 0, shrinkSpeed: Main.rand.NextFloat(0.1f, 0.3f) + 0.3f);
+                Particle fx = new CustomSpark(npcSize, Vector2.UnitY * Main.rand.NextFloat(4, -4), "CalamityMod/Particles/Sparkle", false, (int)(Main.rand.Next(16, 26 + 1)), Main.rand.NextFloat(1.5f, 2f), fxColor, new Vector2(0.5f, 1.1f), extraRotation: 0, shrinkSpeed: Main.rand.NextFloat(0.1f, 0.3f) + 0.3f);
                 GeneralParticleHandler.SpawnParticle(fx);
             }
 

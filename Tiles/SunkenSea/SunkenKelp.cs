@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea
+namespace CalamityMod.Tiles.SunkenSea
 {
     public class SunkenKelp : ModTile
     {

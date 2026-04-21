@@ -1,5 +1,5 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas
+namespace CalamityMod.NPCs.SupremeCalamitas
 {
     [LongDistanceNetSync(SyncWith = typeof(SepulcherHead))]
     public class SepulcherTail : ModNPC

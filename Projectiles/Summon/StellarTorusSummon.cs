@@ -1,10 +1,10 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Particles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,7 +12,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class StellarTorusSummon : ModProjectile, ILocalizedModType
     {
@@ -85,7 +85,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
                     Projectile.rotation = Projectile.rotation.AngleTowards(Projectile.DirectionTo(Target.Center).ToRotation(), .05f);
                     AnimationSpeed = 5f;
 
-                    SoundStyle laserCharge = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/AresLaserArmCharge") { Volume = .1f, Pitch = .8f, PitchVariance = .2f };
+                    SoundStyle laserCharge = new SoundStyle("CalamityMod/Sounds/Custom/ExoMechs/AresLaserArmCharge") { Volume = .1f, Pitch = .8f, PitchVariance = .2f };
                     SoundEngine.PlaySound(laserCharge, Projectile.Center);
                 }
 

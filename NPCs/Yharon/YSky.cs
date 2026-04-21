@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Events;
+using CalamityMod.Events;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Yharon
+namespace CalamityMod.NPCs.Yharon
 {
     public class YSky : CustomSky
     {

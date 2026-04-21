@@ -1,4 +1,4 @@
-namespace CalamityModCustomPublicPrivateFork.Schematics
+namespace CalamityMod.Schematics
 {
     public struct ChestItem
     {

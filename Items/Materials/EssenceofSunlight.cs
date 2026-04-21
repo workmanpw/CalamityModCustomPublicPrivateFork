@@ -5,7 +5,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Materials
+namespace CalamityMod.Items.Materials
 {
     [LegacyName("EssenceofCinder")]
     public class EssenceofSunlight : ModItem, ILocalizedModType

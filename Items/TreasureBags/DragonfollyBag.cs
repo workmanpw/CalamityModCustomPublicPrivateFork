@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Mounts;
-using CalamityModCustomPublicPrivateFork.Items.PermanentBoosters;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.NPCs.Bumblebirb;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Mounts;
+using CalamityMod.Items.PermanentBoosters;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.NPCs.Bumblebirb;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -16,7 +16,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.TreasureBags
+namespace CalamityMod.Items.TreasureBags
 {
     [LegacyName("BumblebirbBag")]
     public class DragonfollyBag : ModItem, ILocalizedModType

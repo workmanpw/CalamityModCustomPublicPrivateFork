@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureMarnite;
+using CalamityMod.Tiles.FurnitureMarnite;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMarnite
+namespace CalamityMod.Items.Placeables.FurnitureMarnite
 {
     public class MarniteDoor : ModItem, ILocalizedModType
     {

@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.VanillaProjectileOverrides
+namespace CalamityMod.Projectiles.VanillaProjectileOverrides
 {
     public static class HoundiusShootiusFireballAI
     {

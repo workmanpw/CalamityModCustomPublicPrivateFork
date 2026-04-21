@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
+using CalamityMod.Buffs.Pets;
+using CalamityMod.Items.Placeables.Crags;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Projectiles.Pets;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Pets
+namespace CalamityMod.Items.Pets
 {
     [LegacyName("RotomRemote")]
     public class TheEtomer : ModItem, ILocalizedModType
@@ -33,7 +33,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Pets
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Pets/TheEtomerGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Pets/TheEtomerGlow").Value);
         }
 
         public override void AddRecipes()

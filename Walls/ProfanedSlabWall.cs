@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
+using CalamityMod.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Walls
+namespace CalamityMod.Walls
 {
     public class ProfanedSlabWall : MultiVariantModWall
     {

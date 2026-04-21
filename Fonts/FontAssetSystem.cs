@@ -3,7 +3,7 @@ using ReLogic.Graphics;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Fonts
+namespace CalamityMod.Fonts
 {
     public sealed class FontAssetSystem : ModSystem
     {

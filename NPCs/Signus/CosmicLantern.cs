@@ -1,7 +1,7 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.GameContent;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.NPCs.Signus
+namespace CalamityMod.NPCs.Signus
 {
     public class CosmicLantern : ModNPC
     {
@@ -57,7 +57,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Signus
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheUnderworld,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.CosmicLantern")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.CosmicLantern")
             });
         }
 

@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.BrimstoneElemental;
+using CalamityMod.NPCs.BrimstoneElemental;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class BrimstoneElementalMusicScene : BaseMusicSceneEffect
     {

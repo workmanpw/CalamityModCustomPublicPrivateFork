@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Plates;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.CalPlayer;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Ores;
+using CalamityMod.Items.Placeables.Plates;
+using CalamityMod.Rarities;
+using CalamityMod.Utilities.Daybreak;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -17,7 +17,7 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class ProfanedSoulArtifact : ModItem, ILocalizedModType, IDyeableShaderRenderer
     {
@@ -171,14 +171,14 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
             {
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, shieldEffect, Main.Transform);
                 // Fetch shield heat overlay texture (this is the neutrons fed to the shader)
-                HeatTex ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Neurons2");
+                HeatTex ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons2");
                 Vector2 pos = player.MountedCenter + player.gfxOffY * Vector2.UnitY - Main.screenPosition;
                 Texture2D tex = HeatTex.Value;
                 Main.spriteBatch.Draw(tex, pos, null, Color.White, 0, tex.Size() / 2f, scale, 0, 0);
 
                 //The border circle MUST be drawn after otherwise it becomes visually fucked.
                 float shieldScale = scale * 1.75f;
-                Texture2D shieldTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleOpenCircle").Value;
+                Texture2D shieldTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleOpenCircle").Value;
                 Rectangle shieldFrame = shieldTexture.Frame();
                 Vector2 origin = shieldFrame.Size() * 0.5f;
                 Main.spriteBatch.End();

@@ -1,15 +1,15 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Particles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class AtlasMunitionsAutocannonHeld : ModProjectile, ILocalizedModType
     {
@@ -309,8 +309,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             // Draw smoke.
             SmokeDrawer.DrawSet(Projectile.Center - Projectile.velocity * 24f);
 
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AtlasMunitionsAutocannonHeld").Value;
-            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AtlasMunitionsAutocannonHeldGlow").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AtlasMunitionsAutocannonHeld").Value;
+            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AtlasMunitionsAutocannonHeldGlow").Value;
             Rectangle frame = texture.Frame(1, Main.projFrames[Type], 0, Projectile.frame);
             Vector2 drawPosition = Projectile.Center - Main.screenPosition + Vector2.UnitY * Projectile.gfxOffY;
             SpriteEffects direction = Projectile.spriteDirection == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;

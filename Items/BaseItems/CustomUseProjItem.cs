@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.BaseItems
+namespace CalamityMod.Items.BaseItems
 {
     public abstract class CustomUseProjItem : ModItem
     {

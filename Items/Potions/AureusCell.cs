@@ -4,7 +4,7 @@ using Terraria.GameInput;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Potions
+namespace CalamityMod.Items.Potions
 {
     [LegacyName("AstralJelly")]
     public class AureusCell : ModItem, ILocalizedModType

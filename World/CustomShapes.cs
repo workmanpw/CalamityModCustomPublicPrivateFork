@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.World
+namespace CalamityMod.World
 {
     public static class CustomShapes
     {

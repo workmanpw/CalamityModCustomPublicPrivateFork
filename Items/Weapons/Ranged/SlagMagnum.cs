@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class SlagMagnum : ModItem, ILocalizedModType
     {

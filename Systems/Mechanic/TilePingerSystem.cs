@@ -8,7 +8,7 @@ using Terraria.Graphics.Light;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public interface IPingedTileEffect
     {

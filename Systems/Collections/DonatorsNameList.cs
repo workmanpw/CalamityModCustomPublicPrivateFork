@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Collections
+namespace CalamityMod.Systems.Collections
 {
     /// <summary>
     /// A <see cref="ModSystem"/> that stores all of Calamity's Patreon donator's usernames.

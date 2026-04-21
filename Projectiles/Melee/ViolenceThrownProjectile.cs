@@ -1,9 +1,9 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,11 +12,11 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityMod.NPCs.ExoMechs.Ares;
 using System.Linq;
 using Terraria.DataStructures;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     [PierceResistException]
     public class ViolenceThrownProjectile : ModProjectile
@@ -25,7 +25,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<Violence>();
         internal Player Owner => Main.player[Projectile.owner];
         internal ref float Time => ref Projectile.ai[0];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/Violence";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/Violence";
 
         public bool isJavelin
         {
@@ -196,7 +196,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         }
         public bool JavelinPreDraw(ref Color lightColor)
         {
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
 
             // Not cloning the points causes the below operations to be applied to the original oldPos value by reference
             // and thus causes it to be consistently added over and over, which is not intended behavior.
@@ -416,7 +416,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         }
         public bool YoyoPreDraw(ref Color lightColor)
         {
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
 
             Texture2D spearProjectile = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
 

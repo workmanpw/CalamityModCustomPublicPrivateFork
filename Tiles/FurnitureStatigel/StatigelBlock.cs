@@ -5,7 +5,7 @@ using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStatigel
+namespace CalamityMod.Tiles.FurnitureStatigel
 {
     public class StatigelBlock : ModTile
     {

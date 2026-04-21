@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Summon;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
+namespace CalamityMod.Items.Weapons.Summon
 {
     public class AmphibiansGuitar : ModItem, ILocalizedModType
     {

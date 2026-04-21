@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStratus
+namespace CalamityMod.Tiles.FurnitureStratus
 {
     [LegacyName("StratusWorkbench")]
     public class StratusWorkBenchTile : ModTile

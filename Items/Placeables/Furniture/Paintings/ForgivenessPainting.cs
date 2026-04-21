@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Paintings;
+using CalamityMod.Tiles.Furniture.Paintings;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings
+namespace CalamityMod.Items.Placeables.Furniture.Paintings
 {
     public class ForgivenessPainting : ModItem, ILocalizedModType
     {

@@ -1,11 +1,11 @@
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Dyes;
+using CalamityMod.Items.Dyes;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
+namespace CalamityMod.CalPlayer.DrawLayers
 {
     public class AngelicAllianceAuroraLayer : PlayerDrawLayer
     {

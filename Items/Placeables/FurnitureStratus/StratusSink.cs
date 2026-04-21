@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureStratus
+namespace CalamityMod.Items.Placeables.FurnitureStratus
 {
     public class StratusSink : ModItem, ILocalizedModType
     {

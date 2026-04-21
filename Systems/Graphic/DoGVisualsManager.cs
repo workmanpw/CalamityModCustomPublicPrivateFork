@@ -1,9 +1,9 @@
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Effects;
-using CalamityModCustomPublicPrivateFork.Graphics;
-using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
-using CalamityModCustomPublicPrivateFork.Skies;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
+using CalamityMod.Effects;
+using CalamityMod.Graphics;
+using CalamityMod.Graphics.Metaballs;
+using CalamityMod.Skies;
+using CalamityMod.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Graphic
+namespace CalamityMod.Systems.Graphic
 {
     public class DoGVisualsManager : ModSystem
     {
@@ -214,9 +214,9 @@ namespace CalamityModCustomPublicPrivateFork.Systems.Graphic
         private void DrawDistortionClouds_Background()
         {
             Effect rollingCloudsShader = CalamityShaders.DoGBackgroundFogShader.Value;
-            Texture2D cloudsTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/RealisticClouds").Value;
-            Texture2D distortionTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Neurons2").Value;
-            Texture2D erosionTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/HarshNoise").Value;
+            Texture2D cloudsTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/RealisticClouds").Value;
+            Texture2D distortionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons2").Value;
+            Texture2D erosionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/HarshNoise").Value;
 
             Vector2 screenSize = new(Main.screenWidth, Main.screenHeight);           
             Color darkPixelColor = Color.Lerp(Color.Lerp(Color.Black, Color.DarkGray, 0.3f), Color.Black, BackgroundLightningFill * 0.8f);
@@ -273,10 +273,10 @@ namespace CalamityModCustomPublicPrivateFork.Systems.Graphic
             Effect windsShader = CalamityShaders.DoGDistortionWindsShader.Value;
 
             Vector2 screenSize = new(Main.screenWidth, Main.screenHeight);
-            Texture2D windsTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Neurons2").Value;
-            Texture2D highlightsTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/SharpNoise").Value;
-            Texture2D distortionTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/MeltyNoise").Value;
-            Texture2D erosionTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Pebbles").Value;
+            Texture2D windsTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons2").Value;
+            Texture2D highlightsTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/SharpNoise").Value;
+            Texture2D distortionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/MeltyNoise").Value;
+            Texture2D erosionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Pebbles").Value;
 
             windsShader.Parameters["time"].SetValue(Main.GlobalTimeWrappedHourly * 1.075f);
             windsShader.Parameters["overallOpacity"].SetValue(0.8f);
@@ -324,8 +324,8 @@ namespace CalamityModCustomPublicPrivateFork.Systems.Graphic
         private void DrawDistortionClouds_Foreground()
         {
             Effect rollingCloudsShader = CalamityShaders.DoGBackgroundFogShader.Value;
-            Texture2D cloudsTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/RealisticClouds").Value;
-            Texture2D erosionTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/HarshNoise").Value;
+            Texture2D cloudsTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/RealisticClouds").Value;
+            Texture2D erosionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/HarshNoise").Value;
             Vector2 screenSize = new(Main.screenWidth, Main.screenHeight);
 
             rollingCloudsShader.Parameters["time"].SetValue(Main.GlobalTimeWrappedHourly * 2f);

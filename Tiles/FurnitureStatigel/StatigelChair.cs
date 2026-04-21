@@ -6,7 +6,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStatigel
+namespace CalamityMod.Tiles.FurnitureStatigel
 {
     public class StatigelChair : ModTile
     {

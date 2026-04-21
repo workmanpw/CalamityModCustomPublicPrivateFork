@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -10,7 +10,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class MirrorBlade : BaseSwordHoldoutItem, ILocalizedModType, IHoldShiftTooltipItem
     {

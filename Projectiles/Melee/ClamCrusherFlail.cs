@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.NPCs.SunkenSea;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class ClamCrusherFlail : ModProjectile, ILocalizedModType
     {
@@ -140,7 +140,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override bool PreDraw(ref Color lightColor)
         {
             Vector2 mountedCenter = Main.player[Projectile.owner].MountedCenter;
-            Texture2D texture2D2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/ClamCrusherChain").Value;
+            Texture2D texture2D2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/ClamCrusherChain").Value;
             Vector2 projCenter = Projectile.Center;
             Rectangle? sourceRectangle = null;
             Vector2 origin = new Vector2((float)texture2D2.Width * 0.5f, (float)texture2D2.Height * 0.5f);

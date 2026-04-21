@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.NPCs.AcidRain;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
+namespace CalamityMod.Projectiles.Enemy
 {
     public class GammaRayBurst : BaseLaserbeamProjectile, ILocalizedModType
     {
@@ -30,9 +30,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
         public override Color LaserOverlayColor => new Color(0, 200, 50, 100);
         public override Color LightCastColor => Color.White;
         public override Texture2D LaserBeginTexture => Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/AresLaserBeamMiddle", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/AresLaserBeamEnd", AssetRequestMode.ImmediateLoad).Value;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/AresLaserBeamStart";
+        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/AresLaserBeamMiddle", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/AresLaserBeamEnd", AssetRequestMode.ImmediateLoad).Value;
+        public override string Texture => "CalamityMod/Projectiles/Boss/AresLaserBeamStart";
 
         public override void SetStaticDefaults()
         {

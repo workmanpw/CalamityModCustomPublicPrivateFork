@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityMod.CalPlayer;
+using CalamityMod.Projectiles.Summon;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Summon
+namespace CalamityMod.Buffs.Summon
 {
     public class VoidConcentrationBuff : ModBuff
     {

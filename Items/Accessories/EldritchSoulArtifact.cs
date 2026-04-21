@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Plates;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Ores;
+using CalamityMod.Items.Placeables.Plates;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class EldritchSoulArtifact : ModItem, ILocalizedModType
     {

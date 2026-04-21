@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless;
+using CalamityMod.Items.Weapons.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class AeroExplosive : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Typeless/Skynamite";
+        public override string Texture => "CalamityMod/Items/Weapons/Typeless/Skynamite";
 
         public override void SetDefaults()
         {

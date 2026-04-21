@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith
+namespace CalamityMod.Tiles.FurnitureMonolith
 {
     public class MonolithTable : ModTile
     {
@@ -31,7 +31,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith
 
             int xPos = Main.tile[i, j].TileFrameX;
             int yPos = Main.tile[i, j].TileFrameY;
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureMonolith/MonolithTableGlow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureMonolith/MonolithTableGlow");
             Color drawColour = CalamityUtils.ApplyPaint(Main.tile[i, j].TileColor, new Color(100, 100, 100, 100));
             Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
             Vector2 drawOffset = new Vector2(i * 16 - Main.screenPosition.X, j * 16 - Main.screenPosition.Y) + zero;

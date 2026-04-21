@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,12 +10,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class SuperradiantSawLingering : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SuperradiantSaw";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/SuperradiantSaw";
 
         public ref float Time => ref Projectile.ai[1];
 
@@ -102,7 +102,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         {
             target.AddBuff(ModContent.BuffType<Laceration>(), 180);
             target.AddBuff(ModContent.BuffType<ElementalMix>(), 90);
-            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/SwiftSlice"), Projectile.Center);
+            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/SwiftSlice"), Projectile.Center);
 
             // SUPER EPIC AND AWESOME PARTICLES
             for (int s = 0; s < 12; s++)
@@ -127,7 +127,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
         public override void OnKill(int timeLeft)
         {
-            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/CeramicImpact", 2), Projectile.Center);
+            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/CeramicImpact", 2), Projectile.Center);
 
             for (int i = 0; i < 32; i++)
             {
@@ -141,9 +141,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
         public override bool PreDraw(ref Color lightColor)
         {
-            LargeSlash ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SuperradiantSawLargeSlash");
+            LargeSlash ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/SuperradiantSawLargeSlash");
             Texture2D largeSlashTexture = LargeSlash.Value;
-            SmallSlash ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SuperradiantSawSmallSlash");
+            SmallSlash ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/SuperradiantSawSmallSlash");
             Texture2D smallSlashTexture = SmallSlash.Value;
             Color slashColor = new Color(200, 200, 200, 100) * Projectile.Opacity;
 
@@ -172,7 +172,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             Texture2D buzzsawTexture = TextureAssets.Projectile[Type].Value;
             Main.EntitySpriteDraw(buzzsawTexture, Projectile.Center - Main.screenPosition, null, Color.White, Projectile.rotation, buzzsawTexture.Size() * 0.5f, 1f, SpriteEffects.None);
 
-            SawOutline ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SuperradiantSawOutline");
+            SawOutline ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/SuperradiantSawOutline");
             Texture2D outline = SawOutline.Value;
             Main.EntitySpriteDraw(outline, Projectile.Center - Main.screenPosition, null, Main.DiscoColor, Projectile.rotation, outline.Size() * 0.5f, 1f, SpriteEffects.None);
 

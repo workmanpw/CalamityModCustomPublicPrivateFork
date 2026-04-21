@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,15 +8,15 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class TitaniumRailgunShot : BaseLaserbeamProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/YharimsCrystalBeam";
-        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/UltimaRayStart", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/UltimaRayMid", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/UltimaRayEnd", AssetRequestMode.ImmediateLoad).Value;
+        public override string Texture => "CalamityMod/Projectiles/Magic/YharimsCrystalBeam";
+        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/UltimaRayStart", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/UltimaRayMid", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/UltimaRayEnd", AssetRequestMode.ImmediateLoad).Value;
         public override float MaxScale => 1.5f * ChargePercent;
         public override float Lifetime => 15f;
         public override float MaxLaserLength => 2200f;

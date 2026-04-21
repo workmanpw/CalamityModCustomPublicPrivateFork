@@ -1,6 +1,6 @@
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Banners
+namespace CalamityMod.Items.Placeables.Banners
 {
     [LegacyName("WulfrumPylonBanner")]
     public class WulfrumAmplifierBanner : BaseBanner

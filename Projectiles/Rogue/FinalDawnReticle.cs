@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class FinalDawnReticle : ModProjectile, ILocalizedModType
     {
@@ -56,7 +56,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D ring = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D symbol = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/FinalDawnReticleSymbol").Value;
+            Texture2D symbol = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/FinalDawnReticleSymbol").Value;
             Main.EntitySpriteDraw(symbol,
                              Projectile.Center - Main.screenPosition,
                              null,

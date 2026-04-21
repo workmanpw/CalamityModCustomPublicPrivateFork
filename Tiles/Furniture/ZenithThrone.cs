@@ -9,7 +9,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
+namespace CalamityMod.Tiles.Furniture
 {
     public class ZenithThrone : ModTile
     {

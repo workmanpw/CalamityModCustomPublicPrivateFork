@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Dusts.Furniture;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureOtherworldly
+namespace CalamityMod.Tiles.FurnitureOtherworldly
 {
     [LegacyName("OccultStone")]
     public class OtherworldlyStone : ModTile
@@ -20,7 +20,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureOtherworldly
 
         public override void SetStaticDefaults()
         {
-            ClothTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureOtherworldly/OtherworldlyStone_Cloth");
+            ClothTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureOtherworldly/OtherworldlyStone_Cloth");
 
             Main.tileSolid[Type] = true;
             Main.tileMergeDirt[Type] = false;

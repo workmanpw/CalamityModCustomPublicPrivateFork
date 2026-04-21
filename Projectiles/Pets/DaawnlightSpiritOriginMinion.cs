@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.Pets;
+using CalamityMod.Buffs.Pets;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
+namespace CalamityMod.Projectiles.Pets
 {
     public class DaawnlightSpiritOriginMinion : ModProjectile, ILocalizedModType
     {

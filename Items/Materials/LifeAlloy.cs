@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Materials
+namespace CalamityMod.Items.Materials
 {
     [LegacyName("BarofLife")]
     public class LifeAlloy : ModItem, ILocalizedModType

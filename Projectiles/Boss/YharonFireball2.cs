@@ -1,20 +1,20 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class YharonFireball2 : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/YharonFireball";
+        public override string Texture => "CalamityMod/Projectiles/Boss/YharonFireball";
 
-        public static readonly SoundStyle FireballSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Yharon/YharonFireball", 3);
+        public static readonly SoundStyle FireballSound = new("CalamityMod/Sounds/Custom/Yharon/YharonFireball", 3);
 
         private const float TimeBeforeFalling = 180f;
         private const float MaxUpwardVelocity = -24f;

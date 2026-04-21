@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureVoid;
+using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.FurnitureVoid;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureVoid
+namespace CalamityMod.Items.Placeables.FurnitureVoid
 {
     [LegacyName("VoidWorkbench")]
     public class VoidWorkBench : ModItem, ILocalizedModType

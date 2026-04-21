@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
+using CalamityMod.Tiles.Astral;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCatches
+namespace CalamityMod.Items.Fishing.AstralCatches
 {
     public class MonolithCrate : ModItem, ILocalizedModType
     {

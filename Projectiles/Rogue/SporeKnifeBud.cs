@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class SporeKnifeBud : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Summon/PlantationStaffTentacle";
+        public override string Texture => "CalamityMod/Projectiles/Summon/PlantationStaffTentacle";
 
         public bool Sticky = false;
         public static int Lifetime = 300;

@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
+using CalamityMod.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -6,11 +6,11 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
+namespace CalamityMod.Items.Weapons.Rogue
 {
     public class CursedDagger : RogueWeapon
     {
-        public static readonly SoundStyle ThrowSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/CursedDaggerThrow") { Volume = 0.3f, PitchVariance = 0.4f };
+        public static readonly SoundStyle ThrowSound = new("CalamityMod/Sounds/Item/CursedDaggerThrow") { Volume = 0.3f, PitchVariance = 0.4f };
         public override void SetDefaults()
         {
             Item.width = 14;

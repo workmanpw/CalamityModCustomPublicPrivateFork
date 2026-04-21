@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -11,7 +11,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
+namespace CalamityMod.Items.Weapons.Rogue
 {
     // Bleak, directionless slaughter.
     // A celebration of the vices that brought Her to this point.
@@ -98,8 +98,8 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
                 modPlayer.ConsumeStealthByAttacking();
                 modPlayer.focusFlurryAttackCount = FocusFlurryAttacks;
 
-                SoundStyle flurryActivationSound1 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/StygianDash");
-                SoundStyle flurryActivationSound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashCoreImpact");
+                SoundStyle flurryActivationSound1 = new("CalamityMod/Sounds/Item/StygianDash");
+                SoundStyle flurryActivationSound2 = new("CalamityMod/Sounds/Item/HeliumFlashCoreImpact");
                 float sound2Pitch = Main.rand.NextFloat(0.08f, 0.2f);
                 SoundEngine.PlaySound(flurryActivationSound1 with { Volume = 1f }, player.Center);
                 SoundEngine.PlaySound(flurryActivationSound2 with { Volume = 0.3f, Pitch = sound2Pitch }, player.Center);
@@ -151,7 +151,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
             bool focusFlurry = modPlayer.focusFlurryAttackCount > 0;
             if (focusFlurry)
             {
-                SoundStyle flurryThrowSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DemonSwordSwing2");
+                SoundStyle flurryThrowSound = new("CalamityMod/Sounds/Item/DemonSwordSwing2");
                 float pitch = Main.rand.NextFloat(-0.24f, -0.12f) + modPlayer.focusFlurryAttackCount * 0.01f;
                 SoundEngine.PlaySound(flurryThrowSound with { Volume = 0.2f, Pitch = pitch, MaxInstances = 12 }, player.Center);
 

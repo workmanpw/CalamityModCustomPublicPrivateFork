@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityMod.Enums;
+using CalamityMod.Items.Accessories;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,7 +8,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
+namespace CalamityMod.CalPlayer.Dashes
 {
     public class OrnateShieldDash : PlayerDashEffect
     {

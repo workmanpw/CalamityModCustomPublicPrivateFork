@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.DataStructures
+namespace CalamityMod.DataStructures
 {
     [ReinitializeDuringResizeArrays]
     public static class BuffDatasets

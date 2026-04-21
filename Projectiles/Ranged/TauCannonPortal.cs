@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class TauCannonPortal : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleVortex";
+        public override string Texture => "CalamityMod/ExtraTextures/GreyscaleVortex";
         public Color color1 = Color.Coral;
         public Color color2 = Color.MediumTurquoise;
         private float Scale01

@@ -2,11 +2,11 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
+namespace CalamityMod.Walls.UnsafeWalls
 {
     public class UnsafeLargeBasaltWall : MultiVariantModWall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/LargeBasaltWall";
+        public override string Texture => "CalamityMod/Walls/LargeBasaltWall";
         public override void SetStaticDefaults()
         {
             Main.wallHouse[Type] = false;

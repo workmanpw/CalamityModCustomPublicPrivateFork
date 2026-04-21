@@ -7,13 +7,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class M1GarandEmptyClip : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        internal static readonly SoundStyle BlingSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Ultrabling") { PitchVariance = 0.5f };
-        internal static readonly SoundStyle BlingHitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/UltrablingHit") { PitchVariance = 0.5f };
+        internal static readonly SoundStyle BlingSound = new("CalamityMod/Sounds/Custom/Ultrabling") { PitchVariance = 0.5f };
+        internal static readonly SoundStyle BlingHitSound = new("CalamityMod/Sounds/Custom/UltrablingHit") { PitchVariance = 0.5f };
         private static Asset<Texture2D> sheenAsset;
         private static Asset<Texture2D> bloomAsset;
 
@@ -127,10 +127,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 Main.spriteBatch.End();
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
 
-                sheenAsset ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HalfStar");
+                sheenAsset ??= ModContent.Request<Texture2D>("CalamityMod/Particles/HalfStar");
                 Texture2D shineTex = sheenAsset.Value;
 
-                bloomAsset ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+                bloomAsset ??= ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
                 Texture2D bloomTex = bloomAsset.Value;
 
                 Vector2 shineScale = new Vector2(1f, 3f - sheenOpacity * 2f);

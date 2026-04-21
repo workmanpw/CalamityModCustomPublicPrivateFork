@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Effects;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
+using CalamityMod.Effects;
+using CalamityMod.Enums;
+using CalamityMod.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
+namespace CalamityMod.Graphics.Metaballs
 {
     public abstract class Metaball : ModType
     {

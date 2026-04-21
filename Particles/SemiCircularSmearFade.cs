@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class SemiCircularSmearFade : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/SemiCircularSmearVerticalBlank";
+        public override string Texture => "CalamityMod/Particles/SemiCircularSmearVerticalBlank";
         public override bool UseAdditiveBlend => true;
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;

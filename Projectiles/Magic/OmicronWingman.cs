@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,12 +12,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class OmicronWingman : ModProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<Wingman>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/Wingman";
+        public override string Texture => "CalamityMod/Items/Weapons/Magic/Wingman";
 
         public Color StaticEffectsColor = Color.MediumVioletRed;
         private ref float ShootingTimer => ref Projectile.ai[0];
@@ -163,7 +163,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             Vector2 firingVelocity = shootDirection * 10;
             if (isGrenade)
             {
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DeadSunExplosion");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/DeadSunExplosion");
                 SoundEngine.PlaySound(fire with { Volume = 0.2f, Pitch = -0.4f, PitchVariance = 0.2f }, Projectile.Center);
                 if (Main.myPlayer == Projectile.owner)
                 {
@@ -174,7 +174,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             }
             else
             {
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagnaCannonShot");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/MagnaCannonShot");
                 SoundEngine.PlaySound(fire with { Volume = 0.25f, Pitch = 1f, PitchVariance = 0.35f }, Projectile.Center);
 
                 if (Main.myPlayer == Projectile.owner)
@@ -245,9 +245,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 
             Texture2D texture;
             if (Projectile.ai[2] == 1)
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/OmicronWingman").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/OmicronWingman").Value;
             else
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/OmicronWingmanAlt").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/OmicronWingmanAlt").Value;
 
 
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;

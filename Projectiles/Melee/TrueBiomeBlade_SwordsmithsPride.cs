@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Tiles.Astral;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,15 +11,15 @@ using Terraria.Audio;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class SwordsmithsPride : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_SwordsmithsPride";
+        public override string Texture => "CalamityMod/Projectiles/Melee/TrueBiomeBlade_SwordsmithsPride";
         private bool initialized = false;
         Vector2 direction = Vector2.Zero;
         public ref float CurrentState => ref Projectile.ai[0];
@@ -259,8 +259,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D handle = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/OmegaBiomeBlade").Value;
-            Texture2D blade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_SwordsmithsPride").Value;
+            Texture2D handle = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/OmegaBiomeBlade").Value;
+            Texture2D blade = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_SwordsmithsPride").Value;
 
             float drawAngle = direction.ToRotation();
             float drawRotation = drawAngle + MathHelper.PiOver4;
@@ -313,7 +313,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public void drawChain(float snapProgress, float retractProgress)
         {
-            Texture2D chainTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_HeavensMightChain").Value;
+            Texture2D chainTex = Request<Texture2D>("CalamityMod/Projectiles/Melee/MendedBiomeBlade_HeavensMightChain").Value;
 
             float opacity = retractProgress < 0.5 ? 1 : (retractProgress - 0.5f) / 0.5f;
 

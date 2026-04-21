@@ -1,9 +1,9 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class MousePositionSyncPacket : CalamityPacket
     {

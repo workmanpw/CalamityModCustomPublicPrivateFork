@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.LoreItems
+namespace CalamityMod.Items.LoreItems
 {
     [LegacyName("KnowledgeCryogen")]
     public class LoreArchmage : LoreItem

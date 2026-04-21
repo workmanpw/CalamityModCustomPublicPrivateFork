@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class NanoParticle : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/NanoParticleSmall";
+        public override string Texture => "CalamityMod/Particles/NanoParticleSmall";
         public bool UseAltVisual = true;
         public override bool UseAdditiveBlend => UseAltVisual;
         public override bool UseCustomDraw => true;
@@ -53,7 +53,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
 
         public override void CustomDraw(SpriteBatch spriteBatch)
         {
-            Texture2D nanoTexture = Big ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/NanoParticleBig").Value : ModContent.Request<Texture2D>(Texture).Value;
+            Texture2D nanoTexture = Big ? ModContent.Request<Texture2D>("CalamityMod/Particles/NanoParticleBig").Value : ModContent.Request<Texture2D>(Texture).Value;
             Rectangle frame = new Rectangle(0, (Big ? 8 : 6), (Big ? 8 : 6), (Big ? 8 : 6));
             spriteBatch.Draw(nanoTexture, Position - Main.screenPosition, frame, Color * opacity, 0, frame.Size() / 2f, Scale, SpriteEffects.None, 0);
         }

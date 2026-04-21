@@ -4,7 +4,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
+namespace CalamityMod.Tiles.DraedonStructures
 {
     public class RustedPipes : ModTile
     {

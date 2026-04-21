@@ -1,8 +1,8 @@
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Furniture;
+using CalamityMod.Items.Tools;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
+namespace CalamityMod.Tiles.Furniture
 {
     public class WulfrumLure : ModTile
     {
@@ -92,10 +92,10 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
                 return;
             }
 
-            CogTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Furniture/WulfrumLureCog");
+            CogTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Furniture/WulfrumLureCog");
             Texture2D cogTexture = CogTexture.Value;
 
-            CoverTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Furniture/WulfrumLureCover");
+            CoverTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Furniture/WulfrumLureCover");
             Texture2D coverTex = CoverTexture.Value;
 
             Vector2 worldPos = p.ToWorldCoordinates(16f, 16f);

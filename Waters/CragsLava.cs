@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Systems;
 using Terraria;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Dusts.WaterSplash;
-using CalamityModCustomPublicPrivateFork.Gores.WaterDroplet;
+using CalamityMod.Dusts.WaterSplash;
+using CalamityMod.Gores.WaterDroplet;
 
-namespace CalamityModCustomPublicPrivateFork.Waters
+namespace CalamityMod.Waters
 {
     public class CragsLava : ModLavaStyle
     {
-        public override string WaterfallTexture => "CalamityModCustomPublicPrivateFork/Waters/CragsLavaflow";
+        public override string WaterfallTexture => "CalamityMod/Waters/CragsLavaflow";
 
         public override int GetSplashDust() => ModContent.DustType<CragsLavaSplash>();
 

@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Armor.Tarragon;
+using CalamityMod.Items.Armor.Tarragon;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.StatBuffs
+namespace CalamityMod.Buffs.StatBuffs
 {
     public class TarragonCloak : ModBuff
     {

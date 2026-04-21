@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class GaelSkull2 : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/GaelSkull";
+        public override string Texture => "CalamityMod/Projectiles/Melee/GaelSkull";
 
         public override void SetStaticDefaults()
         {

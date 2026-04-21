@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
+using CalamityMod.Dusts;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.Astral;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles
+namespace CalamityMod.Tiles
 {
     public class AstralBrick : GlowMaskTile
     {

@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Items.Placeables.Ores;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.NPCs.Crags
+namespace CalamityMod.NPCs.Crags
 {
     public class InfernalCongealment : ModNPC
     {
@@ -54,7 +54,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Crags
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.InfernalCongealment")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.InfernalCongealment")
             });
         }
 

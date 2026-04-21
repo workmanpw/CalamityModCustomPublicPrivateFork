@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Placeables.Ores;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Materials
+namespace CalamityMod.Items.Materials
 {
     [LegacyName("UeliaceBar")]
     public class UelibloomBar : ModItem, ILocalizedModType

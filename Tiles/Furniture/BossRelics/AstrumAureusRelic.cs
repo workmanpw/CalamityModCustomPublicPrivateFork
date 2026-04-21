@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Tiles.BaseTiles;
+using CalamityMod.Tiles.BaseTiles;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.BossRelics
+namespace CalamityMod.Tiles.Furniture.BossRelics
 {
     public class AstrumAureusRelic : BaseBossRelic
     {
-        public override string RelicTextureName => "CalamityModCustomPublicPrivateFork/Tiles/Furniture/BossRelics/AstrumAureusRelic";
+        public override string RelicTextureName => "CalamityMod/Tiles/Furniture/BossRelics/AstrumAureusRelic";
 
         public override int AssociatedItem => ModContent.ItemType<Items.Placeables.Furniture.BossRelics.AstrumAureusRelic>();
     }

@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAncient
+namespace CalamityMod.Tiles.FurnitureAncient
 {
     public class AncientLamp : ModTile
     {
@@ -40,7 +40,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAncient
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureAncient/AncientLampFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureAncient/AncientLampFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j);
         }
 

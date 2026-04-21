@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Cooldowns;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -15,7 +15,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.Player;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     [PierceResistException]
     public class CountermeasureMittHoldout : BaseGunHoldoutProjectile
@@ -223,7 +223,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             }
             else if (f1x > 1)
             {
-                SoundStyle beam = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MittWelding/Weld1");
+                SoundStyle beam = new("CalamityMod/Sounds/Item/MittWelding/Weld1");
                 AudSlot1 = SoundEngine.PlaySound(beam with { Volume = 0.01f, Pitch = 0, IsLooped = true }, Projectile.Center);
             }
             if (SoundEngine.TryGetActiveSound(AudSlot2, out var f2s) && f2s.IsPlaying)
@@ -234,7 +234,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             }
             else if (f2x > 1)
             {
-                SoundStyle beam = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MittWelding/Weld2");
+                SoundStyle beam = new("CalamityMod/Sounds/Item/MittWelding/Weld2");
                 AudSlot2 = SoundEngine.PlaySound(beam with { Volume = 0.01f, Pitch = 0, IsLooped = true }, Projectile.Center);
             }
             if (SoundEngine.TryGetActiveSound(AudSlot3, out var f3s) && f3s.IsPlaying)
@@ -245,7 +245,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             }
             else if (f3x > 1)
             {
-                SoundStyle beam = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MittWelding/Weld3");
+                SoundStyle beam = new("CalamityMod/Sounds/Item/MittWelding/Weld3");
                 AudSlot3 = SoundEngine.PlaySound(beam with { Volume = 0.01f, Pitch = 0, IsLooped = true }, Projectile.Center);
             }
             if (SoundEngine.TryGetActiveSound(AudSlot4, out var f4s) && f4s.IsPlaying)
@@ -256,7 +256,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             }
             else if (f4x > 1)
             {
-                SoundStyle beam = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MittWelding/Weld4");
+                SoundStyle beam = new("CalamityMod/Sounds/Item/MittWelding/Weld4");
                 AudSlot4 = SoundEngine.PlaySound(beam with { Volume = 0.01f, Pitch = 0, IsLooped = true }, Projectile.Center);
             }
             if (SoundEngine.TryGetActiveSound(AudSlot5, out var f5s) && f5s.IsPlaying)
@@ -267,7 +267,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             }
             else if (f5x > 1)
             {
-                SoundStyle beam = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MittWelding/Weld5");
+                SoundStyle beam = new("CalamityMod/Sounds/Item/MittWelding/Weld5");
                 AudSlot5 = SoundEngine.PlaySound(beam with { Volume = 0.01f, Pitch = 0, IsLooped = true }, Projectile.Center);
             }
             #endregion
@@ -327,12 +327,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                 {
                     if (shootingTimer == 1)
                     {
-                        SoundStyle aud = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MittReadyPalm");
+                        SoundStyle aud = new("CalamityMod/Sounds/Item/MittReadyPalm");
                         SoundEngine.PlaySound(aud with { Volume = 1f, Pitch = 0 }, Projectile.Center);
                     }
                     if (shootingTimer == (int)(palmAnimTime * 0.8f))
                     {
-                        SoundStyle aud = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MittThrust");
+                        SoundStyle aud = new("CalamityMod/Sounds/Item/MittThrust");
                         SoundEngine.PlaySound(aud with { Volume = 1f, Pitch = 0 }, Projectile.Center);
                     }
                     if (shootingTimer == palmAnimTime)
@@ -427,14 +427,14 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                         }
                         for (int i = 0; i < 2; i++)
                         {
-                            Particle pulse = new CustomSpark(pos, vel.SafeNormalize(Vector2.UnitX) * 2, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", false, 20, 1f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(2f, 0.7f), shrinkSpeed: -0.2f);
+                            Particle pulse = new CustomSpark(pos, vel.SafeNormalize(Vector2.UnitX) * 2, "CalamityMod/Particles/BloomRing", false, 20, 1f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(2f, 0.7f), shrinkSpeed: -0.2f);
                             GeneralParticleHandler.SpawnParticle(pulse);
-                            Particle pulse1 = new CustomSpark(pos, vel.SafeNormalize(Vector2.UnitX) * 18, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", false, 18, 0.8f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(2f, 0.7f), shrinkSpeed: -0.2f);
+                            Particle pulse1 = new CustomSpark(pos, vel.SafeNormalize(Vector2.UnitX) * 18, "CalamityMod/Particles/BloomRing", false, 18, 0.8f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(2f, 0.7f), shrinkSpeed: -0.2f);
                             GeneralParticleHandler.SpawnParticle(pulse1);
-                            Particle pulse2 = new CustomSpark(pos, vel.SafeNormalize(Vector2.UnitX) * 34, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", false, 16, 0.6f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(2f, 0.7f), shrinkSpeed: -0.2f);
+                            Particle pulse2 = new CustomSpark(pos, vel.SafeNormalize(Vector2.UnitX) * 34, "CalamityMod/Particles/BloomRing", false, 16, 0.6f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(2f, 0.7f), shrinkSpeed: -0.2f);
                             GeneralParticleHandler.SpawnParticle(pulse2);
                         }
-                        Particle bloom = new CustomSpark(pos, vel.SafeNormalize(Vector2.UnitX) * 8, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 22, 0.7f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(1f, 8f), true, true, shrinkSpeed: -0.5f, extraRotation: MathHelper.PiOver2);
+                        Particle bloom = new CustomSpark(pos, vel.SafeNormalize(Vector2.UnitX) * 8, "CalamityMod/Particles/BloomCircle", false, 22, 0.7f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(1f, 8f), true, true, shrinkSpeed: -0.5f, extraRotation: MathHelper.PiOver2);
                         GeneralParticleHandler.SpawnParticle(bloom);
                         oneFx = false;
                     }
@@ -448,7 +448,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                 Owner.Calamity().arsenalCooldown = cooldownGiven;
                 Owner.AddCooldown(ArsenalPower.ID, cooldownGiven);
 
-                SoundStyle aud = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MittHit");
+                SoundStyle aud = new("CalamityMod/Sounds/Item/MittHit");
                 for (int i = 0; i < 2; i++)
                     SoundEngine.PlaySound(aud with { Volume = 0.8f, Pitch = 0, MaxInstances = 2 }, Projectile.Center);
                 Owner.SetScreenshake(8f);
@@ -466,10 +466,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                 }
                 for (int i = 0; i < 2; i++)
                 {
-                    Particle bloom = new CustomSpark(palmBlastPos, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 15, 0.5f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(1f, 1f), true, true);
+                    Particle bloom = new CustomSpark(palmBlastPos, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 15, 0.5f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(1f, 1f), true, true);
                     GeneralParticleHandler.SpawnParticle(bloom);
                 }
-                SoundStyle aud = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MittFail");
+                SoundStyle aud = new("CalamityMod/Sounds/Item/MittFail");
                 SoundEngine.PlaySound(aud with { Volume = 1f, Pitch = 0 }, Projectile.Center);
             }
         }
@@ -505,13 +505,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             if (time < 2)
                 return false;
 
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/CountermeasureMittHoldout").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/CountermeasureMittHoldout").Value;
 
-            Texture2D finger = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/CountermeasureMittFinger2").Value;
-            Texture2D laser = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineFade").Value;
-            Texture2D laser2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineThick").Value;
-            Texture2D bloom = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
-            Texture2D diamond = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SquareRotated").Value;
+            Texture2D finger = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/CountermeasureMittFinger2").Value;
+            Texture2D laser = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineFade").Value;
+            Texture2D laser2 = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineThick").Value;
+            Texture2D bloom = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D diamond = ModContent.Request<Texture2D>("CalamityMod/Particles/SquareRotated").Value;
 
             Vector2 drawPosition = handPos - Main.screenPosition;
             Vector2 vel = alteredRotation.ToRotationVector2();

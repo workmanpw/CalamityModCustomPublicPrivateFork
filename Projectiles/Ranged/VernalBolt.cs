@@ -3,12 +3,12 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class VernalBolt : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/LunarBolt";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/LunarBolt";
 
         public override void SetDefaults()
         {

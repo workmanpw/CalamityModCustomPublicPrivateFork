@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Walls
+namespace CalamityMod.Walls
 {
     public class WulfrumSheetWall : MultiVariantModWall
     {

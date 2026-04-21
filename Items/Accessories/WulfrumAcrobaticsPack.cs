@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Packets;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Materials;
+using CalamityMod.Packets;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -15,15 +15,15 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     [AutoloadEquip(EquipType.Back)]
     public class WulfrumAcrobaticsPack : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Accessories";
-        public static readonly SoundStyle ShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumHookShoot") { Volume = 0.7f, MaxInstances = 1, SoundLimitBehavior = SoundLimitBehavior.ReplaceOldest };
-        public static readonly SoundStyle GrabSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumHookGrapple") { Volume = 0.7f, MaxInstances = 1, SoundLimitBehavior = SoundLimitBehavior.ReplaceOldest };
-        public static readonly SoundStyle ReleaseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumHookDisengage") { Volume = 0.7f, MaxInstances = 1, SoundLimitBehavior = SoundLimitBehavior.ReplaceOldest };
+        public static readonly SoundStyle ShootSound = new("CalamityMod/Sounds/Custom/WulfrumHookShoot") { Volume = 0.7f, MaxInstances = 1, SoundLimitBehavior = SoundLimitBehavior.ReplaceOldest };
+        public static readonly SoundStyle GrabSound = new("CalamityMod/Sounds/Custom/WulfrumHookGrapple") { Volume = 0.7f, MaxInstances = 1, SoundLimitBehavior = SoundLimitBehavior.ReplaceOldest };
+        public static readonly SoundStyle ReleaseSound = new("CalamityMod/Sounds/Custom/WulfrumHookDisengage") { Volume = 0.7f, MaxInstances = 1, SoundLimitBehavior = SoundLimitBehavior.ReplaceOldest };
 
         public override void SetDefaults()
         {
@@ -529,7 +529,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
                     float swingSpeed = (Segments[SimulationResolution].oldPosition - Segments[SimulationResolution].position).Length();
                     if (swingSpeed > 6f && playerCrossedSides)
                     {
-                        SoundStyle swing = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/LoudSwingWoosh") with { Volume = Math.Clamp((swingSpeed - 6f) / 12f, 0, 1) };
+                        SoundStyle swing = new SoundStyle("CalamityMod/Sounds/Custom/LoudSwingWoosh") with { Volume = Math.Clamp((swingSpeed - 6f) / 12f, 0, 1) };
                         SoundEngine.PlaySound(swing, Player.Center);
                     }
                 }

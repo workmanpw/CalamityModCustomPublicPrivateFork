@@ -1,5 +1,5 @@
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureProfaned
+namespace CalamityMod.Items.Placeables.FurnitureProfaned
 {
     public class ProfanedPlatform : ModItem, ILocalizedModType
     {

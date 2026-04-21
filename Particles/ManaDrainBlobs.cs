@@ -3,12 +3,12 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class ManaDrainBlob : Particle
     {
         public override bool SetLifetime => false;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/MicroBloom";
+        public override string Texture => "CalamityMod/Particles/MicroBloom";
         public override bool UseAdditiveBlend => true;
         public override int FrameVariants => 2;
 

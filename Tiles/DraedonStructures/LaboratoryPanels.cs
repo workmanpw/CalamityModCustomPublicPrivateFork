@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
+namespace CalamityMod.Tiles.DraedonStructures
 {
     public class LaboratoryPanels : ModTile
     {

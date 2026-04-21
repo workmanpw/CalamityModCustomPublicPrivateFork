@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
+using CalamityMod.CalPlayer;
+using CalamityMod.Graphics.Metaballs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class VoidFieldGenerator : ModProjectile, ILocalizedModType
     {

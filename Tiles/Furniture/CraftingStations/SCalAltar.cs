@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.CraftingStations;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems;
-using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
-using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Furniture.CraftingStations;
+using CalamityMod.Items.Potions.Food;
+using CalamityMod.Items.SummonItems;
+using CalamityMod.NPCs.SupremeCalamitas;
+using CalamityMod.NPCs.TownNPCs;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -17,11 +17,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations
+namespace CalamityMod.Tiles.Furniture.CraftingStations
 {
     public class SCalAltar : ModTile
     {
-        public static readonly SoundStyle SummonSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalAltarSummon");
+        public static readonly SoundStyle SummonSound = new("CalamityMod/Sounds/Custom/SCalAltarSummon");
 
         public const int Width = 4;
         public const int Height = 3;

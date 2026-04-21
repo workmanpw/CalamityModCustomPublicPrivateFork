@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures.CagedLights;
+using CalamityMod.Items.Placeables.DraedonStructures.CagedLights;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -6,9 +6,9 @@ using Terraria.ModLoader;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ObjectData;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Sounds;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures.CagedLights
+namespace CalamityMod.Tiles.DraedonStructures.CagedLights
 {
     public class CagedFrostlight : ModTile
     {

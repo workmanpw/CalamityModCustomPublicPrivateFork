@@ -1,17 +1,17 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class UltimaRay : BaseLaserbeamProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public float HueOffset
         {
@@ -23,9 +23,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         public override float Lifetime => 50f;
         public override Color LaserOverlayColor => Main.hslToRgb((float)Math.Sin(Main.GlobalTimeWrappedHourly * 2.3f + HueOffset) * 0.5f + 0.5f, 1f, 0.775f) * Utils.GetLerpValue(Lifetime, 0f, Time, true);
         public override Color LightCastColor => LaserOverlayColor;
-        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/UltimaRayStart", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/UltimaRayMid", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/UltimaRayEnd", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/UltimaRayStart", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/UltimaRayMid", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/UltimaRayEnd", AssetRequestMode.ImmediateLoad).Value;
 
         public override void SetDefaults()
         {

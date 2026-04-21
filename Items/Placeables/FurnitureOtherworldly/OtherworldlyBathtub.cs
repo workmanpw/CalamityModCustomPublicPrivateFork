@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureOtherworldly
+namespace CalamityMod.Items.Placeables.FurnitureOtherworldly
 {
     [LegacyName("OccultBathtub")]
     public class OtherworldlyBathtub : ModItem, ILocalizedModType

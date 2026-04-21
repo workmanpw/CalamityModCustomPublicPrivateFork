@@ -1,17 +1,17 @@
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.BaseItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.BaseItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class Earth : CustomUseProjItem, ILocalizedModType
     {
@@ -39,7 +39,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
         }
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/EarthGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/EarthGlow").Value);
         }
         public override void ModifyTooltips(List<TooltipLine> list)
         {

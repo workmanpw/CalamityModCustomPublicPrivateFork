@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class GalacticaComet : ModProjectile, ILocalizedModType
     {
@@ -102,11 +102,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         {
             Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[Projectile.type].Value;
             if (cometType == 1)
-                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/GalacticaComet").Value;
+                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/GalacticaComet").Value;
             if (cometType == 2)
-                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/GalacticaComet2").Value;
+                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/GalacticaComet2").Value;
             if (cometType == 3)
-                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/GalacticaComet3").Value;
+                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/GalacticaComet3").Value;
 
             CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Projectile.type], Color.White, 2, tex);
             return false;

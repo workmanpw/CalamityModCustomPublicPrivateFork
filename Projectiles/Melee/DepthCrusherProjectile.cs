@@ -4,14 +4,14 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class DepthCrusherProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/DepthCrusher";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/DepthCrusher";
 
         public int ChargeupTime = 25;
         public int Lifetime = 255;
@@ -158,7 +158,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         }
         public override bool OnTileCollide(Vector2 oldVelocity)
         {
-            SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbyssGravelMine2") { Volume = 0.6f, PitchVariance = 0.3f };
+            SoundStyle HitSound = new("CalamityMod/Sounds/Custom/AbyssGravelMine2") { Volume = 0.6f, PitchVariance = 0.3f };
 
             Projectile.timeLeft = 240;
             if (Projectile.numHits < 3)

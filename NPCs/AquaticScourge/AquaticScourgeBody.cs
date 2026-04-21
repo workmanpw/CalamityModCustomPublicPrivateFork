@@ -1,9 +1,9 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Events;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -13,9 +13,9 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityMod.Systems.Collections;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge
+namespace CalamityMod.NPCs.AquaticScourge
 {
     [HasPierceResist]
     [LongDistanceNetSync(SyncWith = typeof(AquaticScourgeHead))]

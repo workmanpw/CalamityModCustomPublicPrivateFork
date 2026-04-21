@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Pets;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
+using CalamityMod.Buffs.Pets;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.Projectiles.Pets;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Pets
+namespace CalamityMod.Items.Pets
 {
     public class BurrowerController : ModItem, ILocalizedModType
     {

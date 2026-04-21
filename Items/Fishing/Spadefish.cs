@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing
+namespace CalamityMod.Items.Fishing
 {
     public class Spadefish : ModItem, ILocalizedModType
     {

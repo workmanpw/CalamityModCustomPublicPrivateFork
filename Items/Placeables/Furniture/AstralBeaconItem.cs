@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Potions;
+using CalamityMod.Tiles.Astral;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture
+namespace CalamityMod.Items.Placeables.Furniture
 {
     public class AstralBeaconItem : ModItem, ILocalizedModType
     {

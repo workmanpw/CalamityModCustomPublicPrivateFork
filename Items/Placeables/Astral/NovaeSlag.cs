@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Astral
+namespace CalamityMod.Items.Placeables.Astral
 {
     [LegacyName("AstralSilt")]
     public class NovaeSlag : ModItem, ILocalizedModType

@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Magic;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,12 +10,12 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class SubsumingVortex : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/SubsumingVortexSmall";
+        public override string Texture => "CalamityMod/Items/Weapons/Magic/SubsumingVortexSmall";
         public const int RightClickVortexCount = 3;
 
         public const int VortexReleaseRate = 27;
@@ -36,7 +36,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 
         public const float ReleaseDamageFactor = 4.65f;
 
-        public static readonly SoundStyle ExplosionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SubsumingVortexExplosion");
+        public static readonly SoundStyle ExplosionSound = new("CalamityMod/Sounds/Custom/SubsumingVortexExplosion");
 
         public override void SetStaticDefaults()
         {
@@ -78,7 +78,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 
         public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
-            Texture2D actualSprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/SubsumingVortex").Value;
+            Texture2D actualSprite = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/SubsumingVortex").Value;
 
             spriteBatch.DrawNewInventorySprite(actualSprite, new Vector2(48f, 52f), position, drawColor, origin, scale, new Vector2(-6f, -6f));
             return false;
@@ -86,14 +86,14 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
-            Texture2D actualSprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/SubsumingVortex").Value;
+            Texture2D actualSprite = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/SubsumingVortex").Value;
             spriteBatch.Draw(actualSprite, Item.Center - Main.screenPosition, null, lightColor, rotation, actualSprite.Size() / 2f, scale, 0, 0);
             return false;
         }
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/SubsumingVortexGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/SubsumingVortexGlow").Value);
         }
 
         public override Vector2? HoldoutOffset() => new Vector2(-6f, 0);

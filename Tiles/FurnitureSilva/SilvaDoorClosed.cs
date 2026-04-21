@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
+using CalamityMod.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSilva
+namespace CalamityMod.Tiles.FurnitureSilva
 {
     public class SilvaDoorClosed : ModTile
     {

@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityMod.Enums;
+using CalamityMod.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
+namespace CalamityMod.Graphics.Metaballs
 {
     public class GruesomeMetaball : Metaball
     {
@@ -69,7 +69,7 @@ namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
             layerAssets = new();
 
             for (int i = 1; i <= 5; i++)
-                layerAssets.Add(ModContent.Request<Texture2D>($"CalamityModCustomPublicPrivateFork/Graphics/Metaballs/GruesomeEminence_Ghost_Layer{i}", AssetRequestMode.ImmediateLoad));
+                layerAssets.Add(ModContent.Request<Texture2D>($"CalamityMod/Graphics/Metaballs/GruesomeEminence_Ghost_Layer{i}", AssetRequestMode.ImmediateLoad));
         }
 
         public override void ClearInstances() => Particles.Clear();
@@ -124,7 +124,7 @@ namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
 
         public override void DrawInstances()
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicCircle").Value;
 
             // Draw all particles.
             foreach (GruesomeParticle particle in Particles)

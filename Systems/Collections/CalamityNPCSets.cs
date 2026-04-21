@@ -1,54 +1,54 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.NPCs.Abyss;
-using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
-using CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge;
-using CalamityModCustomPublicPrivateFork.NPCs.Astral;
-using CalamityModCustomPublicPrivateFork.NPCs.AstrumAureus;
-using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
-using CalamityModCustomPublicPrivateFork.NPCs.BrimstoneElemental;
-using CalamityModCustomPublicPrivateFork.NPCs.Bumblebirb;
-using CalamityModCustomPublicPrivateFork.NPCs.CalClone;
-using CalamityModCustomPublicPrivateFork.NPCs.CeaselessVoid;
-using CalamityModCustomPublicPrivateFork.NPCs.Crabulon;
-using CalamityModCustomPublicPrivateFork.NPCs.Crags;
-using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
-using CalamityModCustomPublicPrivateFork.NPCs.DesertScourge;
-using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.NPCs.GreatSandShark;
-using CalamityModCustomPublicPrivateFork.NPCs.HiveMind;
-using CalamityModCustomPublicPrivateFork.NPCs.Leviathan;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
-using CalamityModCustomPublicPrivateFork.NPCs.Perforator;
-using CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath;
-using CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies;
-using CalamityModCustomPublicPrivateFork.NPCs.Polterghast;
-using CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm;
-using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
-using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
-using CalamityModCustomPublicPrivateFork.NPCs.Signus;
-using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
-using CalamityModCustomPublicPrivateFork.NPCs.StormWeaver;
-using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
-using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
-using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
+using CalamityMod.NPCs.Abyss;
+using CalamityMod.NPCs.AcidRain;
+using CalamityMod.NPCs.AquaticScourge;
+using CalamityMod.NPCs.Astral;
+using CalamityMod.NPCs.AstrumAureus;
+using CalamityMod.NPCs.AstrumDeus;
+using CalamityMod.NPCs.BrimstoneElemental;
+using CalamityMod.NPCs.Bumblebirb;
+using CalamityMod.NPCs.CalClone;
+using CalamityMod.NPCs.CeaselessVoid;
+using CalamityMod.NPCs.Crabulon;
+using CalamityMod.NPCs.Crags;
+using CalamityMod.NPCs.Cryogen;
+using CalamityMod.NPCs.DesertScourge;
+using CalamityMod.NPCs.DevourerofGods;
+using CalamityMod.NPCs.ExoMechs.Apollo;
+using CalamityMod.NPCs.ExoMechs.Ares;
+using CalamityMod.NPCs.ExoMechs.Artemis;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.NPCs.GreatSandShark;
+using CalamityMod.NPCs.HiveMind;
+using CalamityMod.NPCs.Leviathan;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.NPCs.OldDuke;
+using CalamityMod.NPCs.Perforator;
+using CalamityMod.NPCs.PlaguebringerGoliath;
+using CalamityMod.NPCs.PlagueEnemies;
+using CalamityMod.NPCs.Polterghast;
+using CalamityMod.NPCs.PrimordialWyrm;
+using CalamityMod.NPCs.ProfanedGuardians;
+using CalamityMod.NPCs.Providence;
+using CalamityMod.NPCs.Ravager;
+using CalamityMod.NPCs.Signus;
+using CalamityMod.NPCs.SlimeGod;
+using CalamityMod.NPCs.StormWeaver;
+using CalamityMod.NPCs.SunkenSea;
+using CalamityMod.NPCs.SupremeCalamitas;
+using CalamityMod.NPCs.Yharon;
 using ReLogic.Reflection;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Collections
+namespace CalamityMod.Systems.Collections
 {
     [ReinitializeDuringResizeArrays]
     public static class CalamityNPCSets
     {
-        public static SetFactory Factory = new SetFactory(NPCLoader.NPCCount, "CalamityModCustomPublicPrivateFork/NPCID", Search);
+        public static SetFactory Factory = new SetFactory(NPCLoader.NPCCount, "CalamityMod/NPCID", Search);
         public static IdDictionary Search = IdDictionary.Create<NPCID, int>();
 
         /// <summary>

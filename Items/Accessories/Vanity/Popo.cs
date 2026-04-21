@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.BaseItems;
+using CalamityMod.Items.BaseItems;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity
+namespace CalamityMod.Items.Accessories.Vanity
 {
     public class Popo : TransformationAccessory, ILocalizedModType
     {

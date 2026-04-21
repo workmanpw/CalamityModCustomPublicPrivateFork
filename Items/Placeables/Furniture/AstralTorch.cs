@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture
+namespace CalamityMod.Items.Placeables.Furniture
 {
     public class AstralTorch : ModItem, ILocalizedModType
     {

@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 
-namespace CalamityModCustomPublicPrivateFork.Skies
+namespace CalamityMod.Skies
 {
     public class AstralScreenShaderData : ScreenShaderData
     {

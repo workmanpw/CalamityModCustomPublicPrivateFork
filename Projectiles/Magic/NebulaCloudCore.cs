@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class NebulaCloudCore : ModProjectile, ILocalizedModType
     {
@@ -262,7 +262,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             cloudColor *= rotationScale;
             float cloudScale = 0.6f + Projectile.scale * 0.6f * rotationScale;
             Texture2D coreTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D nebulaCloudTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/NebulaCloud", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D nebulaCloudTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/NebulaCloud", AssetRequestMode.ImmediateLoad).Value;
             Vector2 position = Projectile.Center - Main.screenPosition;
             Vector2 coreOrigin = coreTexture.Size() / new Vector2(0, Main.projFrames[Type]) * 0.5f;
             Vector2 cloudOrigin = nebulaCloudTexture.Size() * 0.5f;

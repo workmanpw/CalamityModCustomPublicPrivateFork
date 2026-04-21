@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class PrismExplosionSmall : ModProjectile, ILocalizedModType
     {
@@ -44,7 +44,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/SmallGreyscaleCircle").Value;
+            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/SmallGreyscaleCircle").Value;
             Rectangle frame = texture.Frame(1, Main.projFrames[Type], 0, Projectile.frame);
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Vector2 origin = frame.Size() * 0.5f;

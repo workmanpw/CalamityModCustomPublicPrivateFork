@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Particles;
+namespace CalamityMod.Particles;
 
 public class BrokenTendril : Particle
 {
-    public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+    public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
     public override bool UseCustomDraw => true;
 

@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls.DraedonStructures;
+using CalamityMod.Items.Placeables.Walls.DraedonStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures
+namespace CalamityMod.Items.Placeables.DraedonStructures
 {
     public class LaboratoryPanels : ModItem, ILocalizedModType
     {

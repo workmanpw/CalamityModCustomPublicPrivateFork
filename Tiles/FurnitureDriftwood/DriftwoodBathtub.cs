@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureDriftwood
+namespace CalamityMod.Tiles.FurnitureDriftwood
 {
     public class DriftwoodBathtub : ModTile
     {

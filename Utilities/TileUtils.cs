@@ -1,25 +1,25 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralDesert;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralSnow;
-using CalamityModCustomPublicPrivateFork.Tiles.Crags;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAbyss;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAshen;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureDriftwood;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone.FurnitureAncientNavystone;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureOtherworldly;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureProfaned;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureVoid;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
+using CalamityMod.Systems;
+using CalamityMod.Tiles;
+using CalamityMod.Tiles.Abyss;
+using CalamityMod.Tiles.Astral;
+using CalamityMod.Tiles.AstralDesert;
+using CalamityMod.Tiles.AstralSnow;
+using CalamityMod.Tiles.Crags;
+using CalamityMod.Tiles.FurnitureAbyss;
+using CalamityMod.Tiles.FurnitureAshen;
+using CalamityMod.Tiles.FurnitureDriftwood;
+using CalamityMod.Tiles.FurnitureMonolith;
+using CalamityMod.Tiles.FurnitureNavystone;
+using CalamityMod.Tiles.FurnitureNavystone.FurnitureAncientNavystone;
+using CalamityMod.Tiles.FurnitureOtherworldly;
+using CalamityMod.Tiles.FurnitureProfaned;
+using CalamityMod.Tiles.FurnitureVoid;
+using CalamityMod.Tiles.FurnitureWulfrum;
+using CalamityMod.Tiles.Ores;
+using CalamityMod.Tiles.SunkenSea;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -29,7 +29,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public static partial class CalamityUtils
     {

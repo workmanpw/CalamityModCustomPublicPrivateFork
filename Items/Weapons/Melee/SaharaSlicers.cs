@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Shortswords;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Projectiles.Melee.Shortswords;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     [LegacyName("AquaticDischarge")]
     public class SaharaSlicers : ModItem, ILocalizedModType

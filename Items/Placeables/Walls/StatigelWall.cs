@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureStatigel;
+using CalamityMod.Items.Placeables.FurnitureStatigel;
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
+using WallTiles = CalamityMod.Walls;
+namespace CalamityMod.Items.Placeables.Walls
 {
     public class StatigelWall : ModItem, ILocalizedModType
     {

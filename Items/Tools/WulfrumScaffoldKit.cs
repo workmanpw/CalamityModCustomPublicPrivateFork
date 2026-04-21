@@ -1,8 +1,8 @@
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Tiles;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Tiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Tools
+namespace CalamityMod.Items.Tools
 {
     public class WulfrumScaffoldKit : ModItem, ILocalizedModType
     {
@@ -61,8 +61,8 @@ namespace CalamityModCustomPublicPrivateFork.Items.Tools
         {
             float barScale = 1f;
 
-            var barBG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
-            var barFG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
+            var barBG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
+            var barFG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
 
             Vector2 drawPos = position + Vector2.UnitY * (frame.Height - 2) * scale + Vector2.UnitX * (frame.Width - barBG.Width * barScale) * scale * 0.5f;
             Rectangle frameCrop = new Rectangle(0, 0, (int)(storedScrap / (float)TilesPerScrap * barFG.Width), barFG.Height);

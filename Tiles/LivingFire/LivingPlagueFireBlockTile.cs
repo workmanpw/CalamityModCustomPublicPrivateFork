@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.LivingFire
+namespace CalamityMod.Tiles.LivingFire
 {
     public class LivingPlagueFireBlockTile : ModTile
     {

@@ -1,12 +1,12 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class DoGDeath : ModProjectile, ILocalizedModType
     {
@@ -123,7 +123,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
             if (Main.zenithWorld)
                 return false;
 
-            Texture2D laserTelegraph = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/LaserWallTelegraphBeam").Value;
+            Texture2D laserTelegraph = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/LaserWallTelegraphBeam").Value;
 
             float yScale = 2f;
             if (TelegraphDelay < TelegraphFadeTime)

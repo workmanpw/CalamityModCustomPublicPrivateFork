@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class AerSigilBlast : BaseMassiveExplosionProjectile, ILocalizedModType
     {

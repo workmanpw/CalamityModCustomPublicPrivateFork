@@ -1,18 +1,18 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class RedLightning : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/LightningProj";
+        public override string Texture => "CalamityMod/Projectiles/LightningProj";
 
         public override void SetStaticDefaults()
         {
@@ -181,7 +181,7 @@ IL_25092:
         public override bool PreDraw(ref Color lightColor)
         {
             Vector2 end = Projectile.position + new Vector2((float)Projectile.width, (float)Projectile.height) / 2f + Vector2.UnitY * Projectile.gfxOffY - Main.screenPosition;
-            Texture2D tex3 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/RedLightningTexture").Value;
+            Texture2D tex3 = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/RedLightningTexture").Value;
             Projectile.GetAlpha(lightColor);
             Vector2 lightningScale = new Vector2(Projectile.scale) / 2f;
             for (int i = 0; i < 3; i++)

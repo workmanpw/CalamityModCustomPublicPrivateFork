@@ -5,7 +5,7 @@ using System.Threading;
 
 using ReLogic.Threading;
 
-namespace CalamityModCustomPublicPrivateFork.Utilities
+namespace CalamityMod.Utilities
 {
     // Tomat: I have recycled this from my initial implementation I've given to
     // Nitrate.

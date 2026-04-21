@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAshen;
+using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.FurnitureAshen;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAshen
+namespace CalamityMod.Items.Placeables.FurnitureAshen
 {
     public class AshenDoor : ModItem, ILocalizedModType
     {

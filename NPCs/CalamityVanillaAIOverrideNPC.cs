@@ -2,20 +2,20 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
-using CalamityModCustomPublicPrivateFork.NPCs.Astral;
-using CalamityModCustomPublicPrivateFork.NPCs.Crags;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies;
-using CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.MiniBosses;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.RegularEnemies;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.NPCs.AcidRain;
+using CalamityMod.NPCs.Astral;
+using CalamityMod.NPCs.Crags;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.NPCs.PlagueEnemies;
+using CalamityMod.NPCs.PrimordialWyrm;
+using CalamityMod.NPCs.VanillaNPCAIOverrides;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.MiniBosses;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.RegularEnemies;
+using CalamityMod.Systems.Collections;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -25,7 +25,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs;
+namespace CalamityMod.NPCs;
 
 public static class VanillaAIOverrideExtension
 {

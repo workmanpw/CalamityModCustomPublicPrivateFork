@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Projectiles.Typeless;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Tools
+namespace CalamityMod.Items.Tools
 {
     public class RelicOfConvergence : ModItem, ILocalizedModType
     {

@@ -5,7 +5,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.ILEditing
+namespace CalamityMod.ILEditing
 {
     public partial class ILChanges
     {

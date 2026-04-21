@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class BirbAura : ModProjectile, ILocalizedModType
     {
@@ -135,7 +135,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
                 return false;
 
             Texture2D middleTex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D endpointTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/BirbAuraEndpoints", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D endpointTex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/BirbAuraEndpoints", AssetRequestMode.ImmediateLoad).Value;
 
             // Used to track the animation of the segments
             int middleFrame = Projectile.frameCounter % 12;

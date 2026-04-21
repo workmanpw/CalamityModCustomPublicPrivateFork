@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSilva
+namespace CalamityMod.Items.Placeables.FurnitureSilva
 {
     public class SilvaClock : ModItem, ILocalizedModType
     {

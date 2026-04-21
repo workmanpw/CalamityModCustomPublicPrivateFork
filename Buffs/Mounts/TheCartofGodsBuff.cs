@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Mounts.Minecarts;
+using CalamityMod.Items.Mounts.Minecarts;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Mounts
+namespace CalamityMod.Buffs.Mounts
 {
     public class TheCartofGodsBuff : ModBuff
     {

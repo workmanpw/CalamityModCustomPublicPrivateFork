@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Tiles.SunkenSea.Ambient;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
+namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 {
     public class TallDigitateCoralEcho : TallDigitateCoral
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/TallDigitateCoral";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/TallDigitateCoral";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -18,7 +18,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
 
     public class TallDigitateCoral2Echo : TallDigitateCoral2
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/TallDigitateCoral2";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/TallDigitateCoral2";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -28,7 +28,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
     }
     public class TallDigitateCoral3Echo : TallDigitateCoral3
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/TallDigitateCoral3";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/TallDigitateCoral3";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -38,7 +38,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
     }
     public class TallDigitateCoral4Echo : TallDigitateCoral4
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/TallDigitateCoral4";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/TallDigitateCoral4";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

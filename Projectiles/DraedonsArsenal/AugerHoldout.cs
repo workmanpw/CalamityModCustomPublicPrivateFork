@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityMod.Cooldowns;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ModLoader;
 using static Terraria.Player;
 
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class AugerHoldout : ModProjectile, ILocalizedModType
     {
@@ -105,7 +105,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                 {
                     Projectile magnetZone = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), Owner.ClampedMouseWorld(), Vector2.Zero, ModContent.ProjectileType<AugerPull>(), 0, 0, Projectile.owner, 0, 0, 0);
 
-                    SoundStyle pull = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AugerPull");
+                    SoundStyle pull = new("CalamityMod/Sounds/Item/AugerPull");
                     SoundEngine.PlaySound(pull with { Volume = 0.9f, Pitch = 0 }, Owner.ClampedMouseWorld());
                     Owner.Calamity().buffedAuger = true;
                     Owner.Calamity().arsenalCooldown = cooldownGiven;
@@ -162,7 +162,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                 {
                     if (makeSound && Owner.Calamity().buffedAuger) // Windup Sound
                     {
-                        SoundStyle windup = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AugerWindup");
+                        SoundStyle windup = new("CalamityMod/Sounds/Item/AugerWindup");
                         SoundEngine.PlaySound(windup with { Volume = 0.9f, Pitch = 0 }, Projectile.Center);
                         makeSound = false;
                     }
@@ -203,7 +203,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                 {
                     if (makeHitbox)
                     {
-                        SoundStyle swing = Owner.Calamity().buffedAuger ? new("CalamityModCustomPublicPrivateFork/Sounds/Item/AugerBigSlash") : swingCount % 2 != 0 ? new("CalamityModCustomPublicPrivateFork/Sounds/Item/AugerSlash1") : new("CalamityModCustomPublicPrivateFork/Sounds/Item/AugerSlash2");
+                        SoundStyle swing = Owner.Calamity().buffedAuger ? new("CalamityMod/Sounds/Item/AugerBigSlash") : swingCount % 2 != 0 ? new("CalamityMod/Sounds/Item/AugerSlash1") : new("CalamityMod/Sounds/Item/AugerSlash2");
                         SoundEngine.PlaySound(swing with { Volume = Owner.Calamity().buffedAuger ? 1f : 0.7f, Pitch = -0.1f, MaxInstances = 2 }, Projectile.Center);
 
                         int damage = Projectile.damage;
@@ -226,10 +226,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             if (time < 3)
                 return false;
 
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/AugerHoldout").Value;
-            Texture2D glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/AugerHoldoutGlow").Value;
-            Texture2D blade = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowBlade").Value;
-            Texture2D bloom = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/AugerHoldout").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/AugerHoldoutGlow").Value;
+            Texture2D blade = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowBlade").Value;
+            Texture2D bloom = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
 
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Vector2 vel = Projectile.rotation.ToRotationVector2();

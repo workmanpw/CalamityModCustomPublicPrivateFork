@@ -1,9 +1,9 @@
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -11,13 +11,13 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
+namespace CalamityMod.Items.Weapons.Summon
 {
     public class SarosPossession : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Summon";
-        public static SoundStyle FiringSound => new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/Summon/SarosFiring") with { MaxInstances = 1, Volume = 0.3f };
-        public static SoundStyle SpawnSound => new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/Summon/SarosSpawn");
+        public static SoundStyle FiringSound => new SoundStyle("CalamityMod/Sounds/Item/Summon/SarosFiring") with { MaxInstances = 1, Volume = 0.3f };
+        public static SoundStyle SpawnSound => new SoundStyle("CalamityMod/Sounds/Item/Summon/SarosSpawn");
         public static SoundStyle LoopSound => SoundID.DD2_BetsyFlameBreath with { Volume = 0.2f };
         public override void SetDefaults()
         {

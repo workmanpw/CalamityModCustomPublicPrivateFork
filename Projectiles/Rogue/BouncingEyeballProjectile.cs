@@ -5,12 +5,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static System.Math;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class BouncingEyeballProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/BouncingEyeball";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/BouncingEyeball";
 
         private int Bounces = 5;
         public override void SetStaticDefaults()

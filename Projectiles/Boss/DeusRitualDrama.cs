@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
+using CalamityMod.NPCs.AstrumDeus;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,12 +9,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class DeusRitualDrama : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public static readonly SoundStyle PulseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AstralBeaconOrbPulse");
+        public static readonly SoundStyle PulseSound = new("CalamityMod/Sounds/Custom/AstralBeaconOrbPulse");
 
         public float Time
         {

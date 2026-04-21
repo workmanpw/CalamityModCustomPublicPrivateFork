@@ -1,6 +1,6 @@
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Banners
+namespace CalamityMod.Items.Placeables.Banners
 {
     [LegacyName("CharredSlimeBanner")]
     public class InfernalCongealmentBanner : BaseBanner

@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems;
+using CalamityMod.Events;
+using CalamityMod.Items.SummonItems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class TerminusHoldout : ModProjectile
     {
@@ -24,7 +24,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
         public const int Lifetime = 300;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/SummonItems/Terminus";
+        public override string Texture => "CalamityMod/Items/SummonItems/Terminus";
 
         public override void SetDefaults()
         {
@@ -164,7 +164,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = Main.zenithWorld ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/SummonItems/Terminus_GFB").Value : Terraria.GameContent.TextureAssets.Projectile[Type].Value;
+            Texture2D texture = Main.zenithWorld ? ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Terminus_GFB").Value : Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             Vector2 baseDrawPosition = Projectile.Center - Main.screenPosition;
             Vector2 origin = texture.Size() * 0.5f;
             Color baseColor = Color.Lerp(Projectile.GetAlpha(lightColor), Color.White, Utils.GetLerpValue(40f, 120f, Time, true));
@@ -191,7 +191,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             if (Main.zenithWorld)
                 return;
 
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/SummonItems/TerminusGlow").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/TerminusGlow").Value;
             Vector2 baseDrawPosition = Projectile.Center - Main.screenPosition;
             Vector2 origin = texture.Size() * 0.5f;
             SpriteEffects direction = Projectile.spriteDirection == 1 ? SpriteEffects.None : SpriteEffects.FlipHorizontally;

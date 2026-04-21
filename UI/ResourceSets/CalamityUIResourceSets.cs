@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI.ResourceSets;
+namespace CalamityMod.UI.ResourceSets;
 
 public record CalamityUIResourceSet(Asset<Texture2D> Bar, Asset<Texture2D> Obj)
 {
@@ -12,7 +12,7 @@ public record CalamityUIResourceSet(Asset<Texture2D> Bar, Asset<Texture2D> Obj)
 
 public sealed class CalamityUIResourceSets : ILoadable
 {
-    public static string BasePath => "CalamityModCustomPublicPrivateFork/UI/ResourceSets/";
+    public static string BasePath => "CalamityMod/UI/ResourceSets/";
 
     public static CalamityUIResourceSet HPChalice { get; private set; }
     public static CalamityUIResourceSet HPChaliceBleed { get; private set; }

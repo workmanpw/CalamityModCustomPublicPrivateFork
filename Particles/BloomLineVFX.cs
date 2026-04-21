@@ -3,11 +3,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class BloomLineVFX : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/BloomLine";
+        public override string Texture => "CalamityMod/Particles/BloomLine";
         public override bool UseAdditiveBlend => true;
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;
@@ -41,7 +41,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
 
             if (Capped)
             {
-                Texture2D cap = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineCap").Value;
+                Texture2D cap = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineCap").Value;
                 scale = new Vector2(Scale, Scale);
                 origin = new Vector2(cap.Width / 2f, cap.Height);
 

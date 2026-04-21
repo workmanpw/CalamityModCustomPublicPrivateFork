@@ -4,7 +4,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
+namespace CalamityMod.Projectiles.Enemy
 {
     public class CrimsonSpike : ModProjectile, ILocalizedModType
     {

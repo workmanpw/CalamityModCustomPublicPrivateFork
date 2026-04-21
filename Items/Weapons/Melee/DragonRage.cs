@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Rarities;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class DragonRage : ModItem, ILocalizedModType
     {

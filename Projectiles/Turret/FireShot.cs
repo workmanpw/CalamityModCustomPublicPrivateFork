@@ -6,12 +6,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
+namespace CalamityMod.Projectiles.Turret
 {
     public class FireShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public bool ableToHit = true;
         public override void SetStaticDefaults()
         {
@@ -49,7 +49,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
             if (Projectile.localAI[0] == 0f)
             {
                 // play a sound frame 1.
-                var sound = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/FlamethrowerTurret") with { Volume = 0.65f }, Projectile.Center);
+                var sound = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/FlamethrowerTurret") with { Volume = 0.65f }, Projectile.Center);
             }
             Projectile.localAI[0]++;
             Projectile.velocity.Y -= 0.065f;
@@ -69,7 +69,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
         public override bool PreDraw(ref Color lightColor)
         {
             float rotation = 0f;
-            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleVortex").Value;
+            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleVortex").Value;
             for (int i = 0; i < Projectile.oldPos.Length; i++)
             {
                 float colorInterpolation = (float)Math.Cos((Projectile.timeLeft - 16) / 7f + i / (float)Projectile.oldPos.Length * MathHelper.Pi) * 0.35f + 0.65f;

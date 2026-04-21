@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.LoreItems
+namespace CalamityMod.Items.LoreItems
 {
     public abstract class LoreItem : ModItem, ILocalizedModType, IHoldShiftTooltipItem
     {

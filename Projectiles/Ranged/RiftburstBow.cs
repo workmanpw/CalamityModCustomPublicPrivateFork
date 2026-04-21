@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Ranged;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class RiftburstBow : ModProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<Riftburst>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/Riftburst";
+        public override string Texture => "CalamityMod/Items/Weapons/Ranged/Riftburst";
 
         public override void SetDefaults()
         {
@@ -132,7 +132,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
         public override void PostDraw(Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/RiftburstGlow").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Ranged/RiftburstGlow").Value;
             SpriteEffects spriteEffects = SpriteEffects.None;
             if (Projectile.spriteDirection == -1)
                 spriteEffects = SpriteEffects.FlipHorizontally;

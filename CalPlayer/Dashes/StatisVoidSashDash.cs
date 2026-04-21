@@ -1,14 +1,14 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityMod.Dusts;
+using CalamityMod.Enums;
+using CalamityMod.Graphics.Metaballs;
+using CalamityMod.Items.Accessories;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
+namespace CalamityMod.CalPlayer.Dashes
 {
     public class StatisVoidSashDash : PlayerDashEffect
     {

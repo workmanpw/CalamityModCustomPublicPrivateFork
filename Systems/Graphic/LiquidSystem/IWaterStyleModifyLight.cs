@@ -1,6 +1,6 @@
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
+namespace CalamityMod.Systems.Graphic.LiquidSystem
 {
     public interface IWaterStyleModifyLight
     {

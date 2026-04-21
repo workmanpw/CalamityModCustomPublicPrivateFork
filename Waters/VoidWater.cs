@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Dusts.WaterSplash;
-using CalamityModCustomPublicPrivateFork.Gores.WaterDroplet;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem;
+using CalamityMod.Dusts.WaterSplash;
+using CalamityMod.Gores.WaterDroplet;
+using CalamityMod.Systems.Graphic.LiquidSystem;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Waters
+namespace CalamityMod.Waters
 {
     public class VoidWaterflow : ModWaterfallStyle, IWaterfallStyleModifyColor
     {
@@ -23,7 +23,7 @@ namespace CalamityModCustomPublicPrivateFork.Waters
         public override void SetStaticDefaults()
         {
             Instance = this;
-            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityModCustomPublicPrivateFork/VoidWaterflow");
+            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityMod/VoidWaterflow");
             SplashDust = ModContent.DustType<VoidSplash>();
             DropletGore = ModContent.GoreType<VoidWaterDroplet>();
         }

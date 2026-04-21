@@ -1,6 +1,6 @@
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAshen
+namespace CalamityMod.Items.Placeables.FurnitureAshen
 {
     public class AshenPlatform : ModItem, ILocalizedModType
     {

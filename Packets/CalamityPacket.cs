@@ -4,7 +4,7 @@ using System.Reflection;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal abstract class CalamityPacket : ILoadable
     {

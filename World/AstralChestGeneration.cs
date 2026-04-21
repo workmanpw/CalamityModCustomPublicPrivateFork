@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Tiles.Astral;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.World
+namespace CalamityMod.World
 {
     public class AstralChestGeneration
     {

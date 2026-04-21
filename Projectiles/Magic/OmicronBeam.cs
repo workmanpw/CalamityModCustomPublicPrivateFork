@@ -1,16 +1,16 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class OmicronBeam : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public ref float time => ref Projectile.ai[0];
         public ref float isSplit => ref Projectile.ai[1];
@@ -84,9 +84,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                     Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, perturbedSpeed, ModContent.ProjectileType<OmicronBeam>(), Projectile.damage, Projectile.knockBack, Projectile.owner, 0f, 1f);
                     for (int k = 0; k < 3; k++)
                     {
-                        Particle blastRing = new CustomPulse(Projectile.Center + Projectile.velocity * 2, Vector2.Zero, mainColor, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.8f, 0.4f, 35);
+                        Particle blastRing = new CustomPulse(Projectile.Center + Projectile.velocity * 2, Vector2.Zero, mainColor, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.8f, 0.4f, 35);
                         GeneralParticleHandler.SpawnParticle(blastRing);
-                        Particle blastRing2 = new CustomPulse(Projectile.Center + Projectile.velocity * 2, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.7f, 0.3f, 35);
+                        Particle blastRing2 = new CustomPulse(Projectile.Center + Projectile.velocity * 2, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.7f, 0.3f, 35);
                         GeneralParticleHandler.SpawnParticle(blastRing2);
                     }
                 }
@@ -152,7 +152,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                         dust2.color = Main.rand.NextBool() ? Color.Lerp(mainColor, Color.White, 0.5f) : mainColor;
                     }
 
-                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ArtemisApolloDash");
+                    SoundStyle fire = new("CalamityMod/Sounds/Custom/ExoMechs/ArtemisApolloDash");
                     SoundEngine.PlaySound(fire with { Volume = 1.25f, Pitch = 0.6f }, Projectile.Center);
                 }
 

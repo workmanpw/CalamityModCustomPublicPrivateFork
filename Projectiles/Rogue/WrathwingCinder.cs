@@ -5,12 +5,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class WrathwingCinder : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Rogue/WrathwingFireball";
+        public override string Texture => "CalamityMod/Projectiles/Rogue/WrathwingFireball";
 
         public override void SetStaticDefaults()
         {

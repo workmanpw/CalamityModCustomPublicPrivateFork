@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -9,7 +9,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI
+namespace CalamityMod.UI
 {
     [Autoload(Side = ModSide.Client)]
     public sealed class FlightBar : ModSystem
@@ -64,12 +64,12 @@ namespace CalamityModCustomPublicPrivateFork.UI
 
         public override void OnModLoad()
         {
-            borderTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/FlightBar/FlightBarBorder", AssetRequestMode.ImmediateLoad).Value;
-            flightBarAnimTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/FlightBar/FlightBarAnim", AssetRequestMode.ImmediateLoad).Value;
-            barTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/FlightBar/FlightBar", AssetRequestMode.ImmediateLoad).Value;
-            disabledBarTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/FlightBar/FlightBarBorderDisabled", AssetRequestMode.ImmediateLoad).Value;
-            infiniteBarTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/FlightBar/FlightBarBorderInfinite", AssetRequestMode.ImmediateLoad).Value;
-            limitedBarTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/FlightBar/FlightBarBorderReduced", AssetRequestMode.ImmediateLoad).Value;
+            borderTexture = ModContent.Request<Texture2D>("CalamityMod/UI/FlightBar/FlightBarBorder", AssetRequestMode.ImmediateLoad).Value;
+            flightBarAnimTexture = ModContent.Request<Texture2D>("CalamityMod/UI/FlightBar/FlightBarAnim", AssetRequestMode.ImmediateLoad).Value;
+            barTexture = ModContent.Request<Texture2D>("CalamityMod/UI/FlightBar/FlightBar", AssetRequestMode.ImmediateLoad).Value;
+            disabledBarTexture = ModContent.Request<Texture2D>("CalamityMod/UI/FlightBar/FlightBarBorderDisabled", AssetRequestMode.ImmediateLoad).Value;
+            infiniteBarTexture = ModContent.Request<Texture2D>("CalamityMod/UI/FlightBar/FlightBarBorderInfinite", AssetRequestMode.ImmediateLoad).Value;
+            limitedBarTexture = ModContent.Request<Texture2D>("CalamityMod/UI/FlightBar/FlightBarBorderReduced", AssetRequestMode.ImmediateLoad).Value;
             Reset();
         }
 

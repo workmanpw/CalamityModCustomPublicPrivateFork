@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Reaver
+namespace CalamityMod.Items.Armor.Reaver
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("ReaverHeadgear")]

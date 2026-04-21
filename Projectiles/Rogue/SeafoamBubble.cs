@@ -4,12 +4,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class SeafoamBubble : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/CoralBubble";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/CoralBubble";
 
         public override void SetDefaults()
         {

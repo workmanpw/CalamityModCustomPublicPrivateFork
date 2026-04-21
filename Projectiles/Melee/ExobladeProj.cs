@@ -2,11 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Dusts;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -17,9 +17,9 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class ExobladeProj : ModProjectile, ILocalizedModType
     {
@@ -165,7 +165,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             }
         }
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/ExobladeSquare"; //Square because the sword swing shader it uses only works on square textures
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/ExobladeSquare"; //Square because the sword swing shader it uses only works on square textures
         public static Asset<Texture2D> LensFlare;
 
         public override void SetStaticDefaults()
@@ -469,7 +469,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
             // Draw the zany slash effect.
             Main.spriteBatch.EnterShaderRegion();
-            GameShaders.Misc["CalamityMod:ExobladeSlash"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/VoronoiShapes"));
+            GameShaders.Misc["CalamityMod:ExobladeSlash"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/VoronoiShapes"));
             GameShaders.Misc["CalamityMod:ExobladeSlash"].UseColor(new Color(105, 240, 220));
             GameShaders.Misc["CalamityMod:ExobladeSlash"].UseSecondaryColor(new Color(57, 46, 115));
             GameShaders.Misc["CalamityMod:ExobladeSlash"].Shader.Parameters["fireColor"].SetValue(new Color(242, 112, 72).ToVector3());
@@ -497,7 +497,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             secondaryColor = Color.Lerp(Color.White, secondaryColor, 0.4f + 0.6f * (float)Math.Pow(LungeProgression, 0.5f));
 
             Vector2 trailOffset = (Projectile.rotation - Direction * MathHelper.PiOver4).ToRotationVector2() * 98f + Projectile.Size * 0.5f;
-            GameShaders.Misc["CalamityMod:ExobladePierce"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/EternityStreak"));
+            GameShaders.Misc["CalamityMod:ExobladePierce"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/EternityStreak"));
             GameShaders.Misc["CalamityMod:ExobladePierce"].UseImage2("Images/Extra_189");
             GameShaders.Misc["CalamityMod:ExobladePierce"].UseColor(mainColor);
             GameShaders.Misc["CalamityMod:ExobladePierce"].UseSecondaryColor(secondaryColor);
@@ -552,7 +552,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
 
                 if (LensFlare == null)
-                    LensFlare = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HalfStar");
+                    LensFlare = ModContent.Request<Texture2D>("CalamityMod/Particles/HalfStar");
                 Texture2D shineTex = LensFlare.Value;
                 Vector2 shineScale = new Vector2(1f, 3f);
 

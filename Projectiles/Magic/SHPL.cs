@@ -1,14 +1,14 @@
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Particles;
+using CalamityMod.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class SHPL : ModProjectile, ILocalizedModType, IPixelatedPrimitiveRenderer
     {
@@ -20,7 +20,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             set => Projectile.ai[1] = value.ToInt();
         }
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public GeneralDrawLayer LayerToRenderTo => GeneralDrawLayer.BeforeProjectiles;
 
@@ -111,7 +111,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                 return;
 
             // Draw a star over the collision point while dissipting.
-            Texture2D starTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/FullStar").Value;
+            Texture2D starTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/FullStar").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
 
             Main.spriteBatch.SetBlendState(BlendState.Additive);
@@ -143,7 +143,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         public void RenderPixelatedPrimitives(SpriteBatch spriteBatch, GeneralDrawLayer layer)
         {
             // Render the main trail for the body for the laser.
-            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
+            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(LaserWidthFunction, LaserColorFunction, (_,_) => Projectile.Size * 0.5f, true, true, GameShaders.Misc["CalamityMod:ImpFlameTrail"]), Projectile.oldPos.Length * 2);
 
             // Render a smaller, pure white trail in the same position to represent condensed energy in the core of the laser.

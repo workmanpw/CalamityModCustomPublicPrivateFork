@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class BloodfireArrowProj : ModProjectile, ILocalizedModType
     {
@@ -16,7 +16,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         //Used by Arterial Assault
         public bool DisableEffects = false;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Ammo/BloodfireArrow";
+        public override string Texture => "CalamityMod/Items/Ammo/BloodfireArrow";
 
         public override void SetStaticDefaults()
         {
@@ -83,7 +83,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 }
                 if (Projectile.localAI[0] % 2 == 0)
                 {
-                    Particle spark = new CustomSpark(Projectile.Center - Projectile.velocity * 2, -Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomLineFade", false, 6, 0.025f, (!ChildSafety.Disabled ? Color.CornflowerBlue : Color.Firebrick), new Vector2(1, 1), true, true, shrinkSpeed: 1.4f, glowOpacity: 0.4f);
+                    Particle spark = new CustomSpark(Projectile.Center - Projectile.velocity * 2, -Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomLineFade", false, 6, 0.025f, (!ChildSafety.Disabled ? Color.CornflowerBlue : Color.Firebrick), new Vector2(1, 1), true, true, shrinkSpeed: 1.4f, glowOpacity: 0.4f);
                     GeneralParticleHandler.SpawnParticle(spark);
                 }
             }

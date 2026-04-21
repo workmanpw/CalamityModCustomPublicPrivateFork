@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityMod.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class WulfrumScrapBullet : ModProjectile, ILocalizedModType
     {
@@ -20,7 +20,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             ProjectileID.Sets.TrailingMode[Type] = 0;
         }
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {
@@ -60,7 +60,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
         public override bool PreDraw(ref Color lightColor)
         {
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/BasicTrail"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityMod/ExtraTextures/Trails/BasicTrail"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(WidthFunction, ColorFunction, (_,_) => Projectile.Size * 0.5f, shader: GameShaders.Misc["CalamityMod:TrailStreak"]), 30);
             return false;
         }

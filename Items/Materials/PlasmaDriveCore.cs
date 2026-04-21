@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Materials
+namespace CalamityMod.Items.Materials
 {
     public class PlasmaDriveCore : ModItem, ILocalizedModType
     {

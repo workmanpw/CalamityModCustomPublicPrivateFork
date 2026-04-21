@@ -1,11 +1,11 @@
 
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMarnite
+namespace CalamityMod.Tiles.FurnitureMarnite
 {
     public class PolishedMarniteBlock : ModTile
     {

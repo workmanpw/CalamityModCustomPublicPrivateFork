@@ -1,24 +1,24 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class ArkoftheCosmosParryHoldout : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/RendingScissorsRight";
+        public override string Texture => "CalamityMod/Projectiles/Melee/RendingScissorsRight";
 
         private bool initialized = false;
         internal const float MaxTime = 340;
@@ -191,8 +191,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             {
                 if (Main.myPlayer == Owner.whoAmI)
                 {
-                    var barBG = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
-                    var barFG = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
+                    var barBG = Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
+                    var barFG = Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
 
                     Vector2 drawPos = Owner.Center - Main.screenPosition + new Vector2(0, -36) - barBG.Size() / 2;
                     Rectangle frame = new Rectangle(0, 0, (int)((Timer - ParryTime) / (MaxTime - ParryTime) * barFG.Width), barFG.Height);
@@ -206,10 +206,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 return false;
             }
 
-            Texture2D frontBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeft").Value;
-            Texture2D frontBladeGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
-            Texture2D backBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight").Value;
-            Texture2D backBladeGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRightGlow").Value;
+            Texture2D frontBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeft").Value;
+            Texture2D frontBladeGlow = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
+            Texture2D backBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRight").Value;
+            Texture2D backBladeGlow = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRightGlow").Value;
 
             float snippingRotation = Projectile.rotation + MathHelper.PiOver4;
 

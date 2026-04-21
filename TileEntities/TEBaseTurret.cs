@@ -1,13 +1,13 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Packets;
+using CalamityMod.Packets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.TileEntities
+namespace CalamityMod.TileEntities
 {
     public abstract class TEBaseTurret : ModTileEntity
     {

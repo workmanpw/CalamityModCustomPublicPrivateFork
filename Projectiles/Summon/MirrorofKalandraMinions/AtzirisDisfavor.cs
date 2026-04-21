@@ -1,8 +1,8 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.MirrorofKalandraMinions
+namespace CalamityMod.Projectiles.Summon.MirrorofKalandraMinions
 {
     public class AtzirisDisfavor : ModProjectile, ILocalizedModType
     {
@@ -78,7 +78,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.MirrorofKalandra
                 // Repeating swing sound.
                 if (Projectile.soundDelay <= 0)
                 {
-                    SoundStyle swing = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/LoudSwingWoosh") with { Pitch = -.8f, PitchVariance = 1f, Volume = .6f };
+                    SoundStyle swing = new SoundStyle("CalamityMod/Sounds/Custom/LoudSwingWoosh") with { Pitch = -.8f, PitchVariance = 1f, Volume = .6f };
                     SoundEngine.PlaySound(swing, Projectile.Center);
                     Projectile.soundDelay = 15;
                     Projectile.netUpdate = true;

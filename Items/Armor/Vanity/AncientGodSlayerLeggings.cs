@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
+namespace CalamityMod.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Legs)]
     public class AncientGodSlayerLeggings : ModItem, ILocalizedModType

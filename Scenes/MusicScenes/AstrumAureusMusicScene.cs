@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.AstrumAureus;
+using CalamityMod.NPCs.AstrumAureus;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class AstrumAureusMusicScene : BaseMusicSceneEffect
     {

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.CalPlayer;
+using CalamityMod.CalPlayer.Dashes;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     [AutoloadEquip(EquipType.Shield)]
     public class ElysianAegis : ModItem, ILocalizedModType

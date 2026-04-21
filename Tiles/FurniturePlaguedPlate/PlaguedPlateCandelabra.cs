@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurniturePlaguedPlate
+namespace CalamityMod.Tiles.FurniturePlaguedPlate
 {
     public class PlaguedPlateCandelabra : ModTile
     {

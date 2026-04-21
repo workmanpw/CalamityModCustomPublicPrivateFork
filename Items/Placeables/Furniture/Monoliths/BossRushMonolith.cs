@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Monoliths;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.Monoliths;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths
+namespace CalamityMod.Items.Placeables.Furniture.Monoliths
 {
     public class BossRushMonolith : ModItem, ILocalizedModType
     {

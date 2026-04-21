@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class AugerSlash : ModProjectile, ILocalizedModType
     {
@@ -94,7 +94,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 
             if (Projectile.numHits == 0)
             {
-                SoundStyle hit = new("CalamityModCustomPublicPrivateFork/Sounds/Item/AugerHit");
+                SoundStyle hit = new("CalamityMod/Sounds/Item/AugerHit");
                 SoundEngine.PlaySound(hit with { Volume = 0.8f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f), MaxInstances = 2 }, target.Center);
             }
             if (Projectile.numHits < 4)
@@ -143,7 +143,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D proj = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/AugerSlash").Value;
+            Texture2D proj = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/AugerSlash").Value;
 
             Vector2 vel = Projectile.rotation.ToRotationVector2();
 

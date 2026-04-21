@@ -1,19 +1,19 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class StarmadaHitProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public int time = 0;
         public Color c1 = new Color(164, 47, 160);
         public Color c2 = new Color(227, 97, 72);
@@ -88,7 +88,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 Projectile.rotation += (MathHelper.TwoPi) / (endTime / 3);
                 if (time % 2 == 0)
                 {
-                    Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 28, Projectile.velocity, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 13, 0.11f, shiftColor * 0.6f, new Vector2(launched ? 5.5f : 0.8f, 3f), shrinkSpeed: launched ? 1f : 0.5f);
+                    Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 28, Projectile.velocity, "CalamityMod/Particles/BloomCircle", false, 13, 0.11f, shiftColor * 0.6f, new Vector2(launched ? 5.5f : 0.8f, 3f), shrinkSpeed: launched ? 1f : 0.5f);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
             }
@@ -121,7 +121,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                     else
                     {
                         Projectile.rotation = Projectile.rotation.AngleLerp(Projectile.velocity.ToRotation() + MathHelper.PiOver2, 0.1f);
-                        Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 28, Projectile.velocity, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 15, 0.3f, shiftColor, new Vector2(0.8f, 1.3f), shrinkSpeed: 0.5f);
+                        Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 28, Projectile.velocity, "CalamityMod/Particles/BloomCircle", false, 15, 0.3f, shiftColor, new Vector2(0.8f, 1.3f), shrinkSpeed: 0.5f);
                         GeneralParticleHandler.SpawnParticle(trail);
                     }
                 }
@@ -170,9 +170,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D star = Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/SimpleStar").Value;
-            Texture2D tex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmear").Value;
-            Texture2D tex2 = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/FadeStreak").Value;
+            Texture2D star = Request<Texture2D>("CalamityMod/ExtraTextures/SimpleStar").Value;
+            Texture2D tex = Request<Texture2D>("CalamityMod/Particles/CircularSmear").Value;
+            Texture2D tex2 = Request<Texture2D>("CalamityMod/Particles/FadeStreak").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Projectile.GetAlpha(lightColor);
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f);
@@ -210,7 +210,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                         dust.fadeIn = 6.5f - b * 0.5f;
                     }
                 }
-                Particle bloom = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 25, 1.2f, shiftColor, new Vector2(1, 1), true, true, 0, false, false, glowOpacity: 0.85f);
+                Particle bloom = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 25, 1.2f, shiftColor, new Vector2(1, 1), true, true, 0, false, false, glowOpacity: 0.85f);
                 GeneralParticleHandler.SpawnParticle(bloom);
             }
         }

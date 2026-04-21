@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.ExtraTextures.GreyscaleGradients;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
+using CalamityMod.ExtraTextures.GreyscaleGradients;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.Astral;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -9,7 +9,7 @@ using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.AstralSnow
+namespace CalamityMod.Tiles.AstralSnow
 {
     public class AstralSnow : GlowMaskTile
     {

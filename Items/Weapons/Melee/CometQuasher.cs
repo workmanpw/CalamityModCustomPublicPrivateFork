@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Items.BaseItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityMod.Items.BaseItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class CometQuasher : CustomUseProjItem, ILocalizedModType
     {
@@ -35,7 +35,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
         public override bool MeleePrefix() => true;
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/CometQuasherGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/CometQuasherGlow").Value);
         }
         public override void AddRecipes()
         {

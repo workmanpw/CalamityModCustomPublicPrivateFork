@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class ArtAttackHoldout : ModProjectile
     {
@@ -13,7 +13,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         public Player Owner => Main.player[Projectile.owner];
         public const float AimResponsiveness = 0.72f;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/ArtAttack";
+        public override string Texture => "CalamityMod/Items/Weapons/Magic/ArtAttack";
 
         public override void SetDefaults()
         {

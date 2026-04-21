@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     [PierceResistException]
     public class AcidRocket : ModProjectile, ILocalizedModType
@@ -100,7 +100,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 }
                 if (stuckTimer == 40)
                 {
-                    SoundStyle Primed = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PBGAttackSwitchShort");
+                    SoundStyle Primed = new("CalamityMod/Sounds/Custom/PlagueSounds/PBGAttackSwitchShort");
                     SoundEngine.PlaySound(Primed with { Volume = 0.4f , PitchVariance = 0.2f }, Projectile.Center);
                 }
             }
@@ -137,7 +137,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
         public override void OnKill(int timeLeft)
         {
-            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PlagueBoom", 4);
+            SoundStyle fire = new("CalamityMod/Sounds/Custom/PlagueSounds/PlagueBoom", 4);
             var info = new CalamityUtils.RocketBehaviorInfo((int)RocketID)
             {
                 // Since we use our own spawning method for the cluster rockets, we don't need them to shoot anything,
@@ -177,7 +177,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 GeneralParticleHandler.SpawnParticle(pulse);
             }          
             //Explosion effect
-            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SeaGreen, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.2f, 20, true, 1f);
+            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SeaGreen, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.2f, 20, true, 1f);
             GeneralParticleHandler.SpawnParticle(blastRing);
         }
 

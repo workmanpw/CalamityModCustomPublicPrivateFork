@@ -1,10 +1,10 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.CustomRecipes;
-using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Packets;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonSummoner;
+using CalamityMod.CustomRecipes;
+using CalamityMod.Items.DraedonMisc;
+using CalamityMod.Items.Pets;
+using CalamityMod.Packets;
+using CalamityMod.Systems.Collections;
+using CalamityMod.Tiles.DraedonSummoner;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.TileEntities
+namespace CalamityMod.TileEntities
 {
     public class TECodebreaker : ModTileEntity
     {

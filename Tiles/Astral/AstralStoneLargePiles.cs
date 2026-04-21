@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Astral
+namespace CalamityMod.Tiles.Astral
 {
     public class AstralStoneLargePiles : ModTile
     {

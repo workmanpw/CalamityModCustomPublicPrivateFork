@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Magic;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class PhantasmalFury : ModItem, ILocalizedModType
     {
@@ -32,7 +32,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
             Item.noMelee = true;
             Item.knockBack = 20f;
             Item.value = CalamityGlobalItem.RarityPureGreenBuyPrice;
-            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/PhantasmalFuryShoot") with { Volume = 0.6f, PitchVariance = 0.15f };
+            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/PhantasmalFuryShoot") with { Volume = 0.6f, PitchVariance = 0.15f };
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<PhantasmalFuryProj>();
             Item.shootSpeed = 6f;

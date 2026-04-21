@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.NPCs.Providence;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class HolyFire : ModProjectile, ILocalizedModType
     {
@@ -62,7 +62,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
         public override bool PreDraw(ref Color lightColor)
         {
             Projectile.scale = 1.5f;
-            Texture2D texture = ProvUtils.StandardAI() ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/HolyFireNight").Value;
+            Texture2D texture = ProvUtils.StandardAI() ? Terraria.GameContent.TextureAssets.Projectile[Type].Value : ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/HolyFireNight").Value;
             int framing = texture.Height / Main.projFrames[Type];
             int y6 = framing * Projectile.frame;
             Projectile.DrawBackglow(ProvUtils.GetProjectileColor(lightColor, true), 4f, new Vector2(Projectile.scale));
@@ -78,12 +78,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
             for (int i = 0; i < 25; i++)
                 GeneralParticleHandler.SpawnParticle(new GlowOrbParticle(Projectile.Center, new Vector2(Main.rand.NextFloat(10), 0).RotatedByRandom(MathHelper.TwoPi), false, 10, Main.rand.NextFloat(0.8f, 1.2f), hiColor));
 
-            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, 0f, 0.5f, 0.1f, 4));
+            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, 0f, 0.5f, 0.1f, 4));
 
             for (float i = 0; i < 1; i += 0.25f)
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, hiColor, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.02f * i, 0.125f * i, 8));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, hiColor, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.02f * i, 0.125f * i, 8));
 
-            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, hiColor, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.02f, 0.045f, 5));
+            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, hiColor, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.02f, 0.045f, 5));
 
             if (Main.rand.NextBool())
             {

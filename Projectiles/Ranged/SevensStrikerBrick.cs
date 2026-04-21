@@ -3,12 +3,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class SevensStrikerBrick : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/ThrowingBrick";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/ThrowingBrick";
 
         public override void SetDefaults()
         {

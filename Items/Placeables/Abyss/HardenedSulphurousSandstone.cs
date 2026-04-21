@@ -1,6 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss
+namespace CalamityMod.Items.Placeables.Abyss
 {
     public class HardenedSulphurousSandstone : ModItem, ILocalizedModType
     {

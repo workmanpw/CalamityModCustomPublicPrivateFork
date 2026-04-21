@@ -6,7 +6,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureDriftwood
+namespace CalamityMod.Tiles.FurnitureDriftwood
 {
     public class DriftwoodSofa : ModTile
     {

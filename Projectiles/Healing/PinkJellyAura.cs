@@ -1,24 +1,24 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Healing
+namespace CalamityMod.Projectiles.Healing
 {
     public class PinkJellyAura : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Healing";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public int ShinkGrow = 0;
         public int Framecounter = 0;
         public int PulseOnce = 1;
         public int PulseOnce2 = 1;
         public int PulseOnce3 = 1;
-        public static readonly SoundStyle Spawnsound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/OrbHeal1") { Volume = 0.5f };
+        public static readonly SoundStyle Spawnsound = new("CalamityMod/Sounds/Custom/OrbHeal1") { Volume = 0.5f };
 
         public override void SetDefaults()
         {

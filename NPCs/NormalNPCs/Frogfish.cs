@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Items.Potions;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
+namespace CalamityMod.NPCs.NormalNPCs
 {
     public class Frogfish : ModNPC
     {
@@ -43,7 +43,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Frogfish")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Frogfish")
             });
         }
 

@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityMod.Enums;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives
+namespace CalamityMod.Graphics.Primitives
 {
     /// <summary>
     /// Use to sucessfully render primitives with pixelation with an NPC or Projectile.

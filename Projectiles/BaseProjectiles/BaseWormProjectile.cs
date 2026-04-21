@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityMod.NPCs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles
+namespace CalamityMod.Projectiles.BaseProjectiles
 {
     /// <summary>
     /// Implementation to make ModProjectile worms much easier to make.
@@ -91,7 +91,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles
                     {
                         if (GlowTextures[i] is not null)
                             internalGlowAssets.Add(ModContent.Request<Texture2D>(GlowTextures[i]));
-                        else internalGlowAssets.Add(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj"));
+                        else internalGlowAssets.Add(ModContent.Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj"));
                     }
                 return internalGlowAssets;
             }

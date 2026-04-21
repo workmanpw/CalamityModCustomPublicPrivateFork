@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityMod.NPCs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     [PierceResistException]
     public class FantasyTalismanStealth : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Rogue/FantasyTalismanProj";
+        public override string Texture => "CalamityMod/Projectiles/Rogue/FantasyTalismanProj";
 
         public override void SetStaticDefaults()
         {

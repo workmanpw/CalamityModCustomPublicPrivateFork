@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -10,7 +10,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
+namespace CalamityMod.NPCs.AcidRain
 {
     public class Skyfin : ModNPC
     {
@@ -71,7 +71,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Skyfin")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Skyfin")
             });
         }
 

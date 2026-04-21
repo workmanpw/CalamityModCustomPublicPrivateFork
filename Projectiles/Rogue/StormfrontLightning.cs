@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,7 +13,7 @@ using Terraria.Utilities;
 
 //Yes, this is Heavenly Gale's lightning code but modified - Shade
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class StormfrontLightning : ModProjectile, ILocalizedModType
     {
@@ -31,7 +31,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public ref float AccumulatedXMovementSpeeds => ref Projectile.localAI[0];
         public ref float BranchingIteration => ref Projectile.localAI[1];
         public ref float InitialVelocityAngle => ref Projectile.ai[0];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/LightningProj";
+        public override string Texture => "CalamityMod/Projectiles/LightningProj";
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.DrawScreenCheckFluff[Type] = 10000;

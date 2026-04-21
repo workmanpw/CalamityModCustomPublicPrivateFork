@@ -2,13 +2,13 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Healing
+namespace CalamityMod.Projectiles.Healing
 {
     public class DemonHeal : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Healing";
         public Player Owner => Main.player[Projectile.owner];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {

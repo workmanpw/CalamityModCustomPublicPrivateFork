@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
+using CalamityMod.Projectiles.Pets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Pets
+namespace CalamityMod.Buffs.Pets
 {
     // Regardless of what Reddit or others may think, let this code comment serve as evidence
     // that Akato is not in any way canon, and is not in fact the son of Yharon in any capacity.

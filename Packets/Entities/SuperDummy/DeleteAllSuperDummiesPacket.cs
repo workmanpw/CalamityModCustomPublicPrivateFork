@@ -1,8 +1,8 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
+using CalamityMod.Items.Tools;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class DeleteAllSuperDummiesPacket : CalamityPacket
     {

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches;
+using CalamityMod.Items.Fishing.SunkenSeaCatches;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea
+namespace CalamityMod.Tiles.SunkenSea
 {
     [LegacyName("SunkenCrateTile")]
     public class EutrophicCrateTile : ModTile

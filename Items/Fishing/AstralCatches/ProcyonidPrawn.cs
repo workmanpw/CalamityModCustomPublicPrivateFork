@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCatches
+namespace CalamityMod.Items.Fishing.AstralCatches
 {
     public class ProcyonidPrawn : ModItem, ILocalizedModType
     {

@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
@@ -9,13 +9,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class TruePureClarity : BaseCustomUseStyleProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
         public override int AssignedItemID => ModContent.ItemType<TrueBiomeBlade>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/TrueBiomeBlade";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/TrueBiomeBlade";
 
         public override float HitboxOutset => 65f;
         public override Vector2 HitboxSize => new Vector2(100, 100);
@@ -29,7 +29,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public bool doSwing = true;
         public bool postSwing = false;
         public int useAnimation;
-        public static readonly SoundStyle FullChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockSound");
+        public static readonly SoundStyle FullChargeSound = new("CalamityMod/Sounds/Item/MagicRockSound");
 
         public Color outlineColorGreen => (Main.player[Projectile.owner].HeldItem.ModItem as TrueBiomeBlade).mainAttunement.tooltipColor;
         public Color outlineColorBlue => new Color(110, 216, 255);
@@ -273,7 +273,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                     for (int i = 0; i < 5; i++)
                     {
                         Color outlineColor = Color.Lerp(outlineColorGreen, outlineColorBlue, (float)Math.Sin(Main.GlobalTimeWrappedHourly * 1.5f)) * MathHelper.Clamp(Projectile.numHits / 3f, 0f, 1f);
-                        Texture2D outline = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_TruePureClarityGhost").Value;
+                        Texture2D outline = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/MendedBiomeBlade_TruePureClarityGhost").Value;
                         Vector2 rotationalDrawOffset = (MathHelper.TwoPi * i / 7f + Main.GlobalTimeWrappedHourly * 17f).ToRotationVector2();
                         rotationalDrawOffset *= MathHelper.Lerp(3.25f, 6f, (float)Math.Cos(Main.GlobalTimeWrappedHourly * 4f) * 0.5f + 1.5f);
                         Main.EntitySpriteDraw(outline, Projectile.Center - Main.screenPosition + rotationalDrawOffset + new Vector2(0, Owner.gfxOffY), null, outlineColor, Projectile.rotation + RotationOffset + r, FlipAsSword ? new Vector2(tex.Width - SpriteOrigin.X, SpriteOrigin.Y) : SpriteOrigin, Projectile.scale, spriteEffects != SpriteEffects.None ? spriteEffects : (FlipAsSword ? SpriteEffects.FlipHorizontally : SpriteEffects.None));

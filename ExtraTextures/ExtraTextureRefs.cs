@@ -5,7 +5,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.ExtraTextures
+namespace CalamityMod.ExtraTextures
 {
     [Autoload(Side = ModSide.Client)]
     public class ExtraTextureRefs : ModSystem
@@ -38,24 +38,24 @@ namespace CalamityModCustomPublicPrivateFork.ExtraTextures
         // TODO: - Every other ExtraTextures Reference could be move in here
         public override void OnModLoad()
         {
-            DestroyerHeadGlowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBossGlowmasks/DestroyerHeadGlow", AssetRequestMode.AsyncLoad);
-            DestroyerBodyGlowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBossGlowmasks/DestroyerBodyGlow", AssetRequestMode.AsyncLoad);
-            DestroyerTailGlowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBossGlowmasks/DestroyerTailGlow", AssetRequestMode.AsyncLoad);
+            DestroyerHeadGlowmask = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBossGlowmasks/DestroyerHeadGlow", AssetRequestMode.AsyncLoad);
+            DestroyerBodyGlowmask = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBossGlowmasks/DestroyerBodyGlow", AssetRequestMode.AsyncLoad);
+            DestroyerTailGlowmask = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBossGlowmasks/DestroyerTailGlow", AssetRequestMode.AsyncLoad);
 
-            WallOfFleshEyeGlowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBossGlowmasks/WallOfFleshEyeTelegraphGlow", AssetRequestMode.AsyncLoad);
-            WallOfFleshDemonSickleTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/ForbiddenOathbladeProjectile", AssetRequestMode.AsyncLoad);
+            WallOfFleshEyeGlowmask = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBossGlowmasks/WallOfFleshEyeTelegraphGlow", AssetRequestMode.AsyncLoad);
+            WallOfFleshDemonSickleTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/ForbiddenOathbladeProjectile", AssetRequestMode.AsyncLoad);
 
             FlyingCarpetVanilla = TextureAssets.FlyingCarpet;
-            FlyingCarpetAuric = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/AuricCarpet", AssetRequestMode.AsyncLoad);
+            FlyingCarpetAuric = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/AuricCarpet", AssetRequestMode.AsyncLoad);
 
-            LuckIconGreater = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBuffs/LuckyGreater", AssetRequestMode.AsyncLoad);
+            LuckIconGreater = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBuffs/LuckyGreater", AssetRequestMode.AsyncLoad);
             LuckIconVanilla = TextureAssets.Buff[BuffID.Lucky];
-            LuckIconLesser = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBuffs/LuckyLesser", AssetRequestMode.AsyncLoad);
+            LuckIconLesser = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBuffs/LuckyLesser", AssetRequestMode.AsyncLoad);
 
-            CircularSmear = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmear", AssetRequestMode.AsyncLoad);
-            CircularSmearFire1 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmearFire1", AssetRequestMode.AsyncLoad);
-            CircularSmearFire2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmearFire2", AssetRequestMode.AsyncLoad);
-            CircularSmearFire3 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmearFire3", AssetRequestMode.AsyncLoad);
+            CircularSmear = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularSmear", AssetRequestMode.AsyncLoad);
+            CircularSmearFire1 = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularSmearFire1", AssetRequestMode.AsyncLoad);
+            CircularSmearFire2 = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularSmearFire2", AssetRequestMode.AsyncLoad);
+            CircularSmearFire3 = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularSmearFire3", AssetRequestMode.AsyncLoad);
         }
 
         public override void Unload()

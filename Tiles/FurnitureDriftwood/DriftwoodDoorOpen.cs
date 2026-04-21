@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood;
+using CalamityMod.Items.Placeables.FurnitureDriftwood;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureDriftwood
+namespace CalamityMod.Tiles.FurnitureDriftwood
 {
     public class DriftwoodDoorOpen : ModTile
     {

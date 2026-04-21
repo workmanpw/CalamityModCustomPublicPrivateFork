@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityMod.NPCs.NormalNPCs;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Critters
+namespace CalamityMod.Items.Critters
 {
     public class PiggyItem : ModItem, ILocalizedModType
     {

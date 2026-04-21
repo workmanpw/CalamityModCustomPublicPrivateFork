@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Balancing;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Balancing;
+using CalamityMod.CalPlayer;
+using CalamityMod.World;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class StatMeter : ModItem, ILocalizedModType
     {

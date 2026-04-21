@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurniturePlagued
+namespace CalamityMod.Items.Placeables.FurniturePlagued
 {
     public class PlaguedPlateBathtub : ModItem, ILocalizedModType
     {

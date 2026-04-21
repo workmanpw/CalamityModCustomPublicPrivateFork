@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+namespace CalamityMod.Graphics.Primitives;
 
 public static class PrimitiveShapeBuilder
 {

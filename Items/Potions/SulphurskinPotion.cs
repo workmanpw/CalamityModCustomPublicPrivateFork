@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Potions;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
+using CalamityMod.Buffs.Potions;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Abyss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Potions
+namespace CalamityMod.Items.Potions
 {
     public class SulphurskinPotion : ModItem, ILocalizedModType
     {

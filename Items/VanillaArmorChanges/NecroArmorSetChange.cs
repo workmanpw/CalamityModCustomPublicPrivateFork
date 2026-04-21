@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges
+namespace CalamityMod.Items.VanillaArmorChanges
 {
     public class NecroArmorSetChange : VanillaArmorChange
     {
@@ -17,7 +17,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges
         public override string ArmorSetName => "Necro";
 
         public const int PostMortemDuration = 10;
-        public static readonly SoundStyle TimerSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/TickingTimer");
+        public static readonly SoundStyle TimerSound = new("CalamityMod/Sounds/Custom/TickingTimer");
 
         public override void UpdateSetBonusText(ref string setBonusText)
         {

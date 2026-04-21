@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,12 +11,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class MarksmanShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         private static readonly int trailLength = 35;
         internal List<Vector2> trailPositions;
 
@@ -251,7 +251,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (trailPositions is null)
                 return false;
 
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/BasicTrail"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/BasicTrail"));
             PrimitiveRenderer.RenderTrail(trailPositions, new(WidthFunction, ColorFunction, (_,_) => Projectile.Size * 0.5f, false, shader: GameShaders.Misc["CalamityMod:TrailStreak"]), trailLength);
 
             return false;

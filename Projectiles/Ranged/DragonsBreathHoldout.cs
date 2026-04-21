@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class DragonsBreathHoldout : BaseGunHoldoutProjectile
     {
@@ -60,7 +60,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                     Time = -1;
                     firingBeam = false;
                     fireSpeed = 1;
-                    SoundStyle bigShot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire");
+                    SoundStyle bigShot = new("CalamityMod/Sounds/Item/DudFire");
                     SoundEngine.PlaySound(bigShot with { PitchVariance = 0.15f, Volume = 0.75f }, Projectile.Center);
 
                     if (Main.myPlayer == Projectile.owner)
@@ -116,7 +116,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             }
             Main.EntitySpriteDraw(texture, position, null, Projectile.GetAlpha(lightColor), rotation + (hasLaunchedMag ? (-0.5f * Utils.GetLerpValue(Owner.itemAnimationMax * 0.2f, 0, fireTimer, true) * Projectile.direction) : 0), origin, Projectile.scale * Owner.gravDir, effects);
 
-            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
             Vector2 drawPosition = GunTipPosition - Main.screenPosition + Projectile.velocity * 3;
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f);
             Vector2 rotationPoint = texture.Size() * 0.5f;

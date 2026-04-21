@@ -1,7 +1,7 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
+using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using System.Linq;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class GodSlayerSlugProj : ModProjectile, ILocalizedModType
     {
@@ -26,7 +26,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         private const int TextureHeight = 136;
 
         private bool BlueMode => Projectile.ai[0] != 0f;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/GodSlayerSlugPurple";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/GodSlayerSlugPurple";
         private static Texture2D TextureBlue;
 
         public override void SetStaticDefaults()
@@ -221,15 +221,15 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             {
                 for (int i = 0; i < 2; ++i)
                 {
-                    Particle pulse = new CustomPulse(dustPos, Vector2.Zero, Color.Black, "CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle", Vector2.One, 0, 0.4f * speedMultiplier, 0.05f * speedMultiplier, 12, false);
+                    Particle pulse = new CustomPulse(dustPos, Vector2.Zero, Color.Black, "CalamityMod/ExtraTextures/BasicCircle", Vector2.One, 0, 0.4f * speedMultiplier, 0.05f * speedMultiplier, 12, false);
                     GeneralParticleHandler.SpawnParticle(pulse);
-                    Particle pulse2 = new CustomPulse(dustPos, Vector2.Zero, color, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, 0, 0.15f * (1 + i * 0.2f) * speedMultiplier, 0.025f * (1 + i * 0.2f) * speedMultiplier, 12, true);
+                    Particle pulse2 = new CustomPulse(dustPos, Vector2.Zero, color, "CalamityMod/Particles/BloomRing", Vector2.One, 0, 0.15f * (1 + i * 0.2f) * speedMultiplier, 0.025f * (1 + i * 0.2f) * speedMultiplier, 12, true);
                     GeneralParticleHandler.SpawnParticle(pulse2);
                 }
             }
             else //light
             {
-                Particle pulse = new CustomSpark(dustPos, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 10, 0.3f * speedMultiplier, color, new Vector2(1f, 1f), true, true, glowOpacity: 1f);
+                Particle pulse = new CustomSpark(dustPos, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 10, 0.3f * speedMultiplier, color, new Vector2(1f, 1f), true, true, glowOpacity: 1f);
                 GeneralParticleHandler.SpawnParticle(pulse);
             }
             

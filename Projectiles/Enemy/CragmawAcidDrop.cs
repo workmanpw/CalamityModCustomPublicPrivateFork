@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityMod.Buffs.StatDebuffs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
+namespace CalamityMod.Projectiles.Enemy
 {
     public class CragmawAcidDrop : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Enemy";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Environment/AcidDrop";
+        public override string Texture => "CalamityMod/Projectiles/Environment/AcidDrop";
         public override void SetDefaults()
         {
             Projectile.width = 16;

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Physics;
+namespace CalamityMod.Physics;
 
 // Yes, I was silently reading over the Nightshade dev channels when learning about this.
 // So, thanks Tomat and 1-3 for the idea! -Lucille

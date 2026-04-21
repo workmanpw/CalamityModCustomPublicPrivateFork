@@ -1,17 +1,17 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.CalPlayer;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class XykWings : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         public CalamityPlayer moddedOwner => Owner.Calamity();
         public Color drawColor => Owner.Calamity().XykFXColor;
@@ -275,20 +275,20 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             float height = 1;
             Texture2D tex;
             if (wingNum == 0)
-                tex = moddedOwner.XykVisualsOrange ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/XykWingOrange2").Value : ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/XykWingBlue2").Value;
+                tex = moddedOwner.XykVisualsOrange ? ModContent.Request<Texture2D>("CalamityMod/Particles/XykWingOrange2").Value : ModContent.Request<Texture2D>("CalamityMod/Particles/XykWingBlue2").Value;
             else if (wingNum == topWingNum || iAmTopWing)
             {
                 height = 1.5f;
-                tex = moddedOwner.XykVisualsOrange ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/XykWingOrange1").Value : ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/XykWingBlue1").Value;
+                tex = moddedOwner.XykVisualsOrange ? ModContent.Request<Texture2D>("CalamityMod/Particles/XykWingOrange1").Value : ModContent.Request<Texture2D>("CalamityMod/Particles/XykWingBlue1").Value;
             }
             else
             {
                 width = 2;
                 height = 1f + 0.1f * wingNum;
-                tex = moddedOwner.XykVisualsOrange ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/XykWingOrange3").Value : ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/XykWingBlue3").Value;
+                tex = moddedOwner.XykVisualsOrange ? ModContent.Request<Texture2D>("CalamityMod/Particles/XykWingOrange3").Value : ModContent.Request<Texture2D>("CalamityMod/Particles/XykWingBlue3").Value;
             }
 
-            Texture2D glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
 
             Vector2 scale = new Vector2(width, height * spawnFadePow) * 0.12f * Projectile.scale;
             Vector2 scaleBack = new Vector2(width * 1.5f, height * 0.7f * spawnFadePow) * 0.07f * Projectile.scale;

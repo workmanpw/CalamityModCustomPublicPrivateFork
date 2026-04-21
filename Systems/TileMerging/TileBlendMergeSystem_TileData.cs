@@ -2,7 +2,7 @@ using System.Collections.Concurrent;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public sealed partial class TileBlendMergeSystem : ModSystem
     {

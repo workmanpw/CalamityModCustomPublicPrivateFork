@@ -1,15 +1,15 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.Graphics.Shaders;
 using Terraria.Localization;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public class ElementalMastery : CooldownHandler
     {
@@ -21,9 +21,9 @@ namespace CalamityModCustomPublicPrivateFork.Cooldowns
         public override bool CanTickDown => false;
         public override bool ShouldDisplay => instance.player.HeldItem.type == ItemType<Lightspeed>();
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => $"CalamityModCustomPublicPrivateFork/Cooldowns/{ID}";
-        public override string OutlineTexture => $"CalamityModCustomPublicPrivateFork/Cooldowns/{ID}Outline";
-        public override string OverlayTexture => $"CalamityModCustomPublicPrivateFork/Cooldowns/{ID}Overlay";
+        public override string Texture => $"CalamityMod/Cooldowns/{ID}";
+        public override string OutlineTexture => $"CalamityMod/Cooldowns/{ID}Outline";
+        public override string OverlayTexture => $"CalamityMod/Cooldowns/{ID}Overlay";
 
         public override Color OutlineColor => Color.SlateGray;
         public override Color CooldownStartColor => Color.Lerp(Color.OrangeRed, Color.SlateGray, instance.Completion);

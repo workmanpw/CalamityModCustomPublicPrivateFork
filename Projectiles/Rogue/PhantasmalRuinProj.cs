@@ -4,13 +4,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class PhantasmalRuinProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/PhantasmalRuin";
-        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumKnifeThrowSingle") { Volume = 0.8f };
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/PhantasmalRuin";
+        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/Item/WulfrumKnifeThrowSingle") { Volume = 0.8f };
         private const int Lifetime = 600;
 
         public override void SetStaticDefaults()

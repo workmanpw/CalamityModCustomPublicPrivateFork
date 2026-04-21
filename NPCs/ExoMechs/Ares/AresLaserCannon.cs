@@ -1,11 +1,11 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Sounds;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -18,7 +18,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
+namespace CalamityMod.NPCs.ExoMechs.Ares
 {
     [HasPierceResist]
     public class AresLaserCannon : ModNPC
@@ -70,9 +70,9 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
         public SlotId DeathraySoundSlot;
 
         // Telegraph sound.
-        public static readonly SoundStyle TelSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/AresLaserArmCharge") { Volume = 1.1f };
+        public static readonly SoundStyle TelSound = new("CalamityMod/Sounds/Custom/ExoMechs/AresLaserArmCharge") { Volume = 1.1f };
 
-        public static readonly SoundStyle LaserbeamShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/AresLaserArmShoot") { Volume = 1.1f };
+        public static readonly SoundStyle LaserbeamShootSound = new("CalamityMod/Sounds/Custom/ExoMechs/AresLaserArmShoot") { Volume = 1.1f };
 
         public static Asset<Texture2D> GlowTexture;
 
@@ -675,7 +675,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
             if ((NPC.Calamity().newAI[2] < deathrayTelegraphDuration) && AIState == (float)Phase.Deathray)
             {
                 // Also draw a telegraph line
-                Texture2D lineTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLine").Value;
+                Texture2D lineTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLine").Value;
                 Color outlineColor = Color.Lerp(Color.OrangeRed, Color.White, NPC.Calamity().newAI[2] / deathrayTelegraphDuration);
                 spriteBatch.Draw(lineTex, CoreSpritePosition - NPC.rotation.ToRotationVector2() * NPC.spriteDirection * 104 - screenPos, null, outlineColor, NPC.rotation - MathHelper.PiOver2 * NPC.spriteDirection, new Vector2(lineTex.Width / 2f, lineTex.Height), new Vector2(1f * NPC.Calamity().newAI[2] / deathrayTelegraphDuration, 4200f), spriteEffects, 0f);
 

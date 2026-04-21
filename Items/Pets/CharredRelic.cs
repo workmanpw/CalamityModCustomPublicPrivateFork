@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Pets;
-using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
+using CalamityMod.Buffs.Pets;
+using CalamityMod.Projectiles.Pets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Pets
+namespace CalamityMod.Items.Pets
 {
     public class CharredRelic : ModItem, ILocalizedModType
     {

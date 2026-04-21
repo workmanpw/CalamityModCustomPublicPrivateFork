@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityMod.DataStructures;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime
+namespace CalamityMod.Buffs.DamageOverTime
 {
     public class WeakBrimstoneFlames : ModBuff
     {

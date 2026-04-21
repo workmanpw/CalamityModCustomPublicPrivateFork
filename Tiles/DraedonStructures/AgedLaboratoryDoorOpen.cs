@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures;
+using CalamityMod.Items.Placeables.DraedonStructures;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -9,7 +9,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
+namespace CalamityMod.Tiles.DraedonStructures
 {
     public class AgedLaboratoryDoorOpen : ModTile
     {

@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.Projectiles.Melee;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class AbyssBlade : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Melee";
-        public static readonly SoundStyle SpinSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SpinningWoosh") { Volume = 0.65f };
+        public static readonly SoundStyle SpinSound = new("CalamityMod/Sounds/Item/SpinningWoosh") { Volume = 0.65f };
         public override void SetDefaults()
         {
             Item.width = 74;

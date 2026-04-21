@@ -3,9 +3,9 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles
+namespace CalamityMod.Projectiles.BaseProjectiles
 {
     public abstract class BaseShortswordProjectile : ModProjectile, ILocalizedModType
     {

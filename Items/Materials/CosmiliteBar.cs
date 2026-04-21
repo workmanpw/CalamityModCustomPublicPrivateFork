@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Materials
+namespace CalamityMod.Items.Materials
 {
     public class CosmiliteBar : ModItem, ILocalizedModType
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityMod.Dusts;
+using CalamityMod.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,12 +12,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class LucreciaBolt : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public static float MaxWidth = 30;
         public ref float Time => ref Projectile.ai[0];
@@ -136,7 +136,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             Main.spriteBatch.EnterShaderRegion();
 
             if (TrailTex == null)
-                TrailTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/BasicTrail");
+                TrailTex = Request<Texture2D>("CalamityMod/ExtraTextures/Trails/BasicTrail");
 
             GameShaders.Misc["CalamityMod:ExobladePierce"].SetShaderTexture(TrailTex);
             GameShaders.Misc["CalamityMod:ExobladePierce"].UseImage2("Images/Extra_189");

@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Projectiles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Projectiles;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class SurgeDriver : ModItem, ILocalizedModType
     {

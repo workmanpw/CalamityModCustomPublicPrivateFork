@@ -1,6 +1,6 @@
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures
+namespace CalamityMod.Items.Placeables.DraedonStructures
 {
     public class RustedPipes : ModItem, ILocalizedModType
     {

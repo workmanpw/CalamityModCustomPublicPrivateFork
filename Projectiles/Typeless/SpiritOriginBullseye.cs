@@ -1,11 +1,11 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityMod.Items.Accessories;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class SpiritOriginBullseye : ModProjectile, ILocalizedModType
     {
@@ -28,7 +28,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
         public Vector2 BullseyeOffsetFromCenter;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {
@@ -111,11 +111,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
             float scaleToUse = VisualScaleDiff;
 
-            Texture2D bullseyeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SpiritOriginRegularBullseye").Value;
+            Texture2D bullseyeTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/SpiritOriginRegularBullseye").Value;
             Rectangle frame = bullseyeTexture.Frame();
             if (Target.IsABoss())
             {
-                bullseyeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SpiritOriginBossBullseye").Value;
+                bullseyeTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/SpiritOriginBossBullseye").Value;
                 frame = bullseyeTexture.Frame(1, 4, 0, (int)(Main.GlobalTimeWrappedHourly * 7f) % 4);
                 drawPosition.Y -= 17;
                 drawPosition.X -= 1;

@@ -1,17 +1,17 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CustomRecipes;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.CustomRecipes;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.PlaceableTurrets
+namespace CalamityMod.Items.Placeables.PlaceableTurrets
 {
     public class HostileLabTurret : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Placeables";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Placeables/PlaceableTurrets/LabTurret";
+        public override string Texture => "CalamityMod/Items/Placeables/PlaceableTurrets/LabTurret";
         public override void SetDefaults()
         {
             Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.DraedonStructures.DraedonLabTurret>());

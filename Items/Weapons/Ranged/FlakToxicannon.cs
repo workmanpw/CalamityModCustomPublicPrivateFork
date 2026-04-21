@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class FlakToxicannon : ModItem, ILocalizedModType
     {
@@ -40,7 +40,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
             Item.shootSpeed = 15f;
 
             Item.useAmmo = AmmoID.Rocket;
-            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire") with { Volume = .4f, Pitch = -.7f, PitchVariance = 0.1f };
+            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/DudFire") with { Volume = .4f, Pitch = -.7f, PitchVariance = 0.1f };
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.channel = true;
             Item.noMelee = true;

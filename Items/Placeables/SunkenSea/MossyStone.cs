@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea
+namespace CalamityMod.Items.Placeables.SunkenSea
 {
     public class MossyStone : ModItem, ILocalizedModType
     {

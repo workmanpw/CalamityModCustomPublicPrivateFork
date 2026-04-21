@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Potions;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Buffs.Potions;
+using CalamityMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Potions
+namespace CalamityMod.Items.Potions
 {
     [LegacyName("CrumblingPotion")]
     public class FlaskOfCrumbling : ModItem, ILocalizedModType

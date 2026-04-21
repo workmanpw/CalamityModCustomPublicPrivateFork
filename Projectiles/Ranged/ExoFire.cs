@@ -1,20 +1,20 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     // Photoviscerator left click main projectile (the flamethrower itself)
     public class ExoFire : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public ref float LightPower => ref Projectile.ai[2];
 
         public Color sparkColor;
@@ -69,11 +69,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 //PhotoMetaball4.SpawnParticle(Projectile.Center + Owner.velocity, (37 - Time * (PhotoTimer == 0 ? 0.165f : 0.088f)) - PhotoTimer * 0.2f + (PhotoTimer == 1 ? 20 : 0));
 
                 // I hate metaballs >:(
-                Particle beam3 = new CustomSpark(Projectile.Center, Projectile.velocity * Main.rand.NextFloat(0.5f, 4f), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 4, ((37 - Time * (PhotoTimer == 0 ? 0.165f : 0.088f)) - PhotoTimer * 0.2f + (PhotoTimer == 1 ? 20 : 0)) * 0.005f, sparkColor, new Vector2(1f, 1 + Time * 0.1f), true, false);
+                Particle beam3 = new CustomSpark(Projectile.Center, Projectile.velocity * Main.rand.NextFloat(0.5f, 4f), "CalamityMod/Particles/SmallBloom", false, 4, ((37 - Time * (PhotoTimer == 0 ? 0.165f : 0.088f)) - PhotoTimer * 0.2f + (PhotoTimer == 1 ? 20 : 0)) * 0.005f, sparkColor, new Vector2(1f, 1 + Time * 0.1f), true, false);
                 GeneralParticleHandler.SpawnParticle(beam3);
                 if (!photosens)
                 {
-                    Particle beam32 = new CustomSpark(Projectile.Center, Projectile.velocity * Main.rand.NextFloat(0.5f, 4f), "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 4, ((37 - Time * (PhotoTimer == 0 ? 0.165f : 0.088f)) - PhotoTimer * 0.2f + (PhotoTimer == 1 ? 20 : 0)) * 0.003f, Color.Lerp(Color.Blue, sparkColor, 0.5f), new Vector2(1f, 1 + Time * 0.1f), true, false);
+                    Particle beam32 = new CustomSpark(Projectile.Center, Projectile.velocity * Main.rand.NextFloat(0.5f, 4f), "CalamityMod/Particles/SmallBloom", false, 4, ((37 - Time * (PhotoTimer == 0 ? 0.165f : 0.088f)) - PhotoTimer * 0.2f + (PhotoTimer == 1 ? 20 : 0)) * 0.003f, Color.Lerp(Color.Blue, sparkColor, 0.5f), new Vector2(1f, 1 + Time * 0.1f), true, false);
                     GeneralParticleHandler.SpawnParticle(beam32);
                 }
             }

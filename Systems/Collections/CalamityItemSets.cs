@@ -1,34 +1,34 @@
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.FishingRods;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.Fishing.FishingRods;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Monoliths;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Potions;
+using CalamityMod.Items.Tools;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
 using ReLogic.Reflection;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Collections
+namespace CalamityMod.Systems.Collections
 {
     [ReinitializeDuringResizeArrays]
     public static class CalamityItemSets
     {
-        public static SetFactory Factory = new SetFactory(ItemLoader.ItemCount, "CalamityModCustomPublicPrivateFork/ItemID", Search);
+        public static SetFactory Factory = new SetFactory(ItemLoader.ItemCount, "CalamityMod/ItemID", Search);
         public static IdDictionary Search = IdDictionary.Create<ItemID, int>();
 
         /// <summary>

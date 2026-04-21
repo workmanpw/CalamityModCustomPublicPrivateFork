@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
+namespace CalamityMod.NPCs.Abyss
 {
     [LongDistanceNetSync(SyncWith = typeof(EidolonWyrmHead))]
     public class EidolonWyrmBodyAlt : ModNPC

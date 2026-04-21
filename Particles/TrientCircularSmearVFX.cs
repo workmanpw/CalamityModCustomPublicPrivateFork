@@ -1,10 +1,10 @@
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class TrientCircularSmear : Particle //Trient aka semi but for thirds
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/TrientCircularSmear";
+        public override string Texture => "CalamityMod/Particles/TrientCircularSmear";
         public override bool UseAdditiveBlend => true;
         public override bool SetLifetime => true;
 

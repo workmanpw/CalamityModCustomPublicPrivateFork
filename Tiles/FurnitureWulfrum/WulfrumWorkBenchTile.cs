@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum
+namespace CalamityMod.Tiles.FurnitureWulfrum
 {
     [LegacyName("WulfrumWorkbench")]
     public class WulfrumWorkBenchTile : ModTile

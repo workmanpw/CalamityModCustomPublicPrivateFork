@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Critters;
+using CalamityMod.Items.Critters;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.DraedonLabThings
+namespace CalamityMod.NPCs.DraedonLabThings
 {
     public class NanodroidPlagueGreen : ModNPC
     {

@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo;
+using CalamityMod.Items.Placeables.FurnitureExo;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
+namespace CalamityMod.Tiles.FurnitureExo
 {
     public class ExoChestTile : ModTile
     {
@@ -50,7 +50,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
 
             int yOffset = TileObjectData.GetTileData(tile).DrawYOffset;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureExo/ExoChestGlow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureExo/ExoChestGlow");
             Texture2D glowmask = GlowTexture.Value;
 
             Color drawColour = Color.White;

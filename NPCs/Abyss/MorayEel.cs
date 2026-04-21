@@ -1,14 +1,14 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.NPCs.NormalNPCs;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
+namespace CalamityMod.NPCs.Abyss
 {
     public class MorayEel : ModNPC
     {
@@ -54,7 +54,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.MorayEel")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.MorayEel")
             });
         }
 

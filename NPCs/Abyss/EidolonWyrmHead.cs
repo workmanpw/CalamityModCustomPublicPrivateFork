@@ -1,16 +1,16 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.NPCs.PrimordialWyrm;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -23,7 +23,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
+namespace CalamityMod.NPCs.Abyss
 {
     [LongDistanceNetSync]
     public class EidolonWyrmHead : ModNPC
@@ -83,7 +83,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.EidolonWyrm")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.EidolonWyrm")
             });
         }
 

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.NPCs.CalClone;
+using CalamityMod.Events;
+using CalamityMod.Items.Materials;
+using CalamityMod.NPCs.CalClone;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     [LegacyName("BlightedEyeball")]
     public class EyeofDesolation : ModItem, ILocalizedModType

@@ -4,7 +4,7 @@ using System;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.ILEditing;
+namespace CalamityMod.ILEditing;
 
 internal readonly record struct ManipulatorContext(
     ManipulatorBatch PlayerUpdate

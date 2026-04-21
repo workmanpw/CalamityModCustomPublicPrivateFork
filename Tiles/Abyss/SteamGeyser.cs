@@ -1,14 +1,14 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Projectiles.Environment;
+using CalamityMod.CalPlayer;
+using CalamityMod.Dusts;
+using CalamityMod.Projectiles.Environment;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
+namespace CalamityMod.Tiles.Abyss
 {
     [LegacyName("SteamGeyser")]
     public class SteamGeyser1 : ModTile

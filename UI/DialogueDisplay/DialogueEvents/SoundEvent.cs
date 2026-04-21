@@ -1,7 +1,7 @@
 using ReLogic.Utilities;
 using Terraria.Audio;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DialogueEvents
+namespace CalamityMod.UI.DialogueDisplay.DialogueEvents
 {
     public class SoundEvent : DialogueEvent
     {

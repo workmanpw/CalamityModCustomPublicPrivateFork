@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,13 +7,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class RoxcaliburProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/Roxcalibur";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/Roxcalibur";
 
         public override void SetDefaults()
         {
@@ -111,7 +111,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
                 Projectile.damage = (int)(Projectile.damage * (1 + chargeModifier));
                 Projectile.netUpdate = true;
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/LoudSwingWoosh") with { Pitch = -0.5f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/LoudSwingWoosh") with { Pitch = -0.5f }, Projectile.Center);
             }
             switch (Animation)
             {

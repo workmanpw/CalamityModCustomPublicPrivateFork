@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityMod.CalPlayer;
+using CalamityMod.Cooldowns;
 using Terraria;
 using Terraria.ID;
 
 using CooldownInfoTuple = (ushort netID, int duration, int timeLeft);
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class SyncCooldownDictionaryPacket : CalamityPacket
     {

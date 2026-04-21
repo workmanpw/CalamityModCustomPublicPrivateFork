@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Events;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,12 +9,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Cryogen
+namespace CalamityMod.NPCs.Cryogen
 {
     [LongDistanceNetSync(SyncWith = typeof(Cryogen))]
     public class CryogenShield : ModNPC
     {
-        public static readonly SoundStyle BreakSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/CryogenShieldBreak");
+        public static readonly SoundStyle BreakSound = new("CalamityMod/Sounds/NPCKilled/CryogenShieldBreak");
 
         public override void SetStaticDefaults()
         {
@@ -123,7 +123,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Cryogen
 
         public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Cryogen/CryogenShield").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/NPCs/Cryogen/CryogenShield").Value;
 
             NPC.DrawBackglow(Main.zenithWorld ? Color.Red : Cryogen.BackglowColor, 4f, SpriteEffects.None, NPC.frame, screenPos);
 

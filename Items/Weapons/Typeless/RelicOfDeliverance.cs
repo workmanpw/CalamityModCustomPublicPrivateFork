@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.CalPlayer.Dashes;
+using CalamityMod.Projectiles.Typeless;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless
+namespace CalamityMod.Items.Weapons.Typeless
 {
     public class RelicOfDeliverance : ModItem, ILocalizedModType
     {

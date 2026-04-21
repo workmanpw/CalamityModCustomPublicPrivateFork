@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class CosmilampMinion : ModProjectile, ILocalizedModType
     {
@@ -34,7 +34,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 
         public ref float Timer => ref Projectile.ai[1];
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/Signus/CosmicLantern";
+        public override string Texture => "CalamityMod/NPCs/Signus/CosmicLantern";
 
         public override void SetStaticDefaults()
         {

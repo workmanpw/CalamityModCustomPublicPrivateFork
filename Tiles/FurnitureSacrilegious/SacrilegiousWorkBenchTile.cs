@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSacrilegious;
+using CalamityMod.Items.Placeables.FurnitureSacrilegious;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious
+namespace CalamityMod.Tiles.FurnitureSacrilegious
 {
     public class SacrilegiousWorkBenchTile : ModTile
     {

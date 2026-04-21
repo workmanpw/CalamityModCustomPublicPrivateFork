@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Utilities;
+namespace CalamityMod.Utilities;
 
 internal sealed class MainThreadedFileSystemWatcher : IDisposable
 {

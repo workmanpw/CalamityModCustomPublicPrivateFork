@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.LabFinders
+namespace CalamityMod.Items.LabFinders
 {
     [LegacyName("MysteriousMechanism")]
     public class LabSeekingMechanism : ModItem, ILocalizedModType

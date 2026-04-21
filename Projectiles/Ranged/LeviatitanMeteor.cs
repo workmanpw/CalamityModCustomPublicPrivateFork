@@ -3,10 +3,10 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Terraria.DataStructures;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class LeviatitanMeteor : ModProjectile, ILocalizedModType
     {
@@ -61,7 +61,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         {
             if (Projectile.owner == Main.myPlayer)
             {
-                SoundStyle explo = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MineralMortarExplode");
+                SoundStyle explo = new("CalamityMod/Sounds/Item/MineralMortarExplode");
                 SoundEngine.PlaySound(explo with { Volume = 0.9f }, Projectile.Center);
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Center.Y, 0f, 0f, ModContent.ProjectileType<LeviatitanExplosion>(), Projectile.damage, Projectile.knockBack, Projectile.owner, 0f, 0f);
                 for (int i = 0; i < 8; i++)
@@ -88,9 +88,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                     Particle boomMist = new MediumMistParticle(Projectile.Center, velocity, Color.SaddleBrown * 0.8f, Color.Transparent, Main.rand.NextFloat(.6f, 1.4f), Main.rand.NextFloat(200f, 400f));
                     GeneralParticleHandler.SpawnParticle(boomMist);
                 }
-                Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Red, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), Projectile.width / 5000f, Projectile.width / 200f, 29, true, 0.7f);
+                Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Red, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), Projectile.width / 5000f, Projectile.width / 200f, 29, true, 0.7f);
                 GeneralParticleHandler.SpawnParticle(blastRing2);
-                Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SaddleBrown * 0.8f, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), Projectile.width / 5000f, Projectile.width / 300f, 29);
+                Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SaddleBrown * 0.8f, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), Projectile.width / 5000f, Projectile.width / 300f, 29);
                 GeneralParticleHandler.SpawnParticle(blastRing);
             }
         }

@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.SupremeCalamitas;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class CalamitasPhase2MusicScene : BaseMusicSceneEffect
     {

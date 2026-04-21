@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+namespace CalamityMod.Graphics.Primitives;
 
 public static class SanePrimitiveRenderer
 {

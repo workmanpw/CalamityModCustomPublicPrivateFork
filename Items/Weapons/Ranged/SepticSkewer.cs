@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using Terraria;
@@ -7,9 +7,9 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using System;
 using Terraria.Audio;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Magic;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class SepticSkewer : ModItem, ILocalizedModType
     {
@@ -55,14 +55,14 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
                     }
                 }
 
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GunShotMid");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/GunShotMid");
                 SoundEngine.PlaySound(fire with { Volume = 0.7f, Pitch = Main.rand.NextFloat(0.7f, 0.8f) }, position);
                 if (pulled)
                     player.SetScreenshake(5.5f);
             }
             else
             {
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GunShotHeavy");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/GunShotHeavy");
                 SoundEngine.PlaySound(fire with { Volume = 0.45f, Pitch = Main.rand.NextFloat(0.4f, 0.65f) }, position);
                 Projectile.NewProjectile(source, position, velocity, type, damage, knockback, player.whoAmI, 0, 0, 0);
             }

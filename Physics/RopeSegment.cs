@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.Physics;
+namespace CalamityMod.Physics;
 
 /// <summary>
 ///     A representation of a rope segment, containing physical data such as position, velocity, etc., as well as a value which determines whether the rope is fixed in place and not subject to standard physics.

@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.StatBuffs
+namespace CalamityMod.Buffs.StatBuffs
 {
     public class Mushy : ModBuff
     {

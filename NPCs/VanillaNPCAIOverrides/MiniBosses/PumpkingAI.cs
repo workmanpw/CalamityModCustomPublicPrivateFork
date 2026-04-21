@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.MiniBosses
+namespace CalamityMod.NPCs.VanillaNPCAIOverrides.MiniBosses
 {
     public class PumpkingAI : VanillaAIOverride
     {

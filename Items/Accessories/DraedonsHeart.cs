@@ -1,15 +1,15 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Balancing;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Balancing;
+using CalamityMod.CalPlayer;
+using CalamityMod.Rarities;
+using CalamityMod.World;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class DraedonsHeart : ModItem, ILocalizedModType
     {

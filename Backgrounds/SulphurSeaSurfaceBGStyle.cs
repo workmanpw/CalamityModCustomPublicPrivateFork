@@ -1,13 +1,13 @@
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Backgrounds
+namespace CalamityMod.Backgrounds
 {
     public class SulphurSeaSurfaceBGStyle : ModSurfaceBackgroundStyle
     {
         public override int ChooseCloseTexture(ref float scale, ref double parallax, ref float a, ref float b)
         {
             b -= 100f;
-            return BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/BlankPixel");
+            return BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/BlankPixel");
         }
 
         public override void ModifyFarFades(float[] fades, float transitionSpeed)

@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood;
+using CalamityMod.Items.Placeables.FurnitureAcidwood;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class AcidwoodBow : ModItem, ILocalizedModType
     {

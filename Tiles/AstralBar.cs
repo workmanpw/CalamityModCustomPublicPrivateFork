@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles
+namespace CalamityMod.Tiles
 {
     public class AstralBar : ModTile
     {

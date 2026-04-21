@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Graphics.Renderers;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Enums;
+using CalamityMod.Graphics.Renderers;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,12 +10,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class DestructionStar : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/StarofDestruction";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/StarofDestruction";
         public ref float time => ref Projectile.ai[0];
         private float Radius = 47f;
         public float fade = 0;
@@ -92,7 +92,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                         fade = 1;
                         rot *= -0.8f;
                         rotDirection *= -1;
-                        SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PBGAttackSwitchShort");
+                        SoundStyle sound = new("CalamityMod/Sounds/Custom/PlagueSounds/PBGAttackSwitchShort");
                         SoundEngine.PlaySound(sound with { Volume = 0.3f, Pitch = 0.7f * Utils.GetLerpValue(240, 0, Projectile.timeLeft, true) }, Projectile.Center);
                         beepTimer = 0;
                     }
@@ -126,7 +126,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             }
             if (stealthHitCooldown == 0 && makeReadySound)
             {
-                SoundStyle explo2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DeadSunRicochet");
+                SoundStyle explo2 = new("CalamityMod/Sounds/Item/DeadSunRicochet");
                 SoundEngine.PlaySound(explo2 with { Volume = 0.7f, Pitch = 0.2f }, Projectile.Center);
                 for (int i = 0; i <= 15; i++)
                 {
@@ -143,10 +143,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             time = 0;
-            SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire");
+            SoundStyle sound = new("CalamityMod/Sounds/Item/DudFire");
             SoundEngine.PlaySound(sound with { Volume = 0.6f, Pitch = -0.4f }, Projectile.Center);
 
-            Particle orb7 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityModCustomPublicPrivateFork/Particles/SmallBloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 3, 0f, 12, false);
+            Particle orb7 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityMod/Particles/SmallBloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 3, 0f, 12, false);
             GeneralParticleHandler.SpawnParticle(orb7);
         }
         public override void OnKill(int timeLeft) => Explode(Projectile.Calamity().stealthStrike);
@@ -156,10 +156,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             float sizeBonus = big ? 2 : 1;
             float bigExplosionDamage = 3f;
             Player Owner = Main.player[Projectile.owner];
-            Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen with { A = 0 }, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0f, 0.82f * sizeBonus, 11);
+            Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen with { A = 0 }, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0f, 0.82f * sizeBonus, 11);
             GeneralParticleHandler.SpawnParticle(orb);
             orb.DrawLayer = GeneralDrawLayer.AfterEverything;
-            Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0f, 0.74f * sizeBonus, 11);
+            Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0f, 0.74f * sizeBonus, 11);
             GeneralParticleHandler.SpawnParticle(orb2);
             orb2.DrawLayer = GeneralDrawLayer.AfterEverything;
 
@@ -168,39 +168,39 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
             if (!big)
             {
-                SoundStyle explo = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MeldExplosion");
+                SoundStyle explo = new("CalamityMod/Sounds/Item/MeldExplosion");
                 SoundEngine.PlaySound(explo with { Volume = 0.9f }, Projectile.Center);
             }
             else
             {
-                SoundStyle gfbExplosion = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/AresGaussNukeExplosion");
+                SoundStyle gfbExplosion = new("CalamityMod/Sounds/Custom/ExoMechs/AresGaussNukeExplosion");
                 SoundEngine.PlaySound(gfbExplosion with { Volume = 1f, Pitch = -0.5f }, Projectile.Center);
             }
 
             if (big)
             {
-                SoundStyle explo2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/EarthMeteor");
+                SoundStyle explo2 = new("CalamityMod/Sounds/Item/EarthMeteor");
                 SoundEngine.PlaySound(explo2 with { Volume = 0.9f, Pitch = -0.2f }, Projectile.Center);
 
-                SoundStyle explo3 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ExobladeDashImpact");
+                SoundStyle explo3 = new("CalamityMod/Sounds/Item/ExobladeDashImpact");
                 SoundEngine.PlaySound(explo3 with { Volume = 0.9f, Pitch = -0.2f }, Projectile.Center);
             }
 
-            Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 2.56f * 1.3f * sizeBonus, 18);
+            Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 2.56f * 1.3f * sizeBonus, 18);
             GeneralParticleHandler.SpawnParticle(bolt2);
             bolt2.DrawLayer = GeneralDrawLayer.AfterEverything;
 
-            Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.3f * sizeBonus, 30);
+            Particle bolt3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.3f * sizeBonus, 30);
             GeneralParticleHandler.SpawnParticle(bolt3);
             bolt3.DrawLayer = GeneralDrawLayer.AfterEverything;
 
-            Particle bolt4 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen * 0.55f, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.3f * 1.35f * sizeBonus, 30);
+            Particle bolt4 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.LightGreen * 0.55f, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.3f * 1.35f * sizeBonus, 30);
             GeneralParticleHandler.SpawnParticle(bolt4);
             bolt4.DrawLayer = GeneralDrawLayer.AfterEverything;
 
             for (int i = 0; i < 2; i++)
             {
-                Particle orb7 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), (2.2f + i * 0.5f) * sizeBonus, 0f, 80, false);
+                Particle orb7 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityMod/Particles/SmallBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), (2.2f + i * 0.5f) * sizeBonus, 0f, 80, false);
                 GeneralParticleHandler.SpawnParticle(orb7);
             }
             for (int i = 0; i < (19 * sizeBonus); i++)
@@ -226,8 +226,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public override bool PreDraw(ref Color lightColor)
         {
             Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
-            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/StarofDestructionGhost");
-            Asset<Texture2D> portal = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/StarofDestructionGhost");
+            Asset<Texture2D> portal = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
 
             if (Projectile.Calamity().stealthStrike)
             {

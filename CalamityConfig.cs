@@ -1,16 +1,16 @@
 using System.ComponentModel;
 using System.Runtime.Serialization;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.UI;
-using CalamityModCustomPublicPrivateFork.UI.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.UI.Rippers;
-using CalamityModCustomPublicPrivateFork.UI.SulphurousWaterMeter;
+using CalamityMod.Enums;
+using CalamityMod.Systems;
+using CalamityMod.UI;
+using CalamityMod.UI.DraedonsArsenal;
+using CalamityMod.UI.Rippers;
+using CalamityMod.UI.SulphurousWaterMeter;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader.Config;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     [BackgroundColor(49, 32, 36, 216)]
     public class CalamityClientConfig : ModConfig

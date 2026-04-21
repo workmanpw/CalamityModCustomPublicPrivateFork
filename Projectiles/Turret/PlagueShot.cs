@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
+namespace CalamityMod.Projectiles.Turret
 {
     public class PlagueShot : ModProjectile, ILocalizedModType
     {
@@ -85,7 +85,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
 
         public override void OnKill(int timeLeft)
         {
-            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PlagueBoom", 4);
+            SoundStyle fire = new("CalamityMod/Sounds/Custom/PlagueSounds/PlagueBoom", 4);
             SoundEngine.PlaySound(fire with { Volume = 0.5f, Pitch = -0.3f }, Projectile.Center);
             if (Main.netMode != NetmodeID.MultiplayerClient)
             {

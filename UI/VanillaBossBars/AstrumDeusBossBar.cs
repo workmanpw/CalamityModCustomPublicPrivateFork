@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.NPCs.AstrumDeus;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.UI.VanillaBossBars
+namespace CalamityMod.UI.VanillaBossBars
 {
     public class AstrumDeusBossBar : ModBossBar
     {

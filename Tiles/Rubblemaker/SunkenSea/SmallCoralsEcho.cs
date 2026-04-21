@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityMod.Items.Placeables.SunkenSea;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
+namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 {
     public class SmallCoralsEcho : ModTile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/SmallCorals";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/SmallCorals";
         public override void SetStaticDefaults()
         {
             Main.tileLighted[Type] = false;

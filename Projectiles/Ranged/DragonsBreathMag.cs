@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class DragonsBreathMag : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/DragonsBreathMag";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/DragonsBreathMag";
         public int Time = 0;
         public bool TouchedGrass = false;
 
@@ -35,7 +35,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            //CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], lightColor, 1, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/DragonsBreathMag").Value);
+            //CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], lightColor, 1, ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/DragonsBreathMag").Value);
             return true;
         }
         public override void AI()

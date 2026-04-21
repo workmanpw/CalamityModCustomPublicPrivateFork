@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityMod.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class WulfrumEnergyBurst : ModProjectile, ILocalizedModType
     {
@@ -174,7 +174,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             Main.spriteBatch.End();
             Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
 
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ZapTrail"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ZapTrail"));
 
             CalamityUtils.DrawChromaticAberration(Vector2.UnitX, 1.5f, delegate (Vector2 offset, Color colorMod)
             {

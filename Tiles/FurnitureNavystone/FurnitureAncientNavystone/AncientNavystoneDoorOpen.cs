@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone;
+using CalamityMod.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone.FurnitureAncientNavystone
+namespace CalamityMod.Tiles.FurnitureNavystone.FurnitureAncientNavystone
 {
     [LegacyName("EutrophicDoorOpen")]
     public class AncientNavystoneDoorOpen : ModTile

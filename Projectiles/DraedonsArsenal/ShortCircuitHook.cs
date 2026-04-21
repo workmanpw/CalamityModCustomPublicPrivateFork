@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Cooldowns;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -10,13 +10,13 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     [PierceResistException]
     public class ShortCircuitHook : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public static readonly SoundStyle Explode = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ElectricBurst") { Volume = 0.8f };
+        public static readonly SoundStyle Explode = new("CalamityMod/Sounds/Item/ElectricBurst") { Volume = 0.8f };
         public bool giveCooldown = false;
         public bool onSpawn = true;
         public enum TaserAIState
@@ -122,7 +122,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 
                         DirectionalPulseRing pulse = new DirectionalPulseRing(Projectile.Center, Vector2.Zero, Effects.ArsenalEffects.ArsenalElectricColor * 0.5f, new Vector2(1f, 1), 0, 0.5f, 3f, 18);
                         GeneralParticleHandler.SpawnParticle(pulse);
-                        Particle bloom = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 10, 1.3f, Effects.ArsenalEffects.ArsenalElectricColor, Vector2.One, true, true);
+                        Particle bloom = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 10, 1.3f, Effects.ArsenalEffects.ArsenalElectricColor, Vector2.One, true, true);
                         GeneralParticleHandler.SpawnParticle(bloom);
 
                         Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), Projectile.Center, Vector2.Zero, ModContent.ProjectileType<ShortCircuitExplosion>(), Projectile.damage * 8, 0, Projectile.owner, 0);
@@ -148,7 +148,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                             player.Calamity().arsenalCooldown = 300;
                             player.AddCooldown(ArsenalPower.ID, 300);
                         }
-                        SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire") with { Volume = 0.5f, Pitch = 0.3f }, Projectile.Center);
+                        SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/DudFire") with { Volume = 0.5f, Pitch = 0.3f }, Projectile.Center);
                         Projectile.Kill();
                         return;
                     }
@@ -187,7 +187,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
         {
             Player player = Main.player[Projectile.owner];
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Projectile.type].Value;
-            Texture2D lineTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge").Value;
+            Texture2D lineTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineSoftEdge").Value;
             Vector2 altPos = player.Center - Vector2.UnitY * 3;
             float distance = Utils.Distance(altPos, Projectile.Center);
             int drawSeperation = 10;
@@ -228,7 +228,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                 ElectrocutionTarget = target.whoAmI;
                 Time = 0f;
 
-                SoundStyle charge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LowHum");
+                SoundStyle charge = new("CalamityMod/Sounds/Item/LowHum");
                 Hum = SoundEngine.PlaySound(charge with { Volume = 1.6f, IsLooped = true }, Projectile.Center);
 
                 GoToAIState(TaserAIState.Electrocuting);

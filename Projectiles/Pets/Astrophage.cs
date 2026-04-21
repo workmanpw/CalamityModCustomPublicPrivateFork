@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
+namespace CalamityMod.Projectiles.Pets
 {
     public class Astrophage : ModProjectile, ILocalizedModType
     {

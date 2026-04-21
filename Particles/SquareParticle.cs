@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class SquareParticle : Particle
     {
@@ -15,7 +15,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public override bool UseCustomDraw => true;
         public override bool UseAdditiveBlend => true;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Square";
+        public override string Texture => "CalamityMod/Particles/Square";
 
         public SquareParticle(Vector2 relativePosition, Vector2 velocity, bool affectedByGravity, int lifetime, float scale, Color color, float extraRotation = 0f)
         {

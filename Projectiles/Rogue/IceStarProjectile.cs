@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class IceStarProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/IceStar";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/IceStar";
 
         private bool initStealth = false;
         private Vector2 initialVelocity;

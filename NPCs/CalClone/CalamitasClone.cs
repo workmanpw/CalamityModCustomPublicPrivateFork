@@ -1,25 +1,25 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Graphics.Metaballs;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs.TownNPCs;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Systems.Mechanic;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -32,18 +32,18 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.CalClone
+namespace CalamityMod.NPCs.CalClone
 {
     [AutoloadBossHead]
     public class CalamitasClone : ModNPC
     {
         public static Asset<Texture2D> GlowTexture;
 
-        public static readonly SoundStyle BulletHellWarning = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CalamitasClone/BulletHellEnding");
-        public static readonly SoundStyle BulletHellEnd = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CalamitasClone/BulletHellEnd");
-        public static readonly SoundStyle ChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CalamitasClone/CalCloneDash", 3);
-        public static readonly SoundStyle CalamitousFireballSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/CalamitasClone/CalClone_BigFireballBit", 4) with {MaxInstances = 4};
-        public static readonly SoundStyle CalamitousExplosionSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/CalamitasClone/CalClone_Explosion", 3) with { MaxInstances = 4 };
+        public static readonly SoundStyle BulletHellWarning = new("CalamityMod/Sounds/Custom/CalamitasClone/BulletHellEnding");
+        public static readonly SoundStyle BulletHellEnd = new("CalamityMod/Sounds/Custom/CalamitasClone/BulletHellEnd");
+        public static readonly SoundStyle ChargeSound = new("CalamityMod/Sounds/Custom/CalamitasClone/CalCloneDash", 3);
+        public static readonly SoundStyle CalamitousFireballSound = new SoundStyle("CalamityMod/Sounds/Custom/CalamitasClone/CalClone_BigFireballBit", 4) with {MaxInstances = 4};
+        public static readonly SoundStyle CalamitousExplosionSound = new SoundStyle("CalamityMod/Sounds/Custom/CalamitasClone/CalClone_Explosion", 3) with { MaxInstances = 4 };
         public SlotId BulletHellWarnSlot;
 
         public ArenaWallSystem.Box ArenaBox = null;
@@ -155,7 +155,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.CalClone
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Calamitas")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Calamitas")
             });
         }
 
@@ -231,7 +231,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.CalClone
                     }
                 }
 
-                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.CalamitasBossText3";
+                string key = "Mods.CalamityMod.Status.Boss.CalamitasBossText3";
                 Color messageColor = Color.Orange;
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);
 
@@ -270,7 +270,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.CalClone
                             NPC.NewNPC(NPC.GetSource_FromAI(), (int)NPC.Center.X, (int)NPC.position.Y + NPC.height, ModContent.NPCType<Catastrophe>(), NPC.whoAmI);
                         }
 
-                        string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.CalamitasBossText2";
+                        string key = "Mods.CalamityMod.Status.Boss.CalamitasBossText2";
                         Color messageColor = Color.Orange;
                         CalamityUtils.BroadcastLocalizedText(key, messageColor);
 

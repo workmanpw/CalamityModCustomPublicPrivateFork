@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
+namespace CalamityMod.Tiles.SunkenSea.Ambient
 {
     public class BranchCoral : ModTile
     {

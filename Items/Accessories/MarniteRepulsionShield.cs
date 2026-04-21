@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     [AutoloadEquip(EquipType.Back)]
     //It's not like it's a renamed version of the bayonet, but I put this here more as a way to "refund" the item, so it doesnt end up rotting as an unloaded item.
@@ -68,7 +68,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
     public class MarniteRepulsionHitbox : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public Player Owner => Main.player[Projectile.owner];
 

@@ -3,11 +3,11 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class SandyDustParticle : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/SandyDust";
+        public override string Texture => "CalamityMod/Particles/SandyDust";
         public override bool UseHalfTransparency => false; //Doesn't actually use half transparency, but guarantees that it gets drawn above the bigger smoke clouds
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;

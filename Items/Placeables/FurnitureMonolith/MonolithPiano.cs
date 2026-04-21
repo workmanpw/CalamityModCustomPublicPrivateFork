@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMonolith
+namespace CalamityMod.Items.Placeables.FurnitureMonolith
 {
     public class MonolithPiano : ModItem, ILocalizedModType
     {

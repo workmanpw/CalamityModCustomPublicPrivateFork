@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.ExtraJumps;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood;
+using CalamityMod.ExtraJumps;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.FurnitureAcidwood;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Sulphurous
+namespace CalamityMod.Items.Armor.Sulphurous
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("SulfurHelmet")]

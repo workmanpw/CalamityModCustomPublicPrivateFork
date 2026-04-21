@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class EndoCooperBody : ModProjectile, ILocalizedModType
     {
@@ -346,7 +346,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 
         public override void PostDraw(Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/EndoCooperBody_Glow").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/EndoCooperBody_Glow").Value;
             Rectangle frame = new Rectangle(0, 0, texture.Width, texture.Height);
             Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, frame, Color.LightSkyBlue, Projectile.rotation, Projectile.Size / 2, 1f, SpriteEffects.None, 0);
         }

@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class HeavenlyGale : ModItem, ILocalizedModType
     {
@@ -31,9 +31,9 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 
         public const float ChargeLightningCreationThreshold = 0.8f;
 
-        public static readonly SoundStyle FireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeavenlyGaleFire");
+        public static readonly SoundStyle FireSound = new("CalamityMod/Sounds/Item/HeavenlyGaleFire");
 
-        public static readonly SoundStyle LightningStrikeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/HeavenlyGaleLightningStrike");
+        public static readonly SoundStyle LightningStrikeSound = new("CalamityMod/Sounds/Custom/HeavenlyGaleLightningStrike");
 
         public override void SetDefaults()
         {
@@ -60,7 +60,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
         public override bool CanShoot(Player player) => false;
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
-        => Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/HeavenlyGaleGlow").Value);
+        => Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Ranged/HeavenlyGaleGlow").Value);
 
         public override void AddRecipes()
         {

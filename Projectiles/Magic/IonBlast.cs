@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class IonBlast : ModProjectile, ILocalizedModType
     {
@@ -64,7 +64,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                 
                 if (time % 3 == 0)
                 {
-                    Particle trail = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(6, 6), vel, "CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticle", false, Main.rand.Next(7, 12), Main.rand.NextFloat(0.5f, 0.8f), Main.rand.NextBool() ? Color.Lerp(Color.Crimson, Color.White, 0.5f) : Color.Crimson, new Vector2(1f, 1f), extraRotation: MathHelper.PiOver4);
+                    Particle trail = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(6, 6), vel, "CalamityMod/Particles/GlowSquareParticle", false, Main.rand.Next(7, 12), Main.rand.NextFloat(0.5f, 0.8f), Main.rand.NextBool() ? Color.Lerp(Color.Crimson, Color.White, 0.5f) : Color.Crimson, new Vector2(1f, 1f), extraRotation: MathHelper.PiOver4);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
             }
@@ -85,9 +85,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             {
                 SoundEngine.PlaySound(SoundID.Item92 with { Volume = 0.4f }, Projectile.Center);
 
-                Particle blastfx = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Crimson, "CalamityModCustomPublicPrivateFork/Particles/BloomRingThinLarge", Vector2.One, 0, 0.02f, 0.053f, 17);
+                Particle blastfx = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Crimson, "CalamityMod/Particles/BloomRingThinLarge", Vector2.One, 0, 0.02f, 0.053f, 17);
                 GeneralParticleHandler.SpawnParticle(blastfx);
-                Particle blastfx2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Crimson, Color.White, 0.5f), "CalamityModCustomPublicPrivateFork/Particles/BloomRingThinLarge", Vector2.One, 0, 0.02f, 0.06f, 15);
+                Particle blastfx2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Crimson, Color.White, 0.5f), "CalamityMod/Particles/BloomRingThinLarge", Vector2.One, 0, 0.02f, 0.06f, 15);
                 GeneralParticleHandler.SpawnParticle(blastfx2);
 
                 for (int i = 0; i < 15; i++)
@@ -122,7 +122,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D tex = TextureAssets.Projectile[Type].Value;
-            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark").Value;
+            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             float drawRotation = Projectile.rotation;
             float timeleftFade = Utils.GetLerpValue(0, 60, Projectile.timeLeft, true);

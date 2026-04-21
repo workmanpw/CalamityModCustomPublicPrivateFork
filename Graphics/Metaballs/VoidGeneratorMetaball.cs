@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityMod.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Graphics.Metaballs.StreamGougeMetaball;
+using static CalamityMod.Graphics.Metaballs.StreamGougeMetaball;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
+namespace CalamityMod.Graphics.Metaballs
 {
     public class VoidGeneratorMetaball : Metaball
     {
@@ -56,7 +56,7 @@ namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
 
         public override void DrawInstances()
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicCircle").Value;
 
             foreach (CosmicParticle particle in Particles)
             {

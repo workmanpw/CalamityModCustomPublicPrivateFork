@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCragCatches;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
+using CalamityMod.Items.Fishing.BrimstoneCragCatches;
+using CalamityMod.Items.Placeables.Abyss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Potions.Food
+namespace CalamityMod.Items.Potions.Food
 {
     [LegacyName("SunkenStew")]
     public class HadalStew : ModItem, ILocalizedModType

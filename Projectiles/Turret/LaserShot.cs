@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
+namespace CalamityMod.Projectiles.Turret
 {
     public class LaserShot : BaseLaserbeamProjectile, ILocalizedModType
     {
@@ -17,15 +17,15 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Turret
             get => Projectile.ai[1] == 1f;
             set => Projectile.ai[1] = value.ToInt();
         }
-        public override string Texture => "CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/TurretLaserStart";
+        public override string Texture => "CalamityMod/ExtraTextures/Lasers/TurretLaserStart";
         public override float MaxScale => 1f;
         public override float MaxLaserLength => 1030f;
         public override float Lifetime => 20f;
         public override Color LaserOverlayColor => Color.Transparent;
         public override Color LightCastColor => LaserOverlayColor;
-        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/TurretLaserStart", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/TurretLaserMid", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/TurretLaserEnd", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/TurretLaserStart", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/TurretLaserMid", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/TurretLaserEnd", AssetRequestMode.ImmediateLoad).Value;
 
         public NPC struckNPC = null;
         public override void SetStaticDefaults()

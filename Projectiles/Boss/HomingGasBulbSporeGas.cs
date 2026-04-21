@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class HomingGasBulbSporeGas : ModProjectile, ILocalizedModType
     {
@@ -81,10 +81,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
                 case 0:
                     break;
                 case 1:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/HomingGasBulbSporeGas2").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/HomingGasBulbSporeGas2").Value;
                     break;
                 case 2:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/HomingGasBulbSporeGas3").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/HomingGasBulbSporeGas3").Value;
                     break;
                 default:
                     break;

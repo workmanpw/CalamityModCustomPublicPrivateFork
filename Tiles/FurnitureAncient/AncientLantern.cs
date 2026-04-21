@@ -7,7 +7,7 @@ using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAncient
+namespace CalamityMod.Tiles.FurnitureAncient
 {
     public class AncientLantern : ModTile
     {

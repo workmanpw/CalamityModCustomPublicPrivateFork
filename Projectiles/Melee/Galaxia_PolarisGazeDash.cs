@@ -1,17 +1,17 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class PolarisGazeDash : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         public float Timer => 20 - Projectile.timeLeft;
 
@@ -55,7 +55,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             Main.spriteBatch.End();
             Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
 
-            Texture2D lineTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/ThinEndedLine").Value;
+            Texture2D lineTex = Request<Texture2D>("CalamityMod/Particles/ThinEndedLine").Value;
 
             Vector2 Shake = Projectile.timeLeft < 15 ? Vector2.Zero : Vector2.One.RotatedByRandom(MathHelper.TwoPi) * (15 - Projectile.timeLeft / 5f) * 0.5f;
             float bump = (float)Math.Sin(((20f - Projectile.timeLeft) / 20f) * MathHelper.Pi);
@@ -67,8 +67,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
             Main.EntitySpriteDraw(lineTex, DashStart - Main.screenPosition + Shake, null, Color.Lerp(Color.White, Color.CornflowerBlue * 0.7f, raise), rot, origin, scale, SpriteEffects.None, 0);
 
-            Texture2D sparkTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/ThinSparkle").Value;
-            Texture2D bloomTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D sparkTexture = Request<Texture2D>("CalamityMod/Particles/ThinSparkle").Value;
+            Texture2D bloomTexture = Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
             // Adjust the bloom's texture to be the same size as the star's
             float properBloomSize = (float)sparkTexture.Width / (float)bloomTexture.Height;
 

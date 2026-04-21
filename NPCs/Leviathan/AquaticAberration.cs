@@ -1,14 +1,14 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Leviathan
+namespace CalamityMod.NPCs.Leviathan
 {
     public class AquaticAberration : ModNPC
     {
@@ -63,7 +63,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Leviathan
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.AquaticAberration")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.AquaticAberration")
             });
         }
 

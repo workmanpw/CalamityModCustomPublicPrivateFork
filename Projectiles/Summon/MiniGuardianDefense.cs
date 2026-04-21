@@ -1,12 +1,12 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
+using CalamityMod.NPCs.Providence;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class MiniGuardianDefense : ModProjectile, ILocalizedModType
     {

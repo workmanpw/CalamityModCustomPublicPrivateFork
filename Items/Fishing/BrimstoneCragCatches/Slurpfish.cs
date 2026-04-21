@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCragCatches
+namespace CalamityMod.Items.Fishing.BrimstoneCragCatches
 {
     public class Slurpfish : BaseQuestFish
     {

@@ -1,10 +1,10 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityMod.Enums;
+using CalamityMod.Utilities.Daybreak;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Graphic
+namespace CalamityMod.Systems.Graphic
 {
     internal sealed class GeneralDrawLayerSystem : ModSystem
     {

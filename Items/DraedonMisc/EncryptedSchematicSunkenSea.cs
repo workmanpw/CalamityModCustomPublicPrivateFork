@@ -1,19 +1,19 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.CustomRecipes;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.PlaceableTurrets;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.UI;
-using CalamityModCustomPublicPrivateFork.UI.DraedonLogs;
+using CalamityMod.CustomRecipes;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.PlaceableTurrets;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.Rarities;
+using CalamityMod.UI;
+using CalamityMod.UI.DraedonLogs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.DraedonMisc
+namespace CalamityMod.Items.DraedonMisc
 {
     public class EncryptedSchematicSunkenSea : ModItem, ILocalizedModType
     {

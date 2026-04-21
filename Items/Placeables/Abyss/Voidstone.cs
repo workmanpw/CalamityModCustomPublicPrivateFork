@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityMod.Items.Placeables.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss
+namespace CalamityMod.Items.Placeables.Abyss
 {
     public class Voidstone : ModItem, ILocalizedModType
     {

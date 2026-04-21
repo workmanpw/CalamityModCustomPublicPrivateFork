@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureProfaned;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.FurnitureProfaned;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.CraftingStations
+namespace CalamityMod.Items.Placeables.Furniture.CraftingStations
 {
     [LegacyName("ProfanedBasin")]
     public class ProfanedCrucible : ModItem, ILocalizedModType

@@ -1,17 +1,17 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class PhalanxSurgeLance : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public Vector2 startVel = Vector2.Zero;
         public int time = 0;
@@ -50,7 +50,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                 {
                     Vector2 place = Projectile.Center + startVel * 20 + Main.rand.NextVector2Circular(5, 5);
                     int dir = Main.rand.NextBool() ? 1 : -1;
-                    Particle chargeParticles = new CustomSpark(place, -Projectile.velocity.RotatedBy(0.42f * dir).RotatedByRandom(0.1f) * Main.rand.NextFloat(12, 35), "CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge", false, 7, 0.025f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(1f, 0.7f), shrinkSpeed: 1.3f);
+                    Particle chargeParticles = new CustomSpark(place, -Projectile.velocity.RotatedBy(0.42f * dir).RotatedByRandom(0.1f) * Main.rand.NextFloat(12, 35), "CalamityMod/Particles/BloomLineSoftEdge", false, 7, 0.025f, Effects.ArsenalEffects.ArsenalLaserColor, new Vector2(1f, 0.7f), shrinkSpeed: 1.3f);
                     GeneralParticleHandler.SpawnParticle(chargeParticles);
 
                     if (i % 2 == 0)
@@ -83,7 +83,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                     {
                         if (i == 0)
                             i++;
-                        Particle spark2 = new CustomSpark(target.Center, startVel * i * 2, "CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge", false, 12, 0.085f - Math.Abs(i) * 0.012f, Effects.ArsenalEffects.ArsenalLaserColor * 1f, new Vector2((6 - Math.Abs(i)) * 0.4f, 1), true, true, 0, false, false, 1.2f, glowOpacity: 0.6f);
+                        Particle spark2 = new CustomSpark(target.Center, startVel * i * 2, "CalamityMod/Particles/BloomLineSoftEdge", false, 12, 0.085f - Math.Abs(i) * 0.012f, Effects.ArsenalEffects.ArsenalLaserColor * 1f, new Vector2((6 - Math.Abs(i)) * 0.4f, 1), true, true, 0, false, false, 1.2f, glowOpacity: 0.6f);
                         GeneralParticleHandler.SpawnParticle(spark2);
                     }
                     if (Projectile.timeLeft > 10)
@@ -112,7 +112,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                         Projectile.timeLeft = extention;
                 }
 
-                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MeldShoot");
+                SoundStyle sound = new("CalamityMod/Sounds/Item/MeldShoot");
                 SoundEngine.PlaySound(sound with { Volume = 1f }, Projectile.Center);
             }
             for (int i = 0; i < MathHelper.Clamp(25 - Projectile.numHits * 3, 1, 10); i++)
@@ -151,8 +151,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
         {
             if (time < 1)
                 return false;
-            Texture2D pointTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineFade").Value;
-            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D pointTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineFade").Value;
+            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
             float fade = Utils.GetLerpValue(0, 5, Projectile.timeLeft, true);
             Vector2 distVel = startVel * 10;
             for (int i = 0; i < 6; i++)

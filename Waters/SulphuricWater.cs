@@ -1,9 +1,9 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts.WaterSplash;
-using CalamityModCustomPublicPrivateFork.Gores.WaterDroplet;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityMod.Dusts.WaterSplash;
+using CalamityMod.Gores.WaterDroplet;
+using CalamityMod.Particles;
+using CalamityMod.Systems.Graphic.LiquidSystem;
+using CalamityMod.Tiles.Abyss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria;
 using Terraria.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Waters
+namespace CalamityMod.Waters
 {
     public class SulphuricWaterflow : ModWaterfallStyle, IWaterfallStyleModifyColor
     {
@@ -29,7 +29,7 @@ namespace CalamityModCustomPublicPrivateFork.Waters
         public override void SetStaticDefaults()
         {
             Instance = this;
-            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityModCustomPublicPrivateFork/SulphuricWaterflow");
+            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityMod/SulphuricWaterflow");
             SplashDust = ModContent.DustType<SulphuricSplash>();
             DropletGore = ModContent.GoreType<SulphuricWaterDroplet>();
         }
@@ -46,7 +46,7 @@ namespace CalamityModCustomPublicPrivateFork.Waters
         public override int ChooseWaterfallStyle() => WaterfallStyle.Slot;
         public override int GetSplashDust() => SplashDust;
         public override int GetDropletGore() => DropletGore;
-        public override Asset<Texture2D> GetRainTexture() => RainTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Waters/SulphuricRain");
+        public override Asset<Texture2D> GetRainTexture() => RainTexture ??= ModContent.Request<Texture2D>("CalamityMod/Waters/SulphuricRain");
 
         public override byte GetRainVariant() => (byte)Main.rand.Next(3);
         public override Color BiomeHairColor() => new Color(43, 168, 110);

@@ -1,20 +1,20 @@
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Waters;
+using CalamityMod.Systems;
+using CalamityMod.Waters;
 using Terraria.ID;
 using Terraria;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityMod.Items.Placeables.Furniture;
 
-namespace CalamityModCustomPublicPrivateFork.BiomeManagers
+namespace CalamityMod.BiomeManagers
 {
     public class BasaltGullyBiome : ModBiome
     {
         public override ModWaterStyle WaterStyle => SunkenSeaBurrowsWater.Instance;
-        public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle => ModContent.Find<ModUndergroundBackgroundStyle>("CalamityModCustomPublicPrivateFork/SunkenSeaBGStyle");
+        public override ModUndergroundBackgroundStyle UndergroundBackgroundStyle => ModContent.Find<ModUndergroundBackgroundStyle>("CalamityMod/SunkenSeaBGStyle");
         public override int BiomeTorchItemType => ModContent.ItemType<NavyPrismTorch>();
         public override int Music => ModContent.GetInstance<CalamityMod>().GetMusicFromMusicMod("SunkenSea") ?? MusicID.OceanNight;
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
-        public override string BestiaryIcon => "CalamityModCustomPublicPrivateFork/BiomeManagers/SunkenSeaIcon";
+        public override string BestiaryIcon => "CalamityMod/BiomeManagers/SunkenSeaIcon";
         // Placeholder until we get a dedicated Basalt Gully background
         public override string BackgroundPath => "Terraria/Images/MapBG3";
         public override string MapBackground => "Terraria/Images/MapBG3";

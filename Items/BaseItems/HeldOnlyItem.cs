@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.BaseItems
+namespace CalamityMod.Items.BaseItems
 {
     /// <summary>
     /// A item that only exists as a held item. Useful if for example, it is used as a mean to temporarily replace the players attack ability.

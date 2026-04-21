@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
+namespace CalamityMod.Projectiles.Enemy
 {
     public class LightningCloud : ModProjectile, ILocalizedModType
     {

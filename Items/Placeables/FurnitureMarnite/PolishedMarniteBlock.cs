@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Items.Placeables.Walls;
+using CalamityMod.Systems;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMarnite
+namespace CalamityMod.Items.Placeables.FurnitureMarnite
 {
     public class PolishedMarniteBlock : ModItem, ILocalizedModType
     {

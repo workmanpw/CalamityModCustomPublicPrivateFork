@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
-using CalamityModCustomPublicPrivateFork.Skies;
+using CalamityMod.NPCs.SupremeCalamitas;
+using CalamityMod.Skies;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class SCalBackgroundScene : ModSceneEffect
     {

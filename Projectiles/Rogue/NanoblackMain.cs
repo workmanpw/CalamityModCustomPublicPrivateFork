@@ -1,19 +1,19 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class NanoblackMain : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/NanoblackReaper";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/NanoblackReaper";
 
         internal const int UpdatesPerFrame = 3;
         private const int Lifetime = 240;
@@ -26,35 +26,35 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
         internal const float RotationIncrement = 0.22f;
 
-        private static readonly SoundStyle LightspeedMissSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NanoblackReaper/NanoblackReaper_LightspeedMiss")
+        private static readonly SoundStyle LightspeedMissSound = new("CalamityMod/Sounds/Item/NanoblackReaper/NanoblackReaper_LightspeedMiss")
         {
             Volume = 0.8f,
             PitchVariance = 0.1f,
             MaxInstances = 8,
         };
 
-        private static readonly SoundStyle LightspeedPerfectMissSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NanoblackReaper/NanoblackReaper_LightspeedMissPerfect")
+        private static readonly SoundStyle LightspeedPerfectMissSound = new("CalamityMod/Sounds/Item/NanoblackReaper/NanoblackReaper_LightspeedMissPerfect")
         {
             Volume = 0.9f,
             PitchVariance = 0.08f,
             MaxInstances = 8,
         };
 
-        private static readonly SoundStyle LightspeedSlashBaseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NanoblackReaper/NanoblackReaper_LightspeedSlash")
+        private static readonly SoundStyle LightspeedSlashBaseSound = new("CalamityMod/Sounds/Item/NanoblackReaper/NanoblackReaper_LightspeedSlash")
         {
             Volume = 0.85f,
             PitchVariance = 0.08f,
             MaxInstances = 10,
         };
 
-        private static readonly SoundStyle LightspeedSlashVariantSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NanoblackReaper/NanoblackReaper_LightspeedSlash", 3)
+        private static readonly SoundStyle LightspeedSlashVariantSound = new("CalamityMod/Sounds/Item/NanoblackReaper/NanoblackReaper_LightspeedSlash", 3)
         {
             Volume = 0.65f,
             PitchVariance = 0.12f,
             MaxInstances = 10,
         };
 
-        private static readonly SoundStyle LightspeedPerfectSlashSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NanoblackReaper/NanoblackReaper_PerfectLightspeedSlash")
+        private static readonly SoundStyle LightspeedPerfectSlashSound = new("CalamityMod/Sounds/Item/NanoblackReaper/NanoblackReaper_PerfectLightspeedSlash")
         {
             Volume = 0.95f,
             PitchVariance = 0.06f,

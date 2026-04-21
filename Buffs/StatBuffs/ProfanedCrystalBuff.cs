@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Accessories;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.StatBuffs
+namespace CalamityMod.Buffs.StatBuffs
 {
     public class ProfanedCrystalBuff : ModBuff
     {

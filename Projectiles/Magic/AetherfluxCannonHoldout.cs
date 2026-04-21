@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class AetherfluxCannonHoldout : BaseGunHoldoutProjectile
     {
@@ -20,7 +20,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         public override float BaseOffsetY => -15f;
         public override float OffsetYUpwards => 8f;
         public override float OffsetYDownwards => 15f;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/AetherfluxCannonHoldout";
+        public override string Texture => "CalamityMod/Projectiles/Magic/AetherfluxCannonHoldout";
 
         private ref float DeployedFrames => ref Projectile.ai[0];
         private ref float AnimationRate => ref Projectile.ai[1];
@@ -79,7 +79,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                     if (actuallyShoot)
                     {
                         postShotFade = 1;
-                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagnaCannonShot");
+                        SoundStyle fire = new("CalamityMod/Sounds/Item/MagnaCannonShot");
                         SoundEngine.PlaySound(fire with { Volume = 0.4f, Pitch = Main.rand.NextFloat(0.1f, 0.3f) }, Projectile.Center);
                     }
 
@@ -137,7 +137,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f) + MathHelper.PiOver2;
             Vector2 rotationPoint = frame.Size() * 0.5f;
             SpriteEffects flipSprite = (Projectile.spriteDirection * Owner.gravDir == -1) ? SpriteEffects.FlipVertically : SpriteEffects.None;
-            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
             for (int i = 0; i < 5; i++)
             {
                 float glowScale = 0.3f;

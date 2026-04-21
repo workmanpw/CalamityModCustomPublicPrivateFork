@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Projectiles.Magic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class AlulaAustralis : ModItem, ILocalizedModType
     {

@@ -3,11 +3,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.ForegroundDrawing.LoopingTextures
+namespace CalamityMod.ForegroundDrawing.LoopingTextures
 {
     public abstract class LoopingTextureForeground : ModSystem
     {
-        public virtual string Texture => "CalamityModCustomPublicPrivateFork/ExtraTextures/Miscellaneous/NuclearTorrent";
+        public virtual string Texture => "CalamityMod/ExtraTextures/Miscellaneous/NuclearTorrent";
 
         /// <summary>
         /// How much the effect has moved. Increments by Speed.

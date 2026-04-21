@@ -1,20 +1,20 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Packets;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Dusts;
+using CalamityMod.Packets;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class Slagfire : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override bool CanHitPlayer(Player target) => false;
         public override void SetDefaults()
@@ -57,7 +57,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
                 Vector2 sparkVelocity = -Projectile.velocity * 0.01f * Main.rand.NextFloat(0.5f, 1.5f);
 
-                Particle spark = new CustomSpark(sparkPosition, sparkVelocity, "CalamityModCustomPublicPrivateFork/Particles/BloomLineFade", false, 6, 0.04f, color * 0.85f, new Vector2(0.45f, 0.9f), shrinkSpeed: 0.4f);
+                Particle spark = new CustomSpark(sparkPosition, sparkVelocity, "CalamityMod/Particles/BloomLineFade", false, 6, 0.04f, color * 0.85f, new Vector2(0.45f, 0.9f), shrinkSpeed: 0.4f);
                 GeneralParticleHandler.SpawnParticle(spark);
             }
 
@@ -66,7 +66,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 Vector2 sparkPosition = Projectile.Center + Main.rand.NextVector2Circular(15, 15);
                 Vector2 sparkVelocity = -Projectile.velocity * Main.rand.NextFloat(0.01f, 0.045f); // Backward velocity
 
-                Particle subtleSpark = new CustomSpark(sparkPosition, sparkVelocity, "CalamityModCustomPublicPrivateFork/Particles/BloomLineFade", false, 8, 0.02f, color * 0.5f, new Vector2(0.5f, 0.8f), shrinkSpeed: 0.3f);
+                Particle subtleSpark = new CustomSpark(sparkPosition, sparkVelocity, "CalamityMod/Particles/BloomLineFade", false, 8, 0.02f, color * 0.5f, new Vector2(0.5f, 0.8f), shrinkSpeed: 0.3f);
                 GeneralParticleHandler.SpawnParticle(subtleSpark);
             }
 

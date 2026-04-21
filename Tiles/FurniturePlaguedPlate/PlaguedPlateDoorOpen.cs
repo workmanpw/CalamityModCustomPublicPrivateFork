@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurniturePlagued;
+using CalamityMod.Items.Placeables.FurniturePlagued;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurniturePlaguedPlate
+namespace CalamityMod.Tiles.FurniturePlaguedPlate
 {
     public class PlaguedPlateDoorOpen : ModTile
     {

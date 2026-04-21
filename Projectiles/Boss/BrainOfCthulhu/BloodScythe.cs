@@ -4,8 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -14,12 +14,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss.BrainOfCthulhu;
+namespace CalamityMod.Projectiles.Boss.BrainOfCthulhu;
 
 public class BloodScythe : ModProjectile, ILocalizedModType
 {
     public new string LocalizationCategory => "Projectiles.Boss";
-    public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/VerticalSmearRagged";
+    public override string Texture => "CalamityMod/Particles/VerticalSmearRagged";
 
     private Vector2 InitialVelocity = Vector2.Zero;
     private Vector2 AcceleratingVelocity = Vector2.Zero;
@@ -118,7 +118,7 @@ public class BloodScythe : ModProjectile, ILocalizedModType
 public class CirclingBloodScythe : ModProjectile, ILocalizedModType
 {
     public new string LocalizationCategory => "Projectiles.Boss";
-    public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/VerticalSmearRagged";
+    public override string Texture => "CalamityMod/Particles/VerticalSmearRagged";
 
     private static float RotationSpeed => MathHelper.Pi / 8f;
     private static int Lifetime => BrainOfCthulhuAI.CrimsonEyeAttackDuration;

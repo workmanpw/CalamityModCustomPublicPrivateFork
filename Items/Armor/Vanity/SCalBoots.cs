@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
+namespace CalamityMod.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Legs)]
     public class SCalBoots : ModItem, ILocalizedModType

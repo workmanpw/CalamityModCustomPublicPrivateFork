@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
+namespace CalamityMod.Tiles.FurnitureExo
 {
     public class ExoPlatingTile : GlowMaskTile
     {

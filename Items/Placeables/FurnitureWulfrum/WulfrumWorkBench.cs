@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum;
+using CalamityMod.Tiles.FurnitureWulfrum;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureWulfrum
+namespace CalamityMod.Items.Placeables.FurnitureWulfrum
 {
     [LegacyName("WulfrumWorkbench")]
     public class WulfrumWorkBench : ModItem, ILocalizedModType

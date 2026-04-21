@@ -2,7 +2,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Utilities
+namespace CalamityMod.Utilities
 {
     public class ExtraArmAnimations
     {

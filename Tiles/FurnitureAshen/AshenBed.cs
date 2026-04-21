@@ -4,7 +4,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAshen
+namespace CalamityMod.Tiles.FurnitureAshen
 {
     public class AshenBed : ModTile
     {

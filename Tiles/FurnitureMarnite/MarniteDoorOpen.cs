@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMarnite;
+using CalamityMod.Items.Placeables.FurnitureMarnite;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMarnite
+namespace CalamityMod.Tiles.FurnitureMarnite
 {
     public class MarniteDoorOpen : ModTile
     {

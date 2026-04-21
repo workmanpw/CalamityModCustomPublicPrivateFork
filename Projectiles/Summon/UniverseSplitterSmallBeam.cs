@@ -8,7 +8,7 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class UniverseSplitterSmallBeam : ModProjectile, ILocalizedModType
     {
@@ -102,9 +102,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             {
                 return false;
             }
-            Texture2D laserTailTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/UniverseSplitterSmallBeamBegin", AssetRequestMode.ImmediateLoad).Value;
-            Texture2D laserBodyTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/UniverseSplitterSmallBeamMid", AssetRequestMode.ImmediateLoad).Value;
-            Texture2D laserHeadTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/UniverseSplitterSmallBeamEnd", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D laserTailTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/UniverseSplitterSmallBeamBegin", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D laserBodyTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/UniverseSplitterSmallBeamMid", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D laserHeadTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/UniverseSplitterSmallBeamEnd", AssetRequestMode.ImmediateLoad).Value;
             float laserLength = Projectile.localAI[1];
             Color drawColor = new Color(1f, 1f, 1f) * 0.9f;
 

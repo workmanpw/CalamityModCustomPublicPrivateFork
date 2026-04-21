@@ -1,17 +1,17 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.SulphurousSea
+namespace CalamityMod.NPCs.SulphurousSea
 {
     public class Trasher : ModNPC
     {
@@ -57,7 +57,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SulphurousSea
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Trasher")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Trasher")
             });
         }
 

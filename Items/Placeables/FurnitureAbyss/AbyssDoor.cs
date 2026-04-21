@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAbyss;
+using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.FurnitureAbyss;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAbyss
+namespace CalamityMod.Items.Placeables.FurnitureAbyss
 {
     public class AbyssDoor : ModItem, ILocalizedModType
     {

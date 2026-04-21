@@ -9,9 +9,9 @@ using Terraria.GameContent.Shaders;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class FreedomStarBeam : ModProjectile, ILocalizedModType
     {

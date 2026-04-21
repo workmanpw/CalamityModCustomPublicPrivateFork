@@ -2,24 +2,24 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.UI.VanillaBossBars;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.CalPlayer;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Potions;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs.TownNPCs;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.UI.VanillaBossBars;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -31,7 +31,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.SlimeGod
+namespace CalamityMod.NPCs.SlimeGod
 {
     [AutoloadBossHead]
     public class SlimeGodCore : ModNPC
@@ -39,10 +39,10 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SlimeGod
         private bool slimesSpawned = false;
         private int buffedSlime = 0;
 
-        public static readonly SoundStyle PossessionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SlimeGodPossession");
-        public static readonly SoundStyle ExitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SlimeGodExit");
-        public static readonly SoundStyle ShotSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SlimeGodShot", 2);
-        public static readonly SoundStyle BigShotSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SlimeGodBigShot", 2);
+        public static readonly SoundStyle PossessionSound = new("CalamityMod/Sounds/Custom/SlimeGodPossession");
+        public static readonly SoundStyle ExitSound = new("CalamityMod/Sounds/Custom/SlimeGodExit");
+        public static readonly SoundStyle ShotSound = new("CalamityMod/Sounds/Custom/SlimeGodShot", 2);
+        public static readonly SoundStyle BigShotSound = new("CalamityMod/Sounds/Custom/SlimeGodBigShot", 2);
 
         public static Asset<Texture2D> EyeTexture;
 
@@ -54,7 +54,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SlimeGod
             NPCID.Sets.TrailingMode[Type] = 1;
             if (!Main.dedServ)
             {
-                EyeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/SlimeGod/SlimeGodEyes", AssetRequestMode.AsyncLoad);
+                EyeTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/SlimeGod/SlimeGodEyes", AssetRequestMode.AsyncLoad);
             }
         }
 
@@ -94,7 +94,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SlimeGod
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCorruption,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheCrimson,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.SlimeGodCore")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.SlimeGodCore")
             });
         }
 
@@ -267,7 +267,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SlimeGod
                         // Let the player know that the Slime God isn't dead fr
                         if (!DownedBossSystem.downedSlimeGod)
                         {
-                            string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.SlimeGodRun";
+                            string key = "Mods.CalamityMod.Status.Boss.SlimeGodRun";
                             Color messageColor = Color.Magenta;
 
                             CalamityUtils.BroadcastLocalizedText(key, messageColor);

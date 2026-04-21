@@ -6,7 +6,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Paintings
+namespace CalamityMod.Tiles.Furniture.Paintings
 {
     public class ForgivenessPaintingTile : ModTile
     {

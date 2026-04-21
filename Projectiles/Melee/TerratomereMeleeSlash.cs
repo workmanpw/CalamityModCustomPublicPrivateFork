@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityMod.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class TerratomereMeleeSlash : ModProjectile, ILocalizedModType
     {
@@ -14,7 +14,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public bool Flipped => Projectile.ai[0] == 1f;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {

@@ -1,8 +1,8 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,13 +11,13 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.MaceFlails
+namespace CalamityMod.Projectiles.Melee.MaceFlails
 {
     [PierceResistException]
     public class UrchinMaceProj : BaseMaceFlailProjectile
     {
         // The entire chain is on the mace sprite, in which the player swings
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/UrchinMace";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/UrchinMace";
         public override string ChainTexturePath => string.Empty;
 
         // This flail only runs through one state (spin), thereby making most parameters unnecessary to fill out

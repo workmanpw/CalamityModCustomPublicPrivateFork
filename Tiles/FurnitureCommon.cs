@@ -12,7 +12,7 @@ using Terraria.ModLoader.Default;
 using Terraria.ObjectData;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles
+namespace CalamityMod.Tiles
 {
     internal static class FurnitureCommon
     {

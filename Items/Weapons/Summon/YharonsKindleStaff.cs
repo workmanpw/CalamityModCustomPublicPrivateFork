@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Rarities;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
+namespace CalamityMod.Items.Weapons.Summon
 {
     [LegacyName("AngryChickenStaff")]
     public class YharonsKindleStaff : ModItem, ILocalizedModType

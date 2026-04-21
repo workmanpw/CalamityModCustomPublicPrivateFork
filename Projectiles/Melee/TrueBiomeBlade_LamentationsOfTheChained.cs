@@ -1,10 +1,10 @@
 using System;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -13,14 +13,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class LamentationsOfTheChained : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
         private NPC[] excludedTargets = new NPC[4];
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChained";
+        public override string Texture => "CalamityMod/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChained";
         public Player Owner => Main.player[Projectile.owner];
         public ref float ChainSwapTimer => ref Projectile.ai[0];
         public ref float SnapCoyoteTime => ref Projectile.ai[1];
@@ -245,8 +245,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D handle = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/OmegaBiomeBlade").Value;
-            Texture2D blade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChained").Value;
+            Texture2D handle = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/OmegaBiomeBlade").Value;
+            Texture2D blade = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChained").Value;
 
             CalculateChains(out Vector2[] chainPositions1, out Vector2[] chainPositions2, out Vector2[] chainPositions3);
 
@@ -266,7 +266,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
 
             //Draw the tip of the flails here
-            Texture2D flailBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedFlail").Value;
+            Texture2D flailBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedFlail").Value;
             Rectangle bladeFrame = new(0, 0, 24, 48);
             Vector2 flailOrigin = new(bladeFrame.Width / 2, bladeFrame.Height); //Draw from center bottom of texture
 
@@ -372,7 +372,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         private void DrawChain(out Vector2[] chainPositions, Vector2 control0, Vector2 control1, Vector2 control2, Vector2 control3)
         {
 
-            Texture2D tex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedFlail").Value;
+            Texture2D tex = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedFlail").Value;
             Rectangle chainFrame = new(0, 70, 24, 14);
             Rectangle guardFrame = new(0, 50, 24, 18);
 

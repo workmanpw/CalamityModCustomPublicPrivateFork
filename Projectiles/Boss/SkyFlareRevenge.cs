@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
+using CalamityMod.NPCs.Yharon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,14 +6,14 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class SkyFlareRevenge : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/SkyFlare";
+        public override string Texture => "CalamityMod/Projectiles/Boss/SkyFlare";
 
-        public static readonly SoundStyle FlareSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Yharon/YharonInfernado");
+        public static readonly SoundStyle FlareSound = new("CalamityMod/Sounds/Custom/Yharon/YharonInfernado");
 
         public override void SetStaticDefaults()
         {

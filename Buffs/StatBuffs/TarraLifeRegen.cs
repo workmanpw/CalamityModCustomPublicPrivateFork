@@ -4,7 +4,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.StatBuffs
+namespace CalamityMod.Buffs.StatBuffs
 {
     public class TarraLifeRegen : ModBuff
     {

@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Skies;
+using CalamityMod.Events;
+using CalamityMod.Skies;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class BossRushScene : ModSceneEffect
     {

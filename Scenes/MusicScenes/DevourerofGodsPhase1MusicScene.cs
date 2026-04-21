@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.DevourerofGods;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class DevourerofGodsPhase1MusicScene : BaseMusicSceneEffect
     {

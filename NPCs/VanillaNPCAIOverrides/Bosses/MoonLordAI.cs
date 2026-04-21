@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,14 +8,14 @@ using Terraria.GameContent.Events;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
+namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
 {
     // This is the most horrible abomination of code I have ever seen in my life.
     // CIT 20OCT2025: Despite this, I still got bored enough that I decided to refactor the entire thing.
     // Hopefully it should be far more readable.
     public class MoonLordAI : VanillaAIOverride
     {
-        public static readonly SoundStyle DeathrayChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/MoonLordLaserCharge");
+        public static readonly SoundStyle DeathrayChargeSound = new("CalamityMod/Sounds/Custom/MoonLordLaserCharge");
 
         // Vanilla values
         public static int BoltDamage = 30; // 120

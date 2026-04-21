@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.TileEntities;
-using CalamityModCustomPublicPrivateFork.UI;
+using CalamityMod.TileEntities;
+using CalamityMod.UI;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Paintings
+namespace CalamityMod.Tiles.Furniture.Paintings
 {
     public abstract class BaseCanvasPainting : ModTile
     {
@@ -24,8 +24,8 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Paintings
 
         public override void Load()
         {
-            border = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Furniture/Paintings/CalamityCanvasBorder");
-            corner = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Furniture/Paintings/CalamityCanvasCorner");
+            border = ModContent.Request<Texture2D>("CalamityMod/Tiles/Furniture/Paintings/CalamityCanvasBorder");
+            corner = ModContent.Request<Texture2D>("CalamityMod/Tiles/Furniture/Paintings/CalamityCanvasCorner");
         }
 
         public override void SetStaticDefaults()

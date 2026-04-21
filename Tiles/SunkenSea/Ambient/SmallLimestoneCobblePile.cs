@@ -4,11 +4,11 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
+namespace CalamityMod.Tiles.SunkenSea.Ambient
 {
 	public class SmallLimestoneCobblePileBase : ModTile
 	{
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/SmallLimestoneCobblePile";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/SmallLimestoneCobblePile";
 
         public override void SetStaticDefaults()
         {

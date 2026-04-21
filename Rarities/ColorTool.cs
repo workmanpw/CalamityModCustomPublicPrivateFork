@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Rarities
+namespace CalamityMod.Rarities
 {
     public sealed class ColorTool : GlobalItem
     {

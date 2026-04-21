@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Crags.Spike
+namespace CalamityMod.Tiles.Crags.Spike
 {
     public class CragStalactiteLarge3 : ModTile
     {

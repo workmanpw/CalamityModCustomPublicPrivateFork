@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Magic;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.StatBuffs
+namespace CalamityMod.Buffs.StatBuffs
 {
     public class AeolianEarthBuff : ModBuff
     {

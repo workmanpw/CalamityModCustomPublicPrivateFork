@@ -8,7 +8,7 @@ using Terraria.ModLoader;
 using Terraria.UI.Chat;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Rarities
+namespace CalamityMod.Rarities
 {
     public class BurnishedAuric : ModRarity
     {

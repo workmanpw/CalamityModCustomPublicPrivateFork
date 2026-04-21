@@ -1,13 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.NPCs.AcidRain;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     public class BloodwormItem : ModItem, ILocalizedModType
     {

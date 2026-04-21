@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,13 +10,13 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class DracoConstellation : ModProjectile, ILocalizedModType
     {
 
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Sparkle";
+        public override string Texture => "CalamityMod/Particles/Sparkle";
         public float TailLength => 600;
         public List<DracoSegment> Segments = new();
         /// <summary>
@@ -27,7 +27,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         {
             if (GlowTex == null)
             {
-                GlowTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+                GlowTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
             }
             return GlowTex.Value;
         }

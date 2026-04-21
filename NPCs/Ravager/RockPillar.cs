@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Events;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Events;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Ravager
+namespace CalamityMod.NPCs.Ravager
 {
     public class RockPillar : ModNPC
     {
-        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/RavagerRockPillarHit", 3);
+        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/RavagerRockPillarHit", 3);
         public override void SetStaticDefaults()
         {
             this.HideFromBestiary();

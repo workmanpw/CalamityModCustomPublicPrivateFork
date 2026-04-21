@@ -3,11 +3,11 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
+namespace CalamityMod.Walls.UnsafeWalls
 {
     public class UnsafeLimestoneWall : ModWall, IVisibleThroughWater
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/LimestoneWall";
+        public override string Texture => "CalamityMod/Walls/LimestoneWall";
         int IVisibleThroughWater.WaterMapEntry { get; set; }
 
         public override void SetStaticDefaults()

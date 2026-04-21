@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class PolarisParrotfish : ModItem, ILocalizedModType
     {
@@ -18,8 +18,8 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
         public bool Happy = false;
         public float fireSpeed = 1;
 
-        public static readonly SoundStyle Shot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PolarisShot") { Volume = 0.6f };
-        public static readonly SoundStyle Squeak = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CuteSqueak") { Volume = 0.75f };
+        public static readonly SoundStyle Shot = new("CalamityMod/Sounds/Item/PolarisShot") { Volume = 0.6f };
+        public static readonly SoundStyle Squeak = new("CalamityMod/Sounds/Custom/CuteSqueak") { Volume = 0.75f };
         public override void SetStaticDefaults()
         {
             ItemID.Sets.IsRangedSpecialistWeapon[Type] = true;
@@ -62,7 +62,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
                     player.AddBuff(BuffID.Obstructed, 600);
                     Main.NewText(CalamityUtils.GetTextValue("Misc.Polaris0"), 255, 0, 0);
                     SoundEngine.PlaySound(Squeak with { Pitch = -1f }, player.Center);
-                    SoundStyle roar = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CeaselessVoidDeathBuild");
+                    SoundStyle roar = new("CalamityMod/Sounds/Custom/CeaselessVoidDeathBuild");
                     SoundEngine.PlaySound(roar with { Pitch = 0.5f }, player.Center);
                     int theFuckening = ModContent.ProjectileType<AstralFlame>();
                     int projDamage = 500;

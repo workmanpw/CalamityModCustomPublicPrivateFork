@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
+namespace CalamityMod.NPCs.Astral
 {
     public class Aries : ModNPC
     {
@@ -24,7 +24,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
         {
             Main.npcFrameCount[Type] = 8;
             if (!Main.dedServ)
-                glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Astral/AriesGlow", AssetRequestMode.AsyncLoad);
+                glowmask = ModContent.Request<Texture2D>("CalamityMod/NPCs/Astral/AriesGlow", AssetRequestMode.AsyncLoad);
         }
 
         public override void SetDefaults()
@@ -56,7 +56,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Aries")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Aries")
             });
         }
 

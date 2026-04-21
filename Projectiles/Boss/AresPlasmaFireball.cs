@@ -1,15 +1,15 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.ExoMechs.Ares;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class AresPlasmaFireball : ModProjectile, ILocalizedModType
     {

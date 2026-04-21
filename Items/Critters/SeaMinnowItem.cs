@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
+using CalamityMod.NPCs.SunkenSea;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Critters
+namespace CalamityMod.Items.Critters
 {
     public class SeaMinnowItem : ModItem, ILocalizedModType
     {

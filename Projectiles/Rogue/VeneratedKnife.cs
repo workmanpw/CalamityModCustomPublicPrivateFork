@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class VeneratedKnife : ModProjectile, ILocalizedModType
     {
@@ -77,7 +77,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             }
             else if (Projectile.ai[0] == 1f)
             {
-                Texture2D knife2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/VeneratedKnife2").Value;
+                Texture2D knife2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/VeneratedKnife2").Value;
                 CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], lightColor, 3, knife2);
             }
             return false;
@@ -89,12 +89,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             Vector2 origin = new Vector2(Projectile.width / 2, Projectile.height / 2);
             if (Projectile.ai[0] == 0f)
             {
-                Texture2D knife1Glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/VeneratedKnifeGlow").Value;
+                Texture2D knife1Glow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/VeneratedKnifeGlow").Value;
                 Main.EntitySpriteDraw(knife1Glow, Projectile.Center - Main.screenPosition, null, Color.White, Projectile.rotation, origin, 1f, SpriteEffects.None, 0);
             }
             else if (Projectile.ai[0] == 1f)
             {
-                Texture2D knife2Glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/VeneratedKnife2Glow").Value;
+                Texture2D knife2Glow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/VeneratedKnife2Glow").Value;
                 Main.EntitySpriteDraw(knife2Glow, Projectile.Center - Main.screenPosition, null, Color.White, Projectile.rotation, origin, 1f, SpriteEffects.None, 0);
             }
         }

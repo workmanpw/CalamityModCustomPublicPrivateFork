@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,12 +9,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class PulsePistolShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public ref float time => ref Projectile.ai[0];
         public bool onSpawn = true;
         private NPC targeted = null;
@@ -123,7 +123,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                     if (startAttackEffects)
                     {
                         Projectile.velocity = Utils.DirectionTo(Projectile.Center, targeted.Center) * 10;
-                        SoundStyle pulse = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PulseSound");
+                        SoundStyle pulse = new("CalamityMod/Sounds/Item/PulseSound");
                         SoundEngine.PlaySound(pulse with { Volume = 0.25f, Pitch = Math.Max(0.6f, Main.rand.NextFloat(0.3f, 0.4f) + Projectile.numHits * 0.1f), MaxInstances = 5 }, Projectile.Center);
                         for (int k = 0; k < 6; k++)
                         {
@@ -148,7 +148,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             float squash = Utils.GetLerpValue(1, 3, Projectile.velocity.Length(), true);
             if (targetDist < 1400f && squash > 0.2f && (Projectile.ai[1] == 0 || time > 5)) // The trail
             {
-                Particle trail = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/DualTrail", false, 13, 0.075f * Projectile.scale, Effects.ArsenalEffects.ArsenalPulseColor * 0.6f * squash, new Vector2(1 - 0.15f * squash, 1.5f), true, false, shrinkSpeed: 0.2f * squash);
+                Particle trail = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityMod/Particles/DualTrail", false, 13, 0.075f * Projectile.scale, Effects.ArsenalEffects.ArsenalPulseColor * 0.6f * squash, new Vector2(1 - 0.15f * squash, 1.5f), true, false, shrinkSpeed: 0.2f * squash);
                 GeneralParticleHandler.SpawnParticle(trail);
             }
 
@@ -199,7 +199,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+            Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
             Vector2 squash = new Vector2(Utils.Remap(Projectile.velocity.Length(), 5, 10, 1, 0.6f), Utils.Remap(Projectile.velocity.Length(), 5, 10, 1, 2f));
             float timeleftFade = (float)Math.Pow(Utils.GetLerpValue(0, 40 * Projectile.extraUpdates, Projectile.timeLeft, true), 5);
 

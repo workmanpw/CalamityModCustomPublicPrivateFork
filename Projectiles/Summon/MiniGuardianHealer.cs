@@ -1,18 +1,18 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.Buffs.Summon.Whips;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Accessories;
+using CalamityMod.NPCs.Providence;
+using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Items.Accessories.ProfanedSoulCrystal;
+using static CalamityMod.Items.Accessories.ProfanedSoulCrystal;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class MiniGuardianHealer : ModProjectile, ILocalizedModType
     {

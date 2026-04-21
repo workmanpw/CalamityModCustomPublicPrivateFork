@@ -1,7 +1,7 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,15 +9,15 @@ using Terraria.Audio;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class EarthenTides : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_EarthenTides";
+        public override string Texture => "CalamityMod/Projectiles/Melee/TrueBiomeBlade_EarthenTides";
         private bool initialized = false;
         Vector2 direction = Vector2.Zero;
         public Player Owner => Main.player[Projectile.owner];
@@ -31,8 +31,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public Vector2 lastDisplacement;
         public float dashDuration;
 
-        public static readonly SoundStyle FullChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockSound");
-        public static readonly SoundStyle GroundImpact = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockImpact");
+        public static readonly SoundStyle FullChargeSound = new("CalamityMod/Sounds/Item/MagicRockSound");
+        public static readonly SoundStyle GroundImpact = new("CalamityMod/Sounds/Item/MagicRockImpact");
 
         public override void SetDefaults()
         {
@@ -143,7 +143,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                         Vector2 sparkPos = Projectile.Center + direction * Main.rand.NextFloat(50f, 100f);
                         Vector2 sparkVel = direction.RotatedByRandom(MathHelper.Pi / 15f) * Main.rand.NextFloat(9f, 18f) + (Owner.velocity * 0.5f);
                         Color sparkColor = Color.Lerp(new Color(71, 191, 71), new Color(122, 213, 233), Main.rand.NextFloat());
-                        CustomSprite critSpark = new(sparkPos, sparkVel, 16, "CalamityModCustomPublicPrivateFork/Particles/CritSpark", 1.4f, sparkColor, frameCount: 4, frame: Main.rand.Next(4));
+                        CustomSprite critSpark = new(sparkPos, sparkVel, 16, "CalamityMod/Particles/CritSpark", 1.4f, sparkColor, frameCount: 4, frame: Main.rand.Next(4));
                         GeneralParticleHandler.SpawnParticle(critSpark);
                     }
                 }
@@ -208,7 +208,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             for (int d = 0; d < 13; d++)
                 Dust.NewDustPerfect(collisionSpot, Main.rand.NextBool() ? DustID.Clay : DustID.Dirt, Main.rand.NextVector2CircularEdge(6f, 6f), Scale: 1.2f);
 
-            CustomPulse shatter = new(collisionSpot, Vector2.Zero, Color.SandyBrown, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.03f, 0.275f, 30);
+            CustomPulse shatter = new(collisionSpot, Vector2.Zero, Color.SandyBrown, "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.03f, 0.275f, 30);
             GeneralParticleHandler.SpawnParticle(shatter);
             for (int i = 0; i < 10; i++)
             {
@@ -257,8 +257,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D handle = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/OmegaBiomeBlade").Value;
-            Texture2D blade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_EarthenTides").Value;
+            Texture2D handle = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/OmegaBiomeBlade").Value;
+            Texture2D blade = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_EarthenTides").Value;
 
             float drawAngle = direction.ToRotation();
             float drawRotation = drawAngle + MathHelper.PiOver4;

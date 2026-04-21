@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Waters
+namespace CalamityMod.Waters
 {
     public class FloralParadiseWaterflow : ModWaterfallStyle { }
 
@@ -25,7 +25,7 @@ namespace CalamityModCustomPublicPrivateFork.Waters
 
         public override int ChooseWaterfallStyle()
         {
-            return ModContent.Find<ModWaterfallStyle>("CalamityModCustomPublicPrivateFork/FloralParadiseWaterflow").Slot;
+            return ModContent.Find<ModWaterfallStyle>("CalamityMod/FloralParadiseWaterflow").Slot;
         }
 
         public override int GetSplashDust() => DustID.Water;

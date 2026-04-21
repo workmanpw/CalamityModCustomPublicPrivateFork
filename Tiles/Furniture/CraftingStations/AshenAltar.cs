@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations
+namespace CalamityMod.Tiles.Furniture.CraftingStations
 {
     public class AshenAltar : ModTile
     {
@@ -60,7 +60,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Furniture/CraftingStations/AshenAltarFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Furniture/CraftingStations/AshenAltarFlame");
             CalamityUtils.DrawStaticFlameEffect(FlameTexture.Value, i, j, offsetY: animationFrame * AnimationFrameHeight);
         }
 

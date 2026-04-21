@@ -1,18 +1,18 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Particles;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class RavagerFlame : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {
@@ -31,7 +31,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 
         public override void AI()
         {
-            Particle beam3 = new CustomSpark(Projectile.Center, new Vector2(1).RotatedByRandom(6.3f), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 10, 0.25f, Color.SkyBlue, new Vector2(1), true, false, 0, false, false, 0f);
+            Particle beam3 = new CustomSpark(Projectile.Center, new Vector2(1).RotatedByRandom(6.3f), "CalamityMod/Particles/BloomCircle", false, 10, 0.25f, Color.SkyBlue, new Vector2(1), true, false, 0, false, false, 0f);
             GeneralParticleHandler.SpawnParticle(beam3);
             for (int i = 0; i < 2; i++)
             {

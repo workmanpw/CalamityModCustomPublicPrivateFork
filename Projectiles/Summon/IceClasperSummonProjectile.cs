@@ -3,12 +3,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class IceClasperSummonProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/DarkIceZero";
+        public override string Texture => "CalamityMod/Projectiles/Melee/DarkIceZero";
 
         public override void SetStaticDefaults()
         {

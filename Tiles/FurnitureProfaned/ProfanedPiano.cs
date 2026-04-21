@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
+using CalamityMod.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -6,7 +6,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureProfaned
+namespace CalamityMod.Tiles.FurnitureProfaned
 {
     public class ProfanedPiano : ModTile
     {

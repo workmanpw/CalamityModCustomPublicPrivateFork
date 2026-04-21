@@ -1,21 +1,21 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Cooldowns;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class AqueousHunterDroneSummon : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         public int time = 0;
         public ref float attackTimer => ref Projectile.ai[0];
@@ -209,7 +209,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                 if (time == animationClickTime - 1)
                 {
                     Projectile.velocity = Projectile.velocity.RotatedBy(MathHelper.PiOver4 * Projectile.direction) * 3;
-                    SoundStyle click = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire");
+                    SoundStyle click = new("CalamityMod/Sounds/Item/DudFire");
                     SoundEngine.PlaySound(click with { Pitch = 0.4f }, Projectile.Center);
                     SoundEngine.PlaySound((Main.rand.NextBool() ? AqueousHunterDrone.Sound1 : AqueousHunterDrone.Sound2) with { Volume = 0.6f, Pitch = 0.3f, MaxInstances = 10 }, Projectile.Center);
 
@@ -227,7 +227,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                     }
                     for (int i = 0; i < 2; i++)
                     {
-                        Particle spark = new CustomSpark(tailPlace, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 15, 0.4f, Effects.ArsenalEffects.ArsenalPlasmaColor, new Vector2(1, 1), true, true, 0, false, false);
+                        Particle spark = new CustomSpark(tailPlace, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 15, 0.4f, Effects.ArsenalEffects.ArsenalPlasmaColor, new Vector2(1, 1), true, true, 0, false, false);
                         GeneralParticleHandler.SpawnParticle(spark);
                     }
                 }
@@ -266,7 +266,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             {
                 if (time % 25 == 0)
                 {
-                    Particle spark2 = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(5, 5) - Vector2.UnitY * 20, -Vector2.UnitY.RotatedByRandom(0.1f) * Main.rand.NextFloat(3.3f, 5.5f), "CalamityModCustomPublicPrivateFork/Projectiles/Magic/MelterNote1", false, 32, Main.rand.NextFloat(1.2f, 1.3f), Color.Lerp(Color.Green, Color.Chartreuse, Main.rand.NextFloat(0, 0.7f)), new Vector2(1, 1), true, false, 0, false, false);
+                    Particle spark2 = new CustomSpark(Projectile.Center + Main.rand.NextVector2Circular(5, 5) - Vector2.UnitY * 20, -Vector2.UnitY.RotatedByRandom(0.1f) * Main.rand.NextFloat(3.3f, 5.5f), "CalamityMod/Projectiles/Magic/MelterNote1", false, 32, Main.rand.NextFloat(1.2f, 1.3f), Color.Lerp(Color.Green, Color.Chartreuse, Main.rand.NextFloat(0, 0.7f)), new Vector2(1, 1), true, false, 0, false, false);
                     GeneralParticleHandler.SpawnParticle(spark2);
                 }
                 if (time % (480 + Projectile.localAI[2] * 120) == 0 && Owner.miscCounter != 0)
@@ -336,11 +336,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                     dust.fadeIn = noFall ? 0 : 1.1f;
                 }
 
-                Particle bolt2 = new CustomPulse(shootPlace, shootVel * 0.2f, Effects.ArsenalEffects.ArsenalPlasmaColor, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(0.5f, 1f), shootVel.ToRotation(), 0f, 0.6f, 23);
+                Particle bolt2 = new CustomPulse(shootPlace, shootVel * 0.2f, Effects.ArsenalEffects.ArsenalPlasmaColor, "CalamityMod/Particles/BloomRing", new Vector2(0.5f, 1f), shootVel.ToRotation(), 0f, 0.6f, 23);
                 GeneralParticleHandler.SpawnParticle(bolt2);
                 for (int i = 0; i < 2; i++)
                 {
-                    Particle spark = new CustomSpark(shootPlace, shootVel * 0.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 28, 0.6f, Effects.ArsenalEffects.ArsenalPlasmaColor, new Vector2(1f, 0.5f), true, true, 0, false, false);
+                    Particle spark = new CustomSpark(shootPlace, shootVel * 0.2f, "CalamityMod/Particles/BloomCircle", false, 28, 0.6f, Effects.ArsenalEffects.ArsenalPlasmaColor, new Vector2(1f, 0.5f), true, true, 0, false, false);
                     GeneralParticleHandler.SpawnParticle(spark);
                 }
 
@@ -393,11 +393,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
         public override bool MinionContactDamage() => false;
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D head = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/ShrimpBody").Value;
-            Texture2D glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/ShrimpBodyGlow").Value;
-            Texture2D tail = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/ShrimpTail").Value;
-            Texture2D glow2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/ShrimpTailGlow").Value;
-            Texture2D spin = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmearSmokey").Value;
+            Texture2D head = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/ShrimpBody").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/ShrimpBodyGlow").Value;
+            Texture2D tail = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/ShrimpTail").Value;
+            Texture2D glow2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/ShrimpTailGlow").Value;
+            Texture2D spin = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularSmearSmokey").Value;
             Color drawColor = Projectile.GetAlpha(lightColor);
             bool left = facingDir == -1;
             float rotation = Projectile.rotation;

@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Projectiles.Enemy;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -20,7 +20,7 @@ using Terraria.ModLoader;
 using Terraria.Utilities;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
+namespace CalamityMod.NPCs.AcidRain
 {
     [AutoloadBossHead]
     public class CragmawMire : ModNPC
@@ -104,7 +104,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.CragmawMire")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.CragmawMire")
             });
         }
 

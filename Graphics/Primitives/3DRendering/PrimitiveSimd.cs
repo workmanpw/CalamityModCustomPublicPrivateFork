@@ -1,6 +1,6 @@
 using System;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+namespace CalamityMod.Graphics.Primitives;
 
 internal static class PrimitiveSimd
 {

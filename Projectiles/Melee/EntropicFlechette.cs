@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,12 +8,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class EntropicFlechette : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public float sizeVariance = 1;
         public int time = 60;
         public int spinDir = 100;
@@ -59,7 +59,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             {
                 if (Main.myPlayer == Projectile.owner)
                 { 
-                    Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.4f, "CalamityModCustomPublicPrivateFork/Particles/GlowSpark2", false, (int)MathHelper.Clamp(9 * sizeVariance, 3, 9), MathHelper.Clamp(0.03f * sizeVariance, 0.01f, 0.03f), Color.Black * 0.6f, new Vector2(1.2f, 0.5f), false, shrinkSpeed: 1.1f);
+                    Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.4f, "CalamityMod/Particles/GlowSpark2", false, (int)MathHelper.Clamp(9 * sizeVariance, 3, 9), MathHelper.Clamp(0.03f * sizeVariance, 0.01f, 0.03f), Color.Black * 0.6f, new Vector2(1.2f, 0.5f), false, shrinkSpeed: 1.1f);
                     GeneralParticleHandler.SpawnParticle(spark2);
                 }
 
@@ -113,7 +113,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             if (Projectile.numHits == 0)
             {
                 Projectile.netUpdate = true;
-                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MeldBurn");
+                SoundStyle sound = new("CalamityMod/Sounds/Item/MeldBurn");
                 SoundEngine.PlaySound(sound with { Volume = 0.7f, Pitch = Main.rand.NextFloat(-0.1f, 0.1f) }, Projectile.Center);
             }
         }
@@ -132,8 +132,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/WaterFlavored");
-            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityMod/Particles/WaterFlavored");
+            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
 
             Vector2 generalDrawPos = Projectile.Center - Main.screenPosition;
             float minSpeed = 6;

@@ -1,18 +1,18 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Graphics.Metaballs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class CataclysmicFlame : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/FireProj";
+        public override string Texture => "CalamityMod/Projectiles/FireProj";
 
         public static int Lifetime => 90;
         public static int Fadetime => 80;
@@ -112,7 +112,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
             
             /*
             Texture2D fire = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D mist = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/MediumMist").Value;
+            Texture2D mist = ModContent.Request<Texture2D>("CalamityMod/Particles/MediumMist").Value;
 
             // The conga line of colors to sift through
             Color color1 = new Color(255, 110, 100, 200);

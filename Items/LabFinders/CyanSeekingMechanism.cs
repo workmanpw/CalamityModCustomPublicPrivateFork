@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Rarities;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.LabFinders
+namespace CalamityMod.Items.LabFinders
 {
     public class CyanSeekingMechanism : ModItem, ILocalizedModType
     {

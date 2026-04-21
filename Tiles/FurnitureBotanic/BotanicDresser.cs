@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
+using CalamityMod.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureBotanic
+namespace CalamityMod.Tiles.FurnitureBotanic
 {
     public class BotanicDresser : ModTile
     {

@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,13 +6,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class FallenPaladinsHammerEcho : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public static readonly SoundStyle SlamHamSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FallenPaladinsHammerBigImpact") { Volume = 0.6f };
-        public static readonly SoundStyle Kunk = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TF2PanHit") { Volume = 1.1f };
+        public static readonly SoundStyle SlamHamSound = new("CalamityMod/Sounds/Item/FallenPaladinsHammerBigImpact") { Volume = 0.6f };
+        public static readonly SoundStyle Kunk = new("CalamityMod/Sounds/Item/TF2PanHit") { Volume = 1.1f };
         public float speed = 0f;
         public NPC targeted;
         public override void SetStaticDefaults()
@@ -121,7 +121,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/FallenPaladinsHammer").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/FallenPaladinsHammer").Value;
             CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], Color.DarkRed with { A = 0 } * 0.5f, 1, texture, true, true);
 
             Projectile.DrawProjectileWithBackglow(Color.Red with { A = 0 }, Color.Lerp(Color.Red, Color.White, 0.5f), 5f, texture);

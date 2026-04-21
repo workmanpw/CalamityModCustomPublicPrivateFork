@@ -5,7 +5,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class ShockBolt : ModProjectile, ILocalizedModType
     {
@@ -92,9 +92,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         {
             Texture2D sprite;
             if (Projectile.ai[0] == 0f)
-                sprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/ShockBolt").Value;
+                sprite = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/ShockBolt").Value;
             else
-                sprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/ShockBolt2").Value;
+                sprite = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/ShockBolt2").Value;
             Color drawColour = Color.White;
 
             Vector2 origin = new Vector2(frameWidth / 2, frameHeight / 2);

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.Ores;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric
+namespace CalamityMod.Tiles.FurnitureAuric
 {
     public class ExoAuricPanelTile : GlowMaskTile
     {

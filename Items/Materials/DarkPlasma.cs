@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Materials
+namespace CalamityMod.Items.Materials
 {
     public class DarkPlasma : ModItem, ILocalizedModType
     {

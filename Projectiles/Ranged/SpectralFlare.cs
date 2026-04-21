@@ -2,10 +2,10 @@ using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 using Terraria;
 using Terraria.ID;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using System;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class SpectralFlare : ModProjectile, ILocalizedModType
     {

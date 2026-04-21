@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,18 +7,18 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     [LegacyName("MagnaStriker")]
     public class ArcNovaDiffuser : ModItem, ILocalizedModType
     {
-        public static readonly SoundStyle ChargeLV1 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeLV1") { Volume = 0.6f };
-        public static readonly SoundStyle ChargeLV2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeLV2") { Volume = 0.6f };
-        public static readonly SoundStyle ChargeStart = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeStart") { Volume = 0.6f };
-        public static readonly SoundStyle ChargeLoop = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeLoop") { Volume = 0.6f };
+        public static readonly SoundStyle ChargeLV1 = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeLV1") { Volume = 0.6f };
+        public static readonly SoundStyle ChargeLV2 = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeLV2") { Volume = 0.6f };
+        public static readonly SoundStyle ChargeStart = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeStart") { Volume = 0.6f };
+        public static readonly SoundStyle ChargeLoop = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeLoop") { Volume = 0.6f };
         internal static readonly int ChargeLoopSoundFrames = 151;
-        public static readonly SoundStyle SmallShot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserSmallShot") { PitchVariance = 0.3f, Volume = 0.5f };
-        public static readonly SoundStyle BigShot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserBigShot") { PitchVariance = 0.3f, Volume = 0.8f };
+        public static readonly SoundStyle SmallShot = new("CalamityMod/Sounds/Item/ArcNovaDiffuserSmallShot") { PitchVariance = 0.3f, Volume = 0.5f };
+        public static readonly SoundStyle BigShot = new("CalamityMod/Sounds/Item/ArcNovaDiffuserBigShot") { PitchVariance = 0.3f, Volume = 0.8f };
 
         public static int AftershotCooldownFrames = 9;
         public static int Charge1Frames = 156;

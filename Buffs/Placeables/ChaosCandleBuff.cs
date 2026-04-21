@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Placeables
+namespace CalamityMod.Buffs.Placeables
 {
     public class ChaosCandleBuff : ModBuff
     {

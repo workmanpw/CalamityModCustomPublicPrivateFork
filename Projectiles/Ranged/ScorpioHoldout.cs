@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
-using static CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged.Scorpio;
+using static CalamityMod.Items.Weapons.Ranged.Scorpio;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class ScorpioHoldout : BaseGunHoldoutProjectile
     {
@@ -162,7 +162,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (Main.dedServ)
                 return;
 
-            SoundStyle RightClickSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/RealityRuptureStealth") { Volume = 0.45f };
+            SoundStyle RightClickSound = new("CalamityMod/Sounds/Item/RealityRuptureStealth") { Volume = 0.45f };
             if (isRMB)
                 SoundEngine.PlaySound(RightClickSound with { Pitch = -0.1f }, Projectile.Center);
             else

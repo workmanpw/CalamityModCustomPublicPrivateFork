@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class Orbacle : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/ExtraTextures/TinyGreyscaleCircle";
+        public override string Texture => "CalamityMod/ExtraTextures/TinyGreyscaleCircle";
         private static int Lifetime = 40;
 
         public override void SetDefaults()

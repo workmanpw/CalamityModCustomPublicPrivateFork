@@ -1,6 +1,6 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityMod.Dusts;
+using CalamityMod.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,9 +10,9 @@ using Terraria.GameContent;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas
+namespace CalamityMod.NPCs.SupremeCalamitas
 {
     public class SoulSeekerSupreme : ModNPC
     {
@@ -76,7 +76,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 new MoonLordPortraitBackgroundProviderBestiaryInfoElement(), // Gives black background
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.SoulSeekerSupreme")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.SoulSeekerSupreme")
             });
         }
 

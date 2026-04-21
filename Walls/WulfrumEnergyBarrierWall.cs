@@ -6,7 +6,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Walls
+namespace CalamityMod.Walls
 {
     public class WulfrumEnergyBarrierWall : ModWall
     {
@@ -14,7 +14,7 @@ namespace CalamityModCustomPublicPrivateFork.Walls
 
         public override void SetStaticDefaults()
         {
-            GlowMask = new("CalamityModCustomPublicPrivateFork/Walls/WulfrumEnergyBarrierWallReflect", 36, 36);
+            GlowMask = new("CalamityMod/Walls/WulfrumEnergyBarrierWallReflect", 36, 36);
 
             Main.wallHouse[Type] = true;
             Main.wallLight[Type] = true;

@@ -1,9 +1,9 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.TileEntities;
+using CalamityMod.TileEntities;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class TEPowerCellFactoryPacket : CalamityPacket
     {

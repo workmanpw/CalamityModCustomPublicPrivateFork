@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStratus
+namespace CalamityMod.Tiles.FurnitureStratus
 {
     public class StratusLantern : ModTile
     {

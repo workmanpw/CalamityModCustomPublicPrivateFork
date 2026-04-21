@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.Localization;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches
+namespace CalamityMod.Items.Fishing.SunkenSeaCatches
 {
     public class Serpentuna : BaseQuestFish
     {

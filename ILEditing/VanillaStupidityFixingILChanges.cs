@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Fishing;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Walls;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Items.Fishing;
+using CalamityMod.Items.Materials;
+using CalamityMod.NPCs.AcidRain;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Walls;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
@@ -22,7 +22,7 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.ILEditing
+namespace CalamityMod.ILEditing
 {
     public partial class ILChanges
     {

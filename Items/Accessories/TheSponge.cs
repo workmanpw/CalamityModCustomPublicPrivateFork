@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.CalPlayer;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityMod.Utilities.Daybreak;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -19,20 +19,20 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     [LegacyName("Sponge")]
     public class TheSponge : ModItem, ILocalizedModType, IDyeableShaderRenderer
     {
         public new string LocalizationCategory => "Items.Accessories";
 
-        public override string Texture => (DateTime.Now.Month == 4 && DateTime.Now.Day == 1) ? "CalamityModCustomPublicPrivateFork/Items/Accessories/TheSpongeReal" : "CalamityModCustomPublicPrivateFork/Items/Accessories/TheSponge";
+        public override string Texture => (DateTime.Now.Month == 4 && DateTime.Now.Day == 1) ? "CalamityMod/Items/Accessories/TheSpongeReal" : "CalamityMod/Items/Accessories/TheSponge";
 
         public static Asset<Texture2D> NoiseTex;
         // TODO -- Unique sounds for The Sponge
-        public static readonly SoundStyle ShieldHurtSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RoverDriveHit") { PitchVariance = 0.6f, Volume = 0.6f, MaxInstances = 0 };
-        public static readonly SoundStyle ActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RoverDriveActivate") { Volume = 0.85f };
-        public static readonly SoundStyle BreakSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RoverDriveBreak") { Volume = 0.75f };
+        public static readonly SoundStyle ShieldHurtSound = new("CalamityMod/Sounds/Custom/RoverDriveHit") { PitchVariance = 0.6f, Volume = 0.6f, MaxInstances = 0 };
+        public static readonly SoundStyle ActivationSound = new("CalamityMod/Sounds/Custom/RoverDriveActivate") { Volume = 0.85f };
+        public static readonly SoundStyle BreakSound = new("CalamityMod/Sounds/Custom/RoverDriveBreak") { Volume = 0.75f };
 
         public static int ShieldDurabilityMax = 120;
         public static float ShieldActiveDamageReduction = 0.1f;
@@ -107,9 +107,9 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
             // Will not render a shield if the April Fool's sprite is active.
-            if (Texture == "CalamityModCustomPublicPrivateFork/Items/Accessories/TheSponge")
+            if (Texture == "CalamityMod/Items/Accessories/TheSponge")
             {
-                Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Accessories/TheSpongeShield").Value;
+                Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Items/Accessories/TheSpongeShield").Value;
                 spriteBatch.Draw(tex, Item.Center - Main.screenPosition + new Vector2(0f, 0f), Main.itemAnimations[Type].GetFrame(tex), Color.Cyan * 0.5f, 0f, new Vector2(tex.Width / 2f, (tex.Height / 30f) * 0.8f), 1f, SpriteEffects.None, 0);
             }
         }
@@ -117,14 +117,14 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
         // TODO -- Is this necessary to block the shield in-inventory on April first?
         public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
-            return Texture != "CalamityModCustomPublicPrivateFork/Items/Accessories/TheSponge";
+            return Texture != "CalamityMod/Items/Accessories/TheSponge";
         }
 
         // Renders the bubble shield over the item in a player's inventory.
         public override void PostDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
             // Will not render a shield if the April Fool's sprite is active.
-            if (Texture == "CalamityModCustomPublicPrivateFork/Items/Accessories/TheSponge")
+            if (Texture == "CalamityMod/Items/Accessories/TheSponge")
             {
                 float wantedScale = 0.85f;
                 Vector2 drawOffset = new(-2f, -1f);
@@ -141,7 +141,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
                     wantedScale,
                     drawOffset
                 );
-                Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Accessories/TheSpongeShield").Value;
+                Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Items/Accessories/TheSpongeShield").Value;
                 CalamityUtils.DrawInventoryCustomScale(
                     spriteBatch,
                     texture: tex,
@@ -236,7 +236,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
             {
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, shieldEffect, Main.Transform);
                 // Fetch shield noise overlay texture (this is the polygons fed to the shader)
-                NoiseTex ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Neurons");
+                NoiseTex ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons");
                 Vector2 pos = player.MountedCenter + player.gfxOffY * Vector2.UnitY - Main.screenPosition;
                 Texture2D tex = NoiseTex.Value;
                 Main.spriteBatch.Draw(tex, pos, null, Color.White, 0, tex.Size() / 2f, scale, 0, 0);

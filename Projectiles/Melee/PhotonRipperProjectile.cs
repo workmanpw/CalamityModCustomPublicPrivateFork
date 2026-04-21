@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     [PierceResistException]
     public class PhotonRipperProjectile : ModProjectile, ILocalizedModType
@@ -46,7 +46,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D glowmaskTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/PhotonRipperGlowmask").Value;
+            Texture2D glowmaskTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/PhotonRipperGlowmask").Value;
             Rectangle glowmaskRectangle = glowmaskTexture.Frame(1, 6, 0, Projectile.frame);
             Vector2 origin = texture.Size() * 0.5f;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
@@ -250,7 +250,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.AddBuff(ModContent.BuffType<MiracleBlight>(), 500);
-            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumKnifeTileHit", 2);
+            SoundStyle fire = new("CalamityMod/Sounds/Item/WulfrumKnifeTileHit", 2);
             SoundEngine.PlaySound(fire with { Volume = 0.7f, Pitch = -0.1f }, Projectile.Center);
             for (int i = 0; i < 20; i++)
             {
@@ -259,7 +259,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             }
             for (int i = 0; i < 3; i++)
             {
-                Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, Main.hslToRgb((Time / 40f + Main.rand.NextFloat(-0.1f, 0.1f)) % 1f, 0.95f, 0.8f), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.4f, 0.9f * Main.rand.NextFloat(0.9f, 1.1f), 12, true);
+                Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, Main.hslToRgb((Time / 40f + Main.rand.NextFloat(-0.1f, 0.1f)) % 1f, 0.95f, 0.8f), "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.4f, 0.9f * Main.rand.NextFloat(0.9f, 1.1f), 12, true);
                 GeneralParticleHandler.SpawnParticle(blastRing);
             }
         }

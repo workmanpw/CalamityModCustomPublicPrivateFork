@@ -3,7 +3,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.DataStructures
+namespace CalamityMod.DataStructures
 {
     /// <summary>
     /// This is used to store summon tag stats so they can be applied automatically.

@@ -1,17 +1,17 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Items.Weapons.Summon.LiliesOfFinality;
+using static CalamityMod.Items.Weapons.Summon.LiliesOfFinality;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class LiliesOfFinalityAoE : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         private ref float ArianeID => ref Projectile.ai[0];
 

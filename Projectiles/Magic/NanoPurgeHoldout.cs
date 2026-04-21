@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,12 +10,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class NanoPurgeHoldout : BaseGunHoldoutProjectile
     {
         public override int AssociatedItemID => ModContent.ItemType<NanoPurge>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/NanoPurgeHoldout";
+        public override string Texture => "CalamityMod/Projectiles/Magic/NanoPurgeHoldout";
         public override float MaxOffsetLengthFromArm => 10f;
         public override float OffsetXUpwards => -15f;
         public override float OffsetXDownwards => 5f;

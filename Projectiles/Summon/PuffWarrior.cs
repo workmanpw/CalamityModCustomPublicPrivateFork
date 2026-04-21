@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
+using CalamityMod.Buffs.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class PuffWarrior : ModProjectile, ILocalizedModType
     {

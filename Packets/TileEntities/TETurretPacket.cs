@@ -1,9 +1,9 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.TileEntities;
+using CalamityMod.TileEntities;
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class TETurretPacket : CalamityPacket
     {

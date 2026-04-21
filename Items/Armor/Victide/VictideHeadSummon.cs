@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Potions.Alcohol;
+using CalamityMod.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Victide
+namespace CalamityMod.Items.Armor.Victide
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("VictideHelmet")]

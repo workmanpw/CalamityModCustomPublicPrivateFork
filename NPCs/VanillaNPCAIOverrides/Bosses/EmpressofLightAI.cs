@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.World;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.Events;
+using CalamityMod.World;
+using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,7 +9,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
+namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
 {
     public static class EmpressOfLightAIUtils
     {

@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Collections.Generic;
@@ -9,12 +9,12 @@ using Terraria.Audio;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class IncineratingFireball : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public Player Owner => Main.player[Projectile.owner];
         public bool Released = false;
@@ -131,7 +131,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                 if (Timer > BurningSea.BurnOutTime)
                 {
                     Projectile.timeLeft = (int)BurningSea.FizzleOutTime;
-                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/WeaponEnchant"), Owner.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/WeaponEnchant"), Owner.Center);
                     CombatText.NewText(Owner.Hitbox, new Color(192, 0, 0), CalamityUtils.GetTextValue("Misc.BurningSeaBurn"), true);
 
                     Owner.AddBuff(ModContent.BuffType<BrimstoneFlames>(), 120);
@@ -155,7 +155,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            SoundStyle Burn = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/WeldingBurn") with { Volume = 0.25f };
+            SoundStyle Burn = new SoundStyle("CalamityMod/Sounds/Item/WeldingBurn") with { Volume = 0.25f };
             SoundEngine.PlaySound(Burn, target.Center);
             target.AddBuff(ModContent.BuffType<BrimstoneFlames>(), 180);
 
@@ -177,7 +177,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         public override bool PreDraw(ref Color lightColor)
         {
             Main.spriteBatch.EnterShaderRegion(BlendState.Additive);
-            Texture2D TheodoreJNoise = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/MeltyNoise").Value;
+            Texture2D TheodoreJNoise = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/MeltyNoise").Value;
             Vector2 drawScale = Projectile.Size / TheodoreJNoise.Size() * 1.25f;
             float rotation = Main.GlobalTimeWrappedHourly * 4.2f;
 

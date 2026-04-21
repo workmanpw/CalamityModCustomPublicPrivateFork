@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Dusts;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class StarStruckWaterBottle : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Typeless/StarStruckWater";
+        public override string Texture => "CalamityMod/Items/Weapons/Typeless/StarStruckWater";
 
         public static int ConversionType;
         public override void SetStaticDefaults() => ConversionType = ModContent.GetInstance<AstralConversion>().Type;

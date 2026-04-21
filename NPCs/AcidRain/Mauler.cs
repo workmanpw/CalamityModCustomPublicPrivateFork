@@ -1,11 +1,11 @@
 using System;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Projectiles.Enemy;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -18,7 +18,7 @@ using Terraria.ModLoader;
 using Terraria.Utilities;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
+namespace CalamityMod.NPCs.AcidRain
 {
     [AutoloadBossHead]
     public class Mauler : ModNPC
@@ -47,7 +47,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
 
         public static Asset<Texture2D> GlowTexture;
 
-        public static readonly SoundStyle RoarSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/MaulerRoar");
+        public static readonly SoundStyle RoarSound = new("CalamityMod/Sounds/Custom/MaulerRoar");
 
         public override void SetStaticDefaults()
         {
@@ -98,7 +98,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Mauler")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Mauler")
             });
         }
 

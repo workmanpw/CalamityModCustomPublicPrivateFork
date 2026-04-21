@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
+using CalamityMod.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureBotanic
+namespace CalamityMod.Tiles.FurnitureBotanic
 {
     public class BotanicPiano : ModTile
     {

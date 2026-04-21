@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.CalPlayer;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Ores;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -19,12 +19,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless
+namespace CalamityMod.Items.Weapons.Typeless
 {
     public class StratusSphere : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Typeless";
-        public static readonly SoundStyle CastSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/StratusSphereCast") with { Volume = 0.75f };
+        public static readonly SoundStyle CastSound = new SoundStyle("CalamityMod/Sounds/Item/StratusSphereCast") with { Volume = 0.75f };
 
         public override void SetDefaults()
         {

@@ -1,10 +1,10 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs
+namespace CalamityMod.NPCs
 {
     public class CalamityTileCollisionHarmNPC : GlobalNPC
     {

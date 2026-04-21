@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Ranged;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent;
 using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public class M1GarandShots : CooldownHandler
     {
@@ -21,7 +21,7 @@ namespace CalamityModCustomPublicPrivateFork.Cooldowns
         public override bool CanTickDown => false;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
         public override bool ShouldDisplay => instance.player.HeldItem.type == ItemType<M1Garand>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/" + ID;
+        public override string Texture => "CalamityMod/Cooldowns/" + ID;
 
         public override Color CooldownStartColor => IsEmpty ? Color.DimGray : Color.Lerp(Color.DarkGoldenrod, Color.SlateGray, instance.Completion);
         public override Color CooldownEndColor => IsEmpty ? Color.DimGray : Color.Lerp(Color.LightGoldenrodYellow, Color.SlateGray, instance.Completion);

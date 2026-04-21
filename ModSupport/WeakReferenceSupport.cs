@@ -1,61 +1,61 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems.Invasion;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
-using CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge;
-using CalamityModCustomPublicPrivateFork.NPCs.AstrumAureus;
-using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
-using CalamityModCustomPublicPrivateFork.NPCs.Bumblebirb;
-using CalamityModCustomPublicPrivateFork.NPCs.CalClone;
-using CalamityModCustomPublicPrivateFork.NPCs.CeaselessVoid;
-using CalamityModCustomPublicPrivateFork.NPCs.Crabulon;
-using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
-using CalamityModCustomPublicPrivateFork.NPCs.DesertScourge;
-using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.NPCs.GreatSandShark;
-using CalamityModCustomPublicPrivateFork.NPCs.HiveMind;
-using CalamityModCustomPublicPrivateFork.NPCs.Leviathan;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
-using CalamityModCustomPublicPrivateFork.NPCs.Other;
-using CalamityModCustomPublicPrivateFork.NPCs.Perforator;
-using CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath;
-using CalamityModCustomPublicPrivateFork.NPCs.Polterghast;
-using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
-using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
-using CalamityModCustomPublicPrivateFork.NPCs.Signus;
-using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
-using CalamityModCustomPublicPrivateFork.NPCs.StormWeaver;
-using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
-using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
-using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
-using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem;
-using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Events;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Placeables;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.SummonItems;
+using CalamityMod.Items.SummonItems.Invasion;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs.AcidRain;
+using CalamityMod.NPCs.AquaticScourge;
+using CalamityMod.NPCs.AstrumAureus;
+using CalamityMod.NPCs.AstrumDeus;
+using CalamityMod.NPCs.Bumblebirb;
+using CalamityMod.NPCs.CalClone;
+using CalamityMod.NPCs.CeaselessVoid;
+using CalamityMod.NPCs.Crabulon;
+using CalamityMod.NPCs.Cryogen;
+using CalamityMod.NPCs.DesertScourge;
+using CalamityMod.NPCs.DevourerofGods;
+using CalamityMod.NPCs.ExoMechs.Apollo;
+using CalamityMod.NPCs.ExoMechs.Ares;
+using CalamityMod.NPCs.ExoMechs.Artemis;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.NPCs.GreatSandShark;
+using CalamityMod.NPCs.HiveMind;
+using CalamityMod.NPCs.Leviathan;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.NPCs.OldDuke;
+using CalamityMod.NPCs.Other;
+using CalamityMod.NPCs.Perforator;
+using CalamityMod.NPCs.PlaguebringerGoliath;
+using CalamityMod.NPCs.Polterghast;
+using CalamityMod.NPCs.ProfanedGuardians;
+using CalamityMod.NPCs.Providence;
+using CalamityMod.NPCs.Ravager;
+using CalamityMod.NPCs.Signus;
+using CalamityMod.NPCs.SlimeGod;
+using CalamityMod.NPCs.StormWeaver;
+using CalamityMod.NPCs.SunkenSea;
+using CalamityMod.NPCs.SupremeCalamitas;
+using CalamityMod.NPCs.TownNPCs;
+using CalamityMod.NPCs.Yharon;
+using CalamityMod.Projectiles.DraedonsArsenal;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Projectiles.Summon.Umbrella;
+using CalamityMod.Systems;
+using CalamityMod.Systems.Graphic.LiquidSystem;
+using CalamityMod.Systems.Mechanic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -63,10 +63,10 @@ using Terraria.ID;
 using Terraria.IO;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Downed;
+using static CalamityMod.Downed;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     internal class Downed
     {
@@ -113,8 +113,8 @@ namespace CalamityModCustomPublicPrivateFork
 
     internal class WeakReferenceSupport : ModSystem
     {
-        public const string CalamityWikiURLOld = "CalamityModCustomPublicPrivateFork.wiki.gg";
-        public const string CalamityWikiURL = "https://CalamityModCustomPublicPrivateFork.wiki.gg/wiki/{}";
+        public const string CalamityWikiURLOld = "CalamityMod.wiki.gg";
+        public const string CalamityWikiURL = "https://CalamityMod.wiki.gg/wiki/{}";
         private const string loreItemPage = "Lore#Lore_Items";
 
         /// <summary>
@@ -264,8 +264,8 @@ namespace CalamityModCustomPublicPrivateFork
 
             wiki.Call("AddModURL", calamity, oldVersion ? CalamityWikiURLOld : CalamityWikiURL);
             wiki.Call(0, calamity, oldVersion ? CalamityWikiURLOld : CalamityWikiURL);
-            wiki.Call("AddWikiTexture", calamity, Request<Texture2D>("CalamityModCustomPublicPrivateFork/ModSupport/WikiThisIcon"));
-            wiki.Call(3, calamity, Request<Texture2D>("CalamityModCustomPublicPrivateFork/ModSupport/WikiThisIcon"));
+            wiki.Call("AddWikiTexture", calamity, Request<Texture2D>("CalamityMod/ModSupport/WikiThisIcon"));
+            wiki.Call(3, calamity, Request<Texture2D>("CalamityMod/ModSupport/WikiThisIcon"));
 
             // Clear up name conflicts
             void ItemRedirect(int item, string pageName) => wiki.Call(1, item, pageName);
@@ -404,7 +404,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<DesertScourgeRelic>(), ItemType<DesertScourgeTrophy>(), ItemType<DesertScourgeMask>(), ItemType<LoreDesertScourge>(), ItemType<ThankYouPainting>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/DesertScourge/DesertScourge_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/NPCs/DesertScourge/DesertScourge_BossChecklist").Value;
                     Vector2 centered = new Vector2(rect.Center.X - (texture.Width / 2), rect.Center.Y - (texture.Height / 2));
                     sb.Draw(texture, centered, color);
                 };
@@ -462,7 +462,7 @@ namespace CalamityModCustomPublicPrivateFork
                     ["despawnMessage"] = GetDespawnMessage(entryName),
                     ["spawnItems"] = ItemType<Teratoma>(),
                     ["collectibles"] = collection,
-                    ["overrideHeadTextures"] = "CalamityModCustomPublicPrivateFork/NPCs/HiveMind/HiveMindP2_Head_Boss"
+                    ["overrideHeadTextures"] = "CalamityMod/NPCs/HiveMind/HiveMindP2_Head_Boss"
                 });
             }
 
@@ -513,7 +513,7 @@ namespace CalamityModCustomPublicPrivateFork
                     ["despawnMessage"] = GetDespawnMessage(entryName),
                     ["spawnItems"] = ItemType<CryoKey>(),
                     ["collectibles"] = collection,
-                    ["overrideHeadTextures"] = "CalamityModCustomPublicPrivateFork/NPCs/Cryogen/Cryogen_Phase1_Head_Boss"
+                    ["overrideHeadTextures"] = "CalamityMod/NPCs/Cryogen/Cryogen_Phase1_Head_Boss"
                 });
             }
 
@@ -525,7 +525,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<AquaticScourgeRelic>(), ItemType<AquaticScourgeTrophy>(), ItemType<AquaticScourgeMask>(), ItemType<LoreAquaticScourge>(), ItemType<LoreSulphurSea>(), ItemType<ThankYouPainting>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/AquaticScourge/AquaticScourge_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/NPCs/AquaticScourge/AquaticScourge_BossChecklist").Value;
                     Vector2 centered = new Vector2(rect.Center.X - (texture.Width / 2), rect.Center.Y - (texture.Height / 2));
                     sb.Draw(texture, centered, color);
                 };
@@ -609,7 +609,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<LeviathanAnahitaRelic>(), ItemType<LeviathanTrophy>(), ItemType<AnahitaTrophy>(), ItemType<LeviathanMask>(), ItemType<AnahitaMask>(), ItemType<LoreAbyss>(), ItemType<LoreLeviathanAnahita>(), ItemType<ThankYouPainting>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Leviathan/AnahitaLevi_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/NPCs/Leviathan/AnahitaLevi_BossChecklist").Value;
                     Vector2 centered = new Vector2(rect.Center.X - (texture.Width / 2), rect.Center.Y - (texture.Height / 2));
                     sb.Draw(texture, centered, color);
                 };
@@ -647,7 +647,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<PlaguebringerGoliathRelic>(), ItemType<PlaguebringerGoliathTrophy>(), ItemType<PlaguebringerGoliathMask>(), ItemType<LorePlaguebringerGoliath>(), ItemType<PlagueCaller>(), ItemType<ThankYouPainting>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/PlaguebringerGoliath/PlaguebringerGoliath_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/NPCs/PlaguebringerGoliath/PlaguebringerGoliath_BossChecklist").Value;
                     Vector2 centered = new Vector2(rect.Center.X - (texture.Width / 2), rect.Center.Y - (texture.Height / 2));
                     sb.Draw(texture, centered, color);
                 };
@@ -669,7 +669,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<RavagerRelic>(), ItemType<RavagerTrophy>(), ItemType<RavagerMask>(), ItemType<LoreRavager>(), ItemType<ThankYouPainting>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Ravager/Ravager_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/NPCs/Ravager/Ravager_BossChecklist").Value;
                     Vector2 centered = new Vector2(rect.Center.X - (texture.Width / 2), rect.Center.Y - (texture.Height / 2));
                     sb.Draw(texture, centered, color);
                 };
@@ -693,7 +693,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<AstrumDeusRelic>(), ItemType<AstrumDeusTrophy>(), ItemType<AstrumDeusMask>(), ItemType<LoreAstrumDeus>(), ItemType<LoreAstralInfection>(), ItemType<ChromaticOrb>(), ItemType<ThankYouPainting>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/AstrumDeus/AstrumDeus_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/NPCs/AstrumDeus/AstrumDeus_BossChecklist").Value;
                     Vector2 centered = new Vector2(rect.Center.X - (texture.Width / 2), rect.Center.Y - (texture.Height / 2));
                     sb.Draw(texture, centered, color);
                 };
@@ -717,7 +717,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<ProfanedGuardiansRelic>(), ItemType<ProfanedGuardianTrophy>(), ItemType<ProfanedGuardianMask>(), ItemType<LoreProfanedGuardians>(), ItemType<ThankYouPainting>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ProfanedGuardians/ProfanedGuardians_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/NPCs/ProfanedGuardians/ProfanedGuardians_BossChecklist").Value;
                     float scale = 0.7f;
                     Vector2 centered = new Vector2(rect.Center.X - texture.Width * scale / 2, rect.Center.Y - texture.Height * scale / 2);
                     sb.Draw(texture, centered, null, color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
@@ -730,7 +730,7 @@ namespace CalamityModCustomPublicPrivateFork
                     ["spawnItems"] = ItemType<ProfanedShard>(),
                     ["collectibles"] = collection,
                     ["customPortrait"] = portrait,
-                    ["overrideHeadTextures"] = "CalamityModCustomPublicPrivateFork/NPCs/ProfanedGuardians/ProfanedGuardianCommander_Head_Boss"
+                    ["overrideHeadTextures"] = "CalamityMod/NPCs/ProfanedGuardians/ProfanedGuardianCommander_Head_Boss"
                 });
             }
 
@@ -757,7 +757,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<ProvidenceRelic>(), ItemType<ProvidenceTrophy>(), ItemType<ProvidenceMask>(), ItemType<LoreProvidence>(), ItemType<ThankYouPainting>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Providence/Providence_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/NPCs/Providence/Providence_BossChecklist").Value;
                     Vector2 centered = new Vector2(rect.Center.X - (texture.Width / 2), rect.Center.Y - (texture.Height / 2));
                     sb.Draw(texture, centered, color);
                 };
@@ -795,7 +795,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<WeaverTrophy>(), ItemType<StormWeaverMask>(), ItemType<AncientGodSlayerHelm>(), ItemType<AncientGodSlayerChestplate>(), ItemType<AncientGodSlayerLeggings>(), ItemType<LoreStormWeaver>(), ItemType<LittleLight>(), ItemType<ThankYouPainting>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/StormWeaver/StormWeaver_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/NPCs/StormWeaver/StormWeaver_BossChecklist").Value;
                     Vector2 centered = new Vector2(rect.Center.X - (texture.Width / 2), rect.Center.Y - (texture.Height / 2));
                     sb.Draw(texture, centered, color);
                 };
@@ -807,7 +807,7 @@ namespace CalamityModCustomPublicPrivateFork
                     ["spawnItems"] = ItemType<MarkofProvidence>(),
                     ["collectibles"] = collection,
                     ["customPortrait"] = portrait,
-                    ["overrideHeadTextures"] = "CalamityModCustomPublicPrivateFork/NPCs/StormWeaver/StormWeaverHead_Head_Boss"
+                    ["overrideHeadTextures"] = "CalamityMod/NPCs/StormWeaver/StormWeaverHead_Head_Boss"
                 });
             }
 
@@ -899,7 +899,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<DevourerOfGodsRelic>(), ItemType<DevourerofGodsTrophy>(), ItemType<DevourerofGodsMask>(), ItemType<LoreDevourerofGods>(), ItemType<ThankYouPainting>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/DevourerofGods/DevourerofGods_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/DevourerofGods_BossChecklist").Value;
                     Vector2 centered = new Vector2(rect.Center.X - (texture.Width / 2), rect.Center.Y - (texture.Height / 2));
                     sb.Draw(texture, centered, color);
                 };
@@ -911,7 +911,7 @@ namespace CalamityModCustomPublicPrivateFork
                     ["spawnItems"] = ItemType<CosmicWorm>(),
                     ["collectibles"] = collection,
                     ["customPortrait"] = portrait,
-                    ["overrideHeadTextures"] = "CalamityModCustomPublicPrivateFork/NPCs/DevourerofGods/DevourerofGodsHead_Head_Boss"
+                    ["overrideHeadTextures"] = "CalamityMod/NPCs/DevourerofGods/DevourerofGodsHead_Head_Boss"
                 });
             }
 
@@ -939,7 +939,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<DraedonRelic>(), ItemType<AresTrophy>(), ItemType<ThanatosTrophy>(), ItemType<ArtemisTrophy>(), ItemType<ApolloTrophy>(), ItemType<DraedonMask>(), ItemType<AresMask>(), ItemType<ThanatosMask>(), ItemType<ArtemisMask>(), ItemType<ApolloMask>(), ItemType<LoreExoMechs>(), ItemType<LoreCynosure>(), ItemType<ThankYouPainting>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/ExoMechs_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/NPCs/ExoMechs/ExoMechs_BossChecklist").Value;
                     float scale = 0.7f;
                     Vector2 centered = new Vector2(rect.Center.X - texture.Width * scale / 2, rect.Center.Y - texture.Height * scale / 2);
                     sb.Draw(texture, centered, null, color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
@@ -969,7 +969,7 @@ namespace CalamityModCustomPublicPrivateFork
                     ["despawnMessage"] = GetDespawnMessage(entryName),
                     ["spawnItems"] = summons,
                     ["collectibles"] = collection,
-                    ["overrideHeadTextures"] = "CalamityModCustomPublicPrivateFork/NPCs/SupremeCalamitas/HoodedHeadIcon"
+                    ["overrideHeadTextures"] = "CalamityMod/NPCs/SupremeCalamitas/HoodedHeadIcon"
                 });
             }
         }
@@ -985,7 +985,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> enemies = AcidRainEvent.PossibleEnemiesPreHM.Select(enemy => enemy.Key).ToList();
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Events/AcidRainT1_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/Events/AcidRainT1_BossChecklist").Value;
                     float scale = 1f;
                     Vector2 centered = new Vector2(rect.Center.X - texture.Width * scale / 2, rect.Center.Y - texture.Height * scale / 2);
                     sb.Draw(texture, centered, null, color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
@@ -995,7 +995,7 @@ namespace CalamityModCustomPublicPrivateFork
                     ["spawnItems"] = ItemType<CausticTear>(),
                     ["collectibles"] = ItemType<RadiatingCrystal>(),
                     ["customPortrait"] = portrait,
-                    ["overrideHeadTextures"] = "CalamityModCustomPublicPrivateFork/UI/MiscTextures/AcidRainIcon"
+                    ["overrideHeadTextures"] = "CalamityMod/UI/MiscTextures/AcidRainIcon"
                 });
             }
             // Post-Aquatic Scourge Acid Rain
@@ -1008,7 +1008,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<CragmawMireRelic>(), ItemType<CragmawMireTrophy>(), ItemType<RadiatingCrystal>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Events/AcidRainT2_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/Events/AcidRainT2_BossChecklist").Value;
                     float scale = 0.9f;
                     Vector2 centered = new Vector2(rect.Center.X - texture.Width * scale / 2, rect.Center.Y - texture.Height * scale / 2);
                     sb.Draw(texture, centered, null, color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
@@ -1018,7 +1018,7 @@ namespace CalamityModCustomPublicPrivateFork
                     ["spawnItems"] = ItemType<CausticTear>(),
                     ["collectibles"] = collection,
                     ["customPortrait"] = portrait,
-                    ["overrideHeadTextures"] = "CalamityModCustomPublicPrivateFork/UI/MiscTextures/AcidRainIcon",
+                    ["overrideHeadTextures"] = "CalamityMod/UI/MiscTextures/AcidRainIcon",
                     ["availability"] = DownedAcidRainInitial
                 });
             }
@@ -1031,7 +1031,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> collection = new List<int>() { ItemType<CragmawMireRelic>(), ItemType<CragmawMireTrophy>(), ItemType<MaulerRelic>(), ItemType<MaulerTrophy>(), ItemType<NuclearTerrorRelic>(), ItemType<NuclearTerrorTrophy>(), ItemType<RadiatingCrystal>() };
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Events/AcidRainT3_BossChecklist").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/Events/AcidRainT3_BossChecklist").Value;
                     float scale = 0.9f;
                     Vector2 centered = new Vector2(rect.Center.X - texture.Width * scale / 2, rect.Center.Y - texture.Height * scale / 2);
                     sb.Draw(texture, centered, null, color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
@@ -1041,7 +1041,7 @@ namespace CalamityModCustomPublicPrivateFork
                     ["spawnItems"] = ItemType<CausticTear>(),
                     ["collectibles"] = collection,
                     ["customPortrait"] = portrait,
-                    ["overrideHeadTextures"] = "CalamityModCustomPublicPrivateFork/UI/MiscTextures/AcidRainIcon",
+                    ["overrideHeadTextures"] = "CalamityMod/UI/MiscTextures/AcidRainIcon",
                     ["availability"] = DownedAcidRainHardmode
                 });
             }
@@ -1052,7 +1052,7 @@ namespace CalamityModCustomPublicPrivateFork
                 List<int> enemies = new List<int>() { NPCID.None }; // This is for loot purposes, which no bosses give during the event
                 Action<SpriteBatch, Rectangle, Color> portrait = (SpriteBatch sb, Rectangle rect, Color color) =>
                 {
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/XerocEye").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/Skies/XerocEye").Value;
                     float scale = 0.5f;
                     Vector2 centered = new Vector2(rect.Center.X - texture.Width * scale / 2, rect.Center.Y - texture.Height * scale / 2);
                     sb.Draw(texture, centered, null, color, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
@@ -1062,7 +1062,7 @@ namespace CalamityModCustomPublicPrivateFork
                     ["spawnItems"] = ItemType<Terminus>(),
                     ["collectibles"] = ItemType<Rock>(),
                     ["customPortrait"] = portrait,
-                    ["overrideHeadTextures"] = "CalamityModCustomPublicPrivateFork/UI/MiscTextures/BossRushIcon"
+                    ["overrideHeadTextures"] = "CalamityMod/UI/MiscTextures/BossRushIcon"
                 });
             }
         }
@@ -1337,8 +1337,8 @@ namespace CalamityModCustomPublicPrivateFork
                 return tagData.ContainsKey("RevengeanceMode") && tagData.GetBool("RevengeanceMode") && !(tagData.ContainsKey("DeathMode") && tagData.GetBool("DeathMode"));
             };
 
-            RegisterWorldInfoIcon(luminance, "CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Death", "Mods.CalamityModCustomPublicPrivateFork.UI.Death", deathEnabled, 50);
-            RegisterWorldInfoIcon(luminance, "CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicator_Rev", "Mods.CalamityModCustomPublicPrivateFork.UI.Revengeance", revengeanceEnabled, 50);
+            RegisterWorldInfoIcon(luminance, "CalamityMod/UI/ModeIndicator/ModeIndicator_Death", "Mods.CalamityMod.UI.Death", deathEnabled, 50);
+            RegisterWorldInfoIcon(luminance, "CalamityMod/UI/ModeIndicator/ModeIndicator_Rev", "Mods.CalamityMod.UI.Revengeance", revengeanceEnabled, 50);
         }
         #endregion
     }

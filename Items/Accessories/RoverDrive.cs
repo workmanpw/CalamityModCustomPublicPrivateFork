@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.CalPlayer;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Materials;
+using CalamityMod.Utilities.Daybreak;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -15,16 +15,16 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class RoverDrive : ModItem, ILocalizedModType, IDyeableShaderRenderer
     {
         public new string LocalizationCategory => "Items.Accessories";
 
         public static Asset<Texture2D> NoiseTex;
-        public static readonly SoundStyle ShieldHurtSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RoverDriveHit") { PitchVariance = 0.6f, Volume = 0.6f, MaxInstances = 0 };
-        public static readonly SoundStyle ActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RoverDriveActivate") { Volume = 0.85f };
-        public static readonly SoundStyle BreakSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RoverDriveBreak") { Volume = 0.75f };
+        public static readonly SoundStyle ShieldHurtSound = new("CalamityMod/Sounds/Custom/RoverDriveHit") { PitchVariance = 0.6f, Volume = 0.6f, MaxInstances = 0 };
+        public static readonly SoundStyle ActivationSound = new("CalamityMod/Sounds/Custom/RoverDriveActivate") { Volume = 0.85f };
+        public static readonly SoundStyle BreakSound = new("CalamityMod/Sounds/Custom/RoverDriveBreak") { Volume = 0.75f };
 
         public static int ShieldDurabilityMax = 20;
         public static int ShieldRechargeDelay = CalamityUtils.SecondsToFrames(10);
@@ -163,7 +163,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
             {
                 spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, shieldEffect, Main.Transform);
                 // Fetch shield noise overlay texture (this is the techy overlay fed to the shader)
-                NoiseTex ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/TechyNoise");
+                NoiseTex ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/TechyNoise");
                 Vector2 pos = player.MountedCenter + player.gfxOffY * Vector2.UnitY - Main.screenPosition;
                 Texture2D tex = NoiseTex.Value;
                 spriteBatch.Draw(tex, pos, null, Color.White, 0, tex.Size() / 2f, scale, 0, 0);

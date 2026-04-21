@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Dusts.WaterSplash;
-using CalamityModCustomPublicPrivateFork.Gores.WaterDroplet;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityMod.Dusts.WaterSplash;
+using CalamityMod.Gores.WaterDroplet;
+using CalamityMod.Systems.Graphic.LiquidSystem;
+using CalamityMod.Tiles.Abyss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Waters
+namespace CalamityMod.Waters
 {
     public class SunkenSeaBurrowsWaterflow : ModWaterfallStyle { }
 
@@ -49,7 +49,7 @@ namespace CalamityModCustomPublicPrivateFork.Waters
             g = outputColor.Y;
             b = outputColor.Z;
         }
-        public override int ChooseWaterfallStyle() => ModContent.Find<ModWaterfallStyle>("CalamityModCustomPublicPrivateFork/SunkenSeaBurrowsWaterflow").Slot;
+        public override int ChooseWaterfallStyle() => ModContent.Find<ModWaterfallStyle>("CalamityMod/SunkenSeaBurrowsWaterflow").Slot;
         public override int GetSplashDust() => ModContent.DustType<SunkenSeaBurrowsSplash>();
         public override int GetDropletGore() => ModContent.GoreType<SunkenSeaBurrowsWaterDroplet>();
         public override Color BiomeHairColor() => Color.Blue;

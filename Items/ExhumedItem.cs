@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items
+namespace CalamityMod.Items
 {
     // Note the lack of ILocalizedModType.
     // Unfortunately, since all exhumed items do not use the same localization category, ILocalizedModType must be placed on each individual item file.

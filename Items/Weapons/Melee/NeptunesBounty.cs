@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Rarities;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class NeptunesBounty : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Melee";
-        public static readonly SoundStyle SpinSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SpinningWoosh") { Volume = 0.65f };
+        public static readonly SoundStyle SpinSound = new("CalamityMod/Sounds/Item/SpinningWoosh") { Volume = 0.65f };
         public override void SetDefaults()
         {
             Item.width = 122;

@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
+namespace CalamityMod.Projectiles.Summon.SmallAresArms
 {
     public class ExoskeletonPlasmaCannon : ExoskeletonCannon
     {
@@ -83,7 +83,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
 
         public override bool PreDraw(ref Color lightColor)
         {
-            DefaultDrawCannon(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonPlasmaCannonGlowmask").Value);
+            DefaultDrawCannon(ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonPlasmaCannonGlowmask").Value);
             return false;
         }
     }

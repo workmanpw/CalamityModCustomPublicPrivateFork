@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DraedonSummoning
+namespace CalamityMod.UI.DraedonSummoning
 {
     public static class DraedonDialogRegistry
     {
-        public const string CommunicationLocalizationBase = "Mods.CalamityModCustomPublicPrivateFork.UI.Communication.";
+        public const string CommunicationLocalizationBase = "Mods.CalamityMod.UI.Communication.";
 
         public static readonly DraedonDialogEntry WhoAreYou = CreateFromKey("WhoAreYou");
 

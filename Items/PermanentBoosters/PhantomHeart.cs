@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,12 +9,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
+namespace CalamityMod.Items.PermanentBoosters
 {
     public class PhantomHeart : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Misc";
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PhantomHeartUse");
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/PhantomHeartUse");
         public const int ManaBoost = 50;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(ManaBoost);
 
@@ -48,7 +48,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
             {
                 if (player.whoAmI == Main.myPlayer)
                 {
-                    string key = "Mods.CalamityModCustomPublicPrivateFork.Misc.PhantomHeartText";
+                    string key = "Mods.CalamityMod.Misc.PhantomHeartText";
                     Color messageColor = Color.Pink;
                     Main.NewText(Language.GetTextValue(key), messageColor);
                 }

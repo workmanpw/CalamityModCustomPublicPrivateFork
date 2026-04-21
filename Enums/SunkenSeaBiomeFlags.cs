@@ -1,6 +1,6 @@
 using System;
 
-namespace CalamityModCustomPublicPrivateFork.Enums
+namespace CalamityMod.Enums
 {
     /// <summary>
     /// The flags corresponding for the possible spawns for a Sunken Sea NPC.

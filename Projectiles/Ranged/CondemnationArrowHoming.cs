@@ -4,12 +4,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class CondemnationArrowHoming : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/CondemnationArrow";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/CondemnationArrow";
         public ref float Time => ref Projectile.ai[0];
         public override void SetStaticDefaults()
         {

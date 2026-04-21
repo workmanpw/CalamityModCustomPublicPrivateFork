@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Projectiles.Typeless;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea
+namespace CalamityMod.Items.Placeables.SunkenSea
 {
     [LegacyName("RuneSand")]
     public class Dunesand : ModItem, ILocalizedModType

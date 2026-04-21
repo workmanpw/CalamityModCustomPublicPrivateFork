@@ -1,18 +1,18 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic.PixelationSystem;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.CalPlayer.DrawLayers;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.NPCs.DevourerofGods;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Systems.Collections;
+using CalamityMod.Systems.Graphic.PixelationSystem;
+using CalamityMod.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -22,7 +22,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer
+namespace CalamityMod.CalPlayer
 {
     public partial class CalamityPlayer : ModPlayer
     {
@@ -81,7 +81,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                     Main.spriteBatch.EnterShaderRegion(matrix: matrix);
                     GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseOpacity(0.5f);
                     GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseSaturation(0.2f);
-                    GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/MeltyNoiseHighContrast"), 1);
+                    GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/MeltyNoiseHighContrast"), 1);
                     GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].Apply();
                     Main.EntitySpriteDraw(telegraphBase, drawPosition, null, Color.DarkSlateBlue * opacity, 0, telegraphBase.Size() / 2f, size * 1.5f * opacity / telegraphBase.Width, 0, 0);
 
@@ -89,9 +89,9 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                     Main.spriteBatch.EnterShaderRegion(matrix: matrix);
                     GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseOpacity(0.25f);
                     GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseSaturation(0.1f);
-                    GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Neurons"), 1);
+                    GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons"), 1);
                     GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].Apply();
-                    telegraphBase = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HighResFoggyCircleHardEdge").Value;
+                    telegraphBase = ModContent.Request<Texture2D>("CalamityMod/Particles/HighResFoggyCircleHardEdge").Value;
                     Main.EntitySpriteDraw(telegraphBase, drawPosition, null, Color.SkyBlue * opacity, 0, telegraphBase.Size() / 2f, size * opacity / telegraphBase.Width, 0, 0);
                     Main.spriteBatch.ExitShaderRegion(matrix);
                     #endregion
@@ -211,8 +211,8 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
 
                 if (CalamityClientConfig.Instance.Photosensitivity)
                     color = color * 0.2f;
-                var bloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
-                var circleTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle").Value;
+                var bloomTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+                var circleTex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicCircle").Value;
                 using (Main.spriteBatch.Scope())
                 {
                     Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
@@ -648,7 +648,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
 
                     sparkVelocity = -(Vector2.UnitY * Main.rand.NextFloat(3f, 5.5f)).RotatedByRandom(MathHelper.Pi / 6);
                     sparkPos = new Vector2(Player.position.X + Main.rand.NextFloat(-8f, 40f), Player.position.Y + Main.rand.NextFloat(-8f, 56f));
-                    Particle addSparks = new CustomPulse(sparkPos, sparkVelocity, new Color(180, 255, 255), "CalamityModCustomPublicPrivateFork/Particles/ElectricSpark", Vector2.One, 0f, 0.5f, 0.65f, 20);
+                    Particle addSparks = new CustomPulse(sparkPos, sparkVelocity, new Color(180, 255, 255), "CalamityMod/Particles/ElectricSpark", Vector2.One, 0f, 0.5f, 0.65f, 20);
                     GeneralParticleHandler.SpawnParticle(addSparks);
                 }
             }
@@ -756,23 +756,23 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                 };
                 List<Texture2D> tankTextures = new List<Texture2D>()
                 {
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_FlurrystormCannon").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_BlightSpewer").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_HavocsBreath").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_SparkSpreader").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_HalleysInferno").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_CleansingBlaze").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_ElementalEruption").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_DeadSunsWind").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_Meowthrower").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_OverloadedBlaster").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_WildfireBloom").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_Photoviscerator").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_Shadethrower").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_BloodBoiler").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_PristineFury").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_AuroraBlazer").Value,
-                    ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_PurgeGuzzler").Value
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_FlurrystormCannon").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_BlightSpewer").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_HavocsBreath").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_SparkSpreader").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_HalleysInferno").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_CleansingBlaze").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_ElementalEruption").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_DeadSunsWind").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_Meowthrower").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_OverloadedBlaster").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_WildfireBloom").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_Photoviscerator").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_Shadethrower").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_BloodBoiler").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_PristineFury").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_AuroraBlazer").Value,
+                    ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_PurgeGuzzler").Value
                 };
                 if (tankItems.Contains(item.type) || drawPlayer.Calamity().plaguebringerCarapace)
                 {
@@ -789,7 +789,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                         }
                     }
                     else if (drawPlayer.Calamity().plaguebringerCarapace)
-                        thingToDraw = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Armor/Plaguebringer/PlaguebringerCarapace_Back").Value;
+                        thingToDraw = ModContent.Request<Texture2D>("CalamityMod/Items/Armor/Plaguebringer/PlaguebringerCarapace_Back").Value;
 
                     if (thingToDraw is null)
                         return;
@@ -798,7 +798,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
 
                     int xOffset = 9;
                     // Photoviscerator's tank is extended a bit more out
-                    if (thingToDraw == ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/Backpack_Photoviscerator").Value)
+                    if (thingToDraw == ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/Backpack_Photoviscerator").Value)
                     {
                         xOffset = 16;
                     }

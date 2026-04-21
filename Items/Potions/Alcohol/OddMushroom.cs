@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Alcohol;
+using CalamityMod.Buffs.Alcohol;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol
+namespace CalamityMod.Items.Potions.Alcohol
 {
     public class OddMushroom : ModItem, ILocalizedModType
     {

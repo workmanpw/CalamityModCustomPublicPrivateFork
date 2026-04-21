@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Dusts;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     [LegacyName("NullificationRifle")]
     public class NullificationPistol : ModItem, ILocalizedModType
@@ -16,7 +16,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
         public new string LocalizationCategory => "Items.Weapons.Ranged";
         public bool shotType = true; // true = positive shot, false = negative shot
         public float mult = 0;
-        public static SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NullHit");
+        public static SoundStyle HitSound = new("CalamityMod/Sounds/Item/NullHit");
 
         public override void SetStaticDefaults()
         {
@@ -58,7 +58,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
         {
             if (player.altFunctionUse == 2)
             {
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/DudFire");
                 SoundEngine.PlaySound(fire with { Volume = 0.7f, Pitch = -0.5f + (shotType ? 0.5f : 0) }, position);
                 for (int i = 0; i < 18; i++)
                 {
@@ -90,7 +90,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
             }
             if (player.altFunctionUse != 2)
             {
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NullShot");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/NullShot");
                 SoundEngine.PlaySound(fire with { Volume = 0.7f, Pitch = Main.rand.NextFloat(0f, 0.2f) + (!shotType ? 0.3f : 0) - (shotType ? ((mult > 0.25f) ? mult : 0) : ((mult > 0.175f) ? mult : 0)) }, position);
 
                 if (mult >= (shotType ? 0.175f : 0.25f))

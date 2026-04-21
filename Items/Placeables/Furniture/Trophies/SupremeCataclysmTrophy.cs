@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.BossTrophies;
+using CalamityMod.Tiles.Furniture.BossTrophies;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies
+namespace CalamityMod.Items.Placeables.Furniture.Trophies
 {
     public class SupremeCataclysmTrophy : ModItem, ILocalizedModType
     {

@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class NeptunesBountySplitProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public int Time = 0;
         public int randTimer;
@@ -44,7 +44,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
             if (Projectile.timeLeft % 2 == 0 && Time > 3f && playerDist < 1400f)
             {
-                Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity * Main.rand.NextFloat(0.1f, 0.5f), "CalamityModCustomPublicPrivateFork/Particles/WaterFoam", false, Main.rand.Next(4, 7), Main.rand.NextFloat(0.15f, 0.2f), Color.DodgerBlue * 0.75f, new Vector2(1f, 1f), true, false, Main.rand.NextFloat(-10, 10));
+                Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity * Main.rand.NextFloat(0.1f, 0.5f), "CalamityMod/Particles/WaterFoam", false, Main.rand.Next(4, 7), Main.rand.NextFloat(0.15f, 0.2f), Color.DodgerBlue * 0.75f, new Vector2(1f, 1f), true, false, Main.rand.NextFloat(-10, 10));
                 GeneralParticleHandler.SpawnParticle(spark);
             }
             if (Main.rand.NextBool())
@@ -63,7 +63,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             }
             else if (Projectile.timeLeft > 20)
             {
-                Particle spark = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityModCustomPublicPrivateFork/Particles/WaterFlavored", false, 2, 0.85f + Time * 0.013f, WaterColor * (1f - Time * 0.01f), new Vector2(0.2f + Time * 0.01f, 1), true);
+                Particle spark = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityMod/Particles/WaterFlavored", false, 2, 0.85f + Time * 0.013f, WaterColor * (1f - Time * 0.01f), new Vector2(0.2f + Time * 0.01f, 1), true);
                 GeneralParticleHandler.SpawnParticle(spark);
             }
             if (Projectile.timeLeft < 20)

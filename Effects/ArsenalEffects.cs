@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Effects
+namespace CalamityMod.Effects
 {
     public class ArsenalEffects
     {

@@ -1,28 +1,28 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Ammo;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Dyes;
-using CalamityModCustomPublicPrivateFork.Items.Dyes.HairDye;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Astral;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Fountains;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems.Invasion;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Accessories.Vanity;
+using CalamityMod.Items.Ammo;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.Dyes;
+using CalamityMod.Items.Dyes.HairDye;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Placeables.Astral;
+using CalamityMod.Items.Placeables.Crags;
+using CalamityMod.Items.Placeables.Furniture;
+using CalamityMod.Items.Placeables.Furniture.Fountains;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Potions;
+using CalamityMod.Items.Potions.Alcohol;
+using CalamityMod.Items.SummonItems.Invasion;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.NPCs.TownNPCs;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Systems.Collections;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -33,7 +33,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs
+namespace CalamityMod.NPCs
 {
     public class CalamityGlobalTownNPC : GlobalNPC
     {
@@ -873,7 +873,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                     float drawPosY = npcHeight + npc.gfxOffY + 36f;
 
                     // Texture animation variables
-                    Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/NPCAlertDisplay").Value;
+                    Texture2D texture = Request<Texture2D>("CalamityMod/UI/MiscTextures/NPCAlertDisplay").Value;
                     shopAlertAnimTimer++;
                     if (shopAlertAnimTimer >= 6)
                     {

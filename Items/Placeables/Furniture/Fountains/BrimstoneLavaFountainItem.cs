@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Fountains;
+using CalamityMod.Tiles.Furniture.Fountains;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Fountains
+namespace CalamityMod.Items.Placeables.Furniture.Fountains
 {
     public class BrimstoneLavaFountainItem : ModItem, ILocalizedModType
     {

@@ -1,20 +1,20 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class TruePurityProjection : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
         public NPC target;
         public Player Owner => Main.player[Projectile.owner];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_PurityProjection";
+        public override string Texture => "CalamityMod/Projectiles/Melee/BrokenBiomeBlade_PurityProjection";
 
         public override void SetStaticDefaults()
         {

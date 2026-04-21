@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.LunicCorps
+namespace CalamityMod.Items.Armor.LunicCorps
 {
     [AutoloadEquip(EquipType.Body)]
     public class LunicCorpsVest : ModItem, ILocalizedModType

@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public static partial class CalamityUtils
     {

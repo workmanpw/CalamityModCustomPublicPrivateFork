@@ -1,7 +1,7 @@
 using Terraria.ModLoader;
-using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
+using WallTiles = CalamityMod.Walls;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
+namespace CalamityMod.Items.Placeables.Walls
 {
     public class AstralGrassWall : ModItem, ILocalizedModType
     {

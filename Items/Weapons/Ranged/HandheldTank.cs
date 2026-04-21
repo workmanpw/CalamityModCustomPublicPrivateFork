@@ -1,18 +1,18 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class HandheldTank : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Ranged";
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TankCannon") { PitchVariance = 0.5f };
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/TankCannon") { PitchVariance = 0.5f };
 
         public override void SetDefaults()
         {

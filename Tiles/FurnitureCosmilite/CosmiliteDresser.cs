@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureCosmilite
+namespace CalamityMod.Tiles.FurnitureCosmilite
 {
     public class CosmiliteDresser : ModTile
     {

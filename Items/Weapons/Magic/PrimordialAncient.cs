@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Magic;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Audio;
@@ -10,7 +10,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using System;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class PrimordialAncient : ModItem, ILocalizedModType
     {
@@ -33,7 +33,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
             Item.noMelee = true;
             Item.knockBack = 14;
             Item.value = CalamityGlobalItem.RarityDarkBlueBuyPrice;
-            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockSound") with { Volume = 0.4f, Pitch = -0.1f };
+            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/MagicRockSound") with { Volume = 0.4f, Pitch = -0.1f };
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<PrimordialAncientProjectile>();
             Item.shootSpeed = 8f;

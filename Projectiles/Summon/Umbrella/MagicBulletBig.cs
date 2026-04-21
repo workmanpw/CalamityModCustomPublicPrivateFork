@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityMod.Buffs.StatDebuffs;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella
+namespace CalamityMod.Projectiles.Summon.Umbrella
 {
     public class MagicBulletBig : ModProjectile, ILocalizedModType
     {

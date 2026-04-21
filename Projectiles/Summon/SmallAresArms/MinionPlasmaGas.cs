@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityMod.DataStructures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
+namespace CalamityMod.Projectiles.Summon.SmallAresArms
 {
     public class MinionPlasmaGas : ModProjectile, IAdditiveDrawer, ILocalizedModType
     {

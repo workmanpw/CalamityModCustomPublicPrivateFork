@@ -1,13 +1,13 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.NPCs.Providence;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class EternityBook : ModProjectile
     {

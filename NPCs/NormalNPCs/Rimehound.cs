@@ -1,7 +1,7 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.World;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Bestiary;
@@ -9,14 +9,14 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
+namespace CalamityMod.NPCs.NormalNPCs
 {
     public class Rimehound : ModNPC
     {
         private bool reset = false;
 
-        public static readonly SoundStyle GrowlSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RimehoundGrowl");
-        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/RimehoundHit");
+        public static readonly SoundStyle GrowlSound = new("CalamityMod/Sounds/Custom/RimehoundGrowl");
+        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/RimehoundHit");
 
         public override void SetStaticDefaults()
         {
@@ -64,7 +64,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Snow,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundSnow,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Rimehound")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Rimehound")
             });
         }
 

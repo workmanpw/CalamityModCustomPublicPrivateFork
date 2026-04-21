@@ -4,12 +4,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
+namespace CalamityMod.Projectiles.Summon.SmallAresArms
 {
     public class MinionPlasmaBlast : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/AresPlasmaFireball";
+        public override string Texture => "CalamityMod/Projectiles/Boss/AresPlasmaFireball";
 
         public override void SetStaticDefaults()
         {

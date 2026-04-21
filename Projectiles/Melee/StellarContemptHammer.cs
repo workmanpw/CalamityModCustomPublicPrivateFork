@@ -1,25 +1,25 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class StellarContemptHammer : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/StellarContempt";
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PwnagehammerSound") { Volume = 0.35f };
-        public static readonly SoundStyle RedHamSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/StellarContemptClone") { Volume = 0.6f };
-        public static readonly SoundStyle UseSoundFunny = new("CalamityModCustomPublicPrivateFork/Sounds/Item/CalamityBell") { Volume = 1.5f };
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/StellarContempt";
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/PwnagehammerSound") { Volume = 0.35f };
+        public static readonly SoundStyle RedHamSound = new("CalamityMod/Sounds/Item/StellarContemptClone") { Volume = 0.6f };
+        public static readonly SoundStyle UseSoundFunny = new("CalamityMod/Sounds/Item/CalamityBell") { Volume = 1.5f };
         public ref int EmpoweredHammer => ref Main.player[Projectile.owner].Calamity().StellarHammer;
         public int returnhammer = 0;
         public int DustOnce = 1;
@@ -238,7 +238,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
                 if (i % 3 == 0)
                 {
-                    Particle orb = new CustomSpark(Projectile.Center + offset, velOffset * Main.rand.NextFloat(1f, 1.5f), "CalamityModCustomPublicPrivateFork/Particles/Sparkle", false, 25, Main.rand.NextFloat(0.55f, 0.75f), Main.rand.NextBool(3) ? Color.PaleTurquoise : Color.Turquoise, new Vector2(1f, 2f), true, true);
+                    Particle orb = new CustomSpark(Projectile.Center + offset, velOffset * Main.rand.NextFloat(1f, 1.5f), "CalamityMod/Particles/Sparkle", false, 25, Main.rand.NextFloat(0.55f, 0.75f), Main.rand.NextBool(3) ? Color.PaleTurquoise : Color.Turquoise, new Vector2(1f, 2f), true, true);
                     GeneralParticleHandler.SpawnParticle(orb);
                 }
                 else

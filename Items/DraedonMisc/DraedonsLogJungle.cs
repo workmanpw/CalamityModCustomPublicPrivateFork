@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.UI;
-using CalamityModCustomPublicPrivateFork.UI.DraedonLogs;
+using CalamityMod.Rarities;
+using CalamityMod.UI;
+using CalamityMod.UI.DraedonLogs;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.DraedonMisc
+namespace CalamityMod.Items.DraedonMisc
 {
     public class DraedonsLogJungle : ModItem, ILocalizedModType
     {

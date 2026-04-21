@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum
+namespace CalamityMod.Tiles.FurnitureWulfrum
 {
     public class WulfrumCandelabra : ModTile
     {
@@ -49,7 +49,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureWulfrum/WulfrumCandelabraFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureWulfrum/WulfrumCandelabraFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j);
         }
     }

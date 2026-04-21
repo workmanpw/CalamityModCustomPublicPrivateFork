@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Crags.Tree
+namespace CalamityMod.Tiles.Crags.Tree
 {
     public class SpineSapling : ModTile
     {

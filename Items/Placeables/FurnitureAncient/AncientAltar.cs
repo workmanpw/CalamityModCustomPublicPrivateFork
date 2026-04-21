@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
+using CalamityMod.Items.Placeables.Crags;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAncient
+namespace CalamityMod.Items.Placeables.FurnitureAncient
 {
     public class AncientAltar : ModItem, ILocalizedModType
     {

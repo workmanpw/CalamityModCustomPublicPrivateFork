@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSacrilegious;
+using CalamityMod.Items.Placeables.FurnitureSacrilegious;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious
+namespace CalamityMod.Tiles.FurnitureSacrilegious
 {
     public class MonolithOfTheAccursedTile : ModTile
     {
@@ -144,7 +144,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious
             if (Main.tile[i, j].TileFrameX < 36 || Main.tile[i, j].IsTileActuallyInvisible())
                 return;
 
-            IconRightTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureSacrilegious/MonolithOfTheAccursedTile_IconRight");
+            IconRightTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureSacrilegious/MonolithOfTheAccursedTile_IconRight");
             Texture2D texture = IconRightTexture.Value;
             Tile tile = Main.tile[i, j];
             int xPos = tile.TileFrameX;

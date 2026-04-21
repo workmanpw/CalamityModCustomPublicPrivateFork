@@ -1,9 +1,9 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.CalPlayer;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Materials;
+using CalamityMod.Utilities.Daybreak;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.LunicCorps
+namespace CalamityMod.Items.Armor.LunicCorps
 {
     [AutoloadEquip(EquipType.Head)]
     public class LunicCorpsHelmet : ModItem, ILocalizedModType, IDyeableShaderRenderer
@@ -23,9 +23,9 @@ namespace CalamityModCustomPublicPrivateFork.Items.Armor.LunicCorps
 
         public static Asset<Texture2D> NoiseTex;
         // TODO -- Accurate shield sounds from Halo
-        public static readonly SoundStyle ShieldHurtSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RoverDriveHit") { PitchVariance = 0.6f, Volume = 0.6f, MaxInstances = 0 };
-        public static readonly SoundStyle ActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RoverDriveActivate") { Volume = 0.85f };
-        public static readonly SoundStyle BreakSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RoverDriveBreak") { Volume = 0.75f };
+        public static readonly SoundStyle ShieldHurtSound = new("CalamityMod/Sounds/Custom/RoverDriveHit") { PitchVariance = 0.6f, Volume = 0.6f, MaxInstances = 0 };
+        public static readonly SoundStyle ActivationSound = new("CalamityMod/Sounds/Custom/RoverDriveActivate") { Volume = 0.85f };
+        public static readonly SoundStyle BreakSound = new("CalamityMod/Sounds/Custom/RoverDriveBreak") { Volume = 0.75f };
 
         public static float NonArrowDamageBoost = 0.15f;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(NonArrowDamageBoost.ToPercent());
@@ -175,7 +175,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Armor.LunicCorps
             {
                 spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, shieldEffect, Main.Transform);
                 // Fetch shield noise overlay texture (this is the polygons fed to the shader)
-                NoiseTex ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/VoronoiShapes2");
+                NoiseTex ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/VoronoiShapes2");
                 Vector2 pos = player.MountedCenter + player.gfxOffY * Vector2.UnitY - Main.screenPosition;
                 Texture2D tex = NoiseTex.Value;
                 spriteBatch.Draw(tex, pos, null, Color.White, 0, tex.Size() / 2f, scale, 0, 0);

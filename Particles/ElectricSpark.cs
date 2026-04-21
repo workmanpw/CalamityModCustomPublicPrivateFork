@@ -3,11 +3,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class ElectricSpark : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/ElectricSpark";
+        public override string Texture => "CalamityMod/Particles/ElectricSpark";
         public override bool UseAdditiveBlend => true;
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;
@@ -57,7 +57,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         {
             Texture2D sparkTexture = ModContent.Request<Texture2D>(Texture).Value;
             Rectangle frame = new Rectangle(0, 6 * Variant, 6, 6);
-            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D bloomTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
             //Ajust the bloom's texture to be the same size as the star's
             float properBloomSize = (float)frame.Height / (float)bloomTexture.Height;
 

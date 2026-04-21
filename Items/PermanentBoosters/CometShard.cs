@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,12 +8,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
+namespace CalamityMod.Items.PermanentBoosters
 {
     public class CometShard : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Misc";
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/CometShardUse");
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/CometShardUse");
         public const int ManaBoost = 50;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(ManaBoost);
 
@@ -47,7 +47,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
             {
                 if (player.whoAmI == Main.myPlayer)
                 {
-                    string key = "Mods.CalamityModCustomPublicPrivateFork.Misc.CometShardText";
+                    string key = "Mods.CalamityMod.Misc.CometShardText";
                     Color messageColor = Color.SkyBlue;
                     Main.NewText(Language.GetTextValue(key), messageColor);
                 }

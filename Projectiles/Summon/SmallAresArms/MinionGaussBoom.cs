@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
+namespace CalamityMod.Projectiles.Summon.SmallAresArms
 {
     public class MinionGaussBoom : BaseMassiveExplosionProjectile, ILocalizedModType
     {

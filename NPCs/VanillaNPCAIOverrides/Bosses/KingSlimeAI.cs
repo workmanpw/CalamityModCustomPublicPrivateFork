@@ -1,19 +1,19 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses
+namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses
 {
     public class KingSlimeAI : VanillaAIOverride
     {
-        public static readonly SoundStyle SpawnCrystalSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/KingSlimeJewelSpawn");
-        public static readonly SoundStyle ShootSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/RedJewelFire");
+        public static readonly SoundStyle SpawnCrystalSound = new SoundStyle("CalamityMod/Sounds/Custom/KingSlimeJewelSpawn");
+        public static readonly SoundStyle ShootSound = new SoundStyle("CalamityMod/Sounds/Custom/RedJewelFire");
 
         public override bool AI(Mod mod)
         {

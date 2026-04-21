@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CustomRecipes;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.CustomRecipes;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Projectiles.DraedonsArsenal;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,12 +13,12 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal
+namespace CalamityMod.Items.Weapons.DraedonsArsenal
 {
     public class PlasmaGrenade : RogueWeapon, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.DraedonsArsenal";
-        public static readonly SoundStyle ExplosionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PlasmaGrenadeExplosion");
+        public static readonly SoundStyle ExplosionSound = new("CalamityMod/Sounds/Item/PlasmaGrenadeExplosion");
 
         public override void SetDefaults()
         {

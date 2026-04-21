@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Healing
+namespace CalamityMod.Projectiles.Healing
 {
     public class EmpyreanHealOrb : ModProjectile, ILocalizedModType
     {

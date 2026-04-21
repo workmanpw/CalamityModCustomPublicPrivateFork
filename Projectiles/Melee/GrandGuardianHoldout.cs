@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     [PierceResistException]
     public class GrandGuardianHoldout : BaseCustomUseStyleProjectile, ILocalizedModType
@@ -19,7 +19,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override int AssignedItemID => ModContent.ItemType<GrandGuardian>();
 
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<GrandGuardian>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GrandGuardian";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/GrandGuardian";
         public override float HitboxOutset => 112;
 
         public override Vector2 HitboxSize => new Vector2(180, 180);
@@ -202,9 +202,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 spawnBoom = false;
             }
 
-            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumKnifeTileHit2");
+            SoundStyle fire = new("CalamityMod/Sounds/Item/WulfrumKnifeTileHit2");
             SoundEngine.PlaySound(fire with { Volume = 0.65f, Pitch = -0.6f }, Projectile.Center);
-            SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ExobladeBeamSlash");
+            SoundStyle fire2 = new("CalamityMod/Sounds/Item/ExobladeBeamSlash");
             SoundEngine.PlaySound(fire2 with { Volume = 0.35f, Pitch = Main.rand.NextFloat(0.5f, 0.7f) }, Projectile.Center);
 
             int heal = (int)(MathHelper.Clamp(5 - Projectile.numHits * 3, 1, 5));
@@ -245,14 +245,14 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             if ((useAnim > 0 || DrawUnconditionally) && Owner.ItemAnimationActive)
             {
                 Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
-                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GrandGuardianGlow");
-                Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmearLarge");
+                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/GrandGuardianGlow");
+                Asset<Texture2D> swoosh = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmearLarge");
 
                 float r = FlipAsSword ? MathHelper.ToRadians(90) : 0f;
 
                 for (int i = 0; i < 25; i++)
                 {
-                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/GrandGuardianGhost").Value;
+                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/GrandGuardianGhost").Value;
                     Color auraColor = Color.Cyan with { A = 0 } * 0.15f * fadeIn;
                     Vector2 drawOffset = (MathHelper.TwoPi * i / 25f).ToRotationVector2() * 6 * fadeIn;
                     Main.EntitySpriteDraw(centerTexture, Projectile.Center - Main.screenPosition + drawOffset + new Vector2(0, Owner.gfxOffY), centerTexture.Frame(1, FrameCount, 0, Frame), auraColor, Projectile.rotation + RotationOffset + r, FlipAsSword ? new Vector2(tex.Width() - SpriteOrigin.X, SpriteOrigin.Y) : SpriteOrigin, Projectile.scale, spriteEffects != SpriteEffects.None ? spriteEffects : (FlipAsSword ? SpriteEffects.FlipHorizontally : SpriteEffects.None));

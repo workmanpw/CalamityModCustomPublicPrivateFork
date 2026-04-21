@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class OpalChargedStrike : ModProjectile, ILocalizedModType
     {
@@ -49,7 +49,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 Vector2 trailPos = Projectile.Center + Main.rand.NextVector2Circular(8, 8);
                 float trailScale = Main.rand.NextFloat(0.45f, 0.6f);
                 Color trailColor = Main.rand.NextBool(3) ? Color.Orange : Color.OrangeRed;
-                Particle Trail = new CustomSpark(trailPos, Projectile.velocity * 0.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 40, trailScale, trailColor, new Vector2(0.2f, 1.4f), true, true, shrinkSpeed: 0.13f, glowOpacity: 0.6f);
+                Particle Trail = new CustomSpark(trailPos, Projectile.velocity * 0.2f, "CalamityMod/Particles/BloomCircle", false, 40, trailScale, trailColor, new Vector2(0.2f, 1.4f), true, true, shrinkSpeed: 0.13f, glowOpacity: 0.6f);
                 GeneralParticleHandler.SpawnParticle(Trail);
             }
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;

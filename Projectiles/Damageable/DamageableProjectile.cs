@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Damageable
+namespace CalamityMod.Projectiles.Damageable
 {
     [Flags]
     public enum DamageSourceType

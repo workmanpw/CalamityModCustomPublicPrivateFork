@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Enums;
+using CalamityMod.Items.Accessories;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     #region Fraction Struct (thanks Yorai)
     public struct Fraction

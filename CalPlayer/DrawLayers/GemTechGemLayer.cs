@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
+namespace CalamityMod.CalPlayer.DrawLayers
 {
     public class GemTechGemLayer : PlayerDrawLayer
     {
@@ -34,27 +34,27 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
                 {
                     case 0:
                     default:
-                        gemTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechRedGem").Value;
+                        gemTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/GemTechRedGem").Value;
                         gemType = GemTechArmorGemType.Rogue;
                         break;
                     case 1:
-                        gemTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechYellowGem").Value;
+                        gemTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/GemTechYellowGem").Value;
                         gemType = GemTechArmorGemType.Melee;
                         break;
                     case 2:
-                        gemTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechGreenGem").Value;
+                        gemTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/GemTechGreenGem").Value;
                         gemType = GemTechArmorGemType.Ranged;
                         break;
                     case 3:
-                        gemTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechBlueGem").Value;
+                        gemTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/GemTechBlueGem").Value;
                         gemType = GemTechArmorGemType.Summoner;
                         break;
                     case 4:
-                        gemTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechPurpleGem").Value;
+                        gemTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/GemTechPurpleGem").Value;
                         gemType = GemTechArmorGemType.Magic;
                         break;
                     case 5:
-                        gemTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechPinkGem").Value;
+                        gemTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/GemTechPinkGem").Value;
                         gemType = GemTechArmorGemType.Base;
                         pulseFactor = 2.5f;
                         break;

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Events;
+using CalamityMod.Events;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Ravager
+namespace CalamityMod.NPCs.Ravager
 {
     [HasPierceResist]
     public class RavagerLegRight : ModNPC

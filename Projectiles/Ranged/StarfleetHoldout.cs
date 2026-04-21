@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -13,7 +13,7 @@ using Terraria.Audio;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class StarfleetHoldout : BaseGunHoldoutProjectile
     {
@@ -104,7 +104,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (Owner.whoAmI == Main.myPlayer && Main.mouseLeft && !hasAmmo && OffsetLengthFromArm >= 24.5f)
             {
                 OffsetLengthFromArm -= 8;
-                SoundStyle click = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire");
+                SoundStyle click = new("CalamityMod/Sounds/Item/DudFire");
                 SoundEngine.PlaySound(click with { Volume = .6f, Pitch = -.2f }, Projectile.Center);
             }
             if (leftShootChecks)
@@ -112,7 +112,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (rightShootChecks)
             {
                 Projectile.ForceNetUpdate();
-                SoundStyle test = new("CalamityModCustomPublicPrivateFork/Sounds/Item/StarfleetStarburst");
+                SoundStyle test = new("CalamityMod/Sounds/Item/StarfleetStarburst");
                 SoundEngine.PlaySound(test with { Volume = 1f, Pitch = 0f }, Projectile.Center);
                 starburstTimer++;
             }
@@ -168,11 +168,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             // 50% chance to not consume ammo
             Owner.PickAmmo(HeldItem, out _, out _, out _, out _, out _, Main.rand.NextBool());
 
-            SoundStyle shotgunFire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/StarfleetFire");
+            SoundStyle shotgunFire = new("CalamityMod/Sounds/Item/StarfleetFire");
             for (int i = 0; i < (naildriver ? 2 : 1); i++)
                 SoundEngine.PlaySound(shotgunFire with { Volume = (naildriver && i == 0 ? 0.3f : 0.6f), Pitch = ((naildriver && i == 0) ? 0f : 0.2f), MaxInstances = 2 }, Projectile.Center);
             if (naildriver)
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/HellkiteFullCharge") with { Volume = 0.7f, Pitch = 1.3f, MaxInstances = 2 }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/HellkiteFullCharge") with { Volume = 0.7f, Pitch = 1.3f, MaxInstances = 2 }, Projectile.Center);
             // Perfects have longer cooldown
             int cooldown = (naildriver ? naildriverCooldown : lastUseTime);
             recoilTimerMax = cooldown;
@@ -213,7 +213,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
                     if (b == 0)
                     {
-                        Particle aura = new CustomSpark(gunBackPosition, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, naildriver ? 35 : 20, 0.5f, shiftColor, new Vector2(0.65f, 1f), glowCenter: true, glowOpacity: 0.8f, glowCenterScale: 0.85f, extraRotation: Projectile.rotation + (i % 2 == 0 ? MathHelper.PiOver2 : 0), shrinkSpeed: 0.1f);
+                        Particle aura = new CustomSpark(gunBackPosition, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, naildriver ? 35 : 20, 0.5f, shiftColor, new Vector2(0.65f, 1f), glowCenter: true, glowOpacity: 0.8f, glowCenterScale: 0.85f, extraRotation: Projectile.rotation + (i % 2 == 0 ? MathHelper.PiOver2 : 0), shrinkSpeed: 0.1f);
                         GeneralParticleHandler.SpawnParticle(aura);
                     }
                 }
@@ -261,14 +261,14 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             for (int i = 0; i < 14; i++)
             {
                 float dist = Main.rand.NextFloat(0, 3);
-                Particle forwardJet = new CustomSpark(GunTipPosition + Main.rand.NextVector2CircularEdge(dist * 5, dist * 5), Projectile.velocity * Main.rand.NextFloat(4, 5) * (6 - dist * 2), "CalamityModCustomPublicPrivateFork/Particles/ForwardSmear", false, (int)(Main.rand.Next(9, 15 + 1) + (dist * 3)), Main.rand.NextFloat(0.1f, 0.2f), GetRandomColor(), new Vector2(1f, 1f), shrinkSpeed: 0.3f);
+                Particle forwardJet = new CustomSpark(GunTipPosition + Main.rand.NextVector2CircularEdge(dist * 5, dist * 5), Projectile.velocity * Main.rand.NextFloat(4, 5) * (6 - dist * 2), "CalamityMod/Particles/ForwardSmear", false, (int)(Main.rand.Next(9, 15 + 1) + (dist * 3)), Main.rand.NextFloat(0.1f, 0.2f), GetRandomColor(), new Vector2(1f, 1f), shrinkSpeed: 0.3f);
                 GeneralParticleHandler.SpawnParticle(forwardJet);
             }
             for (int i = 0; i < 34; i++)
             {
                 float rot = Main.rand.NextFloat(0.05f, 0.35f) * (Main.rand.NextBool() ? -1 : 1);
                 Vector2 startVel = Projectile.velocity.RotatedBy(rot) * Main.rand.NextFloat(8, 18) * (Main.rand.NextBool(4) ? 2f : 1);
-                Particle stars = new VelChangingSpark(GunTipPosition, startVel, startVel.RotatedBy(rot * 5), "CalamityModCustomPublicPrivateFork/Particles/PulseStar", Main.rand.Next(25, 45 + 1), Main.rand.NextFloat(0.1f, 0.35f), GetRandomColor(), new Vector2(1f, 1f), shrinkSpeed: Main.rand.NextFloat(0.02f, 0.06f), lerpRate: 0.02f, glowCenter: true);
+                Particle stars = new VelChangingSpark(GunTipPosition, startVel, startVel.RotatedBy(rot * 5), "CalamityMod/Particles/PulseStar", Main.rand.Next(25, 45 + 1), Main.rand.NextFloat(0.1f, 0.35f), GetRandomColor(), new Vector2(1f, 1f), shrinkSpeed: Main.rand.NextFloat(0.02f, 0.06f), lerpRate: 0.02f, glowCenter: true);
                 GeneralParticleHandler.SpawnParticle(stars);
             }
             int parts = 60;
@@ -283,7 +283,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 float width = Utils.GetLerpValue(0, 4 * Math.Sign(fxVel.X), fxVel.X, true);
                 Color clr = (size <= 0.5f ? Color.Lerp(c3, c2, size * 2) : Color.Lerp(c2, c1, size * 2 - 1f));
 
-                Particle aura = new CustomSpark(fxPlace, fxVel * 1.2f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, (int)(15 + size * 5), 0.35f + size * 0.2f, clr * 0.7f, new Vector2(1f + width * size, 1f), glowCenter: true, glowOpacity: size * 0.85f, glowCenterScale: 0.75f);
+                Particle aura = new CustomSpark(fxPlace, fxVel * 1.2f, "CalamityMod/Particles/BloomCircle", false, (int)(15 + size * 5), 0.35f + size * 0.2f, clr * 0.7f, new Vector2(1f + width * size, 1f), glowCenter: true, glowOpacity: size * 0.85f, glowCenterScale: 0.75f);
                 GeneralParticleHandler.SpawnParticle(aura);
 
             }
@@ -306,8 +306,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 return false;
 
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D glowTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/StarfleetGlow").Value;
-            Texture2D orb = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D glowTexture = Request<Texture2D>("CalamityMod/Items/Weapons/Ranged/StarfleetGlow").Value;
+            Texture2D orb = Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Projectile.GetAlpha(lightColor);
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f);

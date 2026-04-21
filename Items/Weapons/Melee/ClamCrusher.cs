@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityMod.Projectiles.Melee;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class ClamCrusher : ModItem, ILocalizedModType
     {

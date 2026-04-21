@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Tools;
+using CalamityMod.Items.Tools;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Potions.Food
+namespace CalamityMod.Items.Potions.Food
 {
     public class DeliciousMeat : ModItem, ILocalizedModType
     {

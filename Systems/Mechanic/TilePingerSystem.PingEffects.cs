@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Effects;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
+using CalamityMod.Effects;
+using CalamityMod.Items.Tools;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Mechanic;
+namespace CalamityMod.Systems.Mechanic;
 
 public class WulfrumPingTileEffect : IPingedTileEffect, ILoadable
 {
@@ -54,7 +54,7 @@ public class WulfrumPingTileEffect : IPingedTileEffect, ILoadable
 
     public Effect SetupEffect()
     {
-        emptyFrame ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj").Value;
+        emptyFrame ??= ModContent.Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj").Value;
 
         Effect tileEffect = Filters.Scene["CalamityMod:WulfrumTilePing"].GetShader().Shader;
         tileEffect.Parameters["pingCenter"].SetValue(PingCenter);
@@ -229,7 +229,7 @@ public class BurrowerPingTileEffect : IPingedTileEffect, ILoadable
     public Effect SetupEffect()
     {
         if (emptyFrame == null)
-            emptyFrame = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj").Value;
+            emptyFrame = ModContent.Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj").Value;
 
         Effect tileEffect = Filters.Scene["CalamityMod:WulfrumTilePing"].GetShader().Shader;
         tileEffect.Parameters["pingCenter"].SetValue(PingCenter);

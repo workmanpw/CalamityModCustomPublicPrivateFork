@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 using Terraria.ID;
-namespace CalamityModCustomPublicPrivateFork.Walls
+namespace CalamityMod.Walls
 {
     public class NavyslateWall : ModWall, IVisibleThroughWater
     {

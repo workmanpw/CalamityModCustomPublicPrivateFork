@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Sounds;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -18,7 +18,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
+namespace CalamityMod.NPCs.Astral
 {
     public class Nova : ModNPC
     {
@@ -35,7 +35,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
             Main.npcFrameCount[Type] = 8;
 
             if (!Main.dedServ)
-                glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Astral/NovaGlow", AssetRequestMode.AsyncLoad);
+                glowmask = ModContent.Request<Texture2D>("CalamityMod/NPCs/Astral/NovaGlow", AssetRequestMode.AsyncLoad);
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 Scale = 0.64f,
@@ -86,7 +86,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Nova")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Nova")
             });
         }
 

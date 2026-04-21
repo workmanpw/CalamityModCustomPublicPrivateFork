@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Projectiles.Melee.Spears;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class GildedProboscis : BaseSwordHoldoutItem, ILocalizedModType
     {

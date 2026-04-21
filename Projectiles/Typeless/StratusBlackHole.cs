@@ -1,14 +1,14 @@
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic.PixelationSystem;
-using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
+using CalamityMod.CalPlayer;
+using CalamityMod.Systems.Graphic.PixelationSystem;
+using CalamityMod.Systems.Mechanic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class StratusBlackHole : ModProjectile, ILocalizedModType
     {
@@ -110,7 +110,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
         {
             if (_TransparentBloomTex == null)
             {
-                _TransparentBloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+                _TransparentBloomTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
                 var BaseArray = new Color[_TransparentBloomTex.Width * _TransparentBloomTex.Height];
                 var ColorArray = new Color[_TransparentBloomTex.Width * _TransparentBloomTex.Height];
                 _TransparentBloomTex.GetData(BaseArray);
@@ -144,9 +144,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             Main.spriteBatch.EnterShaderRegion(matrix: matrix);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseOpacity(0.1f);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseSaturation(0.1f);
-            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Neurons"), 1);
+            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons"), 1);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].Apply();
-            Texture2D telegraphBase = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HigResThinCircle").Value;
+            Texture2D telegraphBase = ModContent.Request<Texture2D>("CalamityMod/Particles/HigResThinCircle").Value;
             Main.EntitySpriteDraw(telegraphBase, drawPosition, null, Color.SkyBlue * mproj.Projectile.Opacity * 0.75f, 0, telegraphBase.Size() / 2f, 1200f * mproj.Projectile.Opacity / telegraphBase.Width, 0, 0);
             Main.spriteBatch.ExitShaderRegion(matrix: matrix);
         }
@@ -164,9 +164,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             Main.spriteBatch.EnterShaderRegion(matrix: matrix);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseOpacity(1f);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseSaturation(0.2f);
-            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/MeltyNoiseHighContrast"), 1);
+            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/MeltyNoiseHighContrast"), 1);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].Apply();
-            telegraphBase = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            telegraphBase = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
             Main.EntitySpriteDraw(telegraphBase, drawPosition, null, Color.SkyBlue * 0.5f * mproj.Projectile.Opacity, 0, telegraphBase.Size() / 2f, 1200f * mproj.Projectile.Opacity / telegraphBase.Width, 0, 0);
 
 
@@ -174,9 +174,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             Main.spriteBatch.EnterShaderRegion(matrix: matrix);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseOpacity(0.1f);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseSaturation(0.1f);
-            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Neurons"), 1);
+            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons"), 1);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].Apply();
-            telegraphBase = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HighResFoggyCircleHardEdge").Value;
+            telegraphBase = ModContent.Request<Texture2D>("CalamityMod/Particles/HighResFoggyCircleHardEdge").Value;
             Main.EntitySpriteDraw(telegraphBase, drawPosition, null, Color.SkyBlue * mproj.Projectile.Opacity * 0.75f, 0, telegraphBase.Size() / 2f, 1200f * mproj.Projectile.Opacity / telegraphBase.Width, 0, 0);
             Main.spriteBatch.ExitShaderRegion(matrix: matrix);
             #endregion
@@ -190,31 +190,31 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             Vector2 drawPosition = mproj.Projectile.Center - Main.screenPosition;
 
             #region Singularity
-            var telegraphBase = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle").Value;
+            var telegraphBase = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicCircle").Value;
 
             Main.spriteBatch.EnterShaderRegion(matrix: matrix);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseOpacity(0.5f);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseSaturation(0.2f);
-            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/VoidGashes"), 1);
+            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/VoidGashes"), 1);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].Apply();
             Main.EntitySpriteDraw(telegraphBase, drawPosition, null, Color.Lerp(Color.DarkSlateBlue, Color.SkyBlue, 0.75f), 0.5f, telegraphBase.Size() / 2f, 84f * mproj.Projectile.Opacity / telegraphBase.Width, 0, 0);
 
             Main.spriteBatch.EnterShaderRegion(matrix: matrix);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseOpacity(0.5f);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseSaturation(0.2f);
-            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/VoidGashes"), 1);
+            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/VoidGashes"), 1);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].Apply();
-            telegraphBase = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle").Value;
+            telegraphBase = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicCircle").Value;
             Main.EntitySpriteDraw(telegraphBase, drawPosition, null, Color.Lerp(Color.DarkSlateBlue, Color.SkyBlue, 1f), 0, telegraphBase.Size() / 2f, 84f * mproj.Projectile.Opacity / telegraphBase.Width, 0, 0);
             Main.spriteBatch.EnterShaderRegion(matrix: matrix);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseOpacity(0.25f);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].UseSaturation(0.1f);
-            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/VoidGashes"), 1);
+            GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/VoidGashes"), 1);
             GameShaders.Misc["CalamityMod:OtherworldBarrierDistortion"].Apply();
             Main.EntitySpriteDraw(telegraphBase, drawPosition, null, Color.Black, 1, telegraphBase.Size() / 2f, 72f * mproj.Projectile.Opacity / telegraphBase.Width, 0, 0);
             Main.spriteBatch.ExitShaderRegion(matrix: matrix);
 
-            telegraphBase = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle").Value;
+            telegraphBase = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicCircle").Value;
             Main.EntitySpriteDraw(telegraphBase, drawPosition, null, Color.Black, 0, telegraphBase.Size() / 2f, 64f * mproj.Projectile.Opacity / telegraphBase.Width, 0, 0);
             #endregion
         }

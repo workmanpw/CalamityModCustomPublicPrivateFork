@@ -1,11 +1,11 @@
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -13,7 +13,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
+namespace CalamityMod.Items.Weapons.Summon
 {
     [LegacyName("PrototypeAndromechaRing")]
     public class FlamsteedRing : ModItem, ILocalizedModType
@@ -21,7 +21,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
         public new string LocalizationCategory => "Items.Weapons.Summon";
         //Note: In the future i may just do some changes to this item, and the cripple effect will probably be gone. But in the meanwhile
         //- Iban
-        public static readonly SoundStyle CrippleSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AndromedaCripple");
+        public static readonly SoundStyle CrippleSound = new("CalamityMod/Sounds/Custom/AndromedaCripple");
 
         public const int HalfSafeWidth = 4;
         public const int SafeHeight = 14;
@@ -30,7 +30,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
         {
             if (!Main.dedServ)
             {
-                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/AndromedaWithout_Head", EquipType.Head, name: "HeadlessEquipTexture");
+                EquipLoader.AddEquipTexture(Mod, "CalamityMod/CalPlayer/DrawLayers/AndromedaWithout_Head", EquipType.Head, name: "HeadlessEquipTexture");
             }
         }
 

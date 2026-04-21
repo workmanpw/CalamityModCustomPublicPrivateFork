@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.SunkenSea;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureRunestone
+namespace CalamityMod.Tiles.FurnitureRunestone
 {
     public class RunestoneTerracotta : ModTile
     {

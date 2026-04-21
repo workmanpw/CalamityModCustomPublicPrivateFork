@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo;
+using CalamityMod.Items.Placeables.FurnitureExo;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
+namespace CalamityMod.Tiles.FurnitureExo
 {
     public class ExoDresserTile : ModTile
     {
@@ -43,7 +43,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
             int xFrameOffset = Main.tile[i, j].TileFrameX;
             int yFrameOffset = Main.tile[i, j].TileFrameY;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureExo/ExoDresserGlow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureExo/ExoDresserGlow");
             Texture2D glowmask = GlowTexture.Value;
 
             Vector2 drawOffest = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);

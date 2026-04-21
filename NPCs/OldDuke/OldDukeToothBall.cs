@@ -1,9 +1,9 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.OldDuke
+namespace CalamityMod.NPCs.OldDuke
 {
     public class OldDukeToothBall : ModNPC
     {
@@ -172,8 +172,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.OldDuke
                 float sc = Main.rand.NextFloat(1f, 3f);
                 Vector2 vel = new Vector2(Main.rand.NextFloat(10, 25), 0).RotatedByRandom(MathHelper.TwoPi);
 
-                GeneralParticleHandler.SpawnParticle(new CustomSpark(NPC.Center, vel, "CalamityModCustomPublicPrivateFork/Projectiles/Boss/OldDukeToothBallSpike", true, 40, sc + 0.5f, OldDuke.GlowColor, Vector2.One));
-                GeneralParticleHandler.SpawnParticle(new CustomSpark(NPC.Center, vel, "CalamityModCustomPublicPrivateFork/Projectiles/Boss/OldDukeToothBallSpike", true, 40, sc, Color.White, Vector2.One, false, affectedByLight: true));
+                GeneralParticleHandler.SpawnParticle(new CustomSpark(NPC.Center, vel, "CalamityMod/Projectiles/Boss/OldDukeToothBallSpike", true, 40, sc + 0.5f, OldDuke.GlowColor, Vector2.One));
+                GeneralParticleHandler.SpawnParticle(new CustomSpark(NPC.Center, vel, "CalamityMod/Projectiles/Boss/OldDukeToothBallSpike", true, 40, sc, Color.White, Vector2.One, false, affectedByLight: true));
             }
 
             int closestPlayer = Player.FindClosest(NPC.Center, 1, 1);

@@ -6,12 +6,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
+namespace CalamityMod.Projectiles.Enemy
 {
     public class PrismBackCrystal : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Enemy";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/SeaPrisms";
+        public override string Texture => "CalamityMod/Particles/SeaPrisms";
 
         public override void SetDefaults()
         {

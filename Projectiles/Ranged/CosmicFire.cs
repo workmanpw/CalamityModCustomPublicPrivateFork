@@ -1,20 +1,20 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Enums;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class CosmicFire : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public ref int HitCount => ref Main.player[Projectile.owner].Calamity().deadSunCounter;
         public ref float Time => ref Projectile.ai[0];
         public ref float BounceHits => ref Projectile.ai[1];
@@ -57,9 +57,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
             if (Projectile.timeLeft % 2 == 0 && Time > 12f && targetDist < 1400f)
             {
-                Particle spark = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityModCustomPublicPrivateFork/Particles/GlowSpark2", false, 17, 0.052f, Color.Black, new Vector2(0.6f, 1.3f), false);
+                Particle spark = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityMod/Particles/GlowSpark2", false, 17, 0.052f, Color.Black, new Vector2(0.6f, 1.3f), false);
                 GeneralParticleHandler.SpawnParticle(spark);
-                Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityModCustomPublicPrivateFork/Particles/GlowSpark", false, 17, 0.027f, Color.LightGreen, new Vector2(0.6f, 1.3f), true, false);
+                Particle spark2 = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityMod/Particles/GlowSpark", false, 17, 0.027f, Color.LightGreen, new Vector2(0.6f, 1.3f), true, false);
                 GeneralParticleHandler.SpawnParticle(spark2);
                 spark2.DrawLayer = GeneralDrawLayer.AfterEverything;
             }
@@ -105,12 +105,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
             for (int i = 0; i < 2; i++)
             {
-                Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", Vector2.One, Main.rand.NextFloat(-10, 10), 0.35f, 0.4f, 38, false);
+                Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityMod/Particles/LargeBloom", Vector2.One, Main.rand.NextFloat(-10, 10), 0.35f, 0.4f, 38, false);
                 GeneralParticleHandler.SpawnParticle(blastRing);
             }
             for (int i = 0; i < 3; i++)
             {
-                Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, InnerColor, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.48f, 0.52f, 38);
+                Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, InnerColor, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.48f, 0.52f, 38);
                 GeneralParticleHandler.SpawnParticle(blastRing);
                 blastRing.DrawLayer = GeneralDrawLayer.AfterEverything;
             }
@@ -124,7 +124,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 dust.scale = Main.rand.NextFloat(1.6f, 2.2f);
                 dust.color = InnerColor;
             }
-            //Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, InnerColor, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", new Vector2(1f, 1f), Main.rand.NextFloat(5, -5), 0f, 0.1f, 15);
+            //Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, InnerColor, "CalamityMod/Particles/SoftRoundExplosion", new Vector2(1f, 1f), Main.rand.NextFloat(5, -5), 0f, 0.1f, 15);
             //GeneralParticleHandler.SpawnParticle(pulse);
 
             if (BounceHits == 0f)

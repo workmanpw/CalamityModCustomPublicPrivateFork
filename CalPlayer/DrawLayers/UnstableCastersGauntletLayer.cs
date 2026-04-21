@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class UnstableCastersGauntletLayer : PlayerDrawLayer
     {
@@ -17,7 +17,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
             // Thanks YuH.
 
             Vector2 bodyPos = new Vector2((int)(drawInfo.Position.X - Main.screenPosition.X - drawInfo.drawPlayer.bodyFrame.Width / 2 + drawInfo.drawPlayer.width / 2), (int)(drawInfo.Position.Y - Main.screenPosition.Y + drawInfo.drawPlayer.height - drawInfo.drawPlayer.bodyFrame.Height + 4f)) + drawInfo.drawPlayer.bodyPosition + new Vector2(drawInfo.drawPlayer.bodyFrame.Width / 2, drawInfo.drawPlayer.bodyFrame.Height / 2);
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/UnstableCastersGauntlet_HandsOn").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/UnstableCastersGauntlet_HandsOn").Value;
             Vector2 position = bodyPos + drawInfo.frontShoulderOffset + (new Vector2(-5 * (!drawInfo.playerEffect.HasFlag(SpriteEffects.FlipHorizontally) ? 1 : -1), 0f));
 
             // Apply offset

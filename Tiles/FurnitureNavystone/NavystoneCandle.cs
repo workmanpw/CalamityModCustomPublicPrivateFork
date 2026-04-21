@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone
+namespace CalamityMod.Tiles.FurnitureNavystone
 {
     public class NavystoneCandle : ModTile
     {

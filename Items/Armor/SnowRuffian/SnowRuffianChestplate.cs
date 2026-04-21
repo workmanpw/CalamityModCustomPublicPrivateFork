@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.SnowRuffian
+namespace CalamityMod.Items.Armor.SnowRuffian
 {
     [AutoloadEquip(EquipType.Body)]
     public class SnowRuffianChestplate : ModItem, ILocalizedModType
@@ -18,8 +18,8 @@ namespace CalamityModCustomPublicPrivateFork.Items.Armor.SnowRuffian
             if (Main.dedServ)
                 return;
 
-            EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/SnowRuffian/SnowRuffianChestplate_Back", EquipType.Back, this);
-            EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/SnowRuffian/SnowRuffianChestplate_Neck", EquipType.Neck, this);
+            EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/SnowRuffian/SnowRuffianChestplate_Back", EquipType.Back, this);
+            EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/SnowRuffian/SnowRuffianChestplate_Neck", EquipType.Neck, this);
         }
 
         public override void SetStaticDefaults()

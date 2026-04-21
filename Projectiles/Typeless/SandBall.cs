@@ -1,15 +1,15 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
+using CalamityMod.Buffs.StatDebuffs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class AstralSandBallFalling : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SandBallAstral";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/SandBallAstral";
         public override bool Fired => false;
         public override int TileType => ModContent.TileType<Tiles.AstralDesert.AstralSand>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.Astral.AstralSand>();
@@ -18,7 +18,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
     public class DunesandBallFalling : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SandBallDune";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/SandBallDune";
         public override bool Fired => false;
         public override int TileType => ModContent.TileType<Tiles.SunkenSea.Dunesand>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.SunkenSea.Dunesand>();
@@ -27,7 +27,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
     public class PolypSandBallFalling : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SandBallPolyp";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/SandBallPolyp";
         public override bool Fired => false;
         public override int TileType => ModContent.TileType<Tiles.SunkenSea.PolypSand>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.SunkenSea.PolypSand>();
@@ -36,7 +36,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
     public class VolcanicSandBallFalling : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SandBallVolcanic";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/SandBallVolcanic";
         public override bool Fired => false;
         public override int TileType => ModContent.TileType<Tiles.SunkenSea.VolcanicSand>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.SunkenSea.VolcanicSand>();
@@ -45,7 +45,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
     public class WhitePearlFalling : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/WhitePearl";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/WhitePearl";
         public override bool Fired => false;
         public override int TileType => ModContent.TileType<Tiles.SunkenSea.WhitePearlPile>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.SunkenSea.WhitePearlPile>();
@@ -54,7 +54,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
     public class PinkPearlFalling : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/PinkPearl";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/PinkPearl";
         public override bool Fired => false;
         public override int TileType => ModContent.TileType<Tiles.SunkenSea.PinkPearlPile>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.SunkenSea.PinkPearlPile>();
@@ -63,7 +63,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
     public class BlackPearlFalling : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/BlackPearl";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/BlackPearl";
         public override bool Fired => false;
         public override int TileType => ModContent.TileType<Tiles.SunkenSea.BlackPearlPile>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.SunkenSea.BlackPearlPile>();
@@ -72,7 +72,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
     public class AstralSandBallGun : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SandBallAstral";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/SandBallAstral";
         public override int TileType => ModContent.TileType<Tiles.AstralDesert.AstralSand>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.Astral.AstralSand>();
         public override int DustType => 108;
@@ -126,7 +126,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
     public class EutrophicSandBallGun : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SandBallEutrophic";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/SandBallEutrophic";
         public override int TileType => ModContent.TileType<Tiles.SunkenSea.EutrophicSand>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.SunkenSea.EutrophicSand>();
         public override bool DropAsItem => true;
@@ -148,7 +148,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
     public class SulphurousSandBallGun : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SandBallSulphurous";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/SandBallSulphurous";
         public override int TileType => ModContent.TileType<Tiles.Abyss.SulphurousSand>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.Abyss.SulphurousSand>();
         public override bool DropAsItem => true;
@@ -168,7 +168,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
     }
     public class DuneSandBallGun : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SandBallDune";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/SandBallDune";
         public override int TileType => ModContent.TileType<Tiles.SunkenSea.Dunesand>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.SunkenSea.Dunesand>();
         public override int DustType => DustID.Sand;
@@ -211,7 +211,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
     }
     public class PolypSandBallGun : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SandBallPolyp";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/SandBallPolyp";
         public override int TileType => ModContent.TileType<Tiles.SunkenSea.PolypSand>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.SunkenSea.PolypSand>();
         public override int DustType => DustID.Sand;
@@ -232,7 +232,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
     }
     public class VolcanicSandBallGun : SandBall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SandBallVolcanic";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/SandBallVolcanic";
         public override int TileType => ModContent.TileType<Tiles.SunkenSea.EutrophicSand>();
         public override int ItemType => ModContent.ItemType<Items.Placeables.SunkenSea.VolcanicSand>();
         public override int DustType => -1;

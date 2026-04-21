@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
+using CalamityMod.NPCs.ProfanedGuardians;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class ProfanedGuardiansMusicScene : BaseMusicSceneEffect
     {

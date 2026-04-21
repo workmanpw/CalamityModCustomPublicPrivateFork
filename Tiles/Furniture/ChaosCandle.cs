@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Placeables;
+using CalamityMod.Buffs.Placeables;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
+namespace CalamityMod.Tiles.Furniture
 {
     public class ChaosCandle : ModTile
     {
@@ -64,7 +64,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Furniture/ChaosCandleFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Furniture/ChaosCandleFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j);
         }
 

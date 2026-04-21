@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures.CagedLights;
+using CalamityMod.Items.DraedonMisc;
+using CalamityMod.Items.Materials;
+using CalamityMod.Tiles.DraedonStructures.CagedLights;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures.CagedLights
+namespace CalamityMod.Items.Placeables.DraedonStructures.CagedLights
 {
     public class MiniCagedLablightItem : ModItem, ILocalizedModType
     {

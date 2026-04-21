@@ -1,17 +1,17 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityMod.NPCs.SunkenSea;
+using CalamityMod.Tiles.Abyss;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class ApoctolithProj : ModProjectile, ILocalizedModType
     {
@@ -23,7 +23,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public int ExplosionRadius => 150;
 
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/Apoctolith";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/Apoctolith";
 
         public override void SetStaticDefaults()
         {
@@ -92,8 +92,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
         public override void OnKill(int timeLeft)
         {
-            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, LowBlueColor, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", Vector2.One, 0f, 1f, 0f, 25));
-            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", Vector2.One, 0f, 0.5f, 0f, 15));
+            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, LowBlueColor, "CalamityMod/Particles/LargeBloom", Vector2.One, 0f, 1f, 0f, 25));
+            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/LargeBloom", Vector2.One, 0f, 0.5f, 0f, 15));
 
             for (int i = 0; i < 5; i++) GeneralParticleHandler.SpawnParticle(new BloodParticle2(Projectile.Center, new Vector2(Main.rand.NextFloat(6, 12), 0).RotatedBy(Main.rand.NextFloat(MathHelper.TwoPi)), 12, Main.rand.NextFloat(0.2f, 0.8f), HighBlueColor));
 
@@ -105,7 +105,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             SoundEngine.PlaySound(AbyssGravel.MineSound, Projectile.position);
             SoundEngine.PlaySound(GiantClam.SlamSound, Projectile.position);
             SoundEngine.PlaySound(SoundID.DD2_ExplosiveTrapExplode.WithPitchOffset(0.5f), Projectile.position);
-            if (Projectile.Calamity().stealthStrike) SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/MineralMortarExplode"), Projectile.position);
+            if (Projectile.Calamity().stealthStrike) SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/MineralMortarExplode"), Projectile.position);
 
             // This only triggers if stealth is full
             if (Projectile.Calamity().stealthStrike && Main.myPlayer == Projectile.owner)
@@ -149,7 +149,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
         public override void PostDraw(Color lightColor)
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/ApoctolithGlow").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/ApoctolithGlow").Value;
             Vector2 origin = new Vector2(32f, 33f);
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, Color.White, Projectile.rotation, origin, Projectile.scale, SpriteEffects.None, 0);
         }

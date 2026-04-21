@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class MK2FlaskSummon : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Summon/FuelCellBundle";
+        public override string Texture => "CalamityMod/Items/Weapons/Summon/FuelCellBundle";
 
         public override void SetStaticDefaults()
         {

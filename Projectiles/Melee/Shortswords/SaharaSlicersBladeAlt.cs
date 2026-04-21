@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Shortswords
+namespace CalamityMod.Projectiles.Melee.Shortswords
 {
     public class SaharaSlicersBladeAlt : BaseShortswordProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<SaharaSlicers>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SaharaSlicersBladeAlt";
+        public override string Texture => "CalamityMod/Projectiles/Melee/SaharaSlicersBladeAlt";
         public ref int Bolts => ref Main.player[Projectile.owner].Calamity().saharaSlicersBolts;
         public override float FadeInDuration => 8f;
         public override float FadeOutDuration => 0f;

@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,14 +10,14 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class AbyssBladeProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/AbyssBlade";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/AbyssBlade";
 
         public int Time = 9000;
         public int ChargeupTime = 25;
@@ -150,7 +150,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                     Projectile.extraUpdates = 2;
                     Projectile.rotation = 0;
                     spinMode = false;
-                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/CeramicImpact", 2) { Volume = 0.65f, PitchVariance = 0.3f }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/CeramicImpact", 2) { Volume = 0.65f, PitchVariance = 0.3f }, Projectile.Center);
                     for (int i = 0; i < 3; i++)
                     {
                         GenericSparkle sparker = new GenericSparkle(Projectile.Center, Vector2.Zero, Color.DodgerBlue, Color.MediumBlue, Main.rand.NextFloat(2.5f, 2.9f) - i * 0.55f, 14, Main.rand.NextFloat(-0.01f, 0.01f), 2.5f);
@@ -210,7 +210,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.AddBuff(ModContent.BuffType<CrushDepth>(), 180);
-            SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbyssGravelMine2") { Volume = 0.7f, PitchVariance = 0.3f };
+            SoundStyle HitSound = new("CalamityMod/Sounds/Custom/AbyssGravelMine2") { Volume = 0.7f, PitchVariance = 0.3f };
             if (!spinMode)
             {
                 SoundEngine.PlaySound(HitSound, Projectile.Center);
@@ -242,8 +242,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Asset<Texture2D> p = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmearSmokey");
-            Asset<Texture2D> p2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SemiCircularSmearSwipe");
+            Asset<Texture2D> p = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularSmearSmokey");
+            Asset<Texture2D> p2 = ModContent.Request<Texture2D>("CalamityMod/Particles/SemiCircularSmearSwipe");
             Vector2 generalDrawPos = Projectile.Center - Main.screenPosition;
             if (spinMode && Time < 9000)
             {

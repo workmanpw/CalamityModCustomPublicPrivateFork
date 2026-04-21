@@ -1,11 +1,11 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.UI;
+using CalamityMod.UI;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public class CooldownInstance
     {

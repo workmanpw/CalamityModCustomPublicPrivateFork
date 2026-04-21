@@ -1,7 +1,7 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.NPCs;
+using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,13 +11,13 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     [PierceResistException]
     public class DarkSparkBeam : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/YharimsCrystalBeam";
+        public override string Texture => "CalamityMod/Projectiles/Magic/YharimsCrystalBeam";
 
         public override void SetDefaults()
         {

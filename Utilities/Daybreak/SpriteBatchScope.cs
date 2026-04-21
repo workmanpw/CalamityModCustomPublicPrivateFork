@@ -3,7 +3,7 @@
 using System;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+namespace CalamityMod.Utilities.Daybreak;
 
 /// <summary>
 ///     Starts a <see cref="SpriteBatch"/> and caches its old start parameters

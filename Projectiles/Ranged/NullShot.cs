@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,12 +12,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class NullShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public ref float time => ref Projectile.ai[0];
         public Color baseColor = new Color(Main.DiscoR, Main.DiscoG, Main.DiscoB);
         public int sineDir = 1;
@@ -151,11 +151,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                     dust.scale = Main.rand.NextFloat(1.15f, 1.45f);
                     dust.color = baseColor;
                 }
-                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.3f, 0.65f, 13);
+                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.3f, 0.65f, 13);
                 GeneralParticleHandler.SpawnParticle(orb);
-                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityModCustomPublicPrivateFork/Particles/SmallBloomRingLayered", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.4f, 0.75f, 13, false);
+                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityMod/Particles/SmallBloomRingLayered", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.4f, 0.75f, 13, false);
                 GeneralParticleHandler.SpawnParticle(orb2);
-                Particle orb3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.4f, 0.25f, 16, false);
+                Particle orb3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Black, "CalamityMod/Particles/SmallBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.4f, 0.25f, 16, false);
                 GeneralParticleHandler.SpawnParticle(orb3);
             }
             else
@@ -256,8 +256,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (time < 18)
                 return false;
 
-            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/DrainLineBloom");
-            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/DrainLine");
+            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityMod/Particles/DrainLineBloom");
+            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/DrainLine");
             CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], baseColor with { A = 0 } * 0.35f, 1, tex.Value);
             CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], Projectile.ai[1] == 5 ? Color.Black : Color.Lerp(baseColor, Color.White, 0.5f), 1, tex2.Value, true, true);
             return false;

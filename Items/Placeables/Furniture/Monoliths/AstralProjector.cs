@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMonolith;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Monoliths;
+using CalamityMod.Items.Placeables.FurnitureMonolith;
+using CalamityMod.Tiles.Furniture.Monoliths;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths
+namespace CalamityMod.Items.Placeables.Furniture.Monoliths
 {
     public class AstralProjector : ModItem, ILocalizedModType
     {

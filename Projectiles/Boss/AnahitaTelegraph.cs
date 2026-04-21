@@ -7,12 +7,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class AnahitaTelegraph : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         private const int Lifetime = 30;
         public ref float TeleType => ref Projectile.ai[1]; // 0: Water spear. 1: Frost mist. 2: Treble clef.
@@ -23,9 +23,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
         {
             if (!Main.dedServ)
             {
-                WaterSpearTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/PointParticle");
-                FrostMistTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
-                TrebleClefTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle");
+                WaterSpearTex = ModContent.Request<Texture2D>("CalamityMod/Particles/PointParticle");
+                FrostMistTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
+                TrebleClefTex = ModContent.Request<Texture2D>("CalamityMod/Particles/Sparkle");
             }
         }
         public override void SetDefaults()

@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityMod.Items.Accessories.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.TreasureBags.MiscGrabBags
+namespace CalamityMod.Items.TreasureBags.MiscGrabBags
 {
     public class StarterBag : ModItem, ILocalizedModType
     {

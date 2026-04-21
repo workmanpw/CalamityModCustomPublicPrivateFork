@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureStratus;
+using CalamityMod.Tiles.FurnitureStratus;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureStratus
+namespace CalamityMod.Items.Placeables.FurnitureStratus
 {
     public class StratusStarPlatformItem : ModItem, ILocalizedModType
     {

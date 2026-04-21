@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone.FurnitureAncientNavystone
+namespace CalamityMod.Tiles.FurnitureNavystone.FurnitureAncientNavystone
 {
     [LegacyName("EutrophicChest")]
     public class AncientNavystoneChest : ModTile

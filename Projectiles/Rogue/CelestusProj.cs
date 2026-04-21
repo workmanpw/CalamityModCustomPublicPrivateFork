@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class CelestusProj : ModProjectile, ILocalizedModType
     {
@@ -169,7 +169,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public override void PostDraw(Color lightColor)
         {
             Rectangle frame = new Rectangle(0, 0, 132, 132);
-            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/CelestusProjGlow").Value,
+            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/CelestusProjGlow").Value,
                 Projectile.Center - Main.screenPosition,
                 frame,
                 Color.White,

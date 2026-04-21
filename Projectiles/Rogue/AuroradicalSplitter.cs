@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class AuroradicalSplitter : ModProjectile, ILocalizedModType
     {
@@ -17,7 +17,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             ModContent.DustType<AstralOrange>()
         };
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Rogue/AuroradicalStar";
+        public override string Texture => "CalamityMod/Projectiles/Rogue/AuroradicalStar";
 
         public override void SetStaticDefaults()
         {

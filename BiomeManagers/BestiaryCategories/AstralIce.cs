@@ -1,11 +1,11 @@
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.BiomeManagers.BestiaryCategories
+namespace CalamityMod.BiomeManagers.BestiaryCategories
 {
     public class AstralIce : ModBiome //Unused, currently
     {
-        public override string BestiaryIcon => "CalamityModCustomPublicPrivateFork/BiomeManagers/AstralIceIcon";
+        public override string BestiaryIcon => "CalamityMod/BiomeManagers/AstralIceIcon";
 
-        public override string MapBackground => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AstralBG";
+        public override string MapBackground => "CalamityMod/Backgrounds/MapBackgrounds/AstralBG";
     }
 }

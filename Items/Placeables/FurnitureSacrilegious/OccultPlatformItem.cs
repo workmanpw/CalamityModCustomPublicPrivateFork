@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious;
+using CalamityMod.Tiles.FurnitureSacrilegious;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSacrilegious
+namespace CalamityMod.Items.Placeables.FurnitureSacrilegious
 {
     public class OccultPlatformItem : ModItem, ILocalizedModType
     {

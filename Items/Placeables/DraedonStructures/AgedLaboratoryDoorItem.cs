@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
+using CalamityMod.Tiles.DraedonStructures;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures
+namespace CalamityMod.Items.Placeables.DraedonStructures
 {
     public class AgedLaboratoryDoorItem : ModItem, ILocalizedModType
     {

@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     [LegacyName("Aeries")]
     public class Arietes41 : ModItem, ILocalizedModType
@@ -28,7 +28,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
             Item.knockBack = 2.5f;
             Item.value = CalamityGlobalItem.RarityYellowBuyPrice;
             Item.rare = ItemRarityID.Yellow;
-            Item.UseSound = Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/GunShotSmall") with { Volume = 0.65f };
+            Item.UseSound = Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/GunShotSmall") with { Volume = 0.65f };
             Item.autoReuse = true;
             Item.shootSpeed = 13f;
             Item.shoot = ProjectileID.PurificationPowder;

@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Dusts.WaterSplash
+namespace CalamityMod.Dusts.WaterSplash
 {
     public abstract class SplashDust : ModDust
     {

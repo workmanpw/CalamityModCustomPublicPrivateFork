@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStatigel
+namespace CalamityMod.Tiles.FurnitureStatigel
 {
     public class StaticRefiner : ModTile
     {

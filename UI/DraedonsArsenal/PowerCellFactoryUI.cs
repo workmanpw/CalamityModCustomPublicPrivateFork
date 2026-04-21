@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
-using CalamityModCustomPublicPrivateFork.TileEntities;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.DraedonMisc;
+using CalamityMod.TileEntities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DraedonsArsenal
+namespace CalamityMod.UI.DraedonsArsenal
 {
     public class PowerCellFactoryUI
     {

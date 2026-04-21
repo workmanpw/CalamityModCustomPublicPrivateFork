@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria.Localization;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public class GlobalDodge : CooldownHandler
     {
@@ -9,7 +9,7 @@ namespace CalamityModCustomPublicPrivateFork.Cooldowns
 
         public override bool ShouldDisplay => true;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/" + skinTexture;
+        public override string Texture => "CalamityMod/Cooldowns/" + skinTexture;
         public override Color OutlineColor => outlineColor;
         public override Color CooldownStartColor => cooldownColorStart;
         public override Color CooldownEndColor => cooldownColorEnd;

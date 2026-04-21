@@ -6,7 +6,7 @@ using ReLogic.Threading;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.TempParticleSystem
+namespace CalamityMod.Systems.Graphic.TempParticleSystem
 {
     public class TempParticleManager
     {

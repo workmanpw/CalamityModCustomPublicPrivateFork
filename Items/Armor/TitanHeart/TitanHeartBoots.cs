@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMonolith;
+using CalamityMod.Items.Placeables.FurnitureMonolith;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.TitanHeart
+namespace CalamityMod.Items.Armor.TitanHeart
 {
     [AutoloadEquip(EquipType.Legs)]
     public class TitanHeartBoots : ModItem, ILocalizedModType

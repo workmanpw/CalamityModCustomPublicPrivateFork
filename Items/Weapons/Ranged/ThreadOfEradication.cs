@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.NPCs.DevourerofGods;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     [LegacyName("Deathwind")]
     public class ThreadOfEradication : ModItem, ILocalizedModType
@@ -42,7 +42,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/ThreadOfEradicationGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Ranged/ThreadOfEradicationGlow").Value);
         }
         private int storedDMG = 1;
         private float storedKB = 1;

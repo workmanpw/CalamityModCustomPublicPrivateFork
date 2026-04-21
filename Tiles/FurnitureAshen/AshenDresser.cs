@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAshen
+namespace CalamityMod.Tiles.FurnitureAshen
 {
     public class AshenDresser : ModTile
     {

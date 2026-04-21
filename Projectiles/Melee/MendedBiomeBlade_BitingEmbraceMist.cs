@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.DataStructures;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class BitingEmbraceMist : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/MediumMist";
+        public override string Texture => "CalamityMod/Particles/MediumMist";
         public Player Owner => Main.player[Projectile.owner];
         public Color mistColor;
         public int variant = 0;
@@ -80,7 +80,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         {
             Main.spriteBatch.EnterShaderRegion(BlendState.Additive);
 
-            var tex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/MediumMist").Value;
+            var tex = Request<Texture2D>("CalamityMod/Particles/MediumMist").Value;
             Rectangle frame = tex.Frame(1, 3, 0, variant);
             Main.EntitySpriteDraw(tex, Projectile.position - Main.screenPosition, frame, mistColor * 0.5f * ((255f - Projectile.alpha) / 255f), Projectile.rotation, frame.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
 

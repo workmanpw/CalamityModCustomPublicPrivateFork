@@ -1,16 +1,16 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Balancing;
-using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
-using CalamityModCustomPublicPrivateFork.EntitySources;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Items.Mounts;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Balancing;
+using CalamityMod.CalPlayer.Dashes;
+using CalamityMod.EntitySources;
+using CalamityMod.Enums;
+using CalamityMod.Items.Mounts;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer
+namespace CalamityMod.CalPlayer
 {
     public partial class CalamityPlayer : ModPlayer
     {

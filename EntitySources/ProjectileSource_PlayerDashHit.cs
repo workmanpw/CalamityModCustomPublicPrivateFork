@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 
-namespace CalamityModCustomPublicPrivateFork.EntitySources
+namespace CalamityMod.EntitySources
 {
     // Ozzatron 10JUL2023: couldn't figure out a clever way to remove this one, because it's used for some esoteric function
     public class ProjectileSource_PlayerDashHit : IEntitySource

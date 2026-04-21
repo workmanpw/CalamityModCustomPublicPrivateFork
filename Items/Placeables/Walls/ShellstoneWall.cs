@@ -1,9 +1,9 @@
 using Terraria.ModLoader;
-using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
+using WallTiles = CalamityMod.Walls;
 using Terraria.ID;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityMod.Items.Placeables.SunkenSea;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
+namespace CalamityMod.Items.Placeables.Walls
 {
     public class ShellstoneWall : ModItem, ILocalizedModType
     {

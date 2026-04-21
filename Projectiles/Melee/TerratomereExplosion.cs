@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class TerratomereExplosion : ModProjectile, IAdditiveDrawer, ILocalizedModType
     {
@@ -55,7 +55,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public void AdditiveDraw(SpriteBatch spriteBatch)
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/XerocLight").Value;
+            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityMod/Skies/XerocLight").Value;
             Rectangle frame = texture.Frame(3, 6, Projectile.frame / 6, Projectile.frame % 6);
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Vector2 origin = frame.Size() * 0.5f;

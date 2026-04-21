@@ -1,11 +1,11 @@
 using Microsoft.Xna.Framework;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.Utilities;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class GemTechYellowShard : ModProjectile, ILocalizedModType
     {
@@ -14,7 +14,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public ref float Time => ref Projectile.ai[0];
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/GemTechYellowGem";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/GemTechYellowGem";
 
         public override void SetDefaults()
         {

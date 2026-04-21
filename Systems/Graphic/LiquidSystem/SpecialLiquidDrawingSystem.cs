@@ -13,7 +13,7 @@ using Terraria.Graphics.Light;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
+namespace CalamityMod.Systems.Graphic.LiquidSystem
 {
     [Autoload(Side = ModSide.Client)]
     public sealed class SpecialLiquidDrawingSystem : ModSystem

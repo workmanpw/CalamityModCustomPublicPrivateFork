@@ -1,11 +1,11 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
+using CalamityMod.Graphics.Metaballs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class SmallSpirit : ModProjectile, ILocalizedModType
     {
@@ -30,7 +30,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             }
         }
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetStaticDefaults()
         {

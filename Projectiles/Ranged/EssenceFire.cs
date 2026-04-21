@@ -1,18 +1,18 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class EssenceFire : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/FireProj";
+        public override string Texture => "CalamityMod/Projectiles/FireProj";
 
         public static int Lifetime => 96;
         public static int Fadetime => 80;
@@ -62,7 +62,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 {
                     bool LowVel = Main.rand.NextBool() ? false : true;
                     float size = Utils.Remap(Utils.GetLerpValue(0f, Lifetime, Time), 0.2f, 0.5f, 0.25f, 1f);
-                    Particle trail = new CustomSpark(Projectile.Center, Projectile.velocity + Vector2.UnitY * Main.rand.NextFloat(-10, -24) * size, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 14, 0.9f * size, (Main.rand.NextBool() ? Color.DarkBlue : Color.BlueViolet) * 0.5f, new Vector2(Main.rand.NextFloat(2, 3), 1f), true, true, shrinkSpeed: 0.3f, glowOpacity: 0.5f);
+                    Particle trail = new CustomSpark(Projectile.Center, Projectile.velocity + Vector2.UnitY * Main.rand.NextFloat(-10, -24) * size, "CalamityMod/Particles/BloomCircle", false, 14, 0.9f * size, (Main.rand.NextBool() ? Color.DarkBlue : Color.BlueViolet) * 0.5f, new Vector2(Main.rand.NextFloat(2, 3), 1f), true, true, shrinkSpeed: 0.3f, glowOpacity: 0.5f);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
             }
@@ -99,7 +99,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D fire = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D mist = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/MediumMist").Value;
+            Texture2D mist = ModContent.Request<Texture2D>("CalamityMod/Particles/MediumMist").Value;
 
             // The conga line of colors to sift through
             Color color1 = new Color(160, 100, 255, 200);

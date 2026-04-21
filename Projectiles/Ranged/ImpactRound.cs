@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Particles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class ImpactRound : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/AMRShot";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/AMRShot";
 
         private bool initialized = false;
         public static int Lifetime = 600;
@@ -76,7 +76,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         }
         public override void OnKill(int timeLeft)
         {
-            Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.OrangeRed, Utils.GetLerpValue(0, 3, 1, true)), "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.05f, 10);
+            Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.OrangeRed, Utils.GetLerpValue(0, 3, 1, true)), "CalamityMod/Particles/ShatteredExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, 0.05f, 10);
             GeneralParticleHandler.SpawnParticle(explosion);
             for (int i = 0; i <= 6; i++)
             {

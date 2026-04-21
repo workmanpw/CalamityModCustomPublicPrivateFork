@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Ranged;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class ClockworkBowHoldout : ModProjectile
     {
@@ -25,7 +25,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
         private float angularSpread = MathHelper.ToRadians(16);
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/ClockworkBow";
+        public override string Texture => "CalamityMod/Items/Weapons/Ranged/ClockworkBow";
 
         public override void SetDefaults()
         {
@@ -225,7 +225,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 }
 
                 Color Transparency = Color.White * (1 - Shift);
-                var BoltTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/PrecisionBolt").Value;
+                var BoltTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/PrecisionBolt").Value;
                 Vector2 PointingTo = new Vector2((float)Math.Cos(Projectile.rotation + BoltAngle), (float)Math.Sin(Projectile.rotation + BoltAngle)); //It's called trigonometry we do a little trigonometry
                 Vector2 ShiftDown = PointingTo.RotatedBy(-MathHelper.PiOver2);
                 float FlipFactor = Owner.direction < 0 ? MathHelper.Pi : 0f;

@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class HeliumFlashBlast : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         private static float ExplosionRadius = 500.0f;
         private static float ParticleRadius = 210.0f;
@@ -51,17 +51,17 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             {
                 for (int i = 0; i < 6; i++)
                 { 
-                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 3f, 1f, 35, true);
+                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 3f, 1f, 35, true);
                     GeneralParticleHandler.SpawnParticle(blastRing);
-                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1.5f, 0.5f, 35, true);
+                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1.5f, 0.5f, 35, true);
                     GeneralParticleHandler.SpawnParticle(blastRing2);
                 }
-                Particle p = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orange * 0.5f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-5, 5), 5.5f, 0f, 20);
+                Particle p = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orange * 0.5f, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-5, 5), 5.5f, 0f, 20);
                 GeneralParticleHandler.SpawnParticle(p);
             }
             if (currentFrame == 5)
             {
-                Particle p = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orange * 0.5f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-5, 5), 4.5f, 0f, 15);
+                Particle p = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Orange * 0.5f, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-5, 5), 4.5f, 0f, 15);
                 GeneralParticleHandler.SpawnParticle(p);
             }
             if (currentFrame == 10)
@@ -79,23 +79,23 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             if (currentFrame == 19)
             {
                 Owner.SetScreenshake(8f);
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashExplodeNoMetal") { Volume = 1f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/HeliumFlashExplodeNoMetal") { Volume = 1f }, Projectile.Center);
                 for (int i = 0; i < 12; i++)
                 {
-                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.Orange, Utils.GetLerpValue(0, 12, i, true)), "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, ParticleRadius * 0.0006f + 0.08f + 0.04f * i, (int)(30 - i * 1.3f));
+                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.Orange, Utils.GetLerpValue(0, 12, i, true)), "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, ParticleRadius * 0.0006f + 0.08f + 0.04f * i, (int)(30 - i * 1.3f));
                     GeneralParticleHandler.SpawnParticle(explosion);
                 }
                 for (int i = 0; i < 3; i++)
                 {
-                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.OrangeRed, Utils.GetLerpValue(0, 3, i, true)), "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, ParticleRadius * 0.0006f + 0.093f + 0.04f * i * 4, (int)(30 - i * 2f));
+                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Red, Color.OrangeRed, Utils.GetLerpValue(0, 3, i, true)), "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-5, 5), 0f, ParticleRadius * 0.0006f + 0.093f + 0.04f * i * 4, (int)(30 - i * 2f));
                     GeneralParticleHandler.SpawnParticle(explosion);
                 }
 
                 for (int i = 0; i < 2; i++)
                 {
-                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f, 5f, 35, true);
+                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f, 5f, 35, true);
                     GeneralParticleHandler.SpawnParticle(blastRing);
-                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.5f, 2f, 35, true);
+                    Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.5f, 2f, 35, true);
                     GeneralParticleHandler.SpawnParticle(blastRing2);
                 }
                 for (int i = 0; i < 4; i++)

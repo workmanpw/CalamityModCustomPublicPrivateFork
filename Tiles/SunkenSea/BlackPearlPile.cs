@@ -1,8 +1,8 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Sounds;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.Abyss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea
+namespace CalamityMod.Tiles.SunkenSea
 {
     public class BlackPearlPile : ModTile
     {
@@ -19,7 +19,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea
 
         public override void SetStaticDefaults()
         {
-            GlintTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/BlackPearlPile_Glint");
+            GlintTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/BlackPearlPile_Glint");
 
             GlintDir = new Vector2(1f, -1f);
             GlintDir.Normalize();

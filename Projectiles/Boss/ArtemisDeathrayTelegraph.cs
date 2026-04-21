@@ -5,12 +5,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class ArtemisDeathrayTelegraph : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public float TelegraphDelay
         {
@@ -93,7 +93,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
             if (TelegraphDelay >= TelegraphTotalTime)
                 return true;
 
-            Texture2D laserTelegraph = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/LaserWallTelegraphBeam").Value;
+            Texture2D laserTelegraph = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/LaserWallTelegraphBeam").Value;
             float yScale = 2f;
             if (TelegraphDelay < TelegraphFadeTime)
                 yScale = MathHelper.Lerp(0f, 2f, TelegraphDelay / 15f);

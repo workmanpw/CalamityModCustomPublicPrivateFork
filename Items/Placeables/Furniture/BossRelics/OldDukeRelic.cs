@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics
+namespace CalamityMod.Items.Placeables.Furniture.BossRelics
 {
     public class OldDukeRelic : ModItem, ILocalizedModType
     {

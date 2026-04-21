@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.CalPlayer;
+using CalamityMod.DataStructures;
+using CalamityMod.Dusts;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -15,7 +15,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class SepticSkewerHarpoon : ModProjectile, ILocalizedModType
     {
@@ -127,7 +127,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 int endTime = startTime + (int)((pullingTarget ? 45 : ripped ? 25 : 85));
                 if (setPosition)
                 {
-                    SoundStyle pull3 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ChainPull");
+                    SoundStyle pull3 = new("CalamityMod/Sounds/Item/ChainPull");
                     SoundEngine.PlaySound(pull3 with { Pitch = (Main.rand.NextFloat(0, 0.05f)), Volume = (Projectile.numHits > 0 && ripped ? 0.6f : 0.4f) }, Owner.Center);
 
                     for (int i = 0; i < Main.maxNPCs; i++)
@@ -142,15 +142,15 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                         float ripIntensity = ripped ? 2 : 1;
                         if (ripped)
                         {
-                            SoundStyle pull = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Perforator/PerfHiveIchorShoot");
-                            SoundStyle pull2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FinalDawnSlash");
+                            SoundStyle pull = new("CalamityMod/Sounds/Custom/Perforator/PerfHiveIchorShoot");
+                            SoundStyle pull2 = new("CalamityMod/Sounds/Item/FinalDawnSlash");
                             SoundEngine.PlaySound(pull with { Pitch = Main.rand.NextFloat(0, -0.2f), Volume = 0.7f }, Projectile.Center);
                             SoundEngine.PlaySound(pull2 with { Pitch = Main.rand.NextFloat(0.3f, 0.4f), Volume = 0.9f }, Projectile.Center);
                         }
                         else
                         {
-                            SoundStyle pull = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Perforator/PerfHiveShoot3");
-                            SoundStyle pull2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumKnifeTileHit2");
+                            SoundStyle pull = new("CalamityMod/Sounds/Custom/Perforator/PerfHiveShoot3");
+                            SoundStyle pull2 = new("CalamityMod/Sounds/Item/WulfrumKnifeTileHit2");
                             SoundEngine.PlaySound(pull with { Pitch = -0.2f, Volume = 0.6f }, Projectile.Center);
                             SoundEngine.PlaySound(pull2 with { Pitch = -0.6f, Volume = 0.5f }, Projectile.Center);
                         }
@@ -192,21 +192,21 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                     {
                         if (Projectile.ai[1] == 0 && strongEnemy)
                         {
-                            SoundStyle die2 = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/PerfHiveDeath");
+                            SoundStyle die2 = new("CalamityMod/Sounds/NPCKilled/PerfHiveDeath");
                             SoundEngine.PlaySound(die2 with { Pitch = Main.rand.NextFloat(0.1f, 0.2f), Volume = 0.95f }, Projectile.Center);
-                            SoundStyle die3 = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/PerfLargeDeath");
+                            SoundStyle die3 = new("CalamityMod/Sounds/NPCKilled/PerfLargeDeath");
                             SoundEngine.PlaySound(die3 with { Pitch = Main.rand.NextFloat(0f, 0.1f), Volume = 0.85f }, Projectile.Center);
 
                             for (int i = 0; i < 3; i++)
                             {
-                                Particle orb7 = new CustomPulse(Projectile.Center, Vector2.Zero, !ChildSafety.Disabled ? Color.LimeGreen : bColor, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, (0.5f + i * 0.2f), 30, false);
+                                Particle orb7 = new CustomPulse(Projectile.Center, Vector2.Zero, !ChildSafety.Disabled ? Color.LimeGreen : bColor, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, (0.5f + i * 0.2f), 30, false);
                                 GeneralParticleHandler.SpawnParticle(orb7);
                             }
 
                             Owner.SetScreenshake(8.5f);
                         }
 
-                        SoundStyle die = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/PerfLargeDeath");
+                        SoundStyle die = new("CalamityMod/Sounds/NPCKilled/PerfLargeDeath");
                         SoundEngine.PlaySound(die with { Pitch = Main.rand.NextFloat(0.2f, 0.3f), Volume = 0.85f }, Projectile.Center);
                         float intensity = strongEnemy ? 1.2f : 0.5f;
                         for (int i = 0; i < (int)(40 * intensity); i++)
@@ -304,7 +304,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                     Vector2 sparkvelocity1 = sparkVelocity.RotatedByRandom(0.45f) * Main.rand.NextFloat(0.5f, 0.7f);
                     Particle spark1 = new LineParticle(Projectile.Center, sparkvelocity1, true, 40, sparkScale1, Main.rand.NextBool() ? (!ChildSafety.Disabled ? Color.LimeGreen : bColor) : Color.Green);
                     GeneralParticleHandler.SpawnParticle(spark1);
-                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/CeramicImpact", 2) with { Pitch = 0.4f, Volume = 0.5f }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/CeramicImpact", 2) with { Pitch = 0.4f, Volume = 0.5f }, Projectile.Center);
                 }
 
                 time = returnTime * 0.5f;
@@ -365,7 +365,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 canStick = false;
                 storedVelocity = Projectile.velocity;
                 Projectile.velocity = Vector2.Zero;
-                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumKnifeTileHit2");
+                SoundStyle sound = new("CalamityMod/Sounds/Item/WulfrumKnifeTileHit2");
                 SoundEngine.PlaySound(sound with { Volume = 0.5f, Pitch = Main.rand.NextFloat(-0.3f, -0.4f) }, Projectile.Center);
 
                 if (pullCheckValid)
@@ -374,11 +374,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                     hasLatchedTarget = true;
                     if ((chosenTarget.lifeMax >= Projectile.damage * 28f) || chosenTarget.boss)
                         strongEnemy = true;
-                    SoundStyle sound5 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashCoreImpact");
+                    SoundStyle sound5 = new("CalamityMod/Sounds/Item/HeliumFlashCoreImpact");
                     SoundEngine.PlaySound(sound5 with { Volume = 0.55f, Pitch = Main.rand.NextFloat(-0.3f, -0.4f) }, Projectile.Center);
                     if (strongEnemy)
                     {
-                        SoundStyle sound8 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MetalEcho");
+                        SoundStyle sound8 = new("CalamityMod/Sounds/Item/MetalEcho");
                         SoundEngine.PlaySound(sound8 with { Volume = 0.85f, Pitch = Main.rand.NextFloat(0.8f, 0.9f) }, Projectile.Center);
                     }
                 }
@@ -402,7 +402,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         public override bool PreDraw(ref Color lightColor)
         {
             Player Owner = Main.player[Projectile.owner];
-            Texture2D chain = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/SepticChain").Value;
+            Texture2D chain = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/SepticChain").Value;
             Vector2 end = Projectile.Center - storedVelocity.SafeNormalize(Vector2.UnitX) * 35;
 
             List<Vector2> controlPoints = new List<Vector2>

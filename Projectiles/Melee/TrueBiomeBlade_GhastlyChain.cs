@@ -1,18 +1,18 @@
 using System;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class GhastlyChain : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedChain";
+        public override string Texture => "CalamityMod/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedChain";
         public Player Owner => Main.player[Projectile.owner];
         public float Timer => 20 - Projectile.timeLeft;
 
@@ -59,7 +59,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D chainTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedChain").Value;
+            Texture2D chainTex = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedChain").Value;
 
 
             //Turn on additive blending

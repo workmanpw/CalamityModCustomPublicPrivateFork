@@ -1,13 +1,13 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class HomingGammaBullet : ModProjectile, ILocalizedModType
     {
@@ -15,7 +15,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
         private int targetNPC = -1;
         private List<int> previousNPCs = new List<int>() { -1 };
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Enemy/NuclearBulletMedium";
+        public override string Texture => "CalamityMod/Projectiles/Enemy/NuclearBulletMedium";
 
         public override void SetStaticDefaults()
         {

@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
+using CalamityMod.Tiles.SunkenSea;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureBasalt
+namespace CalamityMod.Tiles.FurnitureBasalt
 {
     public class BasaltSlab : ModTile
     {

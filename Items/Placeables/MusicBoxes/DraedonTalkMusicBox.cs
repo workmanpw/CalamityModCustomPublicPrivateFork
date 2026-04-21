@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.MusicBoxes
+namespace CalamityMod.Items.Placeables.MusicBoxes
 {
     public class DraedonTalkMusicBox : ModItem, ILocalizedModType
     {

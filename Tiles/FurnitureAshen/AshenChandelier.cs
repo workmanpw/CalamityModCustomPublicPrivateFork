@@ -7,7 +7,7 @@ using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAshen
+namespace CalamityMod.Tiles.FurnitureAshen
 {
     public class AshenChandelier : ModTile
     {

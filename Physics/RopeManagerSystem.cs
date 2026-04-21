@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 using BitOperations = System.Numerics.BitOperations;
 
-namespace CalamityModCustomPublicPrivateFork.Physics;
+namespace CalamityMod.Physics;
 
 public sealed class RopeManagerSystem : ModSystem
 {

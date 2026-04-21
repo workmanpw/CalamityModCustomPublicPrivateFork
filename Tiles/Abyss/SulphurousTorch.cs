@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
+namespace CalamityMod.Tiles.Abyss
 {
     public class SulphurousTorch : ModTile
     {
@@ -57,7 +57,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Abyss/SulphurousTorchFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Abyss/SulphurousTorchFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j, 2);
         }
 

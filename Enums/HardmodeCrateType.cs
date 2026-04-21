@@ -1,4 +1,4 @@
-namespace CalamityModCustomPublicPrivateFork.Enums
+namespace CalamityMod.Enums
 {
     public enum HardmodeCrateType
     {

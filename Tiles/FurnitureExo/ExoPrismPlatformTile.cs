@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo;
+using CalamityMod.Items.Placeables.FurnitureExo;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
+namespace CalamityMod.Tiles.FurnitureExo
 {
     public class ExoPrismPlatformTile : ModTile
     {
@@ -16,7 +16,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo
         {
             if (!Main.dedServ)
             {
-                GlowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureExo/ExoPrismPlatformTileGlow", AssetRequestMode.ImmediateLoad).Value;
+                GlowTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureExo/ExoPrismPlatformTileGlow", AssetRequestMode.ImmediateLoad).Value;
             }
             this.SetUpPlatform(ModContent.ItemType<ExoPrismPlatform>(), true);
             AnimationFrameHeight = 18;

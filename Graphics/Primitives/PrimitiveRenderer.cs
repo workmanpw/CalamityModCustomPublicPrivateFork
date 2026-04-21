@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives
+namespace CalamityMod.Graphics.Primitives
 {
     /// <summary>
     /// This manages rendering primitives in via the provided <see cref="RenderTrail"/> method.<br/><br/>

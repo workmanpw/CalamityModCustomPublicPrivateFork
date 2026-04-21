@@ -1,14 +1,14 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles;
+using CalamityMod.Items.Materials;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     [LegacyName("CursedCapper")]
     public class ThermoclineBlaster : ModItem, ILocalizedModType

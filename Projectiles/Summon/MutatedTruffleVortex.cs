@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class MutatedTruffleVortex : ModProjectile, ILocalizedModType
     {
@@ -58,7 +58,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
                 if (Projectile.soundDelay == 0)
                 {
                     Projectile.soundDelay = 174;
-                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeVortex") with { Volume = (Projectile.timeLeft > FadeoutTime) ? .4f : 0f }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/OldDukeVortex") with { Volume = (Projectile.timeLeft > FadeoutTime) ? .4f : 0f }, Projectile.Center);
                 }
             }
         }

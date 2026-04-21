@@ -1,29 +1,29 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Monoliths;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Potions;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs.TownNPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Systems;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -36,7 +36,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.OldDuke
+namespace CalamityMod.NPCs.OldDuke
 {
     [AutoloadBossHead]
     public class OldDuke : ModNPC
@@ -54,12 +54,12 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.OldDuke
         public int Phase = 0;
         public float NuclearOverlayVisual = 0f;
 
-        public static readonly SoundStyle HuffSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeHuff");
-        public static readonly SoundStyle RoarSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeRoar");
-        public static readonly SoundStyle VomitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeVomit");
-        public static readonly SoundStyle VortexSpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeVortexSpawn");
-        public static readonly SoundStyle DashSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeDash");
-        public static readonly SoundStyle DashSoundP3 = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/OldDukeDashP3");
+        public static readonly SoundStyle HuffSound = new("CalamityMod/Sounds/Custom/OldDukeHuff");
+        public static readonly SoundStyle RoarSound = new("CalamityMod/Sounds/Custom/OldDukeRoar");
+        public static readonly SoundStyle VomitSound = new("CalamityMod/Sounds/Custom/OldDukeVomit");
+        public static readonly SoundStyle VortexSpawnSound = new("CalamityMod/Sounds/Custom/OldDukeVortexSpawn");
+        public static readonly SoundStyle DashSound = new("CalamityMod/Sounds/Custom/OldDukeDash");
+        public static readonly SoundStyle DashSoundP3 = new("CalamityMod/Sounds/Custom/OldDukeDashP3");
         private static Color FireGreen = new Color(155, 255, 55);
         private SlotId RoarSoundSlot;
 
@@ -126,7 +126,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.OldDuke
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.OldDuke")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.OldDuke")
             });
         }
 
@@ -167,8 +167,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.OldDuke
 
                 SoundEngine.PlaySound(SoundID.DD2_BetsyFireballImpact, npc.Center);
                 SoundEngine.PlaySound(SoundID.DD2_BetsyFireballShot, npc.Center);
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(npc.Center, -npc.velocity / 3f, FireGreen, "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", new Vector2(0.4f, 1.2f), Vector2.Zero.AngleTo(npc.velocity) + (Main.rand.NextBool() ? 0 : -MathHelper.Pi), 0.05f, 0.2f, 20));
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(npc.Center, -npc.velocity / 2f, FireGreen, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", new Vector2(0.4f, 1.2f), Vector2.Zero.AngleTo(npc.velocity) + (Main.rand.NextBool() ? 0 : -MathHelper.Pi), 0.1f, 0.4f, 20));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(npc.Center, -npc.velocity / 3f, FireGreen, "CalamityMod/Particles/DustyCircleHardEdge", new Vector2(0.4f, 1.2f), Vector2.Zero.AngleTo(npc.velocity) + (Main.rand.NextBool() ? 0 : -MathHelper.Pi), 0.05f, 0.2f, 20));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(npc.Center, -npc.velocity / 2f, FireGreen, "CalamityMod/Particles/FlameExplosion", new Vector2(0.4f, 1.2f), Vector2.Zero.AngleTo(npc.velocity) + (Main.rand.NextBool() ? 0 : -MathHelper.Pi), 0.1f, 0.4f, 20));
             }
         }
         static void DoChargeVisual(NPC npc, int phase)
@@ -181,13 +181,13 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.OldDuke
             if (phase > 1)
             {
                 if (Math.Floor(VisualTimerSystem.GlobalVisualTimer % 6f) < 1f)
-                    GeneralParticleHandler.SpawnParticle(new CustomPulse(npc.Center, npc.velocity / 3f, col, "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", new Vector2(0.4f, 1f), Vector2.Zero.AngleTo(npc.velocity) + (Main.rand.NextBool() ? 0 : -MathHelper.Pi), 0.04f, 0.1f, 20));
+                    GeneralParticleHandler.SpawnParticle(new CustomPulse(npc.Center, npc.velocity / 3f, col, "CalamityMod/Particles/DustyCircleHardEdge", new Vector2(0.4f, 1f), Vector2.Zero.AngleTo(npc.velocity) + (Main.rand.NextBool() ? 0 : -MathHelper.Pi), 0.04f, 0.1f, 20));
 
                 (npc.ModNPC as OldDuke).NuclearOverlayVisual = 1f;
             }
 
             if (Main.rand.NextBool())
-                GeneralParticleHandler.SpawnParticle(new CustomSpark(npc.Center - (npc.velocity * 2f), npc.velocity / 2f, "CalamityModCustomPublicPrivateFork/Particles/ForwardSmear", false, 10, Main.rand.NextFloat(0.3f, 0.5f), col, new Vector2(1f, Main.rand.NextFloat(1.45f, 1.6f)), fadeIn: true, extraRotation: MathHelper.ToRadians(180f)));
+                GeneralParticleHandler.SpawnParticle(new CustomSpark(npc.Center - (npc.velocity * 2f), npc.velocity / 2f, "CalamityMod/Particles/ForwardSmear", false, 10, Main.rand.NextFloat(0.3f, 0.5f), col, new Vector2(1f, Main.rand.NextFloat(1.45f, 1.6f)), fadeIn: true, extraRotation: MathHelper.ToRadians(180f)));
         }
         #endregion
 
@@ -378,7 +378,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.OldDuke
                     }
 
                     Vector2 pulsePos = NPC.Center + NPC.rotation.ToRotationVector2() * 88f * NPC.direction;
-                    CustomPulse pulse = new(pulsePos, Vector2.Zero, Color.White * 0.2f, "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.125f, 30);
+                    CustomPulse pulse = new(pulsePos, Vector2.Zero, Color.White * 0.2f, "CalamityMod/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.125f, 30);
                     GeneralParticleHandler.SpawnParticle(pulse);
                 }
 
@@ -636,7 +636,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.OldDuke
 
                         float a = MathHelper.Lerp(1f, 0f, factor);
 
-                        GeneralParticleHandler.SpawnParticle(new CustomPulse(mouthCenter, Vector2.Zero, new Color(55, 55, 55).MultiplyRGBA(new Color(a, a, a, a)), "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.08f + (0.15f * factor), 10));
+                        GeneralParticleHandler.SpawnParticle(new CustomPulse(mouthCenter, Vector2.Zero, new Color(55, 55, 55).MultiplyRGBA(new Color(a, a, a, a)), "CalamityMod/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.08f + (0.15f * factor), 10));
                     }
                 }
 

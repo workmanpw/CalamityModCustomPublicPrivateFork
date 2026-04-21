@@ -5,12 +5,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class AshenStalactiteProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/AshenStalactite";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/AshenStalactite";
 
         public override void SetDefaults()
         {

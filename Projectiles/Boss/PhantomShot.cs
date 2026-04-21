@@ -6,12 +6,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class PhantomShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/PhantomHookShot";
+        public override string Texture => "CalamityMod/Projectiles/Boss/PhantomHookShot";
 
         public override void SetDefaults()
         {

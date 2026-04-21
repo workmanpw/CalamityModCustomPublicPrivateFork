@@ -1,19 +1,19 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.NPCs.AstrumDeus;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class DeusMine : ModProjectile, ILocalizedModType
     {
-        public static readonly SoundStyle ExplodeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AstrumDeus/DeusMineExplode");
+        public static readonly SoundStyle ExplodeSound = new("CalamityMod/Sounds/Custom/AstrumDeus/DeusMineExplode");
 
         public new string LocalizationCategory => "Projectiles.Boss";
         private const int MaxTimeLeft = 600;

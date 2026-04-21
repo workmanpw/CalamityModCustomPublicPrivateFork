@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using CalamityModCustomPublicPrivateFork.ILEditing;
+using CalamityMod.ILEditing;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Mono.Cecil;
@@ -15,7 +15,7 @@ using Terraria.GameContent.Liquid;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem
+namespace CalamityMod.Systems.Graphic.LiquidSystem
 {
     [Autoload(Side = ModSide.Client)]
     public sealed partial class ModLavaStyleSystem : ModSystem

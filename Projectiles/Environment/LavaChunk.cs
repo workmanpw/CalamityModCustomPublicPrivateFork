@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Environment
+namespace CalamityMod.Projectiles.Environment
 {
     public class LavaChunk : ModProjectile, ILocalizedModType
     {

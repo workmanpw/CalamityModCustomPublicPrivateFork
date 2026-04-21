@@ -1,18 +1,18 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class BrimstoneFireFriendly : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/FireProj";
+        public override string Texture => "CalamityMod/Projectiles/FireProj";
 
         public static int Lifetime => 60;
         public static int Fadetime => 50;
@@ -101,7 +101,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D fire = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D mist = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/MediumMist").Value;
+            Texture2D mist = ModContent.Request<Texture2D>("CalamityMod/Particles/MediumMist").Value;
 
             // The conga line of colors to sift through
             Color color1 = new Color(255, 110, 100, 200);

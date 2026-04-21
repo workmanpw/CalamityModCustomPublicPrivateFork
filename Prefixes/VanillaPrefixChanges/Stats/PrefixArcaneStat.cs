@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Prefixes.VanillaPrefixChanges.Stats
+namespace CalamityMod.Prefixes.VanillaPrefixChanges.Stats
 {
     public struct PrefixArcaneStat(int maxManaBonus, float magicDamageBonus, float manaCostReductionBonus) : IVanillaPrefixStat
     {

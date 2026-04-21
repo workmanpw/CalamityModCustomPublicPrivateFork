@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Fountains;
-using CalamityModCustomPublicPrivateFork.Waters;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Placeables.Furniture.Fountains;
+using CalamityMod.Waters;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Fountains
+namespace CalamityMod.Tiles.Furniture.Fountains
 {
     public class AstralFountainTile : ModTile
     {

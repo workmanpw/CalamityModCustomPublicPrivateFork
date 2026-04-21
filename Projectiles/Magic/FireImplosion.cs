@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,12 +9,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class FireImplosion : ModProjectile, ILocalizedModType // Used by both Flare bolt and Frigidflash Bolt
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public Vector2 pushVelocity;
         public float customKnockback = 0;
         public int time = 0;
@@ -40,21 +40,21 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             {
                 Projectile.scale = 0;
                 Projectile.alpha = 0;
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/OpalChargedFire") with { Volume = 0.35f, Pitch = 0.7f }, Projectile.Center);
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/FireImplosion") with { Volume = 0.45f, Pitch = Main.rand.NextFloat(0.2f, 0.35f) }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/OpalChargedFire") with { Volume = 0.35f, Pitch = 0.7f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/FireImplosion") with { Volume = 0.45f, Pitch = Main.rand.NextFloat(0.2f, 0.35f) }, Projectile.Center);
                 customKnockback = Math.Abs(Projectile.knockBack);
                 Projectile.knockBack = 0;
 
                 for (int i = 0; i < 3; i++)
                 {
-                    Particle orb1 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 1.1f + i * 0.1f, 18);
+                    Particle orb1 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 1.1f + i * 0.1f, 18);
                     GeneralParticleHandler.SpawnParticle(orb1);
                 }
                 float rot = Main.rand.NextFloat(-2, 2);
                 for (int i = 0; i < 8; i++)
                 {
                     Vector2 velocity = (MathHelper.TwoPi * i / 8f).ToRotationVector2().RotatedBy(rot) * 13f;
-                    Particle trail = new CustomSpark(Projectile.Center + velocity * 3, velocity * 0.5f, "CalamityModCustomPublicPrivateFork/Particles/FireTypeParticle", false, 35, 1.5f, Color.OrangeRed, new Vector2(1, 1.3f), true, false, shrinkSpeed: 0.15f);
+                    Particle trail = new CustomSpark(Projectile.Center + velocity * 3, velocity * 0.5f, "CalamityMod/Particles/FireTypeParticle", false, 35, 1.5f, Color.OrangeRed, new Vector2(1, 1.3f), true, false, shrinkSpeed: 0.15f);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
             }
@@ -72,12 +72,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             {
                 if ((frigidFlash && Projectile.timeLeft % 3 == 0) || !frigidFlash)
                 {
-                    Particle fx = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(0.3f, 6), "CalamityModCustomPublicPrivateFork/Particles/FireTypeParticle", false, 22, Main.rand.NextFloat(0.7f, 1.2f), Color.OrangeRed, new Vector2(0.8f, 1f), true, false);
+                    Particle fx = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(0.3f, 6), "CalamityMod/Particles/FireTypeParticle", false, 22, Main.rand.NextFloat(0.7f, 1.2f), Color.OrangeRed, new Vector2(0.8f, 1f), true, false);
                     GeneralParticleHandler.SpawnParticle(fx);
                 }
                 if (frigidFlash)
                 {
-                    Particle fx2 = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(0.3f, 6), "CalamityModCustomPublicPrivateFork/Particles/IceTypeParticle", false, 22, Main.rand.NextFloat(0.7f, 1.2f), Color.DeepSkyBlue, new Vector2(0.8f, 1f), true, false, shrinkSpeed: -0.1f);
+                    Particle fx2 = new CustomSpark(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(0.3f, 6), "CalamityMod/Particles/IceTypeParticle", false, 22, Main.rand.NextFloat(0.7f, 1.2f), Color.DeepSkyBlue, new Vector2(0.8f, 1f), true, false, shrinkSpeed: -0.1f);
                     GeneralParticleHandler.SpawnParticle(fx2);
                 }
             }
@@ -118,7 +118,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         {
             if (frigidFlash)
             {
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianDash") with { Volume = 1, Pitch = -0.2f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianDash") with { Volume = 1, Pitch = -0.2f }, Projectile.Center);
                 SoundEngine.PlaySound(SoundID.DeerclopsIceAttack with { Volume = 0.85f, Pitch = 0.1f }, Projectile.Center);
 
                 // Create Blast
@@ -139,7 +139,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                 for (int i = 0; i < 8; i++)
                 {
                     Vector2 velocity = (MathHelper.TwoPi * i / 8f).ToRotationVector2().RotatedBy(rot) * 14f;
-                    Particle trail = new CustomSpark(Projectile.Center + velocity * 3, velocity * 0.5f, "CalamityModCustomPublicPrivateFork/Particles/IceTypeParticle", false, 32, 1.3f, Color.Lerp(Color.DeepSkyBlue, Color.White, 0.5f), new Vector2(1.2f, 1.8f), true, false, shrinkSpeed: -0.27f);
+                    Particle trail = new CustomSpark(Projectile.Center + velocity * 3, velocity * 0.5f, "CalamityMod/Particles/IceTypeParticle", false, 32, 1.3f, Color.Lerp(Color.DeepSkyBlue, Color.White, 0.5f), new Vector2(1.2f, 1.8f), true, false, shrinkSpeed: -0.27f);
                     GeneralParticleHandler.SpawnParticle(trail);
 
                     Dust dust = Dust.NewDustPerfect(Projectile.Center, ModContent.DustType<LightDust>(), velocity.RotatedBy(MathHelper.ToRadians(22.5f)) * 1.2f);
@@ -156,9 +156,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                 }
                 for (int i = 0; i < 5; i++)
                 {
-                    Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.3f, 1.1f, 25);
+                    Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.OrangeRed, "CalamityMod/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.3f, 1.1f, 25);
                     GeneralParticleHandler.SpawnParticle(orb);
-                    Particle orb1 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.DeepSkyBlue, Color.White, i * 0.15f), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.6f, 0.8f - i * 0.07f, 20);
+                    Particle orb1 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.DeepSkyBlue, Color.White, i * 0.15f), "CalamityMod/Particles/BloomCircle", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.6f, 0.8f - i * 0.07f, 20);
                     GeneralParticleHandler.SpawnParticle(orb1);
                 }
             }
@@ -172,7 +172,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             if (boomTime < 1)
                 return false;
             float fade = Utils.GetLerpValue(0, 20, Projectile.timeLeft, true);
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomRing").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomRing").Value;
             Color useColor = frigidFlash ? Color.Lerp(Color.DeepSkyBlue, Color.OrangeRed, fade) : Color.OrangeRed;
 
             for (int i = 0; i < 15; i++)

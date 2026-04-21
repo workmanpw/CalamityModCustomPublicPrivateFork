@@ -1,11 +1,11 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -18,17 +18,17 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.CalClone
+namespace CalamityMod.NPCs.CalClone
 {
     [AutoloadBossHead]
     public class Cataclysm : ModNPC
     {
         public static Asset<Texture2D> GlowTexture;
 
-        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CalamitasClone/CataclysmHit", 3);
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CalamitasClone/CataclysmDeath");
-        public static readonly SoundStyle FlamethrowerStart = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CalamitasClone/BrimstoneFlamethrowerCast");
-        public static readonly SoundStyle FlamethrowerLoop = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CalamitasClone/BrimstoneFlamethrowerLoop");
+        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/Custom/CalamitasClone/CataclysmHit", 3);
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/Custom/CalamitasClone/CataclysmDeath");
+        public static readonly SoundStyle FlamethrowerStart = new("CalamityMod/Sounds/Custom/CalamitasClone/BrimstoneFlamethrowerCast");
+        public static readonly SoundStyle FlamethrowerLoop = new("CalamityMod/Sounds/Custom/CalamitasClone/BrimstoneFlamethrowerLoop");
 
         public override void SetStaticDefaults()
         {
@@ -85,7 +85,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.CalClone
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.NightTime,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Cataclysm")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Cataclysm")
             });
         }
 

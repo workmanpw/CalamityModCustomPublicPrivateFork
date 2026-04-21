@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.Crabulon;
+using CalamityMod.Events;
+using CalamityMod.NPCs.Crabulon;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     public class DecapoditaSprout : ModItem, ILocalizedModType
     {

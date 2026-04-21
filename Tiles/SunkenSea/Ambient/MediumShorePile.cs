@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
+namespace CalamityMod.Tiles.SunkenSea.Ambient
 {
     public class MediumShorePile : ModTile
     {

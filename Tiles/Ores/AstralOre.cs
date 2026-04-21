@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Materials;
+using CalamityMod.Tiles.Astral;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Ores
+namespace CalamityMod.Tiles.Ores
 {
     public class AstralOre : ModTile
     {

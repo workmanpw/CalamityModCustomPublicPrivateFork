@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureStatigel;
+using CalamityMod.Tiles.FurnitureStatigel;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureStatigel
+namespace CalamityMod.Items.Placeables.FurnitureStatigel
 {
     [LegacyName("StatigelWorkbench")]
     public class StatigelWorkBench : ModItem, ILocalizedModType

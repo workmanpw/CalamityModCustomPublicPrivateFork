@@ -1,9 +1,9 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
+using CalamityMod.NPCs.TownNPCs;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class WantToRefundReforgesPacket : CalamityPacket
     {

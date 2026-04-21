@@ -1,8 +1,8 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath
+namespace CalamityMod.NPCs.PlaguebringerGoliath
 {
     public class PlagueHomingMissile : ModNPC
     {
@@ -24,7 +24,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath
             NPCID.Sets.TrailingMode[Type] = 1;
             if (!Main.dedServ)
             {
-                GlowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/PlaguebringerGoliath/PlagueHomingMissileGlow", AssetRequestMode.AsyncLoad);
+                GlowTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/PlaguebringerGoliath/PlagueHomingMissileGlow", AssetRequestMode.AsyncLoad);
             }
         }
 

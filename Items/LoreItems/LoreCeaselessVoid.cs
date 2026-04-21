@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Rarities;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.LoreItems
+namespace CalamityMod.Items.LoreItems
 {
     [LegacyName("KnowledgeSentinels")]
     public class LoreCeaselessVoid : LoreItem

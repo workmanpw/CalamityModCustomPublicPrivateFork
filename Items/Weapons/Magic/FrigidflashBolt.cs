@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,13 +8,13 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class FrigidflashBolt : ModItem, ILocalizedModType
     {
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FrigidflashUse");
-        public static readonly SoundStyle ProjDeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FrigidflashDeath");
-        public static readonly SoundStyle ChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FrigidflashCharge");
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/FrigidflashUse");
+        public static readonly SoundStyle ProjDeathSound = new("CalamityMod/Sounds/Item/FrigidflashDeath");
+        public static readonly SoundStyle ChargeSound = new("CalamityMod/Sounds/Item/FrigidflashCharge");
 
         public new string LocalizationCategory => "Items.Weapons.Magic";
         public override void SetStaticDefaults()

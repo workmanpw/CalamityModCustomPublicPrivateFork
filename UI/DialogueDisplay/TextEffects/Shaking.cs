@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.TextEffects
+namespace CalamityMod.UI.DialogueDisplay.TextEffects
 {
     internal class Shaking : TextEffect
     {

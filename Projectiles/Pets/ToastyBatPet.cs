@@ -1,13 +1,13 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
+namespace CalamityMod.Projectiles.Pets
 {
     public class ToastyBatPet : ModProjectile, ILocalizedModType
     {
@@ -82,7 +82,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
             if (Main.rand.NextBool((int)(10 - 7 * speedMult)) || speedMult >= 1)
             {
                 Vector2 vel = Vector2.One.RotatedByRandom(MathHelper.TwoPi);
-                Particle fireFlake = new CustomSpark(Projectile.Center + vel * 3, vel * Main.rand.NextFloat(0.1f, 0.3f) + Projectile.velocity * Main.rand.NextFloat(0.1f, 0.4f), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, Main.rand.Next(35, 45), Main.rand.NextFloat(0.3f, 0.45f), effectColor * 0.2f, new Vector2(1f, 1f), true, true, glowOpacity: 0.2f, extraRotation: Main.rand.NextFloat(0, MathHelper.TwoPi), noShrink: true, spin: Main.rand.NextFloat(-0.2f, 0.2f));
+                Particle fireFlake = new CustomSpark(Projectile.Center + vel * 3, vel * Main.rand.NextFloat(0.1f, 0.3f) + Projectile.velocity * Main.rand.NextFloat(0.1f, 0.4f), "CalamityMod/Particles/BloomCircle", false, Main.rand.Next(35, 45), Main.rand.NextFloat(0.3f, 0.45f), effectColor * 0.2f, new Vector2(1f, 1f), true, true, glowOpacity: 0.2f, extraRotation: Main.rand.NextFloat(0, MathHelper.TwoPi), noShrink: true, spin: Main.rand.NextFloat(-0.2f, 0.2f));
                 GeneralParticleHandler.SpawnParticle(fireFlake);
             }
 
@@ -114,7 +114,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D texture = ModContent.Request<Texture2D>(Texture).Value;
-            Texture2D glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
 
             float sine = (float)Math.Sin((time * 0.08f / MathHelper.Pi) * 3);
 

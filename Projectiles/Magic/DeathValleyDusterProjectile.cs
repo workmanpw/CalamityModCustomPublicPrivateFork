@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using System.Collections.Generic;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class DeathValleyDusterProjectile : ModProjectile, ILocalizedModType
     {
@@ -73,7 +73,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                                 dust2.noGravity = true;
                             }
 
-                            SoundStyle buff = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Ravager/RavagerPillarSummon");
+                            SoundStyle buff = new("CalamityMod/Sounds/Custom/Ravager/RavagerPillarSummon");
                             SoundEngine.PlaySound(buff with { Volume = 0.65f, Pitch = 0.8f }, player.Center);
                         }
                     }
@@ -169,7 +169,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                     for (int b = 0; b < 5; b++)
                     {
                         Color clr = Color.Lerp((Main.rand.NextBool() ? Color.Peru : Color.PeachPuff), Color.Black, Main.rand.NextFloat(0.25f, 0.45f));
-                        Particle sand = new CustomSpark(Projectile.Center, vel.RotatedByRandom(0.4f) * Main.rand.NextFloat(0.4f, 0.9f) * power, "CalamityModCustomPublicPrivateFork/Particles/SmallSmoke", false, Main.rand.Next(15, 25 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 7, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 2f)), false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.8f, 0.8f), affectedByLight: true);
+                        Particle sand = new CustomSpark(Projectile.Center, vel.RotatedByRandom(0.4f) * Main.rand.NextFloat(0.4f, 0.9f) * power, "CalamityMod/Particles/SmallSmoke", false, Main.rand.Next(15, 25 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 7, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 2f)), false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.8f, 0.8f), affectedByLight: true);
                         GeneralParticleHandler.SpawnParticle(sand);
                     }
                 }

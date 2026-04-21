@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge;
+using CalamityMod.CalPlayer;
+using CalamityMod.Events;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.NPCs.AquaticScourge;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     public class Seafood : ModItem, ILocalizedModType
     {

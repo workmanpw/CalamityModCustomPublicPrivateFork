@@ -1,13 +1,13 @@
 using Terraria.ModLoader;
 using Terraria.GameContent;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Tiles.SunkenSea.Ambient;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
+namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 {
     public class SmallGleamingBurrowsPileEcho : SmallGleamingBurrowsPile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/SmallGleamingBurrowsPile";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/SmallGleamingBurrowsPile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -17,7 +17,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
     }
     public class MediumGleamingBurrowsPileEcho : MediumGleamingBurrowsPile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/MediumGleamingBurrowsPile";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/MediumGleamingBurrowsPile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -27,7 +27,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
     }
     public class LargeGleamingBurrowsPileEcho : LargeGleamingBurrowsPile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/LargeGleamingBurrowsPile";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/LargeGleamingBurrowsPile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

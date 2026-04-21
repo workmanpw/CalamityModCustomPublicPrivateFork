@@ -1,11 +1,11 @@
 using System;
-using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
+using CalamityMod.NPCs.Cryogen;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class IceBlast : ModProjectile, ILocalizedModType
     {

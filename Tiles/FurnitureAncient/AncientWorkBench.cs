@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAncient
+namespace CalamityMod.Tiles.FurnitureAncient
 {
     [LegacyName("AncientWorkbench")]
     public class AncientWorkBench : ModTile

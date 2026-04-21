@@ -1,4 +1,4 @@
-namespace CalamityModCustomPublicPrivateFork.Dusts
+namespace CalamityMod.Dusts
 {
     public enum CalamityDusts : int
     {

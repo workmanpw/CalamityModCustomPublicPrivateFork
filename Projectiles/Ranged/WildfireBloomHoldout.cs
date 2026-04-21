@@ -1,6 +1,6 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,12 +8,12 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class WildfireBloomHoldout : BaseGunHoldoutProjectile
     {
         public override int AssociatedItemID => ModContent.ItemType<WildfireBloom>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/WildfireBloomHoldout";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/WildfireBloomHoldout";
         public override Vector2 GunTipPosition => base.GunTipPosition - Vector2.UnitX.RotatedBy(Projectile.rotation) * 17f - (Vector2.UnitY.RotatedBy(Projectile.rotation) * 7f * Projectile.spriteDirection * Owner.gravDir);
         public override float MaxOffsetLengthFromArm => 20f;
         public override float OffsetXUpwards => -5f;

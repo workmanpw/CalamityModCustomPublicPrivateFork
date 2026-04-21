@@ -1,26 +1,26 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Waters;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.CalPlayer;
+using CalamityMod.Events;
+using CalamityMod.Items.Placeables.Furniture;
+using CalamityMod.Systems;
+using CalamityMod.Waters;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.BiomeManagers
+namespace CalamityMod.BiomeManagers
 {
     public class SulphurousSeaBiome : ModBiome
     {
         public override ModWaterStyle WaterStyle => Main.zenithWorld ? PissWater.Instance : SulphuricWater.Instance;
-        public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => Main.zenithWorld ? ModContent.Find<ModSurfaceBackgroundStyle>("CalamityModCustomPublicPrivateFork/PissSeaSurfaceBGStyle") : ModContent.Find<ModSurfaceBackgroundStyle>("CalamityModCustomPublicPrivateFork/SulphurSeaSurfaceBGStyle");
+        public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => Main.zenithWorld ? ModContent.Find<ModSurfaceBackgroundStyle>("CalamityMod/PissSeaSurfaceBGStyle") : ModContent.Find<ModSurfaceBackgroundStyle>("CalamityMod/SulphurSeaSurfaceBGStyle");
         public override int BiomeTorchItemType => ModContent.ItemType<SulphurousTorch>();
         public override SceneEffectPriority Priority => SceneEffectPriority.BiomeHigh;
-        public override string BestiaryIcon => "CalamityModCustomPublicPrivateFork/BiomeManagers/SulphurousSeaIcon";
-        public override string BackgroundPath => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/SulphurBG";
-        public override string MapBackground => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/SulphurBG";
+        public override string BestiaryIcon => "CalamityMod/BiomeManagers/SulphurousSeaIcon";
+        public override string BackgroundPath => "CalamityMod/Backgrounds/MapBackgrounds/SulphurBG";
+        public override string MapBackground => "CalamityMod/Backgrounds/MapBackgrounds/SulphurBG";
 
         public override int Music
         {

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
+using CalamityMod.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations
+namespace CalamityMod.Tiles.Furniture.CraftingStations
 {
     [LegacyName("ProfanedBasin")]
     public class ProfanedCrucible : ModTile

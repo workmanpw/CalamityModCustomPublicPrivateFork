@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges
+namespace CalamityMod.Items.VanillaArmorChanges
 {
     public class TinArmorSetChange : VanillaArmorChange
     {

@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class StellarStrikerMeteor : ModProjectile, ILocalizedModType
     {
@@ -149,9 +149,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 c.noGravity = true;
                 c.color = Main.rand.NextBool(3) ? Color.PaleTurquoise : Color.Turquoise;
             }
-            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 2f, 1f, 25, true);
+            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor * 0.7f, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 2f, 1f, 25, true);
             GeneralParticleHandler.SpawnParticle(blastRing);
-            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f, 0.3f, 25, true);
+            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f, 0.3f, 25, true);
             GeneralParticleHandler.SpawnParticle(blastRing2);
         }
         public override bool? CanCutTiles() => false;

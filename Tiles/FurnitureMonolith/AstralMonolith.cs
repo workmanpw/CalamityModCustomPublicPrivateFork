@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
+using CalamityMod.Dusts;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.Astral;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith
+namespace CalamityMod.Tiles.FurnitureMonolith
 {
     public class AstralMonolith : ModTile
     {
@@ -79,7 +79,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith
             xPos += xOffset;
             yPos += yOffset;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureMonolith/AstralMonolithGlow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureMonolith/AstralMonolithGlow");
             Texture2D glowmask = GlowTexture.Value;
 
             Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);

@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Ores
+namespace CalamityMod.Items.Placeables.Ores
 {
     public class UelibloomOre : ModItem, ILocalizedModType
     {

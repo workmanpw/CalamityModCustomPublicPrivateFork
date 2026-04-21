@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Dyes
+namespace CalamityMod.Items.Dyes
 {
     public class DefiledFlameDye : BaseDye
     {

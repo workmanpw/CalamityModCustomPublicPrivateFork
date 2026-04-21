@@ -1,43 +1,43 @@
 using System;
 using System.Collections.Generic;
 using System.Threading;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Fishing;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.PermanentBoosters;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless;
-using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
-using CalamityModCustomPublicPrivateFork.World;
-using CalamityModCustomPublicPrivateFork.World.Planets;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Accessories.Vanity;
+using CalamityMod.Items.Fishing;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.PermanentBoosters;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Placeables;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Potions;
+using CalamityMod.Items.Potions.Alcohol;
+using CalamityMod.Items.SummonItems;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Items.Weapons.Typeless;
+using CalamityMod.NPCs.TownNPCs;
+using CalamityMod.Systems.Collections;
+using CalamityMod.Tiles.Ores;
+using CalamityMod.World;
+using CalamityMod.World.Planets;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.NPCs.CalamityGlobalTownNPC;
+using static CalamityMod.NPCs.CalamityGlobalTownNPC;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs
+namespace CalamityMod.NPCs
 {
     public partial class CalamityGlobalNPC : GlobalNPC
     {
-        public static readonly SoundStyle PlagueSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueUnleash");
+        public static readonly SoundStyle PlagueSound = new("CalamityMod/Sounds/Custom/PlagueUnleash");
 
         #region Modify NPC Loot Main Hook
         public override void ModifyNPCLoot(NPC npc, NPCLoot npcLoot)
@@ -1972,7 +1972,7 @@ DukeEditFailed:
                         {
                             World.Abyss.UnlockAllAbyssChests();
                         }
-                        string keysk = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.SkeletronAbyssChestNotification";
+                        string keysk = "Mods.CalamityMod.Status.Progression.SkeletronAbyssChestNotification";
                         CalamityUtils.BroadcastLocalizedText(keysk, new Color(76, 181, 76));
                     }
                     break;
@@ -1987,7 +1987,7 @@ DukeEditFailed:
                         if (CalamityServerConfig.Instance.EarlyHardmodeProgressionRework)
                             WorldGen.altarCount++;
 
-                        string key2 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.UglyBossText";
+                        string key2 = "Mods.CalamityMod.Status.Progression.UglyBossText";
                         Color messageColor2 = Color.Aquamarine;
                         CalamityUtils.BroadcastLocalizedText(key2, messageColor2);
                     }
@@ -2041,9 +2041,9 @@ DukeEditFailed:
                     // Spawn Perennial Ore if Plantera has never been killed
                     if (!NPC.downedPlantBoss && !BossRushEvent.BossRushActive)
                     {
-                        string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.PlantOreText";
+                        string key = "Mods.CalamityMod.Status.Progression.PlantOreText";
                         Color messageColor = Color.GreenYellow;
-                        string key2 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.SandSharkText3";
+                        string key2 = "Mods.CalamityMod.Status.Progression.SandSharkText3";
                         Color messageColor2 = Color.Goldenrod;
 
                         // TODO -- this should probably be moved to a thread like Aureus meteor
@@ -2080,7 +2080,7 @@ DukeEditFailed:
                         if (!Main.LocalPlayer.dead && Main.LocalPlayer.active)
                             SoundEngine.PlaySound(PlagueSound, Main.LocalPlayer.Center);
 
-                        string key3 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.BabyBossText";
+                        string key3 = "Mods.CalamityMod.Status.Progression.BabyBossText";
                         Color messageColor3 = Color.Lime;
 
                         CalamityUtils.BroadcastLocalizedText(key3, messageColor3);
@@ -2109,11 +2109,11 @@ DukeEditFailed:
                     SetNewShopVariable(new int[] { NPCID.Princess, ModContent.NPCType<Bandit>() }, NPC.downedMoonlord);
                     SetNewBossJustDowned(npc);
 
-                    string key5 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.MoonBossText";
+                    string key5 = "Mods.CalamityMod.Status.Progression.MoonBossText";
                     Color messageColor5 = Color.Orange;
-                    string key6 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.ProfanedBossText2";
+                    string key6 = "Mods.CalamityMod.Status.Progression.ProfanedBossText2";
                     Color messageColor6 = Color.Cyan;
-                    string key7 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.FutureOreText";
+                    string key7 = "Mods.CalamityMod.Status.Progression.FutureOreText";
                     Color messageColor7 = Color.LightGray;
 
                     // No progression stuff should run in Boss Rush.
@@ -2154,7 +2154,7 @@ DukeEditFailed:
         {
             if (!NPC.downedMechBossAny)
             {
-                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.HardmodeOreTier2Text";
+                string key = "Mods.CalamityMod.Status.Progression.HardmodeOreTier2Text";
                 Color messageColor = new Color(50, 255, 130);
                 CalamityUtils.SpawnOre(TileID.Mythril, 12E-05, 0.55f, 0.8f, 3, 8);
                 CalamityUtils.SpawnOre(TileID.Orichalcum, 12E-05, 0.55f, 0.8f, 3, 8);
@@ -2162,7 +2162,7 @@ DukeEditFailed:
             }
             else if ((!NPC.downedMechBoss1 && !NPC.downedMechBoss2) || (!NPC.downedMechBoss2 && !NPC.downedMechBoss3) || (!NPC.downedMechBoss3 && !NPC.downedMechBoss1))
             {
-                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.HardmodeOreTier3Text";
+                string key = "Mods.CalamityMod.Status.Progression.HardmodeOreTier3Text";
                 Color messageColor = new Color(50, 255, 130);
                 CalamityUtils.SpawnOre(TileID.Adamantite, 12E-05, 0.65f, 0.9f, 3, 8);
                 CalamityUtils.SpawnOre(TileID.Titanium, 12E-05, 0.65f, 0.9f, 3, 8);
@@ -2170,7 +2170,7 @@ DukeEditFailed:
             }
             else
             {
-                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.HardmodeOreTier4Text";
+                string key = "Mods.CalamityMod.Status.Progression.HardmodeOreTier4Text";
                 Color messageColor = new Color(50, 255, 130);
                 CalamityUtils.SpawnOre(ModContent.TileType<HallowedOre>(), 17E-05, 0.55f, 0.9f, 8, 14, TileID.Pearlstone, TileID.HallowHardenedSand, TileID.HallowSandstone, TileID.HallowedIce);
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);

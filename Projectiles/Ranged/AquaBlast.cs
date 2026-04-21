@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class AquaBlast : ModProjectile, ILocalizedModType
     {
@@ -116,11 +116,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 BloodParticle blood = new BloodParticle(Projectile.Center, bloodVelocity, bloodLifetime, bloodScale, bloodColor);
                 GeneralParticleHandler.SpawnParticle(blood);
             }
-            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Aquamarine * 0.8f, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.05f, 22);
+            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Aquamarine * 0.8f, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.05f, 22);
             GeneralParticleHandler.SpawnParticle(blastRing);
-            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Aqua * 0.8f, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.04f, 22);
+            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Aqua * 0.8f, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.04f, 22);
             GeneralParticleHandler.SpawnParticle(blastRing2);
-            Particle blastRing3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DeepSkyBlue, "CalamityModCustomPublicPrivateFork/Particles/DetailedExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.2f, 22);
+            Particle blastRing3 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DeepSkyBlue, "CalamityMod/Particles/DetailedExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.2f, 22);
             GeneralParticleHandler.SpawnParticle(blastRing3);
             Particle orb2 = new GenericBloom(Projectile.Center, Vector2.Zero, Color.SkyBlue, 0.6f, 11, false, true);
             GeneralParticleHandler.SpawnParticle(orb2);

@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Projectiles.Ranged;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Ammo
+namespace CalamityMod.Items.Ammo
 {
     public class IcicleArrow : ModItem, ILocalizedModType
     {

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Skies;
+using CalamityMod.Skies;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Effects
+namespace CalamityMod.Effects
 {
     // TODO -- This can be made into a ModSystem with simple OnModLoad and Unload hooks.
     // TODO: SOURCEGEN: Get rid of this loader and replace references with sourcegenned references

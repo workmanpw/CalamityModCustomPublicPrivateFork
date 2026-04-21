@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Skies
+namespace CalamityMod.Skies
 {
     public class BrimstoneCragSky : CustomSky
     {
@@ -112,7 +112,7 @@ namespace CalamityModCustomPublicPrivateFork.Skies
                 return;
 
             // Draw cinders.
-            Texture2D cinderTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/CalamitasCinder").Value;
+            Texture2D cinderTexture = ModContent.Request<Texture2D>("CalamityMod/Skies/CalamitasCinder").Value;
             float scaleFade = skyActiveLeeway / 60f;
             Color offsetDrawColor = Color.Red * 0.56f;
             offsetDrawColor.A = 0;

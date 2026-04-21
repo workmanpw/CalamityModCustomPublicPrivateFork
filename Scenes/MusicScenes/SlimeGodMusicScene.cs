@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
+using CalamityMod.NPCs.SlimeGod;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class SlimeGodMusicScene : BaseMusicSceneEffect
     {

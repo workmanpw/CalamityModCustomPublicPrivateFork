@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Tiles.SunkenSea;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches
+namespace CalamityMod.Items.Fishing.SunkenSeaCatches
 {
     public class PrismCrate : ModItem, ILocalizedModType
     {

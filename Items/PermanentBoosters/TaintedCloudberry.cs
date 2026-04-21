@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
+namespace CalamityMod.Items.PermanentBoosters
 {
     [LegacyName("Elderberry")]
     public class TaintedCloudberry : ModItem, ILocalizedModType
@@ -19,7 +19,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
         public const int LifeBoost = 25;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(LifeBoost);
 
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ElderberryConsume");
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/ElderberryConsume");
         public override void SetStaticDefaults()
         {
             // For some reason Life/Mana boosting items are in this set (along with Magic Mirror+)
@@ -51,7 +51,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
             {
                 if (player.whoAmI == Main.myPlayer)
                 {
-                    string key = "Mods.CalamityModCustomPublicPrivateFork.Misc.TaintedCloudberryText";
+                    string key = "Mods.CalamityMod.Misc.TaintedCloudberryText";
                     Color messageColor = Color.Turquoise;
                     Main.NewText(Language.GetTextValue(key), messageColor);
                 }

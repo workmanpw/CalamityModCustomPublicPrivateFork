@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class MagnusBoom : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public Player Owner => Main.player[Projectile.owner];
         public ref float Time => ref Projectile.ai[0];
@@ -33,18 +33,18 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             {
                 for (int i = 0; i < 5; i++)
                 {
-                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Magenta, Color.LightPink, Utils.GetLerpValue(0, 5, i, true)), "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.09f + 0.005f * i, (int)(20 - i * 1.5f));
+                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Magenta, Color.LightPink, Utils.GetLerpValue(0, 5, i, true)), "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.09f + 0.005f * i, (int)(20 - i * 1.5f));
                     GeneralParticleHandler.SpawnParticle(explosion);
                 }
                 for (int i = 0; i < 3; i++)
                 {
-                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Magenta, Color.LightPink, Utils.GetLerpValue(0, 3, i, true)), "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.09f + 0.01f * i, (int)(20 - i * 2f));
+                    Particle explosion = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Lerp(Color.Magenta, Color.LightPink, Utils.GetLerpValue(0, 3, i, true)), "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.09f + 0.01f * i, (int)(20 - i * 2f));
                     GeneralParticleHandler.SpawnParticle(explosion);
                 }
 
-                Particle outerGlow = new CustomPulse(Projectile.Center, Vector2.Zero, Color.PowderBlue, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, 0f, 0.1f, 2f, 24, true);
+                Particle outerGlow = new CustomPulse(Projectile.Center, Vector2.Zero, Color.PowderBlue, "CalamityMod/Particles/BloomCircle", Vector2.One, 0f, 0.1f, 2f, 24, true);
                 GeneralParticleHandler.SpawnParticle(outerGlow);
-                Particle innerGlow = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, 0f, 0.05f, 1f, 24, true);
+                Particle innerGlow = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, 0f, 0.05f, 1f, 24, true);
                 GeneralParticleHandler.SpawnParticle(innerGlow);
 
                 float offset = Main.rand.NextFloat(MathHelper.TwoPi);

@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea
+namespace CalamityMod.Tiles.SunkenSea
 {
     public class RefractivePrismTorch : ModTile
     {
@@ -59,7 +59,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/RefractivePrismTorchFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/RefractivePrismTorchFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j, 2);
         }
 

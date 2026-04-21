@@ -1,4 +1,4 @@
-namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+namespace CalamityMod.Graphics.Primitives;
 
 /// <summary>
 /// Specifies how to join segments in a strip mesh.

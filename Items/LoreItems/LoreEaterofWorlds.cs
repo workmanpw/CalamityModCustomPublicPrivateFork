@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.LoreItems
+namespace CalamityMod.Items.LoreItems
 {
     [LegacyName("KnowledgeEaterofWorlds")]
     public class LoreEaterofWorlds : LoreItem

@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems.Invasion
+namespace CalamityMod.Items.SummonItems.Invasion
 {
     [LegacyName("MartianDistressBeacon")]
     public class MartianDistressRemote : ModItem, ILocalizedModType
@@ -74,14 +74,14 @@ namespace CalamityModCustomPublicPrivateFork.Items.SummonItems.Invasion
 
         public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frameI, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/SummonItems/Invasion/MartianDistressRemote_Animated").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Invasion/MartianDistressRemote_Animated").Value;
             spriteBatch.Draw(texture, position, Item.GetCurrentFrame(ref frame, ref frameCounter, 5, 12), Color.White, 0f, origin, scale, SpriteEffects.None, 0);
             return false;
         }
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/SummonItems/Invasion/MartianDistressRemote_Animated").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/Invasion/MartianDistressRemote_Animated").Value;
             spriteBatch.Draw(texture, Item.position - Main.screenPosition, Item.GetCurrentFrame(ref frame, ref frameCounter, 5, 12), lightColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0);
             return false;
         }

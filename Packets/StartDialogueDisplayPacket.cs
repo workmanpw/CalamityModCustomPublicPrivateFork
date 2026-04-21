@@ -1,13 +1,13 @@
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects;
+using CalamityMod.UI.DialogueDisplay.DisplayEffects;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader.IO;
-using static CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DialogueDisplaySystem;
+using static CalamityMod.UI.DialogueDisplay.DialogueDisplaySystem;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class StartDialogueDisplayPacket : CalamityPacket
     {

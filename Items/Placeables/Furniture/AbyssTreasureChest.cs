@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture
+namespace CalamityMod.Items.Placeables.Furniture
 {
     public class AbyssTreasureChest : ModItem, ILocalizedModType
     {

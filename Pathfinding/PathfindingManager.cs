@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Pathfinding.Movements;
+using CalamityMod.DataStructures;
+using CalamityMod.Pathfinding.Movements;
 using Microsoft.Xna.Framework;
 using Terraria;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Pathfinding
+namespace CalamityMod.Pathfinding
 {
     #region Pathfinding Parameters
     public readonly struct PathfindingParameters

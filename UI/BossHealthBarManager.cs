@@ -1,29 +1,29 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge;
-using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
-using CalamityModCustomPublicPrivateFork.NPCs.CalClone;
-using CalamityModCustomPublicPrivateFork.NPCs.CeaselessVoid;
-using CalamityModCustomPublicPrivateFork.NPCs.DesertScourge;
-using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.NPCs.GreatSandShark;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.Perforator;
-using CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies;
-using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
-using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
-using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
-using CalamityModCustomPublicPrivateFork.NPCs.StormWeaver;
-using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
-using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+using CalamityMod.Events;
+using CalamityMod.NPCs.AquaticScourge;
+using CalamityMod.NPCs.AstrumDeus;
+using CalamityMod.NPCs.CalClone;
+using CalamityMod.NPCs.CeaselessVoid;
+using CalamityMod.NPCs.DesertScourge;
+using CalamityMod.NPCs.DevourerofGods;
+using CalamityMod.NPCs.ExoMechs.Apollo;
+using CalamityMod.NPCs.ExoMechs.Ares;
+using CalamityMod.NPCs.ExoMechs.Artemis;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.NPCs.GreatSandShark;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.NPCs.Perforator;
+using CalamityMod.NPCs.PlagueEnemies;
+using CalamityMod.NPCs.ProfanedGuardians;
+using CalamityMod.NPCs.Providence;
+using CalamityMod.NPCs.Ravager;
+using CalamityMod.NPCs.SlimeGod;
+using CalamityMod.NPCs.StormWeaver;
+using CalamityMod.NPCs.SunkenSea;
+using CalamityMod.NPCs.SupremeCalamitas;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoMod.Utils;
@@ -38,7 +38,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.UI
+namespace CalamityMod.UI
 {
     /*
     Heyo! Here's some things you might need to know about this class and where to change things:
@@ -109,10 +109,10 @@ namespace CalamityModCustomPublicPrivateFork.UI
 
             if (!Main.dedServ)
             {
-                BossMainHPBar = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/BossHPMainBar", AssetRequestMode.ImmediateLoad).Value;
-                BossComboHPBar = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/BossHPComboBar", AssetRequestMode.ImmediateLoad).Value;
-                BossSeperatorBar = Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/BossHPSeperatorBar", AssetRequestMode.ImmediateLoad).Value;
-                HPBarFont = Request<DynamicSpriteFont>("CalamityModCustomPublicPrivateFork/Fonts/HPBarFont", AssetRequestMode.ImmediateLoad).Value;
+                BossMainHPBar = Request<Texture2D>("CalamityMod/UI/MiscTextures/BossHPMainBar", AssetRequestMode.ImmediateLoad).Value;
+                BossComboHPBar = Request<Texture2D>("CalamityMod/UI/MiscTextures/BossHPComboBar", AssetRequestMode.ImmediateLoad).Value;
+                BossSeperatorBar = Request<Texture2D>("CalamityMod/UI/MiscTextures/BossHPSeperatorBar", AssetRequestMode.ImmediateLoad).Value;
+                HPBarFont = Request<DynamicSpriteFont>("CalamityMod/Fonts/HPBarFont", AssetRequestMode.ImmediateLoad).Value;
             }
 
             OneToMany = new Dictionary<int, int[]>();

@@ -5,7 +5,7 @@ using Terraria.Localization;
 using Terraria.Map;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Walls
+namespace CalamityMod.Walls
 {
     /// <summary>
     /// Walls that implement this interface may be revealed on the map through

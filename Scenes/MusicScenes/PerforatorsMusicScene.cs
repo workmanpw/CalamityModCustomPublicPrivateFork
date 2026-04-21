@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Perforator;
+using CalamityMod.NPCs.Perforator;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class PerforatorsMusicScene : BaseMusicSceneEffect
     {

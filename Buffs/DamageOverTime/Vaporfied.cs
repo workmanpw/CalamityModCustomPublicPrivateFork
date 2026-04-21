@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityMod.DataStructures;
+using CalamityMod.NPCs;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime
+namespace CalamityMod.Buffs.DamageOverTime
 {
     public class Vaporfied : ModBuff
     {

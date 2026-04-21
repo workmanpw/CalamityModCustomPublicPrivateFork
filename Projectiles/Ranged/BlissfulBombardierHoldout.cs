@@ -1,10 +1,10 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Potions.Alcohol;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -14,7 +14,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class BlissfulBombardierHoldout : BaseGunHoldoutProjectile
     {
@@ -178,7 +178,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (Main.dedServ)
                 return;
 
-            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LauncherHeavyShot");
+            SoundStyle fire = new("CalamityMod/Sounds/Item/LauncherHeavyShot");
             SoundEngine.PlaySound(fire with { Volume = 0.9f, PitchVariance = 0.1f }, Projectile.Center);
 
             for (int k = 0; k < 6; k++)
@@ -227,7 +227,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 return false;
 
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Projectile.type].Value;
-            Texture2D texture2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/BlissfulBombardierGlow").Value;
+            Texture2D texture2 = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Ranged/BlissfulBombardierGlow").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Projectile.GetAlpha(lightColor);
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f) - (Owner.gravDir == -1 ? MathHelper.Pi * Owner.direction : 0f);

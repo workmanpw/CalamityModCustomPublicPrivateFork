@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityMod.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
+namespace CalamityMod.Projectiles.Summon.SmallAresArms
 {
     public class ExoskeletonPanel : ModProjectile, ILocalizedModType
     {
@@ -40,10 +40,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
             {
                 get
                 {
-                    Texture2D plasmaTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonPanelPlasma").Value;
-                    Texture2D teslaTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonPanelTesla").Value;
-                    Texture2D laserTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonPanelLaser").Value;
-                    Texture2D gaussTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonPanelGauss").Value;
+                    Texture2D plasmaTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonPanelPlasma").Value;
+                    Texture2D teslaTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonPanelTesla").Value;
+                    Texture2D laserTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonPanelLaser").Value;
+                    Texture2D gaussTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonPanelGauss").Value;
                     return CurrentState switch
                     {
                         IconType.Plasma => plasmaTexture,
@@ -236,8 +236,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
                 return false;
 
             Texture2D panelTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D plasmaTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonPanelPlasma").Value;
-            Texture2D arrowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/Arrow").Value;
+            Texture2D plasmaTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonPanelPlasma").Value;
+            Texture2D arrowTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/Arrow").Value;
             Vector2 area = plasmaTexture.Frame(1, 7, 0, 0).Size();
             Vector2 drawPosition = (Main.LocalPlayer.Center + PlayerOffset - Main.screenPosition).Floor();
 

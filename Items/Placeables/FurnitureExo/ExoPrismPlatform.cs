@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo;
+using CalamityMod.Tiles.FurnitureExo;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo
+namespace CalamityMod.Items.Placeables.FurnitureExo
 {
     public class ExoPrismPlatform : ModItem, ILocalizedModType
     {
@@ -17,7 +17,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Placeables/FurnitureExo/ExoPrismPlatform_Glow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Placeables/FurnitureExo/ExoPrismPlatform_Glow").Value);
         }
 
         public override void AddRecipes()

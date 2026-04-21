@@ -3,7 +3,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     [Autoload(Side = ModSide.Client)]
     public abstract partial class TileBlendTexture : ModTexturedType

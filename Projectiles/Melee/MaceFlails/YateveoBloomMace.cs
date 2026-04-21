@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.MaceFlails
+namespace CalamityMod.Projectiles.Melee.MaceFlails
 {
     [PierceResistException]
     public class YateveoBloomMace : BaseMaceFlailProjectile

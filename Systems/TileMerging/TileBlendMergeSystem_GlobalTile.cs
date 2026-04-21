@@ -1,10 +1,10 @@
 using System.Diagnostics.CodeAnalysis;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public sealed partial class TileBlendMergeSystem : ModSystem
     {

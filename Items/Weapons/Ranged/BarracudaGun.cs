@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class BarracudaGun : ModItem, ILocalizedModType
     {
@@ -29,7 +29,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
             Item.knockBack = 1f;
             Item.value = CalamityGlobalItem.RarityPurpleBuyPrice;
             Item.rare = ItemRarityID.Purple;
-            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/GunShotBig") with { Volume = 0.5f, Pitch = Main.rand.NextFloat(0.2f, 0.3f) };
+            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/GunShotBig") with { Volume = 0.5f, Pitch = Main.rand.NextFloat(0.2f, 0.3f) };
             Item.autoReuse = true;
             Item.shootSpeed = 15f;
             Item.shoot = ModContent.ProjectileType<MechanicalBarracuda>();

@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
+namespace CalamityMod.Items.Weapons.Summon
 {
     public class LiliesOfFinality : ModItem, ILocalizedModType
     {
@@ -53,7 +53,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
             Item.value = CalamityGlobalItem.RarityVioletBuyPrice;
             Item.rare = RarityType<BurnishedAuric>();
             Item.useStyle = ItemUseStyleID.HoldUp;
-            Item.UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LiliesOfFinalitySummonSpawn");
+            Item.UseSound = new("CalamityMod/Sounds/Item/LiliesOfFinalitySummonSpawn");
         }
 
         public override bool CanUseItem(Player player) => player.ownedProjectileCounts[Item.shoot] == 0 && player.maxMinions - player.slotsMinions >= 2;

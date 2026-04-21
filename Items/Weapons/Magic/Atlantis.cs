@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityMod.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityMod.Items.Weapons.Summon;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class Atlantis : ModItem, ILocalizedModType
     {
@@ -32,7 +32,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
             Item.knockBack = 5f;
             Item.value = CalamityGlobalItem.RarityLimeBuyPrice;
             Item.rare = ItemRarityID.Lime;
-            Item.UseSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/VividClarityBeamAppear") with { Volume = 0.5f, Pitch = 0.2f };
+            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/VividClarityBeamAppear") with { Volume = 0.5f, Pitch = 0.2f };
             Item.autoReuse = true;
             Item.shoot = ModContent.ProjectileType<AtlantisSpear>();
             Item.shootSpeed = 40f;
@@ -56,9 +56,9 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
                     dust.noGravity = true;
                 }
             }
-            Particle blastRing = new CustomPulse(position + velocity * 2.5f, Vector2.Zero, Color.CornflowerBlue, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1.25f, 0f, 11, true);
+            Particle blastRing = new CustomPulse(position + velocity * 2.5f, Vector2.Zero, Color.CornflowerBlue, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1.25f, 0f, 11, true);
             GeneralParticleHandler.SpawnParticle(blastRing);
-            Particle blastRing2 = new CustomPulse(position + velocity * 2.5f, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.6f, 0.1f, 14, true);
+            Particle blastRing2 = new CustomPulse(position + velocity * 2.5f, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.6f, 0.1f, 14, true);
             GeneralParticleHandler.SpawnParticle(blastRing2);
 
             Projectile.NewProjectile(source, position + velocity * 2, velocity, type, damage, knockback, player.whoAmI, 0f, 0f, 5f);

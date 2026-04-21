@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Skies;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.UI.VanillaBossBars;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Items.Potions;
+using CalamityMod.NPCs.ExoMechs.Ares;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Skies;
+using CalamityMod.Sounds;
+using CalamityMod.UI.VanillaBossBars;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -23,31 +23,31 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis
+namespace CalamityMod.NPCs.ExoMechs.Artemis
 {
     public class Artemis : ModNPC
     {
         public static int phase1IconIndex;
         public static int phase2IconIndex;
 
-        public static readonly SoundStyle AttackSelectionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ApolloArtemisTargetSelection") { Volume = 1.3f };
+        public static readonly SoundStyle AttackSelectionSound = new("CalamityMod/Sounds/Custom/ExoMechs/ApolloArtemisTargetSelection") { Volume = 1.3f };
 
-        public static readonly SoundStyle ChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ArtemisApolloDash") { Volume = 1.2f };
+        public static readonly SoundStyle ChargeSound = new("CalamityMod/Sounds/Custom/ExoMechs/ArtemisApolloDash") { Volume = 1.2f };
 
-        public static readonly SoundStyle ChargeTelegraphSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ArtemisApolloDashTelegraph") { Volume = 1.2f };
+        public static readonly SoundStyle ChargeTelegraphSound = new("CalamityMod/Sounds/Custom/ExoMechs/ArtemisApolloDashTelegraph") { Volume = 1.2f };
 
-        public static readonly SoundStyle LensSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ExoTwinsEject") { Volume = 1.2f };
+        public static readonly SoundStyle LensSound = new("CalamityMod/Sounds/Custom/ExoMechs/ExoTwinsEject") { Volume = 1.2f };
 
-        public static readonly SoundStyle LaserShotgunSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ArtemisShotgunLaser") { Volume = 1.2f };
+        public static readonly SoundStyle LaserShotgunSound = new("CalamityMod/Sounds/Custom/ExoMechs/ArtemisShotgunLaser") { Volume = 1.2f };
 
-        public static readonly SoundStyle SpinLaserbeamSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ArtemisSpinLaserbeam") { Volume = 1.3f };
+        public static readonly SoundStyle SpinLaserbeamSound = new("CalamityMod/Sounds/Custom/ExoMechs/ArtemisSpinLaserbeam") { Volume = 1.3f };
 
         public static Asset<Texture2D> GlowTexture;
 
         public override void Load()
         {
-            string phase1IconPath = "CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Artemis/ArtemisHead";
-            string phase2IconPath = "CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Artemis/ArtemisPhase2Head";
+            string phase1IconPath = "CalamityMod/NPCs/ExoMechs/Artemis/ArtemisHead";
+            string phase2IconPath = "CalamityMod/NPCs/ExoMechs/Artemis/ArtemisPhase2Head";
            
             phase1IconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(phase1IconPath, -1);
             phase2IconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(phase2IconPath, -1);
@@ -205,7 +205,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] 
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Artemis")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Artemis")
             });
         }
 
@@ -1403,7 +1403,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis
         public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
         {
             // Prepare the flame trail shader with its map texture.
-            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
+            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
 
             int numAfterimages = ChargeFlash > 0f ? 0 : 5;
             Texture2D texture = TextureAssets.Npc[Type].Value;

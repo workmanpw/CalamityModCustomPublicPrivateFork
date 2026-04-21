@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Projectiles.Magic;
+using CalamityMod.Rarities;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class EidolicWail : ModItem, ILocalizedModType
     {

@@ -1,15 +1,15 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Particles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class AtlasMunitionsAutocannon : ModProjectile, ILocalizedModType
     {
@@ -267,8 +267,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AtlasMunitionsAutocannon").Value;
-            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AtlasMunitionsAutocannonGlow").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AtlasMunitionsAutocannon").Value;
+            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AtlasMunitionsAutocannonGlow").Value;
             Rectangle frame = texture.Frame(1, Main.projFrames[Type], 0, Projectile.frame);
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
 
@@ -287,8 +287,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
                 return false;
 
             // Draw the cannon.
-            texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AtlasMunitionsTurret").Value;
-            glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AtlasMunitionsTurretGlow").Value;
+            texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AtlasMunitionsTurret").Value;
+            glowmask = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AtlasMunitionsTurretGlow").Value;
             frame = texture.Frame(1, 20, 0, (int)CannonFrame);
             drawPosition = CannonCenter - Main.screenPosition;
             Vector2 cannonOrigin = new Vector2(0.39f, 0.5f) * frame.Size();

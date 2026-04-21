@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,14 +9,14 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class AnomalysNanogunHoldout : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
         #region Properties
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
-        public static Texture2D ScopeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/AnomalysNanogunScope", ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        public static Texture2D ScopeTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/AnomalysNanogunScope", ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;
         public ref float AITimer => ref Projectile.ai[1];
         public Player Owner => Main.player[Projectile.owner];
         public Vector2 MouseDistance => Owner.Calamity().mouseWorld - Owner.MountedCenter;

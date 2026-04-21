@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,12 +7,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class HadalUrnHoldout : ModProjectile, ILocalizedModType
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<HadalUrn>();
-        public static readonly SoundStyle UrnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HadalUrnClose");
+        public static readonly SoundStyle UrnSound = new("CalamityMod/Sounds/Item/HadalUrnClose");
 
         public int manatimer = 0;
 

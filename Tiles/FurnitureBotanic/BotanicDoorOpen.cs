@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureBotanic;
+using CalamityMod.Dusts.Furniture;
+using CalamityMod.Items.Placeables.FurnitureBotanic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureBotanic
+namespace CalamityMod.Tiles.FurnitureBotanic
 {
     public class BotanicDoorOpen : ModTile
     {

@@ -2,7 +2,7 @@ using System.IO;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class SyncNPCMotionDataToServerPacket : CalamityPacket
     {

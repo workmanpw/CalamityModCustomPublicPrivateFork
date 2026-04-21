@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureVoid
+namespace CalamityMod.Items.Placeables.FurnitureVoid
 {
     public class VoidBookcase : ModItem, ILocalizedModType
     {

@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
+using CalamityMod.Projectiles.DraedonsArsenal;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Summon
+namespace CalamityMod.Buffs.Summon
 {
     public class SnakeEyesBuff : BaseSummonBuff
     {

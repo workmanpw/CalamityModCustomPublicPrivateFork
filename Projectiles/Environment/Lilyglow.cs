@@ -3,12 +3,12 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Environment
+namespace CalamityMod.Projectiles.Environment
 {
     public class Lilyglow : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/ExtraTextures/TinyGreyscaleCircle";
+        public override string Texture => "CalamityMod/ExtraTextures/TinyGreyscaleCircle";
 
         public ref float Direction => ref Projectile.ai[0];
 

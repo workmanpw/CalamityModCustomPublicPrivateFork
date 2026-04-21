@@ -9,14 +9,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Tools
+namespace CalamityMod.Items.Tools
 {
     public class BallAndChain : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Tools";
 
         public static Asset<Texture2D> DisabledSprite;
-        public override void Load() => DisabledSprite = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Tools/BallAndChainDisabled");
+        public override void Load() => DisabledSprite = ModContent.Request<Texture2D>("CalamityMod/Items/Tools/BallAndChainDisabled");
         
         public override void SetDefaults()
         {

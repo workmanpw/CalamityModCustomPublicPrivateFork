@@ -1,19 +1,19 @@
 using System;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class SproutingArrowMain : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         private bool hitDirect = false;
         public override void SetDefaults()
@@ -39,7 +39,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 Projectile.damage = (int)(Projectile.damage * 0.3f);
                 Projectile.velocity = Projectile.velocity.SafeNormalize(Vector2.UnitX) * 5;
 
-                Particle orb2 = new CustomSpark(Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.UnitX) * 86, Projectile.velocity * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/BloomArrow", false, 9, 0.7f, Main.rand.NextBool() ? Color.LimeGreen : Color.Lime, new Vector2(0.5f, 4f), true, true, shrinkSpeed: Main.rand.NextFloat(0.1f, 0.3f), glowCenterScale: 0.95f, glowOpacity: 0.8f);
+                Particle orb2 = new CustomSpark(Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.UnitX) * 86, Projectile.velocity * 0.1f, "CalamityMod/Particles/BloomArrow", false, 9, 0.7f, Main.rand.NextBool() ? Color.LimeGreen : Color.Lime, new Vector2(0.5f, 4f), true, true, shrinkSpeed: Main.rand.NextFloat(0.1f, 0.3f), glowCenterScale: 0.95f, glowOpacity: 0.8f);
                 GeneralParticleHandler.SpawnParticle(orb2);
             }
             Projectile.ai[0]++;
@@ -90,7 +90,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 Vector2 vel1 = (Projectile.velocity * 0.4f).RotatedBy(Main.rand.NextFloat(0.015f, 0.04f));
                 Vector2 vel2 = (Projectile.velocity * 0.4f).RotatedBy(Main.rand.NextFloat(-0.015f, -0.04f));
 
-                Particle sparker = new CustomSpark(Projectile.Center, Projectile.velocity.RotatedByRandom(0.9f) * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/FullStar", false, 10, Main.rand.NextFloat(0.8f, 1.1f) * (hitDirect ? 4 : 2), Color.LimeGreen, new Vector2(1f, 0.5f), true, true, shrinkSpeed: 1f, glowCenterScale: 0.8f, glowOpacity: 0.8f);
+                Particle sparker = new CustomSpark(Projectile.Center, Projectile.velocity.RotatedByRandom(0.9f) * 0.01f, "CalamityMod/Particles/FullStar", false, 10, Main.rand.NextFloat(0.8f, 1.1f) * (hitDirect ? 4 : 2), Color.LimeGreen, new Vector2(1f, 0.5f), true, true, shrinkSpeed: 1f, glowCenterScale: 0.8f, glowOpacity: 0.8f);
                 GeneralParticleHandler.SpawnParticle(sparker);
                 Projectile split1 = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), Projectile.Center, vel1 * Main.rand.NextFloat(0.95f, 1.05f), ModContent.ProjectileType<SproutingArrowSplit>(), Projectile.damage * 2, 0f, Projectile.owner, 0f, hitDirect ? 1f : 0f);
                 Projectile split2 = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), Projectile.Center, vel2 * Main.rand.NextFloat(0.95f, 1.05f), ModContent.ProjectileType<SproutingArrowSplit>(), Projectile.damage * 2, 0f, Projectile.owner, 0f, hitDirect ? 1f : 0f);

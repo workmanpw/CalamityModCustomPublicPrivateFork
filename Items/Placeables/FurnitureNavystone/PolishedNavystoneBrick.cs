@@ -1,8 +1,8 @@
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityMod.Items.Placeables.SunkenSea;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone
+namespace CalamityMod.Items.Placeables.FurnitureNavystone
 {
     public class PolishedNavystoneBrick : ModItem, ILocalizedModType
     {

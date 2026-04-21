@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class RainbowTrail : ModProjectile, ILocalizedModType
     {

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Systems.BlendSideFlags;
+using static CalamityMod.Systems.BlendSideFlags;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public abstract partial class TileBlendTexture : ModTexturedType
     {

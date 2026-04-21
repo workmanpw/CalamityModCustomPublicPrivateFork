@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DraedonSummoning
+namespace CalamityMod.UI.DraedonSummoning
 {
     public class CodebreakerUIScroller
     {
@@ -22,7 +22,7 @@ namespace CalamityModCustomPublicPrivateFork.UI.DraedonSummoning
         public void Draw(float top, float bottom, float x, float scale, float opacity)
         {
             Color scrollerColor = Color.White;
-            Texture2D scrollerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/Scroller").Value;
+            Texture2D scrollerTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/Scroller").Value;
 
             // Update the top and bottom position to account for the texture origin.
             top -= scrollerTexture.Height * scale * 0.5f;

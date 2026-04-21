@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Sulphurous;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Armor.Sulphurous;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.ExtraJumps
+namespace CalamityMod.ExtraJumps
 {
     public class SulphurJump : ExtraJump
     {

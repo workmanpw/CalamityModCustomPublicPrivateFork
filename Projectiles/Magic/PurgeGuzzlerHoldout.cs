@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     internal class PurgeGuzzlerHoldout : BaseGunHoldoutProjectile
     {
@@ -24,7 +24,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         public override float BaseOffsetY => -5f;
         public override float RecoilResolveSpeed => 0.4f;
         public override float WeaponTurnSpeed => cooldownTimer > 0 ? 0.02f : 0.06f;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/PurgeGuzzler";
+        public override string Texture => "CalamityMod/Items/Weapons/Magic/PurgeGuzzler";
         public override Vector2 GunTipPosition => base.GunTipPosition - Vector2.UnitX.RotatedBy(Projectile.rotation) * 10 + Vector2.UnitY * 3;
         public ref float revFrames => ref Projectile.ai[0];
         public ref float cooldownTimer => ref Projectile.ai[1];
@@ -54,7 +54,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             revSpeed = Utils.Remap(revFrames, 0, 150, 1, 3, true);
             if (shootingTimer >= 10 && revFrames < 150)
             {
-                SoundStyle shot = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianShieldDeactivate");
+                SoundStyle shot = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianShieldDeactivate");
                 SoundEngine.PlaySound(shot with { Pitch = Utils.Remap(revFrames, 0, 150, 0.2f, 0.8f, true), Volume = 0.2f, MaxInstances = -1 }, Projectile.Center);
 
                 if (Main.myPlayer == Projectile.owner)
@@ -85,9 +85,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                 Owner.SetScreenshake(3.5f);
                 OffsetLengthFromArm -= 35f;
                 cooldownTimer = 60;
-                SoundStyle bigShot = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianRay");
+                SoundStyle bigShot = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianRay");
                 SoundEngine.PlaySound(bigShot with { Pitch = 0.2f, Volume = 0.7f }, Projectile.Center);
-                SoundStyle bigShot2 = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceHolyRay");
+                SoundStyle bigShot2 = new("CalamityMod/Sounds/Custom/Providence/ProvidenceHolyRay");
                 SoundEngine.PlaySound(bigShot2 with { Pitch = 0.4f, Volume = 0.8f }, Projectile.Center);
 
                 
@@ -144,7 +144,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             if (Owner.ownedProjectileCounts[ModContent.ProjectileType<HolyLaser>()] > 0 && shotsFired > 0)
             {
                 float fade = Utils.GetLerpValue(1, 4, revSpeed);
-                Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/LargeBloom").Value;
+                Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/LargeBloom").Value;
                 float rot = Main.GlobalTimeWrappedHourly * 25;
 
                 float sine = MathHelper.Clamp(Math.Abs((float)Math.Sin(rot * 2.275f / MathHelper.Pi)), 0.9f, 1f);

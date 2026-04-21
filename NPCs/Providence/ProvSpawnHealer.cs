@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.NPCs.ProfanedGuardians;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,13 +9,13 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
+namespace CalamityMod.NPCs.Providence
 {
     [AutoloadBossHead]
     public class ProvSpawnHealer : ModNPC
     {
         private bool start = true;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/ProfanedGuardians/ProfanedGuardianHealer";
+        public override string Texture => "CalamityMod/NPCs/ProfanedGuardians/ProfanedGuardianHealer";
 
         public override void SetStaticDefaults()
         {

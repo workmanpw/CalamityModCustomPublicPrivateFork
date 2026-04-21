@@ -1,23 +1,23 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Dusts;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.Ravager;
+using CalamityMod.Particles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     [PierceResistException]
     public class DoomsdayDeviceProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/DoomsdayDevice";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/DoomsdayDevice";
         public ref float time => ref Projectile.ai[0];
         public Player Owner => Main.player[Projectile.owner];
         public float rotSpeed = 0.05f; // How fast the projectile rotates.
@@ -77,7 +77,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                 if (hasReachedFullCharge && !doneHitting)
                 {
                     float squash = Utils.GetLerpValue(1, 3, Projectile.velocity.Length(), true);
-                    Particle fadeInfx = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 23, 0.4f, mainColor * 0.4f * squash, new Vector2(1 - 0.15f * squash, 1f), true, false, shrinkSpeed: 0.2f * squash);
+                    Particle fadeInfx = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomCircle", false, 23, 0.4f, mainColor * 0.4f * squash, new Vector2(1 - 0.15f * squash, 1f), true, false, shrinkSpeed: 0.2f * squash);
                     GeneralParticleHandler.SpawnParticle(fadeInfx);
                 }
             }
@@ -139,12 +139,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                     Projectile.ai[1] = arcValue;
                     Projectile.velocity = velocity * 9 * speedMult;
 
-                    SoundStyle w = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SwooshMid");
+                    SoundStyle w = new("CalamityMod/Sounds/Item/SwooshMid");
                     SoundEngine.PlaySound(w with { Volume = 1f, Pitch = 0.2f, MaxInstances = 6 }, Projectile.Center);
                     if (hasReachedFullCharge)
                     {
                         rotSpeed *= 2;
-                        SoundStyle w2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SwooshMid");
+                        SoundStyle w2 = new("CalamityMod/Sounds/Item/SwooshMid");
                         SoundEngine.PlaySound(w2 with { Volume = 1f, Pitch = -0.4f, MaxInstances = 6 }, Projectile.Center);
                     }
                     else
@@ -173,7 +173,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                                 // Player has 18 frames to let go after it has fully charged, otherwise it will start to drain stealth. Timing is key!
                                 if (stealthPenaltyTimer == 18)
                                 {
-                                    SoundStyle w = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MeldSlice");
+                                    SoundStyle w = new("CalamityMod/Sounds/Item/MeldSlice");
                                     SoundEngine.PlaySound(w with { Volume = 0.3f, Pitch = 0.4f }, Projectile.Center);
                                 }
                                 if (stealthPenaltyTimer >= 18)
@@ -188,7 +188,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                             }
                             if (charge >= 4 && !hasReachedFullCharge)
                             {
-                                SoundStyle w = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MeldSlice");
+                                SoundStyle w = new("CalamityMod/Sounds/Item/MeldSlice");
                                 SoundEngine.PlaySound(w with { Volume = 0.55f, Pitch = 1f }, Projectile.Center);
 
                                 for (int i = 0; i < 12; i++)
@@ -301,7 +301,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                     lastHitTarget = target;
                     Projectile.velocity = Utils.DirectionTo(Projectile.Center, chosenTarget.Center) * 9;
 
-                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DoomsdayDeviceImpact");
+                    SoundStyle sound = new("CalamityMod/Sounds/Item/DoomsdayDeviceImpact");
                     SoundEngine.PlaySound(sound with { Volume = 0.9f, Pitch = 0.1f + Projectile.numHits * 0.15f, MaxInstances = 6 }, Projectile.Center);
 
                     for (int i = 0; i <= 6; i++)
@@ -315,9 +315,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                         dust2.color = Main.rand.NextBool() ? c1 : c2;
                     }
 
-                    Particle pulse = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitX) * 3, "CalamityModCustomPublicPrivateFork/Particles/HollowCircleSoftEdge", false, 14, 0.2f, c1 * 0.85f, new Vector2(3f, 1f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
+                    Particle pulse = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitX) * 3, "CalamityMod/Particles/HollowCircleSoftEdge", false, 14, 0.2f, c1 * 0.85f, new Vector2(3f, 1f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
                     GeneralParticleHandler.SpawnParticle(pulse);
-                    Particle pulse2 = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitX) * 2.5f, "CalamityModCustomPublicPrivateFork/Particles/HollowCircleSoftEdge", false, 14, 0.175f * finalHitMult, c2 * 0.7f, new Vector2(2.5f, 2f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
+                    Particle pulse2 = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitX) * 2.5f, "CalamityMod/Particles/HollowCircleSoftEdge", false, 14, 0.175f * finalHitMult, c2 * 0.7f, new Vector2(2.5f, 2f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
                     GeneralParticleHandler.SpawnParticle(pulse2);
 
                     Owner.SetScreenshake(3f);
@@ -325,7 +325,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                 else // If there's no targets other than the currently hit one or the projectile is out of bounces, deal the final stronger blow.
                 {
                     finalHitMult = 2;
-                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashCoreImpact");
+                    SoundStyle sound = new("CalamityMod/Sounds/Item/HeliumFlashCoreImpact");
                     SoundEngine.PlaySound(sound with { Volume = 0.7f, Pitch = 0.2f }, Projectile.Center);
                     Projectile.numHits = maxStealthHits;
                 }
@@ -370,15 +370,15 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
                 if (hasReachedFullCharge)
                 {
-                    SoundStyle soundExtra = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DoomsdayDeviceImpact");
+                    SoundStyle soundExtra = new("CalamityMod/Sounds/Item/DoomsdayDeviceImpact");
                     SoundEngine.PlaySound(soundExtra with { Volume = 1f, Pitch = 0.35f + extraPitch, MaxInstances = 6 }, Projectile.Center);
 
-                    Particle pulse = new CustomSpark(Projectile.Center, -launchDir * 3, "CalamityModCustomPublicPrivateFork/Particles/HollowCircleSoftEdge", false, 14, 0.4f * finalHitMult, c1 * 0.85f, new Vector2(3f, 1f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
+                    Particle pulse = new CustomSpark(Projectile.Center, -launchDir * 3, "CalamityMod/Particles/HollowCircleSoftEdge", false, 14, 0.4f * finalHitMult, c1 * 0.85f, new Vector2(3f, 1f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
                     GeneralParticleHandler.SpawnParticle(pulse);
-                    Particle pulse2 = new CustomSpark(Projectile.Center, -launchDir * 2.5f, "CalamityModCustomPublicPrivateFork/Particles/HollowCircleSoftEdge", false, 14, 0.35f * finalHitMult, c2 * 0.7f, new Vector2(2.5f, 2f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
+                    Particle pulse2 = new CustomSpark(Projectile.Center, -launchDir * 2.5f, "CalamityMod/Particles/HollowCircleSoftEdge", false, 14, 0.35f * finalHitMult, c2 * 0.7f, new Vector2(2.5f, 2f), extraRotation: MathHelper.ToRadians(90), shrinkSpeed: 0.9f);
                     GeneralParticleHandler.SpawnParticle(pulse2);
                 }
-                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DoomsdayDeviceImpact");
+                SoundStyle sound = new("CalamityMod/Sounds/Item/DoomsdayDeviceImpact");
                 SoundEngine.PlaySound(sound with { Volume = hasReachedFullCharge ? 1 : 0.7f, Pitch = 0.1f + extraPitch, MaxInstances = 6 }, Projectile.Center);
 
                 doneHitting = true;
@@ -436,7 +436,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             }
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, lightColor * fade, Projectile.rotation, tex.Size() / 2f, Projectile.scale, (!flung ? Owner.direction : Projectile.direction) != 1 ? SpriteEffects.FlipVertically : SpriteEffects.None, 0);
 
-            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/DoomsdayDeviceGlow2").Value, Projectile.Center - Main.screenPosition, null, glowColor * Projectile.Opacity * fade, Projectile.rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/DoomsdayDeviceGlow2").Value.Size() * 0.5f, 1f, (!flung ? Owner.direction : Projectile.direction) != 1 ? SpriteEffects.FlipVertically : SpriteEffects.None, 0);
+            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/DoomsdayDeviceGlow2").Value, Projectile.Center - Main.screenPosition, null, glowColor * Projectile.Opacity * fade, Projectile.rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/DoomsdayDeviceGlow2").Value.Size() * 0.5f, 1f, (!flung ? Owner.direction : Projectile.direction) != 1 ? SpriteEffects.FlipVertically : SpriteEffects.None, 0);
             return false;
         }
         public override void DrawBehind(int index, List<int> behindNPCsAndTiles, List<int> behindNPCs, List<int> behindProjectiles, List<int> overPlayers, List<int> overWiresUI)

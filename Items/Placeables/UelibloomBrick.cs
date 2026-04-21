@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureBotanic;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Ores;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityMod.Items.Placeables.FurnitureBotanic;
+using CalamityMod.Items.Placeables.Ores;
+using CalamityMod.Items.Placeables.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables
+namespace CalamityMod.Items.Placeables
 {
     public class UelibloomBrick : ModItem, ILocalizedModType
     {

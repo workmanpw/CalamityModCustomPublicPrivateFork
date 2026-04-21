@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Dusts.WaterSplash
+namespace CalamityMod.Dusts.WaterSplash
 {
     public abstract class LavaSplashDust : ModDust
     {

@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.ExoMechs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 
-namespace CalamityModCustomPublicPrivateFork.Skies
+namespace CalamityMod.Skies
 {
     public class ExoMechsScreenShaderData : ScreenShaderData
     {

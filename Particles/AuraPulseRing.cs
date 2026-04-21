@@ -3,13 +3,13 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class AuraPulseRing : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/HollowCircleHardEdge";
+        public override string Texture => "CalamityMod/Particles/HollowCircleHardEdge";
         public override bool UseAdditiveBlend => true;
         public override bool SetLifetime => true;
 
@@ -51,7 +51,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
 
         public override void CustomDraw(SpriteBatch spriteBatch, Vector2 basePosition)
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HollowCircleHardEdge").Value; //somehow wont work for set particles and defaults to the first particle it has (blood)
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Particles/HollowCircleHardEdge").Value; //somehow wont work for set particles and defaults to the first particle it has (blood)
 
             spriteBatch.Draw(tex, basePosition + RelativeOffset - Main.screenPosition, null, Color * opacity, Rotation, tex.Size() / 2f, CurrentScale, SpriteEffects.None, 0);
         }

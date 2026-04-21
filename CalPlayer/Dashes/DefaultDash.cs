@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityMod.Enums;
 using Terraria;
 using Terraria.DataStructures;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.Dashes
+namespace CalamityMod.CalPlayer.Dashes
 {
     public class DefaultDash : PlayerDashEffect
     {

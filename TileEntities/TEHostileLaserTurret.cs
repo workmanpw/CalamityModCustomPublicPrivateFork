@@ -1,11 +1,11 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Projectiles.Turret;
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
+using CalamityMod.Projectiles.Turret;
+using CalamityMod.Tiles.DraedonStructures;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.TileEntities
+namespace CalamityMod.TileEntities
 {
     public class TEHostileLaserTurret : TEBaseTurret
     {

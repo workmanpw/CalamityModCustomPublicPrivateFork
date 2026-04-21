@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class CinderArrowProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Ammo/CinderArrow";
+        public override string Texture => "CalamityMod/Items/Ammo/CinderArrow";
 
         public ref float Time => ref Projectile.ai[1];
         public ref float isSplit => ref Projectile.ai[2];
@@ -123,13 +123,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         {
             if (splitShot)
             {
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark").Value;
                 CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], Color.Crimson with { A = 0 } * 0.6f, 1, texture, true, true);
                 return false;
             }
             else
             {
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/DrainLineBloom").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Particles/DrainLineBloom").Value;
                 if (Time > 6f)
                     CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], Color.Crimson with { A = 0 } * 0.4f, 1, texture, true, true);
                 return true;

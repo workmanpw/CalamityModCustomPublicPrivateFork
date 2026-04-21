@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class BoltParticle : Particle
     {
@@ -19,7 +19,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public bool GlowFade = false;
 
         public override int FrameVariants => 3;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Bolt2";
+        public override string Texture => "CalamityMod/Particles/Bolt2";
         public override bool UseAdditiveBlend => true;
         public override bool SetLifetime => true;
         public override bool UseCustomDraw => true;

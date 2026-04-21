@@ -1,5 +1,5 @@
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurniturePlagued
+namespace CalamityMod.Items.Placeables.FurniturePlagued
 {
     public class PlaguedPlatePlatform : ModItem, ILocalizedModType
     {

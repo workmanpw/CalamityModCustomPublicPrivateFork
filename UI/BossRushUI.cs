@@ -1,12 +1,12 @@
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Events;
+using CalamityMod.CalPlayer;
+using CalamityMod.Events;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI
+namespace CalamityMod.UI
 {
     public class BossRushUI : InvasionProgressUI
     {
@@ -33,7 +33,7 @@ namespace CalamityModCustomPublicPrivateFork.UI
         }
         public override string InvasionName => CalamityUtils.GetTextValue("Events.BossRush");
         public override Color InvasionBarColor => Color.DarkSlateBlue;
-        public override Texture2D IconTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/BossRushIcon").Value;
+        public override Texture2D IconTexture => ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/BossRushIcon").Value;
 
         public static float EvaluationLifeRatioFromNPCTypes(params int[] types)
         {

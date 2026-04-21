@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
 using static Terraria.ModLoader.ModContent;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
+using CalamityMod.Cooldowns;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class M1Garand : ModItem, ILocalizedModType
     {

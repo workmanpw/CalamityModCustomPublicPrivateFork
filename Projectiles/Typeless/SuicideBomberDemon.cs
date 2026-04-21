@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+using CalamityMod.Graphics.Primitives;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class SuicideBomberDemon : ModProjectile, ILocalizedModType
     {
@@ -231,16 +231,16 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             Main.spriteBatch.EnterShaderRegion();
 
             // Prepare the flame trail shader with its map texture.
-            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
+            GameShaders.Misc["CalamityMod:ImpFlameTrail"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
 
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SuicideBomberDemon").Value;
-            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SuicideBomberDemonGlowmask").Value;
-            Texture2D orbTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SuicideBomberDemonOrb").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/SuicideBomberDemon").Value;
+            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/SuicideBomberDemonGlowmask").Value;
+            Texture2D orbTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/SuicideBomberDemonOrb").Value;
             if (Projectile.friendly)
             {
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SuicideBomberDemonFriendly").Value;
-                glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SuicideBomberDemonGlowmaskFriendly").Value;
-                orbTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/SuicideBomberDemonOrbFriendly").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/SuicideBomberDemonFriendly").Value;
+                glowmask = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/SuicideBomberDemonGlowmaskFriendly").Value;
+                orbTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/SuicideBomberDemonOrbFriendly").Value;
             }
             Rectangle frame = texture.Frame(1, Main.projFrames[Type], 0, Projectile.frame);
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;

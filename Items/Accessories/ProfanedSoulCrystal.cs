@@ -1,18 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.BaseItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.Buffs.Summon.Whips;
+using CalamityMod.CalPlayer;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.BaseItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.NPCs.ProfanedGuardians;
+using CalamityMod.NPCs.Providence;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -22,7 +22,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     //Developer item, dedicatee: Mishiro Usui/Amber Sienna
     public class ProfanedSoulCrystal : TransformationAccessory, ILocalizedModType, IDyeableShaderRenderer
@@ -180,7 +180,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
          * Projectiles transformed are ONLY affected by alldamage and summon damage bonuses, likewise the weapon's base damage/usetime is NOT taken into account.
          * The on-hit effect for the whip is in globalnpc
          */
-        public override string AssetPath => "CalamityModCustomPublicPrivateFork/Items/Accessories/";
+        public override string AssetPath => "CalamityMod/Items/Accessories/";
 
         public override (EquipType Type, string AssetName, string EquipName)[] EquipSlots =>
         [

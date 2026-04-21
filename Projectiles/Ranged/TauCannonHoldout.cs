@@ -1,8 +1,8 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class TauCannonHoldout : BaseGunHoldoutProjectile
     {
@@ -66,13 +66,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
         #region SoundStyles & SlotsIDs
 
-        public static readonly SoundStyle ChargeLV1Sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeLV1") { Volume = 0.6f };
-        public static readonly SoundStyle ChargeLV2Sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeLV2") { Volume = 0.6f };
-        public static readonly SoundStyle OrbSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeLoop");
-        public static readonly SoundStyle BoltShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ExoLaserShoot") { Volume = 0.1f, PitchVariance = 0.3f };
-        public static readonly SoundStyle SmallBeamSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AstrumDeus/AstrumDeusMine") { Volume = 0.2f, PitchVariance = 0.1f };
-        public static readonly SoundStyle BigBeamSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PhotoUseSound");
-        public static readonly SoundStyle CoolingDownSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/ThanatosVent") { Volume = 0.025f };
+        public static readonly SoundStyle ChargeLV1Sound = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeLV1") { Volume = 0.6f };
+        public static readonly SoundStyle ChargeLV2Sound = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeLV2") { Volume = 0.6f };
+        public static readonly SoundStyle OrbSound = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeLoop");
+        public static readonly SoundStyle BoltShootSound = new("CalamityMod/Sounds/Custom/ExoMechs/ExoLaserShoot") { Volume = 0.1f, PitchVariance = 0.3f };
+        public static readonly SoundStyle SmallBeamSound = new("CalamityMod/Sounds/Custom/AstrumDeus/AstrumDeusMine") { Volume = 0.2f, PitchVariance = 0.1f };
+        public static readonly SoundStyle BigBeamSound = new("CalamityMod/Sounds/Item/PhotoUseSound");
+        public static readonly SoundStyle CoolingDownSound = new("CalamityMod/Sounds/Custom/ExoMechs/ThanatosVent") { Volume = 0.025f };
         private SlotId OrbSoundSlot;
         private SlotId CoolingDownSoundSlot;
 
@@ -239,7 +239,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                         Main.rand.NextFloat(300f, 400f));
                     GeneralParticleHandler.SpawnParticle(heat);
                 }
-                SoundStyle steam = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashSteamRelease");
+                SoundStyle steam = new("CalamityMod/Sounds/Item/HeliumFlashSteamRelease");
                 if (!SoundEngine.TryGetActiveSound(CoolingDownSoundSlot, out var sound))
                     CoolingDownSoundSlot = SoundEngine.PlaySound(steam with { Volume = 0.5f, Pitch = -0.5f }, GunTipPosition);
                 else

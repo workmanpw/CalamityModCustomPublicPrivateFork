@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
+using CalamityMod.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
+namespace CalamityMod.CalPlayer.DrawLayers
 {
     public class ForbiddenSignLayer : PlayerDrawLayer
     {

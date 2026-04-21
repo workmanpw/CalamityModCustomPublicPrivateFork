@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class HailstormBulletProj : ModProjectile, ILocalizedModType
     {
@@ -74,7 +74,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             target.AddBuff(BuffID.Frostburn2, 120);
             if (hit.Crit)
             {
-                SoundStyle crit = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/CryogenPhaseTransitionCrack");
+                SoundStyle crit = new("CalamityMod/Sounds/NPCHit/CryogenPhaseTransitionCrack");
                 SoundEngine.PlaySound(crit with { Volume = 0.35f, Pitch = 1f }, Projectile.Center);
 
                 if (!target.boss)
@@ -88,7 +88,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 for (int k = 0; k < points; k++)
                 {
                     Vector2 velocity = spinningPoint.RotatedBy(radians * k).RotatedBy(-0.45f * rotRando);
-                    Particle ice = new CustomSpark(Projectile.Center + velocity * 4.5f + addedPlacement, velocity * 7, "CalamityModCustomPublicPrivateFork/Particles/GlowBlade", false, 6, 0.025f, Color.SkyBlue * 0.9f, new Vector2(1.5f, 0.6f), true, true, shrinkSpeed: 0.9f, glowCenterScale: 0.8f, glowOpacity: 0.3f);
+                    Particle ice = new CustomSpark(Projectile.Center + velocity * 4.5f + addedPlacement, velocity * 7, "CalamityMod/Particles/GlowBlade", false, 6, 0.025f, Color.SkyBlue * 0.9f, new Vector2(1.5f, 0.6f), true, true, shrinkSpeed: 0.9f, glowCenterScale: 0.8f, glowOpacity: 0.3f);
                     GeneralParticleHandler.SpawnParticle(ice);
                 }
             }

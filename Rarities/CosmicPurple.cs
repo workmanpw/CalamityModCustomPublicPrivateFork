@@ -9,7 +9,7 @@ using Terraria.UI.Chat;
 using Terraria.Utilities;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Rarities
+namespace CalamityMod.Rarities
 {
     public class CosmicPurple : ModRarity
     {
@@ -23,8 +23,8 @@ namespace CalamityModCustomPublicPrivateFork.Rarities
         public static void Draw(Item Item, SpriteBatch spriteBatch, string text, int X, int Y, Color textColor, Color lightColor, float rotation,
             Vector2 origin, Vector2 baseScale, float time, bool renderTextSparkles, DynamicSpriteFont font)
         {
-            var crystalTextGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/UI/CrystalTextGlow").Value;
-            var sparkle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/UI/CrystalTextSparkle").Value;
+            var crystalTextGlow = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/UI/CrystalTextGlow").Value;
+            var sparkle = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/UI/CrystalTextSparkle").Value;
             var fontSize = font.MeasureString(text);
             var center = fontSize / 2f;
 

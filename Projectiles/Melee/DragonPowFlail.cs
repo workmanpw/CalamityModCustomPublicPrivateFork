@@ -1,13 +1,13 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class DragonPowFlail : ModProjectile, ILocalizedModType
     {
@@ -222,7 +222,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             Player owner = Main.player[Projectile.owner];
             Vector2 mountedCenter = owner.MountedCenter;
             Color transparent = Color.Transparent;
-            Texture2D chainTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/DragonPowChain").Value;
+            Texture2D chainTex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/DragonPowChain").Value;
             Vector2 chainDrawPos = Projectile.Center;
 
             Rectangle? sourceRectangle = null;

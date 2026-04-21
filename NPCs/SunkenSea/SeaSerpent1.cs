@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Items.Weapons.Magic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityModCustomPublicPrivateFork.NPCs.SunkenSea
+namespace CalamityMod.NPCs.SunkenSea
 {
     public class SeaSerpent1 : ModNPC
     {
@@ -61,7 +61,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SunkenSea
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.SeaSerpent")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.SeaSerpent")
             });
         }
 

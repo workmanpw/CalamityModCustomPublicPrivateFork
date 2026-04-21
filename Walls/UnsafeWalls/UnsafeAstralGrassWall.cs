@@ -7,11 +7,11 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
-namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
+namespace CalamityMod.Walls.UnsafeWalls
 {
     public class UnsafeAstralGrassWall : ModWall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/AstralGrassWall";
+        public override string Texture => "CalamityMod/Walls/AstralGrassWall";
         public static Asset<Texture2D> leafTexture = null;
 
         public static Vector2 TileAdj => (Lighting.Mode == Terraria.Graphics.Light.LightMode.Retro || Lighting.Mode == Terraria.Graphics.Light.LightMode.Trippy) ? Vector2.Zero : Vector2.One * 12;
@@ -32,7 +32,7 @@ namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
 
             if (!Main.dedServ)
             {
-                leafTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Walls/AstralGrassWallLeaves");
+                leafTexture = ModContent.Request<Texture2D>("CalamityMod/Walls/AstralGrassWallLeaves");
             }
         }
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

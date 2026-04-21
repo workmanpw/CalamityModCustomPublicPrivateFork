@@ -1,17 +1,17 @@
 using System;
-using CalamityModCustomPublicPrivateFork.NPCs;
+using CalamityMod.NPCs;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     [PierceResistException]
     public class NastyChollaBol : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/NastyCholla";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/NastyCholla";
 
         public override void SetDefaults()
         {

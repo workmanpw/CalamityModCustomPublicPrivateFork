@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,12 +10,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class MoltenAmputatorProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/MoltenAmputator";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/MoltenAmputator";
 
         public int time = 0;
         public Vector2 squash = new Vector2(1, 1);
@@ -131,7 +131,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             if (Projectile.soundDelay == 0)
             {
                 Projectile.soundDelay = 7 * Projectile.MaxUpdates;
-                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SwooshMid");
+                SoundStyle sound = new("CalamityMod/Sounds/Item/SwooshMid");
                 SoundEngine.PlaySound(sound with { MaxInstances = -1, Volume = Projectile.Calamity().stealthStrike ? 0.15f : 0.3f }, Projectile.Center);
             }
 
@@ -181,12 +181,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                     
                     if (Main.rand.NextBool(6))
                     {
-                        Particle spark2 = new CustomSpark(Projectile.Center + new Vector2(0, -70 * squash.X).RotatedBy(rot), vel.RotatedByRandom(0.4f) * fade, "CalamityModCustomPublicPrivateFork/Particles/ProvidenceMarkParticle", false, 17, Main.rand.NextFloat(1.15f, 1.3f), Color.Lerp(Color.Orchid, Color.White, Main.rand.NextFloat(0, 0.7f)), new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.3f, 0.4f));
+                        Particle spark2 = new CustomSpark(Projectile.Center + new Vector2(0, -70 * squash.X).RotatedBy(rot), vel.RotatedByRandom(0.4f) * fade, "CalamityMod/Particles/ProvidenceMarkParticle", false, 17, Main.rand.NextFloat(1.15f, 1.3f), Color.Lerp(Color.Orchid, Color.White, Main.rand.NextFloat(0, 0.7f)), new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.3f, 0.4f));
                         GeneralParticleHandler.SpawnParticle(spark2);
                     }
                     else
                     {
-                        Particle spark = new CustomSpark(Projectile.Center + new Vector2(0, -70 * squash.X).RotatedBy(rot), vel.RotatedByRandom(0.4f) * fade, "CalamityModCustomPublicPrivateFork/Particles/ProvidenceMarkParticle", false, 17, Main.rand.NextFloat(0.75f, 0.82f), Main.rand.NextBool(4) ? Color.Khaki : Color.Orange, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.3f, 0.4f));
+                        Particle spark = new CustomSpark(Projectile.Center + new Vector2(0, -70 * squash.X).RotatedBy(rot), vel.RotatedByRandom(0.4f) * fade, "CalamityMod/Particles/ProvidenceMarkParticle", false, 17, Main.rand.NextFloat(0.75f, 0.82f), Main.rand.NextBool(4) ? Color.Khaki : Color.Orange, new Vector2(1.3f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.3f, 0.4f));
                         GeneralParticleHandler.SpawnParticle(spark);
                     }
 
@@ -219,7 +219,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             {
                 if (Projectile.numHits == 0)
                 {
-                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FinalDawnSlash");
+                    SoundStyle fire = new("CalamityMod/Sounds/Item/FinalDawnSlash");
                     SoundEngine.PlaySound(fire with { Volume = 0.5f, Pitch = Main.rand.NextFloat(0.4f, 0.85f), MaxInstances = -1 }, Projectile.Center);
                 }
 
@@ -233,7 +233,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                         float rot = fakeRot + (MathHelper.TwoPi * i / numParts) * 0.4f + Projectile.numHits * 5;
                         Vector2 vel = (new Vector2(0, -130).RotatedBy(rot).RotatedBy(-1.3f * direction)) * squash.X;
 
-                        Particle spark2 = new CustomSpark(Projectile.Center + new Vector2(0, -70 * squash.X).RotatedBy(rot), (vel * 0.02f).RotatedByRandom(1.4f) * fade, "CalamityModCustomPublicPrivateFork/Particles/GlowSpark", false, 18, Main.rand.NextFloat(0.015f, 0.025f), Color.Goldenrod, new Vector2(2f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.6f, 0.7f));
+                        Particle spark2 = new CustomSpark(Projectile.Center + new Vector2(0, -70 * squash.X).RotatedBy(rot), (vel * 0.02f).RotatedByRandom(1.4f) * fade, "CalamityMod/Particles/GlowSpark", false, 18, Main.rand.NextFloat(0.015f, 0.025f), Color.Goldenrod, new Vector2(2f, 0.5f), true, false, 0, false, false, Main.rand.NextFloat(0.6f, 0.7f));
                         GeneralParticleHandler.SpawnParticle(spark2);
 
                         BloodParticle blood = new BloodParticle(Projectile.Center + new Vector2(0, -70 * squash.X).RotatedBy(rot), (vel * 0.04f).RotatedByRandom(1.4f) * fade, Main.rand.Next(13, 24 + 1), Main.rand.NextFloat(0.85f, 1.2f), Main.rand.NextBool() ? Color.Goldenrod : Color.Orange);
@@ -262,13 +262,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             {
                 // Amputate them
                 Projectile strike = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), target.Center, Vector2.Zero, ModContent.ProjectileType<DirectStrike>(), Projectile.damage * 7, 0f, Owner.whoAmI, target.whoAmI, 1f);
-                Particle blastRingBase = new CustomPulse(target.Center, Vector2.Zero, Color.Orange, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1.1f, 1f, 18, true);
+                Particle blastRingBase = new CustomPulse(target.Center, Vector2.Zero, Color.Orange, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1.1f, 1f, 18, true);
                 GeneralParticleHandler.SpawnParticle(blastRingBase);
                 for (int i = 0; i < 3; i++)
                 {
-                    Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, Color.Orchid, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.7f * (i + 1), 1f, 18, true);
+                    Particle blastRing = new CustomPulse(target.Center, Vector2.Zero, Color.Orchid, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.7f * (i + 1), 1f, 18, true);
                     GeneralParticleHandler.SpawnParticle(blastRing);
-                    Particle blastRing2 = new CustomPulse(target.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.35f * (i + 1), 0.5f, 18, true);
+                    Particle blastRing2 = new CustomPulse(target.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 0.35f * (i + 1), 0.5f, 18, true);
                     GeneralParticleHandler.SpawnParticle(blastRing2);
                 }
 
@@ -288,9 +288,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                     GeneralParticleHandler.SpawnParticle(blood);
                 }
 
-                SoundStyle slice = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HellkiteFullCharge");
+                SoundStyle slice = new("CalamityMod/Sounds/Item/HellkiteFullCharge");
                 SoundEngine.PlaySound(slice with { Volume = 1f, Pitch = Main.rand.NextFloat(0.5f, 0.6f) }, target.Center);
-                SoundStyle cut = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/PerfLargeDeath");
+                SoundStyle cut = new("CalamityMod/Sounds/NPCKilled/PerfLargeDeath");
                 SoundEngine.PlaySound(cut with { Volume = 1f, Pitch = Main.rand.NextFloat(0.5f, 0.6f) }, target.Center);
 
                 AMPUTATE = true;
@@ -303,15 +303,15 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             float drawRotation = Projectile.rotation;
 
-            Asset<Texture2D> p = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmearFire2");
-            Asset<Texture2D> p2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmearFire3");
+            Asset<Texture2D> p = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularSmearFire2");
+            Asset<Texture2D> p2 = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularSmearFire3");
             for (int i = 0; i < 3; i++)
             {
                 Main.EntitySpriteDraw(p2.Value, drawPosition, null, Color.Orchid with { A = 0 } * 0.25f * effectScale, fakeRot * (Main.rand.NextFloat(1.5f, 1.55f) * (i * 0.5f + 0.2f)), p2.Size() * 0.5f, 1.1f * Main.rand.NextFloat(0.8f, 1.15f) * effectScale, direction == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None);
                 Main.EntitySpriteDraw(p.Value, drawPosition, null, Color.Orange with { A = 0 } * 0.35f * effectScale, fakeRot * (Main.rand.NextFloat(1.1f, 1.15f) * (i * 0.5f + 0.2f)), p.Size() * 0.5f, 0.9f * effectScale, direction == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None);
             }
 
-            Asset<Texture2D> tex3 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/MoltenAmputatorAnimated");
+            Asset<Texture2D> tex3 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/MoltenAmputatorAnimated");
             Rectangle frame = tex3.Frame(1, 8, 0, Projectile.frame);
             Vector2 rotationPoint = frame.Size() * 0.5f;
             Main.EntitySpriteDraw(tex3.Value, drawPosition, frame, lightColor, drawRotation, rotationPoint, squash * Projectile.scale, direction == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None);

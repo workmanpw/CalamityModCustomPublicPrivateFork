@@ -1,6 +1,6 @@
 using System;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs
+namespace CalamityMod.NPCs
 {
     /// <summary>
     /// This attribute makes projectiles exempt from pierce resistance

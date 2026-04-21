@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Dusts.WaterSplash;
-using CalamityModCustomPublicPrivateFork.Gores.WaterDroplet;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityMod.Dusts.WaterSplash;
+using CalamityMod.Gores.WaterDroplet;
+using CalamityMod.Systems.Graphic.LiquidSystem;
+using CalamityMod.Tiles.Abyss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Waters
+namespace CalamityMod.Waters
 {
     public class SulphuricDepthsWaterflow : ModWaterfallStyle, IWaterfallStyleModifyColor
     {
@@ -26,7 +26,7 @@ namespace CalamityModCustomPublicPrivateFork.Waters
         {
             Type = Slot;
             Instance = this;
-            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityModCustomPublicPrivateFork/SulphuricDepthsWaterflow");
+            WaterfallStyle = ModContent.Find<ModWaterfallStyle>("CalamityMod/SulphuricDepthsWaterflow");
             SplashDust = ModContent.DustType<SulphuricDepthsSplash>();
             DropletGore = ModContent.GoreType<SulphuricDepthsWaterDroplet>();
         }

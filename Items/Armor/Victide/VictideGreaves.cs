@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Victide
+namespace CalamityMod.Items.Armor.Victide
 {
     [AutoloadEquip(EquipType.Legs)]
     [LegacyName("VictideLeggings")]

@@ -1,7 +1,7 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.MusicBoxes
+namespace CalamityMod.Items.Placeables.MusicBoxes
 {
     [LegacyName("DraedonsAmbienceMusicBox")]
     public class DraedonExoSelectMusicBox : ModItem, ILocalizedModType

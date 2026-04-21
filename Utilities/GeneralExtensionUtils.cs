@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items;
-using CalamityModCustomPublicPrivateFork.Items.BaseItems;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides;
-using CalamityModCustomPublicPrivateFork.Projectiles;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items;
+using CalamityMod.Items.BaseItems;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.VanillaNPCAIOverrides;
+using CalamityMod.Projectiles;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public static partial class CalamityUtils
     {

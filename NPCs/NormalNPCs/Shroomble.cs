@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Critters;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityMod.Items.Critters;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,7 +9,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
+namespace CalamityMod.NPCs.NormalNPCs
 {
     public class Shroomble : ModNPC
     {
@@ -93,7 +93,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Times.DayTime,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Surface,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Shroomble")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Shroomble")
             });
         }
 

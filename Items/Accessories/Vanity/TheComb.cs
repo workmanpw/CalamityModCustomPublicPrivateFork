@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity
+namespace CalamityMod.Items.Accessories.Vanity
 {
     public class TheComb : ModItem, ILocalizedModType
     {

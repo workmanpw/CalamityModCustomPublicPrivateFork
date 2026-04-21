@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class Murasama : ModItem, ILocalizedModType
     {
@@ -17,10 +17,10 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
         public int frame = 0;
         public bool IDUnlocked(Player player) => DownedBossSystem.downedDoG;
 
-        public static readonly SoundStyle OrganicHit = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MurasamaHitOrganic") { Volume = 0.45f };
-        public static readonly SoundStyle InorganicHit = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MurasamaHitInorganic") { Volume = 0.55f };
-        public static readonly SoundStyle Swing = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MurasamaSwing") { Volume = 0.2f };
-        public static readonly SoundStyle BigSwing = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MurasamaBigSwing") { Volume = 0.25f };
+        public static readonly SoundStyle OrganicHit = new("CalamityMod/Sounds/Item/MurasamaHitOrganic") { Volume = 0.45f };
+        public static readonly SoundStyle InorganicHit = new("CalamityMod/Sounds/Item/MurasamaHitInorganic") { Volume = 0.55f };
+        public static readonly SoundStyle Swing = new("CalamityMod/Sounds/Item/MurasamaSwing") { Volume = 0.2f };
+        public static readonly SoundStyle BigSwing = new("CalamityMod/Sounds/Item/MurasamaBigSwing") { Volume = 0.25f };
         public override void SetStaticDefaults()
         {
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(2, 13));
@@ -62,7 +62,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
             }
             else
             {
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/MurasamaSheathed").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/MurasamaSheathed").Value;
                 spriteBatch.Draw(texture, position, null, Color.White, 0f, origin, scale, SpriteEffects.None, 0);
             }
 
@@ -80,7 +80,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
             }
             else
             {
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/MurasamaSheathed").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/MurasamaSheathed").Value;
                 spriteBatch.Draw(texture, Item.position - Main.screenPosition, null, lightColor, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0);
             }
             return false;
@@ -90,7 +90,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
         {
             if (!IDUnlocked(Main.LocalPlayer))
                 return;
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/MurasamaGlow").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/MurasamaGlow").Value;
             spriteBatch.Draw(texture, Item.position - Main.screenPosition, Item.GetCurrentFrame(ref frame, ref frameCounter, 2, 13, false), Color.White, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0);
         }
 

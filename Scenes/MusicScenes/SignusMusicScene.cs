@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Signus;
+using CalamityMod.NPCs.Signus;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class SignusMusicScene : BaseMusicSceneEffect
     {

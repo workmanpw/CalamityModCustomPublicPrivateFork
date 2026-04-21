@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum
+namespace CalamityMod.Tiles.FurnitureWulfrum
 {
     public class WulfrumLabstation : ModTile
     {
@@ -39,7 +39,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum
             int xPos = Main.tile[i, j].TileFrameX;
             int yPos = Main.tile[i, j].TileFrameY;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureWulfrum/WulfrumLabstationGlow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureWulfrum/WulfrumLabstationGlow");
             Texture2D glowmask = GlowTexture.Value;
 
             Color drawColour = CalamityUtils.ApplyPaint(Main.tile[i, j].TileColor, new Color(100, 100, 100, 100));

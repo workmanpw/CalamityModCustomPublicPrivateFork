@@ -1,9 +1,9 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Ammo;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Ammo;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class HolyFireBulletProj : ModProjectile, ILocalizedModType
     {
@@ -64,7 +64,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 float targetDist = Vector2.Distance(Owner.Center, Projectile.Center);
                 if (time > 2 && targetDist < 1400)
                 {
-                    Particle trail = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitX) * 0.5f, "CalamityModCustomPublicPrivateFork/Particles/DualTrail", false, 4, 0.03f, col * 0.9f, new Vector2(1f, 3), true, true, shrinkSpeed: 0.8f, glowOpacity: 0.6f);
+                    Particle trail = new CustomSpark(Projectile.Center, -Projectile.velocity.SafeNormalize(Vector2.UnitX) * 0.5f, "CalamityMod/Particles/DualTrail", false, 4, 0.03f, col * 0.9f, new Vector2(1f, 3), true, true, shrinkSpeed: 0.8f, glowOpacity: 0.6f);
                     GeneralParticleHandler.SpawnParticle(trail);
                 }
             }
@@ -74,7 +74,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         {
             if (time <= 0)
                 return false;
-            Asset<Texture2D> tip = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SquareRotated");
+            Asset<Texture2D> tip = ModContent.Request<Texture2D>("CalamityMod/Particles/SquareRotated");
 
             for (int i = 0; i < 2; i++)
                 Main.EntitySpriteDraw(tip.Value, Projectile.Center - Main.screenPosition, null, Color.Lerp(col, Color.White, i) with { A = 0 } * 0.7f, Projectile.rotation, tip.Size() / 2f, new Vector2(0.2f, 1.4f) * Projectile.scale * (0.28f - 0.1f * i), SpriteEffects.None, 0);
@@ -121,13 +121,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             float fxScale = MathHelper.Lerp(sizeBonus, 1, 0.25f);
             Vector2 Offset = Main.rand.NextVector2Circular(15, 15);
 
-            Particle blastvfx = new CustomPulse(Projectile.Center + Offset, Vector2.Zero, Color.Lerp(Color.SlateGray, col, 0.8f) * 0.9f, "CalamityModCustomPublicPrivateFork/Particles/SmokeExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.05f * fxScale, 0.1f * fxScale, Main.rand.Next(8, 10 + 1), true);
+            Particle blastvfx = new CustomPulse(Projectile.Center + Offset, Vector2.Zero, Color.Lerp(Color.SlateGray, col, 0.8f) * 0.9f, "CalamityMod/Particles/SmokeExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.05f * fxScale, 0.1f * fxScale, Main.rand.Next(8, 10 + 1), true);
             GeneralParticleHandler.SpawnParticle(blastvfx);
 
             float rot = Main.rand.NextFloat(-5, 5);
             for (int i = -1; i <= 1; i += 2)
             {
-                Particle centerShine = new CustomSpark(Projectile.Center + Offset, Vector2.UnitY.RotatedBy(rot + MathHelper.PiOver4 * i) * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 5, 0.3f * fxScale, Color.White, new Vector2(1f, 1f), true, false, shrinkSpeed: 2f);
+                Particle centerShine = new CustomSpark(Projectile.Center + Offset, Vector2.UnitY.RotatedBy(rot + MathHelper.PiOver4 * i) * 0.01f, "CalamityMod/Particles/BloomCircle", false, 5, 0.3f * fxScale, Color.White, new Vector2(1f, 1f), true, false, shrinkSpeed: 2f);
                 GeneralParticleHandler.SpawnParticle(centerShine);
             }
 

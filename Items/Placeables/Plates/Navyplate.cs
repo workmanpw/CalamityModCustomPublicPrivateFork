@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Items.Placeables.Walls;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Plates
+namespace CalamityMod.Items.Placeables.Plates
 {
     public class Navyplate : ModItem, ILocalizedModType
     {

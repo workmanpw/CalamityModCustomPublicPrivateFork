@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class FancyStars : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/FancyStars";
+        public override string Texture => "CalamityMod/Particles/FancyStars";
 
         public override bool UseCustomDraw => true;
 

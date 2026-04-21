@@ -1,5 +1,5 @@
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures
+namespace CalamityMod.Items.Placeables.DraedonStructures
 {
     public class LaboratoryShelf : ModItem, ILocalizedModType
     {

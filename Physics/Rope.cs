@@ -2,7 +2,7 @@ using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Physics;
+namespace CalamityMod.Physics;
 
 internal class Rope
 {

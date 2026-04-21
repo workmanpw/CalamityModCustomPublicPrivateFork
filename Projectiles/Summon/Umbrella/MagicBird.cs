@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella
+namespace CalamityMod.Projectiles.Summon.Umbrella
 {
     public class MagicBird : ModProjectile, ILocalizedModType
     {

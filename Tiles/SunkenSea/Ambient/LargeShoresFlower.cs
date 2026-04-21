@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
+namespace CalamityMod.Tiles.SunkenSea.Ambient
 {
     public class LargeShoresFlower : ModTile
     {
@@ -66,7 +66,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
             else if (tile.IsHalfBlock)
                 spriteBatch.Draw(glowmask, drawPosition + new Vector2(0f, 8f), new Rectangle(xFrameOffset, yFrameOffset, 18, 8), drawColour, 0.0f, Vector2.Zero, 1f, SpriteEffects.None, 0.0f);
 
-            CenterTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/LargeShoresFlower_Center");
+            CenterTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/SunkenSea/Ambient/LargeShoresFlower_Center");
             CalamityUtils.DrawFlameEffect(CenterTexture.Value, i, j, 2);
 
             return false;

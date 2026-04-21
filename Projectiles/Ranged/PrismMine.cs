@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class PrismMine : ModProjectile, ILocalizedModType
     {
@@ -86,7 +86,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         {
             Texture2D baseTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             Texture2D glowTexture = ModContent.Request<Texture2D>($"{Texture}Glowmask").Value;
-            Texture2D laserTexture = ModContent.Request<Texture2D>($"CalamityModCustomPublicPrivateFork/Projectiles/Ranged/PrismMineArc").Value;
+            Texture2D laserTexture = ModContent.Request<Texture2D>($"CalamityMod/Projectiles/Ranged/PrismMineArc").Value;
 
             void drawLineTo(Vector2 destination, Color laserColor)
             {

@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.Monoliths;
+using CalamityMod.Items.Placeables.FurnitureExo;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.Furniture.Monoliths;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths
+namespace CalamityMod.Items.Placeables.Furniture.Monoliths
 {
     public class ExoObelisk : ModItem, ILocalizedModType
     {

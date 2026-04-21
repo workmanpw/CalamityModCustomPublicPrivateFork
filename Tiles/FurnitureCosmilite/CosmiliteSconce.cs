@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureCosmilite
+namespace CalamityMod.Tiles.FurnitureCosmilite
 {
     public class CosmiliteSconce : ModTile
     {

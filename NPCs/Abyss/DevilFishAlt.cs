@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,7 +12,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
+namespace CalamityMod.NPCs.Abyss
 {
     public class DevilFishAlt : ModNPC
     {
@@ -26,7 +26,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
             this.HideFromBestiary();
             if (!Main.dedServ)
             {
-                GlowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Abyss/DevilFishGlowAlt", AssetRequestMode.AsyncLoad);
+                GlowTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/Abyss/DevilFishGlowAlt", AssetRequestMode.AsyncLoad);
             }
         }
 

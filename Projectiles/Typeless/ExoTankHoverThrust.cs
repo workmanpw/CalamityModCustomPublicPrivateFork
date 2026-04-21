@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Mounts;
+using CalamityMod.Items.Mounts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class ExoTankHoverThrust : ModProjectile, ILocalizedModType
     {

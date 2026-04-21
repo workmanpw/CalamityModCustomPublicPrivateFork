@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Armor.DesertProwler;
+using CalamityMod.Items.Armor.DesertProwler;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
+namespace CalamityMod.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Head)]
     public class OldHunterHat : ModItem, ILocalizedModType
@@ -32,14 +32,14 @@ namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
     public class OldHunterShirt : ModItem, IBulkyArmor, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Armor.Vanity";
-        public string BulkTexture => "CalamityModCustomPublicPrivateFork/Items/Armor/Vanity/OldHunterShirt_Bulk";
+        public string BulkTexture => "CalamityMod/Items/Armor/Vanity/OldHunterShirt_Bulk";
 
         public override void Load()
         {
             if (Main.dedServ)
                 return;
 
-            EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Vanity/OldHunterShirt_Back", EquipType.Back, this);
+            EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Vanity/OldHunterShirt_Back", EquipType.Back, this);
         }
 
         public override void SetStaticDefaults()

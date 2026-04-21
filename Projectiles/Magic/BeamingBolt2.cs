@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class BeamingBolt2 : ModProjectile, ILocalizedModType
     {
@@ -26,7 +26,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         {
             Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (Projectile.ai[0] == 1f)
-                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/BeamingThorn").Value;
+                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/BeamingThorn").Value;
 
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, tex.Size() / 2f, Projectile.scale, SpriteEffects.None, 0);
             return false;

@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides
+namespace CalamityMod.NPCs.VanillaNPCAIOverrides
 {
     public abstract class VanillaAIOverride : ILoadable
     {

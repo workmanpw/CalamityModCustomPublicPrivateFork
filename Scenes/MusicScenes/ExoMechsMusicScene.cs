@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.ExoMechs;
+using CalamityMod.NPCs.ExoMechs.Apollo;
+using CalamityMod.NPCs.ExoMechs.Ares;
+using CalamityMod.NPCs.ExoMechs.Artemis;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class ExoMechsMusicScene : BaseMusicSceneEffect
     {

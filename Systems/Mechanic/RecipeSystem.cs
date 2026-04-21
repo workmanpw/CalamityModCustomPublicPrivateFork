@@ -1,30 +1,30 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Critters;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCatches;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCragCatches;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Astral;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Critters;
+using CalamityMod.Items.Fishing.AstralCatches;
+using CalamityMod.Items.Fishing.BrimstoneCragCatches;
+using CalamityMod.Items.Fishing.SunkenSeaCatches;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.Items.Placeables.Astral;
+using CalamityMod.Items.Placeables.FurnitureDriftwood;
+using CalamityMod.Items.Placeables.FurnitureAcidwood;
+using CalamityMod.Items.Placeables.Crags;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Items.Potions.Food;
+using CalamityMod.Items.Tools;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class RecipeSystem : ModSystem
     {

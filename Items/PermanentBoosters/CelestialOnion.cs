@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
+namespace CalamityMod.Items.PermanentBoosters
 {
     [LegacyName("MLGRune2")]
     public class CelestialOnion : ModItem, ILocalizedModType
@@ -36,7 +36,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
             {
                 if (player.whoAmI == Main.myPlayer)
                 {
-                    string key = "Mods.CalamityModCustomPublicPrivateFork.Misc.CelestialOnionText";
+                    string key = "Mods.CalamityMod.Misc.CelestialOnionText";
                     Color messageColor = Color.LightSlateGray;
                     Main.NewText(Language.GetTextValue(key), messageColor);
                 }

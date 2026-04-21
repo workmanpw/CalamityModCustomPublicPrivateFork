@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI.Chat;
 
-namespace CalamityModCustomPublicPrivateFork.ChatTags
+namespace CalamityMod.ChatTags
 {
     public sealed class CalamityBuffTagHandler : AbstractTagHandler<CalamityBuffTagHandler>
     {

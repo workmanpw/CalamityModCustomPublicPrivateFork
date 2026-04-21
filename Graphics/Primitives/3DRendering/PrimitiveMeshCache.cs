@@ -3,7 +3,7 @@ using System;
 using System.Buffers;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+namespace CalamityMod.Graphics.Primitives;
 
 public sealed class PrimitiveMeshCache
 {

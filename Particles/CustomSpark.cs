@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class CustomSpark : Particle
     {
@@ -22,7 +22,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public bool FlipHorizontal = false;
         public bool NoShrink = false;
         public float Spin = 0;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public bool AltVisual = true;
         public override bool UseAdditiveBlend => AltVisual;
         public override bool SetLifetime => true;
@@ -100,7 +100,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
                 DateTime day = DateTime.Now;
                 if (day.DayOfWeek == DayOfWeek.Tuesday)
                 {
-                    Texture2D joke = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/MammothParticle").Value;
+                    Texture2D joke = ModContent.Request<Texture2D>("CalamityMod/Particles/MammothParticle").Value;
                     scaleMult = (MathHelper.Lerp(texture.Size().X / joke.Size().X, texture.Size().Y / joke.Size().Y, 0.5f));
                     texture = joke;
                     AltVisual = true;

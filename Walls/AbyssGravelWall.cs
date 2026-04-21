@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Walls
+namespace CalamityMod.Walls
 {
     [LegacyName("AbyssGravelWallSafe")]
     public class SafeAbyssGravelWall : ModWall
@@ -14,7 +14,7 @@ namespace CalamityModCustomPublicPrivateFork.Walls
             AddMapEntry(new Color(6, 10, 54));
             DustType = DustID.Water;
         }
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/AbyssGravelWall";
+        public override string Texture => "CalamityMod/Walls/AbyssGravelWall";
 
         public override bool CanExplode(int i, int j) => false;
 

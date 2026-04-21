@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAshen
+namespace CalamityMod.Tiles.FurnitureAshen
 {
     public class AshenCandle : ModTile
     {
@@ -63,7 +63,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAshen
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureAshen/AshenCandleFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureAshen/AshenCandleFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j);
         }
 

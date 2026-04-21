@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,12 +10,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class ToxicantTwisterProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/ToxicantTwister";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/ToxicantTwister";
 
         public float circleRange = -150;
         public float circleSpeed = 1;
@@ -115,9 +115,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                 dust2.noGravity = false;
                 dust2.color = Color.Lerp(Color.White, Main.rand.NextBool(4) ? Color.Chartreuse : Color.Green, 0.7f);
             }
-            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Chartreuse, "CalamityModCustomPublicPrivateFork/Particles/HighResFoggyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.07f, 8);
+            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Chartreuse, "CalamityMod/Particles/HighResFoggyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 0.07f, 8);
             GeneralParticleHandler.SpawnParticle(pulse);
-            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/RavagerRockPillarHit", 3);
+            SoundStyle fire = new("CalamityMod/Sounds/NPCHit/RavagerRockPillarHit", 3);
             SoundEngine.PlaySound(fire with { Volume = 0.4f, Pitch = Main.rand.NextFloat(-0.2f, 0.2f), MaxInstances = 4 }, Projectile.Center);
         }
         public override bool PreDraw(ref Color lightColor)

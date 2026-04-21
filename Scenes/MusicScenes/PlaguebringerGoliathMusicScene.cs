@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath;
+using CalamityMod.NPCs.PlaguebringerGoliath;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class PlaguebringerGoliathMusicScene : BaseMusicSceneEffect
     {

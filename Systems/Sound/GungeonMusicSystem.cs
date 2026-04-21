@@ -3,13 +3,13 @@ using ReLogic.Utilities;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class GungeonMusicSystem : ModSystem
     {
         // Copied straight from the ORDER easter egg
 
-        private static readonly SoundStyle GungeonTrack = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/GungeonCreditMusic", SoundType.Music);
+        private static readonly SoundStyle GungeonTrack = new("CalamityMod/Sounds/Custom/GungeonCreditMusic", SoundType.Music);
         private static SlotId gungeonSoundSlot;
 
         internal static float DefaultMusicTime = 100f;

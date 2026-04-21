@@ -10,7 +10,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.Default;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Schematics
+namespace CalamityMod.Schematics
 {
     #region Structs
     // A struct parallel to Tile which, for modded tiles, stores offset tile and wall type IDs based on the schematic's mod name arrays.
@@ -702,9 +702,9 @@ PostAreaIteration:
                 else
                 {
                     ModContent.SplitName(tileFullName, out string mod, out string tileName);
-                    // Convert "CalamityMod" to "CalamityModCustomPublicPrivateFork" for this fork
+                    // Convert "CalamityMod" to "CalamityMod" for this fork
                     if (mod == "CalamityMod")
-                        mod = "CalamityModCustomPublicPrivateFork";
+                        mod = "CalamityMod";
                     
                     Mod theMod = ModLoader.GetMod(mod);
 
@@ -722,9 +722,9 @@ PostAreaIteration:
                 else
                 {
                     ModContent.SplitName(wallFullName, out string mod, out string wallName);
-                    // Convert "CalamityMod" to "CalamityModCustomPublicPrivateFork" for this fork
+                    // Convert "CalamityMod" to "CalamityMod" for this fork
                     if (mod == "CalamityMod")
-                        mod = "CalamityModCustomPublicPrivateFork";
+                        mod = "CalamityMod";
                     
                     Mod theMod = ModLoader.GetMod(mod);
                     // If that mod isn't loaded, spawn in a TML default UnloadedWall instead.

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,7 +9,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class BlazingCore : ModItem, ILocalizedModType
     {
@@ -17,8 +17,8 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 
         private static float offset = 0f;
 
-        public static readonly SoundStyle ParryActivateSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/BlazingCoreParryActivate") { Volume = 0.7f };
-        public static readonly SoundStyle ParrySuccessSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/BlazingCoreParry") { Volume = 0.6f };
+        public static readonly SoundStyle ParryActivateSound = new("CalamityMod/Sounds/Item/BlazingCoreParryActivate") { Volume = 0.7f };
+        public static readonly SoundStyle ParrySuccessSound = new("CalamityMod/Sounds/Item/BlazingCoreParry") { Volume = 0.6f };
 
         public override void SetStaticDefaults()
         {

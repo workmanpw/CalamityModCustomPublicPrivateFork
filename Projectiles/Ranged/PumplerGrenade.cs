@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class PumplerGrenade : ModProjectile, ILocalizedModType
     {
@@ -28,7 +28,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             Projectile.localNPCHitCooldown = 20;
 
         }
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/PumplerGrenade";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/PumplerGrenade";
 
         private void Explode(bool NPCHit = false)
         {

@@ -1,16 +1,16 @@
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Tools
+namespace CalamityMod.Items.Tools
 {
     public class CrystylCrusher : ModItem, ILocalizedModType
     {
@@ -18,7 +18,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Tools
         private static int PickPower = 1000;
         private static float LaserSpeed = 14f;
 
-        public static readonly SoundStyle ChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/CrystylCharge");
+        public static readonly SoundStyle ChargeSound = new("CalamityMod/Sounds/Item/CrystylCharge");
 
         public override void SetStaticDefaults()
         {

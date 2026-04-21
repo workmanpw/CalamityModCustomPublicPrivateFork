@@ -8,7 +8,7 @@ using Terraria.GameContent.UI.BigProgressBar;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI.VanillaBossBars
+namespace CalamityMod.UI.VanillaBossBars
 {
     internal class RevMoonLordBossBar : ModBossBar
     {

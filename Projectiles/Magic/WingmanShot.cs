@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class WingmanShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public int BounceHits = 0;
         public Color mainColor = Color.White;
         public int time = 0;
@@ -69,7 +69,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         {
             if (time == 0)
                 return false;
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Projectile.GetAlpha(lightColor);
             float drawRotation = Projectile.rotation;

@@ -5,11 +5,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.Abyss
+namespace CalamityMod.Tiles.Rubblemaker.Abyss
 {
     public class MassiveRarePearlEcho : ModTile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/Abyss/AbyssAmbient/MassiveRarePearl";
+        public override string Texture => "CalamityMod/Tiles/Abyss/AbyssAmbient/MassiveRarePearl";
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;

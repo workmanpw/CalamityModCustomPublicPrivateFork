@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAbyss
+namespace CalamityMod.Items.Placeables.FurnitureAbyss
 {
     public class AbyssCandelabra : ModItem, ILocalizedModType
     {

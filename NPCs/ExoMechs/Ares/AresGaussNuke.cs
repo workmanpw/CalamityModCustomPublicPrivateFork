@@ -1,11 +1,11 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Sounds;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -17,7 +17,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
+namespace CalamityMod.NPCs.ExoMechs.Ares
 {
     [HasPierceResist]
     public class AresGaussNuke : ModNPC
@@ -68,9 +68,9 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
         public const float gaussNukeReloadDuration = 360f;
 
         // Telegraph sound.
-        public static readonly SoundStyle TelSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/AresGaussNukeArmCharge") { Volume = 1.1f };
+        public static readonly SoundStyle TelSound = new("CalamityMod/Sounds/Custom/ExoMechs/AresGaussNukeArmCharge") { Volume = 1.1f };
 
-        public static readonly SoundStyle NukeExplosionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/AresGaussNukeExplosion") { Volume = 1.45f };
+        public static readonly SoundStyle NukeExplosionSound = new("CalamityMod/Sounds/Custom/ExoMechs/AresGaussNukeExplosion") { Volume = 1.45f };
 
         public static Asset<Texture2D> GlowTexture;
 

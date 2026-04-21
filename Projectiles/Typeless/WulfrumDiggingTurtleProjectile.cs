@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Items.Materials;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -9,14 +9,14 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class WulfrumDiggingTurtleProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public static readonly SoundStyle IdleSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumSawIdle") { IsLooped = true, Volume = 0.8f, MaxInstances = 0 };
-        public static readonly SoundStyle CuttingSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumSawCutting") { IsLooped = true, Volume = 0.7f, MaxInstances = 0 };
-        public static readonly SoundStyle BreakingSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WulfrumMachineBreak");
+        public static readonly SoundStyle IdleSound = new("CalamityMod/Sounds/Custom/WulfrumSawIdle") { IsLooped = true, Volume = 0.8f, MaxInstances = 0 };
+        public static readonly SoundStyle CuttingSound = new("CalamityMod/Sounds/Custom/WulfrumSawCutting") { IsLooped = true, Volume = 0.7f, MaxInstances = 0 };
+        public static readonly SoundStyle BreakingSound = new("CalamityMod/Sounds/Custom/WulfrumMachineBreak");
 
         private SlotId CuttingSoundSlot;
         private SlotId IdlingSoundSlot;
@@ -40,7 +40,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             set { Projectile.localAI[0] = Math.Clamp(value, 0f, 1f); }
         }
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Tools/WulfrumDiggingTurtle";
+        public override string Texture => "CalamityMod/Items/Tools/WulfrumDiggingTurtle";
         public static Texture2D SmallGearTexture;
         public static Texture2D GearTexture;
 
@@ -216,9 +216,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
 
-            GearTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/WulfrumDiggingTurtle_Gear").Value;
+            GearTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/WulfrumDiggingTurtle_Gear").Value;
 
-            SmallGearTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/WulfrumDiggingTurtle_SmallGear").Value;
+            SmallGearTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/WulfrumDiggingTurtle_SmallGear").Value;
 
 
             Vector2 position = Projectile.Center - Main.screenPosition;

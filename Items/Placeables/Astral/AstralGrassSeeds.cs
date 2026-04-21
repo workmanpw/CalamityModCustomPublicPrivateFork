@@ -4,7 +4,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Astral
+namespace CalamityMod.Items.Placeables.Astral
 {
     public class AstralGrassSeeds : ModItem, ILocalizedModType
     {

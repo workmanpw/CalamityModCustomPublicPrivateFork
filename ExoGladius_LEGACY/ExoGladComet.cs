@@ -5,13 +5,13 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 
-namespace CalamityModCustomPublicPrivateFork.ExoGladius_LEGACY
+namespace CalamityMod.ExoGladius_LEGACY
 {
     public class ExoGladCometLegacy : ModProjectile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/ExoGladius_LEGACY/Exocomet";
+        public override string Texture => "CalamityMod/ExoGladius_LEGACY/Exocomet";
 
         public override void SetStaticDefaults()
         {

@@ -3,13 +3,13 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class Feather : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/TradewindsProjectile";
+        public override string Texture => "CalamityMod/Projectiles/Magic/TradewindsProjectile";
 
         private const int TimeLeft = 150;
 

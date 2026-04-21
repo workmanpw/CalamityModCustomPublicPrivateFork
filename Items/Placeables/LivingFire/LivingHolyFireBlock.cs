@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Tiles.LivingFire;
+using CalamityMod.Items.Materials;
+using CalamityMod.Tiles.LivingFire;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.LivingFire
+namespace CalamityMod.Items.Placeables.LivingFire
 {
     public class LivingHolyFireBlock : ModItem, ILocalizedModType
     {

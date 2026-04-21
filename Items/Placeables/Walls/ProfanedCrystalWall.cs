@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureProfaned;
+using CalamityMod.Items.Placeables.FurnitureProfaned;
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
+using WallTiles = CalamityMod.Walls;
+namespace CalamityMod.Items.Placeables.Walls
 {
     public class ProfanedCrystalWall : ModItem, ILocalizedModType
     {

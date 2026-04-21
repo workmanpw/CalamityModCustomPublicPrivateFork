@@ -1,11 +1,11 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem;
+using CalamityMod.Systems.Graphic.LiquidSystem;
 using Terraria;
 using Terraria.Graphics;
 using Terraria.ModLoader;
 
 #pragma warning disable IDE0130 // Namespace does not match folder structure
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 #pragma warning restore IDE0130 // Namespace does not match folder structure
 {
     [Obsolete($"Use {nameof(IWaterStyleModifyColor)} and {nameof(IWaterStyleModifyLight)} Instead")]

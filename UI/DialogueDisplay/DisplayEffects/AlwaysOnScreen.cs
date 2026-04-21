@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Terraria;
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects
+namespace CalamityMod.UI.DialogueDisplay.DisplayEffects
 {
     public class AlwaysOnScreen : DisplayEffect
     {
@@ -37,7 +37,7 @@ namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects
 
         public override void PreDraw(SpriteBatch spriteBatch, Vector2 textTopLeft, Vector2 textSize, int textTimer, int switchTimer)
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DialogueDisplay/Assets/DialogueArrow").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/UI/DialogueDisplay/Assets/DialogueArrow").Value;
             Vector2 textCenter = textTopLeft + textSize * 0.5f;
             Vector2 toStart = (StartPosition - textCenter).SafeNormalize(-Vector2.UnitY) * 64;
             spriteBatch.Draw(tex, textCenter + toStart - Main.screenPosition, null, Color.White, toStart.ToRotation(), tex.Size() * 0.5f, 1f, 0, 0);

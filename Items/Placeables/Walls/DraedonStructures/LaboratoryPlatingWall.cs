@@ -1,9 +1,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
-using TileItems = CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures;
-using WallTiles = CalamityModCustomPublicPrivateFork.Walls.DraedonStructures;
+using TileItems = CalamityMod.Items.Placeables.DraedonStructures;
+using WallTiles = CalamityMod.Walls.DraedonStructures;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls.DraedonStructures
+namespace CalamityMod.Items.Placeables.Walls.DraedonStructures
 {
     public class LaboratoryPlatingWall : ModItem, ILocalizedModType
     {

@@ -4,7 +4,7 @@ using Terraria.DataStructures;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Gores.Trees
+namespace CalamityMod.Gores.Trees
 {
     public class SulphurLeaf : ModGore
     {

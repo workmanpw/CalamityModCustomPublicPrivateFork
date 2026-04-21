@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CustomRecipes;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.CustomRecipes;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.DraedonsArsenal;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,12 +12,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal
+namespace CalamityMod.Items.Weapons.DraedonsArsenal
 {
     public class PulseRifle : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.DraedonsArsenal";
-        public static readonly SoundStyle FireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PulseRifleFire") { Volume = 0.8f };
+        public static readonly SoundStyle FireSound = new("CalamityMod/Sounds/Item/PulseRifleFire") { Volume = 0.8f };
 
         public int FiringTimer = 30;
 
@@ -47,7 +47,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/PulseRifleGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/DraedonsArsenal/PulseRifleGlow").Value);
         }
         public override void UseStyle(Player player, Rectangle heldItemFrame)
         {

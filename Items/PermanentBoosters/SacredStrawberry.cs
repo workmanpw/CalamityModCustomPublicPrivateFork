@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
+namespace CalamityMod.Items.PermanentBoosters
 {
     [LegacyName("Dragonfruit")]
     public class SacredStrawberry : ModItem, ILocalizedModType
@@ -20,7 +20,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
         public const int LifeBoost = 25;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(LifeBoost);
 
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DragonfruitConsume");
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/DragonfruitConsume");
         public override void SetStaticDefaults()
         {
             // For some reason Life/Mana boosting items are in this set (along with Magic Mirror+)
@@ -52,7 +52,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.PermanentBoosters
             {
                 if (player.whoAmI == Main.myPlayer)
                 {
-                    string key = "Mods.CalamityModCustomPublicPrivateFork.Misc.SacredStrawberryText";
+                    string key = "Mods.CalamityMod.Misc.SacredStrawberryText";
                     Color messageColor = Color.SpringGreen;
                     Main.NewText(Language.GetTextValue(key), messageColor);
                 }

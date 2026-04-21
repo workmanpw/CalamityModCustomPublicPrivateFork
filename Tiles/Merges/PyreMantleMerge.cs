@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.Abyss;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Merges
+namespace CalamityMod.Tiles.Merges
 {
     public sealed class PyreMantleMerge : TileBlendTexture
     {

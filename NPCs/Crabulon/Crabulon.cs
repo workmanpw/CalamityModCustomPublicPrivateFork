@@ -1,20 +1,20 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Potions.Alcohol;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -27,7 +27,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Crabulon
+namespace CalamityMod.NPCs.Crabulon
 {
     [AutoloadBossHead]
     public class Crabulon : ModNPC
@@ -42,10 +42,10 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Crabulon
         public static Asset<Texture2D> AltTexture_Glow;
         public static Asset<Texture2D> AttackTexture_Glow;
 
-        public static readonly SoundStyle JumpSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Crabulon/CrabJump");
-        public static readonly SoundStyle SlamSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Crabulon/CrabSlam", 2);
-        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/CrabulonHit", 3);
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/CrabulonDeath");
+        public static readonly SoundStyle JumpSound = new("CalamityMod/Sounds/Custom/Crabulon/CrabJump");
+        public static readonly SoundStyle SlamSound = new("CalamityMod/Sounds/Custom/Crabulon/CrabSlam", 2);
+        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/CrabulonHit", 3);
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/CrabulonDeath");
 
         public override void SetStaticDefaults()
         {
@@ -106,7 +106,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Crabulon
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundMushroom,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Crabulon")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Crabulon")
             });
         }
 

@@ -2,16 +2,16 @@ using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class NitroShot : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/AMRShot";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/AMRShot";
         public override void SetDefaults()
         {
             Projectile.width = 4;

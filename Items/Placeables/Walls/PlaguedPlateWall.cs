@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurniturePlagued;
+using CalamityMod.Items.Placeables.FurniturePlagued;
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
+using WallTiles = CalamityMod.Walls;
+namespace CalamityMod.Items.Placeables.Walls
 {
     public class PlaguedPlateWall : ModItem, ILocalizedModType
     {

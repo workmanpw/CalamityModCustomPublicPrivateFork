@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Pylons;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.BaseTiles;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Items.Placeables.Pylons;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.BaseTiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Pylons
+namespace CalamityMod.Tiles.Pylons
 {
 
     public class SulphurPylonTile : BasePylonTile

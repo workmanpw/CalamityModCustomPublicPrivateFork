@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items;
+using CalamityMod.Items;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -7,7 +7,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DraedonsArsenal
+namespace CalamityMod.UI.DraedonsArsenal
 {
     [Autoload(Side = ModSide.Client)]
     public sealed class ChargeMeterUI : ModSystem
@@ -22,8 +22,8 @@ namespace CalamityModCustomPublicPrivateFork.UI.DraedonsArsenal
 
         public override void OnModLoad()
         {
-            edgeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonsArsenal/ChargeMeterBorder", AssetRequestMode.ImmediateLoad).Value;
-            barTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonsArsenal/ChargeMeter", AssetRequestMode.ImmediateLoad).Value;
+            edgeTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonsArsenal/ChargeMeterBorder", AssetRequestMode.ImmediateLoad).Value;
+            barTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonsArsenal/ChargeMeter", AssetRequestMode.ImmediateLoad).Value;
             Reset();
         }
 

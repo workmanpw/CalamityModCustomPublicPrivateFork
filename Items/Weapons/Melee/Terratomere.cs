@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class Terratomere : ModItem, ILocalizedModType
     {
@@ -32,7 +32,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 
         public static readonly Color TerraColor2 = new(83, 163, 136);
 
-        public static readonly SoundStyle SwingSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TerratomereSwing");
+        public static readonly SoundStyle SwingSound = new("CalamityMod/Sounds/Item/TerratomereSwing");
 
         public override void SetDefaults()
         {

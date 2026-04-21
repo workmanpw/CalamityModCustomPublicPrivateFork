@@ -1,14 +1,14 @@
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.CalPlayer;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.SupremeCalamitas;
+using CalamityMod.Particles;
+using CalamityMod.Systems.Collections;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -20,15 +20,15 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class BrimstoneMonster : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
-        public static readonly SoundStyle SpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/BrimstoneMonsterSpawn");
-        public static readonly SoundStyle DroneSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/BrimstoneMonsterDrone");
+        public static readonly SoundStyle SpawnSound = new("CalamityMod/Sounds/Custom/SCalSounds/BrimstoneMonsterSpawn");
+        public static readonly SoundStyle DroneSound = new("CalamityMod/Sounds/Custom/SCalSounds/BrimstoneMonsterDrone");
         public SlotId RumbleSlot;
         public static Asset<Texture2D> screamTex;
 
@@ -47,7 +47,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
         {
             if (!Main.dedServ)
             {
-                screamTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/ScreamyFace", AssetRequestMode.AsyncLoad);
+                screamTex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/ScreamyFace", AssetRequestMode.AsyncLoad);
             }
         }
 
@@ -133,7 +133,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
                 Projectile.soundDelay = 1125 - (choice * 225);
                 SoundEngine.PlaySound(SpawnSound, Projectile.Center);
                 if (Projectile.ai[1] == 0f && Projectile.timeLeft >= 90)
-                    RumbleSlot = Main.zenithWorld ? SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/GFBDrone") with { IsLooped = true }, Projectile.Center, _ => new ProjectileAudioTracker(Projectile).IsActiveAndInGame()) : SoundEngine.PlaySound(DroneSound with { IsLooped = true }, Projectile.Center, _ => new ProjectileAudioTracker(Projectile).IsActiveAndInGame());
+                    RumbleSlot = Main.zenithWorld ? SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/SCalSounds/GFBDrone") with { IsLooped = true }, Projectile.Center, _ => new ProjectileAudioTracker(Projectile).IsActiveAndInGame()) : SoundEngine.PlaySound(DroneSound with { IsLooped = true }, Projectile.Center, _ => new ProjectileAudioTracker(Projectile).IsActiveAndInGame());
                 Projectile.localAI[0] += 1f;
                 speedLimit = 23;
             }
@@ -166,7 +166,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
                 }
 
                 if (Projectile.soundDelay <= 0 && Projectile.timeLeft >= 90)
-                    RumbleSlot = Main.zenithWorld ? SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/SCalSounds/GFBDrone") with { IsLooped = true }, Projectile.Center, _ => new ProjectileAudioTracker(Projectile).IsActiveAndInGame()) : SoundEngine.PlaySound(DroneSound with { IsLooped = true }, Projectile.Center, _ => new ProjectileAudioTracker(Projectile).IsActiveAndInGame());
+                    RumbleSlot = Main.zenithWorld ? SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/SCalSounds/GFBDrone") with { IsLooped = true }, Projectile.Center, _ => new ProjectileAudioTracker(Projectile).IsActiveAndInGame()) : SoundEngine.PlaySound(DroneSound with { IsLooped = true }, Projectile.Center, _ => new ProjectileAudioTracker(Projectile).IsActiveAndInGame());
 
                 if (Projectile.timeLeft < 90)
                 {
@@ -303,7 +303,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
             // Play a sound and visual to make the fact youre taking damage more obvious
             if (time % 6 == 0)
             {
-                SoundStyle burn = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WeldingBurn");
+                SoundStyle burn = new("CalamityMod/Sounds/Item/WeldingBurn");
                 SoundEngine.PlaySound(burn with { Volume = 0.25f, Pitch = 0.4f }, player.Center);
             }
             GlowOrbParticle orb = new GlowOrbParticle(player.Center, new Vector2(6, 6).RotatedByRandom(100) * Main.rand.NextFloat(0.3f, 1.1f), false, 60, Main.rand.NextFloat(1.55f, 3.75f), Main.rand.NextBool() ? Color.Red : Color.Lerp(Color.Red, Color.Magenta, 0.5f), true, true);
@@ -410,14 +410,14 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
             bool isPermafrost = CalamityGlobalNPC.SCal != -1 && Main.npc[CalamityGlobalNPC.SCal].active && Main.npc[CalamityGlobalNPC.SCal].ModNPC<SupremeCalamitas>().permafrost;
             if (isPermafrost)
             {
-                Texture2D hageTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/BrimstoneMonsterII").Value;
+                Texture2D hageTex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/BrimstoneMonsterII").Value;
                 lightColor.B = (byte)(255 * Projectile.Opacity);
                 Main.EntitySpriteDraw(hageTex, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, hageTex.Size() / 2f, Projectile.scale, SpriteEffects.None, 0);
             }
             else
             {
-                Texture2D vortexTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/SoulVortex").Value;
-                Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/LargeBloom").Value;
+                Texture2D vortexTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/SoulVortex").Value;
+                Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/LargeBloom").Value;
                 for (int i = 0; i < 10; i++)
                 {
                     float angle = MathHelper.TwoPi * i / 3f + Main.GlobalTimeWrappedHourly * MathHelper.TwoPi;

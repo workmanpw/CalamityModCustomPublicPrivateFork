@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,14 +7,14 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     // This is p much just the Sulphuric Acid Cannon rocket but without the sticky behaviour
     public class BabyCannonballProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/Abyss/BabyCannonballJellyfish";
+        public override string Texture => "CalamityMod/NPCs/Abyss/BabyCannonballJellyfish";
 
         public override void SetStaticDefaults()
         {
@@ -111,7 +111,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 GeneralParticleHandler.SpawnParticle(pulse);
             }
             //Explosion effect
-            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SeaGreen, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.2f, 20, true, 1f);
+            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, Color.SeaGreen, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0f, 0.2f, 20, true, 1f);
             GeneralParticleHandler.SpawnParticle(blastRing);
         }
 

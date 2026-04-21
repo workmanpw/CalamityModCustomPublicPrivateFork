@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.Leviathan;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.Leviathan;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class LeviathanMusicScene : BaseMusicSceneEffect
     {

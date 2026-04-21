@@ -1,9 +1,9 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.World;
-using CalamityModCustomPublicPrivateFork.BiomeManagers.BestiaryCategories;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Sounds;
+using CalamityMod.World;
+using CalamityMod.BiomeManagers.BestiaryCategories;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,9 +12,9 @@ using Terraria.Audio;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityMod.Items.Placeables.Banners;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
+namespace CalamityMod.NPCs.Astral
 {
     public class Glomerling : ModNPC
     {
@@ -23,7 +23,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
         public override void SetStaticDefaults()
         {
             if (!Main.dedServ)
-                glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Astral/GlomerlingGlow", AssetRequestMode.AsyncLoad);
+                glowmask = ModContent.Request<Texture2D>("CalamityMod/NPCs/Astral/GlomerlingGlow", AssetRequestMode.AsyncLoad);
             Main.npcFrameCount[Type] = 4;
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers();
             value.Position.Y -= 8;
@@ -60,7 +60,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Glomerling")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Glomerling")
             });
         }
 

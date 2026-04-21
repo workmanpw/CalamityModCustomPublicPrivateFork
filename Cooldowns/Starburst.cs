@@ -1,9 +1,9 @@
 using System;
 using System.Windows.Markup;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -14,7 +14,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public class Starburst : CooldownHandler
     {
@@ -29,7 +29,7 @@ namespace CalamityModCustomPublicPrivateFork.Cooldowns
         public override bool CanTickDown => false;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
         public override bool ShouldDisplay => instance.player.Calamity().StratusStarburstResetTimer > 0;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/" + ID;
+        public override string Texture => "CalamityMod/Cooldowns/" + ID;
 
         public override Color CooldownStartColor => IsEmpty ? Color.DimGray : Color.Lerp(Color.SkyBlue, Color.DeepSkyBlue, instance.Completion);
         public override Color CooldownEndColor => IsEmpty ? Color.DimGray : Color.Lerp(Color.SkyBlue, Color.DeepSkyBlue, instance.Completion);

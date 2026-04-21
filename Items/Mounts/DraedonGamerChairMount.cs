@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Buffs.Mounts;
+using CalamityMod.Buffs.Mounts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Mounts
+namespace CalamityMod.Items.Mounts
 {
     public class DraedonGamerChairMount : ModMount
     {
@@ -64,7 +64,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Mounts
             MountData.swimFrameStart = 0;
             if (!Main.dedServ)
             {
-                MountData.frontTextureGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Mounts/DraedonGamerChairMount_Glowmask");
+                MountData.frontTextureGlow = ModContent.Request<Texture2D>("CalamityMod/Items/Mounts/DraedonGamerChairMount_Glowmask");
                 MountData.textureWidth = MountData.frontTexture.Width();
                 MountData.textureHeight = MountData.frontTexture.Height();
             }

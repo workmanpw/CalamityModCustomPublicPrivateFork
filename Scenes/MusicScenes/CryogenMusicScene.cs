@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Cryogen;
+using CalamityMod.NPCs.Cryogen;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class CryogenMusicScene : BaseMusicSceneEffect
     {

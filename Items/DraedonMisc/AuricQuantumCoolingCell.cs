@@ -1,23 +1,23 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CustomRecipes;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.TileEntities;
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonSummoner;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.CustomRecipes;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
+using CalamityMod.TileEntities;
+using CalamityMod.Tiles.DraedonSummoner;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.DraedonMisc
+namespace CalamityMod.Items.DraedonMisc
 {
     public class AuricQuantumCoolingCell : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.DraedonItems";
-        public static readonly SoundStyle InstallSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/AuricQuantumCoolingCellInstallNew");
+        public static readonly SoundStyle InstallSound = new("CalamityMod/Sounds/Custom/Codebreaker/AuricQuantumCoolingCellInstallNew");
         public override void SetDefaults()
         {
             Item.width = 26;

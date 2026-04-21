@@ -4,7 +4,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAbyss
+namespace CalamityMod.Tiles.FurnitureAbyss
 {
     public class AbyssBed : ModTile
     {

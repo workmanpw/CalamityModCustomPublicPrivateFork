@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Dusts.Furniture
+namespace CalamityMod.Dusts.Furniture
 {
     public class BloomTileGold : ModDust
     {

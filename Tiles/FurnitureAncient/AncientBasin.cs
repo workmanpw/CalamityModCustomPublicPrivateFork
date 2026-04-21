@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAncient
+namespace CalamityMod.Tiles.FurnitureAncient
 {
     public class AncientBasin : ModTile
     {
@@ -69,7 +69,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAncient
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureAncient/AncientBasinFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureAncient/AncientBasinFlame");
             CalamityUtils.DrawStaticFlameEffect(FlameTexture.Value, i, j, offsetY: animationFrame * AnimationFrameHeight);
         }
 

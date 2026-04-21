@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class TitaniumRailgunScope : ModProjectile, ILocalizedModType
     {
@@ -30,7 +30,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
         public Color ScopeColor => Color.White;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {
@@ -191,7 +191,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
             //Setup the laser sights effect.
             Effect laserScopeEffect = Filters.Scene["CalamityMod:PixelatedSightLine"].GetShader().Shader;
-            laserScopeEffect.Parameters["sampleTexture2"].SetValue(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/CertifiedCrustyNoise").Value);
+            laserScopeEffect.Parameters["sampleTexture2"].SetValue(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/CertifiedCrustyNoise").Value);
             laserScopeEffect.Parameters["noiseOffset"].SetValue(Main.GameUpdateCount * -0.003f);
 
             laserScopeEffect.Parameters["mainOpacity"].SetValue(ChargePercent); //Opacity increases as the gun charges

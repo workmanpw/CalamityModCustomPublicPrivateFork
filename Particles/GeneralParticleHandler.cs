@@ -2,16 +2,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic.PixelationSystem;
+using CalamityMod.Enums;
+using CalamityMod.Systems.Graphic;
+using CalamityMod.Systems.Graphic.PixelationSystem;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     // Important credits for Spirit and Luminance:
     #region CREDITS

@@ -1,20 +1,20 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Graphics.Metaballs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class CalamitousDart : ModProjectile, ILocalizedModType
     {
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public new string LocalizationCategory => "Projectiles.Boss";
         public override void SetStaticDefaults()
         {
@@ -103,7 +103,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
             {
                 var p = CalamitasMetaball.SpawnParticle(Projectile.Center + Projectile.velocity * 2, Vector2.Zero, 40);
                 p.rotation = Projectile.rotation + MathHelper.PiOver2;
-                p.TextureToUse = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/PointParticle").Value;
+                p.TextureToUse = ModContent.Request<Texture2D>("CalamityMod/Particles/PointParticle").Value;
                 p.SizeScaling = 0.65f;
                 p = CalamitasMetaball.SpawnParticle(Projectile.Center, Main.rand.NextVector2Circular(3, 3), 24f);
                 p.SizeScaling = 0.8f;

@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Mollusk
+namespace CalamityMod.Items.Armor.Mollusk
 {
     [AutoloadEquip(EquipType.Head)]
     public class MolluskShellmet : ModItem, ILocalizedModType

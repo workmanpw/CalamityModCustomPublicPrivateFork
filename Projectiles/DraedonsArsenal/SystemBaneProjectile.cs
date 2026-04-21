@@ -5,12 +5,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class SystemBaneProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/SystemBane";
+        public override string Texture => "CalamityMod/Items/Weapons/DraedonsArsenal/SystemBane";
 
         public float Time
         {
@@ -81,7 +81,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                 return;
             int totalCirclePoints = 55;
             float generalOpacity = Utils.GetLerpValue(0f, 30f, Projectile.timeLeft, true) * Utils.GetLerpValue(480f, 450f, Projectile.timeLeft, true);
-            Texture2D lightningTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/LightningProj").Value;
+            Texture2D lightningTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/LightningProj").Value;
             for (int i = 0; i < totalCirclePoints; i++)
             {
                 float angle = MathHelper.TwoPi * i / totalCirclePoints;

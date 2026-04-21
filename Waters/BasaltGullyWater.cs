@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Dusts.WaterSplash;
-using CalamityModCustomPublicPrivateFork.Gores.WaterDroplet;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityMod.Dusts.WaterSplash;
+using CalamityMod.Gores.WaterDroplet;
+using CalamityMod.Systems.Graphic.LiquidSystem;
+using CalamityMod.Tiles.Abyss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Waters
+namespace CalamityMod.Waters
 {
     public class BasaltGullyWaterflow : ModWaterfallStyle, IWaterfallStyleModifyColor
     {
@@ -40,7 +40,7 @@ namespace CalamityModCustomPublicPrivateFork.Waters
 
         public void ModifyColor(in Tile tile, int x, int y, ref VertexColors liquidColor, bool isSlope) => WaterStyleCommon.ModifyTransparentWaterColor(x, y, ref liquidColor, isSlope);
 
-        public override int ChooseWaterfallStyle() => ModContent.Find<ModWaterfallStyle>("CalamityModCustomPublicPrivateFork/BasaltGullyWaterflow").Slot;
+        public override int ChooseWaterfallStyle() => ModContent.Find<ModWaterfallStyle>("CalamityMod/BasaltGullyWaterflow").Slot;
         public override int GetSplashDust() => ModContent.DustType<BasaltGullySplash>();
         public override int GetDropletGore() => ModContent.GoreType<BasaltGullyWaterDroplet>();
         public override Color BiomeHairColor() => Color.WhiteSmoke;

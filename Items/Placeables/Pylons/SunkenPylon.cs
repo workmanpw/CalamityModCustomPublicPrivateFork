@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Pylons;
+using CalamityMod.Tiles.Pylons;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Pylons
+namespace CalamityMod.Items.Placeables.Pylons
 {
     public class SunkenPylon : ModItem, ILocalizedModType
     {

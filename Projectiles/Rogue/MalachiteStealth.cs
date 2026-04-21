@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class MalachiteStealth : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
         private const int lifeSpan = 240;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/Malachite";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/Malachite";
 
         public override void SetStaticDefaults()
         {

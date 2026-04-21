@@ -1,16 +1,16 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Sounds;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class LucreciaHoldout : BaseSwordHoldoutProjectile, ILocalizedModType
     {
@@ -19,7 +19,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override bool useMeleeSize => false;
         public override int swingWidth => 310;
         public override Item BaseItem => ModContent.GetModItem(ModContent.ItemType<Lucrecia>()).Item;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/Lucrecia";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/Lucrecia";
         public override SoundStyle? UseSound => SoundID.Item71 with { Volume = 0.85f };
         public override int StartupTime { get; set; }
         public override int CooldownTime { get; set; }
@@ -188,10 +188,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                         if (Main.myPlayer == Projectile.owner)
                             Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.Center, fireDirection * 5, ModContent.ProjectileType<LucreciaDNATrailCreator>(), Projectile.damage * 7, Projectile.knockBack, Projectile.owner, 0f, 0f);
                         
-                        SoundStyle swish = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/MeatySlash");
+                        SoundStyle swish = new("CalamityMod/Sounds/Custom/MeatySlash");
                         SoundEngine.PlaySound(swish with { Volume = 0.3f, Pitch = Main.rand.NextFloat(0.1f, 0.2f) }, Projectile.Center);
 
-                        SoundStyle projectile = new("CalamityModCustomPublicPrivateFork/Sounds/Item/OmicronBeam");
+                        SoundStyle projectile = new("CalamityMod/Sounds/Item/OmicronBeam");
                         SoundEngine.PlaySound(projectile with { Volume = 0.85f, Pitch = Main.rand.NextFloat(0.15f, 0.2f) }, Projectile.Center);
                     }
 
@@ -241,7 +241,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                         Vector2 shootDir = player.MountedCenter.DirectionTo(mousePosition) * 10f;
                         int dir = -Math.Sign(mousePosition.X);
                         float scale = lineCollisionLength / 550f;
-                        Particle swipe = new CustomSpark(player.MountedCenter - shootDir * 4, shootDir.RotatedBy(0.075f * (dir * (modplayer.swingNum % 2 == 0 ? 1 : -1))) * 1.22f, "CalamityModCustomPublicPrivateFork/Particles/VerticalSmearLarge", false, (int)(14 / player.GetAttackSpeed(DamageClass.Melee)), scale, modplayer.swingNum % 2 == 0 ? Color.CornflowerBlue * 0.85f : Color.MediumPurple * 0.8f, new Vector2(1.1f, 1.3f), true, false, 0, false, false);
+                        Particle swipe = new CustomSpark(player.MountedCenter - shootDir * 4, shootDir.RotatedBy(0.075f * (dir * (modplayer.swingNum % 2 == 0 ? 1 : -1))) * 1.22f, "CalamityMod/Particles/VerticalSmearLarge", false, (int)(14 / player.GetAttackSpeed(DamageClass.Melee)), scale, modplayer.swingNum % 2 == 0 ? Color.CornflowerBlue * 0.85f : Color.MediumPurple * 0.8f, new Vector2(1.1f, 1.3f), true, false, 0, false, false);
                         GeneralParticleHandler.SpawnParticle(swipe);
 
                         var fireDirection = Vector2.Normalize(mousePosition - player.MountedCenter);
@@ -249,7 +249,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                         var helixVelocity = fireDirection * helixSpeed;
                         Projectile.NewProjectile(Projectile.GetSource_FromThis(), player.MountedCenter + fireDirection * 3, helixVelocity, ModContent.ProjectileType<LucreciaBolt>(), Projectile.damage, Projectile.knockBack, Projectile.owner);
                         
-                        SoundStyle projectile = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LucreciaBoltFire");
+                        SoundStyle projectile = new("CalamityMod/Sounds/Item/LucreciaBoltFire");
                         SoundEngine.PlaySound(projectile with { Volume = 0.8f, Pitch = Main.rand.NextFloat(-0.06f, 0.1f) }, Projectile.Center);
                     }
 

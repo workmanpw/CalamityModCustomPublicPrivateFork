@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Projectiles.Melee.Yoyos;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ID;
@@ -7,7 +7,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     [LegacyName("SolarFlare")]
     public class BurningRevelation : ModItem, ILocalizedModType

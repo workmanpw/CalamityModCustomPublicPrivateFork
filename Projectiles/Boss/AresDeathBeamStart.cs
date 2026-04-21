@@ -1,12 +1,12 @@
 using System;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
-using CalamityModCustomPublicPrivateFork.NPCs.Other;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Events;
+using CalamityMod.NPCs.ExoMechs.Ares;
+using CalamityMod.NPCs.Other;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,12 +14,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class AresDeathBeamStart : BaseLaserbeamProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public int OwnerIndex
         {
@@ -31,9 +31,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
         public override float Lifetime => AresBody.deathrayDuration;
         public override Color LaserOverlayColor => new Color(250, 250, 250, 100);
         public override Color LightCastColor => Color.White;
-        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/AresDeathBeamStart", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/AresDeathBeamMiddle", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/AresDeathBeamEnd", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/AresDeathBeamStart", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/AresDeathBeamMiddle", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/AresDeathBeamEnd", AssetRequestMode.ImmediateLoad).Value;
 
         public override void SetStaticDefaults()
         {

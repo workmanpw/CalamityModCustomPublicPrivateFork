@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Graphics.Metaballs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,14 +10,14 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class GalaxySmasherEcho : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxySmasher";
-        public static readonly SoundStyle SlamHamSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GalaxySmasherSmash") { Volume = 0.7f };
-        public static readonly SoundStyle Kunk = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TF2PanHit") { Volume = 1.1f };
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/GalaxySmasher";
+        public static readonly SoundStyle SlamHamSound = new("CalamityMod/Sounds/Item/GalaxySmasherSmash") { Volume = 0.7f };
+        public static readonly SoundStyle Kunk = new("CalamityMod/Sounds/Item/TF2PanHit") { Volume = 1.1f };
         public float rotatehammer = 15f;
         public float speed = 0f;
         public NPC targeted;
@@ -61,7 +61,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             {
                 if (Projectile.timeLeft % 2 == 0)
                 {
-                    Particle spark = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 13, 0.5f, usedColor, new Vector2(0.6f, 1f), true, false, 0, false, false, 0.7f);
+                    Particle spark = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.05f, "CalamityMod/Particles/SmallBloom", false, 13, 0.5f, usedColor, new Vector2(0.6f, 1f), true, false, 0, false, false, 0.7f);
                     GeneralParticleHandler.SpawnParticle(spark);
                 }
 
@@ -119,7 +119,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             for (int i = 0; i < 8; i++)
             {
                 float rot = MathHelper.PiOver4 * i;
-                Particle pulse1 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Aqua * 0.4f, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", new Vector2(1.4f, 0.6f), rot, 0, 1f, 40);
+                Particle pulse1 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Aqua * 0.4f, "CalamityMod/Particles/HighResHollowCircleHardEdge", new Vector2(1.4f, 0.6f), rot, 0, 1f, 40);
                 GeneralParticleHandler.SpawnParticle(pulse1);
             }
 
@@ -131,7 +131,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 Vector2 offset = new Vector2(15f, 0).RotatedBy(rot);
                 Vector2 velOffset = new Vector2(42.5f, 0).RotatedBy(rot) * (i % 2 == 0 ? 0.8f : i % 3 == 0 ? 0.6f : 1f);
 
-                Particle spark = new CustomSpark(Projectile.Center + offset * 6, velOffset, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 35, 1f, Color.Magenta * 0.75f, new Vector2(1.2f, 1f), true, false, 0, false, false, 0.3f);
+                Particle spark = new CustomSpark(Projectile.Center + offset * 6, velOffset, "CalamityMod/Particles/SmallBloom", false, 35, 1f, Color.Magenta * 0.75f, new Vector2(1.2f, 1f), true, false, 0, false, false, 0.3f);
                 GeneralParticleHandler.SpawnParticle(spark);
             }
             GalaxyMetaball.SpawnParticle(Projectile.Center, Vector2.Zero, 275f);
@@ -143,8 +143,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxySmasher").Value;
-            Asset<Texture2D> p2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/CircularSmearSmokey");
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/GalaxySmasher").Value;
+            Asset<Texture2D> p2 = ModContent.Request<Texture2D>("CalamityMod/Particles/CircularSmearSmokey");
 
             CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], lightColor * 0.5f, 3, texture, true, true);
 

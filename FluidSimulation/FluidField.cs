@@ -1,13 +1,13 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Effects;
-using CalamityModCustomPublicPrivateFork.Graphics;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
+using CalamityMod.Effects;
+using CalamityMod.Graphics;
+using CalamityMod.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.FluidSimulation
+namespace CalamityMod.FluidSimulation
 {
     // Details about the math operations are present in the shader files.
     // Please do not change this system too much without contacting me first. -Dominic
@@ -120,7 +120,7 @@ namespace CalamityModCustomPublicPrivateFork.FluidSimulation
                 if (pixelCount <= 0)
                     return;
 
-                Texture2D pixel = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Pixel").Value;
+                Texture2D pixel = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Pixel").Value;
                 CalamityUtils.CalculatePerspectiveMatricies(out Matrix viewMatrix, out Matrix projectionMatrix);
                 BasicShader.View = viewMatrix;
                 BasicShader.Projection = projectionMatrix;

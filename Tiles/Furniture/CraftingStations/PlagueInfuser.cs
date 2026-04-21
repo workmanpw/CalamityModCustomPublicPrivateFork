@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations
+namespace CalamityMod.Tiles.Furniture.CraftingStations
 {
     public class PlagueInfuser : ModTile
     {

@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.Physics;
+namespace CalamityMod.Physics;
 
 public readonly record struct RopeSettings(bool StartIsFixed, bool EndIsFixed, bool RespondToEntityMovement, bool RespondToWind, Vector2? TileColliderArea, float Mass = 1f)
 {

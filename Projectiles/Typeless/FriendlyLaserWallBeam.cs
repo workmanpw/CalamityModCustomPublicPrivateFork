@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,11 +7,11 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class FriendlyLaserWallBeam : ModProjectile, ILocalizedModType
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public new string LocalizationCategory => "Projectiles.Typeless";
         public float time = 0;
         public ref float attackSpeed => ref Projectile.ai[0];
@@ -75,9 +75,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             }
             if (time >= attackTime && !doneAttack)
             {
-                SoundStyle attack = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DoGLaserWallLightAttack");
+                SoundStyle attack = new("CalamityMod/Sounds/Custom/DoGLaserWallLightAttack");
                 if (Projectile.scale > 3) {
-                    attack = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DoGLaserWallBigAttack");
+                    attack = new("CalamityMod/Sounds/Custom/DoGLaserWallBigAttack");
                 }
                 SoundEngine.PlaySound(attack with { Volume = 0.4f, Pitch = 0, MaxInstances =  -1}, Vector2.Lerp(targetPos, Main.player[Projectile.owner].Center, laserType == 0 ? 0 : 0.7f));
                 laserFX = 2.5f;
@@ -134,10 +134,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
         {
             if (laserFX == 0)
                 return false;
-            Texture2D beam = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineThick").Value;
-            Texture2D bBeam = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/LineThick").Value;
-            Texture2D angleBeam = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowBlade").Value;
-            Texture2D angleBeamInside = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowBladeNoBloom").Value;
+            Texture2D beam = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineThick").Value;
+            Texture2D bBeam = ModContent.Request<Texture2D>("CalamityMod/Particles/LineThick").Value;
+            Texture2D angleBeam = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowBlade").Value;
+            Texture2D angleBeamInside = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowBladeNoBloom").Value;
             float opacity = (doneAttack ? 0.65f : 0.35f) * (float)Math.Pow(Math.Min(laserFX, 1), 2);
             Color beamColor = drawColor with { A = 0 };
 

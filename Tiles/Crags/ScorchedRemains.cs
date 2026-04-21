@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Crags
+namespace CalamityMod.Tiles.Crags
 {
     public class ScorchedRemains : ModTile
     {

@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Placeables
+namespace CalamityMod.Buffs.Placeables
 {
     public class EffigyOfDecayBuff : ModBuff
     {

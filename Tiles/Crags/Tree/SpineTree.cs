@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Crags.Tree
+namespace CalamityMod.Tiles.Crags.Tree
 {
     internal class SpineTree : ModTile
     {
@@ -255,7 +255,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Crags.Tree
             /*
             //TODO: save this since this tree will also produce bone gores when broken (gores for this tree still need assets)
             Gore.NewGore(new EntitySource_TileInteraction(Main.LocalPlayer, i, j), (new Vector2(i, j - 2) * 16),
-            new Vector2(Main.rand.Next(-3, 3), Main.rand.Next(-3, 3)), ModContent.Find<ModGore>("CalamityModCustomPublicPrivateFork/WhateverGore").Type);
+            new Vector2(Main.rand.Next(-3, 3), Main.rand.Next(-3, 3)), ModContent.Find<ModGore>("CalamityMod/WhateverGore").Type);
             */
 
             //TODO: spawn all the gores here
@@ -325,8 +325,8 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Crags.Tree
             Vector2 treeSegmentOffset = new Vector2((xOff * 2) - (frameOff / 2) + 25, 14);
             Vector2 topSegmentOffset = new Vector2((xOff * 2) - (frameOff / 2) + 20, 16);
 
-            BottomTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Tree/SpineBottom");
-            SegmentsTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Tree/SpineSegments");
+            BottomTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Tree/SpineBottom");
+            SegmentsTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Tree/SpineSegments");
             var segmentTex = SegmentsTexture.Value;
 
             //draw the base of the tree
@@ -351,8 +351,8 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Crags.Tree
                 int frame = tile.TileFrameY / 18;
 
                 //branch drawing stuff
-                Rib1LeftTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Tree/SpineRib1Left");
-                Rib1RightTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Tree/SpineRib1Right");
+                Rib1LeftTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Tree/SpineRib1Left");
+                Rib1RightTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Tree/SpineRib1Right");
 
                 Vector2 leftBranchOffset = new Vector2((xOff * 2) - (frameOff / 2) + 50, 14);
                 Vector2 rightBranchOffset = new Vector2((xOff * 2) - (frameOff / 2) + 4, 14);
@@ -373,8 +373,8 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Crags.Tree
                 int frame = tile.TileFrameY / 18;
 
                 //branch drawing stuff
-                Rib2LeftTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Tree/SpineRib2Left");
-                Rib2RightTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Tree/SpineRib2Right");
+                Rib2LeftTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Tree/SpineRib2Left");
+                Rib2RightTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Tree/SpineRib2Right");
 
                 Vector2 leftBranchOffset = new Vector2((xOff * 2) - (frameOff / 2) + 60, 14);
                 Vector2 rightBranchOffset = new Vector2((xOff * 2) - (frameOff / 2) + 4, 14);
@@ -392,8 +392,8 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Crags.Tree
                 int frame = tile.TileFrameY / 18;
 
                 //branch drawing stuff
-                Rib3LeftTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Tree/SpineRib3Left");
-                Rib3RightTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Tree/SpineRib3Right");
+                Rib3LeftTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Tree/SpineRib3Left");
+                Rib3RightTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Tree/SpineRib3Right");
 
                 Vector2 leftBranchOffset = new Vector2((xOff * 2) - (frameOff / 2) + 75, 14);
                 Vector2 rightBranchOffset = new Vector2((xOff * 2) - (frameOff / 2) + 4, 14);
@@ -408,7 +408,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Crags.Tree
             //draw top segment
             if (Framing.GetTileSafely(i, j).TileFrameX == 36)
             {
-                TopTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Tree/SpineTop");
+                TopTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Tree/SpineTop");
                 int frame = tile.TileFrameY / 18;
 
                 DrawTreeSegments(i, j - 1, TopTexture.Value, new Rectangle(26 * frame, 0, 24, 24), TileOffset.ToWorldCoordinates(), topSegmentOffset, false);
@@ -419,7 +419,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Crags.Tree
 
             /*
             //keep this here for debugging
-            Texture2D treeTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/Tree/SpineTree").Value;
+            Texture2D treeTex = ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/Tree/SpineTree").Value;
 
             spriteBatch.Draw(treeTex, pos, new Rectangle(tile.TileFrameX + frameOff, tile.TileFrameY, frameSize, frameSizeY), 
             new Color(col.R, col.G, col.B, 255), 0f, new Vector2(0, 0), 1f, SpriteEffects.None, 0f);

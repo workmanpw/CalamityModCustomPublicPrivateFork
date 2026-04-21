@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
+using CalamityMod.NPCs.OldDuke;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class OldDukeMusicScene : BaseMusicSceneEffect
     {

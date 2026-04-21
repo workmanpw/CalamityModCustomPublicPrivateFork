@@ -1,9 +1,9 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.CalPlayer;
+using CalamityMod.Dusts;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,13 +11,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     [PierceResistException]
     public class TransformerBlob : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         public CalamityPlayer moddedOwner => Owner.Calamity();
         private float radius = 25f;
@@ -161,7 +161,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
                     if (visuals)
                     { 
-                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/OmicronBeam");
+                        SoundStyle fire = new("CalamityMod/Sounds/Item/OmicronBeam");
                         SoundEngine.PlaySound(fire with { Volume = 0.3f, Pitch = Math.Clamp(Main.rand.NextFloat(0.1f, 0.2f) + Projectile.ai[1] * 0.02f, 0, 1), MaxInstances = 1 }, Projectile.Center);
                     }
                 }
@@ -264,8 +264,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D orbTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Accessories/TheTransformer").Value;
-            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D orbTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Accessories/TheTransformer").Value;
+            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
             Rectangle frame = orbTexture.Frame(1, 16, 0, Projectile.frame);
             Vector2 origin = frame.Size() * 0.5f;
 

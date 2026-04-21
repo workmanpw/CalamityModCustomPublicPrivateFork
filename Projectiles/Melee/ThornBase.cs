@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class ThornBase : ModProjectile, ILocalizedModType
     {
@@ -78,7 +78,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (Projectile.ai[0] == TotalSegments)
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/ThornTip").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/ThornTip").Value;
 
             Main.spriteBatch.Draw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
             return false;

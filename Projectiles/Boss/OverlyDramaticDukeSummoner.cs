@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Events;
+using CalamityMod.NPCs.OldDuke;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class OverlyDramaticDukeSummoner : ModProjectile, ILocalizedModType
     {
@@ -22,7 +22,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
         public SlotId? SoundId;
 
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/OldDukeVortex";
+        public override string Texture => "CalamityMod/Projectiles/Boss/OldDukeVortex";
 
         public override void SetStaticDefaults()
         {
@@ -113,7 +113,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 
             if (Projectile.ai[0] % 10 == 1 && Projectile.ai[0] < 600f)
             {
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(cen, Vector2.Zero, new Color(55, 195, 0, 20), "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), Projectile.scale * 0.9f, Projectile.scale * 0.4f, 40));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(cen, Vector2.Zero, new Color(55, 195, 0, 20), "CalamityMod/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), Projectile.scale * 0.9f, Projectile.scale * 0.4f, 40));
             }
 
             float maxdist = 1200;
@@ -160,10 +160,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
                         {
                             if (i == 5)
                             {
-                                GeneralParticleHandler.SpawnParticle(new CustomPulse(cen, Vector2.Zero, new Color(55, 255, 0), "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, i * 0.1f, 40));
+                                GeneralParticleHandler.SpawnParticle(new CustomPulse(cen, Vector2.Zero, new Color(55, 255, 0), "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, i * 0.1f, 40));
                             }
 
-                            GeneralParticleHandler.SpawnParticle(new CustomPulse(cen, Vector2.Zero, new Color(55, 255, 0), "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, i * 0.1f, 40));
+                            GeneralParticleHandler.SpawnParticle(new CustomPulse(cen, Vector2.Zero, new Color(55, 255, 0), "CalamityMod/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, i * 0.1f, 40));
                         }
                         
                         if (Main.netMode != NetmodeID.MultiplayerClient)

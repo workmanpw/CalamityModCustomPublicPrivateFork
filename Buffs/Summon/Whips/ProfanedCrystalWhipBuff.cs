@@ -1,13 +1,13 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Items.Accessories.ProfanedSoulCrystal;
+using static CalamityMod.Items.Accessories.ProfanedSoulCrystal;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips
+namespace CalamityMod.Buffs.Summon.Whips
 {
     public class ProfanedCrystalWhipBuff : ModBuff
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Buffs/Summon/Whips/SentinalLash";
+        public override string Texture => "CalamityMod/Buffs/Summon/Whips/SentinalLash";
         public override void SetStaticDefaults()
         {
             Main.debuff[Type] = false;

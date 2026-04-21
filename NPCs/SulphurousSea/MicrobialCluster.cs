@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.SulphurousSea
+namespace CalamityMod.NPCs.SulphurousSea
 {
     public class MicrobialCluster : ModNPC
     {

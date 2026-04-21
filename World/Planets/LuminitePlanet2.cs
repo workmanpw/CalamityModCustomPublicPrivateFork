@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
+using CalamityMod.Tiles.Ores;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.World.Planets
+namespace CalamityMod.World.Planets
 {
     public class LuminitePlanet2 : Planetoid
     {

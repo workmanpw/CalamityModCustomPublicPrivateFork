@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
+using CalamityMod.Items.Placeables.Furniture;
 using Microsoft.Xna.Framework;
 using System;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture
+namespace CalamityMod.Tiles.Furniture
 {
     public class LanternCenterTile : ModTile
     {

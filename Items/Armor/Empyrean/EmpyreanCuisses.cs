@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Empyrean
+namespace CalamityMod.Items.Armor.Empyrean
 {
     [AutoloadEquip(EquipType.Legs)]
     [LegacyName("XerocCuisses")]

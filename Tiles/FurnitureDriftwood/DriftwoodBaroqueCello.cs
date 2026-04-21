@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureDriftwood
+namespace CalamityMod.Tiles.FurnitureDriftwood
 {
     public class DriftwoodBaroqueCello : ModTile
     {

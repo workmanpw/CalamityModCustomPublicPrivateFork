@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,21 +9,21 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class TheSevensStriker : ModItem, ILocalizedModType, IHoldShiftTooltipItem
     {
         public bool ShowExtensionIndicator => false;
         public new string LocalizationCategory => "Items.Weapons.Ranged";
-        public static readonly SoundStyle RouletteSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SevensStrikerRoulette") { Volume = 0.6f, SoundLimitBehavior = SoundLimitBehavior.ReplaceOldest };
-        public static readonly SoundStyle RouletteTickSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SevensStrikerRouletteTick") { Volume = 0.5f };
-        public static readonly SoundStyle BustSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SevensStrikerBust");
-        public static readonly SoundStyle BustGFB = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SevensStrikerBustGFB");
-        public static readonly SoundStyle DoublesSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SevensStrikerDoubles");
-        public static readonly SoundStyle TriplesSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SevensStrikerTriples");
-        public static readonly SoundStyle JackpotSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SevensStrikerJackpot");
-        public static readonly SoundStyle JackpotGFB = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SevensStrikerJackpotGFB");
-        public static readonly SoundStyle CoinSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SevensStrikerCoinShot") { MaxInstances = 0, PitchVariance = 0.5f };
+        public static readonly SoundStyle RouletteSound = new("CalamityMod/Sounds/Item/SevensStrikerRoulette") { Volume = 0.6f, SoundLimitBehavior = SoundLimitBehavior.ReplaceOldest };
+        public static readonly SoundStyle RouletteTickSound = new("CalamityMod/Sounds/Item/SevensStrikerRouletteTick") { Volume = 0.5f };
+        public static readonly SoundStyle BustSound = new("CalamityMod/Sounds/Item/SevensStrikerBust");
+        public static readonly SoundStyle BustGFB = new("CalamityMod/Sounds/Item/SevensStrikerBustGFB");
+        public static readonly SoundStyle DoublesSound = new("CalamityMod/Sounds/Item/SevensStrikerDoubles");
+        public static readonly SoundStyle TriplesSound = new("CalamityMod/Sounds/Item/SevensStrikerTriples");
+        public static readonly SoundStyle JackpotSound = new("CalamityMod/Sounds/Item/SevensStrikerJackpot");
+        public static readonly SoundStyle JackpotGFB = new("CalamityMod/Sounds/Item/SevensStrikerJackpotGFB");
+        public static readonly SoundStyle CoinSound = new("CalamityMod/Sounds/Item/SevensStrikerCoinShot") { MaxInstances = 0, PitchVariance = 0.5f };
 
         public static int ShotCoin = 0; // projectile ID to use for right click, affects damage multiplier
         public static readonly float RightClickCopperMultiplier = 0.04f;

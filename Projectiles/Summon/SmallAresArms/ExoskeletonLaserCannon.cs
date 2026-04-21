@@ -1,6 +1,6 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
+namespace CalamityMod.Projectiles.Summon.SmallAresArms
 {
     public class ExoskeletonLaserCannon : ExoskeletonCannon
     {
@@ -97,7 +97,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
 
         public override bool PreDraw(ref Color lightColor)
         {
-            DefaultDrawCannon(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/SmallAresArms/ExoskeletonLaserCannonGlowmask").Value);
+            DefaultDrawCannon(ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/SmallAresArms/ExoskeletonLaserCannonGlowmask").Value);
             return false;
         }
     }

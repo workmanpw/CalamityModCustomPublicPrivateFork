@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Magic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.GameContent;
 using Terraria.ModLoader;
 using ReLogic.Content;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class SigilSet : ModProjectile, ILocalizedModType
     {
@@ -145,9 +145,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D main = TextureAssets.Projectile[Type].Value;
-            Texture2D smol = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/ThaumRingSmall").Value;
-            Texture2D rune = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/ThaumRune").Value;
-            Asset<Texture2D> ghostTextureAsset = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/ThaumRuneGhost");
+            Texture2D smol = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/ThaumRingSmall").Value;
+            Texture2D rune = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/ThaumRune").Value;
+            Asset<Texture2D> ghostTextureAsset = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/ThaumRuneGhost");
 
             // Modify opacity again so it doesn't override changes to alpha in AI
             float drawOpacity = 1f - Projectile.alpha / 255f;

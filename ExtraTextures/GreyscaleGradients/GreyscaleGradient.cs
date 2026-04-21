@@ -1,10 +1,10 @@
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.ExtraTextures.GreyscaleGradients
+namespace CalamityMod.ExtraTextures.GreyscaleGradients
 {
     internal class GreyscaleGradient : ILoadable
     {
-        public string BasePath => "CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/";
+        public string BasePath => "CalamityMod/ExtraTextures/GreyscaleGradients/";
 
         public static GrayscaleTexture1D CinderplatePulse { get; private set; }
         public static GrayscaleTexture1D ElumplatePulse { get; private set; }

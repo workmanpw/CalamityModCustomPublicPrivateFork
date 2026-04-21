@@ -7,7 +7,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public abstract class CooldownHandler : ModType
     {
@@ -86,7 +86,7 @@ namespace CalamityModCustomPublicPrivateFork.Cooldowns
         /// </summary>
         public virtual string OutlineTexture => $"{Texture}Outline";
 
-        internal static string DefaultChargeBarTexture = "CalamityModCustomPublicPrivateFork/Cooldowns/BarBase";
+        internal static string DefaultChargeBarTexture = "CalamityMod/Cooldowns/BarBase";
         /// <summary>
         /// The texture of this cooldown's "charge bar", or the circle rendered by shaders.<br/>
         /// By default, this is only used when the cooldown rack is rendering in expanded mode .<br/>

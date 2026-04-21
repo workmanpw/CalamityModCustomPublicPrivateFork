@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Schematics;
+using CalamityMod.Schematics;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using static CalamityModCustomPublicPrivateFork.Schematics.SchematicManager;
+using static CalamityMod.Schematics.SchematicManager;
 
-namespace CalamityModCustomPublicPrivateFork.World
+namespace CalamityMod.World
 {
     public class VernalPass
     {

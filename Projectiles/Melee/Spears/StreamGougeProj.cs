@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears
+namespace CalamityMod.Projectiles.Melee.Spears
 {
     public class StreamGougeProj : ModProjectile
     {
@@ -105,7 +105,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears
 
         public void DrawPortal(Vector2 drawPosition, float opacity)
         {
-            Texture2D portalTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/StreamGougePortal").Value;
+            Texture2D portalTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/StreamGougePortal").Value;
             Vector2 origin = portalTexture.Size() * 0.5f;
             Color baseColor = Color.White;
             float rotation = Main.GlobalTimeWrappedHourly * 6f;
@@ -129,7 +129,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears
             // Draw the spin smear texture.
             if (SpinCompletion >= 0f && SpinCompletion < 1f)
             {
-                Texture2D smear = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SemiCircularSmear").Value;
+                Texture2D smear = ModContent.Request<Texture2D>("CalamityMod/Particles/SemiCircularSmear").Value;
 
                 float rotation = Projectile.rotation - MathHelper.Pi / 5f;
                 if (SpinDirection == -1f)

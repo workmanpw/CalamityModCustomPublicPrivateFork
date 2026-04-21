@@ -1,7 +1,7 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Items.Critters;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Items.Critters;
+using CalamityMod.Items.Placeables.Banners;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -13,7 +13,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
+namespace CalamityMod.NPCs.Abyss
 {
     public class BabyCannonballJellyfish : ModNPC
     {
@@ -58,7 +58,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.BabyCannonballJellyfish")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.BabyCannonballJellyfish")
             });
         }
 

@@ -6,7 +6,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone.FurnitureAncientNavystone
+namespace CalamityMod.Tiles.FurnitureNavystone.FurnitureAncientNavystone
 {
     [LegacyName("EutrophicChair")]
     public class AncientNavystoneChair : ModTile

@@ -4,7 +4,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStratus
+namespace CalamityMod.Tiles.FurnitureStratus
 {
     public class StratusClock : ModTile
     {

@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges
+namespace CalamityMod.Items.VanillaArmorChanges
 {
     public class PlatinumArmorSetChange : VanillaArmorChange
     {

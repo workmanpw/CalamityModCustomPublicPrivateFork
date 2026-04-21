@@ -1,4 +1,4 @@
-namespace CalamityModCustomPublicPrivateFork.Gores.WaterDroplet
+namespace CalamityMod.Gores.WaterDroplet
 {
     public class SunkenSeaReefsWaterDroplet : LiquidDropletGore
     {

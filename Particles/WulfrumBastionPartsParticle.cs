@@ -3,12 +3,12 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class WulfrumBastionPartsParticle : Particle
     {
         public override bool SetLifetime => true;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/WulfrumBastionParts";
+        public override string Texture => "CalamityMod/Particles/WulfrumBastionParts";
         public override bool UseCustomDraw => true;
 
         internal Rectangle Frame;

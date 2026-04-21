@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     /// <summary>
     /// A set of particles that aren't attached to any particular position in the world, but instead an arbitrary center point defined in the draw function

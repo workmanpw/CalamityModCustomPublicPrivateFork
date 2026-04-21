@@ -4,11 +4,11 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
+namespace CalamityMod.Tiles.SunkenSea.Ambient
 {
 	public class ShorePileBase : ModTile
 	{
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/ShorePile";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/ShorePile";
 
         public override void SetStaticDefaults()
         {

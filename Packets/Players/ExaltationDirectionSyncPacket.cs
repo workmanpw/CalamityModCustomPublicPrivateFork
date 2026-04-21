@@ -1,8 +1,8 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class ExaltationDirectionSyncPacket : CalamityPacket
     {

@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,14 +8,14 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Brimflame
+namespace CalamityMod.Items.Armor.Brimflame
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("BrimflameScowl")]
     public class BrimflameCowl : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Armor.Hardmode";
-        public static readonly SoundStyle ActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/BrimflameAbility");
+        public static readonly SoundStyle ActivationSound = new("CalamityMod/Sounds/Custom/AbilitySounds/BrimflameAbility");
 
         public static int MaxManaBoost = 80;
         public static float ManaCostReduction = 0.1f;

@@ -9,7 +9,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum.FurnitureAnodizedWulfrum
+namespace CalamityMod.Tiles.FurnitureWulfrum.FurnitureAnodizedWulfrum
 {
     public class AnodizedWulfrumToilet : ModTile
     {

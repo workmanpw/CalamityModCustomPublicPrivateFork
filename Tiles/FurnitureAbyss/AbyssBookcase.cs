@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAbyss
+namespace CalamityMod.Tiles.FurnitureAbyss
 {
     public class AbyssBookcase : ModTile
     {

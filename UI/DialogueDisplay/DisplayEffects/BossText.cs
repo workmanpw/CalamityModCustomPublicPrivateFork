@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects
+namespace CalamityMod.UI.DialogueDisplay.DisplayEffects
 {
     public class BossText : DisplayEffect
     {
@@ -59,7 +59,7 @@ namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects
             if (switchTimer > 0)
                 Opacity *= 1 - CalamityUtils.CircOutEasing(switchTimer / 60f, 1);
 
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SmallBloom").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Particles/SmallBloom").Value;
             spriteBatch.Draw(tex, textStart + textSize * 0.5f - Main.screenPosition, null, Color.Black * 0.6f * Opacity, 0f, tex.Size() * 0.5f, new Vector2(textSize.X / 160f, textSize.Y / 120f), 0, 0);
         }
     }

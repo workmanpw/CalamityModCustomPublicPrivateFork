@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityMod.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,13 +7,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Healing
+namespace CalamityMod.Projectiles.Healing
 {
     public class GladiatorHealOrb : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Healing";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public int target = -1;
         public ref float heal => ref Projectile.ai[0];
@@ -79,7 +79,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Healing
             {
                 player.HealPlayer((int)heal, HealTextType.Local);
 
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/OrbHeal", 5) { Volume = 0.15f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/OrbHeal", 5) { Volume = 0.15f }, Projectile.Center);
 
                 NetMessage.SendData(MessageID.SpiritHeal, -1, -1, null, target, heal, 0f, 0f, 0, 0, 0);
 
@@ -91,7 +91,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Healing
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/SmallGreyscaleCircle").Value;
+            Texture2D lightTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/SmallGreyscaleCircle").Value;
             for (int i = 0; i < Projectile.oldPos.Length; i++)
             {
                 //Photoviscerator drawcode, edited slightly

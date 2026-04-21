@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Waters;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Placeables.Furniture;
+using CalamityMod.Systems;
+using CalamityMod.Waters;
+using CalamityMod.World;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.BiomeManagers
+namespace CalamityMod.BiomeManagers
 {
     public class AbyssLayer3Biome : ModBiome
     {
@@ -29,9 +29,9 @@ namespace CalamityModCustomPublicPrivateFork.BiomeManagers
         public override ModWaterStyle WaterStyle => MiddleAbyssWater.Instance;
         public override int BiomeTorchItemType => ModContent.ItemType<ThermalTorch>();
         public override SceneEffectPriority Priority => SceneEffectPriority.Environment;
-        public override string BestiaryIcon => "CalamityModCustomPublicPrivateFork/BiomeManagers/AbyssLayer3Icon";
-        public override string BackgroundPath => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AbyssBGLayer23";
-        public override string MapBackground => "CalamityModCustomPublicPrivateFork/Backgrounds/MapBackgrounds/AbyssBGLayer23";
+        public override string BestiaryIcon => "CalamityMod/BiomeManagers/AbyssLayer3Icon";
+        public override string BackgroundPath => "CalamityMod/Backgrounds/MapBackgrounds/AbyssBGLayer23";
+        public override string MapBackground => "CalamityMod/Backgrounds/MapBackgrounds/AbyssBGLayer23";
 
         public override bool IsBiomeActive(Player player)
         {

@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
+namespace CalamityMod.Utilities.Daybreak.Buffers;
 
 /// <summary>
 ///     Handles preserving the contents of <see cref="RenderTarget2D" />s.

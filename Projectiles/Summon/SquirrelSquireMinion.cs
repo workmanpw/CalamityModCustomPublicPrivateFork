@@ -6,9 +6,9 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Items.Weapons.Summon.SquirrelSquireStaff;
+using static CalamityMod.Items.Weapons.Summon.SquirrelSquireStaff;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class SquirrelSquireMinion : ModProjectile, ILocalizedModType
     {

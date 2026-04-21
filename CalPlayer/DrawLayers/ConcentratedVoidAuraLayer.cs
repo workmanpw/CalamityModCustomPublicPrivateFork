@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
+namespace CalamityMod.CalPlayer.DrawLayers
 {
     public class ConcentratedVoidAuraLayer : PlayerDrawLayer
     {
@@ -20,7 +20,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
         protected override void Draw(ref PlayerDrawSet drawInfo)
         {
             Player drawPlayer = drawInfo.drawPlayer;
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/VoidConcentrationAura").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/VoidConcentrationAura").Value;
             Vector2 drawPos = drawInfo.Center - Main.screenPosition + new Vector2(0f, drawPlayer.gfxOffY);
             drawPos.Y -= 9f;
 

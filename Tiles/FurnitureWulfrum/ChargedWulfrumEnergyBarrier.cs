@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum
+namespace CalamityMod.Tiles.FurnitureWulfrum
 {
 
     public class ChargedWulfrumEnergyBarrier : ModTile
@@ -71,7 +71,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum
             TileID.Sets.DrawsWalls[Type] = true;
             Main.tileNoSunLight[Type] = false;
 
-            ReflectTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureWulfrum/ChargedWulfrumEnergyBarrierReflect");
+            ReflectTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureWulfrum/ChargedWulfrumEnergyBarrierReflect");
             Texture2D tex = ReflectTexture.Value;
 
             Tile tile = Main.tile[i, j];

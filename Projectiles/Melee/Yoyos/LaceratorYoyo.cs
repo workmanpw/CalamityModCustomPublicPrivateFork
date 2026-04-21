@@ -1,19 +1,19 @@
 using System;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs;
+using CalamityMod.Projectiles.Healing;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using System.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
+namespace CalamityMod.Projectiles.Melee.Yoyos
 {
     // Although normally yoyos are automatically exempted from pierce resist,
     // the damage logic for the buzzsaw briefly clobbers aiStyle, necessitating a manual pierce resist exception.
@@ -97,7 +97,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
                     particleSize *= 0.5f;
                     var particlePos = Projectile.Center + new Vector2(0, 84).RotatedByRandom(MathHelper.TwoPi);
                     var particleVel = particlePos.DirectionTo(Projectile.Center).RotatedBy(-sawDir * MathHelper.PiOver2 * 0.9f).RotatedByRandom(0.1f) * Main.rand.NextFloat(15f, 25f);
-                    Particle blood = new CustomSpark(particlePos, particleVel, "CalamityModCustomPublicPrivateFork/Particles/PearlParticleGlow", false, (int)MathHelper.Lerp(7, 17, chargeProgress), particleSize, Color.DarkRed, new Vector2(0.5f, 1), false, false, 0, false, false, 0f);
+                    Particle blood = new CustomSpark(particlePos, particleVel, "CalamityMod/Particles/PearlParticleGlow", false, (int)MathHelper.Lerp(7, 17, chargeProgress), particleSize, Color.DarkRed, new Vector2(0.5f, 1), false, false, 0, false, false, 0f);
                     GeneralParticleHandler.SpawnParticle(blood);
                 }
                 chargeProgress -= 0.003f / Projectile.extraUpdates;
@@ -134,8 +134,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
             if (chargeProgress > 0)
             {
                 var owner = Main.player[Projectile.owner];
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/LaceratorSaw").Value;
-                Texture2D WindTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/BlazingPhantomBlade").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/LaceratorSaw").Value;
+                Texture2D WindTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/BlazingPhantomBlade").Value;
                 float rot = MathHelper.TwoPi * 30 * sawDir * (owner.miscCounter / 300f);
                 var color = new Color(200, 200, 200);
                 var frame = WindTexture.Frame(1, 4, 0, 0);

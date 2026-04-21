@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class FlameBlast : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public float count = 0;
 
@@ -44,7 +44,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             Projectile.localAI[0] += 1f;
             if (Projectile.localAI[0] > 4f)
             {
-                Particle beam = new CustomSpark(Projectile.Center, Projectile.velocity * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", false, 8, 0.085f, Color.Lerp(Color.OrangeRed, Color.Goldenrod, Utils.GetLerpValue(270, 230, Projectile.timeLeft)), new Vector2(1f, (1 + 0.8f * velPower)), true, false, 0, false, false, 0.5f * velPower);
+                Particle beam = new CustomSpark(Projectile.Center, Projectile.velocity * 0.1f, "CalamityMod/Particles/SmallBloom", false, 8, 0.085f, Color.Lerp(Color.OrangeRed, Color.Goldenrod, Utils.GetLerpValue(270, 230, Projectile.timeLeft)), new Vector2(1f, (1 + 0.8f * velPower)), true, false, 0, false, false, 0.5f * velPower);
                 GeneralParticleHandler.SpawnParticle(beam);
             }
             

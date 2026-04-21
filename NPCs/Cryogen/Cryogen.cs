@@ -1,28 +1,28 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralSnow;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
-using CalamityModCustomPublicPrivateFork.UI.VanillaBossBars;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs.TownNPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Tiles.AstralSnow;
+using CalamityMod.Tiles.Ores;
+using CalamityMod.UI.VanillaBossBars;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -34,7 +34,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Cryogen
+namespace CalamityMod.NPCs.Cryogen
 {
     [LongDistanceNetSync] // Cryogen follows you forever like Queen Bee in vanilla, So we need this to sync its position on minimap
     public class Cryogen : ModNPC
@@ -44,12 +44,12 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Cryogen
 
         public static Color BackglowColor => new Color(24, 100, 255, 80) * 0.6f;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/Cryogen/Cryogen_Phase1";
+        public override string Texture => "CalamityMod/NPCs/Cryogen/Cryogen_Phase1";
 
-        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/CryogenHit", 3);
-        public static readonly SoundStyle TransitionSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/CryogenPhaseTransitionCrack");
-        public static readonly SoundStyle ShieldRegenSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/CryogenShieldRegenerate");
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/CryogenDeath");
+        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/CryogenHit", 3);
+        public static readonly SoundStyle TransitionSound = new("CalamityMod/Sounds/NPCHit/CryogenPhaseTransitionCrack");
+        public static readonly SoundStyle ShieldRegenSound = new("CalamityMod/Sounds/Custom/CryogenShieldRegenerate");
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/CryogenDeath");
 
         public static Asset<Texture2D> Phase2Texture;
         public static Asset<Texture2D> Phase3Texture;
@@ -64,8 +64,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Cryogen
 
         public override void Load()
         {
-            string cryoIconPath = "CalamityModCustomPublicPrivateFork/NPCs/Cryogen/Cryogen_Phase1_Head_Boss";
-            string pyroIconPath = "CalamityModCustomPublicPrivateFork/NPCs/Cryogen/Pyrogen_Head_Boss";
+            string cryoIconPath = "CalamityMod/NPCs/Cryogen/Cryogen_Phase1_Head_Boss";
+            string pyroIconPath = "CalamityMod/NPCs/Cryogen/Pyrogen_Head_Boss";
             
             cryoIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(cryoIconPath, -1);
             pyroIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(pyroIconPath, -1);
@@ -77,11 +77,11 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Cryogen
             NPCID.Sets.MPAllowedEnemies[Type] = true;
             if (!Main.dedServ)
             {
-                Phase2Texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Cryogen/Cryogen_Phase2", AssetRequestMode.AsyncLoad);
-                Phase3Texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Cryogen/Cryogen_Phase3", AssetRequestMode.AsyncLoad);
-                Phase4Texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Cryogen/Cryogen_Phase4", AssetRequestMode.AsyncLoad);
-                Phase5Texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Cryogen/Cryogen_Phase5", AssetRequestMode.AsyncLoad);
-                Phase6Texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Cryogen/Cryogen_Phase6", AssetRequestMode.AsyncLoad);
+                Phase2Texture = ModContent.Request<Texture2D>("CalamityMod/NPCs/Cryogen/Cryogen_Phase2", AssetRequestMode.AsyncLoad);
+                Phase3Texture = ModContent.Request<Texture2D>("CalamityMod/NPCs/Cryogen/Cryogen_Phase3", AssetRequestMode.AsyncLoad);
+                Phase4Texture = ModContent.Request<Texture2D>("CalamityMod/NPCs/Cryogen/Cryogen_Phase4", AssetRequestMode.AsyncLoad);
+                Phase5Texture = ModContent.Request<Texture2D>("CalamityMod/NPCs/Cryogen/Cryogen_Phase5", AssetRequestMode.AsyncLoad);
+                Phase6Texture = ModContent.Request<Texture2D>("CalamityMod/NPCs/Cryogen/Cryogen_Phase6", AssetRequestMode.AsyncLoad);
             }
         }
 
@@ -141,7 +141,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Cryogen
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Snow,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Cryogen")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Cryogen")
             });
         }
 
@@ -961,7 +961,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Cryogen
 
                     if (Main.rand.NextBool(chance))
                     {
-                        string key = Main.zenithWorld ? "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.PyrogenBossText" : "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.CryogenBossText";
+                        string key = Main.zenithWorld ? "Mods.CalamityMod.Status.Boss.PyrogenBossText" : "Mods.CalamityMod.Status.Boss.CryogenBossText";
                         Color messageColor = Main.zenithWorld ? Color.Orange : Color.Cyan;
                         CalamityUtils.BroadcastLocalizedText(key, messageColor);
                     }
@@ -1410,7 +1410,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Cryogen
             // If Cryogen has not been killed, notify players about Cryonic Ore
             if (!DownedBossSystem.downedCryogen)
             {
-                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.IceOreText";
+                string key = "Mods.CalamityMod.Status.Progression.IceOreText";
                 List<int> tileTypes = [
                     TileID.SnowBlock,
                     TileID.IceBlock,

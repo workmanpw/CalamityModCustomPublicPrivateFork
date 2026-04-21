@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone
+namespace CalamityMod.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone
 {
     [LegacyName("EutrophicClock")]
     public class AncientNavystoneClock : ModItem, ILocalizedModType

@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,12 +7,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class DrataliornusBow : ModProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<Drataliornus>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/Drataliornus";
+        public override string Texture => "CalamityMod/Items/Weapons/Ranged/Drataliornus";
 
         public override void SetDefaults()
         {

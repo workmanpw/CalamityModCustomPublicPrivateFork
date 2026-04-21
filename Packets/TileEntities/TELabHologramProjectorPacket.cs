@@ -1,7 +1,7 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.TileEntities;
+using CalamityMod.TileEntities;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class TELabHologramProjectorPacket : CalamityPacket
     {

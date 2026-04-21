@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.TileEntities;
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
+using CalamityMod.TileEntities;
+using CalamityMod.Tiles.DraedonStructures;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Schematics
+namespace CalamityMod.Schematics
 {
     public sealed class SchematicManager : ModSystem
     {

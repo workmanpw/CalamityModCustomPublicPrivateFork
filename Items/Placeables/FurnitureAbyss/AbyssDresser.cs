@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAbyss
+namespace CalamityMod.Items.Placeables.FurnitureAbyss
 {
     public class AbyssDresser : ModItem, ILocalizedModType
     {

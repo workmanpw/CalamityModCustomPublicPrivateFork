@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.InverseKinematics
+namespace CalamityMod.InverseKinematics
 {
     public class Limb
     {

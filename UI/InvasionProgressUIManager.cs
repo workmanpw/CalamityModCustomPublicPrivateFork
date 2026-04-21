@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI
+namespace CalamityMod.UI
 {
     [Autoload(Side = ModSide.Client)]
     public sealed class InvasionProgressUIManager : ModSystem

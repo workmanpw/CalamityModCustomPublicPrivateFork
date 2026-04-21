@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Terraria;
 using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs
+namespace CalamityMod.Buffs.StatDebuffs
 {
     public class ProfanedWeakness : ModBuff
     {
@@ -24,7 +24,7 @@ namespace CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs
 
             if (Main.rand.NextBool(5))
             {
-                Particle spark = new CustomSpark(npcSize, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/ArtifactOfResilienceShard" + Main.rand.Next(1, 6 + 1).ToString(), true, Main.rand.Next(9, 22 + 1), Main.rand.NextFloat(0.4f, 0.8f), Color.White * Main.rand.NextFloat(0.4f, 0.9f), new Vector2(1.1f, 0.8f), false, false, Main.rand.NextFloat(-5, 5), false, false);
+                Particle spark = new CustomSpark(npcSize, Vector2.Zero, "CalamityMod/Projectiles/Typeless/ArtifactOfResilienceShard" + Main.rand.Next(1, 6 + 1).ToString(), true, Main.rand.Next(9, 22 + 1), Main.rand.NextFloat(0.4f, 0.8f), Color.White * Main.rand.NextFloat(0.4f, 0.9f), new Vector2(1.1f, 0.8f), false, false, Main.rand.NextFloat(-5, 5), false, false);
                 GeneralParticleHandler.SpawnParticle(spark);
             }
 

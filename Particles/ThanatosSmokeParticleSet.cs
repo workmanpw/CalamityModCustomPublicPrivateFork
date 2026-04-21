@@ -1,6 +1,6 @@
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class ThanatosSmokeParticleSet : BaseParticleSet
     {

@@ -5,7 +5,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Abyss
+namespace CalamityMod.NPCs.Abyss
 {
     [LongDistanceNetSync(SyncWith = typeof(BobbitWormHead))]
     public class BobbitWormSegment : ModNPC

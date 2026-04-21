@@ -1,14 +1,14 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Items.Placeables.Banners;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityModCustomPublicPrivateFork.NPCs.SunkenSea
+namespace CalamityMod.NPCs.SunkenSea
 {
     public class Clam : ModNPC
     {
@@ -55,7 +55,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SunkenSea
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Clam")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Clam")
             });
         }
 

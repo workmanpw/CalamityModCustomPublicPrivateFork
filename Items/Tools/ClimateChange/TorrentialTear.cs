@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.World;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Tools.ClimateChange
+namespace CalamityMod.Items.Tools.ClimateChange
 {
     public class TorrentialTear : ModItem, ILocalizedModType
     {

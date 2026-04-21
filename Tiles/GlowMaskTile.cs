@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles
+namespace CalamityMod.Tiles
 {
     public abstract class GlowMaskTile : ModTile
     {

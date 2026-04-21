@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityMod.Items.DraedonMisc;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DraedonLogs
+namespace CalamityMod.UI.DraedonLogs
 {
     public class DraedonSchematicJungleGUI : DraedonsLogGUI
     {
@@ -13,7 +13,7 @@ namespace CalamityModCustomPublicPrivateFork.UI.DraedonLogs
         }
         public override Texture2D GetTextureByPage()
         {
-            return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonLogs/DraedonsLogJungleBiome").Value;
+            return ModContent.Request<Texture2D>("CalamityMod/UI/DraedonLogs/DraedonsLogJungleBiome").Value;
         }
     }
 }

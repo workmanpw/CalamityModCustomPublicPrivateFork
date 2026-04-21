@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.CalPlayer;
+using CalamityMod.CalPlayer.Dashes;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -15,14 +15,14 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     [LegacyName("StatisBeltOfCurses")]
     public class StatisVoidSash : ModItem, ILocalizedModType, IHoldShiftTooltipItem
     {
         public new string LocalizationCategory => "Items.Accessories";
 
-        public static SoundStyle VoidDash = new ("CalamityModCustomPublicPrivateFork/Sounds/Item/VoidDash");
+        public static SoundStyle VoidDash = new ("CalamityMod/Sounds/Item/VoidDash");
 
         public override void SetStaticDefaults()
         {

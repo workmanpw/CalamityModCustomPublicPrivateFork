@@ -2,11 +2,11 @@
 using Microsoft.Xna.Framework;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls
+namespace CalamityMod.Walls.UnsafeWalls
 {
     public class UnsafeAstralStoneWall : ModWall
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/AstralStoneWall";
+        public override string Texture => "CalamityMod/Walls/AstralStoneWall";
         public override void SetStaticDefaults()
         {
             // TODO -- Change this dust to be one more befitting Astral Stone.

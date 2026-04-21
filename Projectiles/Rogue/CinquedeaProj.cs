@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,16 +6,16 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class CinquedeaProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/Cinquedea";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/Cinquedea";
 
         public ref float Timer => ref Projectile.ai[0];
         public ref float Target => ref Projectile.ai[1];
-        public static readonly SoundStyle StealthSliceSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SwiftSlice");
+        public static readonly SoundStyle StealthSliceSound = new("CalamityMod/Sounds/Custom/SwiftSlice");
 
         internal float gravspin = 0f;
         private Vector2 StoredVelocity;

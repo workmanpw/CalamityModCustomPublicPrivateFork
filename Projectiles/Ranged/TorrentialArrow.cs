@@ -1,12 +1,12 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class TorrentialArrow : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/LaserProj";
+        public override string Texture => "CalamityMod/Projectiles/LaserProj";
 
         public override void SetDefaults()
         {

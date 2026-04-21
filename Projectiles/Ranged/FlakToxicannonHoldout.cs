@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
-using static CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged.FlakToxicannon;
+using static CalamityMod.Items.Weapons.Ranged.FlakToxicannon;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class FlakToxicannonHoldout : BaseGunHoldoutProjectile
     {
@@ -145,7 +145,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                         shootDust.noLightEmittence = false;
                     }
 
-                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/FlakKrakenShoot") { Pitch = 0.65f, Volume = 0.5f }, GunTipPosition);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/FlakKrakenShoot") { Pitch = 0.65f, Volume = 0.5f }, GunTipPosition);
                 }
 
                 ShootingTimer = 0f;

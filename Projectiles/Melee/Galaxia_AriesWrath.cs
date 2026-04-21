@@ -1,23 +1,23 @@
 using System;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class AriesWrath : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
         private NPC[] excludedTargets = new NPC[4];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxiaExtra2";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/GalaxiaExtra2";
         public Player Owner => Main.player[Projectile.owner];
         public ref float ChainSwapTimer => ref Projectile.ai[0];
         public ref float BlastCooldown => ref Projectile.ai[1];
@@ -219,7 +219,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D sword = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalaxiaExtra2").Value;
+            Texture2D sword = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/GalaxiaExtra2").Value;
 
             Vector2 drawPos = Projectile.Center;
             Vector2 drawOrigin = sword.Size() / 2f;

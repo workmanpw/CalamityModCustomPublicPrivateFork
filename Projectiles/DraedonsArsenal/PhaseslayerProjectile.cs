@@ -1,13 +1,13 @@
 using System;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Items;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Dusts;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Items;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.NPCs;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -17,13 +17,13 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     [PierceResistException]
     public class PhaseslayerProjectile : ModProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<Phaseslayer>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/DraedonsArsenal/Phaseslayer";
+        public override string Texture => "CalamityMod/Items/Weapons/DraedonsArsenal/Phaseslayer";
 
         // The "average" or "expected" swing speed which the sword's damage balance is based off of.
         // This is rotation EVERY FRAME. The "average" swing speed is 180 degrees in one second, aka pi/60 radians per frame.
@@ -279,10 +279,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D bladeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/PhaseslayerBlade").Value;
+            Texture2D bladeTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/PhaseslayerBlade").Value;
             Texture2D hiltTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (IsSmall)
-                bladeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/PhaseslayerBladeSmall").Value;
+                bladeTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/PhaseslayerBladeSmall").Value;
 
             float bladeLength = (IsSmall ? 90f : 132f) * Projectile.scale;
             Vector2 bladeOffset = Projectile.rotation.ToRotationVector2() * bladeLength;
@@ -291,7 +291,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
 
             Rectangle frame = IsSmall ? bladeTexture.Frame(1, 3, 0, BladeFrameY) : bladeTexture.Frame(3, 7, BladeFrameX, BladeFrameY);
 
-            GameShaders.Misc["CalamityMod:PhaseslayerRipEffect"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SwordSlashTexture"));
+            GameShaders.Misc["CalamityMod:PhaseslayerRipEffect"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SwordSlashTexture"));
 
             Player player = Main.player[Projectile.owner];
             float swingAngularDirection = Math.Sign(MathHelper.WrapAngle(Projectile.rotation - Projectile.oldRot[1]));

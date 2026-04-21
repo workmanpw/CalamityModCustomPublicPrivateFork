@@ -5,7 +5,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Dyes.HairDye
+namespace CalamityMod.Items.Dyes.HairDye
 {
     public class RageHairDye : ModItem, ILocalizedModType
     {

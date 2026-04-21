@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.Json.Serialization;
-using CalamityModCustomPublicPrivateFork.Dialogues;
-using CalamityModCustomPublicPrivateFork.Packets;
-using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DialogueEvents;
-using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects;
-using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.TextEffects;
+using CalamityMod.Dialogues;
+using CalamityMod.Packets;
+using CalamityMod.UI.DialogueDisplay.DialogueEvents;
+using CalamityMod.UI.DialogueDisplay.DisplayEffects;
+using CalamityMod.UI.DialogueDisplay.TextEffects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -19,10 +19,10 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.UI;
 using Terraria.UI.Chat;
-using static CalamityModCustomPublicPrivateFork.Packets.StartDialogueDisplayPacket;
+using static CalamityMod.Packets.StartDialogueDisplayPacket;
 using static ReLogic.Graphics.DynamicSpriteFont;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay
+namespace CalamityMod.UI.DialogueDisplay
 {
     internal class DialogueDisplayUI : UIState
     {
@@ -577,7 +577,7 @@ namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay
                                 foreach (string s in returnString)
                                     storedLen += s.Length;
 
-                                string path = "CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.TextEffects.";
+                                string path = "CalamityMod.UI.DialogueDisplay.TextEffects.";
                                 Type t = Type.GetType(path + ID) ?? throw new Exception("Invalid text effect ID found");
                                 TextEffect te = (TextEffect)Activator.CreateInstance(t);
                                 if (TextEffects.TryGetValue(index - storedLen, out var value))

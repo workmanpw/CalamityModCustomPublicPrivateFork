@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureCosmilite
+namespace CalamityMod.Tiles.FurnitureCosmilite
 {
     public class CosmiliteBrick : GlowMaskTile
     {

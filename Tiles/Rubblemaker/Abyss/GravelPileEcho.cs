@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
+using CalamityMod.Items.Placeables.Abyss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,11 +8,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.Abyss
+namespace CalamityMod.Tiles.Rubblemaker.Abyss
 {
     public class GravelPile1Echo : ModTile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/Abyss/AbyssAmbient/GravelPile1";
+        public override string Texture => "CalamityMod/Tiles/Abyss/AbyssAmbient/GravelPile1";
         public override void SetStaticDefaults()
         {
             Main.tileLighted[Type] = true;
@@ -46,11 +46,11 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.Abyss
 
     public class GravelPile2Echo : GravelPile1Echo
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/Abyss/AbyssAmbient/GravelPile2";
+        public override string Texture => "CalamityMod/Tiles/Abyss/AbyssAmbient/GravelPile2";
     }
 
     public class GravelPile3Echo : GravelPile1Echo
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/Abyss/AbyssAmbient/GravelPile3";
+        public override string Texture => "CalamityMod/Tiles/Abyss/AbyssAmbient/GravelPile3";
     }
 }

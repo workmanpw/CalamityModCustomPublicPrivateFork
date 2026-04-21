@@ -6,7 +6,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles
+namespace CalamityMod.Projectiles.BaseProjectiles
 {
     /// <summary>
     /// Base class for a whip that handles drawing, AI, and onHit. To make a simple whip, you only need to specify stats in setWhipStats
@@ -54,7 +54,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles
 
         
         //Textures are set to InvisibleProj by default, but this should be changed if you want it to be visible.
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public abstract string WhipTipTexture { get;}
         /// <summary>
         /// The order of textures in this list is the order which they will appear when drawn in game.

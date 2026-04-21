@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureVoid
+namespace CalamityMod.Tiles.FurnitureVoid
 {
     public class VoidstoneSlab : GlowMaskTile
     {

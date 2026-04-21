@@ -1,18 +1,18 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
+using CalamityMod.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
+namespace CalamityMod.Items.Weapons.Rogue
 {
     public class SporeKnife : RogueWeapon
     {
-        public static readonly SoundStyle ThrowSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SporeKnifeThrow", 1, 2) with { PitchVariance = 0.2f, MaxInstances = 2 };
-        public static readonly SoundStyle ImpactSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SporeKnifeImpact") with { PitchVariance = 0.25f, MaxInstances = 10 };
-        public static readonly SoundStyle StealthImpactSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SporeKnifeStealthImpact");
-        public static readonly SoundStyle ChompSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SporeKnifeChomp", 1, 3) with { PitchVariance = 0.25f, MaxInstances = 10 };
+        public static readonly SoundStyle ThrowSound = new SoundStyle("CalamityMod/Sounds/Item/SporeKnifeThrow", 1, 2) with { PitchVariance = 0.2f, MaxInstances = 2 };
+        public static readonly SoundStyle ImpactSound = new SoundStyle("CalamityMod/Sounds/Item/SporeKnifeImpact") with { PitchVariance = 0.25f, MaxInstances = 10 };
+        public static readonly SoundStyle StealthImpactSound = new SoundStyle("CalamityMod/Sounds/Item/SporeKnifeStealthImpact");
+        public static readonly SoundStyle ChompSound = new SoundStyle("CalamityMod/Sounds/Item/SporeKnifeChomp", 1, 3) with { PitchVariance = 0.25f, MaxInstances = 10 };
         public override void SetDefaults()
         {
             Item.width = 12;

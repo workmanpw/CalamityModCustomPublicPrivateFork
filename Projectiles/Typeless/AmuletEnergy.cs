@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,12 +14,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class AmuletEnergy : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
         public Color bColor = Color.White;
         public bool canDamage = false;
@@ -189,7 +189,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             float squash = Utils.GetLerpValue(1, 3, Projectile.velocity.Length(), true);
             if (squash > 0.15f && visuals)
             {
-                Particle fadeInfx = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 15, 0.4f * Projectile.scale, bColor * 0.3f * squash, new Vector2(1 - 0.15f * squash, 1f), true, false, shrinkSpeed: 0.3f * squash);
+                Particle fadeInfx = new CustomSpark(Projectile.Center, Projectile.velocity * 0.01f, "CalamityMod/Particles/BloomCircle", false, 15, 0.4f * Projectile.scale, bColor * 0.3f * squash, new Vector2(1 - 0.15f * squash, 1f), true, false, shrinkSpeed: 0.3f * squash);
                 GeneralParticleHandler.SpawnParticle(fadeInfx);
             }
 
@@ -212,7 +212,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
                     Vector2 vel = (Projectile.velocity.SafeNormalize(Vector2.UnitX) * 4).RotatedBy(variance) * Main.rand.NextFloat(0.3f, 1f) * (1 - Math.Abs(variance)) * 4;
                     float scale = (Main.rand.NextFloat(1.5f, 1.7f) - Math.Abs(variance)) * 0.35f * Projectile.scale;
 
-                    Particle sparks = new CustomSpark(Projectile.Center + vel, vel, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, Main.rand.Next(13, 16 + 1), scale, bColor * 0.7f, new Vector2(1f, 1), true, false, 0, false, shrinkSpeed: 0.25f);
+                    Particle sparks = new CustomSpark(Projectile.Center + vel, vel, "CalamityMod/Particles/BloomCircle", false, Main.rand.Next(13, 16 + 1), scale, bColor * 0.7f, new Vector2(1f, 1), true, false, 0, false, shrinkSpeed: 0.25f);
                     GeneralParticleHandler.SpawnParticle(sparks);
 
                     Dust dust2 = Dust.NewDustPerfect(Projectile.Center, ModContent.DustType<LightDust>(), vel);
@@ -228,7 +228,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+            Asset<Texture2D> orb = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
             float sine = (float)Math.Sin((Main.GlobalTimeWrappedHourly * 10) / MathHelper.Pi);
             Vector2 squash = new Vector2(Utils.Remap(Projectile.velocity.Length(), 1, 5, 1, 0.6f), Utils.Remap(Projectile.velocity.Length(), 1, 5, 1, 2f));
 

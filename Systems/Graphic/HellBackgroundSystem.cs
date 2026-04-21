@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public interface HellBGLoad
     {
@@ -226,7 +226,7 @@ namespace CalamityModCustomPublicPrivateFork.Systems
     {
         //get the texture for each background
         //you dont need to put any numbers at the end of the bg texture name since the hell bg system manages that
-        public override string TexturePath => "CalamityModCustomPublicPrivateFork/Backgrounds/BgTextureName";
+        public override string TexturePath => "CalamityMod/Backgrounds/BgTextureName";
 
         public override bool IsActive()
         {

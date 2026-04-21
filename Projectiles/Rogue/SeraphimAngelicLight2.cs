@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class SeraphimAngelicLight2 : ModProjectile, ILocalizedModType
     {
@@ -13,7 +13,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public ref float Time => ref Projectile.ai[1];
         public const int Lifetime = SeraphimProjectile.SlowdownTime + SeraphimDagger.SlowdownTime;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Rogue/SeraphimAngelicLight";
+        public override string Texture => "CalamityMod/Projectiles/Rogue/SeraphimAngelicLight";
         public override void SetStaticDefaults()
         {
             Main.projFrames[Type] = 10;

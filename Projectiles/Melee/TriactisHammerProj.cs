@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,18 +7,18 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class TriactisHammerProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/TriactisTruePaladinianMageHammerofMight";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/TriactisTruePaladinianMageHammerofMight";
 
-        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PwnagehammerSound") { Volume = 0.6f };
-        public static readonly SoundStyle HitSoundGFB = new("CalamityModCustomPublicPrivateFork/Sounds/Item/CalamityBell");
-        public static readonly SoundStyle WindUpSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GalaxySmasherClone") { Volume = 0.9f };
-        public static readonly SoundStyle SmashSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GalaxySmasherSmash") { Volume = 0.7f };
-        public static readonly SoundStyle SmashSoundGFB = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TF2PanHit");
+        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/Item/PwnagehammerSound") { Volume = 0.6f };
+        public static readonly SoundStyle HitSoundGFB = new("CalamityMod/Sounds/Item/CalamityBell");
+        public static readonly SoundStyle WindUpSound = new("CalamityMod/Sounds/Item/GalaxySmasherClone") { Volume = 0.9f };
+        public static readonly SoundStyle SmashSound = new("CalamityMod/Sounds/Item/GalaxySmasherSmash") { Volume = 0.7f };
+        public static readonly SoundStyle SmashSoundGFB = new("CalamityMod/Sounds/Item/TF2PanHit");
 
         public static float ExplosionDamageKBMult = 2f;
         public static float SuperHammerDamageMult = 3f;
@@ -33,7 +33,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public float OrbitRadius;
 
         public static Asset<Texture2D> EchoHammer;
-        public override void Load() => EchoHammer = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TriactisHammerEcho");
+        public override void Load() => EchoHammer = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/TriactisHammerEcho");
 
         public override void SetStaticDefaults()
         {

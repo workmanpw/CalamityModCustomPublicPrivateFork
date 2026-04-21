@@ -1,6 +1,6 @@
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Items.LoreItems
+namespace CalamityMod.Items.LoreItems
 {
     public class LoreAwakening : LoreItem
     {

@@ -1,13 +1,13 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Projectiles.Enemy;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -16,7 +16,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
+namespace CalamityMod.NPCs.AcidRain
 {
     [AutoloadBossHead]
     public class NuclearTerror : ModNPC
@@ -80,9 +80,9 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
         public const float TeleportFadeinTime = 10f;
         public const float TeleportCooldown = 60f;
 
-        public static readonly SoundStyle SpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/NuclearTerrorSpawn");
-        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/NuclearTerrorHit");
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/NuclearTerrorDeath");
+        public static readonly SoundStyle SpawnSound = new("CalamityMod/Sounds/Custom/NuclearTerrorSpawn");
+        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/NuclearTerrorHit");
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/NuclearTerrorDeath");
 
         public override void SetStaticDefaults()
         {
@@ -129,7 +129,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.NuclearTerror")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.NuclearTerror")
             });
         }
 

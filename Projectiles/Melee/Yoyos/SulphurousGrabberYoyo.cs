@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
+namespace CalamityMod.Projectiles.Melee.Yoyos
 {
     public class SulphurousGrabberYoyo : ModProjectile
     {
@@ -101,7 +101,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, tex.Size() / 2f, Projectile.scale, SpriteEffects.None, 0);
             if (bubbleStronk)
             {
-                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/Yoyos/SulphurousGrabberYoyoBubble").Value;
+                tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/Yoyos/SulphurousGrabberYoyoBubble").Value;
                 CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], lightColor, 1, tex);
             }
             return false;

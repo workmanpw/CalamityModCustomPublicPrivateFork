@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
+namespace CalamityMod.NPCs.NormalNPCs
 {
     public class ProfanedEnergyBody : ModNPC
     {
@@ -17,7 +17,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             {
                 //Preferably would have two animated lanterns, but this static one-headded wiki image will do for now
                 PortraitPositionYOverride = 0,
-                CustomTexturePath = "CalamityModCustomPublicPrivateFork/ExtraTextures/Bestiary/ProfanedEnergy_Bestiary"
+                CustomTexturePath = "CalamityMod/ExtraTextures/Bestiary/ProfanedEnergy_Bestiary"
             };
             value.Position.Y += 30;
             NPCID.Sets.NPCBestiaryDrawOffset[Type] = value;
@@ -53,7 +53,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheHallow,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheUnderworld,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.ProfanedEnergyBody")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.ProfanedEnergyBody")
             });
         }
 

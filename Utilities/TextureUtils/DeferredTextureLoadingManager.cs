@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     internal sealed class DeferredTextureLoadingManager : ModSystem
     {

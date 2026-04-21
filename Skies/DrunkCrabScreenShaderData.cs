@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Crabulon;
+using CalamityMod.NPCs.Crabulon;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Skies
+namespace CalamityMod.Skies
 {
     public class DrunkCrabScreenShaderData : ScreenShaderData
     {

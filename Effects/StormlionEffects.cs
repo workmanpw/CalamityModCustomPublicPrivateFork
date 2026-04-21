@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Effects
+namespace CalamityMod.Effects
 {
     public class StormlionEffects
     {
@@ -15,10 +15,10 @@ namespace CalamityModCustomPublicPrivateFork.Effects
         public static Color FleshColor = new Color(171, 113, 91);
 
         // Sounds
-        public static readonly SoundStyle Hit = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/StormlionAltHit");
-        public static readonly SoundStyle Killed = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/StormlionAltDeath");
-        public static readonly SoundStyle Attack = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/StormlionAltShoot");
-        public static readonly SoundStyle Idle1 = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/StormlionAltIdle1");
-        public static readonly SoundStyle Idle2 = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/StormlionAltIdle2");
+        public static readonly SoundStyle Hit = new("CalamityMod/Sounds/NPCHit/StormlionAltHit");
+        public static readonly SoundStyle Killed = new("CalamityMod/Sounds/NPCKilled/StormlionAltDeath");
+        public static readonly SoundStyle Attack = new("CalamityMod/Sounds/Custom/StormlionAltShoot");
+        public static readonly SoundStyle Idle1 = new("CalamityMod/Sounds/Custom/StormlionAltIdle1");
+        public static readonly SoundStyle Idle2 = new("CalamityMod/Sounds/Custom/StormlionAltIdle2");
     }
 }

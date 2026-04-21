@@ -3,16 +3,16 @@ using System;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Utilities;
-using CalamityModCustomPublicPrivateFork.ExoGladius_LEGACY;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Utilities;
+using CalamityMod.ExoGladius_LEGACY;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class ExoGladProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/ExoGladius_LEGACY/InvisibleProj";
+        public override string Texture => "CalamityMod/ExoGladius_LEGACY/InvisibleProj";
 
         private float counter = 0f;
 

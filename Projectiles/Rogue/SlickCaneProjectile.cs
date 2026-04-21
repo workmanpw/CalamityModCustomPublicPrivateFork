@@ -1,8 +1,8 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,12 +11,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class SlickCaneProjectile : BaseSpearProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<SlickCane>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/SlickCane";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/SlickCane";
 
         private bool initialized = false;
         public override void SetDefaults()
@@ -54,7 +54,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public override bool PreDraw(ref Color lightColor)
         {
             Vector2 drawPosition = Projectile.position + new Vector2(Projectile.width, Projectile.height) / 2f + Vector2.UnitY * Projectile.gfxOffY - Main.screenPosition;
-            Texture2D alternateHookTexture = Projectile.spriteDirection == -1 ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/SlickCaneProjectileAlt").Value : Terraria.GameContent.TextureAssets.Projectile[Type].Value;
+            Texture2D alternateHookTexture = Projectile.spriteDirection == -1 ? ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/SlickCaneProjectileAlt").Value : Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             Vector2 origin = new Vector2(Projectile.spriteDirection == 1 ? alternateHookTexture.Width + 8f : -8f, -8f);
             Main.EntitySpriteDraw(alternateHookTexture, drawPosition, null,
                 lightColor, Projectile.rotation,

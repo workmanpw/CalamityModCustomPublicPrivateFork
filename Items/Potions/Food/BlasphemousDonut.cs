@@ -4,7 +4,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Potions.Food
+namespace CalamityMod.Items.Potions.Food
 {
     public class BlasphemousDonut : ModItem, ILocalizedModType
     {

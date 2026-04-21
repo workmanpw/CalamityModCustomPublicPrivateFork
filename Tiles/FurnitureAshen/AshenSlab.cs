@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Crags;
+using CalamityMod.Tiles.Crags;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAshen
+namespace CalamityMod.Tiles.FurnitureAshen
 {
     public class AshenSlab : ModTile
     {
@@ -518,7 +518,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAshen
             Vector2 zero = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);
             Vector2 drawOffset = new Vector2(i * 16 - Main.screenPosition.X, j * 16 - Main.screenPosition.Y) + zero;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureAshen/AshenSlabGlow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureAshen/AshenSlabGlow");
             Texture2D glowmask = GlowTexture.Value;
 
             Color drawColour = CalamityUtils.ApplyPaint(Main.tile[i, j].TileColor, new Color(64, 64, 64, 64));

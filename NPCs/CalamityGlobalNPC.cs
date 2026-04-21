@@ -1,71 +1,71 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Balancing;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Armor.PlagueReaper;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs.Abyss;
-using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
-using CalamityModCustomPublicPrivateFork.NPCs.AquaticScourge;
-using CalamityModCustomPublicPrivateFork.NPCs.Astral;
-using CalamityModCustomPublicPrivateFork.NPCs.AstrumDeus;
-using CalamityModCustomPublicPrivateFork.NPCs.Bumblebirb;
-using CalamityModCustomPublicPrivateFork.NPCs.CalClone;
-using CalamityModCustomPublicPrivateFork.NPCs.CeaselessVoid;
-using CalamityModCustomPublicPrivateFork.NPCs.Deconstructors;
-using CalamityModCustomPublicPrivateFork.NPCs.DesertScourge;
-using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
-using CalamityModCustomPublicPrivateFork.NPCs.DraedonLabThings;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Apollo;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Artemis;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.NPCs.HiveMind;
-using CalamityModCustomPublicPrivateFork.NPCs.Leviathan;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
-using CalamityModCustomPublicPrivateFork.NPCs.Perforator;
-using CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies;
-using CalamityModCustomPublicPrivateFork.NPCs.Polterghast;
-using CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm;
-using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
-using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
-using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
-using CalamityModCustomPublicPrivateFork.NPCs.StormWeaver;
-using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
-using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.RegularEnemies;
-using CalamityModCustomPublicPrivateFork.Packets;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
-using CalamityModCustomPublicPrivateFork.UI;
-using CalamityModCustomPublicPrivateFork.UI.DebuffSystem;
-using CalamityModCustomPublicPrivateFork.UI.VanillaBossBars;
-using CalamityModCustomPublicPrivateFork.Walls.DraedonStructures;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Balancing;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.CalPlayer;
+using CalamityMod.DataStructures;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Graphics.Metaballs;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Accessories.Vanity;
+using CalamityMod.Items.Armor.PlagueReaper;
+using CalamityMod.Items.Tools;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs.Abyss;
+using CalamityMod.NPCs.AcidRain;
+using CalamityMod.NPCs.AquaticScourge;
+using CalamityMod.NPCs.Astral;
+using CalamityMod.NPCs.AstrumDeus;
+using CalamityMod.NPCs.Bumblebirb;
+using CalamityMod.NPCs.CalClone;
+using CalamityMod.NPCs.CeaselessVoid;
+using CalamityMod.NPCs.Deconstructors;
+using CalamityMod.NPCs.DesertScourge;
+using CalamityMod.NPCs.DevourerofGods;
+using CalamityMod.NPCs.DraedonLabThings;
+using CalamityMod.NPCs.ExoMechs;
+using CalamityMod.NPCs.ExoMechs.Apollo;
+using CalamityMod.NPCs.ExoMechs.Ares;
+using CalamityMod.NPCs.ExoMechs.Artemis;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.NPCs.HiveMind;
+using CalamityMod.NPCs.Leviathan;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.NPCs.OldDuke;
+using CalamityMod.NPCs.Perforator;
+using CalamityMod.NPCs.PlagueEnemies;
+using CalamityMod.NPCs.Polterghast;
+using CalamityMod.NPCs.PrimordialWyrm;
+using CalamityMod.NPCs.ProfanedGuardians;
+using CalamityMod.NPCs.Providence;
+using CalamityMod.NPCs.Ravager;
+using CalamityMod.NPCs.SlimeGod;
+using CalamityMod.NPCs.StormWeaver;
+using CalamityMod.NPCs.SunkenSea;
+using CalamityMod.NPCs.SupremeCalamitas;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.RegularEnemies;
+using CalamityMod.Packets;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Magic;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Systems;
+using CalamityMod.Systems.Collections;
+using CalamityMod.Tiles.FurnitureAuric;
+using CalamityMod.Tiles.Ores;
+using CalamityMod.UI;
+using CalamityMod.UI.DebuffSystem;
+using CalamityMod.UI.VanillaBossBars;
+using CalamityMod.Walls.DraedonStructures;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoMod.Utils;
@@ -86,7 +86,7 @@ using Terraria.UI.Chat;
 using Terraria.Utilities;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs
+namespace CalamityMod.NPCs
 {
     public partial class CalamityGlobalNPC : GlobalNPC
     {
@@ -992,7 +992,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
 
                 if (-120 * damage >= npc.lifeRegenCount)
                 {
-                    GeneralParticleHandler.SpawnParticle(new CustomSpark(npc.Center, new Vector2(1, 0).RotatedByRandom(7), "CalamityModCustomPublicPrivateFork/Particles/TrientCircularSmear", false, 15, 0.4f + 0.1f * npc.width / 16f, Color.White, new Vector2(0.5f, 1f)));
+                    GeneralParticleHandler.SpawnParticle(new CustomSpark(npc.Center, new Vector2(1, 0).RotatedByRandom(7), "CalamityMod/Particles/TrientCircularSmear", false, 15, 0.4f + 0.1f * npc.width / 16f, Color.White, new Vector2(0.5f, 1f)));
                 }
             }
         }
@@ -1201,7 +1201,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
 
             // Change Queen Slime's fart sound on death to something more serious. Except GFB though because naturally
             if (npc.type == NPCID.QueenSlimeBoss)
-                npc.DeathSound = Main.zenithWorld ? new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/GFBScreams/Scream", 8) : SoundID.NPCDeath1;
+                npc.DeathSound = Main.zenithWorld ? new SoundStyle("CalamityMod/Sounds/Item/GFBScreams/Scream", 8) : SoundID.NPCDeath1;
 
             // Function lives in NPCDebuffs.cs
             // This applies to ALL NPCs, vanilla AND Calamity.
@@ -3140,7 +3140,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                         Particle spark = new SparkParticle(npc.Center, new Vector2(13, 13).RotatedByRandom(100) * Main.rand.NextFloat(0.4f, 1f), true, 45, 0.85f, Main.rand.NextBool() ? Color.Goldenrod : Color.Orange);
                         GeneralParticleHandler.SpawnParticle(spark);
                     }
-                    SoundStyle fullPower = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceBurn");
+                    SoundStyle fullPower = new("CalamityMod/Sounds/Custom/Providence/ProvidenceBurn");
                     SoundEngine.PlaySound(fullPower with { Volume = 0.7f, Pitch = 0.7f }, npc.Center);
                     warbannerBurnStacks++;
                 }
@@ -3162,7 +3162,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                             float velAdjust = Main.rand.NextFloat(2, 7) * warbannerBurnIntensity * sizeBonus;
                             Vector2 endVel = warbannerBurnDirection * velAdjust;
                             Vector2 startVel = (warbannerBurnDirection * velAdjust).RotatedByRandom(0.6f * warbannerBurnIntensity);
-                            Particle sparks = new VelChangingSpark(sparkPos, startVel, endVel, "CalamityModCustomPublicPrivateFork/Particles/SmallBloom", Main.rand.Next(18, 22 + 1), Main.rand.NextFloat(0.1f, 0.25f) * sizeBonus, color * 0.75f, new Vector2(0.7f, 1), true, false, 0, false, 0.45f, 0.1f);
+                            Particle sparks = new VelChangingSpark(sparkPos, startVel, endVel, "CalamityMod/Particles/SmallBloom", Main.rand.Next(18, 22 + 1), Main.rand.NextFloat(0.1f, 0.25f) * sizeBonus, color * 0.75f, new Vector2(0.7f, 1), true, false, 0, false, 0.45f, 0.1f);
                             GeneralParticleHandler.SpawnParticle(sparks);
                             if (Main.rand.NextBool())
                             {
@@ -3191,7 +3191,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                     GeneralParticleHandler.SpawnParticle(sparks);
                 }
 
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/CryogenHit", 3) { Volume = 0.6f }, npc.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/NPCHit/CryogenHit", 3) { Volume = 0.6f }, npc.Center);
                 Projectile.NewProjectile(npc.GetSource_FromThis(), npc.Center, Vector2.Zero, ProjectileType<DirectStrike>(), 100 + (15 * veriumDoomStacks), 0, Main.myPlayer, npc.whoAmI);
 
                 veriumDoomMarked = false;
@@ -3266,7 +3266,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                 for (int d = 0; d < (int)(7 + laserBurnStacks * 0.4f); d++)
                 {
                     Vector2 partVel = (new Vector2(10) * (laserBurnStacks * 0.025f)).RotatedByRandom(MathHelper.Pi) * Main.rand.NextFloat(0.2f, 1f);
-                    Particle spark2 = new CustomSpark(npc.Center, partVel, "CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge", false, 12, Main.rand.NextFloat(0.02f, 0.03f), Effects.ArsenalEffects.ArsenalLaserColor * 0.8f, new Vector2(1, 1), true, false, 0, false, false, 1f);
+                    Particle spark2 = new CustomSpark(npc.Center, partVel, "CalamityMod/Particles/BloomLineSoftEdge", false, 12, Main.rand.NextFloat(0.02f, 0.03f), Effects.ArsenalEffects.ArsenalLaserColor * 0.8f, new Vector2(1, 1), true, false, 0, false, false, 1f);
                     GeneralParticleHandler.SpawnParticle(spark2);
 
                     Vector2 dustVel = (Vector2.UnitX * 5f * (laserBurnStacks * 0.05f)).RotatedByRandom(MathHelper.Pi) * Main.rand.NextFloat(0.85f, 1f);
@@ -3274,7 +3274,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                     dust.noGravity = true;
                 }
 
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/LaserBurn") { Volume = 0.6f, Pitch = Main.rand.NextFloat(-0.15f, 0.15f) }, npc.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/LaserBurn") { Volume = 0.6f, Pitch = Main.rand.NextFloat(-0.15f, 0.15f) }, npc.Center);
                 laserBurnMarked = false;
                 laserBurnStacks = 0;
                 laserBurnTimer = 0;
@@ -3430,7 +3430,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                         npc.SimpleStrikeNPC((int)(npc.lifeMax * 0.2f), 0);
                         npc.AddBuff(BuffType<AuricRebuke>(), 120);
                     }
-                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/TeslaShoot1"), npc.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/ExoMechs/TeslaShoot1"), npc.Center);
                     break;
                 }
             }
@@ -4054,7 +4054,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                     dust.noGravity = false;
                     dust.fadeIn = Main.rand.NextFloat(0.2f, 2f);
                 }
-                Particle blastvfx = new CustomPulse(npc.Center, Vector2.Zero, Color.Chartreuse * 0.9f, "CalamityModCustomPublicPrivateFork/Particles/ShineExplosion1", Vector2.One, Main.rand.NextFloat(-10, 10), 0.05f, 0.15f, 10, true);
+                Particle blastvfx = new CustomPulse(npc.Center, Vector2.Zero, Color.Chartreuse * 0.9f, "CalamityMod/Particles/ShineExplosion1", Vector2.One, Main.rand.NextFloat(-10, 10), 0.05f, 0.15f, 10, true);
                 GeneralParticleHandler.SpawnParticle(blastvfx);
                 SoundEngine.PlaySound(SoundID.DD2_ExplosiveTrapExplode with { Volume = 0.5f, Pitch = Main.rand.NextFloat(0.5f, 0.7f), MaxInstances = 6 }, npc.Center);
 
@@ -4666,8 +4666,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                 Color nextColor = eColors[(colorIndex + 1) % eColors.Count];
                 Color usedColor = Color.Lerp(currentColor, nextColor, rate % 2f > 1f ? 1f : rate % 1f);
 
-                Texture2D tex2 = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
-                Texture2D sparkle = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge").Value;
+                Texture2D tex2 = Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+                Texture2D sparkle = Request<Texture2D>("CalamityMod/Particles/BloomLineSoftEdge").Value;
                 Vector2 drawPosition = npc.Center - Main.screenPosition;
 
                 float power = (float)(Math.Pow(Utils.GetLerpValue(0, 20, hyperiusFxTimer, true), 3)) * MathHelper.Lerp(Math.Max(npc.height, npc.width) / 100, 1.4f, 0.5f);
@@ -4750,7 +4750,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                 {
                     float veriumRatio = veriumDoomTimer / (float)veriumDoomTime;
                     Vector2 randPosition = new Vector2(npc.position.X + Main.rand.Next(0, npc.width), npc.position.Y + Main.rand.Next(0, npc.height));
-                    Particle markedSparkle = new CustomPulse(randPosition, Vector2.Zero, Color.Lerp(new Color(103, 230, 240), new Color(255, 110, 220), 1 - veriumRatio), "CalamityModCustomPublicPrivateFork/Particles/Sparkle", Vector2.One, Main.rand.NextFloat(-0.75f, 0.75f), 0.9f, 1.1f, 35);
+                    Particle markedSparkle = new CustomPulse(randPosition, Vector2.Zero, Color.Lerp(new Color(103, 230, 240), new Color(255, 110, 220), 1 - veriumRatio), "CalamityMod/Particles/Sparkle", Vector2.One, Main.rand.NextFloat(-0.75f, 0.75f), 0.9f, 1.1f, 35);
                     GeneralParticleHandler.SpawnParticle(markedSparkle);
                 }
             }
@@ -4863,54 +4863,54 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
         public static List<(string, Predicate<NPC>)> moddedDebuffTextureList = new List<(string, Predicate<NPC>)>
         {
             // All Calamity DoTs in alphabetical order
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/AstralInfectionDebuff", NPC => NPC.Calamity().astralInfection),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/AuricRebuke", NPC => NPC.Calamity().auricRebuke),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/BanishingFire", NPC => NPC.Calamity().banishingFire),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/BrainRot", NPC => NPC.Calamity().brainRot),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/BrimstoneFlames", NPC => NPC.Calamity().brimstoneFlames),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/DemonicFlames", NPC => NPC.Calamity().demonicFlames),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/BurningBlood", NPC => NPC.Calamity().burningBlood),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/CrushDepth", NPC => NPC.Calamity().crushDepth),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/Dragonfire", NPC => NPC.Calamity().dragonFire),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/ElementalMix", NPC => NPC.Calamity().elementalMix),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/GodSlayerInferno", NPC => NPC.Calamity().godSlayerInferno),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/HadopelagicPressure", NPC => NPC.Calamity().hadopelagicPressure),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/HolyFlames", NPC => NPC.Calamity().holyFlames),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/Laceration", NPC => NPC.Calamity().laceration),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/HeavyBleeding", NPC => NPC.Calamity().heavyBleeding),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/ManaBurn", NPC => NPC.Calamity().manaBurn > 0),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/MiracleBlight", NPC => NPC.Calamity().miracleBlight),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/Nightwither", NPC => NPC.Calamity().nightwither),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/Plague", NPC => NPC.Calamity().plague),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/RiptideDebuff", NPC => NPC.Calamity().riptide),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/SagePoison", NPC => NPC.Calamity().sagePoison),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/SearingLava", NPC => NPC.HasBuff<SearingLava>()),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/ShellfishClaps", NPC => NPC.Calamity().shellfishStaffDebuff),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/Shred", NPC => NPC.Calamity().somaShredStacks > 0),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/SnapClamDebuff", NPC => NPC.Calamity().snapClamDebuff),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/StaticDischarge", NPC => NPC.Calamity().staticDischarge),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/SulphuricPoisoning", NPC => NPC.Calamity().sulphurPoison),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/TrueVulnerabilityHex", NPC => NPC.Calamity().trueVulnerabilityHex),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/Vaporfied", NPC => NPC.Calamity().vaporfied),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/VermillionFlux", NPC => NPC.Calamity().vermillionFlux),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/Voidfrost", NPC => NPC.Calamity().voidfrost),
-            ("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/VulnerabilityHex", NPC => NPC.Calamity().vulnerabilityHex),
+            ("CalamityMod/Buffs/DamageOverTime/AstralInfectionDebuff", NPC => NPC.Calamity().astralInfection),
+            ("CalamityMod/Buffs/DamageOverTime/AuricRebuke", NPC => NPC.Calamity().auricRebuke),
+            ("CalamityMod/Buffs/DamageOverTime/BanishingFire", NPC => NPC.Calamity().banishingFire),
+            ("CalamityMod/Buffs/DamageOverTime/BrainRot", NPC => NPC.Calamity().brainRot),
+            ("CalamityMod/Buffs/DamageOverTime/BrimstoneFlames", NPC => NPC.Calamity().brimstoneFlames),
+            ("CalamityMod/Buffs/DamageOverTime/DemonicFlames", NPC => NPC.Calamity().demonicFlames),
+            ("CalamityMod/Buffs/DamageOverTime/BurningBlood", NPC => NPC.Calamity().burningBlood),
+            ("CalamityMod/Buffs/DamageOverTime/CrushDepth", NPC => NPC.Calamity().crushDepth),
+            ("CalamityMod/Buffs/DamageOverTime/Dragonfire", NPC => NPC.Calamity().dragonFire),
+            ("CalamityMod/Buffs/DamageOverTime/ElementalMix", NPC => NPC.Calamity().elementalMix),
+            ("CalamityMod/Buffs/DamageOverTime/GodSlayerInferno", NPC => NPC.Calamity().godSlayerInferno),
+            ("CalamityMod/Buffs/DamageOverTime/HadopelagicPressure", NPC => NPC.Calamity().hadopelagicPressure),
+            ("CalamityMod/Buffs/DamageOverTime/HolyFlames", NPC => NPC.Calamity().holyFlames),
+            ("CalamityMod/Buffs/DamageOverTime/Laceration", NPC => NPC.Calamity().laceration),
+            ("CalamityMod/Buffs/DamageOverTime/HeavyBleeding", NPC => NPC.Calamity().heavyBleeding),
+            ("CalamityMod/Buffs/DamageOverTime/ManaBurn", NPC => NPC.Calamity().manaBurn > 0),
+            ("CalamityMod/Buffs/DamageOverTime/MiracleBlight", NPC => NPC.Calamity().miracleBlight),
+            ("CalamityMod/Buffs/DamageOverTime/Nightwither", NPC => NPC.Calamity().nightwither),
+            ("CalamityMod/Buffs/DamageOverTime/Plague", NPC => NPC.Calamity().plague),
+            ("CalamityMod/Buffs/DamageOverTime/RiptideDebuff", NPC => NPC.Calamity().riptide),
+            ("CalamityMod/Buffs/DamageOverTime/SagePoison", NPC => NPC.Calamity().sagePoison),
+            ("CalamityMod/Buffs/DamageOverTime/SearingLava", NPC => NPC.HasBuff<SearingLava>()),
+            ("CalamityMod/Buffs/DamageOverTime/ShellfishClaps", NPC => NPC.Calamity().shellfishStaffDebuff),
+            ("CalamityMod/Buffs/DamageOverTime/Shred", NPC => NPC.Calamity().somaShredStacks > 0),
+            ("CalamityMod/Buffs/DamageOverTime/SnapClamDebuff", NPC => NPC.Calamity().snapClamDebuff),
+            ("CalamityMod/Buffs/DamageOverTime/StaticDischarge", NPC => NPC.Calamity().staticDischarge),
+            ("CalamityMod/Buffs/DamageOverTime/SulphuricPoisoning", NPC => NPC.Calamity().sulphurPoison),
+            ("CalamityMod/Buffs/DamageOverTime/TrueVulnerabilityHex", NPC => NPC.Calamity().trueVulnerabilityHex),
+            ("CalamityMod/Buffs/DamageOverTime/Vaporfied", NPC => NPC.Calamity().vaporfied),
+            ("CalamityMod/Buffs/DamageOverTime/VermillionFlux", NPC => NPC.Calamity().vermillionFlux),
+            ("CalamityMod/Buffs/DamageOverTime/Voidfrost", NPC => NPC.Calamity().voidfrost),
+            ("CalamityMod/Buffs/DamageOverTime/VulnerabilityHex", NPC => NPC.Calamity().vulnerabilityHex),
 
             // All other important Calamity debuffs, in alphabetical order
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/AbsorberAffliction", NPC => NPC.Calamity().absorberAffliction),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/ArmorCrunch", NPC => NPC.Calamity().armorCrunch),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/Crumbling", NPC => NPC.Calamity().crumble),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/Eutrophication", NPC => NPC.Calamity().eutrophication),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/GalvanicCorrosion", NPC => NPC.Calamity().galvanicCorrosion),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/GlacialState", NPC => NPC.Calamity().glacialState),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/Irradiated", NPC => NPC.Calamity().irradiated),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/MarkedforDeath", NPC => NPC.Calamity().markedForDeath),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/PearlAura", NPC => NPC.Calamity().pearlAura),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/ProfanedWeakness", NPC => NPC.Calamity().relicOfResilienceWeakness),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/TemporalSadness", NPC => NPC.Calamity().temporalSadness),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/TimeDistortion", NPC => NPC.Calamity().timeDistortion),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/WhisperingDeath", NPC => NPC.Calamity().whisperingDeath),
-            ("CalamityModCustomPublicPrivateFork/Buffs/StatDebuffs/WitherDebuff", NPC => NPC.Calamity().wither),
+            ("CalamityMod/Buffs/StatDebuffs/AbsorberAffliction", NPC => NPC.Calamity().absorberAffliction),
+            ("CalamityMod/Buffs/StatDebuffs/ArmorCrunch", NPC => NPC.Calamity().armorCrunch),
+            ("CalamityMod/Buffs/StatDebuffs/Crumbling", NPC => NPC.Calamity().crumble),
+            ("CalamityMod/Buffs/StatDebuffs/Eutrophication", NPC => NPC.Calamity().eutrophication),
+            ("CalamityMod/Buffs/StatDebuffs/GalvanicCorrosion", NPC => NPC.Calamity().galvanicCorrosion),
+            ("CalamityMod/Buffs/StatDebuffs/GlacialState", NPC => NPC.Calamity().glacialState),
+            ("CalamityMod/Buffs/StatDebuffs/Irradiated", NPC => NPC.Calamity().irradiated),
+            ("CalamityMod/Buffs/StatDebuffs/MarkedforDeath", NPC => NPC.Calamity().markedForDeath),
+            ("CalamityMod/Buffs/StatDebuffs/PearlAura", NPC => NPC.Calamity().pearlAura),
+            ("CalamityMod/Buffs/StatDebuffs/ProfanedWeakness", NPC => NPC.Calamity().relicOfResilienceWeakness),
+            ("CalamityMod/Buffs/StatDebuffs/TemporalSadness", NPC => NPC.Calamity().temporalSadness),
+            ("CalamityMod/Buffs/StatDebuffs/TimeDistortion", NPC => NPC.Calamity().timeDistortion),
+            ("CalamityMod/Buffs/StatDebuffs/WhisperingDeath", NPC => NPC.Calamity().whisperingDeath),
+            ("CalamityMod/Buffs/StatDebuffs/WitherDebuff", NPC => NPC.Calamity().wither),
         };
 
         public override bool PreDraw(NPC npc, SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
@@ -4967,23 +4967,23 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                     if (npc.shadowFlame)
                         currentDebuffs.Add(TextureAssets.Buff[BuffID.ShadowFlame].Value);
                     if (npc.oiled)
-                        currentDebuffs.Add(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBuffs/Oiled").Value);
+                        currentDebuffs.Add(Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBuffs/Oiled").Value);
                     if (npc.javelined)
                         currentDebuffs.Add(TextureAssets.Buff[BuffID.BoneJavelin].Value);
                     if (npc.daybreak)
-                        currentDebuffs.Add(Request<Texture2D>("CalamityModCustomPublicPrivateFork/Buffs/DamageOverTime/Daybroken").Value);
+                        currentDebuffs.Add(Request<Texture2D>("CalamityMod/Buffs/DamageOverTime/Daybroken").Value);
                     if (npc.celled)
-                        currentDebuffs.Add(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBuffs/Celled").Value);
+                        currentDebuffs.Add(Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBuffs/Celled").Value);
                     if (npc.dryadBane)
-                        currentDebuffs.Add(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBuffs/DryadsBane").Value);
+                        currentDebuffs.Add(Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBuffs/DryadsBane").Value);
                     if (npc.dryadWard)
                         currentDebuffs.Add(TextureAssets.Buff[BuffID.DryadsWard].Value);
                     if (npc.soulDrain && npc.realLife == -1)
                         currentDebuffs.Add(TextureAssets.Buff[BuffID.SoulDrain].Value);
                     if (npc.onFire3) // Hellfire
-                        currentDebuffs.Add(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBuffs/Hellfire").Value);
+                        currentDebuffs.Add(Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBuffs/Hellfire").Value);
                     if (npc.onFrostBurn2) // Frostbite
-                        currentDebuffs.Add(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBuffs/Frostbite").Value);
+                        currentDebuffs.Add(Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBuffs/Frostbite").Value);
                     if (npc.tentacleSpiked)
                         currentDebuffs.Add(TextureAssets.Buff[BuffID.TentacleSpike].Value);
 
@@ -5001,7 +5001,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                     if (npc.stinky)
                         currentDebuffs.Add(TextureAssets.Buff[BuffID.Stinky].Value);
                     if (npc.betsysCurse)
-                        currentDebuffs.Add(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/VanillaBuffs/BetsysCurse").Value);
+                        currentDebuffs.Add(Request<Texture2D>("CalamityMod/ExtraTextures/VanillaBuffs/BetsysCurse").Value);
                     if (npc.dripping)
                         currentDebuffs.Add(TextureAssets.Buff[BuffID.Wet].Value);
                     if (npc.drippingSlime)

@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Prefixes.VanillaPrefixChanges
+namespace CalamityMod.Prefixes.VanillaPrefixChanges
 {
     public sealed class VanillaPrefixChangeSystem : ModSystem
     {

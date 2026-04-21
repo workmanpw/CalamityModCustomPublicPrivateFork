@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella
+namespace CalamityMod.Projectiles.Summon.Umbrella
 {
     public class MagicHat : ModProjectile, ILocalizedModType
     {
@@ -128,7 +128,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella
             float stealthPercent = player.Calamity().rogueStealthMax != 0 ? (player.Calamity().rogueStealth / player.Calamity().rogueStealthMax) : 0f; //0 to 1
             bool hasStealth = player.Calamity().rogueStealth > 0f && stealthPercent > 0.5f && player.townNPCs < 3f && CalamityClientConfig.Instance.StealthInvisibility;
             if (player.ShouldNotDraw || hasStealth)
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/Umbrella/MagicHatInvis").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/Umbrella/MagicHatInvis").Value;
 
             Rectangle frame = texture.Frame(1, Main.projFrames[Type], 0, Projectile.frame);
             Vector2 origin = frame.Size() * 0.5f;

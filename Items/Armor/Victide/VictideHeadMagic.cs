@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Victide
+namespace CalamityMod.Items.Armor.Victide
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("VictideMask")]

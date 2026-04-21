@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Signus
+namespace CalamityMod.NPCs.Signus
 {
     public class SignusScreenShaderData : ScreenShaderData
     {

@@ -5,12 +5,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class ThanatosBeamTelegraph : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public NPC ThingToAttachTo => Main.npc.IndexInRange((int)Projectile.ai[0]) ? Main.npc[(int)Projectile.ai[0]] : null;
         public float ConvergenceRatio => MathHelper.SmoothStep(0f, 1f, Utils.GetLerpValue(25f, 120f, Time, true));
@@ -76,7 +76,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D laserTelegraph = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/LaserWallTelegraphBeam").Value;
+            Texture2D laserTelegraph = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/LaserWallTelegraphBeam").Value;
 
             float verticalScale = Utils.GetLerpValue(0f, 20f, Time, true) * Utils.GetLerpValue(0f, 16f, Projectile.timeLeft, true) * 4f;
 

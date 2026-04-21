@@ -1,6 +1,6 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Weapons.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class PlantationStaffTentacle : ModProjectile, ILocalizedModType
     {
@@ -197,7 +197,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             if (State == AIState.Attached)
             {
                 Vector2 source = MainMinion.Center;
-                Texture2D chain = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/PlantationStaffTentacleChain").Value;
+                Texture2D chain = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/PlantationStaffTentacleChain").Value;
                 Vector2 goal = Projectile.Center;
                 Rectangle? sourceRectangle = null;
                 float textureHeight = chain.Height;

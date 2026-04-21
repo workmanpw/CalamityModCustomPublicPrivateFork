@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     internal sealed class TileBlendTextureLoader : ModSystem
     {

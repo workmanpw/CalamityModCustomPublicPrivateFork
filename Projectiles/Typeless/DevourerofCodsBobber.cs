@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class DevourerofCodsBobber : ModProjectile, ILocalizedModType
     {
@@ -22,7 +22,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
         //i second this notion -Dominic
         public override void PostDraw(Color lightColor)
         {
-            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Typeless/DevourerofCodsGlow").Value;
+            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Typeless/DevourerofCodsGlow").Value;
             float xOffset = (glowmask.Width - Projectile.width) * 0.5f + Projectile.width * 0.5f;
             Vector2 drawPos = Projectile.position - Main.screenPosition;
             drawPos.X += xOffset;

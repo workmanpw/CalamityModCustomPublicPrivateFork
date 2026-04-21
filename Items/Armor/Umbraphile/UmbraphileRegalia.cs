@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Umbraphile
+namespace CalamityMod.Items.Armor.Umbraphile
 {
     [AutoloadEquip(EquipType.Body)]
     public class UmbraphileRegalia : ModItem, ILocalizedModType

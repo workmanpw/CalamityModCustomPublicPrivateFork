@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureBotanic;
+using CalamityMod.Tiles.FurnitureBotanic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureBotanic
+namespace CalamityMod.Items.Placeables.FurnitureBotanic
 {
     public class BotanicDoor : ModItem, ILocalizedModType
     {

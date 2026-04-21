@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
+using CalamityMod.NPCs.SlimeGod;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.UI.VanillaBossBars
+namespace CalamityMod.UI.VanillaBossBars
 {
     public class SlimeGodBossBar : ModBossBar
     {

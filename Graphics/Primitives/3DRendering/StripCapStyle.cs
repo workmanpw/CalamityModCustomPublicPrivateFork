@@ -1,4 +1,4 @@
-namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+namespace CalamityMod.Graphics.Primitives;
 
 /// <summary>
 /// Determines the shape of end caps for strip primitives. This is used to give a more polished look to the start and end of strips, especially when they are thick. The cap is drawn at the end of the strip, centered on the last vertex, and oriented to match the strip's direction at that point. The options are:

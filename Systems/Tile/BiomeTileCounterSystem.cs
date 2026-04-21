@@ -1,17 +1,17 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralDesert;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralSnow;
-using CalamityModCustomPublicPrivateFork.Tiles.Crags;
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
+using CalamityMod.Tiles.Abyss;
+using CalamityMod.Tiles.Astral;
+using CalamityMod.Tiles.AstralDesert;
+using CalamityMod.Tiles.AstralSnow;
+using CalamityMod.Tiles.Crags;
+using CalamityMod.Tiles.DraedonStructures;
+using CalamityMod.Tiles.Ores;
+using CalamityMod.Tiles.SunkenSea;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class BiomeTileCounterSystem : ModSystem
     {

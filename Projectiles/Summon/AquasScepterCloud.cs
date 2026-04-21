@@ -7,13 +7,13 @@ using Terraria.DataStructures;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class AquasScepterCloud : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        Texture2D flashTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AquasScepterCloudFlash").Value;
-        Texture2D glowTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AquasScepterCloudGlowmask").Value;
+        Texture2D flashTex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AquasScepterCloudFlash").Value;
+        Texture2D glowTex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AquasScepterCloudGlowmask").Value;
         public ref float LightningTimer => ref Projectile.ai[0];
         public ref float RainTimer => ref Projectile.ai[1];
         public int DrawFlashTimer = 0;
@@ -78,7 +78,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
                 {
                     if (LightningTimer >= 60f) //Every  60 AI cycles, plays the lightning sound and spawns 2 projectiles: the tesla aura for dealing damage in an aoe, and the cloud flash to simulate the brightness of the main cloud changing.
                     {
-                        SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/LightningAura"), Projectile.Center);
+                        SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/LightningAura"), Projectile.Center);
                         Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center.X, Projectile.Bottom.Y, 0f, 0f, ModContent.ProjectileType<AquasScepterTeslaAura>(), (int)(Projectile.damage * 7.2f), 16, Projectile.owner);
                         LightningTimer = 0f;
                         DrawFlashTimer = 27;
@@ -92,7 +92,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.Default, RasterizerState.CullNone, null, Main.GameViewMatrix.ZoomMatrix);
 
             MiscShaderData msd = GameShaders.Misc["CalamityMod:WavyOpacity"];
-            msd.SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/BlobbyNoise"), 1);
+            msd.SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/BlobbyNoise"), 1);
             msd.UseOpacity(0.7f);
             DrawData dd = new()
             {

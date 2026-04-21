@@ -1,21 +1,21 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CustomRecipes;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.TileEntities;
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonSummoner;
+using CalamityMod.CustomRecipes;
+using CalamityMod.Items.Materials;
+using CalamityMod.TileEntities;
+using CalamityMod.Tiles.DraedonSummoner;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.DraedonMisc
+namespace CalamityMod.Items.DraedonMisc
 {
     public class LongRangedSensorArray : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.DraedonItems";
-        public static readonly SoundStyle InstallSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/LongRangeSensorArrayInstall");
+        public static readonly SoundStyle InstallSound = new("CalamityMod/Sounds/Custom/Codebreaker/LongRangeSensorArrayInstall");
         public override void SetDefaults()
         {
             Item.width = 52;

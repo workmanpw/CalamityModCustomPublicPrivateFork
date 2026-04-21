@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureSilva
+namespace CalamityMod.Items.Placeables.FurnitureSilva
 {
     [LegacyName("EffulgentManipulator")]
     public class SilvaBasin : ModItem, ILocalizedModType

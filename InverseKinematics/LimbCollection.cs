@@ -1,7 +1,7 @@
 using System.Linq;
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.InverseKinematics
+namespace CalamityMod.InverseKinematics
 {
     public class LimbCollection
     {

@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone;
+using CalamityMod.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone;
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityModCustomPublicPrivateFork.Walls;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
+using WallTiles = CalamityMod.Walls;
+namespace CalamityMod.Items.Placeables.Walls
 {
     public class AncientSmoothNavystoneWall : ModItem, ILocalizedModType
     {

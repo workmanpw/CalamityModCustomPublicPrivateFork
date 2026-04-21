@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityMod.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,7 +8,7 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
+namespace CalamityMod.Graphics.Metaballs
 {
     public class BloodMetaball : Metaball
     {
@@ -77,7 +77,7 @@ namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
                 return;
 
             // Load the layer asset wrapper.
-            LayerAsset = ModContent.Request<Texture2D>($"CalamityModCustomPublicPrivateFork/Graphics/Metaballs/BloodLayer", AssetRequestMode.ImmediateLoad);
+            LayerAsset = ModContent.Request<Texture2D>($"CalamityMod/Graphics/Metaballs/BloodLayer", AssetRequestMode.ImmediateLoad);
         }
         public override GeneralDrawLayer DrawLayer => GeneralDrawLayer.BeforeProjectiles;
 
@@ -108,7 +108,7 @@ namespace CalamityModCustomPublicPrivateFork.Graphics.Metaballs
 
         public override void DrawInstances()
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/BasicCircle").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/BasicCircle").Value;
 
             foreach (Particle particle in Particles)
             {

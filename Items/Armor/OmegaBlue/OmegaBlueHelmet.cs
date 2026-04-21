@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.OmegaBlue
+namespace CalamityMod.Items.Armor.OmegaBlue
 {
     [AutoloadEquip(EquipType.Head)]
     public class OmegaBlueHelmet : ModItem, ILocalizedModType
@@ -16,7 +16,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Armor.OmegaBlue
         public new string LocalizationCategory => "Items.Armor.PostMoonLord";
         internal static string TentacleEntitySourceContext => "SetBonus_Calamity_OmegaBlue";
 
-        public static readonly SoundStyle ActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/OmegaBlueAbility");
+        public static readonly SoundStyle ActivationSound = new("CalamityMod/Sounds/Custom/AbilitySounds/OmegaBlueAbility");
 
         public static float DamageBoost = 0.12f;
         public static int CritBoost = 14;
@@ -34,7 +34,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Armor.OmegaBlue
         {
             if (!Main.dedServ)
             {
-                EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/OmegaBlue/OmegaBlueHelmet_HeadMadness", EquipType.Head, name: "OmegaBlueTransformation");
+                EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/OmegaBlue/OmegaBlueHelmet_HeadMadness", EquipType.Head, name: "OmegaBlueTransformation");
             }
         }
 

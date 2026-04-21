@@ -4,7 +4,7 @@ using System;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class SquareAshParticle : Particle
     {
@@ -13,7 +13,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public override bool UseCustomDraw => true;
         public override bool UseAdditiveBlend => false;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Square";
+        public override string Texture => "CalamityMod/Particles/Square";
 
         public SquareAshParticle(Vector2 relativePosition, Vector2 velocity, int lifetime, float scale, Color color)
         {

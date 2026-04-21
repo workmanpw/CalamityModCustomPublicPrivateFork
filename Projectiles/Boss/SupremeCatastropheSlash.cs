@@ -3,14 +3,14 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.World;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Events;
+using CalamityMod.World;
+using CalamityMod.Particles;
 using Terraria.ModLoader;
 using Terraria.Audio;
-using CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas;
+using CalamityMod.NPCs.SupremeCalamitas;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class SupremeCatastropheSlash : ModProjectile, ILocalizedModType
     {
@@ -124,7 +124,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
                         GeneralParticleHandler.SpawnParticle(spark);
                         if (Projectile.ai[2] >= 4)
                         {
-                            SoundStyle charge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ExobladeBeamSlash");
+                            SoundStyle charge = new("CalamityMod/Sounds/Item/ExobladeBeamSlash");
                             SoundEngine.PlaySound(charge with { Volume = 0.65f, Pitch = 0.8f }, Projectile.Center);
                         }
                         for (int i = 0; i < 3; i++)
@@ -156,7 +156,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
                         GeneralParticleHandler.SpawnParticle(spark);
                         if (Projectile.ai[2] >= 4)
                         {
-                            SoundStyle charge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ExobladeBeamSlash");
+                            SoundStyle charge = new("CalamityMod/Sounds/Item/ExobladeBeamSlash");
                             SoundEngine.PlaySound(charge with { Volume = 0.65f, Pitch = 0.8f }, Projectile.Center);
                         }
                         for (int i = 0; i < 3; i++)
@@ -194,7 +194,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
             SpriteEffects direction = Projectile.spriteDirection == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (Projectile.ai[1] == 0f)
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/SupremeCatastropheSlashAlt").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/SupremeCatastropheSlashAlt").Value;
 
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             drawPosition -= Projectile.velocity.SafeNormalize(Vector2.UnitX) * 38f;

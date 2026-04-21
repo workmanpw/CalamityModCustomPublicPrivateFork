@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Pets;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.Pets;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Sounds;
+using CalamityMod.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -19,13 +19,13 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Shortswords
+namespace CalamityMod.Projectiles.Melee.Shortswords
 {
     public class GalileoGladiusThrown : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
         public Player Owner => Main.player[Projectile.owner];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GalileoGladius";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/GalileoGladius";
 
         public Vector2 NPCOffset = Vector2.Zero;
         public NPC stabbedNPC
@@ -87,7 +87,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Shortswords
                 {
                     var p1 = Vector2.Lerp(point1, point2, i / (float)(offsets.Count - 1)) + new Vector2(0, intensity).RotatedBy(point1.DirectionTo(point2).ToRotation()) * MathF.Sin(Projectile.ai[2] * 0.01f * offsets[i].Item2 + offsets[i].Item1);
                     var star = new BloomParticle(p1, Vector2.Zero, Color.SkyBlue * 0.75f, (i == 0 || i == offsets.Count - 1 ? 0.1f : 0.2f) * size, (i == 0 || i == offsets.Count - 1 ? 0.1f : 0.2f) * size, 2, false);
-                    var star2 = new CustomSpark(p1, Vector2.UnitX.RotatedBy(MathHelper.Pi * ((Owner.miscCounter) / 300f)) * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/Sparkle", false, 2, (i == 0 || i == offsets.Count - 1 ? 0.4f : 0.8f) * size, Color.White, Vector2.One);
+                    var star2 = new CustomSpark(p1, Vector2.UnitX.RotatedBy(MathHelper.Pi * ((Owner.miscCounter) / 300f)) * 0.1f, "CalamityMod/Particles/Sparkle", false, 2, (i == 0 || i == offsets.Count - 1 ? 0.4f : 0.8f) * size, Color.White, Vector2.One);
                     GeneralParticleHandler.SpawnParticle(star);
                     GeneralParticleHandler.SpawnParticle(star2);
                 }
@@ -175,7 +175,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Shortswords
                     Owner.SetImmuneTimeForAllTypes(12);
                 }
                 var particlevel = Owner.DirectionFrom(Owner.Calamity().mouseWorld);
-                GeneralParticleHandler.SpawnParticle(new CustomSpark(Owner.Center + particlevel * 96, particlevel, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 2, 0.2f, Color.SkyBlue, new Vector2(0.3f, 3f), shrinkSpeed: 0.2f));
+                GeneralParticleHandler.SpawnParticle(new CustomSpark(Owner.Center + particlevel * 96, particlevel, "CalamityMod/Particles/BloomCircle", false, 2, 0.2f, Color.SkyBlue, new Vector2(0.3f, 3f), shrinkSpeed: 0.2f));
             }
             if (Projectile.ai[1] >= 34 && !Owner.controlUseTile || Projectile.ai[1] >= 64)
             {
@@ -216,7 +216,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Shortswords
                 Color color = Color.SkyBlue;
                 Vector2 stretch = new Vector2(0.5f, 0.5f);
                 float shrink = -0.3f;
-                Particle boostRing = new CustomSpark(position, velocity, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, lifetime, scale, color, stretch, shrinkSpeed: shrink);
+                Particle boostRing = new CustomSpark(position, velocity, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, lifetime, scale, color, stretch, shrinkSpeed: shrink);
                 GeneralParticleHandler.SpawnParticle(boostRing);
 
                 if (stabbedNPC.CanBeMoved(true))

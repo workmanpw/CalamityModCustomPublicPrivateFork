@@ -1,8 +1,8 @@
 using System;
 using System.Reflection;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,7 +10,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless
+namespace CalamityMod.Items.Weapons.Typeless
 {
     public interface IClaretCannonInstance
     {
@@ -100,8 +100,8 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Typeless
 
             float barScale = 1.5f;
 
-            var barBG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
-            var barFG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
+            var barBG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
+            var barFG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
 
             Vector2 barOrigin = barBG.Size() * 0.5f;
             float yOffset = 5f;

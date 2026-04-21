@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.StormWeaver;
+using CalamityMod.NPCs.StormWeaver;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class StormWeaverMusicScene : BaseMusicSceneEffect
     {

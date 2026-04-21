@@ -1,18 +1,18 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Effects;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Effects;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Sounds;
+using CalamityMod.Systems;
+using CalamityMod.Systems.Mechanic;
+using CalamityMod.Tiles.Ores;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -21,7 +21,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
-namespace CalamityModCustomPublicPrivateFork.NPCs.Deconstructors
+namespace CalamityMod.NPCs.Deconstructors
 {
     public class BurrowerHitbox : BaseWormHitboxNPC
     {
@@ -67,23 +67,23 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Deconstructors
     }
     public class Burrower : BaseWormNPC
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1Head";
+        public override string Texture => "CalamityMod/NPCs/Deconstructors/DeconstructorMK1Head";
 
         public override int WormHitboxNpcType => ModContent.NPCType<BurrowerHitbox>();
         public override List<string> SegmentTextures => new()
         {
-            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1Body",
-            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1BodyAlt1",
-            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1BodyAlt2",
-            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1Tail"
+            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1Body",
+            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1BodyAlt1",
+            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1BodyAlt2",
+            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1Tail"
         };
 
         public override List<string?> GlowTextures => new()
         {
             null,
-            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1BodyGlow",
-            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1BodyAlt1Glow",
-            "CalamityModCustomPublicPrivateFork/NPCs/Deconstructors/DeconstructorMK1BodyAlt2Glow"
+            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1BodyGlow",
+            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1BodyAlt1Glow",
+            "CalamityMod/NPCs/Deconstructors/DeconstructorMK1BodyAlt2Glow"
         };
         public override int SegmentCount => 10;
 
@@ -146,7 +146,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Deconstructors
             bestiaryEntry.Info.AddRange(
             [
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Caverns,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Burrower")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Burrower")
             ]);
         }
 
@@ -404,7 +404,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Deconstructors
                                 NPC.AddBuff(ModContent.BuffType<AuricRebuke>(), 600);
                                 ActiveAttackState = AttackState.Fleeing;
                                 AuricOre.Animate = true;
-                                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/TeslaShoot1"), NPC.Center);
+                                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/ExoMechs/TeslaShoot1"), NPC.Center);
                                 return;
                             }
                             SegmentRigidity = 0f;

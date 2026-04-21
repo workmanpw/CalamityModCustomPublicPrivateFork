@@ -1,17 +1,17 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using ReLogic.Utilities;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class ProtolithBangleProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public int time = 0;
         public int damageTime = 24;
         public int Soundtime1 = 2;
@@ -62,22 +62,22 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
 
                 if (visual)
                 {
-                    Particle spark = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 15, 1.2f, Color.Gold, Projectile.scale * new Vector2(1f, 1.3f), true, true, shrinkSpeed: 0.9f);
+                    Particle spark = new CustomSpark(Projectile.Center, Vector2.Zero, "CalamityMod/Particles/BloomCircle", false, 15, 1.2f, Color.Gold, Projectile.scale * new Vector2(1f, 1.3f), true, true, shrinkSpeed: 0.9f);
                     GeneralParticleHandler.SpawnParticle(spark);
 
-                    Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Projectile.scale * new Vector2(1.4f, 0.6f), 0, 0.3f, 1.35f, 15);
+                    Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomRing", Projectile.scale * new Vector2(1.4f, 0.6f), 0, 0.3f, 1.35f, 15);
                     GeneralParticleHandler.SpawnParticle(pulse);
                 }
                 
                 for (int i = 0; i < 28; i++)
                 {
-                    Particle marble = new CustomSpark(Projectile.Center, (Vector2.One * Main.rand.NextFloat(8, 13)).RotatedByRandom(MathHelper.TwoPi), "CalamityModCustomPublicPrivateFork/Particles/Square", true, Main.rand.Next(40, 70 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 15, Color.Lerp(Color.White, Color.Khaki, Main.rand.NextFloat()) * visMult, new Vector2(1f, Main.rand.NextFloat(1, 2)), false, false, extraRotation: Main.rand.NextFloat(-4, 4));
+                    Particle marble = new CustomSpark(Projectile.Center, (Vector2.One * Main.rand.NextFloat(8, 13)).RotatedByRandom(MathHelper.TwoPi), "CalamityMod/Particles/Square", true, Main.rand.Next(40, 70 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 15, Color.Lerp(Color.White, Color.Khaki, Main.rand.NextFloat()) * visMult, new Vector2(1f, Main.rand.NextFloat(1, 2)), false, false, extraRotation: Main.rand.NextFloat(-4, 4));
                     GeneralParticleHandler.SpawnParticle(marble);
                 }
             }
             if (time == 0 && visual)
             {
-                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ProtolithBangleSound");
+                SoundStyle sound = new("CalamityMod/Sounds/Item/ProtolithBangleSound");
                 SoundSlot = SoundEngine.PlaySound(sound with { Volume = 1f, MaxInstances = -1 }, Projectile.Center);
             }
             if (SoundEngine.TryGetActiveSound(SoundSlot, out var Sound) && Sound.IsPlaying)
@@ -89,13 +89,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
             if (!visual)
                 return;
 
-            Particle pulse = new CustomPulse(position, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Projectile.scale * Vector2.One, 0, 0.3f, 0.65f, 25);
+            Particle pulse = new CustomPulse(position, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomRing", Projectile.scale * Vector2.One, 0, 0.3f, 0.65f, 25);
             GeneralParticleHandler.SpawnParticle(pulse);
 
             for (int i = 0; i < 18; i++)
             {
                 Vector2 outerVel = Vector2.One.RotatedByRandom(MathHelper.TwoPi) * Main.rand.NextFloat(5, 7);
-                Particle marble = new CustomSpark(position + outerVel * 5, -outerVel * 0.6f, "CalamityModCustomPublicPrivateFork/Particles/Square", false, Main.rand.Next(10, 15 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 10, Color.Lerp(Color.White, Color.Khaki, Main.rand.NextFloat()), new Vector2(1f, Main.rand.NextFloat(1, 2)), false, false, extraRotation: Main.rand.NextFloat(-4, 4));
+                Particle marble = new CustomSpark(position + outerVel * 5, -outerVel * 0.6f, "CalamityMod/Particles/Square", false, Main.rand.Next(10, 15 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 10, Color.Lerp(Color.White, Color.Khaki, Main.rand.NextFloat()), new Vector2(1f, Main.rand.NextFloat(1, 2)), false, false, extraRotation: Main.rand.NextFloat(-4, 4));
                 GeneralParticleHandler.SpawnParticle(marble);
             }
         }

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.SunkenSea;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Mollusk
+namespace CalamityMod.Items.Armor.Mollusk
 {
     [AutoloadEquip(EquipType.Body)]
     public class MolluskShellplate : ModItem, ILocalizedModType

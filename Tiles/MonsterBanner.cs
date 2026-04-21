@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Abyss;
-using CalamityModCustomPublicPrivateFork.NPCs.AcidRain;
-using CalamityModCustomPublicPrivateFork.NPCs.Astral;
-using CalamityModCustomPublicPrivateFork.NPCs.Crags;
-using CalamityModCustomPublicPrivateFork.NPCs.Deconstructors;
-using CalamityModCustomPublicPrivateFork.NPCs.DraedonLabThings;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies;
-using CalamityModCustomPublicPrivateFork.NPCs.SulphurousSea;
-using CalamityModCustomPublicPrivateFork.NPCs.SunkenSea;
+using CalamityMod.NPCs.Abyss;
+using CalamityMod.NPCs.AcidRain;
+using CalamityMod.NPCs.Astral;
+using CalamityMod.NPCs.Crags;
+using CalamityMod.NPCs.Deconstructors;
+using CalamityMod.NPCs.DraedonLabThings;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.NPCs.PlagueEnemies;
+using CalamityMod.NPCs.SulphurousSea;
+using CalamityMod.NPCs.SunkenSea;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -19,7 +19,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles
+namespace CalamityMod.Tiles
 {
     public class MonsterBanner : ModTile
     {

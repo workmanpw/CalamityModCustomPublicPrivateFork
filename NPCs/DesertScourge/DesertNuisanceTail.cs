@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.DesertScourge
+namespace CalamityMod.NPCs.DesertScourge
 {
     [LongDistanceNetSync(SyncWith = typeof(DesertNuisanceHead))]
     public class DesertNuisanceTail : ModNPC

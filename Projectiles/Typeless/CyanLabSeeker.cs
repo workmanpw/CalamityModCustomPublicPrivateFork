@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class CyanLabSeeker : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
         public ref float Time => ref Projectile.ai[0];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/LabFinders/CyanSeekingMechanism";
+        public override string Texture => "CalamityMod/Items/LabFinders/CyanSeekingMechanism";
 
         public override void SetStaticDefaults()
         {

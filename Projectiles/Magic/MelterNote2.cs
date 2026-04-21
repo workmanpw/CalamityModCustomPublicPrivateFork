@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class MelterNote2 : ModProjectile, ILocalizedModType
     {

@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class DoGDeathBoom : BaseMassiveExplosionProjectile, ILocalizedModType
     {
@@ -16,7 +16,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
         {
             return Color.Lerp(Color.Cyan, Color.Fuchsia, MathHelper.Clamp(pulseCompletionRatio * 1.75f, 0f, 1f));
         }
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetStaticDefaults()
         {

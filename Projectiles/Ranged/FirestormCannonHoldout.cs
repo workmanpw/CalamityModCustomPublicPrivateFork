@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -13,7 +13,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class FirestormCannonHoldout : BaseGunHoldoutProjectile
     {
@@ -23,8 +23,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         public override float OffsetYDownwards => 5f;
         public override Vector2 GunTipPosition => Projectile.Center + Vector2.UnitX.RotatedBy(Projectile.rotation) * Projectile.width * 0.35f;
 
-        public static readonly SoundStyle WarningSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/FireImplosion") with { Volume = 0.75f };
-        public static readonly SoundStyle OverheatSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HeliumFlashSteamRelease");
+        public static readonly SoundStyle WarningSound = new SoundStyle("CalamityMod/Sounds/Item/FireImplosion") with { Volume = 0.75f };
+        public static readonly SoundStyle OverheatSound = new("CalamityMod/Sounds/Item/HeliumFlashSteamRelease");
         public SlotId WarningSlot;
         public ref float Timer => ref Projectile.ai[0];
         private int BuiltHeat => (Owner.HeldItem.ModItem as FirestormCannon).BuiltUpHeat;

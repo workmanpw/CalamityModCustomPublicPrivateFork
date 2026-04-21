@@ -1,14 +1,14 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class LucreciaDNATrailCreator : ModProjectile, ILocalizedModType
     {
@@ -18,7 +18,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         // The timer is initialized with a delay. It will reset to 6 after the first shot.
         private int middleStreakTimer = 40;
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {
@@ -70,9 +70,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 middleStreakTimer = 6;
 
                 // Spawn the main trail
-                Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedBy(MathHelper.ToRadians(-170f)), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 18, 0.24f, Color.MediumPurple * 1.3f, new Vector2(1f, 2.5f), true, true, shrinkSpeed: 0.25f, glowOpacity: 0.4f);
+                Particle spark = new CustomSpark(Projectile.Center, Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedBy(MathHelper.ToRadians(-170f)), "CalamityMod/Particles/BloomCircle", false, 18, 0.24f, Color.MediumPurple * 1.3f, new Vector2(1f, 2.5f), true, true, shrinkSpeed: 0.25f, glowOpacity: 0.4f);
                 GeneralParticleHandler.SpawnParticle(spark);
-                Particle spark2 = new CustomSpark(Projectile.Center + perpendicular, Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedBy(MathHelper.ToRadians(170f)), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 18, 0.24f, Color.CornflowerBlue * 1.3f, new Vector2(1f, 2.5f), true, true, shrinkSpeed: 0.25f, glowOpacity: 0.4f);
+                Particle spark2 = new CustomSpark(Projectile.Center + perpendicular, Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedBy(MathHelper.ToRadians(170f)), "CalamityMod/Particles/BloomCircle", false, 18, 0.24f, Color.CornflowerBlue * 1.3f, new Vector2(1f, 2.5f), true, true, shrinkSpeed: 0.25f, glowOpacity: 0.4f);
                 GeneralParticleHandler.SpawnParticle(spark2);
             }
 
@@ -123,7 +123,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override bool PreDraw(ref Color lightColor)
         {
             MiscShaderData trailShader = GameShaders.Misc["CalamityMod:TrailStreak"];
-            trailShader.SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/SylvestaffStreak"));
+            trailShader.SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/SylvestaffStreak"));
 
             // Use the separate color functions for each trail
             PrimitiveRenderer.RenderTrail(oldPositionsLeft, new PrimitiveSettings(WidthFunction, LeftColorFunction, (_,_) => Projectile.Size * 1f, pixelate: false, shader: trailShader));

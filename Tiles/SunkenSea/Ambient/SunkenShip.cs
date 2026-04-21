@@ -6,7 +6,7 @@ using Terraria.Enums;
 using Terraria.DataStructures;
 using Terraria.Localization;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient
+namespace CalamityMod.Tiles.SunkenSea.Ambient
 {
     public class SunkenShip : ModTile
     {

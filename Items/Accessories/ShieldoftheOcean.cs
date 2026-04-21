@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Armor.Victide;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Armor.Victide;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class ShieldoftheOcean : ModItem, ILocalizedModType
     {

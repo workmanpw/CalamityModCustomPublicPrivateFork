@@ -1,20 +1,20 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class HeavensMonolith : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_HeavensMonolith";
+        public override string Texture => "CalamityMod/Projectiles/Melee/MendedBiomeBlade_HeavensMonolith";
         public Player Owner => Main.player[Projectile.owner];
         public NPC Target => Main.npc[(int)Projectile.ai[2]];
         public float Timer => (100f - Projectile.timeLeft) / 100f;
@@ -110,7 +110,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D tex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_HeavensMonolith").Value;
+            Texture2D tex = Request<Texture2D>("CalamityMod/Projectiles/Melee/MendedBiomeBlade_HeavensMonolith").Value;
 
             float drawAngle = Projectile.rotation;
             Rectangle frame = new Rectangle(0 + (int)Variant * 94, 0, 94, 420);
@@ -127,7 +127,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         }
         public override void PostDraw(Color lightColor)
         {
-            Texture2D tex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_HeavensMonolith_Glow").Value;
+            Texture2D tex = Request<Texture2D>("CalamityMod/Projectiles/Melee/MendedBiomeBlade_HeavensMonolith_Glow").Value;
 
             float drawAngle = Projectile.rotation;
             Rectangle frame = new Rectangle(0 + (int)Variant * 94, 0, 94, 420);

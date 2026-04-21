@@ -3,13 +3,13 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class Jaws : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Jaws";
+        public override string Texture => "CalamityMod/Particles/Jaws";
         public override bool UseAdditiveBlend => true;
         public override bool SetLifetime => true;
         public override bool UseCustomDraw => true;

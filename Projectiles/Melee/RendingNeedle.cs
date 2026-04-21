@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class RendingNeedle : ModProjectile, ILocalizedModType
     {
@@ -94,9 +94,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             if (Projectile.timeLeft > 35)
                 return false;
 
-            Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/RendingNeedle").Value;
+            Texture2D texture = Request<Texture2D>("CalamityMod/Projectiles/Melee/RendingNeedle").Value;
 
-            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
+            GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
             PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(WidthFunction, ColorFunction, OffsetFunction, shader: GameShaders.Misc["CalamityMod:TrailStreak"]), 30);
 
             Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, null, Color.Lerp(lightColor, Color.White, 0.5f), Projectile.rotation, texture.Size() / 2f, Projectile.scale, SpriteEffects.None, 0);
@@ -104,8 +104,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             Main.spriteBatch.End();
             Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
 
-            Texture2D starTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle").Value;
-            Texture2D bloomTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D starTexture = Request<Texture2D>("CalamityMod/Particles/Sparkle").Value;
+            Texture2D bloomTexture = Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
             //Ajust the bloom's texture to be the same size as the star's
             float properBloomSize = (float)starTexture.Height / (float)bloomTexture.Height;
 

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.Ores;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Crags
+namespace CalamityMod.Tiles.Crags
 {
     public class BrimstoneSlag : ModTile
     {

@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Tiles.SunkenSea;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Ambient.SunkenSea
+namespace CalamityMod.Tiles.Ambient.SunkenSea
 {
     public class MediumSeaPrismCrystalEcho : MediumSeaPrismCrystal
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/MediumSeaPrismCrystal";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/MediumSeaPrismCrystal";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

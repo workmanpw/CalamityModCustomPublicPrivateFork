@@ -4,11 +4,11 @@ using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Ores
+namespace CalamityMod.Tiles.Ores
 {
     public class AuricOre : GlowMaskTile
     {
-        public static readonly SoundStyle MineSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AuricMine", 3);
+        public static readonly SoundStyle MineSound = new("CalamityMod/Sounds/Custom/AuricMine", 3);
         public static bool Animate;
 
         public override void SetupStatic()

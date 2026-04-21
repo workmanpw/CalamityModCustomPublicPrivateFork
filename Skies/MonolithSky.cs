@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Skies
+namespace CalamityMod.Skies
 {
     public class MonolithSky : CustomSky
     {
@@ -102,13 +102,13 @@ namespace CalamityModCustomPublicPrivateFork.Skies
 
             if (maxDepth >= float.MaxValue && minDepth < float.MaxValue && Main.LocalPlayer.Calamity().monolithAccursedShader > 21)
             {
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/MainMenu/ClassicMenuBackground").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/MainMenu/ClassicMenuBackground").Value;
                 int offset = Main.BackgroundEnabled ? 200 : 0;
                 spriteBatch.Draw(texture, new Rectangle(0, Math.Max(0, (int)((Main.worldSurface * 16 - Main.screenPosition.Y - texture.Height * 2) * 0.1f)) - offset, Main.screenWidth, Main.screenHeight), Color.White * Math.Min(1f, (Main.screenPosition.Y - 800f) / 1000f * opacity));
             }
 
             // Draw cinders.
-            Texture2D cinderTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Skies/CalamitasCinder").Value;
+            Texture2D cinderTexture = ModContent.Request<Texture2D>("CalamityMod/Skies/CalamitasCinder").Value;
             Color offsetDrawColor = Color.Red * 0.56f;
             offsetDrawColor.A = 0;
             Vector2 origin = cinderTexture.Size() * 0.5f;

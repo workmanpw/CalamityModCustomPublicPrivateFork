@@ -1,24 +1,24 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
-using CalamityModCustomPublicPrivateFork.UI;
-using CalamityModCustomPublicPrivateFork.UI.CalamitasEnchants;
-using CalamityModCustomPublicPrivateFork.UI.DraedonSummoning;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.CalPlayer;
+using CalamityMod.Events;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.TownNPCs;
+using CalamityMod.Systems;
+using CalamityMod.Systems.Collections;
+using CalamityMod.Systems.Mechanic;
+using CalamityMod.UI;
+using CalamityMod.UI.CalamitasEnchants;
+using CalamityMod.UI.DraedonSummoning;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.UI.Elements;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public class ModCalls
     {

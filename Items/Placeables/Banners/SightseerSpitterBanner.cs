@@ -1,6 +1,6 @@
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Banners
+namespace CalamityMod.Items.Placeables.Banners
 {
     [LegacyName("BigSightseerBanner")]
     public class SightseerSpitterBanner : BaseBanner

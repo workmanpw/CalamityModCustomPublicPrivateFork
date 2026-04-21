@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood;
-using CalamityModCustomPublicPrivateFork.NPCs.Leviathan;
+using CalamityMod.Events;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.Items.Placeables.FurnitureDriftwood;
+using CalamityMod.NPCs.Leviathan;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,12 +10,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     public class NaiadsWarhorn : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.SummonItems";
-        public static readonly SoundStyle HornSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LeviathanHornSound") { Volume = 0.55f };
+        public static readonly SoundStyle HornSound = new("CalamityMod/Sounds/Item/LeviathanHornSound") { Volume = 0.55f };
         public override void SetStaticDefaults()
         {
             ItemID.Sets.SortingPriorityBossSpawns[Type] = 12; // Truffle Worm

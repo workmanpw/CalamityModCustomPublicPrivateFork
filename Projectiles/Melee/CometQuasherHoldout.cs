@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     [PierceResistException]
     public class CometQuasherHoldout : BaseCustomUseStyleProjectile, ILocalizedModType
@@ -19,7 +19,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override int AssignedItemID => ModContent.ItemType<CometQuasher>();
 
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<CometQuasher>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/CometQuasher";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/CometQuasher";
         public override float HitboxOutset => 90;
 
         public override Vector2 HitboxSize => new Vector2(110, 110);
@@ -134,9 +134,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
                     if (time == (int)(timeMax * 0.3f))
                     {
-                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TerratomereSwing");
+                        SoundStyle fire = new("CalamityMod/Sounds/Item/TerratomereSwing");
                         SoundEngine.PlaySound(fire with { Volume = 0.4f, Pitch = Main.rand.NextFloat(0.75f, 0.85f) }, Projectile.Center);
-                        SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SwingMid");
+                        SoundStyle fire2 = new("CalamityMod/Sounds/Item/SwingMid");
                         SoundEngine.PlaySound(fire2 with { Volume = 0.6f, Pitch = Main.rand.NextFloat(0.25f, 0.35f) }, Projectile.Center);
                     }
                     if ( time > (int)(timeMax * 0.25f) && time < (int)(timeMax * 0.85f))
@@ -163,7 +163,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                         Vector2 particlePos2 = Owner.Center + (new Vector2(Main.rand.Next(80, 110), 0).RotatedBy(FinalRotation + MathHelper.ToRadians(-45)));
                         if (i % 2 == 0)
                         {
-                            Particle orb = new CustomPulse(particlePos, particleVel * Main.rand.NextFloat(0.8f, 1.2f), Main.rand.NextBool(4) ? Color.AliceBlue : Color.DodgerBlue, "CalamityModCustomPublicPrivateFork/Particles/HealingPlus", new Vector2(1f, 1f), Main.rand.NextFloat(-2, 2), Main.rand.NextFloat(0.8f, 1.2f), 0.2f, 23);
+                            Particle orb = new CustomPulse(particlePos, particleVel * Main.rand.NextFloat(0.8f, 1.2f), Main.rand.NextBool(4) ? Color.AliceBlue : Color.DodgerBlue, "CalamityMod/Particles/HealingPlus", new Vector2(1f, 1f), Main.rand.NextFloat(-2, 2), Main.rand.NextFloat(0.8f, 1.2f), 0.2f, 23);
                             GeneralParticleHandler.SpawnParticle(orb);
                         }
                         else
@@ -181,7 +181,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 {
                     Vector2 particleVel = new Vector2(0, 3 * -Projectile.ai[1] * Owner.direction).RotatedBy(FinalRotation + MathHelper.ToRadians(-45));
                     Vector2 particlePos = Owner.Center + (new Vector2(Main.rand.Next(5, 110), 0).RotatedBy(FinalRotation + MathHelper.ToRadians(-45)));
-                    Particle orb = new CustomPulse(particlePos, particleVel * Main.rand.NextFloat(0.8f, 1.2f), Main.rand.NextBool(4) ? Color.AliceBlue : Color.DodgerBlue, "CalamityModCustomPublicPrivateFork/Particles/HealingPlus", new Vector2(1f, 1f), Main.rand.NextFloat(-2, 2), Main.rand.NextFloat(0.8f, 1.2f), 0.2f, 23);
+                    Particle orb = new CustomPulse(particlePos, particleVel * Main.rand.NextFloat(0.8f, 1.2f), Main.rand.NextBool(4) ? Color.AliceBlue : Color.DodgerBlue, "CalamityMod/Particles/HealingPlus", new Vector2(1f, 1f), Main.rand.NextFloat(-2, 2), Main.rand.NextFloat(0.8f, 1.2f), 0.2f, 23);
                     GeneralParticleHandler.SpawnParticle(orb);
 
                     Dust dust2 = Dust.NewDustPerfect(Owner.Center + (new Vector2(75, 0).RotatedBy(FinalRotation + MathHelper.ToRadians(-45)).RotatedByRandom(0.3f)), DustID.FireworksRGB, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(0.5f, 1));
@@ -199,9 +199,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             if ((damageDone <= 2 || (target.life <= 0 && target.realLife == -1)) && Projectile.numHits > 0)
                 Projectile.numHits -= 1;
 
-            SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/CursedDaggerThrow");
+            SoundStyle fire = new("CalamityMod/Sounds/Item/CursedDaggerThrow");
             SoundEngine.PlaySound(fire with { Volume = 0.65f, Pitch = 0.8f }, Projectile.Center);
-            SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockSound");
+            SoundStyle fire2 = new("CalamityMod/Sounds/Item/MagicRockSound");
             SoundEngine.PlaySound(fire2 with { Volume = 0.55f, Pitch = 0.7f }, Projectile.Center);
 
             Vector2 launchVel = Utils.DirectionTo(Owner.Center, Owner.Calamity().mouseWorld);
@@ -209,11 +209,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
             for (int i = 0; i < MathHelper.Clamp(6 - Projectile.numHits * 2, 2, 6); i++)
             {
-                Particle spark2 = new CustomSpark(target.Center, ((Owner.Center - Owner.Calamity().mouseWorld).SafeNormalize(Vector2.UnitY) * -24).RotatedByRandom(0.5) * Main.rand.NextFloat(0.2f, 1f), "CalamityModCustomPublicPrivateFork/Particles/Sparkle", false, 35, Main.rand.NextFloat(0.3f, 1f), Color.DodgerBlue, new Vector2(0.6f, 1.5f));
+                Particle spark2 = new CustomSpark(target.Center, ((Owner.Center - Owner.Calamity().mouseWorld).SafeNormalize(Vector2.UnitY) * -24).RotatedByRandom(0.5) * Main.rand.NextFloat(0.2f, 1f), "CalamityMod/Particles/Sparkle", false, 35, Main.rand.NextFloat(0.3f, 1f), Color.DodgerBlue, new Vector2(0.6f, 1.5f));
                 GeneralParticleHandler.SpawnParticle(spark2);
                 if (Main.rand.NextBool(3))
                 {
-                    Particle spark3 = new CustomSpark(target.Center, ((Owner.Center - Owner.Calamity().mouseWorld).SafeNormalize(Vector2.UnitY) * -24).RotatedByRandom(0.5) * Main.rand.NextFloat(0.2f, 1f), "CalamityModCustomPublicPrivateFork/Particles/Sparkle", false, 35, Main.rand.NextFloat(0.3f, 1f), Color.AliceBlue, new Vector2(0.6f, 1.5f));
+                    Particle spark3 = new CustomSpark(target.Center, ((Owner.Center - Owner.Calamity().mouseWorld).SafeNormalize(Vector2.UnitY) * -24).RotatedByRandom(0.5) * Main.rand.NextFloat(0.2f, 1f), "CalamityMod/Particles/Sparkle", false, 35, Main.rand.NextFloat(0.3f, 1f), Color.AliceBlue, new Vector2(0.6f, 1.5f));
                     GeneralParticleHandler.SpawnParticle(spark3);
                 }
             }
@@ -238,13 +238,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             if ((useAnim > 0 || DrawUnconditionally) && Owner.ItemAnimationActive)
             {
                 Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
-                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/CometQuasherGlow");
+                Asset<Texture2D> glowTex = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/CometQuasherGlow");
 
                 float r = FlipAsSword ? MathHelper.ToRadians(90) : 0f;
 
                 for (int i = 0; i < 25; i++)
                 {
-                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/CometQuasherGhost").Value;
+                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/CometQuasherGhost").Value;
                     Color auraColor = Color.DodgerBlue with { A = 0 } * 0.15f * fadeIn;
                     Vector2 drawOffset = (MathHelper.TwoPi * i / 25f).ToRotationVector2() * 5 * fadeIn;
                     Main.EntitySpriteDraw(centerTexture, Projectile.Center - Main.screenPosition + drawOffset + new Vector2(0, Owner.gfxOffY), centerTexture.Frame(1, FrameCount, 0, Frame), auraColor, Projectile.rotation + RotationOffset + r, FlipAsSword ? new Vector2(tex.Width() - SpriteOrigin.X, SpriteOrigin.Y) : SpriteOrigin, Projectile.scale, spriteEffects != SpriteEffects.None ? spriteEffects : (FlipAsSword ? SpriteEffects.FlipHorizontally : SpriteEffects.None));

@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items
+namespace CalamityMod.Items
 {
     // Since all legendary items do not use the same localization category, ILocalizedModType must be placed on each individual item file.
     public abstract class LegendaryItem : ModItem, IHoldShiftTooltipItem

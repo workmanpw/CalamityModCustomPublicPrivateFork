@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class AtlasMunitionsDropPod : ModProjectile, ILocalizedModType
     {
@@ -147,7 +147,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/AtlasMunitionsDropPodGlow").Value;
+            Texture2D glowmask = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/AtlasMunitionsDropPodGlow").Value;
             Rectangle frame = texture.Frame(1, Main.projFrames[Type], 0, Projectile.frame);
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Vector2 scale = Projectile.scale * new Vector2(SquishFactor, 1f / SquishFactor);

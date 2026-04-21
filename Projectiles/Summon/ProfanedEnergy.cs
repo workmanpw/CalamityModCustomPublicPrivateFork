@@ -1,20 +1,20 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class ProfanedEnergy : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/NormalNPCs/ImpiousImmolator";
+        public override string Texture => "CalamityMod/NPCs/NormalNPCs/ImpiousImmolator";
 
         private float count = 0f;
         public bool flapping = false;
@@ -120,11 +120,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
                 }
                 else
                 {
-                    SoundStyle happy = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SanctifiedSparkHappy");
+                    SoundStyle happy = new("CalamityMod/Sounds/Item/SanctifiedSparkHappy");
                     SoundEngine.PlaySound(happy with { Volume = 0.5f, PitchVariance = 0.3f }, Projectile.Center);
                     for (int i = 0; i < 3; i++)
                     {
-                        Particle spark = new CustomSpark(Projectile.Center, (-Vector2.UnitY * Main.rand.NextFloat(3f, 5f)).RotatedByRandom(0.6f), "CalamityModCustomPublicPrivateFork/Particles/HeartParticle", false, 75, Main.rand.NextFloat(1.3f, 1.8f), Color.Lerp(Color.Goldenrod, Color.OrangeRed, i * 0.5f), Vector2.One, true, true, 0, false, false);
+                        Particle spark = new CustomSpark(Projectile.Center, (-Vector2.UnitY * Main.rand.NextFloat(3f, 5f)).RotatedByRandom(0.6f), "CalamityMod/Particles/HeartParticle", false, 75, Main.rand.NextFloat(1.3f, 1.8f), Color.Lerp(Color.Goldenrod, Color.OrangeRed, i * 0.5f), Vector2.One, true, true, 0, false, false);
                         GeneralParticleHandler.SpawnParticle(spark);
                     }
                     reactTimer = Main.rand.Next(0, 120 + 1);
@@ -160,7 +160,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
                         SoundEngine.PlaySound(SoundID.Item73, Projectile.Center);
                         Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, (shootVel * Main.rand.NextFloat(0.8f, 1.2f)).RotatedBy(0.75f * (attacks % 2 == 0 ? -1 : 1)).RotatedByRandom(0.4f), ModContent.ProjectileType<FlameBlast>(), Projectile.damage, 0, Projectile.owner);
 
-                        Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Goldenrod, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, Main.rand.NextFloat(0.75f, 1f), 15);
+                        Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Goldenrod, "CalamityMod/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, Main.rand.NextFloat(0.75f, 1f), 15);
                         GeneralParticleHandler.SpawnParticle(orb2);
 
                         attackTimer = 8;
@@ -188,10 +188,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
                     Vector2 vel = ((Projectile.Center - player.Center) - player.velocity * 10).SafeNormalize(Vector2.UnitX) * -10;
                     Projectile healStar = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), Projectile.Center, vel, ModContent.ProjectileType<HolyLight>(), 0, Projectile.knockBack, Projectile.owner, 0, 5, 5);
                     healStar.extraUpdates = 2;
-                    SoundStyle fireHeal = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ProfanedGuardians/GuardianDash");
+                    SoundStyle fireHeal = new("CalamityMod/Sounds/Custom/ProfanedGuardians/GuardianDash");
                     SoundEngine.PlaySound(fireHeal with { Volume = 0.7f, Pitch = 0.3f }, Projectile.Center);
 
-                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, new Color(54, 209, 54), "CalamityModCustomPublicPrivateFork/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 1.3f, 24);
+                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, new Color(54, 209, 54), "CalamityMod/Particles/BloomRing", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 1.3f, 24);
                     GeneralParticleHandler.SpawnParticle(orb2);
                 }
                 attackCooldown--;

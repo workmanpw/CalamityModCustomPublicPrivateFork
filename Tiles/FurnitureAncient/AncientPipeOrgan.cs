@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAncient
+namespace CalamityMod.Tiles.FurnitureAncient
 {
     [LegacyName("AncientPiano")]
     public class AncientPipeOrgan : ModTile

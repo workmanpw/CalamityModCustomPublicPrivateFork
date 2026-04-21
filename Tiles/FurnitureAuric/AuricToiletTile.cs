@@ -7,7 +7,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric
+namespace CalamityMod.Tiles.FurnitureAuric
 {
     public class AuricToiletTile : ModTile
     {

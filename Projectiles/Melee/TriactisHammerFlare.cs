@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,12 +8,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class TriactisHammerFlare : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/ExtraTextures/TinyGreyscaleCircle";
+        public override string Texture => "CalamityMod/ExtraTextures/TinyGreyscaleCircle";
 
         public ref float FlareType => ref Projectile.ai[0];
         public ref float Target => ref Projectile.ai[1];
@@ -24,8 +24,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public static Asset<Texture2D> Bloom;
         public override void Load()
         {
-            Sparkle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle");
-            Bloom = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+            Sparkle = ModContent.Request<Texture2D>("CalamityMod/Particles/Sparkle");
+            Bloom = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
         }
 
         public override void SetStaticDefaults()

@@ -5,12 +5,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class ConsecratedWaterProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/ConsecratedWater";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/ConsecratedWater";
 
         public override void SetDefaults()
         {

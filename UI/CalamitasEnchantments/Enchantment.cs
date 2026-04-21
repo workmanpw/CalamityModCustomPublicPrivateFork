@@ -2,7 +2,7 @@ using System;
 using Terraria;
 using Terraria.Localization;
 
-namespace CalamityModCustomPublicPrivateFork.UI.CalamitasEnchants
+namespace CalamityMod.UI.CalamitasEnchants
 {
     public struct Enchantment
     {

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityMod.Cooldowns;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Melee;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     [LegacyName("ElementalShortsword", "ElementalShiv")]
     public class Lightspeed : ModItem, ILocalizedModType

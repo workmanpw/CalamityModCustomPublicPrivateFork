@@ -8,7 +8,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.BaseTiles
+namespace CalamityMod.Tiles.BaseTiles
 {
     public abstract class BaseMonolith : ModTile
     {

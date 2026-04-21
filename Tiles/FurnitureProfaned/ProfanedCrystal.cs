@@ -1,11 +1,11 @@
 
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureProfaned
+namespace CalamityMod.Tiles.FurnitureProfaned
 {
     public class ProfanedCrystal : ModTile
     {

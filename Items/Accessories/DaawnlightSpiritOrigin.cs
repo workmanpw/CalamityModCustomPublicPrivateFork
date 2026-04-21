@@ -1,14 +1,14 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.Pets;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Buffs.Pets;
+using CalamityMod.CalPlayer;
+using CalamityMod.Cooldowns;
+using CalamityMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class DaawnlightSpiritOrigin : ModItem, ILocalizedModType, IHoldShiftTooltipItem
     {

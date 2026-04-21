@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStatigel
+namespace CalamityMod.Tiles.FurnitureStatigel
 {
     public class StatigelCandelabra : ModTile
     {
@@ -47,7 +47,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStatigel
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureStatigel/StatigelCandelabraFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureStatigel/StatigelCandelabraFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j);
         }
     }

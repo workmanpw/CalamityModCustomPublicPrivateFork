@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss.BrainOfCthulhu;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.DataStructures;
+using CalamityMod.Enums;
+using CalamityMod.Events;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss.BrainOfCthulhu;
+using CalamityMod.Utilities.Daybreak;
+using CalamityMod.World;
 using Microsoft.CodeAnalysis;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -28,21 +28,21 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
 
 public class BrainOfCthulhuAI : VanillaAIOverride
 {
-    private static SoundStyle StunnedHit = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Stun_Hit", 3);
-    private static SoundStyle ShieldDown = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Shield_Down") with { PauseBehavior = PauseBehavior.PauseWithGame };
-    private static SoundStyle ShieldUp = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Shield_Up") with { PauseBehavior = PauseBehavior.PauseWithGame };
-    private static SoundStyle IntroRoar = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Roar") with { PauseBehavior = PauseBehavior.PauseWithGame };
-    private static SoundStyle Roar = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Short_Roar") with { PauseBehavior =  PauseBehavior.PauseWithGame};
-    public static SoundStyle Laugh = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Laugh") with { PauseBehavior = PauseBehavior.PauseWithGame, MaxInstances = 5 };
-    private static SoundStyle Growl = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Growl", 2) with { PauseBehavior = PauseBehavior.PauseWithGame };
-    private static SoundStyle Death = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Death_Roar") with { PauseBehavior = PauseBehavior.PauseWithGame };
-    private static SoundStyle BloodShot = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_BloodShot");
-    private static SoundStyle BloodBomb = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_BloodBomb");
-    private static SoundStyle BloodExplosion = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Explosion", 2);
+    private static SoundStyle StunnedHit = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Stun_Hit", 3);
+    private static SoundStyle ShieldDown = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Shield_Down") with { PauseBehavior = PauseBehavior.PauseWithGame };
+    private static SoundStyle ShieldUp = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Shield_Up") with { PauseBehavior = PauseBehavior.PauseWithGame };
+    private static SoundStyle IntroRoar = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Roar") with { PauseBehavior = PauseBehavior.PauseWithGame };
+    private static SoundStyle Roar = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Short_Roar") with { PauseBehavior =  PauseBehavior.PauseWithGame};
+    public static SoundStyle Laugh = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Laugh") with { PauseBehavior = PauseBehavior.PauseWithGame, MaxInstances = 5 };
+    private static SoundStyle Growl = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Growl", 2) with { PauseBehavior = PauseBehavior.PauseWithGame };
+    private static SoundStyle Death = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Death_Roar") with { PauseBehavior = PauseBehavior.PauseWithGame };
+    private static SoundStyle BloodShot = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_BloodShot");
+    private static SoundStyle BloodBomb = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_BloodBomb");
+    private static SoundStyle BloodExplosion = new SoundStyle("CalamityMod/Sounds/Custom/BrainOfCthulhu/BoC_Rev_Explosion", 2);
 
 
     internal static bool SummonedViaItem = false;

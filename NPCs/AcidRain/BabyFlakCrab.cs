@@ -1,15 +1,15 @@
 using System;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Critters;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Critters;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Placeables.Banners;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
+namespace CalamityMod.NPCs.AcidRain
 {
     public class BabyFlakCrab : ModNPC
     {
@@ -46,7 +46,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.AcidRain
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] {
 
                 // Will move to localization whenever that is cleaned up.
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.BabyFlakCrab")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.BabyFlakCrab")
             });
         }
 

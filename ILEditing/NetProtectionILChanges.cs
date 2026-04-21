@@ -8,7 +8,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.ILEditing
+namespace CalamityMod.ILEditing
 {
     // These IL edits are contained in their own ModSystem instead of the main ILChanges system for the following reasons:
     // - Easily filter out only the NetProtectionILChanges from the call stack, and not other IL edits

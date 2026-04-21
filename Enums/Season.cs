@@ -1,4 +1,4 @@
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public enum Season : byte
     {

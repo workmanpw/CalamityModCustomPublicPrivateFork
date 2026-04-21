@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.Other;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Events;
+using CalamityMod.NPCs.Other;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     public class NO : ModItem, ILocalizedModType
     {

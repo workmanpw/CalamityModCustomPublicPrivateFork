@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Abyss;
+using CalamityMod.NPCs.Abyss;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Critters
+namespace CalamityMod.Items.Critters
 {
     public class BabyCannonballJellyfishItem : ModItem, ILocalizedModType
     {

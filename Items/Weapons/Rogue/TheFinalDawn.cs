@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
+namespace CalamityMod.Items.Weapons.Rogue
 {
     [LegacyName("FinalDawn")]
     public class TheFinalDawn : RogueWeapon
     {
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FinalDawnSlash");
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/FinalDawnSlash");
         public override void SetDefaults()
         {
             Item.width = 78;

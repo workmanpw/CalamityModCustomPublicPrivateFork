@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.Crags;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.Crags;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Merges
+namespace CalamityMod.Tiles.Merges
 {
     public sealed class BrimstoneSlagMerge : TileBlendTexture
     {

@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class MidasPrime : ModItem, ILocalizedModType, IHoldShiftTooltipItem
     {
@@ -20,7 +20,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
         public string TooltipExtensionKey => "UltrakillEasterEgg";
         public Color? TooltipExtensionColor => Color.Red;
 
-        internal static readonly SoundStyle ShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/CrackshotColtShot") { Volume = 0.5f, PitchVariance = 0.1f };
+        internal static readonly SoundStyle ShootSound = new("CalamityMod/Sounds/Item/CrackshotColtShot") { Volume = 0.5f, PitchVariance = 0.1f };
 
         // Internal storage used to keep track between UseItem and Shoot hooks whether a gold coin was queued up
         private bool nextShotGoldCoin = false;

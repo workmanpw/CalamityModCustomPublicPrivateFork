@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.BaseItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Dusts;
+using CalamityMod.Items.BaseItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -15,12 +15,12 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class GrandDad : CustomUseProjItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Melee";
-        public static readonly SoundStyle GrandDadEasterEggSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/GFB/GrandDad");
+        public static readonly SoundStyle GrandDadEasterEggSound = new("CalamityMod/Sounds/Custom/GFB/GrandDad");
         public Vector2 oldVel = Vector2.Zero;
         public int time = 0;
         public float highestSpeed = 0;
@@ -47,7 +47,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
         }
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/GrandDadGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/GrandDadGlow").Value);
         }
         public override bool MeleePrefix() => true;
 
@@ -102,9 +102,9 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
                         dust.color = Main.rand.NextBool() ? Color.Blue : Color.DodgerBlue;
                     }
 
-                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ExoHit3");
+                    SoundStyle sound = new("CalamityMod/Sounds/NPCHit/ExoHit3");
                     SoundEngine.PlaySound(sound with { Volume = 0.6f * power, Pitch = Main.rand.NextFloat(0.4f, 0.6f) }, Item.Center);
-                    SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ThanatosHitOpen1");
+                    SoundStyle sound2 = new("CalamityMod/Sounds/NPCHit/ThanatosHitOpen1");
                     SoundEngine.PlaySound(sound2 with { Volume = 0.45f * power, Pitch = -0.2f }, Item.Center);
                 }
                 

@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Armor.GodSlayer;
+using CalamityMod.Items.Armor.GodSlayer;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
+namespace CalamityMod.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Head)]
     public class GodSlayerHornedHelm : ModItem, ILocalizedModType

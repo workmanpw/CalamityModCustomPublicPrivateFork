@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Mono.Cecil;
@@ -12,7 +12,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class HalleysInfernoHoldout : BaseGunHoldoutProjectile
     {
@@ -113,8 +113,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (Main.myPlayer == Owner.whoAmI)
             {
                 float completion = (AccuracyCounter) / (HalleysInferno.MaxAccuracy);
-                var barBG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
-                var barFG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
+                var barBG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
+                var barFG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
 
                 Vector2 drawPos = Owner.Center - Main.screenPosition + new Vector2(0, -36) - barBG.Size() / 2;
                 Rectangle frame = new Rectangle(0, 0, (int)(completion * barFG.Width), barFG.Height);

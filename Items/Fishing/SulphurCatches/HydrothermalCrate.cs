@@ -1,20 +1,20 @@
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
-using CalamityModCustomPublicPrivateFork.Items.Tools.ClimateChange;
-using CalamityModCustomPublicPrivateFork.Items.Tools.SpawnBlocker;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Placeables.Furniture;
+using CalamityMod.Items.Tools.ClimateChange;
+using CalamityMod.Items.Tools.SpawnBlocker;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Tiles.Abyss;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing.SulphurCatches
+namespace CalamityMod.Items.Fishing.SulphurCatches
 {
     public class HydrothermalCrate : ModItem, ILocalizedModType
     {

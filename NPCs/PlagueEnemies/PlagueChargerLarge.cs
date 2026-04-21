@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -15,7 +15,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies
+namespace CalamityMod.NPCs.PlagueEnemies
 {
     public class PlagueChargerLarge : ModNPC
     {
@@ -54,7 +54,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Jungle,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.UndergroundJungle,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.PlagueCharger")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.PlagueCharger")
             });
         }
 
@@ -88,7 +88,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.PlagueEnemies
             drawLocation += halfSizeTexture * NPC.scale + new Vector2(0f, NPC.gfxOffY);
             spriteBatch.Draw(texture2D15, drawLocation, NPC.frame, NPC.GetAlpha(drawColor), NPC.rotation, halfSizeTexture, NPC.scale, spriteEffects, 0f);
 
-            texture2D15 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/PlagueEnemies/PlagueChargerGlow").Value;
+            texture2D15 = ModContent.Request<Texture2D>("CalamityMod/NPCs/PlagueEnemies/PlagueChargerGlow").Value;
             Color redEyeColor = Color.Lerp(Color.White, Color.Red, 0.5f);
 
             if (CalamityClientConfig.Instance.Afterimages)

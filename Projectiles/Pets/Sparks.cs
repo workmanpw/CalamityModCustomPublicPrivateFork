@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,7 +7,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
+namespace CalamityMod.Projectiles.Pets
 {
     public class Sparks : ModProjectile, ILocalizedModType
     {
@@ -455,9 +455,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (color == 1)
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/SparksBlue").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/SparksBlue").Value;
             if (color == 2)
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/SparksGreen").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/SparksGreen").Value;
             int height = texture.Height / Main.projFrames[Type];
             int frameHeight = height * Projectile.frame;
             SpriteEffects spriteEffects = SpriteEffects.None;

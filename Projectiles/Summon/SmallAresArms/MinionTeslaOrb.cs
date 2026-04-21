@@ -1,15 +1,15 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
+namespace CalamityMod.Projectiles.Summon.SmallAresArms
 {
     public class MinionTeslaOrb : ModProjectile, ILocalizedModType
     {
@@ -18,7 +18,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms
 
         public ref float Time => ref Projectile.ai[1];
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/AresTeslaOrb";
+        public override string Texture => "CalamityMod/Projectiles/Boss/AresTeslaOrb";
 
         public override void SetStaticDefaults()
         {

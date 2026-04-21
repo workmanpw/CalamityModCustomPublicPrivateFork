@@ -1,11 +1,11 @@
 using System;
 using System.IO;
 using System.Runtime.CompilerServices;
-using CalamityModCustomPublicPrivateFork.FluidSimulation;
-using CalamityModCustomPublicPrivateFork.Items;
-using CalamityModCustomPublicPrivateFork.MainMenu;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles;
+using CalamityMod.FluidSimulation;
+using CalamityMod.Items;
+using CalamityMod.MainMenu;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles;
 using log4net;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -13,11 +13,11 @@ using Terraria.ModLoader;
 
 [assembly: InternalsVisibleTo("CalTestHelpers")]
 [assembly: InternalsVisibleTo("InfernumMode")]
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public class CalamityMod : Mod
     {
-        public override string Name => "CalamityModCustomPublicPrivateFork";
+        public override string Name => "CalamityMod";
 
         #region External Flags
         // External flag to disable Defense Damage

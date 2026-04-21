@@ -1,15 +1,15 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears
+namespace CalamityMod.Projectiles.Melee.Spears
 {
     public class GildedProboscisProj : BaseSwordHoldoutProjectile, ILocalizedModType
     {
@@ -151,7 +151,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears
                         {
                             Vector2 velocity = -sparkAngle.RotatedBy(i * -0.3f) * 10f;
                             Vector2 position = Projectile.Center + new Vector2(75, i * 22).RotatedBy(sparkAngle.ToRotation());
-                            Particle spark = new CustomSpark(position, velocity, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 10, 0.3f, color, new Vector2(0.3f, 3f), shrinkSpeed: 0.2f);
+                            Particle spark = new CustomSpark(position, velocity, "CalamityMod/Particles/BloomCircle", false, 10, 0.3f, color, new Vector2(0.3f, 3f), shrinkSpeed: 0.2f);
                             GeneralParticleHandler.SpawnParticle(spark);
                         }
                 }
@@ -230,7 +230,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears
                 Vector2 smokePosition = Projectile.Center + new Vector2(-angle.X, Main.rand.NextFloat(-0.05f, 0.05f)).RotatedBy(Projectile.rotation) * 80 * Projectile.scale;
                 for (var i = 0; i < 3; i++)
                 {
-                    Particle beam4 = new CustomSpark(smokePosition, smokePosition.DirectionTo(Main.player[Projectile.owner].Center), "CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak", false, 10, 0.6f * Projectile.scale, smokeColor[timer % 3], new Vector2(1f, 1), true, false, 0, false, false, 0f);
+                    Particle beam4 = new CustomSpark(smokePosition, smokePosition.DirectionTo(Main.player[Projectile.owner].Center), "CalamityMod/ExtraTextures/Trails/ScarletDevilStreak", false, 10, 0.6f * Projectile.scale, smokeColor[timer % 3], new Vector2(1f, 1), true, false, 0, false, false, 0f);
                     GeneralParticleHandler.SpawnParticle(beam4);
                 }
             }

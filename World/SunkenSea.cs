@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
-using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityMod.Tiles.SunkenSea;
+using CalamityMod.Tiles.SunkenSea.Ambient;
+using CalamityMod.Walls;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.World
+namespace CalamityMod.World
 {
     public class SunkenSea
     {

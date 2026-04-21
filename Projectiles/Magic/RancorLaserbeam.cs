@@ -1,17 +1,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Graphics.Metaballs;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.NPCs;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     [PierceResistException]
     public class RancorLaserbeam : ModProjectile, ILocalizedModType
@@ -33,7 +33,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             }
         }
         public ref float LaserLength => ref Projectile.ai[1];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public const float MaxLaserLength = 3330f;
 

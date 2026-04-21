@@ -6,14 +6,14 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
-using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.UI.DialogueDisplay;
+using CalamityMod.Utilities;
 using MonoMod.Cil;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Dialogues;
+namespace CalamityMod.Dialogues;
 
 internal record DialogueTextDataEntry(
     Mod ProviderMod,

@@ -2,12 +2,12 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class ShadeNimbus : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/ShadeNimbusHostile";
+        public override string Texture => "CalamityMod/Projectiles/Boss/ShadeNimbusHostile";
 
         public const float Lifespan = 210f;
         public ref float RainTimer => ref Projectile.ai[0];

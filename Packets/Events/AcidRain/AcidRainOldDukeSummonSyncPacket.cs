@@ -1,7 +1,7 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
+using CalamityMod.Events;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class AcidRainOldDukeSummonSyncPacket : CalamityPacket
     {

@@ -8,7 +8,7 @@ using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles
+namespace CalamityMod.Tiles
 {
     public class GiantPlanteraBulb : GlowMaskTile
     {

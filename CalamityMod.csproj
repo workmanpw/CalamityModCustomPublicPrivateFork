@@ -4,7 +4,7 @@
 
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <AssemblyName>CalamityModCustomPublicPrivateFork</AssemblyName>
+    <AssemblyName>CalamityMod</AssemblyName>
   </PropertyGroup>
 
 

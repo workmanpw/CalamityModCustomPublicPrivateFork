@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.BaseItems;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.BaseItems;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.GameContent.NetModules;
 using Terraria.ModLoader;
 using Terraria.Net;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity
+namespace CalamityMod.Items.Accessories.Vanity
 {
     public class XyksBlessingOrange : TransformationAccessory, ILocalizedModType
     {

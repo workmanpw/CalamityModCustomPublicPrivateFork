@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.Localization;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing
+namespace CalamityMod.Items.Fishing
 {
     public class FishofEleum : BaseQuestFish
     {

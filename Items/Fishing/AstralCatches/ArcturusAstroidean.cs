@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCatches
+namespace CalamityMod.Items.Fishing.AstralCatches
 {
     public class ArcturusAstroidean : ModItem, ILocalizedModType
     {

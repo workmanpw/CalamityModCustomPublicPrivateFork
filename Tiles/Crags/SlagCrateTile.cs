@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCragCatches;
+using CalamityMod.Items.Fishing.BrimstoneCragCatches;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Crags
+namespace CalamityMod.Tiles.Crags
 {
     public class SlagCrateTile : ModTile
     {

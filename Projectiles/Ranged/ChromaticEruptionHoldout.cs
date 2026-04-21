@@ -1,6 +1,6 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,12 +10,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class ChromaticEruptionHoldout : BaseGunHoldoutProjectile
     {
         public override int AssociatedItemID => ModContent.ItemType<ChromaticEruption>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/ChromaticEruptionHoldout";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/ChromaticEruptionHoldout";
         public override float MaxOffsetLengthFromArm => 40f;
         public override float OffsetXUpwards => -10f;
         public override float BaseOffsetY => -12f;
@@ -107,7 +107,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (Projectile.spriteDirection == -1)
                 spriteEffects = SpriteEffects.FlipVertically;
 
-            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/ChromaticEruptionHoldoutGlow").Value, Projectile.Center - Main.screenPosition, new Microsoft.Xna.Framework.Rectangle?(new Rectangle(0, 0, texture.Width, texture.Height)), Color.White, Projectile.rotation, origin, Projectile.scale, spriteEffects, 0);
+            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/ChromaticEruptionHoldoutGlow").Value, Projectile.Center - Main.screenPosition, new Microsoft.Xna.Framework.Rectangle?(new Rectangle(0, 0, texture.Width, texture.Height)), Color.White, Projectile.rotation, origin, Projectile.scale, spriteEffects, 0);
         }
     }
 }

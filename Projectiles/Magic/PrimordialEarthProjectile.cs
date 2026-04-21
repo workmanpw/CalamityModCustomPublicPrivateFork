@@ -1,18 +1,18 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using System.Collections.Generic;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class PrimordialEarthProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/DeathValleyDusterProjectile";
+        public override string Texture => "CalamityMod/Projectiles/Magic/DeathValleyDusterProjectile";
         public ref float time => ref Projectile.ai[0];
         public int rotDirection = 1;
         public float curve = 0f;
@@ -82,7 +82,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                                 Dust dust2 = Dust.NewDustPerfect(player.Center, DustID.AmberBolt, dustVelocity * 0.6f, 0, default, 1.2f);
                                 dust2.noGravity = true;
                             }
-                            SoundStyle buff = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Ravager/RavagerPillarSummon");
+                            SoundStyle buff = new("CalamityMod/Sounds/Custom/Ravager/RavagerPillarSummon");
                             SoundEngine.PlaySound(buff with { Volume = 0.65f, Pitch = 0.8f }, player.Center);
                         }
                     }
@@ -162,7 +162,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                     for (int b = 0; b < 6; b++)
                     {
                         Color clr = Color.Lerp((Main.rand.NextBool() ? Color.Peru : Color.PeachPuff), Color.Black, Main.rand.NextFloat(0.25f, 0.45f));
-                        Particle sand = new CustomSpark(Projectile.Center, vel.RotatedByRandom(0.4f) * Main.rand.NextFloat(0.4f, 0.9f) * power, "CalamityModCustomPublicPrivateFork/Particles/SmallSmoke", false, Main.rand.Next(25, 35 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 7, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 2f)), false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.8f, 0.8f), affectedByLight: true);
+                        Particle sand = new CustomSpark(Projectile.Center, vel.RotatedByRandom(0.4f) * Main.rand.NextFloat(0.4f, 0.9f) * power, "CalamityMod/Particles/SmallSmoke", false, Main.rand.Next(25, 35 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 7, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 2f)), false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.8f, 0.8f), affectedByLight: true);
                         GeneralParticleHandler.SpawnParticle(sand);
                     }
                 }
@@ -177,15 +177,15 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                 Owner.SetScreenshake(5f);
 
                 Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Vector2.Zero, ModContent.ProjectileType<PrimordialEarthExplosion>(), (int)(Projectile.damage * 2.5f), 0, Projectile.owner);
-                SoundStyle explo = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagicRockImpact");
+                SoundStyle explo = new("CalamityMod/Sounds/Item/MagicRockImpact");
                 SoundEngine.PlaySound(explo with { Volume = 0.75f }, Projectile.Center);
 
-                Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Gold * 0.55f, "CalamityModCustomPublicPrivateFork/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 2.56f, 15);
+                Particle bolt2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Gold * 0.55f, "CalamityMod/Particles/BloomRing", Vector2.One, Main.rand.NextFloat(-10f, 10f), 0f, 2.56f, 15);
                 GeneralParticleHandler.SpawnParticle(bolt2);
 
-                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Gold, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f, 0.4f * 1.5f, 17);
+                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Gold, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f, 0.4f * 1.5f, 17);
                 GeneralParticleHandler.SpawnParticle(orb);
-                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.05f, 0.3f * 1.5f, 17);
+                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.05f, 0.3f * 1.5f, 17);
                 GeneralParticleHandler.SpawnParticle(orb2);
             }
             for (int i = 0; i < 65; i++)
@@ -206,7 +206,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                 else
                 {
                     Color clr = Color.Lerp((Main.rand.NextBool() ? Color.Peru : Color.PeachPuff), Color.Black, Main.rand.NextFloat(0.25f, 0.45f));
-                    Particle sand = new CustomSpark(Projectile.Center, (Vector2.One * Main.rand.NextFloat(6, 15)).RotatedByRandom(MathHelper.TwoPi), "CalamityModCustomPublicPrivateFork/Particles/SmallSmoke", true, Main.rand.Next(20, 45 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 8, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 2f)), false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.8f, 0.8f), affectedByLight: true);
+                    Particle sand = new CustomSpark(Projectile.Center, (Vector2.One * Main.rand.NextFloat(6, 15)).RotatedByRandom(MathHelper.TwoPi), "CalamityMod/Particles/SmallSmoke", true, Main.rand.Next(20, 45 + 1), Projectile.scale * Main.rand.NextFloat(0.08f, 0.14f) * 8, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 2f)), false, extraRotation: Main.rand.NextFloat(-4, 4), spin: Main.rand.NextFloat(-0.8f, 0.8f), affectedByLight: true);
                     GeneralParticleHandler.SpawnParticle(sand);
                 }
             }

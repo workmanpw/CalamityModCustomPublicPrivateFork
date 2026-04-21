@@ -3,13 +3,13 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class DetailedExplosion : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/DetailedExplosion";
+        public override string Texture => "CalamityMod/Particles/DetailedExplosion";
         public bool UseAltVisual = true;
         public override bool UseAdditiveBlend => UseAltVisual;
         public override bool SetLifetime => true;

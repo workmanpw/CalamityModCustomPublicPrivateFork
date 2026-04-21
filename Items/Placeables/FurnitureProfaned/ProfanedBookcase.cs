@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureProfaned
+namespace CalamityMod.Items.Placeables.FurnitureProfaned
 {
     public class ProfanedBookcase : ModItem, ILocalizedModType
     {

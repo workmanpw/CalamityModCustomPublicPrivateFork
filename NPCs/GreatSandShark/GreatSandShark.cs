@@ -1,13 +1,13 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.NPCs.Astral;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.NPCs.Astral;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Projectiles.Enemy;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -17,16 +17,16 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.GreatSandShark
+namespace CalamityMod.NPCs.GreatSandShark
 {
     [AutoloadBossHead]
     public class GreatSandShark : ModNPC
     {
         private bool resetAI = false;
 
-        public static readonly SoundStyle RoarSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/GreatSandSharkRoar");
-        public static readonly SoundStyle HurtSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/GreatSandSharkHit");
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/GreatSandSharkDeath");
+        public static readonly SoundStyle RoarSound = new("CalamityMod/Sounds/Custom/GreatSandSharkRoar");
+        public static readonly SoundStyle HurtSound = new("CalamityMod/Sounds/NPCHit/GreatSandSharkHit");
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/GreatSandSharkDeath");
 
         public override void SetStaticDefaults()
         {
@@ -83,7 +83,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.GreatSandShark
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Desert,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Events.Sandstorm,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.GreatSandShark")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.GreatSandShark")
             });
         }
 

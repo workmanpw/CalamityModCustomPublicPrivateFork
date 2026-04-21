@@ -1,6 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureStratus
+namespace CalamityMod.Items.Placeables.FurnitureStratus
 {
     public class StratusChair : ModItem, ILocalizedModType
     {

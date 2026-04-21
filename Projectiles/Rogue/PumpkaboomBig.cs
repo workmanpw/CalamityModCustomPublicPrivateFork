@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,13 +11,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     [PierceResistException]
     public class PumpkaboomBig : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Rogue/PumpkaboomBig";
+        public override string Texture => "CalamityMod/Projectiles/Rogue/PumpkaboomBig";
 
         public float time = 0;
         public ref float stuckNPC => ref Projectile.ai[2];
@@ -94,7 +94,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
                 if (Projectile.timeLeft == 109)
                 {
-                    SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/PumpkaboomStealthTicking") with { Pitch = 0f, Volume = 1f, MaxInstances = 4 }, Projectile.Center);
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/PumpkaboomStealthTicking") with { Pitch = 0f, Volume = 1f, MaxInstances = 4 }, Projectile.Center);
                 }
 
                 if (Projectile.timeLeft < 110)
@@ -206,7 +206,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         }
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            SoundStyle w = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumScrewdriverThud");
+            SoundStyle w = new("CalamityMod/Sounds/Item/WulfrumScrewdriverThud");
             SoundEngine.PlaySound(w with { Volume = 0.7f, Pitch = 0f, MaxInstances = 6 }, Projectile.Center);
 
             stuckState = 1f;
@@ -254,8 +254,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             Projectile.localAI[1] = 5; // Reset firing state
             if (flungState != -1f)
             {
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/PumpkinExplode1") with { Pitch = 0f, Volume = 0.75f }, Projectile.Center);
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/FlakKrakenShoot") with { Pitch = 0f, Volume = 0.6f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/PumpkinExplode1") with { Pitch = 0f, Volume = 0.75f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/FlakKrakenShoot") with { Pitch = 0f, Volume = 0.6f }, Projectile.Center);
 
                 if (Main.myPlayer == Projectile.owner)
                 {
@@ -265,9 +265,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
                 float scale = 0.18f;
                 Vector2 spawnPos = Projectile.Center;
-                Particle blastRing = new CustomPulse(spawnPos, Vector2.Zero, c1, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale, 10);
+                Particle blastRing = new CustomPulse(spawnPos, Vector2.Zero, c1, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale, 10);
                 GeneralParticleHandler.SpawnParticle(blastRing);
-                Particle blastRing2 = new CustomPulse(spawnPos, Vector2.Zero, c1 * 0.33f, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale * 1.66f, 11);
+                Particle blastRing2 = new CustomPulse(spawnPos, Vector2.Zero, c1 * 0.33f, "CalamityMod/Particles/HighResHollowCircleHardEdge", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale * 1.66f, 11);
                 GeneralParticleHandler.SpawnParticle(blastRing2);
                 for (int k = 0; k < 16; k++)
                 {

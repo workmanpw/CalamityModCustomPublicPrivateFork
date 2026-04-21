@@ -2,11 +2,11 @@ using System;
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class StoneDebrisParticle : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/StoneDebris";
+        public override string Texture => "CalamityMod/Particles/StoneDebris";
         public override bool SetLifetime => true;
         public override int FrameVariants => 5;
 

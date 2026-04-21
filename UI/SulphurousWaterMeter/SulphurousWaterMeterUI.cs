@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -7,7 +7,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI.SulphurousWaterMeter
+namespace CalamityMod.UI.SulphurousWaterMeter
 {
     public class SulphurousWaterMeterUI : ModSystem
     {
@@ -21,8 +21,8 @@ namespace CalamityModCustomPublicPrivateFork.UI.SulphurousWaterMeter
 
         public override void OnModLoad()
         {
-            edgeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/SulphurousWaterMeter/SulphWaterMeter", AssetRequestMode.ImmediateLoad).Value;
-            barTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/SulphurousWaterMeter/SulphWaterBar", AssetRequestMode.ImmediateLoad).Value;
+            edgeTexture = ModContent.Request<Texture2D>("CalamityMod/UI/SulphurousWaterMeter/SulphWaterMeter", AssetRequestMode.ImmediateLoad).Value;
+            barTexture = ModContent.Request<Texture2D>("CalamityMod/UI/SulphurousWaterMeter/SulphWaterBar", AssetRequestMode.ImmediateLoad).Value;
             Reset();
         }
 

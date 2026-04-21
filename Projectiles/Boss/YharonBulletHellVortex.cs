@@ -1,5 +1,5 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
+using CalamityMod.NPCs.Yharon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,14 +7,14 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class YharonBulletHellVortex : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
         public ref float TimeCountdown => ref Projectile.ai[0];
         public int victim = 0;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.DrawScreenCheckFluff[Type] = 10000;
@@ -116,7 +116,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
         public override bool PreDraw(ref Color lightColor)
         {
             Main.spriteBatch.EnterShaderRegion();
-            Texture2D vortexNoise = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Cracks").Value;
+            Texture2D vortexNoise = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Cracks").Value;
             GameShaders.Misc["CalamityMod:DoGPortal"].UseOpacity(1f);
             GameShaders.Misc["CalamityMod:DoGPortal"].UseColor(Color.Gold);
             GameShaders.Misc["CalamityMod:DoGPortal"].UseSecondaryColor(Color.White);

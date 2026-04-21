@@ -1,10 +1,10 @@
 // There is no Wulfrum Chest placed sprite... THERES STILL NONE
 /*
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureWulfrum
+namespace CalamityMod.Items.Placeables.FurnitureWulfrum
 {
     public class WulfrumChest : ModItem, ILocalizedModType
     {

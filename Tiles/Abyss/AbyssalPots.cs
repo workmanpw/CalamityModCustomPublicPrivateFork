@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags.MiscGrabBags;
+using CalamityMod.Items.TreasureBags.MiscGrabBags;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,7 +8,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
+namespace CalamityMod.Tiles.Abyss
 {
     public class AbyssalPots : ModTile
     {

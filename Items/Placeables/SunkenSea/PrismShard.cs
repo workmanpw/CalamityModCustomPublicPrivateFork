@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
+using CalamityMod.Tiles.SunkenSea;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea
+namespace CalamityMod.Items.Placeables.SunkenSea
 {
     public class PrismShard : ModItem, ILocalizedModType
     {

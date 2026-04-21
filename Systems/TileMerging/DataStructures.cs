@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     // bit to relative tile pos for reference
     // MSB 0->7 LSB

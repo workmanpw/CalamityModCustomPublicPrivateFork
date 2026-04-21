@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -10,13 +10,13 @@ using Terraria.DataStructures;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Demonshade
+namespace CalamityMod.Items.Armor.Demonshade
 {
     [AutoloadEquip(EquipType.Head)]
     public class DemonshadeHelm : ModItem, IExtendedHat, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Armor.PostMoonLord";
-        public static readonly SoundStyle ActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/DemonshadeEnrage");
+        public static readonly SoundStyle ActivationSound = new("CalamityMod/Sounds/Custom/AbilitySounds/DemonshadeEnrage");
         internal static string ShadowScytheEntitySourceContext => "SetBonus_Calamity_Demonshade";
 
         public static int MinionSlotBoost = 2;
@@ -95,7 +95,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Armor.Demonshade
                 Register();
         }
 
-        public string ExtensionTexture => "CalamityModCustomPublicPrivateFork/Items/Armor/Demonshade/DemonshadeHelm_Extension";
+        public string ExtensionTexture => "CalamityMod/Items/Armor/Demonshade/DemonshadeHelm_Extension";
         public Vector2 ExtensionSpriteOffset(PlayerDrawSet drawInfo) => new Vector2(0, -4f);
     }
 }

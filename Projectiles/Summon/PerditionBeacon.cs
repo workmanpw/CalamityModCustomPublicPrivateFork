@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class PerditionBeacon : BaseMinionProjectile
     {
@@ -136,7 +136,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             if (Target is null)
                 return;
 
-            Texture2D crossTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/PerditionCross").Value;
+            Texture2D crossTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/PerditionCross").Value;
 
             Vector2 drawPosition = Target.Bottom - Main.screenPosition;
             drawPosition.Y -= 12f;

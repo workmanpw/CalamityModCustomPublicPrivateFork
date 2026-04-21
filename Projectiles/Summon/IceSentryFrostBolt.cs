@@ -4,12 +4,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class IceSentryFrostBolt : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/FrostBoltProjectile";
+        public override string Texture => "CalamityMod/Projectiles/Magic/FrostBoltProjectile";
 
         public override void SetStaticDefaults()
         {

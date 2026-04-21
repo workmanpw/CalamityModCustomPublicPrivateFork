@@ -1,30 +1,30 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Fishing;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCatches;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.BrimstoneCragCatches;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.FishingRods;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.SulphurCatches;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems;
-using CalamityModCustomPublicPrivateFork.Items.Tools.ClimateChange;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.OldDuke;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Accessories.Vanity;
+using CalamityMod.Items.Fishing;
+using CalamityMod.Items.Fishing.AstralCatches;
+using CalamityMod.Items.Fishing.BrimstoneCragCatches;
+using CalamityMod.Items.Fishing.FishingRods;
+using CalamityMod.Items.Fishing.SulphurCatches;
+using CalamityMod.Items.Fishing.SunkenSeaCatches;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.Items.Placeables.FurnitureDriftwood;
+using CalamityMod.Items.SummonItems;
+using CalamityMod.Items.Tools.ClimateChange;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.OldDuke;
+using CalamityMod.Particles;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -32,7 +32,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer
+namespace CalamityMod.CalPlayer
 {
     public partial class CalamityPlayer : ModPlayer
     {

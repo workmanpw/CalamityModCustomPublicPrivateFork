@@ -1,10 +1,10 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Gores.Trees;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
-using CalamityModCustomPublicPrivateFork.NPCs.Astral;
+using CalamityMod.Dusts;
+using CalamityMod.Gores.Trees;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Potions.Food;
+using CalamityMod.Items.Tools;
+using CalamityMod.NPCs.Astral;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.AstralSnow
+namespace CalamityMod.Tiles.AstralSnow
 {
     public class AstralSnowTree : GlowMaskTree
     {
@@ -34,12 +34,12 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.AstralSnow
             SpecialGroupMaximumSaturationValue = 1f
         };
 
-        public override Asset<Texture2D> GetTexture() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/AstralSnow/AstralSnowTree");
-        public override Asset<Texture2D> GetGlowTexture() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/AstralSnow/AstralSnowTreeGlow");
-        public override Asset<Texture2D> GetBranchTextures() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/AstralSnow/AstralSnowTree_Branches");
-        public override Asset<Texture2D> GetBranchGlowTextures() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/AstralSnow/AstralSnowTree_BranchesGlow");
-        public override Asset<Texture2D> GetTopTextures() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/AstralSnow/AstralSnowTree_Tops");
-        public override Asset<Texture2D> GetTopGlowTextures() => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/AstralSnow/AstralSnowTree_TopsGlow");
+        public override Asset<Texture2D> GetTexture() => ModContent.Request<Texture2D>("CalamityMod/Tiles/AstralSnow/AstralSnowTree");
+        public override Asset<Texture2D> GetGlowTexture() => ModContent.Request<Texture2D>("CalamityMod/Tiles/AstralSnow/AstralSnowTreeGlow");
+        public override Asset<Texture2D> GetBranchTextures() => ModContent.Request<Texture2D>("CalamityMod/Tiles/AstralSnow/AstralSnowTree_Branches");
+        public override Asset<Texture2D> GetBranchGlowTextures() => ModContent.Request<Texture2D>("CalamityMod/Tiles/AstralSnow/AstralSnowTree_BranchesGlow");
+        public override Asset<Texture2D> GetTopTextures() => ModContent.Request<Texture2D>("CalamityMod/Tiles/AstralSnow/AstralSnowTree_Tops");
+        public override Asset<Texture2D> GetTopGlowTextures() => ModContent.Request<Texture2D>("CalamityMod/Tiles/AstralSnow/AstralSnowTree_TopsGlow");
 
         public override Color GetGlowColor(int i, int j)
         {

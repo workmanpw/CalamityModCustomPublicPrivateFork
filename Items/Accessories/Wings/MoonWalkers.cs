@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories.Wings
+namespace CalamityMod.Items.Accessories.Wings
 {
     [AutoloadEquip(EquipType.Wings, EquipType.Shoes)]
     [LegacyName("InfinityBoots", "TracersCelestial")]

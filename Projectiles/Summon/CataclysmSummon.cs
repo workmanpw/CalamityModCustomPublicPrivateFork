@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,14 +7,14 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class CataclysmSummon : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
         public ref float Time => ref Projectile.ai[0];
         public bool LookingAtPlayer => Time < 45f;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/NPCs/SupremeCalamitas/SupremeCataclysm";
+        public override string Texture => "CalamityMod/NPCs/SupremeCalamitas/SupremeCataclysm";
         public override void SetStaticDefaults()
         {
             Main.projFrames[Type] = 6;

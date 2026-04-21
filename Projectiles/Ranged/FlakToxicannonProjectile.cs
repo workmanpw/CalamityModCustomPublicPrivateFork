@@ -1,22 +1,22 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged.FlakToxicannon;
-using static CalamityModCustomPublicPrivateFork.Projectiles.Ranged.FlakToxicannonHoldout;
+using static CalamityMod.Items.Weapons.Ranged.FlakToxicannon;
+using static CalamityMod.Projectiles.Ranged.FlakToxicannonHoldout;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class FlakToxicannonProjectile : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Enemy/FlakAcid";
+        public override string Texture => "CalamityMod/Projectiles/Enemy/FlakAcid";
         public ref float RocketID => ref Projectile.ai[0];
         public ref float DistanceOwnerMouse => ref Projectile.ai[1];
         public bool IsShrapnel
@@ -252,7 +252,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = IsShrapnel ? Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Environment/AcidDrop").Value : Terraria.GameContent.TextureAssets.Projectile[Type].Value;
+            Texture2D texture = IsShrapnel ? Request<Texture2D>("CalamityMod/Projectiles/Environment/AcidDrop").Value : Terraria.GameContent.TextureAssets.Projectile[Type].Value;
 
             Color drawColor = Projectile.GetAlpha(lightColor);
             CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], drawColor * 0.35f, 1, texture);

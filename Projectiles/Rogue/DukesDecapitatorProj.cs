@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class DukesDecapitatorProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
         float rotationAmount = 1.5f;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/DukesDecapitator";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/DukesDecapitator";
         public override void SetStaticDefaults()
         {
             ProjectileID.Sets.TrailCacheLength[Type] = 6;

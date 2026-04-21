@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Bumblebirb;
+using CalamityMod.NPCs.Bumblebirb;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class DragonfollyMusicScene : BaseMusicSceneEffect
     {

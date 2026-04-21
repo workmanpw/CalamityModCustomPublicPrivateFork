@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class BloomRing : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/BloomRing";
+        public override string Texture => "CalamityMod/Particles/BloomRing";
         public override bool UseAdditiveBlend => true;
         public override bool SetLifetime => true;
 

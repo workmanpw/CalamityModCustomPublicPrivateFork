@@ -1,24 +1,24 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Enemy;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Potions;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Projectiles.Enemy;
+using CalamityMod.Sounds;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -30,7 +30,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.StormWeaver
+namespace CalamityMod.NPCs.StormWeaver
 {
     [HasPierceResist]
     [LongDistanceNetSync]
@@ -41,8 +41,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.StormWeaver
 
         public override void Load()
         {
-            string normalIconPath = "CalamityModCustomPublicPrivateFork/NPCs/StormWeaver/StormWeaverHead_Head_Boss";
-            string vulnerableIconPath = "CalamityModCustomPublicPrivateFork/NPCs/StormWeaver/StormWeaverHeadNaked_Head_Boss";
+            string normalIconPath = "CalamityMod/NPCs/StormWeaver/StormWeaverHead_Head_Boss";
+            string vulnerableIconPath = "CalamityMod/NPCs/StormWeaver/StormWeaverHeadNaked_Head_Boss";
             
             normalIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(normalIconPath, -1);
             vulnerableIconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(vulnerableIconPath, -1);
@@ -51,8 +51,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.StormWeaver
         private const float BoltAngleSpread = 280;
         private bool tail = false;
 
-        public static readonly SoundStyle ArmorShedSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/WeaverArmorShed");
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/WeaverDeath");
+        public static readonly SoundStyle ArmorShedSound = new("CalamityMod/Sounds/Custom/WeaverArmorShed");
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/WeaverDeath");
 
         // Lightning flash variables
         public float lightning = 0f;
@@ -133,7 +133,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.StormWeaver
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Sky,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.StormWeaver")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.StormWeaver")
             });
         }
 
@@ -553,7 +553,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.StormWeaver
                     if (calamityGlobalNPC.newAI[0] == chargePhaseGateValue - 70)
                     {
                         Vector2 soundCenter = Main.player[NPC.target].Center;
-                        SoundStyle lightning = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/LightningTelegraph") { Volume = 0.7f };
+                        SoundStyle lightning = new("CalamityMod/Sounds/Custom/LightningTelegraph") { Volume = 0.7f };
                         SoundEngine.PlaySound(lightning, soundCenter);
                     }
                     if (calamityGlobalNPC.newAI[0] >= chargePhaseGateValue)

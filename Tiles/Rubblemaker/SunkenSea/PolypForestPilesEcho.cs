@@ -1,13 +1,13 @@
 using Terraria.ModLoader;
 using Terraria.GameContent;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Tiles.SunkenSea.Ambient;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
+namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 {
     public class SmallPolypForestPileEcho : SmallPolypForestPile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/SmallPolypForestPile";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/SmallPolypForestPile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -17,7 +17,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
     }
     public class PolypForestPilesEcho : MediumPolypForestPile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/MediumPolypForestPile";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/MediumPolypForestPile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -27,7 +27,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
     }
     public class LargePolypForestPileEcho : LargePolypForestPile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/LargePolypForestPile";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/LargePolypForestPile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

@@ -4,8 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityMod.DataStructures;
+using CalamityMod.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -15,12 +15,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss.BrainOfCthulhu;
+namespace CalamityMod.Projectiles.Boss.BrainOfCthulhu;
 
 public class TelekineticEnemyGrab : ModProjectile, ILocalizedModType
 {
     public new string LocalizationCategory => "Projectiles.Boss";
-    public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/BloomRing";
+    public override string Texture => "CalamityMod/Particles/BloomRing";
 
     BezierCurve curve = null;
     int throwSign = 0;

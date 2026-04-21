@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.NPCs.PlaguebringerGoliath;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class PlagueStingerGoliathV2 : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/PlagueStingerGoliath";
+        public override string Texture => "CalamityMod/Projectiles/Boss/PlagueStingerGoliath";
 
         public override void SetDefaults()
         {
@@ -51,7 +51,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 
         public override void PostDraw(Color lightColor)
         {
-            Texture2D glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/PlagueStingerGoliathGlow").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/PlagueStingerGoliathGlow").Value;
             Vector2 origin = new Vector2(glow.Width / 2, glow.Height / Main.projFrames[Type] / 2);
             Vector2 drawPos = Projectile.Center - Main.screenPosition;
             drawPos -= new Vector2(glow.Width, glow.Height / Main.projFrames[Type]) / 2f;

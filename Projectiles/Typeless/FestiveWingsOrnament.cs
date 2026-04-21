@@ -5,14 +5,14 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class FestiveWingsOrnament : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
         public override string Texture => "Terraria/Images/Projectile_" + ProjectileID.OrnamentFriendly;
 
-        internal static readonly SoundStyle JingleSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/FestiveJingle") { Volume = 0.25f, PitchVariance = 0.5f };
+        internal static readonly SoundStyle JingleSound = new("CalamityMod/Sounds/Item/FestiveJingle") { Volume = 0.25f, PitchVariance = 0.5f };
 
         public override void SetStaticDefaults() => Main.projFrames[Type] = Main.projFrames[ProjectileID.OrnamentFriendly];
 

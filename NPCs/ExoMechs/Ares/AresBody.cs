@@ -1,30 +1,30 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Mounts;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
-using CalamityModCustomPublicPrivateFork.Items.Tools.SpawnBlocker;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Skies;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.UI.VanillaBossBars;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Mounts;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Potions;
+using CalamityMod.Items.Potions.Food;
+using CalamityMod.Items.Tools.SpawnBlocker;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Skies;
+using CalamityMod.Sounds;
+using CalamityMod.UI.VanillaBossBars;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -37,7 +37,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
+namespace CalamityMod.NPCs.ExoMechs.Ares
 {
     [AutoloadBossHead]
     [HasPierceResist]
@@ -151,13 +151,13 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
         public const float plasmaArmStartTimer = 260f;
         public const float teslaArmStartTimer = 80f;
 
-        public static readonly SoundStyle EnragedSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/AresEnraged");
+        public static readonly SoundStyle EnragedSound = new("CalamityMod/Sounds/Custom/ExoMechs/AresEnraged");
 
-        public static readonly SoundStyle LaserStartSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/AresCircleLaserStart");
+        public static readonly SoundStyle LaserStartSound = new("CalamityMod/Sounds/Custom/ExoMechs/AresCircleLaserStart");
 
-        public static readonly SoundStyle LaserLoopSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/AresCircleLaserLoop") with { IsLooped = true };
+        public static readonly SoundStyle LaserLoopSound = new SoundStyle("CalamityMod/Sounds/Custom/ExoMechs/AresCircleLaserLoop") with { IsLooped = true };
 
-        public static readonly SoundStyle LaserEndSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/AresCircleLaserEnd");
+        public static readonly SoundStyle LaserEndSound = new("CalamityMod/Sounds/Custom/ExoMechs/AresCircleLaserEnd");
 
         #region Textures
         public static Asset<Texture2D> GlowTexture;
@@ -196,10 +196,10 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
             NPCID.Sets.NPCBestiaryDrawOffset[Type] = value;
             if (!Main.dedServ)
             {
-                string AresPath = "CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/Ares/Ares";
+                string AresPath = "CalamityMod/NPCs/ExoMechs/Ares/Ares";
                 GlowTexture = ModContent.Request<Texture2D>(Texture + "Glow", AssetRequestMode.AsyncLoad);
-                NeuronTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/AergiaNeuron", AssetRequestMode.AsyncLoad);
-                NeuronTexture_Glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/AergiaNeuron_Glow", AssetRequestMode.AsyncLoad);
+                NeuronTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/AergiaNeuron", AssetRequestMode.AsyncLoad);
+                NeuronTexture_Glow = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/AergiaNeuron_Glow", AssetRequestMode.AsyncLoad);
 
                 ArmTopTexture = ModContent.Request<Texture2D>(AresPath + "ArmTopPart1", AssetRequestMode.AsyncLoad);
                 ArmTopTexture2 = ModContent.Request<Texture2D>(AresPath + "ArmTopPart2", AssetRequestMode.AsyncLoad);
@@ -252,7 +252,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[] 
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Ares")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Ares")
             });
         }
 
@@ -899,7 +899,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
 
                             // Draedon comments on how foolish it is to run
                             if (Main.netMode != NetmodeID.MultiplayerClient)
-                                CalamityUtils.BroadcastLocalizedText("Mods.CalamityModCustomPublicPrivateFork.Status.Boss.DraedonAresEnrageText", Draedon.TextColor);
+                                CalamityUtils.BroadcastLocalizedText("Mods.CalamityMod.Status.Boss.DraedonAresEnrageText", Draedon.TextColor);
 
                             // Enrage
                             EnragedState = (float)Enraged.Yes;
@@ -1305,8 +1305,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
             // Draw Aergia Neuron boobs if Exo Mechdusa
             if (exoMechdusa)
             {
-                Texture2D neurontexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/AergiaNeuron").Value;
-                Texture2D glowtexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/ExoMechs/AergiaNeuron_Glow").Value;
+                Texture2D neurontexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/AergiaNeuron").Value;
+                Texture2D glowtexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/ExoMechs/AergiaNeuron_Glow").Value;
                 Vector2 NeuronRight = new Vector2(NPC.Center.X + 40, NPC.Center.Y + 50);
                 Vector2 NeuronLeft = new Vector2(NPC.Center.X - 40, NPC.Center.Y + 50);
                 Vector2 origin = new Vector2((float)(neurontexture.Width / 2), (float)(neurontexture.Height / 2));

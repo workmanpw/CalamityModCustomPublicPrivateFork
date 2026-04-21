@@ -3,13 +3,13 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class PlayerCenteredPulseRing : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/HollowCircleHardEdge";
+        public override string Texture => "CalamityMod/Particles/HollowCircleHardEdge";
         public override bool UseAdditiveBlend => true;
         public override bool SetLifetime => true;
         public override bool UseCustomDraw => true;

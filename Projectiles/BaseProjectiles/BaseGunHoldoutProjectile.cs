@@ -9,7 +9,7 @@ using Terraria.GameContent;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles
+namespace CalamityMod.Projectiles.BaseProjectiles
 {
     /// <summary>
     /// An abstract class dedicated to ease the making of gun-like holdouts, regarding of the weapon class.<br/>

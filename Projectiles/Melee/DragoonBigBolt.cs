@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class DragoonBigBolt : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public int time = 0;
         public float colorValue = 0;
         public float sizeMult = 1;
@@ -52,7 +52,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                     if (time < 120)
                     {
                         float velMult = (Projectile.ai[1] == 0.5f ? 0.2f : 3 * sizeMult);
-                        Particle spark3 = new CustomSpark(pos, Projectile.velocity * 1.2f * velMult, "CalamityModCustomPublicPrivateFork/Particles/GlowSpark", false, 11, 0.15f * sizeMult, usedColor, new Vector2(2f, 0.8f), true, true, shrinkSpeed: 1f);
+                        Particle spark3 = new CustomSpark(pos, Projectile.velocity * 1.2f * velMult, "CalamityMod/Particles/GlowSpark", false, 11, 0.15f * sizeMult, usedColor, new Vector2(2f, 0.8f), true, true, shrinkSpeed: 1f);
                         GeneralParticleHandler.SpawnParticle(spark3);
                         sizeMult *= 0.97f;
                     }
@@ -66,7 +66,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 }
                 if (Main.rand.NextBool(10))
                 {
-                    Particle spark2 = new CustomSpark(pos, Projectile.velocity * Main.rand.NextFloat(-0.4f, 0.4f), "CalamityModCustomPublicPrivateFork/Particles/DrainLineBloom", false, 80, Main.rand.NextFloat(1.2f, 1.3f) * sizeMult, usedColor, new Vector2(1, 4), true, true);
+                    Particle spark2 = new CustomSpark(pos, Projectile.velocity * Main.rand.NextFloat(-0.4f, 0.4f), "CalamityMod/Particles/DrainLineBloom", false, 80, Main.rand.NextFloat(1.2f, 1.3f) * sizeMult, usedColor, new Vector2(1, 4), true, true);
                     GeneralParticleHandler.SpawnParticle(spark2);
                 }
                 if (time % 5 == 0)
@@ -80,9 +80,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             {
                 for (int i = 0; i < 3; i++)
                 {
-                    Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Cyan, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f, 1.48f, 15);
+                    Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.Cyan, "CalamityMod/Particles/BloomCircle", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f, 1.48f, 15);
                     GeneralParticleHandler.SpawnParticle(orb);
-                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f, 0.925f, 15);
+                    Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.1f, 0.925f, 15);
                     GeneralParticleHandler.SpawnParticle(orb2);
                 }
             }
@@ -115,13 +115,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                         dust.noGravity = !Main.rand.NextBool(3);
                         dust.color = Main.rand.NextBool(5) ? Color.Cyan : Color.Orchid;
                     }
-                    Particle pulse2 = new CustomPulse(pos, Vector2.Zero, Color.Cyan, "CalamityModCustomPublicPrivateFork/Particles/HighResFoggyCircleHardEdge", new Vector2(1, 1), 0, 0f, 0.0815f * fxScale, 10);
+                    Particle pulse2 = new CustomPulse(pos, Vector2.Zero, Color.Cyan, "CalamityMod/Particles/HighResFoggyCircleHardEdge", new Vector2(1, 1), 0, 0f, 0.0815f * fxScale, 10);
                     GeneralParticleHandler.SpawnParticle(pulse2);
                     for (int i = 0; i < 2; i++)
                     {
-                        Particle orb = new CustomPulse(pos, Vector2.Zero, Color.Orchid, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 1.38f * fxScale, 0.5f * fxScale, 14);
+                        Particle orb = new CustomPulse(pos, Vector2.Zero, Color.Orchid, "CalamityMod/Particles/BloomCircle", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 1.38f * fxScale, 0.5f * fxScale, 14);
                         GeneralParticleHandler.SpawnParticle(orb);
-                        Particle orb2 = new CustomPulse(pos, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.925f * fxScale, 0.2f * fxScale, 14);
+                        Particle orb2 = new CustomPulse(pos, Vector2.Zero, Color.White, "CalamityMod/Particles/BloomCircle", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.925f * fxScale, 0.2f * fxScale, 14);
                         GeneralParticleHandler.SpawnParticle(orb2);
                     }
                 }

@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos;
+using CalamityMod.Projectiles.Melee.Yoyos;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class Aorta : ModItem, ILocalizedModType
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Buffs.Mounts;
-using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityMod.Buffs.Mounts;
+using CalamityMod.DataStructures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Mounts.Minecarts
+namespace CalamityMod.Items.Mounts.Minecarts
 {
     public class DoGCartMount : ModMount
     {
@@ -105,9 +105,9 @@ namespace CalamityModCustomPublicPrivateFork.Items.Mounts.Minecarts
                 if (segment is null)
                     break;
 
-                Texture2D segmentTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Mounts/Minecarts/DoGCartBody").Value;
+                Texture2D segmentTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Mounts/Minecarts/DoGCartBody").Value;
                 if (i == SegmentCount - 1)
-                    segmentTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Mounts/Minecarts/DoGCartTail").Value;
+                    segmentTexture = ModContent.Request<Texture2D>("CalamityMod/Items/Mounts/Minecarts/DoGCartTail").Value;
                 Vector2 segmentDrawPosition = rotationAdjustedPositions[i] + CalculateSegmentWaveOffset(i, drawPlayer);
 
                 Color segmentColor = Lighting.GetColor((int)segmentDrawPosition.X / 16, (int)segmentDrawPosition.Y / 16);

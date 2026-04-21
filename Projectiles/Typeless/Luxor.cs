@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityMod.CalPlayer;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Projectiles.Magic;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -16,7 +16,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class Luxor : ModProjectile, ILocalizedModType
     {
@@ -166,7 +166,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
                             proj.velocity.Y -= 1.5f;
                     }
 
-                    SoundStyle blam = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GunShotSmall");
+                    SoundStyle blam = new("CalamityMod/Sounds/Item/GunShotSmall");
                     SoundEngine.PlaySound(blam with { Volume = 0.35f, Pitch = Main.rand.NextFloat(0.6f, 0.8f) }, tipPosition);
                     SoundEngine.PlaySound(SoundID.DD2_WitherBeastCrystalImpact with { Volume = 0.7f, Pitch = 0.2f }, tipPosition);
 
@@ -221,8 +221,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
         public override bool PreDraw(ref Color lightColor)
         {
             Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
-            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
-            Texture2D cTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Light").Value;
+            Texture2D bTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D cTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/Light").Value;
             float idleFade = moddedOwner.luxorsGiftVanity ? 0 : (float)Math.Pow(Utils.GetLerpValue(280, 300, idleTimer, true), 5);
             Color drawColor = usedColor;
             Color bodyColor = Color.Lerp(lightColor, Color.Gold with { A = 0 }, idleFade);

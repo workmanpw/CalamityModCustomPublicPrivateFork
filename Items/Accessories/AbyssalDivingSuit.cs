@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Items.BaseItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.BaseItems;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class AbyssalDivingSuit : TransformationAccessory, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Accessories";
 
-        public override string AssetPath => "CalamityModCustomPublicPrivateFork/Items/Accessories/";
+        public override string AssetPath => "CalamityMod/Items/Accessories/";
         public override (EquipType, string, string)[] EquipSlots =>
         [
             (EquipType.Head, "AbyssalDivingSuit", null),

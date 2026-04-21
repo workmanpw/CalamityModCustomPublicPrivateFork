@@ -1,7 +1,7 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.CalPlayer;
+using CalamityMod.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class VengefulSunSpiritMinion : ModProjectile, ILocalizedModType
     {
@@ -149,7 +149,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
         {
             var spTex = TextureAssets.Projectile[Type].Value;
             var whiteTex = GetWhiteTex();
-            var ciTex = CalamityUtils.GetTextureEfficient(ref circle, "CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleOpenCircleButBigger").Value;
+            var ciTex = CalamityUtils.GetTextureEfficient(ref circle, "CalamityMod/ExtraTextures/GreyscaleOpenCircleButBigger").Value;
 
             float completion = (Projectile.minionSlots-1) / 6f;
             var color = Color.Lerp(Color.Yellow, Color.DarkOrange, completion);

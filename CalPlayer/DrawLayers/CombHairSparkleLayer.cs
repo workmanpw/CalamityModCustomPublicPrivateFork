@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
+using CalamityMod.Items.Accessories.Vanity;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -6,7 +6,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
+namespace CalamityMod.CalPlayer.DrawLayers
 {
     public class CombHairSparkleLayer : PlayerDrawLayer
     {

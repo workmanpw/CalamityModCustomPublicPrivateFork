@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths;
-using CalamityModCustomPublicPrivateFork.Tiles.BaseTiles;
+using CalamityMod.Items.Placeables.Furniture.Monoliths;
+using CalamityMod.Tiles.BaseTiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Monoliths
+namespace CalamityMod.Tiles.Furniture.Monoliths
 {
     public class ExoObeliskTile : BaseMonolith
     {
@@ -26,7 +26,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Monoliths
             if (!Main.dedServ)
             {
                 GlowMask = ModContent.Request<Texture2D>($"{Texture}_Glow");
-                Numbers = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Furniture/Monoliths/ExoObeliskText", AssetRequestMode.AsyncLoad);
+                Numbers = ModContent.Request<Texture2D>("CalamityMod/Tiles/Furniture/Monoliths/ExoObeliskText", AssetRequestMode.AsyncLoad);
             }
 
             RegisterItemDrop(ModContent.ItemType<ExoObelisk>());

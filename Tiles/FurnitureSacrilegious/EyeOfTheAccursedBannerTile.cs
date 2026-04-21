@@ -8,7 +8,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureSacrilegious
+namespace CalamityMod.Tiles.FurnitureSacrilegious
 {
     public class EyeOfTheAccursedBannerTile : ModTile
     {

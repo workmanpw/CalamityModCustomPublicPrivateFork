@@ -1,14 +1,14 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Walls;
-using CalamityModCustomPublicPrivateFork.Walls.DraedonStructures;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Systems;
+using CalamityMod.Walls;
+using CalamityMod.Walls.DraedonStructures;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Scenes.MusicScenes
+namespace CalamityMod.Scenes.MusicScenes
 {
     public class BioLabMusicScene : ModSceneEffect
     {

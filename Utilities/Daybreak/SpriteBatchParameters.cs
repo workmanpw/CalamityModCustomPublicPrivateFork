@@ -3,7 +3,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+namespace CalamityMod.Utilities.Daybreak;
 
 /// <summary>
 ///     Wraps the parameters of a <see cref="SpriteBatch"/> initialization,

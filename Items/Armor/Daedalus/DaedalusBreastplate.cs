@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Daedalus
+namespace CalamityMod.Items.Armor.Daedalus
 {
     [AutoloadEquip(EquipType.Body)]
     public class DaedalusBreastplate : ModItem, ILocalizedModType
@@ -19,7 +19,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Armor.Daedalus
             if (Main.dedServ)
                 return;
 
-            EquipLoader.AddEquipTexture(Mod, "CalamityModCustomPublicPrivateFork/Items/Armor/Daedalus/DaedalusBreastplate_Waist", EquipType.Waist, this);
+            EquipLoader.AddEquipTexture(Mod, "CalamityMod/Items/Armor/Daedalus/DaedalusBreastplate_Waist", EquipType.Waist, this);
         }
 
         public override void SetDefaults()

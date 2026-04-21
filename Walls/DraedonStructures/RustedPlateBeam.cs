@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Walls.DraedonStructures
+namespace CalamityMod.Walls.DraedonStructures
 {
     public class RustedPlateBeam : ModWall
     {

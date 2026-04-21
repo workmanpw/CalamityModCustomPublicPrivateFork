@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria.Audio;
 using Terraria.Localization;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public class ChaosState : CooldownHandler
     {
@@ -10,11 +10,11 @@ namespace CalamityModCustomPublicPrivateFork.Cooldowns
 
         public override bool ShouldDisplay => CalamityClientConfig.Instance.VanillaCooldownDisplay && instance.player.chaosState;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/ChaosState" + skinTexture;
+        public override string Texture => "CalamityMod/Cooldowns/ChaosState" + skinTexture;
         public override Color OutlineColor => outlineColor;
         public override Color CooldownStartColor => Color.Lerp(cooldownColorStart, cooldownColorEnd, 1 - instance.Completion);
         public override Color CooldownEndColor => Color.Lerp(cooldownColorStart, cooldownColorEnd, 1 - instance.Completion);
-        public override SoundStyle? EndSound => new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/ChaosStateOver");
+        public override SoundStyle? EndSound => new("CalamityMod/Sounds/Custom/AbilitySounds/ChaosStateOver");
 
         //It's the same cooldown with different skins each time, basically.
         public string skinTexture;

@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class PolypLauncherShrapnel : ModProjectile, ILocalizedModType
     {
@@ -50,11 +50,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (Projectile.ai[0] == 1f)
             {
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/PolypLauncherShrapnel2").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/PolypLauncherShrapnel2").Value;
             }
             if (Projectile.ai[0] == 2f)
             {
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/PolypLauncherShrapnel3").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/PolypLauncherShrapnel3").Value;
             }
             Main.EntitySpriteDraw(texture, Projectile.Center - Main.screenPosition, new Rectangle?(new Rectangle(0, 0, texture.Width, texture.Height)), Projectile.GetAlpha(lightColor), Projectile.rotation, texture.Size() / 2f, Projectile.scale, SpriteEffects.None, 0);
             return false;

@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Balancing;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor;
-using CalamityModCustomPublicPrivateFork.Items.Armor.GodSlayer;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Balancing;
+using CalamityMod.CalPlayer;
+using CalamityMod.Cooldowns;
+using CalamityMod.Enums;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor;
+using CalamityMod.Items.Armor.GodSlayer;
+using CalamityMod.Systems.Collections;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Events;
@@ -18,7 +18,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.Player;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public static partial class CalamityUtils
     {

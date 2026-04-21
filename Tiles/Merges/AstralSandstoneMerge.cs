@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralDesert;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.AstralDesert;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Merges
+namespace CalamityMod.Tiles.Merges
 {
     public sealed class AstralSandstoneMerge : TileBlendTexture
     {

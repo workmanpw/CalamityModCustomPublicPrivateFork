@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
+namespace CalamityMod.Projectiles.Pets
 {
     public class EidolonSnail : ModProjectile, ILocalizedModType
     {
@@ -38,7 +38,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/EidolonSnail").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/EidolonSnail").Value;
 
             int height = texture.Height / Main.projFrames[Type];
             int frameHeight = height * Projectile.frame;
@@ -53,7 +53,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
 
         public override void PostDraw(Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Pets/EidolonSnailGlow").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Pets/EidolonSnailGlow").Value;
 
             int height = texture.Height / Main.projFrames[Type];
             int frameHeight = height * Projectile.frame;

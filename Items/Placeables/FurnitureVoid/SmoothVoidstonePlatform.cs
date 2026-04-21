@@ -1,5 +1,5 @@
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureVoid
+namespace CalamityMod.Items.Placeables.FurnitureVoid
 {
     public class SmoothVoidstonePlatform : ModItem, ILocalizedModType
     {

@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureDriftwood;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
+using CalamityMod.Items.Placeables.FurnitureDriftwood;
+using CalamityMod.Tiles.SunkenSea.Ambient;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
+namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 {
     public class DriftwoodMastEcho : DriftwoodMast
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/DriftwoodMast";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/DriftwoodMast";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

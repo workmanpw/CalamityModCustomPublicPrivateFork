@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.Yharon;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.Yharon;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class YharonPhase1MusicScene : BaseMusicSceneEffect
     {

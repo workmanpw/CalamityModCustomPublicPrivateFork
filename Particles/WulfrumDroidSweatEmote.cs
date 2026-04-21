@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class WulfrumDroidSweatEmote : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/WulfrumDroidSweatEmote";
+        public override string Texture => "CalamityMod/Particles/WulfrumDroidSweatEmote";
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;
 

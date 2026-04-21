@@ -1,12 +1,12 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Utilities;
+using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class TheAtomSplitterProjectile : ModProjectile, ILocalizedModType
     {
@@ -19,7 +19,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public ref float HitTargetIndex => ref Projectile.ai[0];
         public ref float Time => ref Projectile.ai[1];
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/TheAtomSplitter";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/TheAtomSplitter";
 
         public override void SetDefaults()
         {

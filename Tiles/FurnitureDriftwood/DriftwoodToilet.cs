@@ -9,7 +9,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureDriftwood
+namespace CalamityMod.Tiles.FurnitureDriftwood
 {
     public class DriftwoodToilet : ModTile
     {

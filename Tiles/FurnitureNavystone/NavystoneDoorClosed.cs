@@ -4,7 +4,7 @@ using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone
+namespace CalamityMod.Tiles.FurnitureNavystone
 {
     public class NavystoneDoorClosed : ModTile
     {

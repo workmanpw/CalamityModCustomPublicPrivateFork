@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,13 +7,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class RealityRuptureStealth : ModProjectile, ILocalizedModType
     {
-        public static readonly SoundStyle Hitsound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/RealityRuptureStealthHit") { Volume = 1.2f, PitchVariance = 0.3f };
+        public static readonly SoundStyle Hitsound = new("CalamityMod/Sounds/Item/RealityRuptureStealthHit") { Volume = 1.2f, PitchVariance = 0.3f };
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/RealityRupture";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/RealityRupture";
         public bool posthit = false;
         public int Time = 0;
         public override void SetDefaults()

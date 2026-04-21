@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
+using CalamityMod.Projectiles.Healing;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class BloodsoakedCrashax : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/BloodsoakedCrasher";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/BloodsoakedCrasher";
 
         private int bounce = 3; //number of times it bounces
         private int grind = 0; //used to know when to slow down

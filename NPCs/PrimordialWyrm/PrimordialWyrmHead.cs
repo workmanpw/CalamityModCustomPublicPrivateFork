@@ -1,19 +1,19 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Pets;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Abyss;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.NPCs.Abyss;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Pets;
+using CalamityMod.Items.Placeables.Abyss;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Potions;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.NPCs.Abyss;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.Sounds;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -24,7 +24,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm
+namespace CalamityMod.NPCs.PrimordialWyrm
 {
     [AutoloadBossHead]
     [LongDistanceNetSync]
@@ -80,10 +80,10 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm
         private const float fastChargeGateValue = 120f;
 
         //Sounds
-        public static readonly SoundStyle SpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Scare");
+        public static readonly SoundStyle SpawnSound = new("CalamityMod/Sounds/Custom/Scare");
 
-        public static readonly SoundStyle ChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PrimordialWyrmCharge");
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/PrimordialWyrmDeath");
+        public static readonly SoundStyle ChargeSound = new("CalamityMod/Sounds/Custom/PrimordialWyrmCharge");
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/PrimordialWyrmDeath");
 
         public static Asset<Texture2D> GlowTexture;
 
@@ -157,7 +157,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm
                 //AAAAAAAAAAAAH Scary abyss superboss guy so he gets pitch black bg and no biome source.
                 //eidolon wyrm comment jumpscare!!!!!!
                 new MoonLordPortraitBackgroundProviderBestiaryInfoElement(),
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.PrimordialWyrm")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.PrimordialWyrm")
             });
         }
 

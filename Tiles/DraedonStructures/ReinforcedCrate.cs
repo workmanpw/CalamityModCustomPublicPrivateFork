@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
+namespace CalamityMod.Tiles.DraedonStructures
 {
     public class ReinforcedCrate : ModTile
     {
@@ -48,7 +48,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures
             int xFrameOffset = Main.tile[i, j].TileFrameX;
             int yFrameOffset = Main.tile[i, j].TileFrameY;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/DraedonStructures/ReinforcedCrateGlow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/DraedonStructures/ReinforcedCrateGlow");
             Texture2D glowmask = GlowTexture.Value;
 
             Vector2 drawOffest = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);

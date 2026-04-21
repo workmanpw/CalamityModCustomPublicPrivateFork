@@ -5,13 +5,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class PwnagehammerEcho : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public static readonly SoundStyle BigSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PwnagehammerBigImpact") { Volume = 0.6f };
-        public static readonly SoundStyle Kunk = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TF2PanHit") { Volume = 1.1f };
+        public static readonly SoundStyle BigSound = new("CalamityMod/Sounds/Item/PwnagehammerBigImpact") { Volume = 0.6f };
+        public static readonly SoundStyle Kunk = new("CalamityMod/Sounds/Item/TF2PanHit") { Volume = 1.1f };
         public int Explodamage = 0;
         public float speed = 0f;
         public NPC targeted;

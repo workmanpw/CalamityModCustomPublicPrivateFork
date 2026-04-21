@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityMod.Items.Placeables.SunkenSea;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent;
@@ -6,11 +6,11 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
+namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 {
     public class MediumCoralEcho : ModTile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/MediumCoral";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/MediumCoral";
 
         public override void SetStaticDefaults()
         {
@@ -45,7 +45,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
 
     public class MediumCoral2Echo : MediumCoralEcho
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/MediumCoral2";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/MediumCoral2";
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
@@ -57,7 +57,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
 
     public class MediumCoral3Echo : MediumCoralEcho
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/MediumCoral3";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/MediumCoral3";
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {

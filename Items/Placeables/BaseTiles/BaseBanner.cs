@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Tiles;
+using CalamityMod.Tiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables
+namespace CalamityMod.Items.Placeables
 {
     public abstract class BaseBanner : ModItem, ILocalizedModType
     {

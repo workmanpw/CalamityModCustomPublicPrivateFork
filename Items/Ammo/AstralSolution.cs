@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Projectiles.Typeless;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Ammo
+namespace CalamityMod.Items.Ammo
 {
     public class AstralSolution : ModItem, ILocalizedModType
     {

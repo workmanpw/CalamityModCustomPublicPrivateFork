@@ -1,11 +1,11 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class CuteManaStarParticle : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/CuteStars";
+        public override string Texture => "CalamityMod/Particles/CuteStars";
         public override bool UseCustomDraw => false;
         public override bool SetLifetime => true;
         public override int FrameVariants => 2;

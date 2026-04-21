@@ -9,7 +9,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.Utilities;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.MusicBoxes
+namespace CalamityMod.Tiles.MusicBoxes
 {
     [LegacyName("DraedonsAmbienceMusicBoxTile", "DraedonsAmbienceMusicBox")]
     public class DraedonExoSelectMusicBox : ModTile

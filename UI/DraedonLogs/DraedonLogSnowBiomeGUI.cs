@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityMod.Items.DraedonMisc;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DraedonLogs
+namespace CalamityMod.UI.DraedonLogs
 {
     public class DraedonLogSnowBiomeGUI : DraedonsLogGUI
     {
@@ -16,11 +16,11 @@ namespace CalamityModCustomPublicPrivateFork.UI.DraedonLogs
             switch (Page)
             {
                 case 0:
-                    return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonLogs/DraedonsLogIceBiome").Value;
+                    return ModContent.Request<Texture2D>("CalamityMod/UI/DraedonLogs/DraedonsLogIceBiome").Value;
                 case 1:
                     return null;
                 default:
-                    return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonLogs/DraedonsLogPermafrost").Value;
+                    return ModContent.Request<Texture2D>("CalamityMod/UI/DraedonLogs/DraedonsLogPermafrost").Value;
             }
         }
     }

@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class RainbowGlowSparkParticle : Particle
     {
@@ -21,7 +21,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public override bool UseAdditiveBlend => true;
 
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/GlowSpark";
+        public override string Texture => "CalamityMod/Particles/GlowSpark";
 
         public RainbowGlowSparkParticle(Vector2 relativePosition, Vector2 velocity, bool affectedByGravity, int lifetime, float scale, Color initialColor, Vector2 squash, bool quickShrink = false, bool glow = true, float shrinkSpeed = 1, float hueShift = 0)
         {
@@ -76,7 +76,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
                 DateTime day = DateTime.Now;
                 if (day.DayOfWeek == DayOfWeek.Tuesday)
                 {
-                    Texture2D joke = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/MammothParticle").Value;
+                    Texture2D joke = ModContent.Request<Texture2D>("CalamityMod/Particles/MammothParticle").Value;
                     scaleMult = (MathHelper.Lerp(texture.Size().X / joke.Size().X, texture.Size().Y / joke.Size().Y, 0.5f));
                     texture = joke;
                 }

@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,15 +9,15 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class AnomalysNanogunPlasmaBeam : BaseLaserbeamProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/YharimsCrystalBeam";
+        public override string Texture => "CalamityMod/Projectiles/Magic/YharimsCrystalBeam";
 
         // All 3 point to the same so that BaseLaserbeamProjectile can still be used with an animated laser
-        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/AnomalysNanogunPlasmaBeam", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/AnomalysNanogunPlasmaBeam", AssetRequestMode.ImmediateLoad).Value;
         public override Texture2D LaserMiddleTexture => LaserBeginTexture;
         public override Texture2D LaserEndTexture => LaserBeginTexture;
 
@@ -74,9 +74,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                     //GeneralParticleHandler.SpawnParticle(pulse);
                     for (int i = 0; i < 2; i++)
                     {
-                        Particle pulse2 = new CustomPulse(Projectile.Center + MathHelper.WrapAngle(Projectile.rotation + MathHelper.PiOver2).ToRotationVector2() * step, Vector2.Zero, Color.Red, "CalamityModCustomPublicPrivateFork/Particles/SmallBloomRing", new Vector2(0.4f, 1.1f), MathHelper.WrapAngle(Projectile.rotation + MathHelper.PiOver2), 0.1f, 1f, 12);
+                        Particle pulse2 = new CustomPulse(Projectile.Center + MathHelper.WrapAngle(Projectile.rotation + MathHelper.PiOver2).ToRotationVector2() * step, Vector2.Zero, Color.Red, "CalamityMod/Particles/SmallBloomRing", new Vector2(0.4f, 1.1f), MathHelper.WrapAngle(Projectile.rotation + MathHelper.PiOver2), 0.1f, 1f, 12);
                         GeneralParticleHandler.SpawnParticle(pulse2);
-                        Particle pulse3 = new CustomPulse(Projectile.Center + MathHelper.WrapAngle(Projectile.rotation + MathHelper.PiOver2).ToRotationVector2() * step, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/SmallBloomRing", new Vector2(0.4f, 1.1f), MathHelper.WrapAngle(Projectile.rotation + MathHelper.PiOver2), 0.1f, 0.9f, 12);
+                        Particle pulse3 = new CustomPulse(Projectile.Center + MathHelper.WrapAngle(Projectile.rotation + MathHelper.PiOver2).ToRotationVector2() * step, Vector2.Zero, Color.White, "CalamityMod/Particles/SmallBloomRing", new Vector2(0.4f, 1.1f), MathHelper.WrapAngle(Projectile.rotation + MathHelper.PiOver2), 0.1f, 0.9f, 12);
                         GeneralParticleHandler.SpawnParticle(pulse3);
                     }
                     step += 100;

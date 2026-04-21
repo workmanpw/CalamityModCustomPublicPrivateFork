@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Projectiles.Melee.Yoyos;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     [LegacyName("TheEyeofCalamitas")]
     public class Oblivion : ModItem, ILocalizedModType

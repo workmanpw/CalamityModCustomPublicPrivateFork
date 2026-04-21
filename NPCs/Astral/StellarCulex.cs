@@ -1,11 +1,11 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.BiomeManagers.BestiaryCategories;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.BiomeManagers.BestiaryCategories;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -15,7 +15,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
+namespace CalamityMod.NPCs.Astral
 {
     public class StellarCulex : ModNPC
     {
@@ -24,7 +24,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
         public override void SetStaticDefaults()
         {
             if (!Main.dedServ)
-                glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Astral/StellarCulexGlow", AssetRequestMode.AsyncLoad);
+                glowmask = ModContent.Request<Texture2D>("CalamityMod/NPCs/Astral/StellarCulexGlow", AssetRequestMode.AsyncLoad);
             Main.npcFrameCount[Type] = 4;
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
@@ -64,7 +64,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.StellarCulex")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.StellarCulex")
             });
         }
 

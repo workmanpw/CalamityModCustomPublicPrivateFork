@@ -1,5 +1,5 @@
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureMarnite
+namespace CalamityMod.Items.Placeables.FurnitureMarnite
 {
     public class PolishedMarnitePlatform : ModItem, ILocalizedModType
     {

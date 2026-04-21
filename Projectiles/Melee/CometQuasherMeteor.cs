@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,7 +6,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class CometQuasherMeteor : ModProjectile, ILocalizedModType
     {
@@ -92,10 +92,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                     tex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
                     break;
                 case 1:
-                    tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/CometQuasherMeteor2").Value;
+                    tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/CometQuasherMeteor2").Value;
                     break;
                 case 2:
-                    tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/CometQuasherMeteor3").Value;
+                    tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/CometQuasherMeteor3").Value;
                     break;
             }
 
@@ -135,9 +135,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 Particle spark3 = new GlowOrbParticle(Projectile.Center, Vector2.One.RotatedByRandom(100) * Main.rand.NextFloat(3.5f, 9), false, 20, Main.rand.NextFloat(0.5f, 1f), Main.rand.NextBool(5) ? Color.AliceBlue : Color.DodgerBlue, true, false, false);
                 GeneralParticleHandler.SpawnParticle(spark3);
             }
-            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 2f, 1f, 25, true);
+            Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, mainColor * 0.7f, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 2f, 1f, 25, true);
             GeneralParticleHandler.SpawnParticle(blastRing);
-            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f, 0.3f, 25, true);
+            Particle blastRing2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White * 0.7f, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(-10, 10), 1f, 0.3f, 25, true);
             GeneralParticleHandler.SpawnParticle(blastRing2);
         }
         public override bool? CanCutTiles() => false;

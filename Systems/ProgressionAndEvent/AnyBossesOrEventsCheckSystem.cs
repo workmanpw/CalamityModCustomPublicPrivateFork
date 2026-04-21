@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Skies;
+using CalamityMod.CalPlayer;
+using CalamityMod.NPCs;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Skies;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class AnyBossesOrEventsCheckSystem : ModSystem
     {

@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.IO;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.World.Planets
+namespace CalamityMod.World.Planets
 {
     public class Planetoid : MicroBiome
     {

@@ -1,8 +1,8 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,12 +11,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class ChainedMeatHook : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedHook";
+        public override string Texture => "CalamityMod/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedHook";
         public Player Owner => Main.player[Projectile.owner];
 
         public float Timer => MaxTwirlTime - Projectile.timeLeft;
@@ -123,8 +123,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D handle = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedHookBody").Value;
-            Texture2D blade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedHook").Value;
+            Texture2D handle = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedHookBody").Value;
+            Texture2D blade = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedHook").Value;
 
             float drawAngle = (Projectile.Center - Owner.Center).ToRotation();
             float drawRotation = drawAngle + MathHelper.PiOver4;
@@ -153,7 +153,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public void DrawChain()
         {
-            Texture2D chainTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedChain").Value;
+            Texture2D chainTex = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_LamentationsOfTheChainedChain").Value;
 
             int dist = (int)Vector2.Distance(Owner.Center, Projectile.Center) / 16;
             Vector2[] Nodes = new Vector2[dist + 1];

@@ -1,23 +1,23 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class ArkoftheAncientsSwungBlade : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/FracturedArk";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/FracturedArk";
 
         private bool initialized = false;
         Vector2 direction = Vector2.Zero;
@@ -118,8 +118,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D sword = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/FracturedArk").Value;
-            Texture2D glowmask = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/FracturedArkGlow").Value;
+            Texture2D sword = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/FracturedArk").Value;
+            Texture2D glowmask = Request<Texture2D>("CalamityMod/Items/Weapons/Melee/FracturedArkGlow").Value;
 
             SpriteEffects flip = Owner.direction < 0 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
             float extraAngle = Owner.direction < 0 ? MathHelper.PiOver2 : 0f;

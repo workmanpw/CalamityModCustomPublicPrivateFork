@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class ApoctolithExplosion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetDefaults()
         {
@@ -30,10 +30,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                 float screenShakePower = 7 * Utils.GetLerpValue(1300f, 0f, Projectile.Distance(Main.LocalPlayer.Center), true);
                 Main.LocalPlayer.SetScreenshake(screenShakePower);
 
-                CustomPulse blastRing1 = new(Projectile.Center, Vector2.Zero, Color.Blue, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.05f, 0.35f, 15);
+                CustomPulse blastRing1 = new(Projectile.Center, Vector2.Zero, Color.Blue, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.05f, 0.35f, 15);
                 GeneralParticleHandler.SpawnParticle(blastRing1);
 
-                CustomPulse blastRing2 = new(Projectile.Center, Vector2.Zero, Color.Blue, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", new(1f, 0.5f), 0, 0.05f, 0.35f, 20);
+                CustomPulse blastRing2 = new(Projectile.Center, Vector2.Zero, Color.Blue, "CalamityMod/Particles/FlameExplosion", new(1f, 0.5f), 0, 0.05f, 0.35f, 20);
                 GeneralParticleHandler.SpawnParticle(blastRing2);
 
                 Projectile.ai[0] = 1f;

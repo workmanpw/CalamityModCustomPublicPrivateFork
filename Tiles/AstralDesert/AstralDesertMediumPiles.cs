@@ -1,11 +1,11 @@
 
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.AstralDesert
+namespace CalamityMod.Tiles.AstralDesert
 {
     public class AstralDesertMediumPiles : ModTile
     {

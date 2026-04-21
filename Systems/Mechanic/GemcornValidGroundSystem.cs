@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Systems;
+namespace CalamityMod.Systems;
 
 internal sealed class GemcornValidGroundSystem : ModSystem
 {

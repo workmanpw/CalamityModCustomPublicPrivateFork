@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -12,12 +12,12 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class NorfleetCannon : ModProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<Norfleet>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/Norfleet";
+        public override string Texture => "CalamityMod/Items/Weapons/Ranged/Norfleet";
 
         public Color StaticEffectsColor = Color.Gray;
         private ref float ShootingTimer => ref Projectile.ai[0];
@@ -186,7 +186,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 Vector2 tipPosition = Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.Zero).RotatedBy(-0.05f * Projectile.direction) * 73f;
 
                 // Spawns the projectile.
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NorfleetFire");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/NorfleetFire");
                 SoundEngine.PlaySound(fire with { Volume = 0.9f, PitchVariance = 0.25f }, Projectile.Center);
                 Owner.Calamity().NorfleetCounter++;
 
@@ -252,7 +252,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (PostFireCooldown == 207)
             {
                 OffsetLength -= 24f;
-                SoundStyle charge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NorfleetRecharge");
+                SoundStyle charge = new("CalamityMod/Sounds/Item/NorfleetRecharge");
                 NorfleetRecharge = SoundEngine.PlaySound(charge with { Volume = 1f }, Projectile.Center);
                 recharging = true;
             }
@@ -297,7 +297,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                         GeneralParticleHandler.SpawnParticle(pulse);
                     }
 
-                    SoundStyle click = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire");
+                    SoundStyle click = new("CalamityMod/Sounds/Item/DudFire");
                     SoundEngine.PlaySound(click with { Volume = 1f, Pitch = 0.7f }, Projectile.Center);
                     Owner.Calamity().NorfleetCounter = 0;
                 }
@@ -330,7 +330,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             if (Main.zenithWorld && Main.rand.NextBool(1000))
             {
                 PUNISHMENTMODE = true;
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/NuhUhUh"), Owner.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/NuhUhUh"), Owner.Center);
             }
         }
 
@@ -346,8 +346,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
             Vector2 tipPosition = Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.Zero).RotatedBy(-0.05f * Projectile.direction) * 73f;
 
-            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/NorfleetGhostGlowmask").Value;
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Ranged/Norfleet").Value;
+            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/NorfleetGhostGlowmask").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Ranged/Norfleet").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Projectile.GetAlpha(lightColor);
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f);
@@ -359,14 +359,14 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 for (int i = 0; i < 3; i++)
                 {
                     Color auraColor = mainColor * 0.25f;
-                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Ranged/NorfleetGhost").Value;
+                    Texture2D centerTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Ranged/NorfleetGhost").Value;
                     Vector2 rotationalDrawOffset = (MathHelper.TwoPi * i / 7f + Main.GlobalTimeWrappedHourly * 50f).ToRotationVector2();
                     rotationalDrawOffset *= MathHelper.Lerp(3f, 5.25f, (float)Math.Cos(Main.GlobalTimeWrappedHourly * 4f) * 0.5f + 0.5f);
                     Main.EntitySpriteDraw(centerTexture, Projectile.Center - Main.screenPosition + rotationalDrawOffset, null, auraColor, drawRotation, centerTexture.Size() * 0.5f, Projectile.scale * MathHelper.Clamp(1.35f * Utils.GetLerpValue(-200, 297, PostFireCooldown, true), 1, 1.35f), flipSprite, 0f);
                 }
             }
 
-            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D rechargeTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
 
             Main.EntitySpriteDraw(texture, drawPosition, null, drawColor, drawRotation, rotationPoint, Projectile.scale, flipSprite);
             Main.EntitySpriteDraw(glowTexture, drawPosition, null, PUNISHMENTMODE ? Color.Red : mainColor, drawRotation, rotationPoint, Projectile.scale, flipSprite);

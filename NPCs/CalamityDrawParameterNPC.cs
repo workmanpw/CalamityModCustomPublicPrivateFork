@@ -1,11 +1,11 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares;
+using CalamityMod.NPCs.DevourerofGods;
+using CalamityMod.NPCs.ExoMechs.Ares;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs
+namespace CalamityMod.NPCs
 {
     // Why this class is exist?
     // It because we want to avoid Threading Issues while We using NPC's properties on Draw Thread

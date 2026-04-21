@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak.Buffers;
+using CalamityMod.Utilities.Daybreak.Buffers;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -14,7 +14,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public static partial class CalamityUtils
     {
@@ -417,7 +417,7 @@ namespace CalamityModCustomPublicPrivateFork
             start -= Main.screenPosition;
             end -= Main.screenPosition;
 
-            Texture2D line = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Line").Value;
+            Texture2D line = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Line").Value;
             float rotation = (end - start).ToRotation();
             Vector2 scale = new Vector2(Vector2.Distance(start, end) / line.Width, width);
 

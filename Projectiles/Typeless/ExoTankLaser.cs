@@ -4,13 +4,13 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     // Modified clone of Atlas Munitions Laser to circumvent the minion attack type tag
     public class ExoTankLaser : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Summon/AtlasMunitionsLaserOverdrive";
+        public override string Texture => "CalamityMod/Projectiles/Summon/AtlasMunitionsLaserOverdrive";
 
         public override void SetStaticDefaults() => Main.projFrames[Type] = 4;
 

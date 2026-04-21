@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Enums;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Enums;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,12 +10,12 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class HolyLight : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/StarProj";
+        public override string Texture => "CalamityMod/Projectiles/StarProj";
 
         public override void SetDefaults()
         {
@@ -39,7 +39,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
                 SoundEngine.PlaySound(soundStyle, Projectile.Center);
 
                 Color col = new Color(54, 209, 54);
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, col, "CalamityModCustomPublicPrivateFork/Particles/BlastCone", new Vector2(Main.rand.NextFloat(4f, 7f), 1.5f), Vector2.Zero.AngleTo(Projectile.velocity), 1f, 0f, 30));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, col, "CalamityMod/Particles/BlastCone", new Vector2(Main.rand.NextFloat(4f, 7f), 1.5f), Vector2.Zero.AngleTo(Projectile.velocity), 1f, 0f, 30));
             }
         }
 
@@ -116,11 +116,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
         public override void OnKill(int timeLeft)
         {
             SoundEngine.PlaySound(SoundID.Item14 with { Pitch = -0.3f, Volume = 0.7f }, Projectile.Center);
-            SoundStyle fireHeal = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlantyMushMine", 3);
+            SoundStyle fireHeal = new("CalamityMod/Sounds/Custom/PlantyMushMine", 3);
             SoundEngine.PlaySound(fireHeal with { Volume = 0.5f, Pitch = 0.3f }, Projectile.Center);
             Color particleColor =  new Color(54, 209, 54);
             Color smokeColor = Color.Lerp(particleColor, Color.DarkSlateGray, 0.5f);
-            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, smokeColor, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.06f, 18);
+            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, smokeColor, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.06f, 18);
             GeneralParticleHandler.SpawnParticle(pulse);
             for (int i = 0; i < 7; i++)
             {

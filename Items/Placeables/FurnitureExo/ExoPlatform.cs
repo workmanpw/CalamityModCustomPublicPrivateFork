@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo;
+using CalamityMod.Tiles.FurnitureExo;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo
+namespace CalamityMod.Items.Placeables.FurnitureExo
 {
     public class ExoPlatform : ModItem, ILocalizedModType
     {

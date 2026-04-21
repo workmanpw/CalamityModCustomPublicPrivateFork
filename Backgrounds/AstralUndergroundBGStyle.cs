@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Backgrounds
+namespace CalamityMod.Backgrounds
 {
     public class AstralUndergroundBGStyle : ModUndergroundBackgroundStyle
     {
@@ -19,14 +19,14 @@ namespace CalamityModCustomPublicPrivateFork.Backgrounds
             if (Main.dedServ)
                 return;
 
-            AUBG0 = BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralUG0");
-            AUBG1 = BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralUG1");
-            AUBG2 = BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralUG2");
-            AUBG3 = BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralUG3");
+            AUBG0 = BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralUG0");
+            AUBG1 = BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralUG1");
+            AUBG2 = BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralUG2");
+            AUBG3 = BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralUG3");
 
-            AUBG4_0 = BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralUG4_0");
-            AUBG4_1 = BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralUG4_1");
-            AUBG4_2 = BackgroundTextureLoader.GetBackgroundSlot("CalamityModCustomPublicPrivateFork/Backgrounds/AstralUG4_2");
+            AUBG4_0 = BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralUG4_0");
+            AUBG4_1 = BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralUG4_1");
+            AUBG4_2 = BackgroundTextureLoader.GetBackgroundSlot("CalamityMod/Backgrounds/AstralUG4_2");
         }
 
         public override void FillTextureArray(int[] textureSlots)

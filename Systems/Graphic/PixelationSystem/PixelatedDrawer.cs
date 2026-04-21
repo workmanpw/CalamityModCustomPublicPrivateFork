@@ -1,9 +1,9 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Enums;
+using CalamityMod.Enums;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Graphic.PixelationSystem
+namespace CalamityMod.Systems.Graphic.PixelationSystem
 {
     /// <summary>
     /// Contains a singular Action function which is used to draw any relevant asset(s) automatically with a pixelated effect based on the specified <see cref="GeneralDrawLayer"/>.

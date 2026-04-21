@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.Dusts.WaterSplash
+namespace CalamityMod.Dusts.WaterSplash
 {
     public class CragsLavaSplash : LavaSplashDust
     {

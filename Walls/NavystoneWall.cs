@@ -3,12 +3,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Walls
+namespace CalamityMod.Walls
 {
     [LegacyName("NavystoneWallSafe")]
     public class NavystoneWall : ModWall, IVisibleThroughWater
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Walls/NavystoneWall";
+        public override string Texture => "CalamityMod/Walls/NavystoneWall";
         int IVisibleThroughWater.WaterMapEntry { get; set; }
         
         public override void SetStaticDefaults()

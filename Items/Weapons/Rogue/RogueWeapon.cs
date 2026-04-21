@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ID.ContentSamples.CreativeHelper;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
+namespace CalamityMod.Items.Weapons.Rogue
 {
     public abstract class RogueWeapon : ModItem, ILocalizedModType
     {

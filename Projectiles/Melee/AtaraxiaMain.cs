@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class AtaraxiaMain : ModProjectile, ILocalizedModType
     {
@@ -117,7 +117,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 int partLifetime = Main.rand.Next(13, 15 + 1);
                 float scale = Main.rand.NextFloat(0.12f, 0.18f);
                 Vector2 spawnPos = Projectile.Center + (Main.rand.NextVector2Circular(20, 20) * (k + 1));
-                Particle blastRing = new CustomPulse(spawnPos, Vector2.Zero, Color.Lerp(Color.DarkOrchid, Color.IndianRed, colorRando) * 0.6f, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale, partLifetime);
+                Particle blastRing = new CustomPulse(spawnPos, Vector2.Zero, Color.Lerp(Color.DarkOrchid, Color.IndianRed, colorRando) * 0.6f, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), 0.07f, scale, partLifetime);
                 GeneralParticleHandler.SpawnParticle(blastRing);
             }
         }

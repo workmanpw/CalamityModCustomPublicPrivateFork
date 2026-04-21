@@ -3,12 +3,12 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class StormSurgeTornado : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrinySpout";
+        public override string Texture => "CalamityMod/Projectiles/Melee/BrinySpout";
 
         public override void SetStaticDefaults()
         {

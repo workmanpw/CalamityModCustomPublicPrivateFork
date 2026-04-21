@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAcidwood;
+using CalamityMod.Tiles.FurnitureAcidwood;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAcidwood
+namespace CalamityMod.Items.Placeables.FurnitureAcidwood
 {
     public class AcidwoodBench : ModItem, ILocalizedModType
     {

@@ -1,75 +1,75 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Balancing;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.FluidSimulation;
-using CalamityModCustomPublicPrivateFork.Graphics;
-using CalamityModCustomPublicPrivateFork.Items;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Armor;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Auric;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Bloodflare;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Brimflame;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Daedalus;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Demonshade;
-using CalamityModCustomPublicPrivateFork.Items.Armor.DesertProwler;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Empyrean;
-using CalamityModCustomPublicPrivateFork.Items.Armor.LunicCorps;
-using CalamityModCustomPublicPrivateFork.Items.Armor.OmegaBlue;
-using CalamityModCustomPublicPrivateFork.Items.Armor.PlagueReaper;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Prismatic;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Silva;
-using CalamityModCustomPublicPrivateFork.Items.Armor.SnowRuffian;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Tarragon;
-using CalamityModCustomPublicPrivateFork.Items.Armor.TitanHeart;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Victide;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Wulfrum;
-using CalamityModCustomPublicPrivateFork.Items.Dyes;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Mounts;
-using CalamityModCustomPublicPrivateFork.Items.Mounts.Minecarts;
-using CalamityModCustomPublicPrivateFork.Items.PermanentBoosters;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Alcohol;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
-using CalamityModCustomPublicPrivateFork.Items.Tools.ClimateChange;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags.MiscGrabBags;
-using CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.ProfanedGuardians;
-using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
-using CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Shortswords;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.Systems.Mechanic;
-using CalamityModCustomPublicPrivateFork.Utilities;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Balancing;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.CalPlayer.Dashes;
+using CalamityMod.Cooldowns;
+using CalamityMod.DataStructures;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.FluidSimulation;
+using CalamityMod.Graphics;
+using CalamityMod.Items;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Accessories.Vanity;
+using CalamityMod.Items.Armor;
+using CalamityMod.Items.Armor.Auric;
+using CalamityMod.Items.Armor.Bloodflare;
+using CalamityMod.Items.Armor.Brimflame;
+using CalamityMod.Items.Armor.Daedalus;
+using CalamityMod.Items.Armor.Demonshade;
+using CalamityMod.Items.Armor.DesertProwler;
+using CalamityMod.Items.Armor.Empyrean;
+using CalamityMod.Items.Armor.LunicCorps;
+using CalamityMod.Items.Armor.OmegaBlue;
+using CalamityMod.Items.Armor.PlagueReaper;
+using CalamityMod.Items.Armor.Prismatic;
+using CalamityMod.Items.Armor.Silva;
+using CalamityMod.Items.Armor.SnowRuffian;
+using CalamityMod.Items.Armor.Tarragon;
+using CalamityMod.Items.Armor.TitanHeart;
+using CalamityMod.Items.Armor.Victide;
+using CalamityMod.Items.Armor.Wulfrum;
+using CalamityMod.Items.Dyes;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Mounts;
+using CalamityMod.Items.Mounts.Minecarts;
+using CalamityMod.Items.PermanentBoosters;
+using CalamityMod.Items.Placeables.Furniture;
+using CalamityMod.Items.Potions;
+using CalamityMod.Items.Potions.Alcohol;
+using CalamityMod.Items.Tools;
+using CalamityMod.Items.Tools.ClimateChange;
+using CalamityMod.Items.TreasureBags.MiscGrabBags;
+using CalamityMod.Items.VanillaArmorChanges;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.ProfanedGuardians;
+using CalamityMod.NPCs.Ravager;
+using CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Projectiles.Melee.Shortswords;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Systems;
+using CalamityMod.Systems.Collections;
+using CalamityMod.Systems.Mechanic;
+using CalamityMod.Utilities;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -88,7 +88,7 @@ using Terraria.WorldBuilding;
 using static Terraria.Main;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer
+namespace CalamityMod.CalPlayer
 {
     public partial class CalamityPlayer : ModPlayer
     {
@@ -240,7 +240,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
 
         #region Speedrun Timer
         // The Calamity Speedrun Timer uses the highest precision timing available to .NET and thus to the system hardware.
-        // Current session time is maintained by CalamityModCustomPublicPrivateFork.SpeedrunTimer, which is a C# Stopwatch running constantly while a player is loaded.
+        // Current session time is maintained by CalamityMod.SpeedrunTimer, which is a C# Stopwatch running constantly while a player is loaded.
         // Total time is calculated on demand by adding the current stopwatch time to the previous session total.
         // This allows time to be tracked accurately through multiple save and quits.
         internal TimeSpan previousSessionTotal;
@@ -465,24 +465,24 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
         private const int FullRageSoundDelay = 300; // The "Rage full" sound cannot play for 5 seconds after Rage has filled. This stops it from jittering.
         public bool playFullAdrenalineSound = true;
 
-        public static readonly SoundStyle RageFilledSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/FullRage");
-        public static readonly SoundStyle RageActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/RageActivate");
-        public static readonly SoundStyle RageEndSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/RageEnd");
+        public static readonly SoundStyle RageFilledSound = new("CalamityMod/Sounds/Custom/AbilitySounds/FullRage");
+        public static readonly SoundStyle RageActivationSound = new("CalamityMod/Sounds/Custom/AbilitySounds/RageActivate");
+        public static readonly SoundStyle RageEndSound = new("CalamityMod/Sounds/Custom/AbilitySounds/RageEnd");
 
-        public static readonly SoundStyle AdrenalineFilledSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/FullAdrenaline");
-        public static readonly SoundStyle AdrenalineActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/AdrenalineActivate");
-        public static readonly SoundStyle AdrenalineHurtSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AdrenalineMajorLoss");
-        public static readonly SoundStyle AdrenalineHurtGFB = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AdrenalineMajorLossGFB");
-        public static readonly SoundStyle NanomachinesActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/NanomachinesActivate");
+        public static readonly SoundStyle AdrenalineFilledSound = new("CalamityMod/Sounds/Custom/AbilitySounds/FullAdrenaline");
+        public static readonly SoundStyle AdrenalineActivationSound = new("CalamityMod/Sounds/Custom/AbilitySounds/AdrenalineActivate");
+        public static readonly SoundStyle AdrenalineHurtSound = new("CalamityMod/Sounds/Custom/AdrenalineMajorLoss");
+        public static readonly SoundStyle AdrenalineHurtGFB = new("CalamityMod/Sounds/Custom/AdrenalineMajorLossGFB");
+        public static readonly SoundStyle NanomachinesActivationSound = new("CalamityMod/Sounds/Custom/AbilitySounds/NanomachinesActivate");
 
-        public static readonly SoundStyle RogueStealthSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RogueStealth");
-        public static readonly SoundStyle DefenseDamageSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DefenseDamage");
+        public static readonly SoundStyle RogueStealthSound = new("CalamityMod/Sounds/Custom/RogueStealth");
+        public static readonly SoundStyle DefenseDamageSound = new("CalamityMod/Sounds/Custom/DefenseDamage");
 
-        public static readonly SoundStyle IjiDeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/IjiDies");
-        public static readonly SoundStyle DrownSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbyssDrown");
-        public static readonly SoundStyle LeonDeathNoiseRE4_ForGFB = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/GFB/LeonDeathNoiseRE4");
-        public static readonly SoundStyle BaroclawHit = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/DevourerSegmentBreak2") { Volume = 0.7f };
-        public static readonly SoundStyle AbsorberHit = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/SilvaActivation") { Volume = 0.7f };
+        public static readonly SoundStyle IjiDeathSound = new("CalamityMod/Sounds/Custom/IjiDies");
+        public static readonly SoundStyle DrownSound = new("CalamityMod/Sounds/Custom/AbyssDrown");
+        public static readonly SoundStyle LeonDeathNoiseRE4_ForGFB = new("CalamityMod/Sounds/Custom/GFB/LeonDeathNoiseRE4");
+        public static readonly SoundStyle BaroclawHit = new("CalamityMod/Sounds/NPCKilled/DevourerSegmentBreak2") { Volume = 0.7f };
+        public static readonly SoundStyle AbsorberHit = new("CalamityMod/Sounds/Custom/AbilitySounds/SilvaActivation") { Volume = 0.7f };
         #endregion
 
         #region Rogue
@@ -3486,7 +3486,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
             {
                 var source = Player.GetSource_Accessory(FindAccessory<AscendantInsignia>());
                 Projectile.NewProjectile(source, Player.Center - Vector2.UnitY * 45f, Vector2.Zero, ProjectileType<AscendantAura>(), 0, 0f);
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/AscendantActivate"));
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/AscendantActivate"));
                 ascendantInsigniaCooldown = AscendantInsignia.AbilityCooldown;
                 ascendantInsigniaBuffTime = AscendantInsignia.AbilityDuration;
             }
@@ -3509,10 +3509,10 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                 }
                 if (transformerVisual)
                 {
-                    SoundStyle activate = new("CalamityModCustomPublicPrivateFork/Sounds/Item/NullShot");
+                    SoundStyle activate = new("CalamityMod/Sounds/Item/NullShot");
                     for (int i = 0; i < 3; i++)
                         SoundEngine.PlaySound(activate with { Volume = 0.3f, Pitch = 0.2f + i * 0.3f, MaxInstances = -1 }, Player.Center);
-                    Particle orb2 = new CustomPulse(Player.Center, Vector2.Zero, Color.DodgerBlue, "CalamityModCustomPublicPrivateFork/Particles/BloomRingThinLarge", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.2f, 20);
+                    Particle orb2 = new CustomPulse(Player.Center, Vector2.Zero, Color.DodgerBlue, "CalamityMod/Particles/BloomRingThinLarge", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0, 0.2f, 20);
                     GeneralParticleHandler.SpawnParticle(orb2);
                 }
 
@@ -4346,7 +4346,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
 
                     // Play sound a bit early so it goes in time with the fall
                     if (gSabatonHotkeyFallWindup == 5 && !gSabatonFalling)
-                        SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/GravistarCharge") { Volume = 0.3f });
+                        SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/GravistarCharge") { Volume = 0.3f });
 
                     // 0.5 seconds passed, falling time
                     if (gSabatonHotkeyFallWindup == 20)
@@ -4985,7 +4985,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                 //Flashlight
                 //Due to being in postUpdate we need to adjust the mousepos for the player's movement that will have happened
                 var mouseworld = Main.MouseWorld + Player.position - Player.oldPosition;
-                EnhancedDarknessSystem.lights.Add(new(center: Player.Center + Player.DirectionTo(mouseworld) * 750f, rotation: Player.DirectionTo(mouseworld).ToRotation() - MathHelper.PiOver2, vectorScale: new Vector2(0.85f * abyssFlashlightWidthMultiplier, 0.75f), texture: Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineFade").Value));
+                EnhancedDarknessSystem.lights.Add(new(center: Player.Center + Player.DirectionTo(mouseworld) * 750f, rotation: Player.DirectionTo(mouseworld).ToRotation() - MathHelper.PiOver2, vectorScale: new Vector2(0.85f * abyssFlashlightWidthMultiplier, 0.75f), texture: Request<Texture2D>("CalamityMod/Particles/BloomLineFade").Value));
             }
 
             if (lastDeerclopsPosition.HasValue)

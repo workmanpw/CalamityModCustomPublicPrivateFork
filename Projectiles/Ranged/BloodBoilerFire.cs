@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Healing;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,12 +9,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class BloodBoilerFire : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         private bool playedSound = false;
         public int Time = 0;
@@ -66,12 +66,12 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                 //BloodBoilerMetaball2.SpawnParticle(Projectile.Center, particleSize * 2.3f);
                 //BloodBoilerMetaball.SpawnParticle(Projectile.Center, particleSize * 1.7f);
 
-                Particle beam3 = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/PearlParticleGlow", false, 10, 0.05f * particleSize, (!ChildSafety.Disabled ? Color.CornflowerBlue : Color.DarkRed), new Vector2(0.5f, 1), false, false, 0, false, false, 0f);
+                Particle beam3 = new CustomSpark(Projectile.Center, -Projectile.velocity * 0.1f, "CalamityMod/Particles/PearlParticleGlow", false, 10, 0.05f * particleSize, (!ChildSafety.Disabled ? Color.CornflowerBlue : Color.DarkRed), new Vector2(0.5f, 1), false, false, 0, false, false, 0f);
                 GeneralParticleHandler.SpawnParticle(beam3);
 
                 if (Main.rand.NextBool(8))
                 {
-                    Particle beam4 = new CustomSpark(Projectile.Center, Projectile.velocity * 0.1f, "CalamityModCustomPublicPrivateFork/Particles/WaterFoam", false, 5, 0.01f * particleSize, (!ChildSafety.Disabled ? Color.CornflowerBlue : Color.Red), new Vector2(1f, 1), true, false, Main.rand.NextFloat(-10, 10), false, false, 0f);
+                    Particle beam4 = new CustomSpark(Projectile.Center, Projectile.velocity * 0.1f, "CalamityMod/Particles/WaterFoam", false, 5, 0.01f * particleSize, (!ChildSafety.Disabled ? Color.CornflowerBlue : Color.Red), new Vector2(1f, 1), true, false, Main.rand.NextFloat(-10, 10), false, false, 0f);
                     GeneralParticleHandler.SpawnParticle(beam4);
                 }
 

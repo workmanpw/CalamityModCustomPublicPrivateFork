@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Cooldowns;
+using CalamityMod.DataStructures;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Potions
+namespace CalamityMod.Items.Potions
 {
     public class BottledPanacea : ModItem, ILocalizedModType
     {

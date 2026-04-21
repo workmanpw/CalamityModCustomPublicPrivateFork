@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,12 +12,12 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas
+namespace CalamityMod.NPCs.SupremeCalamitas
 {
     [LongDistanceNetSync]
     public class SepulcherHead : ModNPC
     {
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/SepulcherDeath");
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/SepulcherDeath");
 
         private const int minLength = 51;
         private const int maxLength = 52;
@@ -33,7 +33,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas
                 PortraitPositionXOverride = 30,
                 PortraitPositionYOverride = 0,
                 PortraitScale = 0.54f,
-                CustomTexturePath = "CalamityModCustomPublicPrivateFork/ExtraTextures/Bestiary/Sepulcher_Bestiary"
+                CustomTexturePath = "CalamityMod/ExtraTextures/Bestiary/Sepulcher_Bestiary"
             };
             value.Position.X += 80;
             value.Position.Y -= 13;
@@ -73,7 +73,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 new MoonLordPortraitBackgroundProviderBestiaryInfoElement(), // Gives black background
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Sepulcher")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Sepulcher")
             });
         }
 
@@ -355,7 +355,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SupremeCalamitas
                 Particle pulse = new DirectionalPulseRing(NPC.Center, Vector2.Zero, Color.Red, new Vector2(2f, 2f), 0, 0f, 0.9f, 25);
                 GeneralParticleHandler.SpawnParticle(pulse);
 
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/DeadSunRicochet") with { Pitch = -0.65f, Volume = 1.8f }, NPC.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/DeadSunRicochet") with { Pitch = -0.65f, Volume = 1.8f }, NPC.Center);
             }
         }
 

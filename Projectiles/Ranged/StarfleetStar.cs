@@ -1,19 +1,19 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class StarfleetStar : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public int time = 0;
         public Color c1 = new Color(146, 255, 211);
         public Color c2 = new Color(222, 225, 146);
@@ -55,7 +55,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
             if (time > 5 && time % 2 == 0)
             {
-                Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 28, Projectile.velocity, "CalamityModCustomPublicPrivateFork/Particles/DualTrail", false, 15, 0.11f, shiftColor * 0.6f, new Vector2(0.9f, 1.1f), shrinkSpeed: 0.5f);
+                Particle trail = new CustomSpark(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 28, Projectile.velocity, "CalamityMod/Particles/DualTrail", false, 15, 0.11f, shiftColor * 0.6f, new Vector2(0.9f, 1.1f), shrinkSpeed: 0.5f);
                 GeneralParticleHandler.SpawnParticle(trail);
 
                 if (time > 18)
@@ -84,8 +84,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         }
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D glowTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/LeonidStar").Value;
-            Texture2D tex2 = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/FadeStreak").Value;
+            Texture2D glowTexture = Request<Texture2D>("CalamityMod/Projectiles/Rogue/LeonidStar").Value;
+            Texture2D tex2 = Request<Texture2D>("CalamityMod/Particles/FadeStreak").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Projectile.GetAlpha(lightColor);
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f);

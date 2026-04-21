@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.AstralDesert
+namespace CalamityMod.Tiles.AstralDesert
 {
     public class HardenedAstralSand : ModTile
     {

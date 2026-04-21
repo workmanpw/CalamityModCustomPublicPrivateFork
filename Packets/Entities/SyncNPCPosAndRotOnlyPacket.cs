@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class SyncNPCPosAndRotOnlyPacket : CalamityPacket
     {

@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Astral;
+using CalamityMod.NPCs.Astral;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Critters
+namespace CalamityMod.Items.Critters
 {
     public class TwinklerItem : ModItem, ILocalizedModType
     {

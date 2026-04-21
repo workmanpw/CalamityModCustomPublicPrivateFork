@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
+namespace CalamityMod.CalPlayer.DrawLayers
 {
     public class AquaticHeartIceShieldLayer : PlayerDrawLayer
     {
@@ -14,7 +14,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
 
         protected override void Draw(ref PlayerDrawSet drawInfo)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/IceShield").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/IceShield").Value;
             int drawX = (int)(drawInfo.Center.X - Main.screenPosition.X);
             int drawY = (int)(drawInfo.Center.Y - Main.screenPosition.Y);
             drawInfo.DrawDataCache.Add(new DrawData(texture, new Vector2(drawX, drawY), null, Color.White, 0f, texture.Size() * 0.5f, 1f, SpriteEffects.None, 0));

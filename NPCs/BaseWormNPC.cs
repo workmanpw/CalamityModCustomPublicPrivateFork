@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs
+namespace CalamityMod.NPCs
 {
     #region Animations
     public class WormAnimation
@@ -387,7 +387,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
                     {
                         if (GlowTextures[i] is not null)
                             internalGlowAssets.Add(ModContent.Request<Texture2D>(GlowTextures[i]));
-                        else internalGlowAssets.Add(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj"));
+                        else internalGlowAssets.Add(ModContent.Request<Texture2D>("CalamityMod/Projectiles/InvisibleProj"));
                     }
                 return internalGlowAssets;
             }
@@ -669,7 +669,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs
             NPC.life = headNPC.life;
             NPC.Center = (headNPC.ModNPC as BaseWormNPC).Segments[(int)NPC.ai[1]].Center;
         }
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
         {
             return false;

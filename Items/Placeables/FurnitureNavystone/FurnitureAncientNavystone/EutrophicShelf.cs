@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.SunkenSea;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone
+namespace CalamityMod.Items.Placeables.FurnitureNavystone.FurnitureAncientNavystone
 {
     [LegacyName("EutrophicCrafting")]
     public class EutrophicShelf : ModItem, ILocalizedModType

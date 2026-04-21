@@ -7,12 +7,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class DarkSparkPrism : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/DarkSpark";
+        public override string Texture => "CalamityMod/Items/Weapons/Magic/DarkSpark";
 
         public override void SetStaticDefaults()
         {

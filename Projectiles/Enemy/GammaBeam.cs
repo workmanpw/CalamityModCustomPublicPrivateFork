@@ -1,19 +1,19 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
+namespace CalamityMod.Projectiles.Enemy
 {
     public class GammaBeam : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Enemy";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Enemy/CragmawBeam";
+        public override string Texture => "CalamityMod/Projectiles/Enemy/CragmawBeam";
 
         // How long this laser can exist before it is deleted.
         public const int TrueTimeLeft = 180;
@@ -143,9 +143,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Enemy
             {
                 return false;
             }
-            Texture2D laserTailTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/GammaBeamBegin", AssetRequestMode.ImmediateLoad).Value;
-            Texture2D laserBodyTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/GammaBeamMid", AssetRequestMode.ImmediateLoad).Value;
-            Texture2D laserHeadTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/GammaBeamEnd", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D laserTailTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/GammaBeamBegin", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D laserBodyTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/GammaBeamMid", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D laserHeadTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/GammaBeamEnd", AssetRequestMode.ImmediateLoad).Value;
             float laserLength = Projectile.localAI[1];
             Color drawColor = new Color(1f, 1f, 1f) * 0.9f;
 

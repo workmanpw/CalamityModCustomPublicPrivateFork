@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.MaceFlails;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Spears;
+using CalamityMod.Projectiles.Melee.MaceFlails;
+using CalamityMod.Projectiles.Melee.Spears;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     public class YateveoBloom : ModItem, ILocalizedModType
     {

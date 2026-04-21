@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureWulfrum
+namespace CalamityMod.Items.Placeables.FurnitureWulfrum
 {
     public class AnodizedWulfrumPanels : ModItem, ILocalizedModType
     {

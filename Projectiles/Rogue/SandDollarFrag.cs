@@ -3,12 +3,12 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class SandDollarFrag : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj"; // Gets overridden in PreDraw anyways
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj"; // Gets overridden in PreDraw anyways
         public override void SetDefaults()
         {
             Projectile.width = 16;
@@ -37,7 +37,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/SandDollarFrag" + Projectile.ai[0].ToString()).Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/SandDollarFrag" + Projectile.ai[0].ToString()).Value;
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, lightColor, Projectile.rotation, tex.Size() / 2f, 1f, SpriteEffects.None);
             return false;
         }

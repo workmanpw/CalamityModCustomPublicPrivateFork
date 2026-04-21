@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Projectiles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Projectiles;
+using CalamityMod.Projectiles.Magic;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -11,11 +11,11 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class Animosity : ModItem, ILocalizedModType
     {
-        public static readonly SoundStyle ShootAndReloadSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumBlunderbussFireAndReload") { PitchVariance = 0.25f };
+        public static readonly SoundStyle ShootAndReloadSound = new("CalamityMod/Sounds/Item/WulfrumBlunderbussFireAndReload") { PitchVariance = 0.25f };
         // Very cool sound and it would be a shame for it to not be used elsewhere, would be even better if a new sound is made in the future, but for now this is good enough
 
         public float SniperDmgMult = 9f;

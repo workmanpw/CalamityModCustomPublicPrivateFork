@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Gores.Trees;
+using CalamityMod.Gores.Trees;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,12 +7,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella
+namespace CalamityMod.Projectiles.Summon.Umbrella
 {
     public class MagicTree : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Summon";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Summon/Umbrella/TreeForest";
+        public override string Texture => "CalamityMod/Projectiles/Summon/Umbrella/TreeForest";
         private Tree TreeType = Tree.Forest;
         private enum Tree
         {
@@ -26,7 +26,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella
             Snow,
             SulphurousSea
         }
-        public static readonly SoundStyle TreeCrashSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/TreeFalling");
+        public static readonly SoundStyle TreeCrashSound = new("CalamityMod/Sounds/Custom/TreeFalling");
 
         public override void SetStaticDefaults()
         {
@@ -169,31 +169,31 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon.Umbrella
             switch (TreeType)
             {
                 case Tree.Astral:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/Umbrella/TreeAstral").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/Umbrella/TreeAstral").Value;
                     break;
                 case Tree.Corruption:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/Umbrella/TreeCorruption").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/Umbrella/TreeCorruption").Value;
                     break;
                 case Tree.Crimson:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/Umbrella/TreeCrimson").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/Umbrella/TreeCrimson").Value;
                     break;
                 case Tree.Forest:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/Umbrella/TreeForest").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/Umbrella/TreeForest").Value;
                     break;
                 case Tree.Hallow:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/Umbrella/TreeHallow").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/Umbrella/TreeHallow").Value;
                     break;
                 case Tree.Jungle:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/Umbrella/TreeJungle").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/Umbrella/TreeJungle").Value;
                     break;
                 case Tree.Ocean:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/Umbrella/TreeOcean").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/Umbrella/TreeOcean").Value;
                     break;
                 case Tree.Snow:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/Umbrella/TreeSnow").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/Umbrella/TreeSnow").Value;
                     break;
                 case Tree.SulphurousSea:
-                    texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Summon/Umbrella/TreeSulphurousSea").Value;
+                    texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Summon/Umbrella/TreeSulphurousSea").Value;
                     break;
                 default:
                     break;

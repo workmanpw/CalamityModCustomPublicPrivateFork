@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum.FurnitureAnodizedWulfrum
+namespace CalamityMod.Tiles.FurnitureWulfrum.FurnitureAnodizedWulfrum
 {
     public class AnodizedWulfrumTable : ModTile
     {
@@ -31,7 +31,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum.FurnitureAno
             int xFrameOffset = Main.tile[i, j].TileFrameX;
             int yFrameOffset = Main.tile[i, j].TileFrameY;
 
-            GlowTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureWulfrum/FurnitureAnodizedWulfrum/AnodizedWulfrumTable_Glow");
+            GlowTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureWulfrum/FurnitureAnodizedWulfrum/AnodizedWulfrumTable_Glow");
             Texture2D glowmask = GlowTexture.Value;
 
             Vector2 drawOffest = Main.drawToScreen ? Vector2.Zero : new Vector2(Main.offScreenRange);

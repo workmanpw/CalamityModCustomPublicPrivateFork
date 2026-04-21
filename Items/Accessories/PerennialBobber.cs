@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     internal class PerennialBobber : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Fishing";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/FeralDoubleBobber";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/FeralDoubleBobber";
         public override void SetDefaults()
         {
             Item.width = 9;

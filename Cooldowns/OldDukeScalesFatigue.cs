@@ -1,11 +1,11 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
+using CalamityMod.Items.Accessories;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.GameContent;
 using Terraria.Localization;
 
-namespace CalamityModCustomPublicPrivateFork.Cooldowns
+namespace CalamityMod.Cooldowns
 {
     public class OldDukeScalesFatigue : CooldownHandler
     {
@@ -21,7 +21,7 @@ namespace CalamityModCustomPublicPrivateFork.Cooldowns
         public override bool CanTickDown => false;
         public override LocalizedText DisplayName => CalamityUtils.GetText($"UI.Cooldowns.{ID}");
         public override bool ShouldDisplay => instance.player.GetModPlayer<OldDukeScalesPlayer>().OldDukeScalesOn || IsPlayerTired;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Cooldowns/" + ID;
+        public override string Texture => "CalamityMod/Cooldowns/" + ID;
 
         public override Color CooldownStartColor => IsPlayerTired ? Color.Red : Color.Lerp(Color.Green, Color.Red, instance.Completion);
         public override Color CooldownEndColor => IsPlayerTired ? Color.Red : Color.Lerp(Color.Green, Color.Red, instance.Completion);

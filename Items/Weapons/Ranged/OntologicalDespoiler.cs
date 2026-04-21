@@ -1,7 +1,7 @@
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -9,21 +9,21 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     [LegacyName("MolecularManipulator")]
     public class OntologicalDespoiler : ModItem, ILocalizedModType
     {
-        public static readonly SoundStyle ChargeLV1 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeLV1");
-        public static readonly SoundStyle ChargeLV2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeLV2");
-        public static readonly SoundStyle ChargeStart = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeStart");
-        public static readonly SoundStyle ChargeLoop = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeLoop");
+        public static readonly SoundStyle ChargeLV1 = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeLV1");
+        public static readonly SoundStyle ChargeLV2 = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeLV2");
+        public static readonly SoundStyle ChargeStart = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeStart");
+        public static readonly SoundStyle ChargeLoop = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeLoop");
         internal static readonly int ChargeLoopSoundFrames = 151;
-        public static readonly SoundStyle SmallShot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserSmallShot");
-        public static readonly SoundStyle BigShot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserBigShot");
-        public static readonly SoundStyle BigShot2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/OntologicalDespoilerLargeShot");
-        public static readonly SoundStyle SmallImpact = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeLV1");
-        public static readonly SoundStyle LargeImpact = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArcNovaDiffuserChargeLV2");
+        public static readonly SoundStyle SmallShot = new("CalamityMod/Sounds/Item/ArcNovaDiffuserSmallShot");
+        public static readonly SoundStyle BigShot = new("CalamityMod/Sounds/Item/ArcNovaDiffuserBigShot");
+        public static readonly SoundStyle BigShot2 = new("CalamityMod/Sounds/Item/OntologicalDespoilerLargeShot");
+        public static readonly SoundStyle SmallImpact = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeLV1");
+        public static readonly SoundStyle LargeImpact = new("CalamityMod/Sounds/Item/ArcNovaDiffuserChargeLV2");
 
         public bool shotType = true; // true = positive shot, false = negative shot
         public new string LocalizationCategory => "Items.Weapons.Ranged";
@@ -75,7 +75,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
                     aiType = 20;
                 Projectile holdout2 = Projectile.NewProjectileDirect(source, player.Center, Vector2.Zero, Item.shoot, player.HeldItem.damage, 0f, player.whoAmI, 0, 0, aiType);
                 holdout2.velocity = (player.Calamity().mouseWorld - player.MountedCenter).SafeNormalize(Vector2.Zero);
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/DudFire");
                 SoundEngine.PlaySound(fire with { Volume = 0.7f, Pitch = aiType == 20 ? -0.7f : (-0.5f + (shotType ? 0.5f : 0)) }, player.Center);
                 if (aiType != 20)
                     shotType = !shotType;

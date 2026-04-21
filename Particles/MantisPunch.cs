@@ -4,14 +4,14 @@ using Terraria;
 using ReLogic.Content;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class MantisPunch : Particle
     {
         int Frame = 0;
         int FrameTimer = 0;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/MantisPunch";
+        public override string Texture => "CalamityMod/Particles/MantisPunch";
         public override bool UseCustomDraw => true;
         public override void CustomDraw(SpriteBatch spriteBatch)
         {

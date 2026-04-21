@@ -1,15 +1,15 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Cooldowns;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class VulcanHoldout : BaseGunHoldoutProjectile
     {
@@ -77,14 +77,14 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
                 }
                 if (playRampDown)
                 {
-                    SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/VulcanRampDown");
+                    SoundStyle sound = new("CalamityMod/Sounds/Item/VulcanRampDown");
                     for (int i = 0; i < 2; i++)
                         SoundEngine.PlaySound(sound with { Volume = 0.9f, MaxInstances = -1 }, Projectile.Center);
                     playRampDown = false;
                 }
                 if (shootingTimer == -20)
                 {
-                    SoundStyle sound2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/VulcanRampUp");
+                    SoundStyle sound2 = new("CalamityMod/Sounds/Item/VulcanRampUp");
                     for (int i = 0; i < 2; i++)
                         SoundEngine.PlaySound(sound2 with { Volume = 0.9f, MaxInstances = -1 }, Projectile.Center);
                 }
@@ -179,7 +179,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             {
                 Owner.SetScreenshake(3.5f);
                 OffsetLengthFromArm -= 16;
-                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GunShotHeavy");
+                SoundStyle sound = new("CalamityMod/Sounds/Item/GunShotHeavy");
                 SoundEngine.PlaySound(sound with { Volume = 0.8f, Pitch = 0.8f }, Projectile.Center);
                 if (Main.myPlayer == Projectile.owner)
                 {
@@ -192,7 +192,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             {
                 Owner.SetScreenshake(1f);
                 OffsetLengthFromArm -= 7;
-                SoundStyle sound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/VulcanShot");
+                SoundStyle sound = new("CalamityMod/Sounds/Item/VulcanShot");
                 SoundEngine.PlaySound(sound with { Volume = 0.6f, Pitch = Main.rand.NextFloat(-0.1f, 0), MaxInstances = 1 }, Projectile.Center);
 
                 Vector2 shootVelocity = Projectile.velocity.SafeNormalize(Vector2.UnitX).RotatedByRandom(0f) * 6f;
@@ -213,16 +213,16 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             if (time < 2)
                 return false;
 
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/VulcanHoldout").Value;
-            Texture2D glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/VulcanHoldoutGlow").Value;
-            Texture2D flash = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/VulcanFlash").Value;
-            Texture2D spear = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/VulcanSpear").Value;
-            Texture2D spearGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/VulcanSpearGlow").Value;
-            Texture2D heat = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/VulcanHoldoutHeatedTip").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/VulcanHoldout").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/VulcanHoldoutGlow").Value;
+            Texture2D flash = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/VulcanFlash").Value;
+            Texture2D spear = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/VulcanSpear").Value;
+            Texture2D spearGlow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/VulcanSpearGlow").Value;
+            Texture2D heat = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/VulcanHoldoutHeatedTip").Value;
             if (Owner.Calamity().arsenalCooldown <= 0 && false)
             {
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/VulcanHoldoutSpear").Value;
-                glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/DraedonsArsenal/VulcanHoldoutSpearGlow").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/VulcanHoldoutSpear").Value;
+                glow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/DraedonsArsenal/VulcanHoldoutSpearGlow").Value;
             }
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Vector2 vel = Projectile.rotation.ToRotationVector2();

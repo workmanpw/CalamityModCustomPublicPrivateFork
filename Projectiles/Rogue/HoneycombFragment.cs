@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class HoneycombFragment : ModProjectile, ILocalizedModType
     {
@@ -22,13 +22,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             //Changes the texture of the projectile
             if (Projectile.ai[0] == 1f)
             {
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/HoneycombFragment2").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/HoneycombFragment2").Value;
                 Main.spriteBatch.Draw(texture, Projectile.Center - Main.screenPosition, new Rectangle?(new Rectangle(0, 0, 12, 14)), Projectile.GetAlpha(lightColor), Projectile.rotation, new Vector2(texture.Width / 2f, 20 / 2f), Projectile.scale, SpriteEffects.None, 0);
                 return false;
             }
             if (Projectile.ai[0] == 2f)
             {
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/HoneycombFragment3").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/HoneycombFragment3").Value;
                 Main.spriteBatch.Draw(texture, Projectile.Center - Main.screenPosition, new Rectangle?(new Rectangle(0, 0, 16, 14)), Projectile.GetAlpha(lightColor), Projectile.rotation, new Vector2(texture.Width / 2f, 20 / 2f), Projectile.scale, SpriteEffects.None, 0);
                 return false;
             }

@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -6,16 +6,16 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     public class MagnaCannon : ModItem, ILocalizedModType
     {
-        public static readonly SoundStyle ChargeFull = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagnaCannonChargeFull") { Volume = 0.5f };
+        public static readonly SoundStyle ChargeFull = new("CalamityMod/Sounds/Item/MagnaCannonChargeFull") { Volume = 0.5f };
         internal static readonly int ChargeFullSoundFrames = 42;
-        public static readonly SoundStyle ChargeLoop = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagnaCannonChargeLoop") { Volume = 0.5f };
+        public static readonly SoundStyle ChargeLoop = new("CalamityMod/Sounds/Item/MagnaCannonChargeLoop") { Volume = 0.5f };
         internal static readonly int ChargeLoopSoundFrames = 153;
-        public static readonly SoundStyle ChargeStart = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagnaCannonChargeStart") { Volume = 0.5f };
-        public static readonly SoundStyle Fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/MagnaCannonShot") { PitchVariance = 0.3f, Volume = 0.4f };
+        public static readonly SoundStyle ChargeStart = new("CalamityMod/Sounds/Item/MagnaCannonChargeStart") { Volume = 0.5f };
+        public static readonly SoundStyle Fire = new("CalamityMod/Sounds/Item/MagnaCannonShot") { PitchVariance = 0.3f, Volume = 0.4f };
 
         public static int AftershotCooldownFrames = 30;
         public static int FullChargeFrames = 138; //126 frames is duration of charge sound

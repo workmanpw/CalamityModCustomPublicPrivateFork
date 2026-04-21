@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.TextEffects
+namespace CalamityMod.UI.DialogueDisplay.TextEffects
 {
     public abstract class TextEffect
     {

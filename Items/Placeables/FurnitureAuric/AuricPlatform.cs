@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureAuric;
+using CalamityMod.Tiles.FurnitureAuric;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAuric
+namespace CalamityMod.Items.Placeables.FurnitureAuric
 {
     public class AuricPlatform : ModItem, ILocalizedModType
     {

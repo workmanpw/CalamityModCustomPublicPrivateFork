@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Particles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,14 +12,14 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class SHPV : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
-        private static Asset<Texture2D> Smoke = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/MediumMist");
-        private static Asset<Texture2D> SoulSquare = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Square");
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
+        private static Asset<Texture2D> Smoke = ModContent.Request<Texture2D>("CalamityMod/Particles/MediumMist");
+        private static Asset<Texture2D> SoulSquare = ModContent.Request<Texture2D>("CalamityMod/Particles/Square");
 
         private Player Owner => Main.player[Projectile.owner];
         private SlotId VacuumSound;

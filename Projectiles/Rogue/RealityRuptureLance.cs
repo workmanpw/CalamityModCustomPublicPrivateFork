@@ -6,13 +6,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class RealityRuptureLance : ModProjectile, ILocalizedModType
     {
-        public static readonly SoundStyle Hitsound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/DevourerSegmentBreak2") { Volume = 0.6f, PitchVariance = 0.3f };
+        public static readonly SoundStyle Hitsound = new("CalamityMod/Sounds/NPCKilled/DevourerSegmentBreak2") { Volume = 0.6f, PitchVariance = 0.3f };
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/RealityRupture";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/RealityRupture";
         public int Time = 0;
         public ref float Timer => ref Projectile.ai[0];
         public override void SetDefaults()

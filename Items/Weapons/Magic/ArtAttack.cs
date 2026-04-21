@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Magic;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class ArtAttack : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
         public const int MaxDamageBoostTime = 180;
         public const float MaxDamageBoostFactor = 18f;
-        public static readonly SoundStyle UseSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ArtAttackCast");
+        public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/ArtAttackCast");
         public override void SetDefaults()
         {
             Item.width = 70;

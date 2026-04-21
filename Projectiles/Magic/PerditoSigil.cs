@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class PerditoSigil : ModProjectile, ILocalizedModType
     {
@@ -67,7 +67,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         public override bool PreDraw(ref Color lightColor)
         {
             Texture2D mainTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D blankTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/BlankSigil").Value;
+            Texture2D blankTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/BlankSigil").Value;
 
             float finalScale = Projectile.scale;
             float alphaOpacity = 1f - (Projectile.alpha / 255f);

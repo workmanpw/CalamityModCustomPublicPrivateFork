@@ -6,14 +6,14 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class ArcherfishRing : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/HollowCircleHardEdge";
+        public override string Texture => "CalamityMod/Particles/HollowCircleHardEdge";
 
-        public static readonly SoundStyle PopSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BubblyPop") { PitchVariance = 0.5f, Volume = 0.66f };
+        public static readonly SoundStyle PopSound = new("CalamityMod/Sounds/Custom/BubblyPop") { PitchVariance = 0.5f, Volume = 0.66f };
 
         public override void SetDefaults()
         {

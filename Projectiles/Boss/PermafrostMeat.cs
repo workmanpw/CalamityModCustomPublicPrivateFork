@@ -6,13 +6,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class PermafrostMeat : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Boss";
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Potions/Food/DeliciousMeat";
+        public override string Texture => "CalamityMod/Items/Potions/Food/DeliciousMeat";
 
         public override void SetDefaults()
         {

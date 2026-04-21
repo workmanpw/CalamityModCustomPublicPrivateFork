@@ -1,32 +1,32 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureCosmilite;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.NPCs.TownNPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos;
-using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay;
-using CalamityModCustomPublicPrivateFork.UI.DialogueDisplay.DisplayEffects;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Furniture;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Placeables.FurnitureCosmilite;
+using CalamityMod.Items.Potions;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs.TownNPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Projectiles.Melee.Yoyos;
+using CalamityMod.UI.DialogueDisplay;
+using CalamityMod.UI.DialogueDisplay.DisplayEffects;
+using CalamityMod.Utilities.Daybreak;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -41,7 +41,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
+namespace CalamityMod.NPCs.DevourerofGods
 {
     [LongDistanceNetSync]
     public class DevourerofGodsHead : ModNPC
@@ -67,8 +67,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
 
         public override void Load()
         {
-            string phase1IconPath = "CalamityModCustomPublicPrivateFork/NPCs/DevourerofGods/DevourerofGodsHead_Head_Boss";
-            string phase2IconPath = "CalamityModCustomPublicPrivateFork/NPCs/DevourerofGods/DevourerofGodsHead_P2_Head_Boss";
+            string phase1IconPath = "CalamityMod/NPCs/DevourerofGods/DevourerofGodsHead_Head_Boss";
+            string phase2IconPath = "CalamityMod/NPCs/DevourerofGods/DevourerofGodsHead_P2_Head_Boss";
 
             phase1IconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(phase1IconPath, -1);
             phase2IconIndex = ModContent.GetInstance<CalamityMod>().AddBossHeadTexture(phase2IconPath, -1);
@@ -142,14 +142,14 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
         public bool ShouldSpawnChompVFX;
 
         // Sounds
-        public static readonly SoundStyle SpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DevourerSpawn");
-        public static readonly SoundStyle AttackSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DevourerAttack");
-        public static readonly SoundStyle RiftOpenSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DevourerRiftOpen");
-        public static readonly SoundStyle RiftBuildingSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/DevourerRiftBuilding");
-        public static readonly SoundStyle HitSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/OtherworldlyHit");
-        public static readonly SoundStyle DeathAnimationSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/DevourerDeath");
-        public static readonly SoundStyle DeathExplosionSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/DevourerDeathImpact");
-        public static readonly SoundStyle DeathSegmentSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/DevourerSegmentBreak", 4);
+        public static readonly SoundStyle SpawnSound = new("CalamityMod/Sounds/Custom/DevourerSpawn");
+        public static readonly SoundStyle AttackSound = new("CalamityMod/Sounds/Custom/DevourerAttack");
+        public static readonly SoundStyle RiftOpenSound = new("CalamityMod/Sounds/Custom/DevourerRiftOpen");
+        public static readonly SoundStyle RiftBuildingSound = new("CalamityMod/Sounds/Custom/DevourerRiftBuilding");
+        public static readonly SoundStyle HitSound = new("CalamityMod/Sounds/NPCHit/OtherworldlyHit");
+        public static readonly SoundStyle DeathAnimationSound = new("CalamityMod/Sounds/NPCKilled/DevourerDeath");
+        public static readonly SoundStyle DeathExplosionSound = new("CalamityMod/Sounds/NPCKilled/DevourerDeathImpact");
+        public static readonly SoundStyle DeathSegmentSound = new("CalamityMod/Sounds/NPCKilled/DevourerSegmentBreak", 4);
         public float extrapitch = 0;
 
         public bool isInPassiveState
@@ -232,7 +232,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
                 JawTexture_Glow = ModContent.Request<Texture2D>(Texture + "_Jaw_Glow", AssetRequestMode.AsyncLoad);
                 JawTextureP2 = ModContent.Request<Texture2D>(Texture + "_Jaw_P2", AssetRequestMode.AsyncLoad);
                 JawTextureP2_Glow = ModContent.Request<Texture2D>(Texture + "_Jaw_P2_Glow", AssetRequestMode.AsyncLoad);
-                GodSlayerDashJawTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/DevourerofGods/GodSlayerDashJaw", AssetRequestMode.AsyncLoad);
+                GodSlayerDashJawTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/DevourerofGods/GodSlayerDashJaw", AssetRequestMode.AsyncLoad);
 
                 // For bestiary.
                 TextureP2_Full = ModContent.Request<Texture2D>(Texture + "_P2", AssetRequestMode.AsyncLoad);
@@ -243,7 +243,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.DevourerofGods")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.DevourerofGods")
             });
         }
 
@@ -306,11 +306,11 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
 
         public override void OnSpawn(IEntitySource source)
         {
-            string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.DoGSpawn";
+            string key = "Mods.CalamityMod.Status.Boss.DoGSpawn";
             Color messageColor = Color.Cyan;
             CalamityUtils.BroadcastLocalizedText(key, messageColor);
 
-            DialogueDisplaySystem.StartDialogue("Mods.CalamityModCustomPublicPrivateFork.DevourerOfGods.Phases", NPC, 0, 120, false, new BossText());
+            DialogueDisplaySystem.StartDialogue("Mods.CalamityMod.DevourerOfGods.Phases", NPC, 0, 120, false, new BossText());
         }
 
         public override void SendExtraAI(BinaryWriter writer)
@@ -634,7 +634,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
                 // Dialogue the moment the second phase starts
                 if (NPC.localAI[2] == 60f && !BossRushEvent.BossRushActive)
                 {
-                    string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.DoGPhase2";
+                    string key = "Mods.CalamityMod.Status.Boss.DoGPhase2";
                     Color messageColor = Color.Cyan;
                     CalamityUtils.BroadcastLocalizedText(key, messageColor);
                     /*                    
@@ -643,7 +643,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
                         player.Calamity().subtitletext = Main.combatText[ctid];
                     player.Calamity().subtitleColors = new Color[] { Color.Cyan, Color.Fuchsia };
                     */
-                    DialogueDisplaySystem.StartDialogue("Mods.CalamityModCustomPublicPrivateFork.DevourerOfGods.Phases", NPC, 2, 120, false, new BossText());
+                    DialogueDisplaySystem.StartDialogue("Mods.CalamityMod.DevourerOfGods.Phases", NPC, 2, 120, false, new BossText());
                 }
             }
 
@@ -813,12 +813,12 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
                                     // Anger message
                                     if (!BossRushEvent.BossRushActive)
                                     {
-                                        string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.DoGPhase3";
+                                        string key = "Mods.CalamityMod.Status.Boss.DoGPhase3";
                                         Color messageColor = Color.Cyan;
                                         CalamityUtils.BroadcastLocalizedText(key, messageColor);
                                         Vector2 start = GetRiftLocation();
 
-                                        DialogueDisplaySystem.StartDialogue("Mods.CalamityModCustomPublicPrivateFork.DevourerOfGods.Phases", start, 3, 120, false, new BossText());
+                                        DialogueDisplaySystem.StartDialogue("Mods.CalamityMod.DevourerOfGods.Phases", start, 3, 120, false, new BossText());
                                     }
 
                                     spawnedGuardians3 = true;
@@ -1471,7 +1471,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
 
                         if (!BossRushEvent.BossRushActive)
                         {
-                            string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.DoGSubphase1";
+                            string key = "Mods.CalamityMod.Status.Boss.DoGSubphase1";
                             Color messageColor = Color.Cyan;
                             CalamityUtils.BroadcastLocalizedText(key, messageColor);
 
@@ -1481,7 +1481,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
                                 player.Calamity().subtitletext = Main.combatText[ctid];
                             player.Calamity().subtitleColors = new Color[] { Color.Cyan, Color.Fuchsia };
                             */
-                            DialogueDisplaySystem.StartDialogue("Mods.CalamityModCustomPublicPrivateFork.DevourerOfGods.Phases", NPC, 1, 120, false, new BossText());
+                            DialogueDisplaySystem.StartDialogue("Mods.CalamityMod.DevourerOfGods.Phases", NPC, 1, 120, false, new BossText());
                         }
 
                         NPC.TargetClosest();
@@ -2479,7 +2479,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.LinearWrap, DepthStencilState.Default, RasterizerState.CullNone, null, Main.GameViewMatrix.ZoomMatrix);
 
                 MiscShaderData dissolveShader = GameShaders.Misc["CalamityMod:Dissolve"];
-                Texture2D dissolveTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/HarshNoise").Value;
+                Texture2D dissolveTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/HarshNoise").Value;
 
                 dissolveShader.Shader.Parameters["noiseScale"].SetValue(0.5f);
                 dissolveShader.Shader.Parameters["dissolveIntensity"].SetValue(CalamityDrawParameterNPC.DoGDeathAnimationTimer / 600f);
@@ -2569,11 +2569,11 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
             // If DoG has not been killed yet, notify players that the holiday moons are buffed
             if (!DownedBossSystem.downedDoG)
             {
-                string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.DoGBossText";
+                string key = "Mods.CalamityMod.Status.Progression.DoGBossText";
                 Color messageColor = Color.Cyan;
-                string key2 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.DoGBossText2";
+                string key2 = "Mods.CalamityMod.Status.Progression.DoGBossText2";
                 Color messageColor2 = Color.Orange;
-                string key3 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.DargonBossText";
+                string key3 = "Mods.CalamityMod.Status.Progression.DargonBossText";
                 Color messageColor3 = Color.Yellow;
 
                 CalamityUtils.BroadcastLocalizedText(key, messageColor);
@@ -2799,19 +2799,19 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
             if (hurtInfo.Damage <= 0)
                 return;
 
-            if (!DialogueDisplaySystem.ContainsDialogueKey("Mods.CalamityModCustomPublicPrivateFork.DevourerOfGods.Phases") && target.Calamity().dogTextCooldown <= 0 && !BossRushEvent.BossRushActive)
+            if (!DialogueDisplaySystem.ContainsDialogueKey("Mods.CalamityMod.DevourerOfGods.Phases") && target.Calamity().dogTextCooldown <= 0 && !BossRushEvent.BossRushActive)
             {
                 var counter = target.Calamity().DoGHeadHitCounter;
                 string DialogueGroup;
                 int DialogueIndex;
                 if (target.statLife - hurtInfo.Damage <= 0)
                 {
-                    DialogueGroup = "Mods.CalamityModCustomPublicPrivateFork.DevourerOfGods.Death";
+                    DialogueGroup = "Mods.CalamityMod.DevourerOfGods.Death";
                     if (counter == 0)
                         if (NPC.GetLifePercent() <= 0.25f)
                             DialogueIndex = 4; //All that running just to die to a single touch?
                         else
-                            DialogueIndex = 0;// text = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.DoGHeadDeath1"; //Tasteless slop.
+                            DialogueIndex = 0;// text = "Mods.CalamityMod.Status.Boss.DoGHeadDeath1"; //Tasteless slop.
                     else if (NPC.GetLifePercent() <= 0.25f || counter >= 10)
                         DialogueIndex = 3; //WEAK.
                     else if (Phase2Started)
@@ -2825,7 +2825,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
                 {
                     if (counter == 0 && Phase2Started)
                     {
-                        DialogueGroup = "Mods.CalamityModCustomPublicPrivateFork.DevourerOfGods.Running";
+                        DialogueGroup = "Mods.CalamityMod.DevourerOfGods.Running";
                         if (NPC.GetLifePercent() <= 0.25f)
                             DialogueIndex = 1; //WHAT'S THE PROBLEM?! CAN'T RUN ANYMORE?!
                         else
@@ -2833,7 +2833,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.DevourerofGods
                     }
                     else
                     {
-                        DialogueGroup = "Mods.CalamityModCustomPublicPrivateFork.DevourerOfGods.Head";
+                        DialogueGroup = "Mods.CalamityMod.DevourerOfGods.Head";
                         if (counter > 9)
                             DialogueIndex = Main.rand.Next(10, 13); //DogHead11-13
                         else if (counter == 9)

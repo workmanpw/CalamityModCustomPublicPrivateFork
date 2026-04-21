@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
+using CalamityMod.Tiles.Abyss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,13 +10,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class ApoctolithShard : ModProjectile, ILocalizedModType
     {
         public int TimeBeforeHoming = 30;
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Rogue/AbyssalMirrorProjectile";
+        public override string Texture => "CalamityMod/Projectiles/Rogue/AbyssalMirrorProjectile";
 
         public override void SetStaticDefaults()
         {
@@ -87,8 +87,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                 splash += 1;
             }
 
-            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, ApoctolithProj.LowBlueColor, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", Vector2.One, 0f, 0.3f, 0f, 25));
-            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", Vector2.One, 0f, 0.15f, 0f, 15));
+            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, ApoctolithProj.LowBlueColor, "CalamityMod/Particles/LargeBloom", Vector2.One, 0f, 0.3f, 0f, 25));
+            GeneralParticleHandler.SpawnParticle(new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/LargeBloom", Vector2.One, 0f, 0.15f, 0f, 15));
 
             for (int i = 0; i < 5; i++) GeneralParticleHandler.SpawnParticle(new BloodParticle2(Projectile.Center, new Vector2(Main.rand.NextFloat(6, 12), 0).RotatedBy(Main.rand.NextFloat(MathHelper.TwoPi)), 12, Main.rand.NextFloat(0.02f, 0.1f), ApoctolithProj.HighBlueColor));
         }

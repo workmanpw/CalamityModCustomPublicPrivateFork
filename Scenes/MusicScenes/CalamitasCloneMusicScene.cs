@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.CalClone;
+using CalamityMod.NPCs.CalClone;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class CalamitasCloneMusicScene : BaseMusicSceneEffect
     {

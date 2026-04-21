@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class ExoTankMissile : ModProjectile, ILocalizedModType
     {
@@ -44,7 +44,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
         public override void OnKill(int timeLeft)
         {
             Color boomColor = Main.hslToRgb(Main.rand.NextFloat(), 1f, 0.4f) * 0.6f;
-            CustomPulse boom = new (Projectile.Center, Vector2.Zero, boomColor, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.08f, 24);
+            CustomPulse boom = new (Projectile.Center, Vector2.Zero, boomColor, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.08f, 24);
             GeneralParticleHandler.SpawnParticle(boom);
 
             for (int i = 0; i < 5; i++)

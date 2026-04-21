@@ -1,8 +1,8 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Utilities.Daybreak;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -11,7 +11,7 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class SarosAura : ModProjectile, ILocalizedModType
     {
@@ -186,7 +186,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
                 }
 
                 //Circles
-                var ciTex = CalamityUtils.GetTextureEfficient(ref circle, "CalamityModCustomPublicPrivateFork/Particles/BloomRingThinLarge").Value;
+                var ciTex = CalamityUtils.GetTextureEfficient(ref circle, "CalamityMod/Particles/BloomRingThinLarge").Value;
                 count = (int)MathHelper.Min((1 + (Projectile.minionSlots - 1) % 3), 10);
                 for (var i = 0; i < count && i < 5; i++)
                 {

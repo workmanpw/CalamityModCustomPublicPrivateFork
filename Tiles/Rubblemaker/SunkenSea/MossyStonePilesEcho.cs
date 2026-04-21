@@ -1,13 +1,13 @@
 using Terraria.ModLoader;
 using Terraria.GameContent;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Tiles.SunkenSea.Ambient;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
+namespace CalamityMod.Tiles.Rubblemaker.SunkenSea
 {
     public class SmallMossyStonePileEcho : SmallMossyStonePile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/SmallMossyStonePile";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/SmallMossyStonePile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();
@@ -17,7 +17,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Rubblemaker.SunkenSea
     }
     public class LargeMossyStonePileEcho : LargeMossyStonePile
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Tiles/SunkenSea/Ambient/LargeMossyStonePile";
+        public override string Texture => "CalamityMod/Tiles/SunkenSea/Ambient/LargeMossyStonePile";
         public override void SetStaticDefaults()
         {
             base.SetStaticDefaults();

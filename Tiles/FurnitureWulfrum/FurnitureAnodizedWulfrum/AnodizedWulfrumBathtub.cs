@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureWulfrum.FurnitureAnodizedWulfrum
+namespace CalamityMod.Tiles.FurnitureWulfrum.FurnitureAnodizedWulfrum
 {
     public class AnodizedWulfrumBathtub : ModTile
     {

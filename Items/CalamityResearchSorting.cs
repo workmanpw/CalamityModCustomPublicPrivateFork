@@ -1,4 +1,4 @@
-namespace CalamityModCustomPublicPrivateFork.Items
+namespace CalamityMod.Items
 {
     public enum CalamityResearchSorting : int
     {

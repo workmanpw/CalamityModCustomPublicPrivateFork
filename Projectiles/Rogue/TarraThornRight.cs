@@ -4,12 +4,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class TarraThornRight : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/NettleRight";
+        public override string Texture => "CalamityMod/Projectiles/Magic/NettleRight";
 
         public static int TotalSegments = 10;
 
@@ -80,7 +80,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         {
             Texture2D texture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
             if (Projectile.ai[0] == TotalSegments)
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/NettleTip").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/NettleTip").Value;
 
             Main.spriteBatch.Draw(texture, Projectile.Center - Main.screenPosition, null, Projectile.GetAlpha(lightColor), Projectile.rotation, texture.Size() * 0.5f, Projectile.scale, SpriteEffects.None, 0);
             return false;

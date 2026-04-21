@@ -7,7 +7,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Mechanic
+namespace CalamityMod.Systems.Mechanic
 {
     public class ArenaWallSystem : ModSystem
     {

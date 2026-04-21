@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.NPCs;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,9 +10,9 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     [PierceResistException]
     public class ReaperProjectile : ModProjectile, ILocalizedModType
@@ -22,7 +22,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
         public int ChargeupTime = 50;
         public int Lifetime = 500;
         public bool spinning = false;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/TheOldReaper";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/TheOldReaper";
         public float OverallProgress => 1 - Projectile.timeLeft / (float)Lifetime;
         public float ThrowProgress => 1 - Projectile.timeLeft / (float)(Lifetime);
         public float ChargeProgress => 1 - (Projectile.timeLeft - Lifetime) / (float)(ChargeupTime);
@@ -103,7 +103,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             {
                 Projectile.netUpdate = true;
 
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SwingMid");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/SwingMid");
                 SoundEngine.PlaySound(fire with { Volume = 0.8f, Pitch = Main.rand.NextFloat(0.2f, 0.3f) }, Projectile.Center);
 
                 Projectile.Center = Owner.MountedCenter + Projectile.velocity * 4f;
@@ -117,7 +117,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                     Projectile.velocity = (Main.MouseWorld - Owner.Center).SafeNormalize(Vector2.UnitX * Owner.direction) * 15;
                 }
                 Projectile.spriteDirection = Projectile.direction;
-                SpinSoundSlot = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Item/SpinningWoosh") with { Pitch = -0.3f, Volume = 0.75f }, Projectile.Center);
+                SpinSoundSlot = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/SpinningWoosh") with { Pitch = -0.3f, Volume = 0.75f }, Projectile.Center);
                 
                 time = 0;
                 spinning = true;
@@ -143,7 +143,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                     {
                         float rot = Main.rand.NextFloat(-5.5f, 5.5f);
                         float scale = Main.rand.NextFloat(1f, 1.15f);
-                        Particle Smear = new CustomPulse(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 18, Projectile.velocity, Color.Chartreuse * Main.rand.NextFloat(0.68f, 0.75f), "CalamityModCustomPublicPrivateFork/Particles/CircularSmearSmokey", squash.RotatedBy(rot), Projectile.velocity.ToRotation() + MathHelper.ToRadians(150f) - rot, scale, scale, 3);
+                        Particle Smear = new CustomPulse(Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 18, Projectile.velocity, Color.Chartreuse * Main.rand.NextFloat(0.68f, 0.75f), "CalamityMod/Particles/CircularSmearSmokey", squash.RotatedBy(rot), Projectile.velocity.ToRotation() + MathHelper.ToRadians(150f) - rot, scale, scale, 3);
                         GeneralParticleHandler.SpawnParticle(Smear);
                     }
 
@@ -176,7 +176,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                     if (time == 30)
                     {
                         SpinSound?.Stop();
-                        SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/RadiationBurst");
+                        SoundStyle fire = new("CalamityMod/Sounds/Item/RadiationBurst");
                         SpinSoundSlot = SoundEngine.PlaySound(fire with { Volume = 1f, Pitch = 0.3f }, Projectile.Center);
                     }
                     if (time >= 150)
@@ -231,9 +231,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                 if (Projectile.Calamity().stealthStrike) // Rainstorm
                 {
                     Vector2 rainSpot = Projectile.Center - Projectile.velocity.SafeNormalize(Vector2.UnitX) * 490;
-                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/RadiationRain");
+                    SoundStyle fire = new("CalamityMod/Sounds/Item/RadiationRain");
                     SoundEngine.PlaySound(fire with { Volume = 1f, Pitch = 0 }, rainSpot);
-                    SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ViperSpit");
+                    SoundStyle fire2 = new("CalamityMod/Sounds/Item/ViperSpit");
                     SoundEngine.PlaySound(fire2 with { Volume = 1f, Pitch = -0.3f }, rainSpot);
                     for (int i = 0; i < 37; i++)
                     {
@@ -243,13 +243,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
                         chargefull.noGravity = true;
                         chargefull.color = Color.Lerp(Color.White, Main.rand.NextBool(4) ? Color.Green : Color.Chartreuse, 0.7f);
                     }
-                    Particle Smear = new CustomPulse(rainSpot, Vector2.Zero, Color.Chartreuse * 0.7f, "CalamityModCustomPublicPrivateFork/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-5, 5), 0, 0.35f, 12);
+                    Particle Smear = new CustomPulse(rainSpot, Vector2.Zero, Color.Chartreuse * 0.7f, "CalamityMod/Particles/DustyCircleHardEdge", Vector2.One, Main.rand.NextFloat(-5, 5), 0, 0.35f, 12);
                     GeneralParticleHandler.SpawnParticle(Smear);
                     Projectile.NewProjectile(Projectile.GetSource_FromThis(), rainSpot, Vector2.Zero, ModContent.ProjectileType<RadiationRain>(), (int)(Projectile.damage * 0.13), 0f, Projectile.owner, 0, 0, 100);
                 }
                 else // Radiation Burst
                 {
-                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/RadiationBurst");
+                    SoundStyle fire = new("CalamityMod/Sounds/Item/RadiationBurst");
                     SoundEngine.PlaySound(fire with { Volume = 1f, Pitch = 0, MaxInstances = -1 }, Projectile.Center);
                     Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center + target.velocity * 32, Vector2.Zero, ModContent.ProjectileType<RadiationBurst>(), (int)(Projectile.damage), Projectile.knockBack * 3, Projectile.owner, 0, 0, 0);
                 }
@@ -273,7 +273,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             Asset<Texture2D> tex = ModContent.Request<Texture2D>(Texture);
             Main.EntitySpriteDraw(tex.Value, drawPos, null, spinning ? Color.White : Color.Lerp(lightColor, Color.White, Utils.GetLerpValue(0, ChargeupTime, time, true)), Projectile.rotation, tex.Size() * 0.5f, Projectile.scale, Projectile.spriteDirection > 0 ? SpriteEffects.None : SpriteEffects.FlipHorizontally);
 
-            Asset<Texture2D> p = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/VerticalSmear");
+            Asset<Texture2D> p = ModContent.Request<Texture2D>("CalamityMod/Particles/VerticalSmear");
             
             if (spinning)
             {

@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureVoid
+namespace CalamityMod.Tiles.FurnitureVoid
 {
     public class VoidDresser : ModTile
     {

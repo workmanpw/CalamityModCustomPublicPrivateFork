@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class SlitheringEelProjectile : ModProjectile, ILocalizedModType
     {
@@ -102,10 +102,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D headTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/SlitheringEelProjectile").Value;
-            Texture2D bodyTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/SlitheringEelBody").Value;
-            Texture2D bodyTexture2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/SlitheringEelBody2").Value;
-            Texture2D tailTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Magic/SlitheringEelTail").Value;
+            Texture2D headTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/SlitheringEelProjectile").Value;
+            Texture2D bodyTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/SlitheringEelBody").Value;
+            Texture2D bodyTexture2 = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/SlitheringEelBody2").Value;
+            Texture2D tailTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Magic/SlitheringEelTail").Value;
 
             Vector2 drawPosition;
             lightColor = new Color(255, 255, 255, 127);

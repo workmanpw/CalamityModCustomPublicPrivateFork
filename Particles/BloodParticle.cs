@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class BloodParticle : Particle
     {
@@ -14,7 +14,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public override bool UseCustomDraw => true;
         public override bool UseAdditiveBlend => true;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/Blood";
+        public override string Texture => "CalamityMod/Particles/Blood";
 
         public BloodParticle(Vector2 relativePosition, Vector2 velocity, int lifetime, float scale, Color color)
         {

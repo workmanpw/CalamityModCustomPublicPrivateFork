@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Scenes.MusicScenes;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.DataStructures;
+using CalamityMod.Particles;
+using CalamityMod.Scenes.MusicScenes;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -17,7 +17,7 @@ using Terraria.Graphics.Effects;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
+namespace CalamityMod.NPCs.VanillaNPCAIOverrides.Bosses.BrainOfCthulhu;
 
 public class BrainOfCthulhuSystem : ModSystem
 {
@@ -201,7 +201,7 @@ public class BrainOfCthulhuSystem : ModSystem
         {
             Main.QueueMainThreadAction(() =>
             {
-                var reference = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/VanillaNPCAIOverrides/Bosses/BrainOfCthulhu/ReferenceBrainOfCthulhu", AssetRequestMode.ImmediateLoad).Value;
+                var reference = ModContent.Request<Texture2D>("CalamityMod/NPCs/VanillaNPCAIOverrides/Bosses/BrainOfCthulhu/ReferenceBrainOfCthulhu", AssetRequestMode.ImmediateLoad).Value;
 
                 Main.instance.LoadNPC(NPCID.BrainofCthulhu);
                 var usedTexture = TextureAssets.Npc[NPCID.BrainofCthulhu].Value;
@@ -358,8 +358,8 @@ public class BrainOfCthulhuSystem : ModSystem
                 float shieldScale = ai.ShieldScale;
                 targetPos = Vector2.Transform(targetPos - Main.screenPosition, Main.GameViewMatrix.ZoomMatrix) / Main.ScreenSize.ToVector2();
 
-                Texture2D voronoi = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/VoronoiShapes3").Value;
-                Texture2D depthNoise = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Veins").Value;
+                Texture2D voronoi = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/VoronoiShapes3").Value;
+                Texture2D depthNoise = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Veins").Value;
 
                 Filters.Scene["CalamityMod:BrainOfCthulhuForcefield"].GetShader().Shader.Parameters["voronoi"].SetValue(voronoi);
                 Filters.Scene["CalamityMod:BrainOfCthulhuForcefield"].GetShader().Shader.Parameters["depthNoise"].SetValue(depthNoise);

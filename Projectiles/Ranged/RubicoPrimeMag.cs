@@ -3,12 +3,12 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class RubicoPrimeMag : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Ranged/RubicoPrimeMag";
+        public override string Texture => "CalamityMod/Projectiles/Ranged/RubicoPrimeMag";
         public int Time = 0;
         public bool TouchedGrass = false;
 

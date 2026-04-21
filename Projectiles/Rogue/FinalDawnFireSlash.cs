@@ -1,13 +1,13 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Weapons.Rogue;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class FinalDawnFireSlash : ModProjectile, ILocalizedModType
     {
@@ -110,7 +110,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
             Rectangle frameRectangle = new Rectangle(Projectile.frame / 5 * width, Projectile.frame % 5 * height, width, height);
 
             Texture2D scytheTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/FinalDawnFireSlash_Glow").Value;
+            Texture2D glowTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/FinalDawnFireSlash_Glow").Value;
 
             Main.spriteBatch.Draw(scytheTexture,
                                   drawCenter - Main.screenPosition,

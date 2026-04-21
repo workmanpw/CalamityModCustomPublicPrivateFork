@@ -1,20 +1,20 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class PristineSecondary : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Magic/RancorFog";
+        public override string Texture => "CalamityMod/Projectiles/Magic/RancorFog";
 
         public ref float ScaleFactor => ref Projectile.ai[0];
         public float LightPower = 0;
@@ -52,7 +52,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                     Projectile.damage *= (int)7;
                     FogColor = Color.Lerp(Color.OrangeRed, Color.Goldenrod, Main.rand.NextFloat());
 
-                    SoundStyle ignite = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceHolyBlastImpact");
+                    SoundStyle ignite = new("CalamityMod/Sounds/Custom/Providence/ProvidenceHolyBlastImpact");
                     SoundEngine.PlaySound(ignite with { Volume = 0.4f, Pitch = Main.rand.NextFloat(0.5f, 0.6f) }, Projectile.Center);
                 }
                 FogColor = Color.Lerp(Color.OrangeRed, Color.Goldenrod, Main.rand.NextFloat(0.5f, 1));
@@ -93,7 +93,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
                 if (Main.rand.NextBool(40))
                 {
-                    Particle spark = new CustomSpark(Projectile.Center + vel * 4 * Projectile.Opacity, vel * 0.05f, "CalamityModCustomPublicPrivateFork/Particles/ProvidenceMarkParticle", false, 25, Main.rand.NextFloat(0.9f, 1.2f) * (Ignited ? 1.8f : 1), FogColor * Projectile.Opacity * 0.4f, new Vector2(1.3f, 0.5f), true, false, (Ignited ? 0 : Main.rand.NextFloat(-4, 4)), false, false, (Ignited ? 0.5f : 0));
+                    Particle spark = new CustomSpark(Projectile.Center + vel * 4 * Projectile.Opacity, vel * 0.05f, "CalamityMod/Particles/ProvidenceMarkParticle", false, 25, Main.rand.NextFloat(0.9f, 1.2f) * (Ignited ? 1.8f : 1), FogColor * Projectile.Opacity * 0.4f, new Vector2(1.3f, 0.5f), true, false, (Ignited ? 0 : Main.rand.NextFloat(-4, 4)), false, false, (Ignited ? 0.5f : 0));
                     GeneralParticleHandler.SpawnParticle(spark);
                 }
                 if (Main.rand.NextBool(30))

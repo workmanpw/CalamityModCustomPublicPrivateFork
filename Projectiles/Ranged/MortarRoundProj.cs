@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Items.Ammo;
+using CalamityMod.Items.Ammo;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -6,12 +6,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class MortarRoundProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Ammo/MortarRound";
+        public override string Texture => "CalamityMod/Items/Ammo/MortarRound";
 
         public override void SetDefaults()
         {

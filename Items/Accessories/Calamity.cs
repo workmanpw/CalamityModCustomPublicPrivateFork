@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class Calamity : ModItem, ILocalizedModType
     {
@@ -54,7 +54,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
 
         public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
-            Texture2D texture = Main.zenithWorld ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Accessories/Calamity_GFB").Value : TextureAssets.Item[Type].Value;
+            Texture2D texture = Main.zenithWorld ? ModContent.Request<Texture2D>("CalamityMod/Items/Accessories/Calamity_GFB").Value : TextureAssets.Item[Type].Value;
             CalamityUtils.DrawInventoryCustomScale(
                 spriteBatch,
                 texture,
@@ -74,7 +74,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Accessories
         {
             if (Main.zenithWorld)
             {
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Accessories/Calamity_GFB").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Accessories/Calamity_GFB").Value;
                 spriteBatch.Draw(texture, Item.position - Main.screenPosition, Main.itemAnimations[Type].GetFrame(texture), lightColor, 0f, Vector2.Zero, 1f, 0, 0);
                 return false;
             }

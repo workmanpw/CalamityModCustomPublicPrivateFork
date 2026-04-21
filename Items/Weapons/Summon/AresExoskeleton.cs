@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon.SmallAresArms;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Summon.SmallAresArms;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
+namespace CalamityMod.Items.Weapons.Summon
 {
     public class AresExoskeleton : ModItem, ILocalizedModType
     {
@@ -90,10 +90,10 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
 
         public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frameI, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Summon/AresExoskeleton").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Summon/AresExoskeleton").Value;
             if (!Main.gameMenu && ArmExists(Main.LocalPlayer))
             {
-                texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Summon/AresExoskeletonRemote").Value;
+                texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Summon/AresExoskeletonRemote").Value;
                 position.X += scale * 6f;
             }
 
@@ -103,7 +103,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Summon
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Summon/AresExoskeleton").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Summon/AresExoskeleton").Value;
             spriteBatch.Draw(texture, Item.position - Main.screenPosition, Item.GetCurrentFrame(ref Frame, ref FrameCounter, 1, 1), lightColor, 0f, Vector2.Zero, 1f, 0, 0);
             return false;
         }

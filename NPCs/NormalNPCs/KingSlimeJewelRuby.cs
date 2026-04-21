@@ -1,10 +1,10 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.CalPlayer;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -12,15 +12,15 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs.IceClasper;
+using static CalamityMod.NPCs.NormalNPCs.IceClasper;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
+namespace CalamityMod.NPCs.NormalNPCs
 {
     public class KingSlimeJewelRuby : ModNPC
     {
-        public static readonly SoundStyle ShatterSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/CrownJewelShatter");
-        public static readonly SoundStyle ShootSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/RedJewelFire");
-        public static readonly SoundStyle ModeShiftSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/RedJewelModeShift");
+        public static readonly SoundStyle ShatterSound = new SoundStyle("CalamityMod/Sounds/NPCKilled/CrownJewelShatter");
+        public static readonly SoundStyle ShootSound = new SoundStyle("CalamityMod/Sounds/Custom/RedJewelFire");
+        public static readonly SoundStyle ModeShiftSound = new SoundStyle("CalamityMod/Sounds/Custom/RedJewelModeShift");
 
 
         private const int BoltShootGateValue = 60;
@@ -238,7 +238,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
 
                         NPC.rotation += MathHelper.ToRadians(Math.Sign(NPC.velocity.X) * 15);
 
-                        CustomSprite spriteParticle = new CustomSprite(NPC.Center - NPC.velocity, NPC.velocity * 0.8f, 10, "CalamityModCustomPublicPrivateFork/NPCs/NormalNPCs/KingSlimeJewelEmerald", 1.2f, Color.DarkGreen.MultiplyRGBA(new Color(1f, 1f, 1f, 0f)));
+                        CustomSprite spriteParticle = new CustomSprite(NPC.Center - NPC.velocity, NPC.velocity * 0.8f, 10, "CalamityMod/NPCs/NormalNPCs/KingSlimeJewelEmerald", 1.2f, Color.DarkGreen.MultiplyRGBA(new Color(1f, 1f, 1f, 0f)));
                         spriteParticle.Rotation = NPC.rotation;
                         GeneralParticleHandler.SpawnParticle(spriteParticle);
 
@@ -474,7 +474,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             float start = Main.rand.NextFloat(MathHelper.TwoPi);
             for (int i = 0; i < 3; i++)
             {
-                GeneralParticleHandler.SpawnParticle(new CustomSprite(NPC.Center, new Vector2(0, -2).RotatedByRandom(start + MathHelper.ToRadians(20f)).RotatedBy(MathHelper.ToRadians(i * 125)), 120, "CalamityModCustomPublicPrivateFork/Particles/KingSlimeRubyShards", 1f, new Color(255, 255, 255), Main.rand.NextFloat(0.2f, 0.6f), frameCount: 3, frame: i));
+                GeneralParticleHandler.SpawnParticle(new CustomSprite(NPC.Center, new Vector2(0, -2).RotatedByRandom(start + MathHelper.ToRadians(20f)).RotatedBy(MathHelper.ToRadians(i * 125)), 120, "CalamityMod/Particles/KingSlimeRubyShards", 1f, new Color(255, 255, 255), Main.rand.NextFloat(0.2f, 0.6f), frameCount: 3, frame: i));
 
             }
 
@@ -492,8 +492,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs
             float currentLightTelegraphDuration = emeraldMode ? EmeraldLightTelegraphDuration : RubyLightTelegraphDuration;
             float currentColorTelegraphGateValue = (emeraldMode ? EmeraldChargeGateValue_Death : BoltShootGateValue_Death) - currentLightTelegraphDuration;
 
-            Asset<Texture2D> tex = ModContent.Request<Texture2D>(emeraldMode ? "CalamityModCustomPublicPrivateFork/NPCs/NormalNPCs/KingSlimeJewelEmerald" : Texture);
-            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/NormalNPCs/KingSlimeJewelFlash");
+            Asset<Texture2D> tex = ModContent.Request<Texture2D>(emeraldMode ? "CalamityMod/NPCs/NormalNPCs/KingSlimeJewelEmerald" : Texture);
+            Asset<Texture2D> tex2 = ModContent.Request<Texture2D>("CalamityMod/NPCs/NormalNPCs/KingSlimeJewelFlash");
 
             if (emeraldMode)
             {

@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,12 +7,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class IceBombFriendly : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Boss/IceBomb";
+        public override string Texture => "CalamityMod/Projectiles/Boss/IceBomb";
         public ref float Timer => ref Projectile.ai[0];
         public const float FormTime = 60f;
 

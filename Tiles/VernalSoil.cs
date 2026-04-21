@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles
+namespace CalamityMod.Tiles
 {
     public class VernalSoil : ModTile
     {
@@ -20,7 +20,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles
 
         public override void SetStaticDefaults()
         {
-            GrassTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/VernicFernGrass");
+            GrassTexture = ModContent.Request<Texture2D>("CalamityMod/Tiles/VernicFernGrass");
 
             Main.tileSolid[Type] = true;
             Main.tileBlockLight[Type] = false;

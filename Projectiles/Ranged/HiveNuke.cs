@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Projectiles.Ranged.TheHiveHoldout;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+using static CalamityMod.Projectiles.Ranged.TheHiveHoldout;
+namespace CalamityMod.Projectiles.Ranged
 {
     public class HiveNuke : ModProjectile, ILocalizedModType
     {
@@ -148,7 +148,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         public override bool PreDraw(ref Color lightColor)
         {
             if (BonusEffectMode) { return false; }
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/StarProj").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/StarProj").Value;
             if (Time > 6)
                 CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], EffectsColor * 0.4f, 1, texture);
             Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
@@ -179,14 +179,14 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             {
                 if (Main.zenithWorld)
                 {
-                    SoundStyle bees = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/BEES/bees", 12);
+                    SoundStyle bees = new("CalamityMod/Sounds/Custom/BEES/bees", 12);
                     SoundEngine.PlaySound(bees with { Volume = 1.5f }, Projectile.Center);
-                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TheHiveNuke");
+                    SoundStyle fire = new("CalamityMod/Sounds/Item/TheHiveNuke");
                     SoundEngine.PlaySound(fire with { Volume = 0.35f }, Projectile.Center);
                 }
                 else
                 {
-                    SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TheHiveNuke");
+                    SoundStyle fire = new("CalamityMod/Sounds/Item/TheHiveNuke");
                     SoundEngine.PlaySound(fire with { Volume = 0.9f }, Projectile.Center);
                 }
 
@@ -210,7 +210,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
                 for (int k = 0; k < 3; k++)
                 {
-                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, StaticEffectsColor * 0.8f, "CalamityModCustomPublicPrivateFork/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), Projectile.width / 22815f, Projectile.width / (2275f + 520 * k), 20 + 4 * k);
+                    Particle blastRing = new CustomPulse(Projectile.Center, Vector2.Zero, StaticEffectsColor * 0.8f, "CalamityMod/Particles/FlameExplosion", Vector2.One, Main.rand.NextFloat(-10, 10), Projectile.width / 22815f, Projectile.width / (2275f + 520 * k), 20 + 4 * k);
                     GeneralParticleHandler.SpawnParticle(blastRing);
                 }
 

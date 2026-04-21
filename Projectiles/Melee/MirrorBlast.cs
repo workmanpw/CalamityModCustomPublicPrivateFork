@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class MirrorBlast : ModProjectile, ILocalizedModType
     {
@@ -218,8 +218,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D BlastTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MirrorBlast").Value;
-            Texture2D ShardTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MirrorShard").Value;
+            Texture2D BlastTex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/MirrorBlast").Value;
+            Texture2D ShardTex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/MirrorShard").Value;
             Point BlastTextureDim = new Point(60, 26);
             Point ShardTextureDim = new Point(32, 14);
             Texture2D UsedTex = isShard ? ShardTex : BlastTex;

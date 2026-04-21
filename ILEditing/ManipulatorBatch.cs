@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using MonoMod.Cil;
 
-namespace CalamityModCustomPublicPrivateFork.ILEditing;
+namespace CalamityMod.ILEditing;
 
 /// <summary>
 ///     Simple helper object to capture multiple IL edits to apply in a single

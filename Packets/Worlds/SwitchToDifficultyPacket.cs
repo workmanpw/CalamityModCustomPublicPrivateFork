@@ -1,11 +1,11 @@
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.UI.ModeIndicator;
+using CalamityMod.Systems;
+using CalamityMod.UI.ModeIndicator;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class SwitchToDifficultyPacket : CalamityPacket
     {

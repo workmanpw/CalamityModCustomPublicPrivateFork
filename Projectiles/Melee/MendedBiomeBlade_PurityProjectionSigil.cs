@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class PurityProjectionSigil : ModProjectile, ILocalizedModType
     {
@@ -14,7 +14,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         private NPC target => Main.npc[(int)Projectile.ai[0]];
 
         public Player Owner => Main.player[Projectile.owner];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_PurityProjectionSigil";
+        public override string Texture => "CalamityMod/Projectiles/Melee/MendedBiomeBlade_PurityProjectionSigil";
 
         public override void SetStaticDefaults()
         {

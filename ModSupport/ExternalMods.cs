@@ -1,6 +1,6 @@
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public sealed class ExternalMods : ModSystem
     {
@@ -36,7 +36,7 @@ namespace CalamityModCustomPublicPrivateFork
         public override void Load()
         {
             musicMod = null;
-            ModLoader.TryGetMod("CalamityModMusicCustomPublicPrivateFork", out musicMod);
+            ModLoader.TryGetMod("CalamityModMusic", out musicMod);
             vcmm = null;
             ModLoader.TryGetMod("UnCalamityModMusic", out vcmm);
 

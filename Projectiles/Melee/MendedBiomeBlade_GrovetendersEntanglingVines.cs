@@ -5,12 +5,12 @@ using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class GrovetendersEntanglingVines : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_GrovetendersTouchChain";
+        public override string Texture => "CalamityMod/Projectiles/Melee/BrokenBiomeBlade_GrovetendersTouchChain";
         public Player Owner => Main.player[Projectile.owner];
         public float Timer => 20 - Projectile.timeLeft;
         public NPC NPCfrom
@@ -50,7 +50,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D chainTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_GrovetendersTouchChain").Value;
+            Texture2D chainTex = Request<Texture2D>("CalamityMod/Projectiles/Melee/BrokenBiomeBlade_GrovetendersTouchChain").Value;
 
             float opacity = Projectile.timeLeft > 10 ? 1 : Projectile.timeLeft / 10f;
             Vector2 Shake = Projectile.timeLeft < 15 ? Vector2.Zero : Vector2.One.RotatedByRandom(MathHelper.TwoPi) * (15 - Projectile.timeLeft / 5f) * 0.5f;

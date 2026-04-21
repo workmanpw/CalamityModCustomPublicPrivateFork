@@ -1,8 +1,8 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -12,7 +12,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class ApoctosisArrayHoldout : BaseGunHoldoutProjectile
     {
@@ -110,7 +110,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                     }
                     else
                     {
-                        SoundStyle charge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/IonChargeLoop");
+                        SoundStyle charge = new("CalamityMod/Sounds/Item/IonChargeLoop");
                         ionHum = SoundEngine.PlaySound(charge with { Volume = 0.7f, IsLooped = true }, Projectile.Center);
                     }
 
@@ -144,7 +144,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 
                         if (isAtMaxMana && !fullyCharged && manaPower >= 0.25f)
                         {
-                            SoundStyle fullCharge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/DudFire");
+                            SoundStyle fullCharge = new("CalamityMod/Sounds/Item/DudFire");
                             for (int i = 0; i < 2; i++)
                                 SoundEngine.PlaySound(fullCharge with { Volume = .6f, Pitch = -0.7f + i * 1.5f, MaxInstances = 2 }, Projectile.Center);
                             fullyCharged = true;
@@ -225,11 +225,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                     hum?.Stop();
                 }
                 
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ImpalerLaunch");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/ImpalerLaunch");
                 for (int i = 0; i < (manaPower >= 1 ? 2 : 1); i++)
                     SoundEngine.PlaySound(fire with { Volume = 0.9f, Pitch = -0.7f, MaxInstances = 2 }, Projectile.Center);
                 
-                SoundStyle fire2 = new("CalamityModCustomPublicPrivateFork/Sounds/Item/PulseRifleFire");
+                SoundStyle fire2 = new("CalamityMod/Sounds/Item/PulseRifleFire");
                 SoundEngine.PlaySound(fire2 with { Volume = 0.75f, Pitch = (manaPower >= 1 ? 0.7f : 0.5f) }, Projectile.Center);
 
                 Owner.SetScreenshake(12f * manaPower);
@@ -249,14 +249,14 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                     Particle sparks = new SparkParticle(GunTipPosition, Projectile.velocity.RotatedByRandom(0.7f) * Main.rand.NextFloat(7, 25), false, 35, Main.rand.NextFloat(0.5f, 0.9f), Main.rand.NextBool() ? Color.Lerp(effectsColor, Color.White, 0.5f) : effectsColor);
                     GeneralParticleHandler.SpawnParticle(sparks);
                 }
-                Particle pulse3 = new CustomSpark(GunTipPosition, shootDirection * 7, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 23, 0.085f * manaPower, effectsColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.1f);
+                Particle pulse3 = new CustomSpark(GunTipPosition, shootDirection * 7, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 23, 0.085f * manaPower, effectsColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.1f);
                 GeneralParticleHandler.SpawnParticle(pulse3);
-                Particle pulse4 = new CustomSpark(GunTipPosition, shootDirection * 13, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdgeAlt", false, 18, 0.06f * manaPower, effectsColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.1f);
+                Particle pulse4 = new CustomSpark(GunTipPosition, shootDirection * 13, "CalamityMod/Particles/HighResHollowCircleHardEdgeAlt", false, 18, 0.06f * manaPower, effectsColor, new Vector2(2f, 0.7f), shrinkSpeed: 0.1f);
                 GeneralParticleHandler.SpawnParticle(pulse4);
             }
             else
             {
-                SoundStyle shoot = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ApoctosisShoot");
+                SoundStyle shoot = new("CalamityMod/Sounds/Item/ApoctosisShoot");
                 SoundEngine.PlaySound(shoot with { Volume = 0.25f, Pitch = 0.5f - 1.1f * manaPercent, MaxInstances = -1 }, Projectile.Center);
                 if (shotNum % 2 == 0)
                 {
@@ -274,7 +274,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 
                         if (k % 2 == 0)
                         {
-                            Particle blast = new CustomSpark(GunTipPosition, Projectile.velocity * 3 * k, "CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge", false, 11, 0.04f, useColor, new Vector2(1f, 0.8f), shrinkSpeed: 0.8f);
+                            Particle blast = new CustomSpark(GunTipPosition, Projectile.velocity * 3 * k, "CalamityMod/Particles/BloomLineSoftEdge", false, 11, 0.04f, useColor, new Vector2(1f, 0.8f), shrinkSpeed: 0.8f);
                             GeneralParticleHandler.SpawnParticle(blast);
                         }
                     }
@@ -300,7 +300,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 
                             if (k % 2 == 0)
                             {
-                                Particle blast = new CustomSpark(GunTipPosition, vel.SafeNormalize(Vector2.UnitX) * 3 * k, "CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge", false, 11, 0.04f, useColor, new Vector2(1f, 0.8f), shrinkSpeed: 0.8f);
+                                Particle blast = new CustomSpark(GunTipPosition, vel.SafeNormalize(Vector2.UnitX) * 3 * k, "CalamityMod/Particles/BloomLineSoftEdge", false, 11, 0.04f, useColor, new Vector2(1f, 0.8f), shrinkSpeed: 0.8f);
                                 GeneralParticleHandler.SpawnParticle(blast);
                             }
                         }
@@ -317,9 +317,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
             if (time < 2)
                 return false;
             Texture2D tex = TextureAssets.Projectile[Type].Value;
-            Texture2D texGlow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Magic/ApoctosisArrayGlow").Value;
-            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
-            Texture2D sparkle = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HalfStar").Value;
+            Texture2D texGlow = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Magic/ApoctosisArrayGlow").Value;
+            Texture2D tex2 = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D sparkle = ModContent.Request<Texture2D>("CalamityMod/Particles/HalfStar").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             float drawRotation = Projectile.rotation + (Projectile.spriteDirection == -1 ? MathHelper.Pi : 0f);
             SpriteEffects flipSprite = (Projectile.spriteDirection * Owner.gravDir == -1) ? SpriteEffects.FlipHorizontally : SpriteEffects.None;

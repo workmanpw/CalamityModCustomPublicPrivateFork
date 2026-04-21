@@ -1,19 +1,19 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Bloodflare
+namespace CalamityMod.Items.Armor.Bloodflare
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("BloodflareHornedHelm")]
     public class BloodflareHeadRanged : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Armor.PostMoonLord";
-        public static readonly SoundStyle ActivationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AbilitySounds/BloodflareRangerActivation");
+        public static readonly SoundStyle ActivationSound = new("CalamityMod/Sounds/Custom/AbilitySounds/BloodflareRangerActivation");
 
         public static float RangedDamageBoost = 0.1f;
         public static float AmmoReduction = 0.75f;

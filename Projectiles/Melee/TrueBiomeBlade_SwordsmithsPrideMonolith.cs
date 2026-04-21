@@ -1,22 +1,22 @@
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class SwordsmithsPrideMonolith : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_SwordsmithsPrideMonolith";
+        public override string Texture => "CalamityMod/Projectiles/Melee/TrueBiomeBlade_SwordsmithsPrideMonolith";
         public Player Owner => Main.player[Projectile.owner];
         public float Timer => (100f - Projectile.timeLeft) / 100f;
         public ref float Variant => ref Projectile.ai[0];
@@ -153,7 +153,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D tex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_SwordsmithsPrideMonolith").Value;
+            Texture2D tex = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_SwordsmithsPrideMonolith").Value;
 
             Vector2 Shake = Projectile.timeLeft < 70 ? Vector2.Zero : Vector2.One.RotatedByRandom(MathHelper.TwoPi) * (70 - Projectile.timeLeft / 30f) * 0.05f;
 
@@ -172,7 +172,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         }
         public override void PostDraw(Color lightColor)
         {
-            Texture2D tex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_HeavensMonolith_Glow").Value;
+            Texture2D tex = Request<Texture2D>("CalamityMod/Projectiles/Melee/MendedBiomeBlade_HeavensMonolith_Glow").Value;
 
             float drawAngle = Projectile.rotation;
             Rectangle frame = new Rectangle(0 + (int)Variant * 94, 0, 94, 420);

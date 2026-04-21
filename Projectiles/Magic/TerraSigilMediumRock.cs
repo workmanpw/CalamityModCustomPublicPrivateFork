@@ -1,11 +1,11 @@
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Terraria.Audio;
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class TerraSigilMediumRock : ModProjectile, ILocalizedModType
     {
@@ -77,7 +77,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
 
         public override void OnKill(int timeLeft)
         {
-            SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/Ravager/RavagerJump2") { Volume = 0.7f, PitchVariance = 0.1f }, Projectile.Center);
+            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/Ravager/RavagerJump2") { Volume = 0.7f, PitchVariance = 0.1f }, Projectile.Center);
 
             int rockCount = Main.rand.Next(1, 3);
             for (int i = 0; i < rockCount; i++)
@@ -105,7 +105,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
                 else
                 {
                     Color clr = Color.Lerp((Main.rand.NextBool() ? Color.Peru : Color.PeachPuff), Color.Black, Main.rand.NextFloat(0.25f, 0.45f));
-                    Particle sand = new CustomSpark(Projectile.Center, (Vector2.One * Main.rand.NextFloat(3, 8)).RotatedByRandom(MathHelper.TwoPi), "CalamityModCustomPublicPrivateFork/Particles/SmallSmoke", true, Main.rand.Next(15, 30 + 1), Projectile.scale * Main.rand.NextFloat(0.05f, 0.1f) * 4, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 1f)), false, extraRotation: Main.rand.NextFloat(-2, 2), spin: Main.rand.NextFloat(-0.5f, 0.5f), affectedByLight: true);
+                    Particle sand = new CustomSpark(Projectile.Center, (Vector2.One * Main.rand.NextFloat(3, 8)).RotatedByRandom(MathHelper.TwoPi), "CalamityMod/Particles/SmallSmoke", true, Main.rand.Next(15, 30 + 1), Projectile.scale * Main.rand.NextFloat(0.05f, 0.1f) * 4, clr, new Vector2(1, Main.rand.NextFloat(0.2f, 1f)), false, extraRotation: Main.rand.NextFloat(-2, 2), spin: Main.rand.NextFloat(-0.5f, 0.5f), affectedByLight: true);
                     GeneralParticleHandler.SpawnParticle(sand);
                 }
             }

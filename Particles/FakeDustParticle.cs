@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class FakeGlowDust : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/FakeDust";
+        public override string Texture => "CalamityMod/Particles/FakeDust";
         public override bool UseAdditiveBlend => true;
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;
@@ -49,7 +49,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
 
         public override void CustomDraw(SpriteBatch spriteBatch)
         {
-            Texture2D dustTexture = Big ? ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/FakeDustBig").Value : ModContent.Request<Texture2D>(Texture).Value;
+            Texture2D dustTexture = Big ? ModContent.Request<Texture2D>("CalamityMod/Particles/FakeDustBig").Value : ModContent.Request<Texture2D>(Texture).Value;
             Rectangle frame = new Rectangle(0, (Big ? 8 : 6) * Variant, (Big ? 8 : 6), (Big ? 8 : 6));
             spriteBatch.Draw(dustTexture, Position - Main.screenPosition, frame, Color * opacity, Rotation, frame.Size() / 2f, Scale, SpriteEffects.None, 0);
         }

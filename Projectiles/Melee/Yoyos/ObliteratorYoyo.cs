@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -15,7 +15,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
+namespace CalamityMod.Projectiles.Melee.Yoyos
 {
     public class ObliteratorYoyo : ModProjectile
     {
@@ -72,7 +72,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
             {
                 if (time == 1)
                 {
-                    GFB = SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/BoomBoomKawaii") with { IsLooped = true });
+                    GFB = SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/BoomBoomKawaii") with { IsLooped = true });
                     GFBCounter++;
                 }
                 if (time % 30 == 0 && GFBCounter > 0)
@@ -156,11 +156,11 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
         public override void PostDraw(Color lightColor)
         {
             Vector2 origin = new Vector2(10f, 10f);
-            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/Yoyos/ObliteratorYoyoGlow").Value, Projectile.Center - Main.screenPosition, null, Color.White, Projectile.rotation, origin, 2f, SpriteEffects.None, 0);
+            Main.EntitySpriteDraw(ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/Yoyos/ObliteratorYoyoGlow").Value, Projectile.Center - Main.screenPosition, null, Color.White, Projectile.rotation, origin, 2f, SpriteEffects.None, 0);
 
             if (Projectile.localAI[1] <= DashStartup)
                 return;
-            var tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Jaws").Value;
+            var tex = ModContent.Request<Texture2D>("CalamityMod/Particles/Jaws").Value;
             Main.spriteBatch.SetBlendState(BlendState.Additive);
             Main.spriteBatch.Draw(tex,Projectile.Center+ Projectile.velocity.SafeNormalize(Vector2.Zero)*16f- Main.screenPosition,null,Color.Fuchsia,Projectile.velocity.ToRotation() + MathHelper.PiOver2,tex.Size()*0.5f,0.33f,SpriteEffects.None,0);
             Main.spriteBatch.Draw(tex, Projectile.Center + Projectile.velocity.SafeNormalize(Vector2.Zero) * 16f - Main.screenPosition, null, Color.Aqua, Projectile.velocity.ToRotation() + MathHelper.PiOver2, tex.Size() * 0.5f, 0.25f, SpriteEffects.None, 0);
@@ -198,7 +198,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
                     SparkParticle chompSpark = new(Projectile.Center, sparkVelocity, false, sparkLifetime, sparkScale, sparkColor);
                     GeneralParticleHandler.SpawnParticle(chompSpark);
                 }
-                SoundEngine.PlaySound(new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/OtherworldlyHit") with { Pitch = -0.45f, Volume = 0.33f }, Projectile.Center);
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/NPCHit/OtherworldlyHit") with { Pitch = -0.45f, Volume = 0.33f }, Projectile.Center);
             }
             else
                 target.AddBuff(ModContent.BuffType<WhisperingDeath>(), 180);

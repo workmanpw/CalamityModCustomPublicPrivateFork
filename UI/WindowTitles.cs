@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using ReLogic.OS;
 
-namespace CalamityModCustomPublicPrivateFork.UI
+namespace CalamityMod.UI
 {
     public class WindowTitles : ModSystem
     {

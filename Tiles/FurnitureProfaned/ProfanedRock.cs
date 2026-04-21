@@ -1,13 +1,13 @@
 
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.Dusts.Furniture;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureProfaned
+namespace CalamityMod.Tiles.FurnitureProfaned
 {
     public class ProfanedRock : GlowMaskTile
     {

@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Walls;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Walls;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Plates
+namespace CalamityMod.Items.Placeables.Plates
 {
     [LegacyName("Chaosplate")]
     public class Havocplate : ModItem, ILocalizedModType

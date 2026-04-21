@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityMod.Walls;
 using Microsoft.Xna.Framework;
 using MonoMod.Cil;
 using Terraria;
 using Terraria.GameContent.Drawing;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     internal sealed class MultiVariantWallDrawingSystem : ModSystem
     {

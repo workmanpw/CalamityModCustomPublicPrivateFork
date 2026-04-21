@@ -6,7 +6,7 @@ using Terraria.Audio;
 using Terraria.GameContent;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.VanillaProjectileOverrides
+namespace CalamityMod.Projectiles.VanillaProjectileOverrides
 {
     public static class RavenMinionAI
     {
@@ -23,7 +23,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.VanillaProjectileOverri
         private static float EnemyDistanceDetection { get => Target is null ? MinEnemyDistanceDetection : MaxEnemyDistanceDetection; }
 
         private const float DashSpeed = 35f;
-        private static SoundStyle CrowNoises = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Crow", 3);
+        private static SoundStyle CrowNoises = new("CalamityMod/Sounds/Custom/Crow", 3);
         private static NPC Target { get; set; }
 
         public static bool DoRavenMinionAI(Projectile proj)

@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
+using CalamityMod.CalPlayer;
+using CalamityMod.CalPlayer.Dashes;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     [AutoloadEquip(EquipType.Neck)]
     public class CounterScarf : ModItem, ILocalizedModType

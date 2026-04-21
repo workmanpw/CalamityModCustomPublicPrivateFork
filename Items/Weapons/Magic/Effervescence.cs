@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
+using CalamityMod.Projectiles.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -6,14 +6,14 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Magic
+namespace CalamityMod.Items.Weapons.Magic
 {
     public class Effervescence : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
-        public static readonly SoundStyle FireSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/EffervescenceFire") { PitchVariance = 0.1f };
-        public static readonly SoundStyle BurstSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/EffervescenceBurst") { PitchVariance = 0.1f };
-        public static readonly SoundStyle PopSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/EffervescencePop") { PitchVariance = 0.1f };
+        public static readonly SoundStyle FireSound = new("CalamityMod/Sounds/Item/EffervescenceFire") { PitchVariance = 0.1f };
+        public static readonly SoundStyle BurstSound = new("CalamityMod/Sounds/Item/EffervescenceBurst") { PitchVariance = 0.1f };
+        public static readonly SoundStyle PopSound = new("CalamityMod/Sounds/Item/EffervescencePop") { PitchVariance = 0.1f };
 
         public override void SetDefaults()
         {

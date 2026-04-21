@@ -1,12 +1,12 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class AstralGodRay : ModProjectile, ILocalizedModType
     {
@@ -21,7 +21,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
 
         private ref float WaveFrameState => ref Projectile.localAI[1];
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/LaserProj";
+        public override string Texture => "CalamityMod/Projectiles/LaserProj";
 
         public override void SetStaticDefaults()
         {

@@ -1,7 +1,7 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.NPCs.Providence;
+using CalamityMod.NPCs.Providence;
 
-namespace CalamityModCustomPublicPrivateFork.Packets
+namespace CalamityMod.Packets
 {
     internal sealed class PSCChallengeSyncPacket : CalamityPacket
     {

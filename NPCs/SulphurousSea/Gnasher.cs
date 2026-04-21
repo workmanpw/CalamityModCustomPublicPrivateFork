@@ -1,16 +1,16 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.BiomeManagers;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.BiomeManagers;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.World;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.SulphurousSea
+namespace CalamityMod.NPCs.SulphurousSea
 {
     public class Gnasher : ModNPC
     {
@@ -49,7 +49,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.SulphurousSea
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Gnasher")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Gnasher")
             });
         }
 

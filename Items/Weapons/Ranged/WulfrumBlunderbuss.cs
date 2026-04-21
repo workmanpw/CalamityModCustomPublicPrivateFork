@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.Items.Materials;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,16 +11,16 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
+namespace CalamityMod.Items.Weapons.Ranged
 {
     [LegacyName("WulfrumBow")]
     public class WulfrumBlunderbuss : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Ranged";
-        public static readonly SoundStyle ShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumBlunderbussFire") { PitchVariance = 0.1f };
-        public static readonly SoundStyle ShootAndReloadSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/WulfrumBlunderbussFireAndReload") { PitchVariance = 0.1f };
+        public static readonly SoundStyle ShootSound = new("CalamityMod/Sounds/Item/WulfrumBlunderbussFire") { PitchVariance = 0.1f };
+        public static readonly SoundStyle ShootAndReloadSound = new("CalamityMod/Sounds/Item/WulfrumBlunderbussFireAndReload") { PitchVariance = 0.1f };
 
         public static int ArmorPenetration = 3;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(ArmorPenetration);
@@ -166,8 +166,8 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged
         {
             float barScale = 1.2f;
 
-            var barBG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarBack").Value;
-            var barFG = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/GenericBarFront").Value;
+            var barBG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarBack").Value;
+            var barFG = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/GenericBarFront").Value;
 
             Vector2 drawPos = position + Vector2.UnitY * (frame.Height - 2 + 6f) * scale + Vector2.UnitX * (frame.Width - barBG.Width * barScale) * scale * 0.5f;
             Rectangle frameCrop = new Rectangle(0, 0, (int)(storedScrap / (float)ShotsPerScrap * barFG.Width), barFG.Height);

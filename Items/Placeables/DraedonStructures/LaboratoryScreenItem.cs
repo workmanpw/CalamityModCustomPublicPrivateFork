@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
+using CalamityMod.Items.Materials;
+using CalamityMod.Tiles.DraedonStructures;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.DraedonStructures
+namespace CalamityMod.Items.Placeables.DraedonStructures
 {
     public class LaboratoryScreenItem : ModItem, ILocalizedModType
     {

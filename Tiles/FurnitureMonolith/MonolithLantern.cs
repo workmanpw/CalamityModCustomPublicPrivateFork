@@ -1,4 +1,4 @@
-using CalamityModCustomPublicPrivateFork.Dusts;
+using CalamityMod.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -6,7 +6,7 @@ using Terraria;
 using Terraria.GameContent.Drawing;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMonolith
+namespace CalamityMod.Tiles.FurnitureMonolith
 {
     public class MonolithLantern : ModTile
     {

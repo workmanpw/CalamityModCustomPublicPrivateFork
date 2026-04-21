@@ -2,7 +2,7 @@ using System.Linq;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Balancing
+namespace CalamityMod.Balancing
 {
     public interface IBalancingRule
     {

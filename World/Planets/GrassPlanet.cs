@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityMod.DataStructures;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Generation;
 using Terraria.ID;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.World.Planets
+namespace CalamityMod.World.Planets
 {
     /// <summary>
     /// Comfy planet, the typical one you'd expect from planetoids.

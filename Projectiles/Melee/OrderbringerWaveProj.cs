@@ -1,18 +1,18 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class OrderbringerWaveProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/JudgementProj";
+        public override string Texture => "CalamityMod/Projectiles/Melee/JudgementProj";
         public ref float time => ref Projectile.ai[0];
         public float hitboxSize = 10;
         public Color mainColor;
@@ -76,9 +76,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
                 if (time % 9 == 0 && time < 200)
                 {
-                    Particle spark = new CustomSpark(topCorner, Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedBy(MathHelper.ToRadians(-170f)), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 18, 0.35f, mainColor * 0.75f, new Vector2(1f, 2.5f), true, true, shrinkSpeed: 0.2f, glowOpacity: 0.7f);
+                    Particle spark = new CustomSpark(topCorner, Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedBy(MathHelper.ToRadians(-170f)), "CalamityMod/Particles/BloomCircle", false, 18, 0.35f, mainColor * 0.75f, new Vector2(1f, 2.5f), true, true, shrinkSpeed: 0.2f, glowOpacity: 0.7f);
                     GeneralParticleHandler.SpawnParticle(spark);
-                    Particle spark2 = new CustomSpark(bottomCorner, Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedBy(MathHelper.ToRadians(170f)), "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", false, 18, 0.35f, mainColor * 0.75f, new Vector2(1f, 2.5f), true, true, shrinkSpeed: 0.2f, glowOpacity: 0.7f);
+                    Particle spark2 = new CustomSpark(bottomCorner, Projectile.velocity.SafeNormalize(Vector2.UnitY).RotatedBy(MathHelper.ToRadians(170f)), "CalamityMod/Particles/BloomCircle", false, 18, 0.35f, mainColor * 0.75f, new Vector2(1f, 2.5f), true, true, shrinkSpeed: 0.2f, glowOpacity: 0.7f);
                     GeneralParticleHandler.SpawnParticle(spark2);
                 }
                 if (Main.rand.NextBool(12))

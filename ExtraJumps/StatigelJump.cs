@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.ExtraJumps
+namespace CalamityMod.ExtraJumps
 {
     public class StatigelJump : ExtraJump
     {

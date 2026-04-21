@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Crags
+namespace CalamityMod.Items.Placeables.Crags
 {
     public class SpineSapling : ModItem, ILocalizedModType
     {

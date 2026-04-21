@@ -1,9 +1,9 @@
 using System;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -12,13 +12,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class TrueGrovetendersTouch : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
         private NPC[] excludedTargets = new NPC[4];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_GrovetendersTouchBlade";
+        public override string Texture => "CalamityMod/Projectiles/Melee/MendedBiomeBlade_GrovetendersTouchBlade";
         private bool initialized = false;
         public Player Owner => Main.player[Projectile.owner];
         public float Timer => MaxTime - Projectile.timeLeft;
@@ -225,8 +225,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         {
             if (Timer == 0)
                 return false;
-            Texture2D handle = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_GrovetendersTouchBlade").Value;
-            Texture2D blade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade_GrovetendersTouchGlow").Value;
+            Texture2D handle = Request<Texture2D>("CalamityMod/Projectiles/Melee/MendedBiomeBlade_GrovetendersTouchBlade").Value;
+            Texture2D blade = Request<Texture2D>("CalamityMod/Projectiles/Melee/MendedBiomeBlade_GrovetendersTouchGlow").Value;
 
             Vector2 projBottom = Projectile.Center + new Vector2(-handle.Width / 2, handle.Height / 2).RotatedBy(Projectile.rotation + MathHelper.PiOver4) * 0.75f;
             DrawChain(projBottom, out Vector2[] chainPositions);
@@ -263,7 +263,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         private void DrawChain(Vector2 projBottom, out Vector2[] chainPositions)
         {
-            Texture2D chainTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/BrokenBiomeBlade_GrovetendersTouchChain").Value;
+            Texture2D chainTex = Request<Texture2D>("CalamityMod/Projectiles/Melee/BrokenBiomeBlade_GrovetendersTouchChain").Value;
 
             float ratio = GetSwingRatio();
 

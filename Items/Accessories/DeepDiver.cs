@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
+using CalamityMod.CalPlayer;
+using CalamityMod.CalPlayer.Dashes;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.SunkenSea;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class DeepDiver : ModItem, ILocalizedModType
     {

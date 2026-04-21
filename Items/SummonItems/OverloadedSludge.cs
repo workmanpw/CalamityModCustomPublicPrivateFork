@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.NPCs.SlimeGod;
+using CalamityMod.Events;
+using CalamityMod.Items.Materials;
+using CalamityMod.NPCs.SlimeGod;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     public class OverloadedSludge : ModItem, ILocalizedModType
     {

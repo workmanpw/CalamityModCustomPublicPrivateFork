@@ -1,8 +1,8 @@
 using Terraria.ID;
 using Terraria.ModLoader;
-using WallTiles = CalamityModCustomPublicPrivateFork.Walls.UnsafeWalls;
+using WallTiles = CalamityMod.Walls.UnsafeWalls;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
+namespace CalamityMod.Items.Placeables.Walls
 {
     public class UnsafeNavystoneWall : ModItem, ILocalizedModType
     {

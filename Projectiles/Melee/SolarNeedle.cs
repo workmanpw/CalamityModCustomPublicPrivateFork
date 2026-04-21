@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,10 +8,10 @@ using Terraria.Audio;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class SolarNeedle : ModProjectile, ILocalizedModType
     {
@@ -78,7 +78,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             if (Projectile.timeLeft > 35)
                 return false;
 
-            Texture2D texture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SolarNeedle").Value;
+            Texture2D texture = Request<Texture2D>("CalamityMod/Projectiles/Melee/SolarNeedle").Value;
 
             if (Empowered == 1f)
             {
@@ -103,8 +103,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             Main.spriteBatch.End();
             Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
 
-            Texture2D starTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Sparkle").Value;
-            Texture2D bloomTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+            Texture2D starTexture = Request<Texture2D>("CalamityMod/Particles/Sparkle").Value;
+            Texture2D bloomTexture = Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
             float properBloomSize = (float)starTexture.Height / (float)bloomTexture.Height;
 
             Color color = Main.hslToRgb((Main.GlobalTimeWrappedHourly * 0.6f) % 1, 1, 0.85f);

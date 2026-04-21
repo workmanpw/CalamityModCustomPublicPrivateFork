@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.PrimordialWyrm;
+using CalamityMod.NPCs.PrimordialWyrm;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class AEWMusicScene : BaseMusicSceneEffect
     {

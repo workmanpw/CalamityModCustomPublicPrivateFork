@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureVoid;
+using CalamityMod.Items.Placeables.FurnitureVoid;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.CraftingStations
+namespace CalamityMod.Items.Placeables.Furniture.CraftingStations
 {
     public class VoidCondenser : ModItem, ILocalizedModType
     {

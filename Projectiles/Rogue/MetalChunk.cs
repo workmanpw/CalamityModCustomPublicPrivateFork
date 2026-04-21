@@ -4,12 +4,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class MetalChunk : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/MetalMonstrosity";
+        public override string Texture => "CalamityMod/Items/Weapons/Rogue/MetalMonstrosity";
 
         public bool StuckInEnemy = false;
         public int StealthShardTimer = 0;

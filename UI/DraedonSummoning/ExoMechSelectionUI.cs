@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs;
-using CalamityModCustomPublicPrivateFork.Packets;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.NPCs.ExoMechs;
+using CalamityMod.Packets;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DraedonSummoning
+namespace CalamityMod.UI.DraedonSummoning
 {
     public static class ExoMechSelectionUI
     {
@@ -29,11 +29,11 @@ namespace CalamityModCustomPublicPrivateFork.UI.DraedonSummoning
 
         public static Rectangle MouseScreenArea => Utils.CenteredRectangle(Main.MouseScreen, Vector2.One * 2f);
 
-        public static readonly SoundStyle ThanatosHoverSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/ThanatosIconHover");
+        public static readonly SoundStyle ThanatosHoverSound = new("CalamityMod/Sounds/Custom/Codebreaker/ThanatosIconHover");
 
-        public static readonly SoundStyle AresHoverSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/AresIconHover");
+        public static readonly SoundStyle AresHoverSound = new("CalamityMod/Sounds/Custom/Codebreaker/AresIconHover");
 
-        public static readonly SoundStyle TwinsHoverSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Codebreaker/ArtemisApolloIconHover");
+        public static readonly SoundStyle TwinsHoverSound = new("CalamityMod/Sounds/Custom/Codebreaker/ArtemisApolloIconHover");
 
         public static void Draw()
         {
@@ -62,20 +62,20 @@ namespace CalamityModCustomPublicPrivateFork.UI.DraedonSummoning
             {
                 case ExoMech.Destroyer:
                     iconScale = DestroyerIconScale;
-                    iconMechTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/HeadIcon_THanos").Value;
+                    iconMechTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/HeadIcon_THanos").Value;
                     description = CalamityUtils.GetTextValue("UI.ThanatosIcon");
                     hoverSound = ThanatosHoverSound;
                     break;
                 case ExoMech.Prime:
                     iconScale = PrimeIconScale;
-                    iconMechTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/HeadIcon_Ares").Value;
+                    iconMechTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/HeadIcon_Ares").Value;
                     description = CalamityUtils.GetTextValue("UI.AresIcon");
                     hoverSound = AresHoverSound;
                     break;
                 default:
                 case ExoMech.Twins:
                     iconScale = TwinsIconScale;
-                    iconMechTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonSummoning/HeadIcon_ArtemisApollo").Value;
+                    iconMechTexture = ModContent.Request<Texture2D>("CalamityMod/UI/DraedonSummoning/HeadIcon_ArtemisApollo").Value;
                     description = CalamityUtils.GetTextValue("UI.ArtemisApolloIcon");
                     hoverSound = TwinsHoverSound;
                     break;

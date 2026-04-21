@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Astral;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Crags;
+using CalamityMod.Items.Placeables.Astral;
+using CalamityMod.Items.Placeables.Crags;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing
+namespace CalamityMod.Items.Fishing
 {
     public class StuffedFish : ModItem, ILocalizedModType
     {

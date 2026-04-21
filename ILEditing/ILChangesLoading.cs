@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Tiles.DraedonStructures;
-using CalamityModCustomPublicPrivateFork.Tiles.FurnitureExo;
+using CalamityMod.Tiles.DraedonStructures;
+using CalamityMod.Tiles.FurnitureExo;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent;
@@ -14,7 +14,7 @@ using Terraria.Graphics.CameraModifiers;
 using Terraria.Map;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.ILEditing
+namespace CalamityMod.ILEditing
 {
     public partial class ILChanges : ILoadable
     {

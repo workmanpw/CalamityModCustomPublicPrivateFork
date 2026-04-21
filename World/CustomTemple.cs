@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.WorldBuilding;
 
-namespace CalamityModCustomPublicPrivateFork.World
+namespace CalamityMod.World
 {
     public class CustomTemple
     {

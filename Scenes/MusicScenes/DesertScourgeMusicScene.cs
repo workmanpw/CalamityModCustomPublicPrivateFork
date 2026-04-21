@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.DesertScourge;
+using CalamityMod.NPCs.DesertScourge;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class DesertScourgeMusicScene : BaseMusicSceneEffect
     {

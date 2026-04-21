@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Potions;
+using CalamityMod.Items.Potions;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Potions
+namespace CalamityMod.Buffs.Potions
 {
     public class PhotosynthesisBuff : ModBuff
     {

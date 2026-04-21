@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Ammo;
+using CalamityMod.Items.Ammo;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class HyperiusBleed : DirectStrike, ILocalizedModType
     {

@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class MoonSigil : ModProjectile, ILocalizedModType
     {
@@ -71,7 +71,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
         public override void PostDraw(Color lightColor)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/MoonSigil").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/MoonSigil").Value;
             Main.spriteBatch.Draw
             (
                 texture,

@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
+using CalamityMod.Dusts.Furniture;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureOtherworldly
+namespace CalamityMod.Tiles.FurnitureOtherworldly
 {
     [LegacyName("OccultPiano")]
     public class OtherworldlyPiano : ModTile

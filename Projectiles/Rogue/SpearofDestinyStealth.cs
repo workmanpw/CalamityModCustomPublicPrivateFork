@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,13 +8,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class SpearofDestinyStealth : ModProjectile, ILocalizedModType
     {
-        public static readonly SoundStyle Hitsound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/BlazingCoreParry") { Volume = 0.7f, PitchVariance = 0.3f };
+        public static readonly SoundStyle Hitsound = new("CalamityMod/Sounds/Item/BlazingCoreParry") { Volume = 0.7f, PitchVariance = 0.3f };
         public new string LocalizationCategory => "Projectiles.Rogue";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Rogue/LanceofDestiny";
+        public override string Texture => "CalamityMod/Projectiles/Rogue/LanceofDestiny";
         public bool posthit = false;
         public int Time = 0;
         public ref float Timer => ref Projectile.ai[0];

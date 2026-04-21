@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureAshen
+namespace CalamityMod.Items.Placeables.FurnitureAshen
 {
     [LegacyName("AshenWorkbench")]
     public class AshenWorkBench : ModItem, ILocalizedModType

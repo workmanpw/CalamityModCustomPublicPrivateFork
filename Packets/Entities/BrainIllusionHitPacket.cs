@@ -4,13 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss.BrainOfCthulhu;
+using CalamityMod.Projectiles.Boss.BrainOfCthulhu;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
-namespace CalamityModCustomPublicPrivateFork.Packets.Entities;
+namespace CalamityMod.Packets.Entities;
 
 internal class BrainIllusionHitPacket : CalamityPacket
 {

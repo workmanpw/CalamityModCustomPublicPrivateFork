@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class WaterFlavoredParticle : Particle
     {
@@ -14,7 +14,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         public override bool UseCustomDraw => true;
         public override bool UseAdditiveBlend => false;
 
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/WaterFlavored";
+        public override string Texture => "CalamityMod/Particles/WaterFlavored";
 
         public WaterFlavoredParticle(Vector2 relativePosition, Vector2 velocity, bool affectedByGravity, int lifetime, float scale, Color color)
         {

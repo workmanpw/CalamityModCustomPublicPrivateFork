@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStratus
+namespace CalamityMod.Tiles.FurnitureStratus
 {
     public class StratusCandle : ModTile
     {
@@ -62,7 +62,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureStratus
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureStratus/StratusCandleFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureStratus/StratusCandleFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j, 0, -7);
         }
     }

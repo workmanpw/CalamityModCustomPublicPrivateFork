@@ -5,11 +5,11 @@ using Terraria.ModLoader;
 using Terraria.Audio;
 
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMarnite
+namespace CalamityMod.Tiles.FurnitureMarnite
 {
     public class MarniteOrgan : ModTile
     {
-        public static readonly SoundStyle MarniteOrganSound = new("CalamityModCustomPublicPrivateFork/Sounds/Music/MarniteOrgan", 1);
+        public static readonly SoundStyle MarniteOrganSound = new("CalamityMod/Sounds/Music/MarniteOrgan", 1);
         public override void SetStaticDefaults() => this.SetUpPiano(ModContent.ItemType<Items.Placeables.FurnitureMarnite.MarniteOrgan>(), true);
 
         public override bool CreateDust(int i, int j, ref int type)

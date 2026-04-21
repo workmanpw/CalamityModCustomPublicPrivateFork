@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureVoid
+namespace CalamityMod.Tiles.FurnitureVoid
 {
     public class VoidPiano : ModTile
     {

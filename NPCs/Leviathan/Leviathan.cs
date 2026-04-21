@@ -1,25 +1,25 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.UI.VanillaBossBars;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Monoliths;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Sounds;
+using CalamityMod.UI.VanillaBossBars;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -31,7 +31,7 @@ using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Leviathan
+namespace CalamityMod.NPCs.Leviathan
 {
     [AutoloadBossHead]
     [HasPierceResist(singleHitbox: true)]
@@ -45,16 +45,16 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Leviathan
         private float extrapitch = 0;
         public static Asset<Texture2D> AttackTexture = null;
 
-        public static readonly SoundStyle RoarMeteorSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/LeviathanRoarMeteor");
-        public static readonly SoundStyle RoarChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/LeviathanRoarCharge");
-        public static readonly SoundStyle EmergeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/LeviathanEmerge");
+        public static readonly SoundStyle RoarMeteorSound = new("CalamityMod/Sounds/Custom/LeviathanRoarMeteor");
+        public static readonly SoundStyle RoarChargeSound = new("CalamityMod/Sounds/Custom/LeviathanRoarCharge");
+        public static readonly SoundStyle EmergeSound = new("CalamityMod/Sounds/Custom/LeviathanEmerge");
 
         public override void SetStaticDefaults()
         {
             Main.npcFrameCount[Type] = 3;
             NPCID.Sets.BossBestiaryPriority.Add(Type);
             if (!Main.dedServ)
-                AttackTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Leviathan/LeviathanAttack", AssetRequestMode.AsyncLoad);
+                AttackTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/Leviathan/LeviathanAttack", AssetRequestMode.AsyncLoad);
         }
 
         public static int BoulderDamage = 40; // 160
@@ -98,7 +98,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Leviathan
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.Ocean,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Leviathan")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Leviathan")
             });
         }
 
@@ -811,7 +811,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Leviathan
             CalamityGlobalNPC.SetNewBossJustDowned(npc);
 
             // Abyss awakens after killing Anahita & Leviathan
-            string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.AbyssDropsText";
+            string key = "Mods.CalamityMod.Status.Progression.AbyssDropsText";
             Color messageColor = Color.RoyalBlue;
 
             if (!DownedBossSystem.downedLeviathan)

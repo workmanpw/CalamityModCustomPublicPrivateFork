@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureExo;
-using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityMod.Items.Placeables.FurnitureExo;
+using CalamityMod.Walls;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Walls
+namespace CalamityMod.Items.Placeables.Walls
 {
     public class ExoPrismPanelWallItem : ModItem, ILocalizedModType
     {

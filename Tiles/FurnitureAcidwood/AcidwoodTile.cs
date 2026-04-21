@@ -4,7 +4,7 @@ using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAcidwood
+namespace CalamityMod.Tiles.FurnitureAcidwood
 {
     public class AcidwoodTile : ModTile
     {

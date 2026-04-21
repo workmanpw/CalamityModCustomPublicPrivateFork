@@ -1,17 +1,17 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Accessories
+namespace CalamityMod.Items.Accessories
 {
     public class RaidersTalisman : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Accessories";
         public const float RaiderBonus = 15f;
         public const int RaiderCooldown = 10; //seconds
-        public static readonly SoundStyle StealthHitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/RaidersTalismanStealthHit");
+        public static readonly SoundStyle StealthHitSound = new("CalamityMod/Sounds/Custom/RaidersTalismanStealthHit");
 
         public override void SetDefaults()
         {

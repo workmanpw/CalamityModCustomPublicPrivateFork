@@ -1,10 +1,10 @@
-using CalamityModCustomPublicPrivateFork.Systems.Graphic.LiquidSystem;
+using CalamityMod.Systems.Graphic.LiquidSystem;
 using Terraria;
 using Terraria.Graphics;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public abstract class ModLavaStyle : ModTexturedType
     {

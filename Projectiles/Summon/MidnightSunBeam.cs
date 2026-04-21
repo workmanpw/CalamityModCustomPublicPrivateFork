@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
+using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,7 +9,7 @@ using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class MidnightSunBeam : ModProjectile, ILocalizedModType
     {
@@ -112,9 +112,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
             {
                 return false;
             }
-            Texture2D laserTailTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/MidnightSunBeamBegin", AssetRequestMode.ImmediateLoad).Value;
-            Texture2D laserBodyTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/MidnightSunBeamMid", AssetRequestMode.ImmediateLoad).Value;
-            Texture2D laserHeadTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/MidnightSunBeamEnd", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D laserTailTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/MidnightSunBeamBegin", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D laserBodyTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/MidnightSunBeamMid", AssetRequestMode.ImmediateLoad).Value;
+            Texture2D laserHeadTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/MidnightSunBeamEnd", AssetRequestMode.ImmediateLoad).Value;
             float laserLength = Projectile.localAI[1];
             Color drawColor = new Color(1f, 1f, 1f) * 0.9f;
 

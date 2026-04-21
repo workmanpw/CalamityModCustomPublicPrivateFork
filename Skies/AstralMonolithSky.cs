@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.Graphics.Effects;
 
-namespace CalamityModCustomPublicPrivateFork.Skies
+namespace CalamityMod.Skies
 {
     public class AstralMonolithSky : CustomSky
     {

@@ -1,24 +1,24 @@
 using System;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class ArkoftheCosmosSwungBlade : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight";
+        public override string Texture => "CalamityMod/Projectiles/Melee/SunderingScissorsRight";
 
         private bool initialized = false;
         private bool snapTelegraphPlayed = false;
@@ -499,8 +499,8 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public void DrawSingleSwungScissorBlade(Color lightColor)
         {
-            Texture2D sword = Request<Texture2D>(Combo == 0 ? "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight" : "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeft").Value;
-            Texture2D glowmask = Request<Texture2D>(Combo == 0 ? "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRightGlow" : "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
+            Texture2D sword = Request<Texture2D>(Combo == 0 ? "CalamityMod/Projectiles/Melee/SunderingScissorsRight" : "CalamityMod/Projectiles/Melee/SunderingScissorsLeft").Value;
+            Texture2D glowmask = Request<Texture2D>(Combo == 0 ? "CalamityMod/Projectiles/Melee/SunderingScissorsRightGlow" : "CalamityMod/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
 
             bool flipped = Owner.direction < 0;
             SpriteEffects flip = flipped ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
@@ -528,7 +528,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
             if (SwingCompletion > 0.5f && Combo == 0f)
             {
-                Texture2D smear = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/TrientCircularSmear").Value;
+                Texture2D smear = Request<Texture2D>("CalamityMod/Particles/TrientCircularSmear").Value;
 
                 Main.spriteBatch.End();
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
@@ -546,10 +546,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public void DrawSwungScissors(Color lightColor)
         {
-            Texture2D frontBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeft").Value;
-            Texture2D frontBladeGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
-            Texture2D backBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight").Value;
-            Texture2D backBladeGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRightGlow").Value;
+            Texture2D frontBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeft").Value;
+            Texture2D frontBladeGlow = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
+            Texture2D backBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRight").Value;
+            Texture2D backBladeGlow = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRightGlow").Value;
 
             //Front blade
             bool flipped = Owner.direction < 0;
@@ -570,7 +570,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
             if (CalamityClientConfig.Instance.Afterimages && SwingTimer > ProjectileID.Sets.TrailCacheLength[Type])
             {
-                Texture2D afterimage = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsGlow").Value;
+                Texture2D afterimage = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsGlow").Value;
 
                 for (int i = 1; i < Projectile.oldRot.Length; ++i)
                 {
@@ -589,7 +589,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
             if (SwingCompletion > 0.5f && Combo == 0f)
             {
-                Texture2D smear = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/TrientCircularSmear").Value;
+                Texture2D smear = Request<Texture2D>("CalamityMod/Particles/TrientCircularSmear").Value;
 
                 Main.spriteBatch.End();
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
@@ -607,13 +607,13 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public void DrawSingleThrownScissorBlade(Color lightColor)
         {
-            Texture2D sword = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeft").Value;
-            Texture2D glowmask = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
+            Texture2D sword = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeft").Value;
+            Texture2D glowmask = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
 
             if (Combo == 3f)
             {
-                Texture2D thrownSword = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight").Value;
-                Texture2D thrownGlowmask = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRightGlow").Value;
+                Texture2D thrownSword = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRight").Value;
+                Texture2D thrownGlowmask = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRightGlow").Value;
 
                 Vector2 drawPos2 = Vector2.SmoothStep(Owner.Center, Projectile.Center, MathHelper.Clamp(SnapEndCompletion + 0.25f, 0f, 1f));
                 float drawRotation2 = direction.ToRotation() + MathHelper.PiOver4;
@@ -633,10 +633,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public void DrawThrownScissors(Color lightColor)
         {
-            Texture2D frontBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeft").Value;
-            Texture2D frontBladeGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
-            Texture2D backBlade = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRight").Value;
-            Texture2D backBladeGlow = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/SunderingScissorsRightGlow").Value;
+            Texture2D frontBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeft").Value;
+            Texture2D frontBladeGlow = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsLeftGlow").Value;
+            Texture2D backBlade = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRight").Value;
+            Texture2D backBladeGlow = Request<Texture2D>("CalamityMod/Projectiles/Melee/SunderingScissorsRightGlow").Value;
 
             Vector2 drawPos = Projectile.Center;
             Vector2 drawOrigin = new Vector2(32, 86);

@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.BaseItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.BaseItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -18,7 +18,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
+namespace CalamityMod.Items.Weapons.Melee
 {
     // TODO -- CANNOT RENAME this and True Biome Blade to "TrueBiomeBlade" and "BiomeBlade" internally without corrupting existing items
     // (Comment copied from an equivalent one on OmegaBiomeBlade from June 2022)
@@ -320,7 +320,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 
         public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
-            Texture2D itemTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade").Value;
+            Texture2D itemTexture = Request<Texture2D>("CalamityMod/Projectiles/Melee/MendedBiomeBlade").Value;
 
             if (mainAttunement == null)
             {
@@ -353,7 +353,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Melee
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)
         {
-            Texture2D itemTexture = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/MendedBiomeBlade").Value; //Use the "projectile" sprite which is flipped so its consistent in lighting with the rest of the line, since its actual sprite is flipped so the swings may look normal
+            Texture2D itemTexture = Request<Texture2D>("CalamityMod/Projectiles/Melee/MendedBiomeBlade").Value; //Use the "projectile" sprite which is flipped so its consistent in lighting with the rest of the line, since its actual sprite is flipped so the swings may look normal
             spriteBatch.Draw(itemTexture, Item.Center - Main.screenPosition, null, lightColor, rotation, Item.Size * 0.5f, scale, SpriteEffects.None, 0f);
             return false;
         }

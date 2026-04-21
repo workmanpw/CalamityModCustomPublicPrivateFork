@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityMod.Items.DraedonMisc;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI.DraedonLogs
+namespace CalamityMod.UI.DraedonLogs
 {
     public class DraedonLogJungleGUI : DraedonsLogGUI
     {
@@ -16,11 +16,11 @@ namespace CalamityModCustomPublicPrivateFork.UI.DraedonLogs
             switch (Page)
             {
                 case 0:
-                    return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonLogs/DraedonsLogJungleBiome").Value;
+                    return ModContent.Request<Texture2D>("CalamityMod/UI/DraedonLogs/DraedonsLogJungleBiome").Value;
                 case 1:
-                    return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonLogs/DraedonsLogPlagueCell").Value;
+                    return ModContent.Request<Texture2D>("CalamityMod/UI/DraedonLogs/DraedonsLogPlagueCell").Value;
                 default:
-                    return ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/DraedonLogs/DraedonsLogPlaguebringerGoliath").Value;
+                    return ModContent.Request<Texture2D>("CalamityMod/UI/DraedonLogs/DraedonsLogPlaguebringerGoliath").Value;
             }
         }
     }

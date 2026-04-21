@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureAbyss
+namespace CalamityMod.Tiles.FurnitureAbyss
 {
     public class AbyssDresser : ModTile
     {

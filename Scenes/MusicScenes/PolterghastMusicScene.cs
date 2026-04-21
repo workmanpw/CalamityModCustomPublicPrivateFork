@@ -1,9 +1,9 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Polterghast;
+using CalamityMod.NPCs.Polterghast;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class PolterghastMusicScene : BaseMusicSceneEffect
     {

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Effects;
+using CalamityMod.Effects;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class PhaseslayerBeam : ModProjectile, ILocalizedModType
     {

@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Crags
+namespace CalamityMod.Tiles.Crags
 {
     public class GloomTorch : ModTile
     {
@@ -60,7 +60,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.Crags
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/Crags/GloomTorchFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/Crags/GloomTorchFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j, 2);
         }
 

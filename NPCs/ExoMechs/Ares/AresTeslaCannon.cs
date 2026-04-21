@@ -1,11 +1,11 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Thanatos;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Sounds;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.NPCs.ExoMechs.Thanatos;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Sounds;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -17,7 +17,7 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
+namespace CalamityMod.NPCs.ExoMechs.Ares
 {
     [HasPierceResist]
     public class AresTeslaCannon : ModNPC
@@ -66,9 +66,9 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.ExoMechs.Ares
         public SlotId TelegraphSoundSlot;
 
         // Telegraph sound.
-        public static readonly SoundStyle TelSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/AresTeslaArmCharge") { Volume = 1.1f };
+        public static readonly SoundStyle TelSound = new("CalamityMod/Sounds/Custom/ExoMechs/AresTeslaArmCharge") { Volume = 1.1f };
 
-        public static readonly SoundStyle TeslaOrbShootSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/ExoMechs/TeslaShoot", 2) { Volume = 1.1f };
+        public static readonly SoundStyle TeslaOrbShootSound = new("CalamityMod/Sounds/Custom/ExoMechs/TeslaShoot", 2) { Volume = 1.1f };
 
         public static Asset<Texture2D> GlowTexture;
 

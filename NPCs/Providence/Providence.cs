@@ -1,38 +1,38 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Accessories.Wings;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Dyes;
-using CalamityModCustomPublicPrivateFork.Items.LoreItems;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.BossRelics;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Paintings;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Trophies;
-using CalamityModCustomPublicPrivateFork.Items.Potions;
-using CalamityModCustomPublicPrivateFork.Items.Potions.Food;
-using CalamityModCustomPublicPrivateFork.Items.SummonItems;
-using CalamityModCustomPublicPrivateFork.Items.TreasureBags;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Packets;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Systems.Graphic;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
-using CalamityModCustomPublicPrivateFork.Utilities;
-using CalamityModCustomPublicPrivateFork.Utilities.Daybreak;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Dusts;
+using CalamityMod.Events;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Accessories.Wings;
+using CalamityMod.Items.Armor.Vanity;
+using CalamityMod.Items.Dyes;
+using CalamityMod.Items.LoreItems;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Furniture.BossRelics;
+using CalamityMod.Items.Placeables.Furniture.Paintings;
+using CalamityMod.Items.Placeables.Furniture.Trophies;
+using CalamityMod.Items.Potions;
+using CalamityMod.Items.Potions.Food;
+using CalamityMod.Items.SummonItems;
+using CalamityMod.Items.TreasureBags;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Packets;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Systems.Graphic;
+using CalamityMod.Tiles.Ores;
+using CalamityMod.Utilities;
+using CalamityMod.Utilities.Daybreak;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -50,7 +50,7 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 using Filters = Terraria.Graphics.Effects.Filters;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
+namespace CalamityMod.NPCs.Providence
 {
     [AutoloadBossHead]
     public class Providence : ModNPC
@@ -100,14 +100,14 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
         public static float borderRadius = 3000f;
 
         // Sounds
-        public static readonly SoundStyle SpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceSpawn") { Volume = 1.2f };
-        public static readonly SoundStyle HolyRaySound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceHolyRay") { Volume = 1.25f }; // NOTE : Volume gets clamped between 0 and 1. I don't think this does anything, but it was in the original ModSound so im keeping it just in case
-        public static readonly SoundStyle HurtSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/ProvidenceHurt");
-        public static readonly SoundStyle DeathAnimationSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceDeathAnimation");
+        public static readonly SoundStyle SpawnSound = new("CalamityMod/Sounds/Custom/Providence/ProvidenceSpawn") { Volume = 1.2f };
+        public static readonly SoundStyle HolyRaySound = new("CalamityMod/Sounds/Custom/Providence/ProvidenceHolyRay") { Volume = 1.25f }; // NOTE : Volume gets clamped between 0 and 1. I don't think this does anything, but it was in the original ModSound so im keeping it just in case
+        public static readonly SoundStyle HurtSound = new("CalamityMod/Sounds/NPCHit/ProvidenceHurt");
+        public static readonly SoundStyle DeathAnimationSound = new("CalamityMod/Sounds/Custom/Providence/ProvidenceDeathAnimation");
 
-        public static readonly SoundStyle NearBurnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceSizzle");
-        public static readonly SoundStyle BurnStartSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceBurn");
-        public static readonly SoundStyle BurnLoopSound = new SoundStyle("CalamityModCustomPublicPrivateFork/Sounds/Custom/Providence/ProvidenceBurnLoop") with { IsLooped = true };
+        public static readonly SoundStyle NearBurnSound = new("CalamityMod/Sounds/Custom/Providence/ProvidenceSizzle");
+        public static readonly SoundStyle BurnStartSound = new("CalamityMod/Sounds/Custom/Providence/ProvidenceBurn");
+        public static readonly SoundStyle BurnLoopSound = new SoundStyle("CalamityMod/Sounds/Custom/Providence/ProvidenceBurnLoop") with { IsLooped = true };
 
         // Sound slot for the burning damage over time effect
         public SlotId BurningSoundSlot;
@@ -185,8 +185,8 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
             #region Texture Loading
             if (!Main.dedServ)
             {
-                string ProviPath = "CalamityModCustomPublicPrivateFork/NPCs/Providence/Providence";
-                string GlowPath = "CalamityModCustomPublicPrivateFork/NPCs/Providence/Glowmasks/Providence";
+                string ProviPath = "CalamityMod/NPCs/Providence/Providence";
+                string GlowPath = "CalamityMod/NPCs/Providence/Glowmasks/Providence";
 
                 // Normal textures
                 TextureAlt = ModContent.Request<Texture2D>(ProviPath + "Alt", AssetRequestMode.AsyncLoad);
@@ -296,7 +296,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
             {
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheHallow,
                 BestiaryDatabaseNPCsPopulator.CommonTags.SpawnConditions.Biomes.TheUnderworld,
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Providence")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Providence")
             });
         }
 
@@ -1101,12 +1101,12 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
                                 GeneralParticleHandler.SpawnParticle(new HeavySmokeParticle(NPC.Center, new Vector2(Main.rand.NextFloat(12f, 40f), 0).RotatedByRandom(MathHelper.TwoPi), loColor * (photos ? 0.5f : 1f), 60, Main.rand.NextFloat(0.75f, 1.75f), 1f, Main.rand.NextFloat(-0.05f, 0.05f), true));
                             }
 
-                            GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hColor, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.1f, 15));
+                            GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hColor, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.1f, 15));
 
                             for (float i = 0; i < 2.8f; i += 0.35f)
                             {
-                                GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hColor, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.35f, 35));
-                                GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hColor, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.475f, 25));
+                                GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hColor, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.35f, 35));
+                                GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hColor, "CalamityMod/Particles/ShatteredExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.475f, 25));
                             }
                         }
 
@@ -1119,7 +1119,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
 
                             if (calamityGlobalNPC.newAI[3] % (CalamityClientConfig.Instance.Photosensitivity ? 15f : 10f) == 0)
                             {
-                                GeneralParticleHandler.SpawnParticle(new CustomPulse(destination, Vector2.Zero, Color.Lerp(new Color(25, 25, 25, 0), medColor, sc), "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", new Vector2(1.5f, 1f), Main.rand.NextBool() ? 0f : MathHelper.Pi, sc * 0.5f, sc * 0.1f, 20));
+                                GeneralParticleHandler.SpawnParticle(new CustomPulse(destination, Vector2.Zero, Color.Lerp(new Color(25, 25, 25, 0), medColor, sc), "CalamityMod/Particles/SoftRoundExplosion", new Vector2(1.5f, 1f), Main.rand.NextBool() ? 0f : MathHelper.Pi, sc * 0.5f, sc * 0.1f, 20));
 
                                 SoundStyle SpawnFlareSound = SoundID.Item74;
                                 SpawnFlareSound.MaxInstances = 10;
@@ -1372,7 +1372,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
                     if (NPC.ai[3] >= (phaseTime * 1.5f) && !text)
                     {
                         text = true;
-                        string key = "Mods.CalamityModCustomPublicPrivateFork.Status.Boss.ProfanedBossText";
+                        string key = "Mods.CalamityMod.Status.Boss.ProfanedBossText";
                         Color messageColor = Color.Orange;
 
                         CalamityUtils.BroadcastLocalizedText(key, messageColor);
@@ -1821,12 +1821,12 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
                     GeneralParticleHandler.SpawnParticle(new HeavySmokeParticle(NPC.Center, new Vector2(Main.rand.NextFloat(12f, 40f), 0).RotatedByRandom(MathHelper.TwoPi), loColor, 60, Main.rand.NextFloat(0.75f, 1.75f), 1f, Main.rand.NextFloat(-0.05f, 0.05f), true));
                 }
 
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.1f, 15));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.1f, 15));
 
                 for (float i = 0; i < 3; i += 0.25f)
                 {
-                    GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.25f, 35));
-                    GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.175f, 25));
+                    GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.25f, 35));
+                    GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityMod/Particles/ShatteredExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.175f, 25));
                 }
 
                 SoundEngine.PlaySound(HolyBlast.ImpactSound, NPC.Center);
@@ -1976,12 +1976,12 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
                 GeneralParticleHandler.SpawnParticle(new HeavySmokeParticle(NPC.Center, new Vector2(Main.rand.NextFloat(12f, 40f), 0).RotatedByRandom(MathHelper.TwoPi), loColor, 60, Main.rand.NextFloat(0.75f, 1.75f), 1f, Main.rand.NextFloat(-0.05f, 0.05f), true));
             }
 
-            GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityModCustomPublicPrivateFork/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.1f, 15));
+            GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityMod/Particles/BloomCircle", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 1f, 0.1f, 15));
 
             for (float i = 0; i < 3; i += 0.25f)
             {
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityModCustomPublicPrivateFork/Particles/SoftRoundExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.35f, 35));
-                GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityModCustomPublicPrivateFork/Particles/ShatteredExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.275f, 25));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.35f, 35));
+                GeneralParticleHandler.SpawnParticle(new CustomPulse(NPC.Center, Vector2.Zero, hiColor, "CalamityMod/Particles/ShatteredExplosion", Vector2.One * i, Main.rand.NextFloat(MathHelper.TwoPi), 0.05f, 0.275f, 25));
             }
 
             // Don't bother running any of this in Boss Rush.
@@ -1993,9 +1993,9 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
             // If Providence has not been killed, notify players of Uelibloom Ore
             if (!DownedBossSystem.downedProvidence)
             {
-                string key2 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.ProfanedBossText3";
+                string key2 = "Mods.CalamityMod.Status.Progression.ProfanedBossText3";
                 Color messageColor2 = Color.Orange;
-                string key3 = "Mods.CalamityModCustomPublicPrivateFork.Status.Progression.TreeOreText";
+                string key3 = "Mods.CalamityMod.Status.Progression.TreeOreText";
                 Color messageColor3 = Color.LightGreen;
 
                 CalamityUtils.SpawnOre(ModContent.TileType<UelibloomOre>(), 17E-05, 0.55f, 0.9f, 8, 14, TileID.Mud);
@@ -2008,7 +2008,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
             {
                 if (Main.netMode == NetmodeID.SinglePlayer)
                 {
-                    Main.NewText(Language.GetTextValue("Mods.CalamityModCustomPublicPrivateFork.Status.Progression.ProfanedBossText4"), Color.DarkOrange);
+                    Main.NewText(Language.GetTextValue("Mods.CalamityMod.Status.Progression.ProfanedBossText4"), Color.DarkOrange);
                 }
             }
 
@@ -2109,7 +2109,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
             {
                 // This night bool is used for any off-color activity
 
-                string baseTextureString = "CalamityModCustomPublicPrivateFork/NPCs/Providence/";
+                string baseTextureString = "CalamityMod/NPCs/Providence/";
                 string baseGlowTextureString = baseTextureString + "Glowmasks/";
 
 
@@ -2120,7 +2120,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
                 // Okay it should also appear in Boss Rush as well
                 if (spawnAnimation && (NPC.localAI[1] == (float)BossMode.Normal || BossRushEvent.BossRushActive))
                 {
-                    Asset<Texture2D> orbTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+                    Asset<Texture2D> orbTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
                     float sc = CalamityUtils.CircInEasing((float)NPC.Calamity().newAI[3] / (float)spawnAnimationTime, 1);
 
                     for (int i = 0; i < 3; i++)
@@ -2322,7 +2322,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
             if (NPC.localAI[0] > 0f && NPC.localAI[0] < TimeForStarDespawn)
             {
                 float lerpMult = MathHelper.Lerp(0.5f, 1.5f, (float)Math.Sin(Main.GlobalTimeWrappedHourly * MathHelper.TwoPi) / 2f + 1f);
-                Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/StarProj").Value;
+                Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/StarProj").Value;
                 float drawOffsetAmt = (AIState == (int)Phase.FlameCocoon || AIState == (int)Phase.SpearCocoon) ? 20f : 64f;
                 Vector2 drawPos = NPC.Center + Vector2.UnitY * drawOffsetAmt * NPC.scale - Main.screenPosition;
                 Color baseColor = Color.Lerp(Color.Yellow, Color.OrangeRed, (float)Math.Sin(Main.GlobalTimeWrappedHourly) / 2f + 1f);
@@ -2373,7 +2373,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
                 float invertedSmallerOscillationRatio = 1f - (1f - smallerRemappedOscillation) * (1f - smallerRemappedOscillation);
                 float smallerOscillationScale = 1f - (1f - invertedSmallerOscillationRatio) * (1f - invertedSmallerOscillationRatio);
                 float shieldScale2 = (minScale + maxPulseScale * smallerOscillationScale) * invertedOscillationUsedForScale;
-                Texture2D shieldTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleOpenCircleButBigger").Value;
+                Texture2D shieldTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleOpenCircleButBigger").Value;
                 Rectangle shieldFrame = shieldTexture.Frame();
                 Vector2 origin = shieldFrame.Size() * 0.5f;
                 Vector2 shieldDrawPos = NPC.Center - screenPos;
@@ -2422,7 +2422,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
                 {
                     Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, shieldEffect, matrix);
                     // Fetch shield heat overlay texture (this is the neutrons fed to the shader)
-                    Texture2D heatTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Neurons2").Value;
+                    Texture2D heatTex = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Neurons2").Value;
                     Vector2 pos = NPC.Center + NPC.gfxOffY * Vector2.UnitY - Main.screenPosition;
                     Main.spriteBatch.Draw(heatTex, shieldDrawPos, null, Color.White, 0, heatTex.Size() / 2f, shieldScale * scaleMult * 0.5f, 0, 0);
                     Main.spriteBatch.End();
@@ -2438,7 +2438,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
 
         public override void PostDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Providence/Providence_DeathSilhouette").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/NPCs/Providence/Providence_DeathSilhouette").Value;
 
             if (Dying)
             {
@@ -2530,11 +2530,11 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Providence
         }
 
         private static Asset<Texture2D> _diagonalNoise;
-        private static Asset<Texture2D> DiagonalNoise => _diagonalNoise ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/HarshNoise");
+        private static Asset<Texture2D> DiagonalNoise => _diagonalNoise ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/HarshNoise");
         private static Asset<Texture2D> _upwardPerlinNoise;
-        private static Asset<Texture2D> UpwardPerlinNoise => _upwardPerlinNoise ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/Perlin");
+        private static Asset<Texture2D> UpwardPerlinNoise => _upwardPerlinNoise ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Perlin");
         private static Asset<Texture2D> _upwardNoise;
-        private static Asset<Texture2D> UpwardNoise => _upwardNoise ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/GreyscaleGradients/MeltyNoise");
+        private static Asset<Texture2D> UpwardNoise => _upwardNoise ??= ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/MeltyNoise");
 
         private static void DrawHolyInferno()
         {

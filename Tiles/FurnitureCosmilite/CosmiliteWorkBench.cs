@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureCosmilite
+namespace CalamityMod.Tiles.FurnitureCosmilite
 {
     [LegacyName("CosmiliteWorkbench")]
     public class CosmiliteWorkBench : ModTile

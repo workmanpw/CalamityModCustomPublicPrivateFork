@@ -9,7 +9,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone
+namespace CalamityMod.Tiles.FurnitureNavystone
 {
     public class NavystoneToilet : ModTile
     {

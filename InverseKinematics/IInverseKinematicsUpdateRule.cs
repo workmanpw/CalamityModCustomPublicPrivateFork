@@ -1,6 +1,6 @@
 using Microsoft.Xna.Framework;
 
-namespace CalamityModCustomPublicPrivateFork.InverseKinematics
+namespace CalamityMod.InverseKinematics
 {
     public interface IInverseKinematicsUpdateRule
     {

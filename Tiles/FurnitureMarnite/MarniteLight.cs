@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMarnite
+namespace CalamityMod.Tiles.FurnitureMarnite
 {
     public class MarniteLight : ModTile
     {
@@ -59,7 +59,7 @@ namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureMarnite
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            FlameTexture ??= ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Tiles/FurnitureMarnite/MarniteLightFlame");
+            FlameTexture ??= ModContent.Request<Texture2D>("CalamityMod/Tiles/FurnitureMarnite/MarniteLightFlame");
             CalamityUtils.DrawFlameEffect(FlameTexture.Value, i, j, 2);
         }
 

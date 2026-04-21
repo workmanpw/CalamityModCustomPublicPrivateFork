@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Graphics.Metaballs;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Graphics.Metaballs;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,13 +9,13 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class StreamGougePortal : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
 
-        public static readonly SoundStyle SpawnSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/SwiftSlice")
+        public static readonly SoundStyle SpawnSound = new("CalamityMod/Sounds/Custom/SwiftSlice")
         {
             PitchVariance = 0.1f
         };
@@ -60,7 +60,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         public override bool PreDraw(ref Color lightColor)
         {
             
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/StreamGouge").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Melee/StreamGouge").Value;
             Vector2 spearDrawPosition = SpearCenter - Main.screenPosition;
             Vector2 spearOrigin = texture.Size() * 0.5f;
             Color spearColor = Main.hslToRgb(Projectile.identity % 10f / 40f + 0.67f, 1f, 0.5f);
@@ -69,7 +69,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             for (int i = 0; i < 2; i++)
                 Main.EntitySpriteDraw(texture, spearDrawPosition, null, spearColor * Projectile.Opacity, Projectile.rotation, spearOrigin, Projectile.scale, 0, 0);
 
-            Texture2D portalTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/StreamGougePortal").Value;
+            Texture2D portalTexture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/StreamGougePortal").Value;
             Vector2 origin = portalTexture.Size() * 0.5f;
             Color baseColor = Color.White;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;

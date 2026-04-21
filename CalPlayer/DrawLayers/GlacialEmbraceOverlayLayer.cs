@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
+namespace CalamityMod.CalPlayer.DrawLayers
 {
     public class GlacialEmbraceOverlayLayer : PlayerDrawLayer
     {
@@ -19,7 +19,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
 
         protected override void Draw(ref PlayerDrawSet drawInfo)
         {
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/GlacialEmbraceBody").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/CalPlayer/DrawLayers/GlacialEmbraceBody").Value;
             int drawX = (int)(drawInfo.Center.X - Main.screenPosition.X);
             int drawY = (int)(drawInfo.Center.Y - Main.screenPosition.Y);
             Player drawPlayer = drawInfo.drawPlayer;

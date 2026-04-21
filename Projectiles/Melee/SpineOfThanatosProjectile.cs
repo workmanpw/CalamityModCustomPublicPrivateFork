@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.DataStructures;
+using CalamityMod.DataStructures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class SpineOfThanatosProjectile : ModProjectile, ILocalizedModType
     {
@@ -187,9 +187,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 if (i == WhipPoints.Count - 2)
                     whipTexturePath = Texture;
                 else if (i == 0)
-                    whipTexturePath = "CalamityModCustomPublicPrivateFork/Projectiles/Melee/SpineOfThanatosTail";
+                    whipTexturePath = "CalamityMod/Projectiles/Melee/SpineOfThanatosTail";
                 else
-                    whipTexturePath = $"CalamityModCustomPublicPrivateFork/Projectiles/Melee/SpineOfThanatosBody{i % 2 + 1}";
+                    whipTexturePath = $"CalamityMod/Projectiles/Melee/SpineOfThanatosBody{i % 2 + 1}";
                 Texture2D whipSegmentTexture = ModContent.Request<Texture2D>(whipTexturePath).Value;
                 Texture2D whipSegmentGlowmaskTexture = ModContent.Request<Texture2D>($"{whipTexturePath}Glowmask").Value;
 

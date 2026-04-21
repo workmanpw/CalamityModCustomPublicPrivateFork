@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs.Alcohol
+namespace CalamityMod.Buffs.Alcohol
 {
     public class Trippy : ModBuff
     {

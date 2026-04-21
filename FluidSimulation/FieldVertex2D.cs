@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.FluidSimulation
+namespace CalamityMod.FluidSimulation
 {
     public struct FieldVertex2D : IVertexType
     {

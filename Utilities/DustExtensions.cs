@@ -1,7 +1,7 @@
 using System;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Utilities
+namespace CalamityMod.Utilities
 {
     public static class DustExtensions
     {

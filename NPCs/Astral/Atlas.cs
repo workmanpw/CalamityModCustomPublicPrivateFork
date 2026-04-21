@@ -1,11 +1,11 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Banners;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.Banners;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -17,7 +17,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
+namespace CalamityMod.NPCs.Astral
 {
     public class Atlas : ModNPC
     {
@@ -48,12 +48,12 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
         private byte swing_counter;
         private short swing_untilNext;
 
-        public static readonly SoundStyle HurtSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCHit/AtlasHurt", 3);
-        public static readonly SoundStyle DeathSound = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/AtlasDeath") { Volume = 0.65f };
-        public static readonly SoundStyle AggroSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AtlasSadAggro") { Volume = 0.5f };
-        public static readonly SoundStyle UnaggroSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AtlasSadUnaggro") { Volume = 0.5f };
-        public static readonly SoundStyle SwingSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AtlasSwing") { Volume = 0.65f };
-        public static readonly SoundStyle IdleSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/AtlasIdle", 2) { Volume = 0.6f };
+        public static readonly SoundStyle HurtSound = new("CalamityMod/Sounds/NPCHit/AtlasHurt", 3);
+        public static readonly SoundStyle DeathSound = new("CalamityMod/Sounds/NPCKilled/AtlasDeath") { Volume = 0.65f };
+        public static readonly SoundStyle AggroSound = new("CalamityMod/Sounds/Custom/AtlasSadAggro") { Volume = 0.5f };
+        public static readonly SoundStyle UnaggroSound = new("CalamityMod/Sounds/Custom/AtlasSadUnaggro") { Volume = 0.5f };
+        public static readonly SoundStyle SwingSound = new("CalamityMod/Sounds/Custom/AtlasSwing") { Volume = 0.65f };
+        public static readonly SoundStyle IdleSound = new("CalamityMod/Sounds/Custom/AtlasIdle", 2) { Volume = 0.6f };
 
         private float idle_counter
         {
@@ -107,7 +107,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
             //also it's visuals are messed up on npc spawners etc. because the sheet is 3 wide.
             //not much we can do. looks fine in-game so /shrug
             if (!Main.dedServ)
-                glowmask = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Astral/AtlasGlow", AssetRequestMode.AsyncLoad);
+                glowmask = ModContent.Request<Texture2D>("CalamityMod/NPCs/Astral/AtlasGlow", AssetRequestMode.AsyncLoad);
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers()
             {
                 PortraitPositionYOverride = -5
@@ -157,7 +157,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Astral
         {
             bestiaryEntry.Info.AddRange(new IBestiaryInfoElement[]
             {
-                new FlavorTextBestiaryInfoElement("Mods.CalamityModCustomPublicPrivateFork.Bestiary.Atlas")
+                new FlavorTextBestiaryInfoElement("Mods.CalamityMod.Bestiary.Atlas")
             });
         }
 

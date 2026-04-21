@@ -1,9 +1,9 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.Boss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,7 +11,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class MawOfInfinityHoldout : BaseSwordHoldoutProjectile, ILocalizedModType
     {
@@ -141,7 +141,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             var modplayer = player.GetModPlayer<BaseSwordHoldoutPlayer>();
             if (modplayer.swingNum == 0)
                 return;
-            var tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Jaws").Value;
+            var tex = ModContent.Request<Texture2D>("CalamityMod/Particles/Jaws").Value;
             float jawScaleMult = 1f;
             if (inStartup)
                 jawScaleMult = StartupCompletion;

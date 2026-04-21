@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing.SunkenSeaCatches
+namespace CalamityMod.Items.Fishing.SunkenSeaCatches
 {
     public class MoltenFishron : ModItem, ILocalizedModType
     {

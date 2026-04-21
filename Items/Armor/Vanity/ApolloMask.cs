@@ -4,7 +4,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
+namespace CalamityMod.Items.Armor.Vanity
 {
     [AutoloadEquip(EquipType.Head)]
     public class ApolloMask : ModItem, IExtendedHat, ILocalizedModType
@@ -28,7 +28,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Armor.Vanity
             Item.vanity = true;
         }
 
-        public string ExtensionTexture => "CalamityModCustomPublicPrivateFork/Items/Armor/Vanity/ApolloMask_Extra";
+        public string ExtensionTexture => "CalamityMod/Items/Armor/Vanity/ApolloMask_Extra";
         public Vector2 ExtensionSpriteOffset(PlayerDrawSet drawInfo) => new Vector2(drawInfo.drawPlayer.direction == 1f ? -6f : 0, 0f);
     }
 }

@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureNavystone
+namespace CalamityMod.Tiles.FurnitureNavystone
 {
     public class NavystoneChest : ModTile
     {

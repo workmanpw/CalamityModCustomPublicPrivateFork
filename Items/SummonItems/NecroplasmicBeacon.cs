@@ -1,14 +1,14 @@
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.NPCs.Polterghast;
-using CalamityModCustomPublicPrivateFork.Rarities;
+using CalamityMod.Events;
+using CalamityMod.Items.Materials;
+using CalamityMod.NPCs.Polterghast;
+using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
+namespace CalamityMod.Items.SummonItems
 {
     public class NecroplasmicBeacon : ModItem, ILocalizedModType
     {
@@ -37,7 +37,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.SummonItems
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/SummonItems/NecroplasmicBeaconGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/SummonItems/NecroplasmicBeaconGlow").Value);
         }
 
         public override bool CanUseItem(Player player)

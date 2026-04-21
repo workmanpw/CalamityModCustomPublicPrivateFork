@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,12 +10,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class VanquisherArrowProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Ammo/VanquisherArrow";
+        public override string Texture => "CalamityMod/Items/Ammo/VanquisherArrow";
         public ref float Time => ref Projectile.ai[0];
         public ref float ProjectileSpeed => ref Projectile.ai[1];
         public bool Phase2 = false;
@@ -143,7 +143,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
                     }
                 }
 
-                SoundStyle onKill = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ScorpioHit");
+                SoundStyle onKill = new("CalamityMod/Sounds/Item/ScorpioHit");
                 SoundEngine.PlaySound(onKill with { Volume = 0.25f, Pitch = 0.1f, PitchVariance = 0.3f }, Projectile.Center);
                 SoundEngine.PlaySound(SoundID.DD2_FlameburstTowerShot with { Volume = 0.4f, Pitch = -0.4f, PitchVariance = 0.3f }, Projectile.Center);
             }
@@ -152,9 +152,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         {
             if (Time == 0)
                 return false;
-            Asset<Texture2D> arrow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Ammo/VanquisherArrow");
-            Asset<Texture2D> glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Ammo/VanquisherArrowGlow");
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomLineSoftEdge").Value;
+            Asset<Texture2D> arrow = ModContent.Request<Texture2D>("CalamityMod/Items/Ammo/VanquisherArrow");
+            Asset<Texture2D> glow = ModContent.Request<Texture2D>("CalamityMod/Items/Ammo/VanquisherArrowGlow");
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomLineSoftEdge").Value;
 
             if (Time > 6)
             {

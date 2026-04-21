@@ -1,16 +1,16 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Buffs.Summon;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
-using static CalamityModCustomPublicPrivateFork.Items.Weapons.Summon.EnchantedKnifeStaff;
+using static CalamityMod.Items.Weapons.Summon.EnchantedKnifeStaff;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Summon
+namespace CalamityMod.Projectiles.Summon
 {
     public class EnchantedKnifeSummon : BaseMinionProjectile
     {

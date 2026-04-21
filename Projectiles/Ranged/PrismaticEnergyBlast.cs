@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class PrismaticEnergyBlast : BaseLaserbeamProjectile, ILocalizedModType
     {
@@ -16,15 +16,15 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             get => Projectile.ai[1] == 1f;
             set => Projectile.ai[1] = value.ToInt();
         }
-        public override string Texture => "CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/PrismLaserStart";
+        public override string Texture => "CalamityMod/ExtraTextures/Lasers/PrismLaserStart";
         public override float MaxScale => 1f;
         public override float MaxLaserLength => 2700f;
         public override float Lifetime => 50f;
         public override Color LaserOverlayColor => Color.White;
         public override Color LightCastColor => LaserOverlayColor;
-        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/PrismLaserStart", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/PrismLaserMid", AssetRequestMode.ImmediateLoad).Value;
-        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Lasers/PrismLaserEnd", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserBeginTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/PrismLaserStart", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserMiddleTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/PrismLaserMid", AssetRequestMode.ImmediateLoad).Value;
+        public override Texture2D LaserEndTexture => ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Lasers/PrismLaserEnd", AssetRequestMode.ImmediateLoad).Value;
 
         public override void SetStaticDefaults()
         {

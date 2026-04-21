@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
+namespace CalamityMod.CalPlayer.DrawLayers
 {
     public class EncasementParryLayer : PlayerDrawLayer
     {
@@ -37,7 +37,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer.DrawLayers
             Player drawPlayer = drawInfo.drawPlayer;
             var calPlayer = drawPlayer.Calamity();
             var encasement = GetEncasementTypeFor(calPlayer);
-            string tex = "CalamityModCustomPublicPrivateFork/CalPlayer/DrawLayers/";
+            string tex = "CalamityMod/CalPlayer/DrawLayers/";
             int currentParry;
             float defaultOpacity;
             float scale;

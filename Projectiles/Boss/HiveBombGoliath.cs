@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.NPCs.PlaguebringerGoliath;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.NPCs.PlaguebringerGoliath;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,7 +8,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
+namespace CalamityMod.Projectiles.Boss
 {
     public class HiveBombGoliath : ModProjectile, ILocalizedModType
     {
@@ -88,7 +88,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Boss
             Projectile.DrawBackglow(PlaguebringerGoliath.BackglowColor, 4f);
             CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], lightColor, 1);
 
-            Texture2D glow = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/HiveBombGoliathGlow").Value;
+            Texture2D glow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/HiveBombGoliathGlow").Value;
             Vector2 textureArea = new Vector2(glow.Width / 2, glow.Height / Main.projFrames[Type] / 2);
             Vector2 drawArea = Projectile.Center - Main.screenPosition;
             drawArea -= new Vector2(glow.Width, glow.Height / Main.projFrames[Type]) / 2f;

@@ -1,21 +1,21 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
-using CalamityModCustomPublicPrivateFork.Items.LabFinders;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Schematics;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityMod.Items.DraedonMisc;
+using CalamityMod.Items.LabFinders;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Schematics;
+using CalamityMod.Tiles.SunkenSea;
+using CalamityMod.Walls;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.WorldBuilding;
-using static CalamityModCustomPublicPrivateFork.Schematics.SchematicManager;
+using static CalamityMod.Schematics.SchematicManager;
 
-namespace CalamityModCustomPublicPrivateFork.World
+namespace CalamityMod.World
 {
     // TODO -- This can be made into a ModSystem with simple OnModLoad and Unload hooks.
     public static class DraedonStructures

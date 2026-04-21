@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,14 +8,14 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class WulfrumScrewdriverProj : ModProjectile
     {
         public override LocalizedText DisplayName => CalamityUtils.GetItemName<WulfrumScrewdriver>();
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Weapons/Melee/WulfrumScrewdriver";
+        public override string Texture => "CalamityMod/Items/Weapons/Melee/WulfrumScrewdriver";
         public float Timer => MaxTime - Projectile.timeLeft;
         public float LifetimeCompletion => Timer / (float)MaxTime;
 
@@ -208,7 +208,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             Texture2D tex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
 
             if (SmearTex == null)
-                SmearTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/MediumLongThrust");
+                SmearTex = ModContent.Request<Texture2D>("CalamityMod/Particles/MediumLongThrust");
             Texture2D smearTex = SmearTex.Value;
 
             Vector2 drawOrigin = new Vector2(tex.Width / 2f, tex.Height);

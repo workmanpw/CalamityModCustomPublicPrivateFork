@@ -1,41 +1,41 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Balancing;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Buffs.StatBuffs;
-using CalamityModCustomPublicPrivateFork.Buffs.StatDebuffs;
-using CalamityModCustomPublicPrivateFork.Buffs.Summon.Whips;
-using CalamityModCustomPublicPrivateFork.Cooldowns;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Armor;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Astral;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Bloodflare;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Fearmonger;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Hydrothermic;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Plaguebringer;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Silva;
-using CalamityModCustomPublicPrivateFork.Items.Armor.SnowRuffian;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Sulphurous;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Tarragon;
-using CalamityModCustomPublicPrivateFork.Items.Armor.TitanHeart;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Umbraphile;
-using CalamityModCustomPublicPrivateFork.Items.Fishing.AstralCatches;
-using CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.NPCs.NormalNPCs;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles;
-using CalamityModCustomPublicPrivateFork.Projectiles.Healing;
-using CalamityModCustomPublicPrivateFork.Projectiles.Magic;
-using CalamityModCustomPublicPrivateFork.Projectiles.Melee;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Projectiles.Summon;
-using CalamityModCustomPublicPrivateFork.Projectiles.Typeless;
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityMod.Balancing;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatBuffs;
+using CalamityMod.Buffs.StatDebuffs;
+using CalamityMod.Buffs.Summon.Whips;
+using CalamityMod.Cooldowns;
+using CalamityMod.Dusts;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Armor;
+using CalamityMod.Items.Armor.Astral;
+using CalamityMod.Items.Armor.Bloodflare;
+using CalamityMod.Items.Armor.Fearmonger;
+using CalamityMod.Items.Armor.Hydrothermic;
+using CalamityMod.Items.Armor.Plaguebringer;
+using CalamityMod.Items.Armor.Silva;
+using CalamityMod.Items.Armor.SnowRuffian;
+using CalamityMod.Items.Armor.Sulphurous;
+using CalamityMod.Items.Armor.Tarragon;
+using CalamityMod.Items.Armor.TitanHeart;
+using CalamityMod.Items.Armor.Umbraphile;
+using CalamityMod.Items.Fishing.AstralCatches;
+using CalamityMod.Items.VanillaArmorChanges;
+using CalamityMod.NPCs;
+using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles;
+using CalamityMod.Projectiles.Healing;
+using CalamityMod.Projectiles.Magic;
+using CalamityMod.Projectiles.Melee;
+using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Systems;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -43,7 +43,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.CalPlayer
+namespace CalamityMod.CalPlayer
 {
     public partial class CalamityPlayer : ModPlayer
     {
@@ -498,7 +498,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
 
                     if (proj.numHits == 0)
                     {
-                        CustomPulse spark = new CustomPulse(proj.Center, Vector2.Zero, Color.Turquoise, "CalamityModCustomPublicPrivateFork/Particles/PlasmaExplosion", new Vector2(1, 1), Main.rand.NextFloat(-2f, 2f), 0.005f, Main.rand.NextFloat(0.048f, 0.055f), 14);
+                        CustomPulse spark = new CustomPulse(proj.Center, Vector2.Zero, Color.Turquoise, "CalamityMod/Particles/PlasmaExplosion", new Vector2(1, 1), Main.rand.NextFloat(-2f, 2f), 0.005f, Main.rand.NextFloat(0.048f, 0.055f), 14);
                         GeneralParticleHandler.SpawnParticle(spark);
                         int points = 6;
                         float radians = MathHelper.TwoPi / points;
@@ -521,7 +521,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                         int onHitDamage = Player.CalcIntDamage<RangedDamageClass>(0.2f * proj.damage);
                         Projectile shock = Projectile.NewProjectileDirect(proj.GetSource_FromThis(), target.Center, Vector2.Zero, ProjectileType<DirectStrike>(), onHitDamage, 0f, Player.whoAmI, target.whoAmI);
                         shock.DamageType = proj.DamageType;
-                        SoundStyle hitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/ElectricHit");
+                        SoundStyle hitSound = new("CalamityMod/Sounds/Item/ElectricHit");
                         SoundEngine.PlaySound(hitSound with { Volume = 0.2f, Pitch = 0.7f, PitchVariance = 0.2f }, proj.Center);
                     }
                 }
@@ -535,9 +535,9 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                     Vector2 Position = target.Center + spinningPoint.RotatedBy(radians * (cgp.pearlBullet1 ? 0 : cgp.pearlBullet2 ? 1 : 2)).RotatedBy(-0.45f) * 55;
                     int bulletType = (cgp.pearlBullet1 ? 0 : cgp.pearlBullet2 ? 1 : 2);
 
-                    CustomPulse spark = new CustomPulse(target.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/HighResHollowCircleHardEdge", new Vector2(1, 1), Main.rand.NextFloat(-2f, 2f), 0.005f, 0.035f + 0.018f * bulletType, 14 + bulletType);
+                    CustomPulse spark = new CustomPulse(target.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/HighResHollowCircleHardEdge", new Vector2(1, 1), Main.rand.NextFloat(-2f, 2f), 0.005f, 0.035f + 0.018f * bulletType, 14 + bulletType);
                     GeneralParticleHandler.SpawnParticle(spark);
-                    CustomPulse spark2 = new CustomPulse(Position, Vector2.Zero, color, "CalamityModCustomPublicPrivateFork/Particles/HighResFoggyCircleHardEdge", new Vector2(1, 1), Main.rand.NextFloat(-2f, 2f), 0.005f, 0.06f, 17);
+                    CustomPulse spark2 = new CustomPulse(Position, Vector2.Zero, color, "CalamityMod/Particles/HighResFoggyCircleHardEdge", new Vector2(1, 1), Main.rand.NextFloat(-2f, 2f), 0.005f, 0.06f, 17);
                     GeneralParticleHandler.SpawnParticle(spark2);
 
                     int points = 6;
@@ -571,7 +571,7 @@ namespace CalamityModCustomPublicPrivateFork.CalPlayer
                     Projectile blast = Projectile.NewProjectileDirect(proj.GetSource_FromThis(), target.Center, Vector2.Zero, ProjectileType<DirectStrike>(), onHitDamage, 0f, Player.whoAmI, target.whoAmI);
                     blast.DamageType = proj.DamageType;
 
-                    SoundStyle hitSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/HadalUrnClose");
+                    SoundStyle hitSound = new("CalamityMod/Sounds/Item/HadalUrnClose");
                     SoundEngine.PlaySound(hitSound with { Volume = 0.4f, Pitch = 0.4f, PitchVariance = 0.2f }, proj.Center);
                 }
 

@@ -3,7 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using System;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     // This projectile is intended to be a simple VFX projectile.
     public class AerSigilFeather : ModProjectile, ILocalizedModType

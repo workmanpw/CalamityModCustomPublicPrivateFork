@@ -6,7 +6,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient
+namespace CalamityMod.Tiles.Abyss.AbyssAmbient
 {
     public class GravelPile1 : ModTile
     {

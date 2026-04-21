@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Dusts;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -8,12 +8,12 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class SepticSkewerBacteria : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public bool setStats = true;
         public int rotDirection = 1;
         public int time = 0;
@@ -44,7 +44,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             }
             if (time % 8 == 0 && time > 40)
             {
-                Particle spark = new CustomSpark(Projectile.Center - Projectile.velocity + Main.rand.NextVector2Circular(20, 20), -Projectile.velocity * Main.rand.NextFloat(0.1f, 0.4f), "CalamityModCustomPublicPrivateFork/Projectiles/Boss/OldDukeGore", false, Main.rand.Next(9, 20 + 1), Main.rand.NextFloat(0.4f, 0.6f), (!ChildSafety.Disabled ? Color.LimeGreen : Color.Lerp(Color.White, Color.Chartreuse, 0.5f)) * Main.rand.NextFloat(0.55f, 0.7f) * Utils.GetLerpValue(255, 0, Projectile.alpha), new Vector2(1, 1), false, false, Main.rand.NextFloat(-1f, 1f));
+                Particle spark = new CustomSpark(Projectile.Center - Projectile.velocity + Main.rand.NextVector2Circular(20, 20), -Projectile.velocity * Main.rand.NextFloat(0.1f, 0.4f), "CalamityMod/Projectiles/Boss/OldDukeGore", false, Main.rand.Next(9, 20 + 1), Main.rand.NextFloat(0.4f, 0.6f), (!ChildSafety.Disabled ? Color.LimeGreen : Color.Lerp(Color.White, Color.Chartreuse, 0.5f)) * Main.rand.NextFloat(0.55f, 0.7f) * Utils.GetLerpValue(255, 0, Projectile.alpha), new Vector2(1, 1), false, false, Main.rand.NextFloat(-1f, 1f));
                 GeneralParticleHandler.SpawnParticle(spark);
             }
             if (Main.rand.NextBool(15))
@@ -79,7 +79,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         public override bool PreDraw(ref Color lightColor)
         {
 
-            Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Boss/OldDukeGore").Value;
+            Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/OldDukeGore").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
             Color drawColor = Projectile.GetAlpha(lightColor);
             float drawRotation = Projectile.rotation;

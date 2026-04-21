@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
+using CalamityMod.CalPlayer;
+using CalamityMod.Items.Materials;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Fishing
+namespace CalamityMod.Items.Fishing
 {
     internal class SkylineBobber : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Fishing";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Typeless/HeronBobber";
+        public override string Texture => "CalamityMod/Projectiles/Typeless/HeronBobber";
         public override void SetDefaults()
         {
             Item.width = 9;

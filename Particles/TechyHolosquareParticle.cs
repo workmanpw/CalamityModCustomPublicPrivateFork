@@ -3,12 +3,12 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class TechyHoloysquareParticle : Particle
     {
         public override bool SetLifetime => true;
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/TechyHolosquare";
+        public override string Texture => "CalamityMod/Particles/TechyHolosquare";
         public override bool UseAdditiveBlend => true;
         public override bool UseCustomDraw => true;
 

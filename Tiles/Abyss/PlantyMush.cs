@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Systems;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient;
-using CalamityModCustomPublicPrivateFork.Walls;
+using CalamityMod.Systems;
+using CalamityMod.Tiles.Abyss.AbyssAmbient;
+using CalamityMod.Walls;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -8,13 +8,13 @@ using Terraria.GameContent.Metadata;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Abyss
+namespace CalamityMod.Tiles.Abyss
 {
     // Transforms any and all Tenebris in old worlds into planty mush.
     [LegacyName("Tenebris")]
     public class PlantyMush : ModTile
     {
-        public static readonly SoundStyle MineSound = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlantyMushMine", 3);
+        public static readonly SoundStyle MineSound = new("CalamityMod/Sounds/Custom/PlantyMushMine", 3);
 
         public override void SetStaticDefaults()
         {

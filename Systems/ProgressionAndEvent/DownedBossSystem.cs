@@ -6,7 +6,7 @@ using Terraria.ModLoader.IO;
 // This does not use the Systems directory in its namespace for the sake of allowing ease of access.
 // It can be changed at some point in the future if really necessary but there are hundreds of references to downed bools and it just
 // sounds like more trouble than it's worth.
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     public class DownedBossSystem : ModSystem
     {

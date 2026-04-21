@@ -2,23 +2,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using CalamityModCustomPublicPrivateFork.Balancing;
-using CalamityModCustomPublicPrivateFork.ChatTags;
-using CalamityModCustomPublicPrivateFork.CustomRecipes;
-using CalamityModCustomPublicPrivateFork.DataStructures;
-using CalamityModCustomPublicPrivateFork.Items.Accessories;
-using CalamityModCustomPublicPrivateFork.Items.Accessories.Vanity;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Demonshade;
-using CalamityModCustomPublicPrivateFork.Items.Tools;
-using CalamityModCustomPublicPrivateFork.Items.VanillaArmorChanges;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Magic;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Summon;
-using CalamityModCustomPublicPrivateFork.Prefixes;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Balancing;
+using CalamityMod.ChatTags;
+using CalamityMod.CustomRecipes;
+using CalamityMod.DataStructures;
+using CalamityMod.Items.Accessories;
+using CalamityMod.Items.Accessories.Vanity;
+using CalamityMod.Items.Armor.Demonshade;
+using CalamityMod.Items.Tools;
+using CalamityMod.Items.VanillaArmorChanges;
+using CalamityMod.Items.Weapons.Magic;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Items.Weapons.Rogue;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.Prefixes;
+using CalamityMod.Systems.Collections;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -28,9 +28,9 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI.Chat;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 
-namespace CalamityModCustomPublicPrivateFork.Items
+namespace CalamityMod.Items
 {
     public partial class CalamityGlobalItem : GlobalItem
     {
@@ -1496,8 +1496,8 @@ namespace CalamityModCustomPublicPrivateFork.Items
                     Vector2 backPosition = basePosition + (MathHelper.TwoPi * i / 20f).ToRotationVector2() * (3.5f);
                     ChatManager.DrawColorCodedStringWithShadow(Main.spriteBatch, line.Font, line.Text, backPosition, backColor, line.Rotation, line.Origin, backScale, line.MaxWidth, line.Spread);
                 }
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
-                Texture2D square = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomRing").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+                Texture2D square = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomRing").Value;
 
                 Vector2 drawPosition = basePosition;
                 Color drawColor = backColor;
@@ -1557,9 +1557,9 @@ namespace CalamityModCustomPublicPrivateFork.Items
                     Vector2 backPosition = basePosition + (MathHelper.TwoPi * i / 20f).ToRotationVector2() * (3.5f);
                     ChatManager.DrawColorCodedStringWithShadow(Main.spriteBatch, line.Font, line.Text, backPosition, backColor, line.Rotation, line.Origin, backScale, line.MaxWidth, line.Spread);
                 }
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
-                Texture2D texture2 = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/SquareRotated").Value;
-                Texture2D square = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSquareParticleThick").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+                Texture2D texture2 = ModContent.Request<Texture2D>("CalamityMod/Particles/SquareRotated").Value;
+                Texture2D square = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSquareParticleThick").Value;
 
                 Vector2 drawPosition = basePosition;
                 Color drawColor = backColor;
@@ -1714,7 +1714,7 @@ namespace CalamityModCustomPublicPrivateFork.Items
                 }
                 if (line.Name == "Tooltip7") // Dark horizon thing
                 {
-                    Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/Light").Value;
+                    Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Particles/Light").Value;
 
                     Vector2 drawPosition = basePosition;
                     Color drawColor = Color.Black;
@@ -1787,7 +1787,7 @@ namespace CalamityModCustomPublicPrivateFork.Items
                     Vector2 backPosition = basePosition + (MathHelper.TwoPi * i / 20f).ToRotationVector2() * (5 + 0.5f * sine);
                     ChatManager.DrawColorCodedStringWithShadow(Main.spriteBatch, line.Font, line.Text, shake * 4 + backPosition, backColor, line.Rotation, line.Origin, backScale, line.MaxWidth, line.Spread);
                 }
-                Texture2D texture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
+                Texture2D texture = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
 
                 Vector2 drawPosition = basePosition;
                 Color drawColor = backColor;

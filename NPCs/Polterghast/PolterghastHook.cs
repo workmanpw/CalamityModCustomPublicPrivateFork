@@ -1,8 +1,8 @@
 using System;
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Projectiles.Boss;
-using CalamityModCustomPublicPrivateFork.World;
+using CalamityMod.Events;
+using CalamityMod.Projectiles.Boss;
+using CalamityMod.World;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,7 +10,7 @@ using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.NPCs.Polterghast
+namespace CalamityMod.NPCs.Polterghast
 {
     public class PolterghastHook : ModNPC
     {
@@ -28,7 +28,7 @@ namespace CalamityModCustomPublicPrivateFork.NPCs.Polterghast
             if (!Main.dedServ)
             {
                 GlowTexture = ModContent.Request<Texture2D>(Texture + "Glow", AssetRequestMode.AsyncLoad);
-                ChainTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/NPCs/Polterghast/PolterghastChain", AssetRequestMode.AsyncLoad);
+                ChainTexture = ModContent.Request<Texture2D>("CalamityMod/NPCs/Polterghast/PolterghastChain", AssetRequestMode.AsyncLoad);
             }
         }
 

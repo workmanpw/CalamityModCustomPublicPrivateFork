@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -10,10 +10,10 @@ using Terraria.Audio;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
+using static CalamityMod.CalamityUtils;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class Exobeam : ModProjectile, ILocalizedModType
     {
@@ -149,7 +149,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             Main.EntitySpriteDraw(texture, Projectile.oldPos[2] + Projectile.Size / 2f - Main.screenPosition, null, Color.White with { A = 0 }, Projectile.rotation + MathHelper.PiOver4, texture.Size() / 2f, bladeScale * Projectile.scale, 0, 0);
 
             if (BloomTex == null)
-                BloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle");
+                BloomTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle");
             Texture2D bloomTex = BloomTex.Value;
 
             Color mainColor = MulticolorLerp((Main.GlobalTimeWrappedHourly * 0.5f + Projectile.whoAmI * 0.12f) % 1, Color.Cyan, Color.Lime, Color.GreenYellow, Color.Goldenrod, Color.Orange);
@@ -162,7 +162,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
             Main.spriteBatch.EnterShaderRegion();
 
             if (TrailTex == null)
-                TrailTex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/BasicTrail");
+                TrailTex = Request<Texture2D>("CalamityMod/ExtraTextures/Trails/BasicTrail");
 
             GameShaders.Misc["CalamityMod:ExobladePierce"].SetShaderTexture(TrailTex);
             GameShaders.Misc["CalamityMod:ExobladePierce"].UseImage2("Images/Extra_189");

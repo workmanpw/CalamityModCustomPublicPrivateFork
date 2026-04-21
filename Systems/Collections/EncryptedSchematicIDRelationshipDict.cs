@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Items.DraedonMisc;
+using CalamityMod.Items.DraedonMisc;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Systems.Collections
+namespace CalamityMod.Systems.Collections
 {
     public sealed class EncryptedSchematicIDRelationshipDict : ModSystem
     {

@@ -1,8 +1,8 @@
-using CalamityModCustomPublicPrivateFork.NPCs.Ravager;
+using CalamityMod.NPCs.Ravager;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class RavagerMusicScene : BaseMusicSceneEffect
     {

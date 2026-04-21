@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Dusts.Furniture;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureOtherworldly;
+using CalamityMod.Dusts.Furniture;
+using CalamityMod.Items.Placeables.FurnitureOtherworldly;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.ObjectInteractions;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.FurnitureOtherworldly
+namespace CalamityMod.Tiles.FurnitureOtherworldly
 {
     [LegacyName("OccultDoorOpen")]
     public class OtherworldlyDoorOpen : ModTile

@@ -5,7 +5,7 @@ using Terraria;
 using Terraria.Enums;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles
+namespace CalamityMod.Projectiles.BaseProjectiles
 {
     public abstract class BaseFlailProjectile : ModProjectile
     {

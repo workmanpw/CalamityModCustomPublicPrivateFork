@@ -2,7 +2,7 @@
 using System;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork.Graphics.Primitives;
+namespace CalamityMod.Graphics.Primitives;
 
 public readonly struct PrimitiveMeshView
 {

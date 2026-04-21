@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
-using CalamityModCustomPublicPrivateFork.Events;
-using CalamityModCustomPublicPrivateFork.Packets;
-using CalamityModCustomPublicPrivateFork.Systems;
+using CalamityMod.CalPlayer;
+using CalamityMod.Events;
+using CalamityMod.Packets;
+using CalamityMod.Systems;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -15,11 +15,11 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.UI.Chat;
-using static CalamityModCustomPublicPrivateFork.CalamityUtils;
-using static CalamityModCustomPublicPrivateFork.Systems.DifficultyModeSystem;
+using static CalamityMod.CalamityUtils;
+using static CalamityMod.Systems.DifficultyModeSystem;
 using static Terraria.GameContent.FontAssets;
 
-namespace CalamityModCustomPublicPrivateFork.UI.ModeIndicator
+namespace CalamityMod.UI.ModeIndicator
 {
     public class ModeIndicatorUI
     {
@@ -136,7 +136,7 @@ namespace CalamityModCustomPublicPrivateFork.UI.ModeIndicator
                 }
                 spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.Additive, null, null, null, null, Main.UIScaleMatrix);
 
-                Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/BloomFlare").Value;
+                Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/BloomFlare").Value;
                 float opacity = !_hasCheckedItOutYet ? 1f : 1f * GlowFadeTime / (float)GlowFadeAnimLength;
                 float scale = 0.4f + (float)Math.Sin(Main.GlobalTimeWrappedHourly) * 0.05f;
                 float rot = Main.GlobalTimeWrappedHourly * 0.5f;
@@ -147,7 +147,7 @@ namespace CalamityModCustomPublicPrivateFork.UI.ModeIndicator
                 spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, Main.UIScaleMatrix);
 
                 /*
-                Texture2D outlineTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicatorOutline").Value;
+                Texture2D outlineTexture = ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicatorOutline").Value;
                 spriteBatch.Draw(outlineTexture, DrawCenter, null, Color.White * opacity, 0f, outlineTexture.Size() * 0.5f, MainIconScale, SpriteEffects.None, 0f);
                 */
             }
@@ -368,7 +368,7 @@ namespace CalamityModCustomPublicPrivateFork.UI.ModeIndicator
 
         public static void DrawLock(SpriteBatch spriteBatch)
         {
-            Texture2D lockTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/ModeIndicator/ModeIndicatorLock").Value;
+            Texture2D lockTexture = ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/ModeIndicatorLock").Value;
             float rotationShift = lockClickTime == 0 ? 0f : (float)Math.Sin((1 - lockClickTime / (float)LockAnimLength) * MathHelper.TwoPi * 2f) * 0.5f * (lockClickTime / (float)LockAnimLength);
             spriteBatch.Draw(lockTexture, DrawCenter + Vector2.UnitY * 24 * MainIconScale, null, Color.White, 0f + rotationShift, lockTexture.Size() * 0.5f, LockShakeScale * MainIconScale, SpriteEffects.None, 0f);
         }
@@ -406,7 +406,7 @@ namespace CalamityModCustomPublicPrivateFork.UI.ModeIndicator
                 return;
 
             // This has to be put before difficulties change as to not disrupt GetCurrentDifficulty
-            BroadcastFormattedText("Mods.CalamityModCustomPublicPrivateFork.UI.DifficultySwitch", Color.White, Main.getGoodWorld && GetCurrentDifficulty.FTWTextColor is not null ? GetCurrentDifficulty.FTWTextColor.Value.Hex3() : GetCurrentDifficulty.ChatTextColor.Hex3(), Main.getGoodWorld && GetCurrentDifficulty.FTWName is not null ? GetCurrentDifficulty.FTWName : GetCurrentDifficulty.Name
+            BroadcastFormattedText("Mods.CalamityMod.UI.DifficultySwitch", Color.White, Main.getGoodWorld && GetCurrentDifficulty.FTWTextColor is not null ? GetCurrentDifficulty.FTWTextColor.Value.Hex3() : GetCurrentDifficulty.ChatTextColor.Hex3(), Main.getGoodWorld && GetCurrentDifficulty.FTWName is not null ? GetCurrentDifficulty.FTWName : GetCurrentDifficulty.Name
             , Main.getGoodWorld && GetCurrentDifficulty.FTWTextColor is not null ? mode.FTWTextColor.Value.Hex3() : mode.ChatTextColor.Hex3(), Main.getGoodWorld && GetCurrentDifficulty.FTWName is not null ? mode.FTWName : mode.Name);
 
             // Todo, maybe in the future having a way to have multiple difficulty options on the same tier that can coexist, and it works in branching pathes? Not very necessary for cal & addons.

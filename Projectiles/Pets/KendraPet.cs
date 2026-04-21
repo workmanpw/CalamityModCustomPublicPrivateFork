@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -7,12 +7,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Pets
+namespace CalamityMod.Projectiles.Pets
 {
     public class KendraPet : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Pets";
-        public static readonly SoundStyle BarkSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/KendraBark");
+        public static readonly SoundStyle BarkSound = new("CalamityMod/Sounds/Item/KendraBark");
 
         private int chosenIdle = 0;
         private int idleTimer = 0;

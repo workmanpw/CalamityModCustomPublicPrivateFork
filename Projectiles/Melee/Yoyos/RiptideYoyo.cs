@@ -1,5 +1,5 @@
 using System.IO;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
+using CalamityMod.Items.Weapons.Melee;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +7,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee.Yoyos
+namespace CalamityMod.Projectiles.Melee.Yoyos
 {
     public class RiptideYoyo : ModProjectile
     {

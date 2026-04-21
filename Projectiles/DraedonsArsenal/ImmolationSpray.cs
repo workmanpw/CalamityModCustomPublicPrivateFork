@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Items.Weapons.DraedonsArsenal;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -8,12 +8,12 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
+namespace CalamityMod.Projectiles.DraedonsArsenal
 {
     public class ImmolationSpray : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Misc";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public ref float time => ref Projectile.ai[0];
         public override void SetStaticDefaults()
         {
@@ -91,7 +91,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal
             if (time < 1)
                 return false;
 
-            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/GlowSpark");
+            Asset<Texture2D> tex = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowSpark");
 
             float squash = Utils.GetLerpValue(-3, 10, Projectile.velocity.Length(), true);
             for (int i = 0; i < 2; i++)

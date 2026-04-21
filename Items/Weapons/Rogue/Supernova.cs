@@ -1,7 +1,7 @@
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Projectiles.Rogue;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.Items.Materials;
+using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -10,13 +10,13 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
+namespace CalamityMod.Items.Weapons.Rogue
 {
     public class Supernova : RogueWeapon
     {
-        public static readonly SoundStyle ExplosionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SupernovaBoom") { Volume = 0.9f };
-        public static readonly SoundStyle StealthExplosionSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SupernovaStealthExplode") { Volume = 1f };
-        public static readonly SoundStyle StealthChargeSound = new("CalamityModCustomPublicPrivateFork/Sounds/Item/SupernovaStealthCharge") { Volume = 1f };
+        public static readonly SoundStyle ExplosionSound = new("CalamityMod/Sounds/Item/SupernovaBoom") { Volume = 0.9f };
+        public static readonly SoundStyle StealthExplosionSound = new("CalamityMod/Sounds/Item/SupernovaStealthExplode") { Volume = 1f };
+        public static readonly SoundStyle StealthChargeSound = new("CalamityMod/Sounds/Item/SupernovaStealthCharge") { Volume = 1f };
         public override void SetDefaults()
         {
             Item.width = 106;
@@ -55,7 +55,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI)
         {
-            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Items/Weapons/Rogue/SupernovaGlow").Value);
+            Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, ModContent.Request<Texture2D>("CalamityMod/Items/Weapons/Rogue/SupernovaGlow").Value);
         }
 
         public override void AddRecipes()

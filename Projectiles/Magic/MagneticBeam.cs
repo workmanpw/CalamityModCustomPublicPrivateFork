@@ -1,15 +1,15 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
+namespace CalamityMod.Projectiles.Magic
 {
     public class MagneticBeam : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Magic";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         public override void SetStaticDefaults() => ProjectileID.Sets.CultistIsResistantTo[Type] = true;
         public override void SetDefaults()
@@ -27,9 +27,9 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Magic
         {
             if (Projectile.timeLeft == 500)
             {
-                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DarkOrchid, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.2f, 0.2f, 3);
+                Particle orb = new CustomPulse(Projectile.Center, Vector2.Zero, Color.DarkOrchid, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.2f, 0.2f, 3);
                 GeneralParticleHandler.SpawnParticle(orb);
-                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityModCustomPublicPrivateFork/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.13f, 0.13f, 3);
+                Particle orb2 = new CustomPulse(Projectile.Center, Vector2.Zero, Color.White, "CalamityMod/Particles/LargeBloom", new Vector2(1, 1), Main.rand.NextFloat(-10, 10), 0.13f, 0.13f, 3);
                 GeneralParticleHandler.SpawnParticle(orb2);
             }
 

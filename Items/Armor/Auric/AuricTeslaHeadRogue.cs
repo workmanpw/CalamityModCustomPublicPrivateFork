@@ -1,20 +1,20 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CalPlayer.Dashes;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Bloodflare;
-using CalamityModCustomPublicPrivateFork.Items.Armor.GodSlayer;
-using CalamityModCustomPublicPrivateFork.Items.Armor.Tarragon;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Rarities;
-using CalamityModCustomPublicPrivateFork.Tiles.Furniture.CraftingStations;
+using CalamityMod.CalPlayer.Dashes;
+using CalamityMod.Items.Armor.Bloodflare;
+using CalamityMod.Items.Armor.GodSlayer;
+using CalamityMod.Items.Armor.Tarragon;
+using CalamityMod.Items.Materials;
+using CalamityMod.Rarities;
+using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using static CalamityModCustomPublicPrivateFork.Items.Armor.Bloodflare.BloodflareHeadRogue;
-using static CalamityModCustomPublicPrivateFork.Items.Armor.GodSlayer.GodSlayerHeadRogue;
-using static CalamityModCustomPublicPrivateFork.Items.Armor.Tarragon.TarragonHeadRogue;
+using static CalamityMod.Items.Armor.Bloodflare.BloodflareHeadRogue;
+using static CalamityMod.Items.Armor.GodSlayer.GodSlayerHeadRogue;
+using static CalamityMod.Items.Armor.Tarragon.TarragonHeadRogue;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Armor.Auric
+namespace CalamityMod.Items.Armor.Auric
 {
     [AutoloadEquip(EquipType.Head)]
     [LegacyName("AuricTeslaPlumedHelm")]

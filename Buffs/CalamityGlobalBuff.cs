@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Balancing;
-using CalamityModCustomPublicPrivateFork.NPCs;
-using CalamityModCustomPublicPrivateFork.Systems.Collections;
+using CalamityMod.Balancing;
+using CalamityMod.NPCs;
+using CalamityMod.Systems.Collections;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Buffs
+namespace CalamityMod.Buffs
 {
     public class CalamityGlobalBuff : GlobalBuff
     {

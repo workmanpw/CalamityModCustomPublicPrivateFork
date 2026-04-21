@@ -1,6 +1,6 @@
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged;
-using CalamityModCustomPublicPrivateFork.Particles;
-using CalamityModCustomPublicPrivateFork.Projectiles.BaseProjectiles;
+using CalamityMod.Items.Weapons.Ranged;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.BaseProjectiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Utilities;
@@ -8,10 +8,10 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
-using static CalamityModCustomPublicPrivateFork.Items.Weapons.Ranged.TheHive;
+using static CalamityMod.Items.Weapons.Ranged.TheHive;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class TheHiveHoldout : BaseGunHoldoutProjectile
     {
@@ -92,7 +92,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
 
             if (ShootingTimer == MaxCharge && !HasLetGo)
             {
-                SoundStyle fullCharge = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PBGAttackSwitchShort");
+                SoundStyle fullCharge = new("CalamityMod/Sounds/Custom/PlagueSounds/PBGAttackSwitchShort");
                 SoundEngine.PlaySound(fullCharge with { Volume = 0.9f }, Projectile.Center);
                 for (int k = 0; k < 15; k++)
                 {
@@ -137,7 +137,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             // Spawns the projectile.
             if (FireNuke)
             {
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PBGBarrageLaunch");
+                SoundStyle fire = new("CalamityMod/Sounds/Custom/PlagueSounds/PBGBarrageLaunch");
                 SoundEngine.PlaySound(fire with { Volume = 0.5f, Pitch = 0.1f }, Projectile.Center);
 
                 if (Main.myPlayer == Projectile.owner)
@@ -147,7 +147,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
             }
             else
             {
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Custom/PlagueSounds/PBGBarrageLaunch");
+                SoundStyle fire = new("CalamityMod/Sounds/Custom/PlagueSounds/PBGBarrageLaunch");
                 SoundEngine.PlaySound(fire with { Volume = 0.4f, Pitch = 0.7f }, Projectile.Center);
 
                 if (Main.myPlayer == Projectile.owner)
@@ -232,7 +232,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
         public override void OnSpawn(IEntitySource source)
         {
             base.OnSpawn(source);
-            SoundStyle charge = new("CalamityModCustomPublicPrivateFork/Sounds/Item/LowHum");
+            SoundStyle charge = new("CalamityMod/Sounds/Item/LowHum");
             FrontArmStretch = Player.CompositeArmStretchAmount.Quarter;
             ExtraBackArmRotation = MathHelper.ToRadians(15f);
             HiveHum = SoundEngine.PlaySound(charge with { Volume = 1.6f, IsLooped = true }, Projectile.Center);

@@ -1,6 +1,6 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,12 +9,12 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class EarthenTidesShockwave : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_EarthenTidesShockwave";
+        public override string Texture => "CalamityMod/Projectiles/Melee/TrueBiomeBlade_EarthenTidesShockwave";
         public Player Owner => Main.player[Projectile.owner];
         public float Timer => (60f - Projectile.timeLeft) / 100f;
         public ref float Size => ref Projectile.ai[0];
@@ -79,7 +79,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Texture2D tex = Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/TrueBiomeBlade_EarthenTidesShockwave").Value;
+            Texture2D tex = Request<Texture2D>("CalamityMod/Projectiles/Melee/TrueBiomeBlade_EarthenTidesShockwave").Value;
 
             float drawAngle = Projectile.rotation;
             int animFrame = 6 - (int)Math.Ceiling(Projectile.timeLeft / 10f);

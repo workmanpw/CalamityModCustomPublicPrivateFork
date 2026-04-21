@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace CalamityModCustomPublicPrivateFork
+namespace CalamityMod
 {
     [Obsolete("Use SpriteBatchParameters/SpriteBatchSnapshot")]
     public class BatchSetting(BlendState blend, SamplerState sampler, DepthStencilState depthStencil, RasterizerState rasterizer)

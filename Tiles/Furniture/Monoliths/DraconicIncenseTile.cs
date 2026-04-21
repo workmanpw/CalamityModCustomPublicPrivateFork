@@ -1,5 +1,5 @@
-using CalamityModCustomPublicPrivateFork.Items.Placeables.Furniture.Monoliths;
-using CalamityModCustomPublicPrivateFork.Tiles.BaseTiles;
+using CalamityMod.Items.Placeables.Furniture.Monoliths;
+using CalamityMod.Tiles.BaseTiles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -9,7 +9,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Furniture.Monoliths
+namespace CalamityMod.Tiles.Furniture.Monoliths
 {
     public class DraconicIncenseTile : BaseMonolith
     {

@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.Ores
+namespace CalamityMod.Items.Placeables.Ores
 {
     public class CryonicOre : ModItem, ILocalizedModType
     {

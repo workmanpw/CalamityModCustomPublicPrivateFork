@@ -1,5 +1,5 @@
 using System;
-using CalamityModCustomPublicPrivateFork.CalPlayer;
+using CalamityMod.CalPlayer;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -7,7 +7,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.UI
+namespace CalamityMod.UI
 {
     [Autoload(Side = ModSide.Client)]
     public sealed class StealthUI : ModSystem
@@ -22,10 +22,10 @@ namespace CalamityModCustomPublicPrivateFork.UI
 
         public override void OnModLoad()
         {
-            edgeTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/StealthMeter", AssetRequestMode.ImmediateLoad).Value;
-            indicatorTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/StealthMeterStrikeIndicator", AssetRequestMode.ImmediateLoad).Value;
-            barTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/StealthMeterBar", AssetRequestMode.ImmediateLoad).Value;
-            fullBarTexture = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/UI/MiscTextures/StealthMeterBarFull", AssetRequestMode.ImmediateLoad).Value;
+            edgeTexture = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/StealthMeter", AssetRequestMode.ImmediateLoad).Value;
+            indicatorTexture = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/StealthMeterStrikeIndicator", AssetRequestMode.ImmediateLoad).Value;
+            barTexture = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/StealthMeterBar", AssetRequestMode.ImmediateLoad).Value;
+            fullBarTexture = ModContent.Request<Texture2D>("CalamityMod/UI/MiscTextures/StealthMeterBarFull", AssetRequestMode.ImmediateLoad).Value;
             Reset();
         }
 

@@ -1,7 +1,7 @@
 using System;
-using CalamityModCustomPublicPrivateFork.Graphics.Primitives;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Melee;
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,12 +11,12 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
+namespace CalamityMod.Projectiles.Melee
 {
     public class StygianShieldAttack : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
         // Bull Rush stats
         public const float MinChargeTime = 15f;
@@ -191,10 +191,10 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
         {
             // Textures and general use stuff
             Texture2D mainTex = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
-            Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/BloomCircle").Value;
-            Texture2D flatTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/FlatShape").Value;
-            Texture2D shieldTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Melee/StygianShieldBloom").Value;
-            Texture2D ringTex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/HollowCircleHardEdge").Value;
+            Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
+            Texture2D flatTex = ModContent.Request<Texture2D>("CalamityMod/Particles/FlatShape").Value;
+            Texture2D shieldTex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Melee/StygianShieldBloom").Value;
+            Texture2D ringTex = ModContent.Request<Texture2D>("CalamityMod/Particles/HollowCircleHardEdge").Value;
             float chargeLevel = Charge / MaxChargeTime;
 
             // "Arrow head" effect which draws around the shield (and also the telegraph which have different draw parameters below)
@@ -219,7 +219,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Melee
                 Color shieldColor = Color.LightSalmon;
 
                 // Main trail
-                GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/ExtraTextures/Trails/ScarletDevilStreak"));
+                GameShaders.Misc["CalamityMod:TrailStreak"].SetShaderTexture(ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/Trails/ScarletDevilStreak"));
                 PrimitiveRenderer.RenderTrail(Projectile.oldPos, new(WidthFunction, ColorFunction, (_,_) => Projectile.Size * 0.5f + extraOffset + Main.screenPosition - direction * 80f,
                     shader: GameShaders.Misc["CalamityMod:TrailStreak"]), 10);
 

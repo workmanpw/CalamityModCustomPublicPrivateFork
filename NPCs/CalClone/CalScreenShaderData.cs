@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Events;
+using CalamityMod.Events;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Graphics.Effects;
 using Terraria.Graphics.Shaders;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.NPCs.CalClone
+namespace CalamityMod.NPCs.CalClone
 {
     public class CalScreenShaderData : ScreenShaderData
     {

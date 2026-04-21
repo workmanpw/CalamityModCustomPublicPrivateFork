@@ -1,12 +1,12 @@
-using CalamityModCustomPublicPrivateFork.Buffs.DamageOverTime;
-using CalamityModCustomPublicPrivateFork.Items.Weapons.Rogue;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Items.Weapons.Rogue;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
+namespace CalamityMod.Projectiles.Rogue
 {
     public class LeonidCometBig : ModProjectile, ILocalizedModType
     {
@@ -42,7 +42,7 @@ namespace CalamityModCustomPublicPrivateFork.Projectiles.Rogue
 
         public override void PostDraw(Color lightColor)
         {
-            Texture2D tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Projectiles/Rogue/LeonidCometBigGlow").Value;
+            Texture2D tex = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Rogue/LeonidCometBigGlow").Value;
             Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, null, Color.White, Projectile.rotation, tex.Size() / 2, Projectile.scale, SpriteEffects.None, 0);
         }
 

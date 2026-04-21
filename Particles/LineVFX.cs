@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Particles
+namespace CalamityMod.Particles
 {
     public class LineVFX : Particle
     {
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Particles/ThinEndedLine";
+        public override string Texture => "CalamityMod/Particles/ThinEndedLine";
         public override bool UseAdditiveBlend => true;
         public override bool UseCustomDraw => true;
         public override bool SetLifetime => true;
@@ -38,7 +38,7 @@ namespace CalamityModCustomPublicPrivateFork.Particles
         {
             Texture2D tex;
             if (Concave)
-                tex = ModContent.Request<Texture2D>("CalamityModCustomPublicPrivateFork/Particles/ThickEndedLine").Value; //THICC :wearty: weary: :weary : oogogg;... ooog... that line be lookin' mighty fine... :hot:
+                tex = ModContent.Request<Texture2D>("CalamityMod/Particles/ThickEndedLine").Value; //THICC :wearty: weary: :weary : oogogg;... ooog... that line be lookin' mighty fine... :hot:
             else
                 tex = ModContent.Request<Texture2D>(Texture).Value;
 

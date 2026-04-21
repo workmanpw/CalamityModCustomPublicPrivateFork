@@ -5,15 +5,15 @@ using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Typeless
+namespace CalamityMod.Projectiles.Typeless
 {
     public class CosmicDashExplosion : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Typeless";
         public Player Owner => Main.player[Projectile.owner];
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Projectiles/InvisibleProj";
+        public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
 
-        public static readonly SoundStyle Impact = new("CalamityModCustomPublicPrivateFork/Sounds/NPCKilled/DevourerSegmentBreak1") { Volume = 0.3f };
+        public static readonly SoundStyle Impact = new("CalamityMod/Sounds/NPCKilled/DevourerSegmentBreak1") { Volume = 0.3f };
         public override void SetDefaults()
         {
             Projectile.width = 140;

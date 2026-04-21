@@ -1,16 +1,16 @@
-using CalamityModCustomPublicPrivateFork.Particles;
+using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Projectiles.Ranged
+namespace CalamityMod.Projectiles.Ranged
 {
     public class IcicleArrowProj : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityModCustomPublicPrivateFork/Items/Ammo/IcicleArrow";
+        public override string Texture => "CalamityMod/Items/Ammo/IcicleArrow";
         public bool falling = false;
         public Vector2 startVelocity;
         public bool setFallingStats = false;

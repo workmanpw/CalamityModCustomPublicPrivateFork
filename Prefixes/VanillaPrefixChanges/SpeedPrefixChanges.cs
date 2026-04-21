@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.Prefixes.VanillaPrefixChanges.Stats;
+using CalamityMod.Prefixes.VanillaPrefixChanges.Stats;
 using Terraria;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Prefixes.VanillaPrefixChanges
+namespace CalamityMod.Prefixes.VanillaPrefixChanges
 {
     public class BriskPrefixChange : VanillaPrefixChange
     {

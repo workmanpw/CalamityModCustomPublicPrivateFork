@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.Buffs.Mounts;
-using CalamityModCustomPublicPrivateFork.Projectiles.Ranged;
+using CalamityMod.Buffs.Mounts;
+using CalamityMod.Projectiles.Ranged;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Mounts
+namespace CalamityMod.Items.Mounts
 {
     public class BUMBLEDOGE : ModMount
     {

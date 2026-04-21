@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 using System.Linq;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss;
-using CalamityModCustomPublicPrivateFork.Tiles.Abyss.AbyssAmbient;
-using CalamityModCustomPublicPrivateFork.Tiles.Astral;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralDesert;
-using CalamityModCustomPublicPrivateFork.Tiles.AstralSnow;
-using CalamityModCustomPublicPrivateFork.Tiles.Crags;
-using CalamityModCustomPublicPrivateFork.Tiles.Ores;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Tiles.SunkenSea.Ambient;
+using CalamityMod.Tiles.Abyss;
+using CalamityMod.Tiles.Abyss.AbyssAmbient;
+using CalamityMod.Tiles.Astral;
+using CalamityMod.Tiles.AstralDesert;
+using CalamityMod.Tiles.AstralSnow;
+using CalamityMod.Tiles.Crags;
+using CalamityMod.Tiles.Ores;
+using CalamityMod.Tiles.SunkenSea;
+using CalamityMod.Tiles.SunkenSea.Ambient;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Systems
+namespace CalamityMod.Systems
 {
     public class TileFramingSystem : ModSystem
     {

@@ -1,11 +1,11 @@
-using CalamityModCustomPublicPrivateFork.ExtraTextures.GreyscaleGradients;
-using CalamityModCustomPublicPrivateFork.Sounds;
+using CalamityMod.ExtraTextures.GreyscaleGradients;
+using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 
-namespace CalamityModCustomPublicPrivateFork.Tiles.Plates
+namespace CalamityMod.Tiles.Plates
 {
     public class Elumplate : GlowMaskTile
     {

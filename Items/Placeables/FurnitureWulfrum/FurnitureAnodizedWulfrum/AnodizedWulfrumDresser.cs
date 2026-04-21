@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Placeables.FurnitureWulfrum.FurnitureAnodizedWulfrum
+namespace CalamityMod.Items.Placeables.FurnitureWulfrum.FurnitureAnodizedWulfrum
 {
     public class AnodizedWulfrumDresser : ModItem, ILocalizedModType
     {

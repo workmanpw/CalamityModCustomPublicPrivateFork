@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using CalamityModCustomPublicPrivateFork.CustomRecipes;
-using CalamityModCustomPublicPrivateFork.Items.Materials;
-using CalamityModCustomPublicPrivateFork.Items.Placeables.SunkenSea;
-using CalamityModCustomPublicPrivateFork.Projectiles.DraedonsArsenal;
+using CalamityMod.CustomRecipes;
+using CalamityMod.Items.Materials;
+using CalamityMod.Items.Placeables.SunkenSea;
+using CalamityMod.Projectiles.DraedonsArsenal;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -12,14 +12,14 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal
+namespace CalamityMod.Items.Weapons.DraedonsArsenal
 {
     [LegacyName("Taser")]
     public class ShortCircuit : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.DraedonsArsenal";
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(10);
-        public static readonly SoundStyle Fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/TaserLaunch") { Volume = 0.6f };
+        public static readonly SoundStyle Fire = new("CalamityMod/Sounds/Item/TaserLaunch") { Volume = 0.6f };
         public override void SetStaticDefaults()
         {
             ItemID.Sets.ItemsThatAllowRepeatedRightClick[Type] = true;
@@ -66,7 +66,7 @@ namespace CalamityModCustomPublicPrivateFork.Items.Weapons.DraedonsArsenal
 
             if (player.altFunctionUse == 0)
             {
-                SoundStyle fire = new("CalamityModCustomPublicPrivateFork/Sounds/Item/GunShotSmall");
+                SoundStyle fire = new("CalamityMod/Sounds/Item/GunShotSmall");
                 SoundEngine.PlaySound(fire with { Pitch = Main.rand.NextFloat(0.5f, 0.65f), Volume = 0.2f, MaxInstances = -1 }, position);
                 Projectile shot = Projectile.NewProjectileDirect(source, position + velocity - Vector2.UnitY * 5, (velocity * 1.5f).RotatedByRandom(0.15f), type, damage, 0, player.whoAmI);
                 return false;

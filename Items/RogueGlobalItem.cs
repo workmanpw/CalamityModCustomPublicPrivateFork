@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CalamityModCustomPublicPrivateFork.Items
+namespace CalamityMod.Items
 {
     public sealed class RogueGlobalItem : GlobalItem
     {
