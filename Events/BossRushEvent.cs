@@ -715,6 +715,10 @@ namespace CalamityMod.Events
                 {
                     foreach (int permittedNPCType in Bosses[currentBossIndex].HostileNPCsToNotDelete)
                     {
+                        // Skip checking for the Slime God Core itself
+                        if (permittedNPCType == ModContent.NPCType<SlimeGodCore>())
+                            continue;
+
                         if (NPC.AnyNPCs(permittedNPCType))
                         {
                             allPermittedNPCsDead = false;
