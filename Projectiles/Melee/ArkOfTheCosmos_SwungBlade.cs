@@ -212,13 +212,36 @@ namespace CalamityMod.Projectiles.Melee
                     chain.timeLeft = (int)(Projectile.timeLeft / 2f);
                 }
 
-                //Rotate the blade towards the cursor
+                //Rotate the blade towards the cursor or nearby enemies
                 Vector2 mouse = Owner.ClampedMouseWorld();
-                Projectile.Center = Vector2.Lerp(Projectile.Center, mouse, 0.025f * ThrowRatio());
-                Projectile.Center = Projectile.Center.MoveTowards(mouse, 20f * ThrowRatio());
-
-                if ((Projectile.Center - Owner.Center).Length() > ArkoftheCosmos.MaxThrowReach)
-                    Projectile.Center = Owner.Center + Owner.DirectionTo(Projectile.Center) * ArkoftheCosmos.MaxThrowReach;
+                Vector2 target = mouse;
+                
+                // Find nearest enemy within 600 pixels
+                if (Owner.whoAmI == Main.myPlayer)
+                {
+                    float nearestDistance = 600f;
+                    NPC nearestNPC = null;
+                    
+                    for (int i = 0; i < Main.maxNPCs; i++)
+                    {
+                        NPC npc = Main.npc[i];
+                        if (npc.active && !npc.friendly && npc.life > 0 && !npc.dontTakeDamage)
+                        {
+                            float distance = Vector2.Distance(Projectile.Center, npc.Center);
+                            if (distance < nearestDistance)
+                            {
+                                nearestDistance = distance;
+                                nearestNPC = npc;
+                            }
+                        }
+                    }
+                    
+                    if (nearestNPC != null)
+                        target = nearestNPC.Center;
+                }
+                
+                Projectile.Center = Vector2.Lerp(Projectile.Center, target, 0.025f * ThrowRatio());
+                Projectile.Center = Projectile.Center.MoveTowards(target, 20f * ThrowRatio());
 
                 Projectile.rotation -= MathHelper.PiOver4 * 0.3f;
                 Projectile.scale = 1f + ThrowScaleRatio() * 0.5f;
@@ -247,10 +270,9 @@ namespace CalamityMod.Projectiles.Melee
                     Projectile.Center = Owner.Center + direction * ThrowRatio();
 
 
-                //Snip - instant snap when mouse button is released
-                if (!OwnerCanShoot && Combo == 2 && ChanceMissed == 0f)
+                //Snip
+                if (!OwnerCanShoot && Combo == 2 && ThrowCompletion >= (SnapWindowStart - 0.1f) && ThrowCompletion < SnapWindowEnd && ChanceMissed == 0f)
                 {
-                    SoundEngine.PlaySound(CommonCalamitySounds.ScissorGuillotineSnapSound with { Volume = CommonCalamitySounds.ScissorGuillotineSnapSound.Volume * 1.3f }, Projectile.Center);
                     Particle snapSpark = new GenericSparkle(Projectile.Center, Owner.velocity - Utils.SafeNormalize(Projectile.velocity, Vector2.Zero), Color.White, Color.OrangeRed, Main.rand.NextFloat(1f, 2f), 10 + Main.rand.Next(10), 0.1f, 3f);
                     GeneralParticleHandler.SpawnParticle(snapSpark);
                     Main.LocalPlayer.SetScreenshake(3f);
@@ -274,10 +296,9 @@ namespace CalamityMod.Projectiles.Melee
                     Combo = 3f; //Mark the end of the regular throw
                     direction = Projectile.Center - Owner.Center; //At this point direction becomes also a marker for the last position it was in before snapping
                     Projectile.velocity = Projectile.rotation.ToRotationVector2();
-                    Projectile.timeLeft = 10; //Fast snap retraction
-                    Projectile.localNPCHitCooldown = 10; //Only snap the enemies ONCE
+                    Projectile.timeLeft = (int)SnapEndTime;
+                    Projectile.localNPCHitCooldown = (int)SnapEndTime; //Only snap the enemies ONCE
                 }
-
 
                 else if (!OwnerCanShoot && Combo == 2 && ChanceMissed == 0f)
                     ChanceMissed = 1f;
