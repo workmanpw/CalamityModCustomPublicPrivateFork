@@ -141,7 +141,7 @@ technique Technique1
 {
     pass SlashPass
     {
-        VertexShader = compile vs_2_0 VertexShaderFunction();
+        VertexShader = compile vs_3_0 VertexShaderFunction();
         PixelShader = compile ps_3_0 PixelShaderFunction();
     }
 }

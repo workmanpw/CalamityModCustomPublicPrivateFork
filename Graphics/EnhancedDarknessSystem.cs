@@ -71,15 +71,7 @@ namespace CalamityMod.Graphics
             );
 
             // Use Main.spriteBatch directly to avoid conflicts with mods like Radiance that hook into the drawing process
-            bool mainSpriteBatchWasBegun = true;
-            try
-            {
-                Main.spriteBatch.End();
-            }
-            catch
-            {
-                mainSpriteBatchWasBegun = false;
-            }
+            Main.spriteBatch.End(out var ss);
 
             using (lease.Scope(clearColor: Color.Black))
             {
@@ -101,8 +93,7 @@ namespace CalamityMod.Graphics
             Main.spriteBatch.Draw(lease.Target, Vector2.Zero, null, Color.White, 0, Vector2.Zero, 1, 0, 0);
             Main.spriteBatch.End();
 
-            if (mainSpriteBatchWasBegun)
-                Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.Default, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
+            Main.spriteBatch.Begin(ss);
         }
 
 

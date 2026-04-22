@@ -149,15 +149,13 @@ namespace CalamityMod.Buffs.DamageOverTime
                 return;
             }
 
-            using (Main.spriteBatch.Scope())
+            using var lease = ScreenspaceTargetPool.Shared.Rent(Main.instance.GraphicsDevice);
+            using (lease.Scope(clearColor: Color.Transparent))
             {
-                using var lease = ScreenspaceTargetPool.Shared.Rent(Main.instance.GraphicsDevice);
-                using (lease.Scope(clearColor: Color.Transparent))
-                {
-                    Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null, Main.Transform);
-                    orig(self, iNPCIndex, behindTiles);
-                    Main.spriteBatch.End();
-                }
+                Main.spriteBatch.End(out var ss);
+                Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null, Main.Transform);
+                orig(self, iNPCIndex, behindTiles);
+                Main.spriteBatch.End();
 
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
 
@@ -169,6 +167,7 @@ namespace CalamityMod.Buffs.DamageOverTime
                 Main.spriteBatch.Draw(lease.Target, Vector2.Zero, Color.White);
 
                 Main.spriteBatch.End();
+                Main.spriteBatch.Begin(ss);
             }
         }
     }
