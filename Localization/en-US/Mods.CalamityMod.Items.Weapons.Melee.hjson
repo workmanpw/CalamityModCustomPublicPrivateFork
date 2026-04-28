@@ -24,6 +24,7 @@ Aorta: {
 
 ArkoftheCosmos: {
 	DisplayName: Ark of the Cosmos
+	Tooltip: [COMBO] [PARRY] [BLAST]
 	ComboInfo:
 		'''
 		<left> to perform a 5-swing combo that ends by throwing the blade
