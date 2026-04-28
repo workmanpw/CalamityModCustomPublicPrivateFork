@@ -42,6 +42,8 @@ namespace CalamityMod.Items.Weapons.Melee
         public static float SwirlBoltAmount = 12f; //The amount of cosmic bolts produced during the swirl attack
         public static float SwirlBoltDamageMultiplier = 1f; //This is the damage multiplier for ALL THE BOLTS: Aka, said damage multiplier is divided by the amount of bolts in a swirl and the full damage multiplier is gotten if you hit all the bolts
 
+        public override void SetStaticDefaults() => base.SetStaticDefaults();
+
         public override void ModifyTooltips(List<TooltipLine> tooltips)
         {
             if (tooltips == null)
