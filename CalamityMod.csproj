@@ -26,9 +26,13 @@
 
   <ItemGroup>
     <Publicize Include="tModLoader" IncludeCompilerGeneratedMembers="false" IncludeVirtualMembers="false" />
-    <DoNotPublicize Include="tModLoader:Terraria.Tile" /> 
+    <DoNotPublicize Include="tModLoader:Terraria.Tile" />
 
     <Publicize Include="FNA" IncludeCompilerGeneratedMembers="false" IncludeVirtualMembers="false" />
     <Publicize Include="ReLogic" IncludeCompilerGeneratedMembers="false" IncludeVirtualMembers="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Localization\**\*.hjson" />
   </ItemGroup>
 </Project>
