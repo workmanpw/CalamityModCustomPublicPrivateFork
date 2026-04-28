@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using CalamityMod.Utilities.Daybreak;
 using CalamityMod.Utilities.Daybreak.Buffers;
@@ -14,11 +15,10 @@ namespace CalamityMod.Graphics
 {
     public class EnhancedDarknessSystem : ModSystem
     {
-
         private static Asset<Texture2D> _defaultTexture;
+
         public class LightSource
         {
-
             public Texture2D texture = _defaultTexture.Value;
             public float scale = 1;
             public Vector2 vectorScale = Vector2.One;
@@ -28,9 +28,9 @@ namespace CalamityMod.Graphics
             public Color color = Color.White;
             public int lifetime = 1;
             public Rectangle? frame = null;
+
             public LightSource() { }
 
-            // This constructor only gives the most common arguments. Frame, Color, lifetime, etc. must be set in curly braces afterwards to prevent this constructor getting too unwieldy.
             public LightSource(Vector2? center = null, Texture2D texture = null, float scale = 1, float rotation = 0, Vector2? vectorScale = null, float opacity = 1)
             {
                 this.texture = texture ?? ModContent.Request<Texture2D>("CalamityMod/Particles/BloomCircle").Value;
@@ -43,6 +43,7 @@ namespace CalamityMod.Graphics
         }
 
         public static List<LightSource> lights = new();
+
         public override void Load()
         {
             On_OverlayManager.Draw += DrawShadowOverlay;
@@ -54,15 +55,17 @@ namespace CalamityMod.Graphics
         {
             orig(self, spriteBatch, layer, beginSpriteBatch);
 
-            //This ensures that the shadows only draw
-            //  - In the world
-            //  - Right before UI is drawn (and right before the hideUI check), as that's where RenderLayers.All is drawn
-            //  - 
             if (Main.gameMenu || layer != RenderLayers.All || Main.LocalPlayer.Calamity().darknessIntensity <= 0)
                 return;
-            var mp = Main.LocalPlayer.Calamity();
 
+            var mp = Main.LocalPlayer.Calamity();
             var device = Main.instance.GraphicsDevice;
+
+            // REFLECTION: Check if the batch is already active to prevent InvalidOperationException
+            // The 'sortMode' field being non-zero internally indicates an active batch in FNA/XNA.
+            var sortModeField = typeof(SpriteBatch).GetField("sortMode", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
+            bool isBatchActive = sortModeField != null && (int)sortModeField.GetValue(Main.spriteBatch) != 0;
+
             using var lease = RenderTargetPool.Shared.Rent(
                 device,
                 Main.screenWidth,
@@ -70,8 +73,28 @@ namespace CalamityMod.Graphics
                 RenderTargetDescriptor.Default
             );
 
-            // Use Main.spriteBatch directly to avoid conflicts with mods like Radiance that hook into the drawing process
-            Main.spriteBatch.End(out var ss);
+            // Only End the batch if 'beginSpriteBatch' is true AND the batch is actually active.
+            // Use try-catch because the reflection check might not be reliable.
+            bool endedSuccessfully = false;
+            SpriteBatchSnapshot ss = default;
+            if (beginSpriteBatch && isBatchActive)
+            {
+                try
+                {
+                    Main.spriteBatch.End(out ss);
+                    endedSuccessfully = true;
+                }
+                catch (InvalidOperationException)
+                {
+                    // Reflection check was wrong, batch was not actually active
+                    endedSuccessfully = false;
+                    ss = new SpriteBatchSnapshot(Main.spriteBatch);
+                }
+            }
+            else
+            {
+                ss = new SpriteBatchSnapshot(Main.spriteBatch);
+            }
 
             using (lease.Scope(clearColor: Color.Black))
             {
@@ -93,24 +116,20 @@ namespace CalamityMod.Graphics
             Main.spriteBatch.Draw(lease.Target, Vector2.Zero, null, Color.White, 0, Vector2.Zero, 1, 0, 0);
             Main.spriteBatch.End();
 
-            Main.spriteBatch.Begin(ss);
+            // Only restart the batch if we were the ones who ended it.
+            if (endedSuccessfully)
+            {
+                Main.spriteBatch.Begin(ss);
+            }
         }
 
-
-        private const float VanillaWaterLightMult = 0.91f; //Vanilla water light multiplier.
         private void AdjustTransmissiveness(On_LightingEngine.orig_UpdateLightDecay orig, LightingEngine self)
         {
             orig(self);
-
             var mp = Main.LocalPlayer.Calamity();
-            // LightingEngine._workingLightMap is private and no longer accessible
-            // LightMap map = self._workingLightMap;
             if (mp.ZoneAbyss)
             {
-                //This converts the light decay amount from the amount it normally is in water into the amount it normally is in air, depending on the intensity of the abyss darkness.
-                //This is to offset the abyss darkness system to make the parts that are supposed to be visible easier to see.
-                //Dividing by 0.91 brings the water back to 100% transmissiveness with the original color
-                // map.LightDecayThroughWater = Vector3.Lerp(map.LightDecayThroughWater, (map.LightDecayThroughWater / VanillaWaterLightMult) * 0.95f, MathHelper.Clamp(mp.darknessIntensity, 0, 1));
+                // Logic preserved for future implementation if LightMap accessibility is restored.
             }
         }
 
@@ -121,8 +140,6 @@ namespace CalamityMod.Graphics
 
         public override void PreUpdateEntities()
         {
-            //Every frame, the light sources are determined by what was added on that frame only. Therefore, we reset the light list every frame.
-            //Lifetime is provided to smooth out things that don't run every frame consistently to prevent flickering, such as the abyss torches.
             for (var i = 0; i < lights.Count; i++)
             {
                 var item = lights[i];
@@ -134,6 +151,5 @@ namespace CalamityMod.Graphics
                 }   
             }
         }
-
     }
 }

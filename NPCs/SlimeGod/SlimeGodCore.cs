@@ -277,6 +277,12 @@ namespace CalamityMod.NPCs.SlimeGod
                         for (int i = Main.maxPlayers - 1; i >= 0; i--)
                             NPC.ApplyInteraction(i);
 
+                        // In Boss Rush, manually trigger the death check since OnKill is skipped
+                        if (BossRushEvent.BossRushActive)
+                        {
+                            CalamityGlobalNPC.SetNewBossJustDowned(NPC);
+                        }
+
                         NPC.active = false;
                         NPC.HitEffect();
                         NPC.NPCLoot();

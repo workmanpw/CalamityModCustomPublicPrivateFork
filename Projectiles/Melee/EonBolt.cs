@@ -20,8 +20,11 @@ namespace CalamityMod.Projectiles.Melee
         public NPC target;
         public Player Owner => Main.player[Projectile.owner];
 
+        public const float CombinedHomingStrength = MathHelper.Pi * 1f;
+
         public ref float Hue => ref Projectile.ai[0];
         public ref float HomingStrenght => ref Projectile.ai[1];
+        public ref float HomingDelay => ref Projectile.localAI[0];
 
         Particle Head;
 
@@ -58,17 +61,33 @@ namespace CalamityMod.Projectiles.Melee
                 Head.Scale += (float)Math.Sin(Main.GlobalTimeWrappedHourly * 6) * 0.02f * Projectile.scale;
             }
 
+            // Increment homing delay
+            HomingDelay++;
 
-            if (target == null)
+            // Find target
+            if (target == null || !target.active || target.friendly || target.lifeMax <= 5)
                 target = Projectile.Center.ClosestNPCAt(812f, true);
 
-            else if (CalamityUtils.AngleBetween(Projectile.velocity, target.Center - Projectile.Center) < MathHelper.Pi) //Home in
+            // Home in with delay and smooth curve
+            if (target != null && HomingDelay > 10)
             {
-                float idealDirection = Projectile.AngleTo(target.Center);
-                float updatedDirection = Projectile.velocity.ToRotation().AngleTowards(idealDirection, HomingStrenght);
-                Projectile.velocity = updatedDirection.ToRotationVector2() * Projectile.velocity.Length() * 0.995f;
-            }
+                // Ramp up homing strength smoothly over time
+                float homingRamp = MathHelper.Clamp((HomingDelay - 10) / 40f, 0f, 1f);
+                float currentHomingStrength = MathHelper.Lerp(HomingStrenght * 0.8f, HomingStrenght * 3.5f, homingRamp);
 
+                // Calculate desired direction towards target
+                Vector2 desiredDirection = (target.Center - Projectile.Center).SafeNormalize(Vector2.Zero);
+                
+                // Smoothly interpolate current velocity towards desired direction
+                Vector2 currentDirection = Projectile.velocity.SafeNormalize(Vector2.Zero);
+                Vector2 smoothedDirection = Vector2.Lerp(currentDirection, desiredDirection, currentHomingStrength * 0.08f);
+                
+                // Maintain speed with slight acceleration
+                float currentSpeed = Projectile.velocity.Length();
+                float targetSpeed = MathHelper.Lerp(currentSpeed, 15f, 0.04f);
+                
+                Projectile.velocity = smoothedDirection * targetSpeed;
+            }
 
             Lighting.AddLight(Projectile.Center, 0.75f, 1f, 0.24f);
 
