@@ -59,10 +59,10 @@ float4 main(float2 uv : TEXCOORD0, float4 baseColor : COLOR0) : COLOR0
     float fillAmount = 1.0f - uFillAmount;
     float bumpLine = 0.2f * (smoothstep(0.9f, 1.0f, uFillAmount) - smoothstep(0.1f, 0.0f, uFillAmount));
     float height = uv.y + (sin(3.1415 * ((uv.x * uImageSize.x / 100 + uWaveOffset) * 1.5 - uTime)) + length(bubbles.rgb)) * uWaveStrength / uImageSize.y + bumpLine - (fillAmount + 2.0f / uImageSize.y);
-    float edgeGlow = pow(distFromCenter * 0.8 + (uv.y + height - 0.33f) * 0.2, (1 + length(noise.rgb)) * uSubtract) * (distFromCenter * 1.5 + 1 - length(noise.rgb));
+    float edgeGlow = pow(abs(distFromCenter * 0.8 + (uv.y + height - 0.33f) * 0.2), (1 + length(noise.rgb)) * uSubtract) * (distFromCenter * 1.5 + 1 - length(noise.rgb));
     
     float topCut = smoothstep(-1.5 / uImageSize.y, 0.5 / uImageSize.y, height);
-    float topLine = smoothstep(1.8 / uImageSize.y, 0, height) * 1.5 * sqrt(1 - distFromCenter) - (bubbles2 - bubbles) * (1 - height) * 0.2;
+    float topLine = smoothstep(1.8 / uImageSize.y, 0, height) * 1.5 * sqrt(max(0, 1 - distFromCenter)) - (bubbles2 - bubbles) * (1 - height) * 0.2;
 
     return ((lerp(uFillColor - 0.3 * topCut * uSubtract, uEdgeColor * 0.9, clamp(edgeGlow * length(image.rgb) / 2, 0, 1.3)) + topLine * 2 * uLineColor) * topCut) * image;
 }
