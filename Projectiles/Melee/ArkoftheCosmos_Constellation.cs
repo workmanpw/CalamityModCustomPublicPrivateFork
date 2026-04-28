@@ -84,33 +84,18 @@ namespace CalamityMod.Projectiles.Melee
                 Particle Star = new GenericSparkle(previousStar, Vector2.Zero, Color.White, Color.Plum, Main.rand.NextFloat(1f, 1.5f), 20, 0f, 3f);
                 BootlegSpawnParticle(Star);
 
-                for (float i = 0 + Main.rand.NextFloat(0.2f, 0.5f); i < 1; i += Main.rand.NextFloat(0.2f, 0.5f))
-                {
-                    constellationColorHue = (constellationColorHue + 0.16f) % 1;
-                    constellationColor = Main.hslToRgb(constellationColorHue, 1, 0.8f);
+                // Draw only ONE constellation with big offset
+                constellationColorHue = (constellationColorHue + 0.16f) % 1;
+                constellationColor = Main.hslToRgb(constellationColorHue, 1, 0.8f);
 
-                    offset = Main.rand.NextFloat(-100f, 100f) * Utils.SafeNormalize(SizeVector.RotatedBy(MathHelper.PiOver2), Vector2.Zero);
-                    Star = new GenericSparkle(AnchorStart + SizeVector * i + offset, Vector2.Zero, Color.White, constellationColor, Main.rand.NextFloat(1f, 1.5f), 20, 0f, 3f);
-                    BootlegSpawnParticle(Star);
+                offset = Main.rand.NextFloat(-300f, 300f) * Utils.SafeNormalize(SizeVector.RotatedBy(MathHelper.PiOver2), Vector2.Zero);
+                Star = new GenericSparkle(AnchorStart + SizeVector * 0.5f + offset, Vector2.Zero, Color.White, constellationColor, Main.rand.NextFloat(2f, 3f), 20, 0f, 5f);
+                BootlegSpawnParticle(Star);
 
-                    Line = new BloomLineVFX(previousStar, AnchorStart + SizeVector * i + offset - previousStar, 0.8f, constellationColor * 0.75f, 20, true, true);
-                    BootlegSpawnParticle(Line);
+                Line = new BloomLineVFX(previousStar, AnchorStart + SizeVector * 0.5f + offset - previousStar, 1.5f, constellationColor * 0.75f, 20, true, true);
+                BootlegSpawnParticle(Line);
 
-                    if (Main.rand.NextBool(3))
-                    {
-                        constellationColorHue = (constellationColorHue + 0.16f) % 1;
-                        constellationColor = Main.hslToRgb(constellationColorHue, 1, 0.8f);
-
-                        offset = Main.rand.NextFloat(-100f, 100f) * Utils.SafeNormalize(SizeVector.RotatedBy(MathHelper.PiOver2), Vector2.Zero);
-                        Star = new GenericSparkle(AnchorStart + SizeVector * i + offset, Vector2.Zero, Color.White, constellationColor, Main.rand.NextFloat(1f, 1.5f), 20, 0f, 3f);
-                        BootlegSpawnParticle(Star);
-
-                        Line = new BloomLineVFX(previousStar, AnchorStart + SizeVector * i + offset - previousStar, 0.8f, constellationColor, 20, true, true);
-                        BootlegSpawnParticle(Line);
-                    }
-
-                    previousStar = AnchorStart + SizeVector * i + offset;
-                }
+                previousStar = AnchorStart + SizeVector * 0.5f + offset;
 
                 constellationColorHue = (constellationColorHue + 0.16f) % 1;
                 constellationColor = Main.hslToRgb(constellationColorHue, 1, 0.8f);
@@ -118,7 +103,7 @@ namespace CalamityMod.Projectiles.Melee
                 Star = new GenericSparkle(AnchorStart + SizeVector, Vector2.Zero, Color.White, constellationColor, Main.rand.NextFloat(1f, 1.5f), 20, 0f, 3f);
                 BootlegSpawnParticle(Star);
 
-                Line = new BloomLineVFX(previousStar, AnchorStart + SizeVector - previousStar, 0.8f, constellationColor * 0.75f, 20, true);
+                Line = new BloomLineVFX(previousStar, AnchorStart + SizeVector - previousStar, 1.5f, constellationColor * 0.75f, 20, true);
                 BootlegSpawnParticle(Line);
             }
 
