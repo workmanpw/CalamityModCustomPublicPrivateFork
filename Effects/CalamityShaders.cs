@@ -273,7 +273,7 @@ namespace CalamityMod.Effects
         #endregion
 
 
-        // internal static Asset<Effect> SunkenSeaMenuLogoWater; // Disabled - shader has compilation errors and is not used in-game
+        internal static Asset<Effect> SunkenSeaMenuLogoWater;
 
         public override void PostSetupContent()
         {
@@ -535,7 +535,7 @@ namespace CalamityMod.Effects
             GaussianBloomShader = LoadShader("SlashEffects/GaussianBloom");
             RegisterMiscShader(GaussianBloomShader, "BloomShader", "GaussianBloom");
 
-            // SunkenSeaMenuLogoWater = LoadShader("UI/SunkenSeaMenuLogoWater"); // Disabled - shader has compilation errors and is not used in-game
+            SunkenSeaMenuLogoWater = LoadShader("UI/SunkenSeaMenuLogoWater");
         }
 
         // Shorthand to register a loaded shader in Terraria's graphics engine
