@@ -277,9 +277,18 @@ namespace CalamityMod.NPCs.SlimeGod
                         for (int i = Main.maxPlayers - 1; i >= 0; i--)
                             NPC.ApplyInteraction(i);
 
-                        // In Boss Rush, manually trigger the death check since OnKill is skipped
+                        // In Boss Rush, kill the large slimes too so the boss check doesn't hang
                         if (BossRushEvent.BossRushActive)
                         {
+                            for (int x = 0; x < Main.maxNPCs; x++)
+                            {
+                                if (Main.npc[x].type == ModContent.NPCType<EbonianPaladin>() || Main.npc[x].type == ModContent.NPCType<SplitEbonianPaladin>() ||
+                                    Main.npc[x].type == ModContent.NPCType<CrimulanPaladin>() || Main.npc[x].type == ModContent.NPCType<SplitCrimulanPaladin>())
+                                {
+                                    Main.npc[x].active = false;
+                                    Main.npc[x].netUpdate = true;
+                                }
+                            }
                             CalamityGlobalNPC.SetNewBossJustDowned(NPC);
                         }
 

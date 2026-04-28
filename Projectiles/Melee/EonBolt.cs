@@ -64,29 +64,16 @@ namespace CalamityMod.Projectiles.Melee
             // Increment homing delay
             HomingDelay++;
 
-            // Find target
+            // Find target - use same homing AI as ExoCrystalArrow
             if (target == null || !target.active || target.friendly || target.lifeMax <= 5)
                 target = Projectile.Center.ClosestNPCAt(812f, true);
 
-            // Home in with delay and smooth curve
+            // Home in with delay - same logic as ExoCrystalArrow
             if (target != null && HomingDelay > 10)
             {
-                // Ramp up homing strength smoothly over time
-                float homingRamp = MathHelper.Clamp((HomingDelay - 10) / 40f, 0f, 1f);
-                float currentHomingStrength = MathHelper.Lerp(HomingStrenght * 0.8f, HomingStrenght * 3.5f, homingRamp);
-
-                // Calculate desired direction towards target
-                Vector2 desiredDirection = (target.Center - Projectile.Center).SafeNormalize(Vector2.Zero);
-                
-                // Smoothly interpolate current velocity towards desired direction
-                Vector2 currentDirection = Projectile.velocity.SafeNormalize(Vector2.Zero);
-                Vector2 smoothedDirection = Vector2.Lerp(currentDirection, desiredDirection, currentHomingStrength * 0.08f);
-                
-                // Maintain speed with slight acceleration
-                float currentSpeed = Projectile.velocity.Length();
-                float targetSpeed = MathHelper.Lerp(currentSpeed, 15f, 0.04f);
-                
-                Projectile.velocity = smoothedDirection * targetSpeed;
+                Vector2 idealVelocity = Projectile.SafeDirectionTo(target.Center) * 33f;
+                Projectile.velocity = (Projectile.velocity * 29f + idealVelocity) / 30f;
+                Projectile.velocity = Projectile.velocity.MoveTowards(idealVelocity, 3f);
             }
 
             Lighting.AddLight(Projectile.Center, 0.75f, 1f, 0.24f);
