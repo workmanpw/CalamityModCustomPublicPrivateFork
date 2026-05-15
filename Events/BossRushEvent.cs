@@ -708,40 +708,34 @@ namespace CalamityMod.Events
             // All Slime God entities must be killed to progress to the next stage.
             else if (npc.type == ModContent.NPCType<SlimeGodCore>())
             {
-                // Check if all permitted NPCs (paladins and spawns) are dead before progressing
-                bool allPermittedNPCsDead = true;
-                int currentBossIndex = Bosses.FindIndex(boss => boss.EntityID == ModContent.NPCType<SlimeGodCore>());
-                if (currentBossIndex >= 0)
+                // Kill all remaining Slime God NPCs (paladins, split paladins, slime spawns)
+                // to prevent an infinite loop: if only the core (the sole npc.boss entity) dies,
+                // Boss Rush will spawn a new core which then re-summons the paladins.
+                for (int i = 0; i < Main.maxNPCs; i++)
                 {
-                    foreach (int permittedNPCType in Bosses[currentBossIndex].HostileNPCsToNotDelete)
+                    NPC other = Main.npc[i];
+                    if (other.active && (other.type == ModContent.NPCType<EbonianPaladin>() || other.type == ModContent.NPCType<SplitEbonianPaladin>() ||
+                        other.type == ModContent.NPCType<CrimulanPaladin>() || other.type == ModContent.NPCType<SplitCrimulanPaladin>() ||
+                        other.type == ModContent.NPCType<CorruptSlimeSpawn>() || other.type == ModContent.NPCType<CorruptSlimeSpawn2>() ||
+                        other.type == ModContent.NPCType<CrimsonSlimeSpawn>() || other.type == ModContent.NPCType<CrimsonSlimeSpawn2>()))
                     {
-                        // Skip checking for the Slime God Core itself
-                        if (permittedNPCType == ModContent.NPCType<SlimeGodCore>())
-                            continue;
-
-                        if (NPC.AnyNPCs(permittedNPCType))
-                        {
-                            allPermittedNPCsDead = false;
-                            break;
-                        }
+                        other.active = false;
+                        other.netUpdate = true;
                     }
                 }
 
-                if (allPermittedNPCsDead)
-                {
-                    BossRushStage++;
-                    CalamityUtils.KillAllHostileProjectiles();
-                    HostileProjectileKillCounter = 3;
+                BossRushStage++;
+                CalamityUtils.KillAllHostileProjectiles();
+                HostileProjectileKillCounter = 3;
 
-                    foreach (Player p in Main.ActivePlayers)
-                    {
-                        p.Calamity().BossRushReturnPosition = p.Center;
-                        Vector2? underworld = CalamityPlayer.GetUnderworldPosition(p);
-                        if (!underworld.HasValue)
-                            break;
-                        CalamityPlayer.ModTeleport(p, underworld.Value, false, TeleportationStyleID.TeleportationPotion);
-                        SoundEngine.PlaySound(TeleportSound with { Volume = 1.6f }, p.Center);
-                    }
+                foreach (Player p in Main.ActivePlayers)
+                {
+                    p.Calamity().BossRushReturnPosition = p.Center;
+                    Vector2? underworld = CalamityPlayer.GetUnderworldPosition(p);
+                    if (!underworld.HasValue)
+                        break;
+                    CalamityPlayer.ModTeleport(p, underworld.Value, false, TeleportationStyleID.TeleportationPotion);
+                    SoundEngine.PlaySound(TeleportSound with { Volume = 1.6f }, p.Center);
                 }
             }
 

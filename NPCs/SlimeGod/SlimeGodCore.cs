@@ -137,6 +137,13 @@ namespace CalamityMod.NPCs.SlimeGod
 
             Player player = Main.player[NPC.target];
 
+            // Check if paladins are actually alive, if not reset spawn flag
+            bool ebonianAlive = NPC.AnyNPCs(ModContent.NPCType<EbonianPaladin>()) || NPC.AnyNPCs(ModContent.NPCType<SplitEbonianPaladin>());
+            bool crimulanAlive = NPC.AnyNPCs(ModContent.NPCType<CrimulanPaladin>()) || NPC.AnyNPCs(ModContent.NPCType<SplitCrimulanPaladin>());
+            
+            if (!ebonianAlive && !crimulanAlive)
+                slimesSpawned = false;
+
             if (!slimesSpawned)
             {
                 slimesSpawned = true;
