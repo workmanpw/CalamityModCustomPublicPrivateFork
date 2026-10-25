@@ -90,12 +90,14 @@ namespace CalamityMod.Projectiles.Boss
             PrimitiveRenderer.RenderTrail(drawPoints, new((_,_) => Projectile.width * 0.5f + 16f, ColorFunction, shader: GameShaders.Misc["CalamityMod:Bordernado"]), 85);
 
             Main.spriteBatch.ExitShaderRegion();
-            Main.spriteBatch.EnterShaderRegion();
+            Main.spriteBatch.EnterShaderRegion(BlendState.Additive);
             Texture2D vortexNoise = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Cracks").Value;
             GameShaders.Misc["CalamityMod:DoGPortal"].UseOpacity(1f);
             GameShaders.Misc["CalamityMod:DoGPortal"].UseColor(Color.Gold);
             GameShaders.Misc["CalamityMod:DoGPortal"].UseSecondaryColor(Color.White);
             GameShaders.Misc["CalamityMod:DoGPortal"].Apply();
+
+            Main.graphics.GraphicsDevice.SamplerStates[0] = SamplerState.LinearClamp;
             for (int i = 0; i < 5; i++)
             {
                 float angle = MathHelper.TwoPi * i / 5f + Main.GlobalTimeWrappedHourly * MathHelper.TwoPi;

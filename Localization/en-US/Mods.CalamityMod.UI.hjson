@@ -86,6 +86,14 @@ ExoTwinsNameHekate: Eyes of XB-∞ Hekate
 ExtensionDisplay: ({0} left: {1})
 
 ExtensionName: {
+	Segments: Segments
+	Creepers: Creepers
+	Hands: Hands
+	Arms: Arms
+	Guns: Guns
+	Cannons: Cannons
+	DarkEnergy: Dark Energy
+	BodyParts: Body Parts
 }
 
 // Cooldowns
@@ -525,44 +533,87 @@ Hologram: {
 
 // Enchantments
 Exhumed: {
+	DisplayName: Exhumed
+	Description: Transforms this item into something significantly stronger.
 }
 
 Indignant: {
+	DisplayName: Indignant
+	Description: Summons demons that harm you but drop healing orbs on death on item usage.
 }
 
 Aflame: {
+	DisplayName: Aflame
+	Description: Ignites enemies with the Supreme Witch's power on hit but also causes the user to take damage over time when holding this item.
 }
 
 Oblatory: {
+	DisplayName: Oblatory
+	Description: Reduces mana cost and greatly increases damage but sometimes causes this item to use your life.
 }
 
 Resentful: {
+	DisplayName: Resentful
+	Description: Makes the damage of projectiles vary based on how far the hit target is from you. The farther, the more damage, and vice versa.
 }
 
 Bloodthirsty: {
+	DisplayName: Bloodthirsty
+	Description: Makes the damage of projectiles vary based on how far the hit target is from you. The closer, the more damage, and vice versa.
 }
 
 Ephemeral: {
+	DisplayName: Ephemeral
+	Description:
+		'''
+		Causes the damage output of this item to discharge from exhaustive use.
+		Its damage returns naturally when not being used. It starts off with more damage than it normally would have.
+		'''
 }
 
 Hellbound: {
+	DisplayName: Hellbound
+	Description:
+		'''
+		Causes minions to be created with a 40 second timer.
+		Once it runs out, they explode violently. Minions do more damage the longer they live and idly explode as well.
+		'''
 }
 
 Tainted: {
+	DisplayName: Tainted
+	Description: Removes projectile shooting capabilities of this item. In exchange, two skeletal arms are released on use that slice at the mouse position.
 }
 
 Traitorous: {
+	DisplayName: Traitorous
+	Description: Using this item below 25% mana instantly consumes your remaining mana, unleashing a monster that harms both you and enemies.
 }
 
 Withering: {
+	DisplayName: Withering
+	Description:
+		'''
+		When hurt, you heal a percentage of the damage taken based on how much accumulated damage you did overall beforehand, up to 100%.
+		After this, you gain a damage boost while holding this item but also take exponential damage over time the longer you hold it.
+		'''
 }
 
 Persecuted: {
+	DisplayName: Persecuted
+	Description:
+		'''
+		When attacked, or over time, demon portals appear near you.
+		If sufficiently damaged they are friendly; otherwise they attack you. They become angered if a portal is damaged.
+		'''
 }
 
 Lecherous: {
+	DisplayName: Lecherous
+	Description: Spawns a resilient brimstone monster that stays between you and your mouse that interferes with your homing weapons. It releases a bunch of hearts on death.
 }
 
+Disenchant: Disenchant
 // Worldgen Tasks
 BetterUnderworld: Creating a smoother Underworld
 UnderworldStructures: Remnants of an Azafurian and Demonic war

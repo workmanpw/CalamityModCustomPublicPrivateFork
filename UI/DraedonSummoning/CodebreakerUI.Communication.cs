@@ -350,8 +350,7 @@ namespace CalamityMod.UI.DraedonSummoning
             Rectangle textCutoffRegion = selectionArea;
             textCutoffRegion.Y += 6;
             textCutoffRegion.Height -= 10;
-            var rasterizer = Main.Rasterizer;
-            rasterizer.ScissorTestEnable = true;
+            var rasterizer = CalamityUtils.CreateScissorRasterizer(Main.Rasterizer);
             Main.spriteBatch.End();
             Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, rasterizer, null, Matrix.Identity);
             Main.spriteBatch.GraphicsDevice.ScissorRectangle = textCutoffRegion;
@@ -421,7 +420,7 @@ namespace CalamityMod.UI.DraedonSummoning
                 if (dialog.BloomOpacity > 0f)
                 {
                     Main.spriteBatch.End();
-                    Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Additive, null, null, null, null, Matrix.Identity);
+                    Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Additive, null, null, rasterizer, null, Matrix.Identity);
 
                     // Collect bloom flare draw information and draw based on it.
                     Texture2D bloomTex = ModContent.Request<Texture2D>("CalamityMod/UI/ModeIndicator/BloomFlare").Value;
@@ -430,7 +429,7 @@ namespace CalamityMod.UI.DraedonSummoning
                     Main.spriteBatch.Draw(bloomTex, markerDrawPosition, null, Color.SteelBlue * dialog.BloomOpacity * opacity, bloomTexRotation, new Vector2(123f, 124f), bloomTexScale, 0, 0f);
 
                     Main.spriteBatch.End();
-                    Main.spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, Matrix.Identity);
+                    Main.spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, rasterizer, null, Matrix.Identity);
                 }
 
                 // Check if the player clicks on the text or hovers over it.
@@ -518,8 +517,7 @@ namespace CalamityMod.UI.DraedonSummoning
             Rectangle textCutoffRegion = dialogArea;
             textCutoffRegion.Y += 6;
             textCutoffRegion.Height -= 10;
-            var rasterizer = Main.Rasterizer;
-            rasterizer.ScissorTestEnable = true;
+            var rasterizer = CalamityUtils.CreateScissorRasterizer(Main.Rasterizer);
             Main.spriteBatch.End();
             Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, rasterizer, null, Matrix.Identity);
             Main.spriteBatch.GraphicsDevice.ScissorRectangle = textCutoffRegion;

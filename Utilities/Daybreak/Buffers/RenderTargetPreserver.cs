@@ -25,8 +25,9 @@ public static class RenderTargetPreserver
                 continue;
             }
 
-            // RenderTargetUsage is read-only in current tModLoader
-            // rt.RenderTargetUsage = RenderTargetUsage.PreserveContents;
+            // FNA's setter is private, but the project publicizes FNA for
+            // compile-time access and emits IgnoresAccessChecksTo for runtime.
+            rt.RenderTargetUsage = RenderTargetUsage.PreserveContents;
         }
     }
 

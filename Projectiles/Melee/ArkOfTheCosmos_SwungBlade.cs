@@ -67,8 +67,8 @@ namespace CalamityMod.Projectiles.Melee
         public float ThrowTimer => MaxThrowTime - Projectile.timeLeft;
         public float ThrowCompletion => ThrowTimer / MaxThrowTime;
 
-        public const float SnapWindowStart = 0.35f;
-        public const float SnapWindowEnd = 0.75f;
+        public const float SnapWindowStart = 0f;
+        public const float SnapWindowEnd = 0.9f;
         public float SnapEndTime => (MaxThrowTime - (MaxThrowTime * SnapWindowEnd));
         public float SnapEndCompletion => (SnapEndTime - Projectile.timeLeft) / SnapEndTime;
         public ref float ChanceMissed => ref Projectile.localAI[1];
@@ -152,6 +152,10 @@ namespace CalamityMod.Projectiles.Melee
                 Projectile.rotation = direction.ToRotation();
                 snapTelegraphPlayed = false;
 
+                // Play snap window sound (fallen star use sound) when throw attack begins
+                if (Thrown)
+                    SoundEngine.PlaySound(SoundID.Item4, Projectile.Center);
+
                 if (SwirlSwing)
                     Projectile.localNPCHitCooldown = (int)(Projectile.localNPCHitCooldown / 4f);
 
@@ -198,11 +202,10 @@ namespace CalamityMod.Projectiles.Melee
             else
             {
                 //Telegraph the start of the snap window with a bit of leeway
-                if (!snapTelegraphPlayed && ThrowCompletion >= 0.25f && ThrowCompletion < 0.26f && ChanceMissed == 0f && Main.myPlayer == Owner.whoAmI)
+                if (!snapTelegraphPlayed && ThrowCompletion >= (SnapWindowStart - 0.1f) && ThrowCompletion < SnapWindowEnd)
                 {
                     Particle pulse = new PulseRing(Projectile.Center, Vector2.Zero, Color.OrangeRed, 0.05f, 1.8f, 8);
                     GeneralParticleHandler.SpawnParticle(pulse);
-                    SoundEngine.PlaySound(SoundID.Item4, Projectile.Center);
                     snapTelegraphPlayed = true;
                 }
 
@@ -248,11 +251,28 @@ namespace CalamityMod.Projectiles.Melee
                     Projectile bolt = Projectile.NewProjectileDirect(source, Projectile.Center, randomRotation.ToRotationVector2() * 15f, ProjectileType<EonBolt>(), (int)(Projectile.damage * 0.3f), 0f, Owner.whoAmI, 0.55f, EonBolt.CombinedHomingStrength);
                     bolt.timeLeft = 80;
 
-                    //Spawn constellation only during snap window
+                    //Spawn constellation continuously during snap window (one chain at a time)
                     if (ThrowCompletion >= SnapWindowStart && ThrowCompletion < SnapWindowEnd)
                     {
-                        Projectile chain = Projectile.NewProjectileDirect(source, Owner.Center, Vector2.Zero, ProjectileType<ArkoftheCosmosConstellation>(), (int)(Projectile.damage * ArkoftheCosmos.chainDamageMultiplier), 0, Owner.whoAmI, (int)(Projectile.timeLeft / 2f));
-                        chain.timeLeft = (int)(Projectile.timeLeft / 2f);
+                        // Check if a constellation already exists for this owner
+                        bool existingConstellation = false;
+                        for (int i = 0; i < Main.maxProjectiles; i++)
+                        {
+                            if (Main.projectile[i].active && Main.projectile[i].owner == Owner.whoAmI && Main.projectile[i].type == ProjectileType<ArkoftheCosmosConstellation>())
+                            {
+                                existingConstellation = true;
+                                break;
+                            }
+                        }
+
+                        // Only spawn if no constellation exists
+                        if (!existingConstellation)
+                        {
+                            // Use fixed lifetime of 90 frames (duration of snap window) so constellation lasts full snap window
+                            int constellationLifetime = (int)(MaxThrowTime * (SnapWindowEnd - SnapWindowStart));
+                            Projectile chain = Projectile.NewProjectileDirect(source, Owner.Center, Vector2.Zero, ProjectileType<ArkoftheCosmosConstellation>(), (int)(Projectile.damage * ArkoftheCosmos.chainDamageMultiplier), 0, Owner.whoAmI, constellationLifetime);
+                            chain.timeLeft = constellationLifetime;
+                        }
                     }
                 }
 

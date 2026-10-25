@@ -61,7 +61,7 @@ namespace CalamityMod.Projectiles.Boss
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Main.spriteBatch.EnterShaderRegion();
+            Main.spriteBatch.EnterShaderRegion(BlendState.Additive);
 
             Texture2D noiseTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/VoronoiShapes").Value;
             Vector2 drawPosition = Projectile.Center - Main.screenPosition;
@@ -71,6 +71,7 @@ namespace CalamityMod.Projectiles.Boss
             GameShaders.Misc["CalamityMod:DoGPortal"].UseSecondaryColor(Color.Fuchsia);
             GameShaders.Misc["CalamityMod:DoGPortal"].Apply();
 
+            Main.graphics.GraphicsDevice.SamplerStates[0] = SamplerState.LinearClamp;
             Main.EntitySpriteDraw(noiseTexture, drawPosition, null, Color.White, 0f, origin, 3.5f, SpriteEffects.None, 0);
             Main.spriteBatch.ExitShaderRegion();
 

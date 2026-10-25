@@ -24,12 +24,12 @@ internal readonly struct SpriteBatchScope : IDisposable
     public SpriteBatchScope(SpriteBatch spriteBatch)
     {
         this.spriteBatch = spriteBatch;
+        oldState = null;
 
-        // SpriteBatch.beginCalled no longer exists in current tModLoader
-        // if (!spriteBatch.beginCalled)
-        // {
-        //     return;
-        // }
+        // Ending a batch which was never begun throws in FNA.  Preserve the
+        // original guard now that the internal beginCalled flag is readable.
+        if (!SpriteBatchSnapshot.IsActive(spriteBatch))
+            return;
 
         spriteBatch.End(out var old);
         oldState = old;
@@ -43,6 +43,11 @@ internal readonly struct SpriteBatchScope : IDisposable
     {
         if (oldState.HasValue)
         {
+            // The scope body is expected to end its own batch before disposal,
+            // but be tolerant of callers that leave one running.
+            if (SpriteBatchSnapshot.IsActive(spriteBatch))
+                spriteBatch.End();
+
             spriteBatch.Begin(oldState.Value);
         }
     }

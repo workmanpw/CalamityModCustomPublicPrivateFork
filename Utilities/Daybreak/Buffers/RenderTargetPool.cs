@@ -71,7 +71,7 @@ public readonly record struct RenderTargetDescriptor(
             target.Format,
             target.DepthStencilFormat,
             target.MultiSampleCount,
-            RenderTargetUsage.DiscardContents,
+            target.RenderTargetUsage,
             target.LevelCount > 1
         );
     }

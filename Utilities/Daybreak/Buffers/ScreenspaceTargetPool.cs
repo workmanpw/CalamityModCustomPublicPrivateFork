@@ -208,8 +208,9 @@ internal sealed class ScreenspaceTargetPool : RenderTargetPool
                 continue;
             }
 
+            var descriptor = RenderTargetDescriptor.From(lease.Target);
             lease.Target.Dispose();
-            lease.Target = RenderTargetDescriptor.From(lease.Target).Create(device, width, height);
+            lease.Target = descriptor.Create(device, width, height);
         }
     }
 }

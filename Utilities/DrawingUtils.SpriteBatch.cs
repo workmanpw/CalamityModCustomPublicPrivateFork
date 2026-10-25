@@ -29,8 +29,7 @@ namespace CalamityMod
         /// <param name="spriteBatch">The sprite batch to check.</param>
         public static bool HasBeginBeenCalled(this SpriteBatch spriteBatch)
         {
-            // SpriteBatch.beginCalled no longer exists in current tModLoader
-            return false; // Cannot check, assume not called
+            return SpriteBatchSnapshot.IsActive(spriteBatch);
         }
 
 

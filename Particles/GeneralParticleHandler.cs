@@ -350,17 +350,36 @@ namespace CalamityMod.Particles
 
         private static void DrawParticleCollection(Dictionary<BlendState, List<Particle>> drawCollection, GeneralDrawLayer drawLayer, bool pixelated = false)
         {
-            var scissorRectRasterizer = Main.Rasterizer;
-            scissorRectRasterizer.ScissorTestEnable = true;
-            Main.graphics.GraphicsDevice.RasterizerState.ScissorTestEnable = true;
-            Main.graphics.GraphicsDevice.ScissorRectangle = new Rectangle(0, 0, Main.screenWidth, Main.screenHeight);
+            var device = Main.graphics.GraphicsDevice;
+            var previousRasterizer = device.RasterizerState;
+            var previousScissorRectangle = device.ScissorRectangle;
 
-            foreach (var keyValuePair in drawCollection)
+            // Main.Rasterizer aliases a shared FNA preset. Mutating it here would enable scissor
+            // testing for every later batch using that preset, so use a private copy instead.
+            var scissorRectRasterizer = CalamityUtils.CreateScissorRasterizer(Main.Rasterizer);
+            device.ScissorRectangle = device.Viewport.Bounds;
+
+            try
             {
-                if (pixelated)
+                foreach (var keyValuePair in drawCollection)
                 {
-                    PixelationManager.AddPixelatedDrawer((pixelationMatrix) =>
+                    if (pixelated)
                     {
+                        PixelationManager.AddPixelatedDrawer((pixelationMatrix) =>
+                        {
+                            var particlesAtSpecifiedLayer = keyValuePair.Value.Where(p => p.DrawLayer == drawLayer);
+                            if (particlesAtSpecifiedLayer.Any())
+                            {
+                                foreach (Particle particle in particlesAtSpecifiedLayer)
+                                    DrawParticleInstance(particle);
+                            }
+
+                        }, drawLayer, keyValuePair.Key);
+                    }
+                    else
+                    {
+                        Main.spriteBatch.Begin(SpriteSortMode.Deferred, keyValuePair.Key, SamplerState.LinearClamp, DepthStencilState.None, scissorRectRasterizer, null, Main.GameViewMatrix.TransformationMatrix);
+
                         var particlesAtSpecifiedLayer = keyValuePair.Value.Where(p => p.DrawLayer == drawLayer);
                         if (particlesAtSpecifiedLayer.Any())
                         {
@@ -368,44 +387,49 @@ namespace CalamityMod.Particles
                                 DrawParticleInstance(particle);
                         }
 
-                    }, drawLayer, keyValuePair.Key);
-                }
-                else
-                {
-                    Main.spriteBatch.Begin(SpriteSortMode.Deferred, keyValuePair.Key, SamplerState.LinearClamp, DepthStencilState.None, scissorRectRasterizer, null, Main.GameViewMatrix.TransformationMatrix);
-
-                    var particlesAtSpecifiedLayer = keyValuePair.Value.Where(p => p.DrawLayer == drawLayer);
-                    if (particlesAtSpecifiedLayer.Any())
-                    {
-                        foreach (Particle particle in particlesAtSpecifiedLayer)
-                            DrawParticleInstance(particle);
+                        Main.spriteBatch.End();
                     }
-
-                    Main.spriteBatch.End();
                 }
+            }
+            finally
+            {
+                device.RasterizerState = previousRasterizer;
+                device.ScissorRectangle = previousScissorRectangle;
             }
         }
 
         private static void DrawParticlesWithShaders(GeneralDrawLayer drawLayer)
         {
-            foreach (var shaderDrawCollectionPair in particlesToDraw_CustomShader)
+            var device = Main.graphics.GraphicsDevice;
+            var previousRasterizer = device.RasterizerState;
+
+            try
             {
-                foreach (var blendStateParticleListPair in shaderDrawCollectionPair.Value)
+                foreach (var shaderDrawCollectionPair in particlesToDraw_CustomShader)
                 {
-                    if (blendStateParticleListPair.Value.Count == 0)
-                        return;
-
-                    Main.spriteBatch.Begin(SpriteSortMode.Immediate, blendStateParticleListPair.Key, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullNone, shaderDrawCollectionPair.Key, Main.GameViewMatrix.TransformationMatrix);
-
-                    var particlesAtDrawLayer = blendStateParticleListPair.Value.Where(p => p.DrawLayer == drawLayer);
-                    foreach (Particle particle in particlesAtDrawLayer)
+                    foreach (var blendStateParticleListPair in shaderDrawCollectionPair.Value)
                     {
-                        particle.PrepareCustomShader(shaderDrawCollectionPair.Key);
-                        DrawParticleInstance(particle);
-                    }
+                        if (blendStateParticleListPair.Value.Count == 0)
+                            continue;
 
-                    Main.spriteBatch.End();
+                        Main.spriteBatch.Begin(SpriteSortMode.Immediate, blendStateParticleListPair.Key, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullNone, shaderDrawCollectionPair.Key, Main.GameViewMatrix.TransformationMatrix);
+
+                        var particlesAtDrawLayer = blendStateParticleListPair.Value.Where(p => p.DrawLayer == drawLayer);
+                        foreach (Particle particle in particlesAtDrawLayer)
+                        {
+                            particle.PrepareCustomShader(shaderDrawCollectionPair.Key);
+                            DrawParticleInstance(particle);
+                        }
+
+                        Main.spriteBatch.End();
+                    }
                 }
+            }
+            finally
+            {
+                // SpriteBatch leaves its rasterizer state applied after End. Restore the
+                // inherited state so particle shaders cannot leak culling/scissor state.
+                device.RasterizerState = previousRasterizer;
             }
         }
 

@@ -368,6 +368,28 @@ namespace CalamityMod
         }
 
         /// <summary>
+        /// Creates a rasterizer state that copies the culling and depth-bias settings of <paramref name="source"/>
+        /// while enabling scissor testing.<br/>
+        /// This avoids mutating shared presets such as <see cref="RasterizerState.CullNone"/> or <see cref="Main.Rasterizer"/>,
+        /// which would otherwise leak scissor testing into unrelated draw calls for the rest of the frame.
+        /// </summary>
+        /// <param name="source">The rasterizer state whose settings should be copied.</param>
+        public static RasterizerState CreateScissorRasterizer(RasterizerState source)
+        {
+            source ??= RasterizerState.CullCounterClockwise;
+
+            return new RasterizerState
+            {
+                CullMode = source.CullMode,
+                FillMode = source.FillMode,
+                DepthBias = source.DepthBias,
+                SlopeScaleDepthBias = source.SlopeScaleDepthBias,
+                MultiSampleAntiAlias = source.MultiSampleAntiAlias,
+                ScissorTestEnable = true
+            };
+        }
+
+        /// <summary>
         /// Calculates perspective matrices for usage by vertex shaders.
         /// </summary>
         /// <param name="viewMatrix">The view matrix.</param>
@@ -650,16 +672,18 @@ namespace CalamityMod
         /// <param name="texture">The texture to bind.</param>
         public static MiscShaderData SetShaderTexture(this MiscShaderData shader, Asset<Texture2D> texture, int index = 1)
         {
-            // MiscShaderData._uImage0/_uImage1 are private and no longer accessible
-            // switch (index)
-            // {
-            //     case 0:
-            //         shader._uImage0 = texture;
-            //         break;
-            //     case 1:
-            //         shader._uImage1 = texture;
-            //         break;
-            // }
+            switch (index)
+            {
+                case 0:
+                    shader.UseImage0(texture);
+                    break;
+                case 1:
+                    shader.UseImage1(texture);
+                    break;
+                case 2:
+                    shader.UseImage2(texture);
+                    break;
+            }
             return shader;
         }
 
@@ -670,8 +694,7 @@ namespace CalamityMod
         /// <param name="texture">The texture to bind.</param>
         public static ArmorShaderData SetShaderTextureArmor(this ArmorShaderData shader, Asset<Texture2D> texture)
         {
-            // ArmorShaderData._uImage is private and no longer accessible
-            // shader._uImage = texture;
+            shader.UseImage(texture);
             return shader;
         }
 
@@ -699,11 +722,12 @@ namespace CalamityMod
         /// <param name="newBlendState">The blend state that should be used across drawn contents. This defaults to <see cref="BlendState.AlphaBlend"/>.</param>
         public static void EnforceCutoffRegion(this SpriteBatch spriteBatch, Rectangle cutoffRegion, Matrix perspective, SpriteSortMode sortMode = SpriteSortMode.Deferred, BlendState newBlendState = null)
         {
-            var rasterizer = Main.Rasterizer;
-            rasterizer.ScissorTestEnable = true;
+            // Do not mutate Main.Rasterizer here. It aliases a shared FNA preset, so changing its
+            // scissor flag would silently alter every later batch that uses the same state.
+            var rasterizer = CreateScissorRasterizer(Main.Rasterizer);
 
             spriteBatch.End();
-            spriteBatch.Begin(SpriteSortMode.Deferred, newBlendState ?? BlendState.AlphaBlend, Main.DefaultSamplerState, DepthStencilState.None, rasterizer, null, perspective);
+            spriteBatch.Begin(sortMode, newBlendState ?? BlendState.AlphaBlend, Main.DefaultSamplerState, DepthStencilState.None, rasterizer, null, perspective);
             spriteBatch.GraphicsDevice.ScissorRectangle = cutoffRegion;
         }
 

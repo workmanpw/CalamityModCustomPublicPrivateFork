@@ -115,12 +115,14 @@ namespace CalamityMod.Projectiles.Boss
 
         public override bool PreDraw(ref Color lightColor)
         {
-            Main.spriteBatch.EnterShaderRegion();
+            Main.spriteBatch.EnterShaderRegion(BlendState.Additive);
             Texture2D vortexNoise = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/Cracks").Value;
             GameShaders.Misc["CalamityMod:DoGPortal"].UseOpacity(1f);
             GameShaders.Misc["CalamityMod:DoGPortal"].UseColor(Color.Gold);
             GameShaders.Misc["CalamityMod:DoGPortal"].UseSecondaryColor(Color.White);
             GameShaders.Misc["CalamityMod:DoGPortal"].Apply();
+
+            Main.graphics.GraphicsDevice.SamplerStates[0] = SamplerState.LinearClamp;
             for (int i = 0; i < 10; i++)
             {
                 float angle = MathHelper.TwoPi * i / 10f + Main.GlobalTimeWrappedHourly * MathHelper.TwoPi;

@@ -578,7 +578,7 @@ namespace CalamityMod.Tiles.SunkenSea
             shader.Parameters["diagonalScreenLength"].SetValue((Main.screenWidth / 2f) - (Main.screenHeight / 2f));
             shader.Parameters["doGlint"].SetValue(false);
 
-            Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, null, Matrix.Identity);
+            Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, Main.DefaultSamplerState, DepthStencilState.None, Main.Rasterizer, shader, Matrix.Identity);
 
             Vector2 unscaledPosition = Main.Camera.UnscaledPosition;
 

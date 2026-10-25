@@ -266,7 +266,7 @@ namespace CalamityMod.Projectiles.Rogue
             using (lease.Scope(clearColor: Color.Transparent))
             {
                 using var scope = SanePrimitiveRenderer.BeginShaderScope(shader, Matrix.Identity, view, projection,
-                    depthState: DepthStencilState.None, blendState: BlendState.Additive);
+                    depthState: DepthStencilState.None, blendState: BlendState.Additive, samplerState: SamplerState.LinearClamp);
 
                 DrawAllSlashes(scope, slashCount, age, time, seed, baseLength, curveBase);
 

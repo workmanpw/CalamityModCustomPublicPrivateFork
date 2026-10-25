@@ -1,31 +1,295 @@
+BabyCannonballJellyfish.DisplayName: Baby Cannonball Jellyfish
+Bloatfish.DisplayName: Bloatfish
+BrainIllusion.DisplayName: Brain Illusion
+BloodBomb.DisplayName: Blood Bomb
+BobbitWormHead.DisplayName: Bobbit Worm
+BoxJellyfish.DisplayName: Box Jellyfish
+Burrower.DisplayName: Burrower
 BurrowerHitbox.DisplayName: Burrower
+CannonballJellyfish.DisplayName: Cannonball Jellyfish
+ChaoticPuffer.DisplayName: Chaotic Puffer
+ColossalSquid.DisplayName: Colossal Squid
 TinySquid: Tiny Squid
+Cuttlefish.DisplayName: Cuttlefish
+DevilFish.DisplayName: Devil Fish
+DevilFishAlt.DisplayName: Devil Fish
+DraconicSwarmer.DisplayName: Draconic Swarmer
+Dragonfolly.DisplayName: Dragonfolly
+EidolonWyrmHead.DisplayName: Eidolon Wyrm
+FalseBrain.DisplayName: False Brain
+GiantSquid.DisplayName: Giant Squid
+GulperEelHead.DisplayName: Gulper Eel
+Laserfish.DisplayName: Laserfish
+LuminousCorvina.DisplayName: Luminous Corvina
+MirageJelly.DisplayName: Mirage Jelly
+MorayEel.DisplayName: Moray Eel
+OarfishHead.DisplayName: Oarfish
+ReaperShark.DisplayName: Reaper Shark
 Shoreskipper.DisplayName: Shoreskipper
+SlabCrab.DisplayName: Slab Crab
+ToxicMinnow.DisplayName: Toxic Minnow
+Viperfish.DisplayName: Viperfish
+WildBumblebirb.DisplayName: Wild Bumblebirb
+AcidEel.DisplayName: Acid Eel
+BabyFlakCrab.DisplayName: Baby Flak Crab
+BloodwormNormal.DisplayName: Bloodworm
+CragmawMire.DisplayName: Cragmaw Mire
+FlakCrab.DisplayName: Flak Crab
+GammaSlime.DisplayName: Gamma Slime
+IrradiatedSlime.DisplayName: Irradiated Slime
+Mauler.DisplayName: Mauler
+NuclearTerror.DisplayName: Nuclear Terror
+NuclearToad.DisplayName: Nuclear Toad
+Orthocera.DisplayName: Orthocera
+Radiator.DisplayName: Radiator
+Skyfin.DisplayName: Skyfin
+SulphurousSkater.DisplayName: Sulphurous Skater
+Trilobite.DisplayName: Trilobite
+AquaticScourgeHead.DisplayName: Aquatic Scourge
+Aries.DisplayName: Aries
+AstralachneaGround.DisplayName: Astralachnea
+AstralProbe.DisplayName: Astral Probe
+AstralSeekerSpit.DisplayName: Seeker Spit
+AstralSlime.DisplayName: Astral Slime
+Atlas.DisplayName: Atlas
+FusionFeeder.DisplayName: Fusion Feeder
+Hadarian.DisplayName: Hadarian
+Astraglomerate.DisplayName: Astraglomerate
+Glomerling.DisplayName: Glomerling
+Mantis.DisplayName: Mantis
+Nova.DisplayName: Nova
+SightseerCollider.DisplayName: Sightseer Collider
+SightseerSpitter.DisplayName: Sightseer Spitter
+StellarCulex.DisplayName: Stellar Culex
+Twinkler.DisplayName: Twinkler
+AstrumAureus.DisplayName: Astrum Aureus
+AureusSpawn.DisplayName: Aureus Spawn
+AstrumDeusHead.DisplayName: Astrum Deus
+Brimling.DisplayName: Brimling
+BrimstoneElemental.DisplayName: Brimstone Elemental
 Bumblebirb: Bumblebirb
 Bumblefuck.DisplayName: Dragonfolly
 Bumblefuck2.DisplayName: Draconic Swarmer
+CalamitasClone.DisplayName: Calamitas Clone
+Cataclysm.DisplayName: Cataclysmic Construct
+Catastrophe.DisplayName: Catastrophic Construct
+SoulSeeker.DisplayName: Soul Seeker
+CeaselessVoid.DisplayName: Ceaseless Void
+DarkEnergy.DisplayName: Dark Energy
+CrabShroom.DisplayName: Crab Shroom
+Crabulon.DisplayName: Crabulon
+CalamityEye.DisplayName: Calamity Eye
+RenegadeWarlock.DisplayName: Renegade Warlock
+DespairStone.DisplayName: Despair Stone
+HeatSpirit.DisplayName: Heat Spirit
+InfernalCongealment.DisplayName: Infernal Congealment
+Scryllar.DisplayName: Scryllar
+ScryllarRage.DisplayName: Scryllar
+SoulSlurper.DisplayName: Soul Slurper
+Cryogen.DisplayName: Cryogen
 Pyrogen: Pyrogen
+CryogenShield.DisplayName: Cryogen's Shield
 PyrogenShield: Pyrogen's Shield
+DesertNuisanceHead.DisplayName: Desert Nuisance
+DesertNuisanceHeadYoung.DisplayName: Desert Nuisance
+DesertScourgeHead.DisplayName: Desert Scourge
 CosmicGuardianHead.DisplayName: Cosmic Guardian
-Apollo.HekateName: Corrosive Eye of XB-∞ Hekate
-AresBody.HekateName: XB-∞ Hekate
-AresGaussNuke.HekateName: XB-∞ Hekate Gauss Nuke
-AresLaserCannon.HekateName: XB-∞ Hekate Laser Cannon
-AresPlasmaFlamethrower.HekateName: XB-∞ Hekate Plasma Cannon
-AresTeslaCannon.HekateName: XB-∞ Hekate Tesla Cannon
-Artemis.HekateName: Blazing Eye of XB-∞ Hekate
-ThanatosHead.HekateName: Spine of XB-∞ Hekate
+DevourerofGodsHead.DisplayName: The Devourer of Gods
+Androomba.DisplayName: Androomba
+Nanodroid.DisplayName: Nanodroid
+RepairUnitCritter.DisplayName: Repair Unit
+
+Apollo: {
+	DisplayName: XS-03 Apollo
+	HekateName: Corrosive Eye of XB-∞ Hekate
+}
+
+AresBody: {
+	DisplayName: XF-09 Ares
+	HekateName: XB-∞ Hekate
+}
+
+AresGaussNuke: {
+	DisplayName: XF-09 Ares Gauss Nuke
+	HekateName: XB-∞ Hekate Gauss Nuke
+}
+
+AresLaserCannon: {
+	DisplayName: XF-09 Ares Laser Cannon
+	HekateName: XB-∞ Hekate Laser Cannon
+}
+
+AresPlasmaFlamethrower: {
+	DisplayName: XF-09 Ares Plasma Cannon
+	HekateName: XB-∞ Hekate Plasma Cannon
+}
+
+AresTeslaCannon: {
+	DisplayName: XF-09 Ares Tesla Cannon
+	HekateName: XB-∞ Hekate Tesla Cannon
+}
+
+Artemis: {
+	DisplayName: XS-01 Artemis
+	HekateName: Blazing Eye of XB-∞ Hekate
+}
+
+Draedon.DisplayName: Draedon
+
+ThanatosHead: {
+	DisplayName: XM-05 Thanatos
+	HekateName: Spine of XB-∞ Hekate
+}
+
+GreatSandShark.DisplayName: Great Sand Shark
+DankCreeper.DisplayName: Dank Creeper
+DarkHeart.DisplayName: Dark Heart
+HiveBlob.DisplayName: Hive Blob
+HiveMind.DisplayName: The Hive Mind
+HiveTumor.DisplayName: Hive Tumor
+Anahita.DisplayName: Anahita
+AnahitasIceShield.DisplayName: Ice Shield
+AquaticAberration.DisplayName: Aquatic Aberration
+Leviathan.DisplayName: The Leviathan
+LeviathanStart.DisplayName: ???
+AeroSlime.DisplayName: Aero Slime
 MechanizedSerpent: Mechanized Serpent
+AuroraSpirit.DisplayName: Aurora Spirit
+BloomSlime.DisplayName: Bloom Slime
+Bohldohr.DisplayName: Bohldohr
+BucketZombie.DisplayName: "{$NPCName.Zombie}"
+CladCrab.DisplayName: Clad Crab
+CloudElemental.DisplayName: Cloud Elemental
+Cnidrion.DisplayName: Cnidrion
+CrawlerAmber.DisplayName: Amber Crawler
+CrawlerAmethyst.DisplayName: Amethyst Crawler
+CrawlerCrystal.DisplayName: Crystal Crawler
+CrawlerDiamond.DisplayName: Diamond Crawler
+CrawlerEmerald.DisplayName: Emerald Crawler
+CrawlerRuby.DisplayName: Ruby Crawler
+CrawlerSapphire.DisplayName: Sapphire Crawler
+CrawlerTopaz.DisplayName: Topaz Crawler
+CrimulanBlightSlime.DisplayName: Crimulan Blight Slime
+Cryon.DisplayName: Cryon
+CryoSlime.DisplayName: Cryo Slime
+EbonianBlightSlime.DisplayName: Ebonian Blight Slime
+Eidolist.DisplayName: Eidolist
+FearlessGoldfishWarrior.DisplayName: Fearless Goldfish Warrior
+Frogfish.DisplayName: Frogfish
+EarthElemental.DisplayName: Earth Elemental
+IceClasper.DisplayName: Ice Clasper
+ImpiousImmolator.DisplayName: Impious Immolator
+KingSlimeJewelRuby.DisplayName: Ruby Jewel
 LavaSlimeNoLavaDrop.DisplayName: Lava Slime
+MantisShrimp.DisplayName: Mantis Shrimp
+OverloadedSoldier.DisplayName: Overloaded Soldier
+PerennialSlime.DisplayName: Perennial Slime
+PhantomSpirit.DisplayName: Phantom Spirit
+Piggy.DisplayName: Piggy
+PlanterasFreeTentacle.DisplayName: Plantera's Tentacle
+ProfanedEnergyBody.DisplayName: Profaned Energy
+Rimehound.DisplayName: Rimehound
+Rotdog.DisplayName: Rotdog
+ScornEater.DisplayName: Scorn Eater
+ShockstormShuttle.DisplayName: Shockstorm Shuttle
+Shroomble.DisplayName: Shroomble
+Stormlion.DisplayName: Stormlion
+Sunskater.DisplayName: Sunskater
+SuperDummyNPC.DisplayName: Super Dummy
 WildBumblefuck.DisplayName: Draconic Swarmer
+WulfrumAmplifier.DisplayName: Wulfrum Amplifier
+WulfrumDrone.DisplayName: Wulfrum Drone
+WulfrumGyrator.DisplayName: Wulfrum Gyrator
+WulfrumHovercraft.DisplayName: Wulfrum Hovercraft
+WulfrumRover.DisplayName: Wulfrum Rover
+OldDuke.DisplayName: The Old Duke
 BoomerDuke: The Boomer Duke
+OldDukeToothBall.DisplayName: Tooth Ball
+SulphurousSharkron.DisplayName: Sulphurous Sharkron
+CalamitasEnchantDemon.DisplayName: Demon
+DemonPortal.DisplayName: Mysterious Portal
+ExhumedHeart.DisplayName: Exhumed Brimstone Heart
+LecherousOrb.DisplayName: Lecherous Orb
+THELORDE.DisplayName: THE LORDE
+PerforatorCyst.DisplayName: Perforator Cyst
+PerforatorHeadLarge.DisplayName: The Perforator
+PerforatorLarge: The Large Perforator
+PerforatorHeadMedium.DisplayName: The Perforator
+PerforatorMedium: The Medium Perforator
+PerforatorHeadSmall.DisplayName: The Perforator
+PerforatorSmall: The Small Perforator
+PerforatorHive.DisplayName: The Perforator Hive
+PlaguebringerGoliath.DisplayName: The Plaguebringer Goliath
+PlagueHomingMissile.DisplayName: Plague Homing Missile
+PlagueMine.DisplayName: Plague Mine
+Melter.DisplayName: Melter
+PestilentSlime.DisplayName: Pestilent Slime
+PlaguebringerMiniboss.DisplayName: Plaguebringer
+PlagueCharger.DisplayName: Plague Charger
+Plagueshell.DisplayName: Plagueshell
+Viruling.DisplayName: Viruling
+PhantomFuckYou.DisplayName: Phantom
+Polterghast.DisplayName: Polterghast
+PolterghastHook.DisplayName: Polterghast Hook
+PolterPhantom.DisplayName: Polterghast
+PrimordialWyrmHead.DisplayName: Primordial Wyrm
 Jared: Jared
+ProfanedGuardianCommander.DisplayName: Guardian Commander
+ProfanedGuardianDefender.DisplayName: Guardian Defender
+ProfanedGuardianHealer.DisplayName: Guardian Healer
+ProfanedRocks.DisplayName: Profaned Rocks
+Providence.DisplayName: Providence, the Profaned Goddess
+ProvSpawnDefense.DisplayName: Providence Defender
+ProvSpawnHealer.DisplayName: Providence Healer
+ProvSpawnOffense.DisplayName: Providence Offense
+FlamePillar.DisplayName: Flame Pillar
+RavagerBody.DisplayName: Ravager
+RockPillar.DisplayName: Rock Pillar
+CosmicLantern.DisplayName: Cosmic Lantern
+CosmicMine.DisplayName: Cosmic Mine
+Signus.DisplayName: Signus, Envoy of the Devourer
+CorruptSlimeSpawn.DisplayName: Corrupt Slime Spawn
+CrimsonSlimeSpawn.DisplayName: Crimson Slime Spawn
+CrimulanPaladin.DisplayName: Crimulan Paladin
+EbonianPaladin.DisplayName: Ebonian Paladin
+SlimeGodCore.DisplayName: The Slime God
+SplitCrimulanPaladin.DisplayName: Crimulan Paladin
+SplitEbonianPaladin.DisplayName: Ebonian Paladin
+StormWeaverHead.DisplayName: Storm Weaver
+AnthozoanCrab.DisplayName: Anthozoan Crab
+AquaticUrchin.DisplayName: Aquatic Urchin
+BelchingCoral.DisplayName: Belching Coral
+Gnasher.DisplayName: Gnasher
+MicrobialCluster.DisplayName: Microbial Cluster
+Sulflounder.DisplayName: Sulflounder
+Toxicatfish.DisplayName: Toxicatfish
+Trasher.DisplayName: Trasher
+BabyGhostBell.DisplayName: Baby Ghost Bell
+BlindedAngler.DisplayName: Blinded Angler
+Clam.DisplayName: Clam
+EutrophicRay.DisplayName: Eutrophic Ray
+GhostBell.DisplayName: Ghost Bell
+GiantClam.DisplayName: Giant Clam
 Clamitas: Clamitas
 SupremeClamitas: Supreme Clamitas
+PrismBack.DisplayName: Prism-Back
+SeaFloaty.DisplayName: Sea Floaty
+SeaMinnow.DisplayName: Sea Minnow
+SeaSerpent1.DisplayName: Sea Serpent
+BrimstoneHeart.DisplayName: Brimstone Heart
+SepulcherHead.DisplayName: Sepulcher
+SoulSeekerSupreme.DisplayName: Soul Seeker
+SupremeCalamitas.DisplayName: Supreme Witch, Calamitas
 SupremePermafrost: Supreme Ultramage, Permafrost
+SupremeCataclysm.DisplayName: Cataclysm
+SupremeCatastrophe.DisplayName: Catastrophe
+Yharon.DisplayName: Yharon, Dragon of Rebirth
 YharonPhase2: Yharon, Resplendent Phoenix
+// Town NPCs, Pets, etc
+AndroombaFriendly.DisplayName: Androomba Pal
 
 Archmage: {
+	DisplayName: Archmage
 	Census.SpawnCondition: Defeat Cryogen
 	Name.Permafrost: Permafrost
 
@@ -46,10 +310,25 @@ Archmage: {
 		MoonLordDefeated2: You, having bested so many beings, even deities, I wonder if I have anything left to offer you.
 	}
 
-	TownNPCMood.HateBiome: Dark forces are strong here. This is not ideal.
+	TownNPCMood: {
+		Content: The weather is cool today.
+		NoHome: Without a place to rest, my studies cannot proceed. Could you procure me a living space? I no longer like to make my homes using ice magic.
+		LoveSpace: Too many people can disrupt the flow of mana. I much prefer the breathing room here.
+		FarFromHome: My sense of direction is... subpar. I loathe to admit it, but I have a tendency to not venture outside too often.
+		DislikeCrowded: My spells are precise, and cannot be interrupted. I would like some more room to practice with them.
+		HateCrowded: I'd hate for one of your associates to be caught up in my magic. Alas, there are too many here to mitigate that risk.
+		LikeBiome: The temperature here allows me to save my magic power, as my creations can sustain their shape without melting in the cold.
+		DislikeBiome: The sun here is too unfriendly for my ice! Please, allow me lodgings elsewhere at once!
+		HateBiome: Dark forces are strong here. This is not ideal.
+		LikeNPC: "{NPCName} is well learned, and quite a respectable mage himself!"
+		DislikeNPC: I dislike {NPCName}'s blatant disregard of magic. I cannot blame his functions, but he is quite ignorant.
+		LikeNPC_Princess: "{NPCName} has some very quaint spells. I'm quite impressed, for someone of her age."
+		Princess_LovesNPC: "{NPCName} makes the best ice cream I've ever tasted, it's so good!"
+	}
 }
 
 Bandit: {
+	DisplayName: Bandit
 	Census.SpawnCondition: Have a {$ItemName.PlatinumCoin} [i:PlatinumCoin] in your inventory after defeating Skeletron
 
 	Name: {
@@ -110,10 +389,26 @@ Bandit: {
 	Refund1: Want in on a little secret? Since {0} always gets so much cash from you, I've been stealing some of it as we go. I need you to keep quiet about it, so here.
 	Refund2: Hey, if government officials can get tax, why can't I? The heck do you mean that these two things are nothing alike?
 	NoRefund: Sorry, I got nothing. Perhaps you could reforge something and come back later...
-	TownNPCMood.HateBiome: No one lives here, and why would they?! This place is a dump!
+
+	TownNPCMood: {
+		Content: It's been going well!
+		NoHome: You have a place to bunk? Sleeping on the ground makes me stiff and sore.
+		LoveSpace: Less people makes getting away with certain things easier.
+		FarFromHome: I need to get back to my secret cache! What if someone got their hands on it while I was away!?
+		DislikeCrowded: I don't like this, too many possible eyewitnesses.
+		HateCrowded: Being around this many people makes me think I'M going to be robbed.
+		LikeBiome: I know that a lot of wealthy traders come through the desert at times. Makes it a great spot to nick their goods.
+		DislikeBiome: Too stifling, too humid. I get sluggish in these conditions, no good.
+		HateBiome: No one lives here, and why would they?! This place is a dump!
+		LikeNPC: "{NPCName} doesn't only keep spiky balls in his pockets, he keeps a ton of cash! He's too absentminded to notice I'm stealing from him too! I like that a lot!"
+		DislikeNPC: What a goody two shoes, {NPCName} is! I dislike her out of principle! …And because she has almost no material goods.
+		LikeNPC_Princess: I couldn't bear to steal anything from {NPCName}, she's so cute!
+		Princess_LovesNPC: "{NPCName} gifts me with nice exact replicas of other's things, I wonder how they do it!"
+	}
 }
 
 BrimstoneWitch: {
+	DisplayName: Brimstone Witch
 	Census.SpawnCondition: Defeat Supreme Witch, Calamitas
 	Name.Calamitas: Calamitas
 
@@ -137,10 +432,26 @@ BrimstoneWitch: {
 	EnchantButton: Enchant
 	DonorButton: Donors
 	DonorShoutout: Hey {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}, {11}, {12}, {13}, {14}, {15}, {16}, {17}, {18}, {19}, {20}, {21}, {22}, {23} and {24}. You guys are good people.
-	TownNPCMood.HateBiome: The spirits are unrestful here. It's really not a good feeling.
+
+	TownNPCMood: {
+		Content: I can't complain, really.
+		NoHome: Anywhere would be better than a cave with no bed or lighting.
+		LoveSpace: The quieter, the better. This is good.
+		FarFromHome: After being used to having people around for a bit, I miss it again.
+		DislikeCrowded: I really don't like how familiar some of these people are getting with me.
+		HateCrowded: I'm getting a headache from the pressure of having so many people around.
+		LikeBiome: I've never had the chance to live somewhere like this before. The trees and the songbirds… I quite like it.
+		DislikeBiome: Is this a sick joke? I can't bear to be here any longer, I've already tried to atone for my sins.
+		HateBiome: The spirits are unrestful here. It's really not a good feeling.
+		LikeNPC: "{NPCName} is someone who's had a terrible experience being cursed. He's put up with it quite well all that time, it's quite impressive honestly."
+		DislikeNPC: Such a racket! All {NPCName} does is make noise, day in and day out! I can't stand her!
+		LikeNPC_Princess: What a strangely pleasant kid {NPCName} is to be around.
+		Princess_LovesNPC: "{NPCName} is always lonely, it's why I want to hang out with her, no one should be left alone like that!"
+	}
 }
 
 SeaKing: {
+	DisplayName: Sea King
 	Census.SpawnCondition: Defeat a Giant Clam after defeating the Desert Scourge
 	Name.Amidias: Amidias
 
@@ -204,5 +515,20 @@ SeaKing: {
 		PreHardmode10: Throughout the world lie various structures left behind by Draedon. Archaic defenses may remain, but the goods inside may be worth your while.
 	}
 
-	TownNPCMood.HateBiome: This is simply no place to live. Let us depart immediately.
+	TownNPCMood: {
+		Content: I am satisfied.
+		NoHome: Thank you for your service, but I am afraid I am without a home now.
+		LoveSpace: Ah, the quiet of solitude is something I much enjoy.
+		FarFromHome: My scales will dry away from shelter. I am too far from my home.
+		DislikeCrowded: The living conditions here are quite cramped, are they not?
+		HateCrowded: I disliked leveraging my status but when I was royalty, I was far more accustomed to having less people around.
+		LikeBiome: So close to the ocean. It is bittersweet, though I cannot help but like it.
+		DislikeBiome: The sun is too harsh on me. I dislike the arid climate here.
+		HateBiome: This is simply no place to live. Let us depart immediately.
+		LikeNPC: The way {NPCName} acts is a bit too coarse for me, but his love of the ocean is something I can quite appreciate!
+		DislikeNPC: I've had quite enough carnage for one lifetime thank you! {NPCName}'s destructive tendencies are a bit insensitive.
+		HateNPC: "{NPCName} is just a child, but his attitude towards marine life is unacceptable! Absolutely unacceptable!"
+		LikeNPC_Princess: That child, {NPCName}. She is an innocent soul. Let us hope the horrors of war never reach her.
+		Princess_LovesNPC: "{NPCName} always smiles when I'm nearby, I like being around him just for that!"
+	}
 }

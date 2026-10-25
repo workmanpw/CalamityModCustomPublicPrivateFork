@@ -284,7 +284,7 @@ namespace CalamityMod.NPCs.DevourerofGods
                 return true;
 
             bool shouldUseShader = CalamityDrawParameterNPC.DoGDeathAnimationTimer != 0;
-            SpriteBatchSnapshot snap = new(spriteBatch);
+            SpriteBatchSnapshot snap = default;
 
             if (shouldUseShader)
             {

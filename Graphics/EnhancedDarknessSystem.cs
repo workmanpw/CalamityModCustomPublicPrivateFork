@@ -61,11 +61,6 @@ namespace CalamityMod.Graphics
             var mp = Main.LocalPlayer.Calamity();
             var device = Main.instance.GraphicsDevice;
 
-            // REFLECTION: Check if the batch is already active to prevent InvalidOperationException
-            // The 'sortMode' field being non-zero internally indicates an active batch in FNA/XNA.
-            var sortModeField = typeof(SpriteBatch).GetField("sortMode", System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic);
-            bool isBatchActive = sortModeField != null && (int)sortModeField.GetValue(Main.spriteBatch) != 0;
-
             using var lease = RenderTargetPool.Shared.Rent(
                 device,
                 Main.screenWidth,
@@ -73,32 +68,19 @@ namespace CalamityMod.Graphics
                 RenderTargetDescriptor.Default
             );
 
-            // Only End the batch if 'beginSpriteBatch' is true AND the batch is actually active.
-            // Use try-catch because the reflection check might not be reliable.
-            bool endedSuccessfully = false;
+            // The overlay manager may or may not leave a SpriteBatch active,
+            // depending on the call site and whether any vanilla overlays were
+            // drawn.  Preserve whichever state we inherited instead of relying
+            // on the (incorrect) assumption that only beginSpriteBatch=true can
+            // leave a batch running.
+            bool wasBatchActive = SpriteBatchSnapshot.IsActive(Main.spriteBatch);
             SpriteBatchSnapshot ss = default;
-            if (beginSpriteBatch && isBatchActive)
-            {
-                try
-                {
-                    Main.spriteBatch.End(out ss);
-                    endedSuccessfully = true;
-                }
-                catch (InvalidOperationException)
-                {
-                    // Reflection check was wrong, batch was not actually active
-                    endedSuccessfully = false;
-                    ss = new SpriteBatchSnapshot(Main.spriteBatch);
-                }
-            }
-            else
-            {
-                ss = new SpriteBatchSnapshot(Main.spriteBatch);
-            }
+            if (wasBatchActive)
+                Main.spriteBatch.End(out ss);
 
-            using (lease.Scope(clearColor: Color.Black))
+            using (lease.Scope(clearColor: Color.Transparent))
             {
-                Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.PointClamp, DepthStencilState.Default, Main.Rasterizer, null, Matrix.Identity);
+                Main.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.Additive, SamplerState.LinearClamp, DepthStencilState.Default, Main.Rasterizer, null, Matrix.Identity);
                 foreach (var item in lights)
                 {
                     Main.spriteBatch.Draw(item.texture, (item.center - Main.screenPosition), item.frame, item.color * item.opacity, item.rotation, item.frame is null ? item.texture.Size() * 0.5f : item.frame.Value.Size(), item.vectorScale * item.scale, SpriteEffects.None, 0);
@@ -106,7 +88,7 @@ namespace CalamityMod.Graphics
                 Main.spriteBatch.End();
             }
 
-            Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
+            Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, Main.Rasterizer, null, Main.GameViewMatrix.TransformationMatrix);
             var shader = GameShaders.Misc["CalamityMod:DozeLightingShader"];
             if (shader != null)
             {
@@ -117,10 +99,8 @@ namespace CalamityMod.Graphics
             Main.spriteBatch.End();
 
             // Only restart the batch if we were the ones who ended it.
-            if (endedSuccessfully)
-            {
+            if (wasBatchActive)
                 Main.spriteBatch.Begin(ss);
-            }
         }
 
         private void AdjustTransmissiveness(On_LightingEngine.orig_UpdateLightDecay orig, LightingEngine self)

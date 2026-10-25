@@ -234,15 +234,16 @@ public static class SanePrimitiveRenderer
 
         bool textured = mesh.UsesTexture;
 
+        var device = _graphicsDevice;
+        var previousSampler = device.SamplerStates[0];
+
         _effect.TextureEnabled = textured;
         _effect.Texture = textured ? TextureAssets.MagicPixel.Value : null;
-        _graphicsDevice.SamplerStates[0] = SamplerState.PointWrap;
+        device.SamplerStates[0] = SamplerState.PointWrap;
 
         _effect.World = world;
         _effect.View = view;
         _effect.Projection = projection;
-
-        var device = _graphicsDevice;
 
         var previousRasterizer = device.RasterizerState;
         var previousDepth = device.DepthStencilState;
@@ -284,6 +285,7 @@ public static class SanePrimitiveRenderer
         device.RasterizerState = previousRasterizer;
         device.DepthStencilState = previousDepth;
         device.BlendState = previousBlend;
+        device.SamplerStates[0] = previousSampler;
     }
 
     /// <summary>
@@ -533,15 +535,16 @@ public static class SanePrimitiveRenderer
 
         bool textured = mesh.UsesTexture;
 
+        var device = _graphicsDevice;
+        var previousSampler = device.SamplerStates[0];
+
         _effect.TextureEnabled = textured;
         _effect.Texture = textured ? TextureAssets.MagicPixel.Value : null;
-        _graphicsDevice.SamplerStates[0] = SamplerState.PointWrap;
+        device.SamplerStates[0] = SamplerState.PointWrap;
 
         _effect.World = world;
         _effect.View = view;
         _effect.Projection = projection;
-
-        var device = _graphicsDevice;
 
         var previousRasterizer = device.RasterizerState;
         var previousDepth = device.DepthStencilState;
@@ -583,6 +586,7 @@ public static class SanePrimitiveRenderer
         device.RasterizerState = previousRasterizer;
         device.DepthStencilState = previousDepth;
         device.BlendState = previousBlend;
+        device.SamplerStates[0] = previousSampler;
     }
 
     public static void DrawMesh(

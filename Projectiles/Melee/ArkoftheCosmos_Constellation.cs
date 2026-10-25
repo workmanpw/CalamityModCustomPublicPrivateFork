@@ -63,7 +63,9 @@ namespace CalamityMod.Projectiles.Melee
 
             Projectile.Center = Owner.Center;
 
-            if (!Owner.channel && Projectile.timeLeft > 20)
+            // Only force short lifetime if constellation was spawned via channeling (short lifetime <= 30)
+            // Throw-spawned constellations have longer lifetime and should persist
+            if (!Owner.channel && Projectile.timeLeft > 20 && Projectile.ai[0] <= 30)
                 Projectile.timeLeft = 20;
 
             if (!Owner.active)
@@ -72,8 +74,8 @@ namespace CalamityMod.Projectiles.Melee
                 return;
             }
 
-            // Generate constellation only once at the start
-            if (Timer % ConstellationSwapTime == 0 && Projectile.timeLeft >= 20)
+            // Generate constellation immediately on spawn (Timer == 0)
+            if (Timer == 0 && Projectile.timeLeft >= 20)
             {
                 Particles.Clear();
 

@@ -434,7 +434,7 @@ namespace CalamityMod.Effects
             RegisterScreenShader(WulfrumTilePing, "TilePingPass", "WulfrumTilePing");
 
             WulfrumScaffoldSelection = LoadShader("WulfrumScaffoldSelection");
-            RegisterScreenShader(WulfrumScaffoldSelection, "TilePingPass", "WulfrumScaffoldSelection");
+            RegisterScreenShader(WulfrumScaffoldSelection, "TileSelectPass", "WulfrumScaffoldSelection");
 
             RoverDriveShield = LoadShader("RoverDriveShield");
             RegisterScreenShader(RoverDriveShield, "ShieldPass", "RoverDriveShield");
@@ -458,7 +458,7 @@ namespace CalamityMod.Effects
             RegisterMiscShader(CircularGradientWithEdge, "CircularGradientWithEdgePass", "CircularGradientWithEdge");
 
             GaleforceArrowTrailShader = LoadShader("GaleforceArrowTrail");
-            RegisterMiscShader(ArtAttackTrailShader, "TrailPass", "GaleforceArrowTrail");
+            RegisterMiscShader(GaleforceArrowTrailShader, "TrailPass", "GaleforceArrowTrail");
 
             WavyOpacity = LoadShader("WavyOpacity");
             RegisterMiscShader(WavyOpacity, "WavyOpacityPass", "WavyOpacity");

@@ -1,5 +1,6 @@
 #nullable enable
 
+using System.Reflection;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -22,6 +23,36 @@ namespace CalamityMod.Utilities.Daybreak;
 /// </remarks>
 internal struct SpriteBatchSnapshot
 {
+    // FNA's SpriteBatch keeps its active parameters in private fields.  They are
+    // not exposed through any public API, so cache the field metadata once and
+    // read it directly through reflection when taking a snapshot.
+    private static readonly FieldInfo? sortModeField = typeof(SpriteBatch).GetField("sortMode", BindingFlags.Instance | BindingFlags.NonPublic);
+    private static readonly FieldInfo? blendStateField = typeof(SpriteBatch).GetField("blendState", BindingFlags.Instance | BindingFlags.NonPublic);
+    private static readonly FieldInfo? samplerStateField = typeof(SpriteBatch).GetField("samplerState", BindingFlags.Instance | BindingFlags.NonPublic);
+    private static readonly FieldInfo? depthStencilStateField = typeof(SpriteBatch).GetField("depthStencilState", BindingFlags.Instance | BindingFlags.NonPublic);
+    private static readonly FieldInfo? rasterizerStateField = typeof(SpriteBatch).GetField("rasterizerState", BindingFlags.Instance | BindingFlags.NonPublic);
+    private static readonly FieldInfo? customEffectField = typeof(SpriteBatch).GetField("customEffect", BindingFlags.Instance | BindingFlags.NonPublic);
+    private static readonly FieldInfo? transformMatrixField = typeof(SpriteBatch).GetField("transformMatrix", BindingFlags.Instance | BindingFlags.NonPublic);
+    private static readonly FieldInfo? beginCalledField = typeof(SpriteBatch).GetField("beginCalled", BindingFlags.Instance | BindingFlags.NonPublic);
+
+    private static T GetFieldValue<T>(SpriteBatch spriteBatch, FieldInfo? field, T fallback)
+    {
+        if (field is null)
+            return fallback;
+
+        object? value = field.GetValue(spriteBatch);
+        return value is T typed ? typed : fallback;
+    }
+
+    /// <summary>
+    ///     Determines whether the given <see cref="SpriteBatch"/> currently has
+    ///     an active <see cref="SpriteBatch.Begin"/> call.
+    /// </summary>
+    public static bool IsActive(SpriteBatch spriteBatch)
+    {
+        return GetFieldValue(spriteBatch, beginCalledField, false);
+    }
+
     /// <summary>
     ///     The sort mode.
     /// </summary>
@@ -89,22 +120,13 @@ internal struct SpriteBatchSnapshot
     /// </param>
     public SpriteBatchSnapshot(SpriteBatch spriteBatch)
     {
-        // SpriteBatch fields are no longer accessible directly
-        // SortMode = spriteBatch.sortMode;
-        // BlendState = spriteBatch.blendState;
-        // SamplerState = spriteBatch.samplerState;
-        // DepthStencilState = spriteBatch.depthStencilState;
-        // RasterizerState = spriteBatch.rasterizerState;
-        // CustomEffect = spriteBatch.customEffect;
-        // TransformMatrix = spriteBatch.transformMatrix;
-        // Use default values since we can't access the fields
-        SortMode = SpriteSortMode.Deferred;
-        BlendState = BlendState.AlphaBlend;
-        SamplerState = SamplerState.LinearClamp;
-        DepthStencilState = DepthStencilState.None;
-        RasterizerState = RasterizerState.CullNone;
-        CustomEffect = null;
-        TransformMatrix = Matrix.Identity;
+        SortMode = GetFieldValue(spriteBatch, sortModeField, SpriteSortMode.Deferred);
+        BlendState = GetFieldValue(spriteBatch, blendStateField, BlendState.AlphaBlend);
+        SamplerState = GetFieldValue(spriteBatch, samplerStateField, SamplerState.LinearClamp);
+        DepthStencilState = GetFieldValue(spriteBatch, depthStencilStateField, DepthStencilState.None);
+        RasterizerState = GetFieldValue(spriteBatch, rasterizerStateField, RasterizerState.CullNone);
+        CustomEffect = GetFieldValue(spriteBatch, customEffectField, (Effect?)null);
+        TransformMatrix = GetFieldValue(spriteBatch, transformMatrixField, Matrix.Identity);
     }
 
     /// <summary>

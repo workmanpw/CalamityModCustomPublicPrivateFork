@@ -150,25 +150,33 @@ namespace CalamityMod.Buffs.DamageOverTime
             }
 
             using var lease = ScreenspaceTargetPool.Shared.Rent(Main.instance.GraphicsDevice);
+
+            // Flush the existing NPC batch to the backbuffer before binding the
+            // render target.  Ending the batch after the target is bound would
+            // send all previously queued NPC draws into the target instead.
+            Main.spriteBatch.End(out var ss);
+
             using (lease.Scope(clearColor: Color.Transparent))
             {
-                Main.spriteBatch.End(out var ss);
                 Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null, Main.Transform);
                 orig(self, iNPCIndex, behindTiles);
                 Main.spriteBatch.End();
-
-                Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, RasterizerState.CullCounterClockwise);
-
-                var blightShader = GameShaders.Misc["CalamityMod:MiracleBlight"];
-                blightShader.UseImage1(ShaderTexture);
-                blightShader.UseOpacity(0.7f);
-                blightShader.Apply();
-
-                Main.spriteBatch.Draw(lease.Target, Vector2.Zero, Color.White);
-
-                Main.spriteBatch.End();
-                Main.spriteBatch.Begin(ss);
             }
+
+            // The target is unbound now, so it is safe to sample it.  Sampling a
+            // render target while it is still bound is undefined and was the
+            // cause of the solid black screen.
+            Main.spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.AlphaBlend, SamplerState.LinearClamp, DepthStencilState.None, RasterizerState.CullNone);
+
+            var blightShader = GameShaders.Misc["CalamityMod:MiracleBlight"];
+            blightShader.UseImage1(ShaderTexture);
+            blightShader.UseOpacity(0.7f);
+            blightShader.Apply();
+
+            Main.spriteBatch.Draw(lease.Target, Vector2.Zero, Color.White);
+
+            Main.spriteBatch.End();
+            Main.spriteBatch.Begin(ss);
         }
     }
 }

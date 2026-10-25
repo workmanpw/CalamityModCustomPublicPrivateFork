@@ -47,6 +47,14 @@ namespace CalamityMod.Graphics.Primitives
 
         private static BasicEffect WireframeEffect;
 
+        // A private rasterizer state is used instead of mutating RasterizerState.CullNone. The
+        // FNA preset is shared by unrelated draw calls, so changing its scissor flag leaks state.
+        private static readonly RasterizerState ScissorCullNone = new()
+        {
+            CullMode = CullMode.None,
+            ScissorTestEnable = true
+        };
+
         private static int[] NonSmoothIndexScratch;
 
         private static short StartCapCenterIndex;
@@ -189,34 +197,54 @@ namespace CalamityMod.Graphics.Primitives
             else if (ActiveTopology == PrimitiveTopology.TriangleStrip && IndicesIndex < 4)
                 return;
 
-            // Perform screen culling, for performance reasons.
-            Main.instance.GraphicsDevice.RasterizerState = RasterizerState.CullNone;
-            Main.instance.GraphicsDevice.RasterizerState.ScissorTestEnable = true;
-            Main.instance.GraphicsDevice.ScissorRectangle = new Rectangle(0, 0, Main.screenWidth, Main.screenHeight);
+            var device = Main.instance.GraphicsDevice;
+            var previousRasterizer = device.RasterizerState;
+            var previousScissorRectangle = device.ScissorRectangle;
+            var previousVertexBuffers = device.GetVertexBuffers();
+            var previousIndices = device.Indices;
 
-            Matrix view;
-            Matrix projection;
-            if (MainSettings.Pixelate || MainSettings.UseUnscaledMatrices)
-                CalcuatePixelatedPerspectiveMatrices(out view, out projection);
-            else
-                CalamityUtils.CalculatePerspectiveMatricies(out view, out projection);
+            try
+            {
+                // Perform screen culling, for performance reasons.
+                device.RasterizerState = ScissorCullNone;
+                device.ScissorRectangle = device.Viewport.Bounds;
 
-            var shaderToUse = MainSettings.Shader ?? GameShaders.Misc["CalamityMod:StandardPrimitiveShader"];
-            shaderToUse.Shader.Parameters["uWorldViewProjection"].SetValue(view * projection);
-            shaderToUse.Apply();
+                Matrix view;
+                Matrix projection;
+                if (MainSettings.Pixelate || MainSettings.UseUnscaledMatrices)
+                    CalcuatePixelatedPerspectiveMatrices(out view, out projection);
+                else
+                    CalamityUtils.CalculatePerspectiveMatricies(out view, out projection);
 
-            VertexBuffer.SetData(MainVertices, 0, VerticesIndex, SetDataOptions.Discard);
-            IndexBuffer.SetData(MainIndices, 0, IndicesIndex, SetDataOptions.Discard);
+                var shaderToUse = MainSettings.Shader ?? GameShaders.Misc["CalamityMod:StandardPrimitiveShader"];
+                shaderToUse.Shader.Parameters["uWorldViewProjection"].SetValue(view * projection);
+                shaderToUse.Apply();
 
-            Main.instance.GraphicsDevice.SetVertexBuffer(VertexBuffer);
-            Main.instance.GraphicsDevice.Indices = IndexBuffer;
+                VertexBuffer.SetData(MainVertices, 0, VerticesIndex, SetDataOptions.Discard);
+                IndexBuffer.SetData(MainIndices, 0, IndicesIndex, SetDataOptions.Discard);
 
-            PrimitiveType primitiveType = ActiveTopology == PrimitiveTopology.TriangleStrip ? PrimitiveType.TriangleStrip : PrimitiveType.TriangleList;
-            int primitiveCount = primitiveType == PrimitiveType.TriangleStrip ? Math.Max(IndicesIndex - 2, 0) : IndicesIndex / 3;
-            Main.instance.GraphicsDevice.DrawIndexedPrimitives(primitiveType, 0, 0, VerticesIndex, 0, primitiveCount);
+                device.SetVertexBuffer(VertexBuffer);
+                device.Indices = IndexBuffer;
 
-            if (MainSettings.DebugWireframe && WireframeEffect != null && TryBuildWireframeGeometry(MainSettings.WireframeColor, out int lineCount))
-                DrawWireframe(view, projection, lineCount);
+                PrimitiveType primitiveType = ActiveTopology == PrimitiveTopology.TriangleStrip ? PrimitiveType.TriangleStrip : PrimitiveType.TriangleList;
+                int primitiveCount = primitiveType == PrimitiveType.TriangleStrip ? Math.Max(IndicesIndex - 2, 0) : IndicesIndex / 3;
+                device.DrawIndexedPrimitives(primitiveType, 0, 0, VerticesIndex, 0, primitiveCount);
+
+                if (MainSettings.DebugWireframe && WireframeEffect != null && TryBuildWireframeGeometry(MainSettings.WireframeColor, out int lineCount))
+                    DrawWireframe(view, projection, lineCount);
+            }
+            finally
+            {
+                device.RasterizerState = previousRasterizer;
+                device.ScissorRectangle = previousScissorRectangle;
+
+                if (previousVertexBuffers.Length == 0)
+                    device.SetVertexBuffer(null);
+                else
+                    device.SetVertexBuffers(previousVertexBuffers);
+
+                device.Indices = previousIndices;
+            }
         }
         #endregion
 

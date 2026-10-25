@@ -49,6 +49,9 @@ Drops: {
 		'''
 }
 
+// Other conditions
+HasFlareGun: While holding a Flare Gun upgrade
+LacewingBestiary: When at least 40% of the Bestiary has been completed
 HasRogueArmor: While wearing rogue armor
 HasWings: While wearing wings
 InAstral: In the Astral Infection
