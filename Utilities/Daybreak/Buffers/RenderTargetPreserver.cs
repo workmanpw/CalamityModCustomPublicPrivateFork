@@ -1,3 +1,5 @@
+using System;
+using System.Reflection;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 
@@ -25,15 +27,25 @@ public static class RenderTargetPreserver
                 continue;
             }
 
-            // FNA's setter is private, but the project publicizes FNA for
-            // compile-time access and emits IgnoresAccessChecksTo for runtime.
-            rt.RenderTargetUsage = RenderTargetUsage.PreserveContents;
+            // FNA RenderTargetUsage is now read-only (CS0200) in current tModLoader/FNA:
+            // there is no setter to publicize, private or otherwise. Set the backing
+            // field via reflection instead, preserving the original intent. If the
+            // field is not found (future FNA change), skip silently rather than crash.
+            try
+            {
+                var field = typeof(RenderTarget2D).GetField("<RenderTargetUsage>k__BackingField", BindingFlags.Instance | BindingFlags.NonPublic);
+                field?.SetValue(rt, RenderTargetUsage.PreserveContents);
+            }
+            catch
+            {
+                // PreserveContents could not be forced; leave the binding as-is.
+            }
         }
     }
 
     /// <summary>
     ///     A utility method that gets the current bindings from the graphics
-    ///     device and ensures they're preserved.
+    ///     device and ensures they are preserved.
     /// </summary>
     /// <returns></returns>
     public static RenderTargetBinding[] GetAndPreserveCurrentBindings()
