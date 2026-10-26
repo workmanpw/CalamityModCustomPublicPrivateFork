@@ -1,5 +1,6 @@
 using CalamityMod.CalPlayer;
 using CalamityMod.Projectiles.Rogue;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -11,6 +12,10 @@ namespace CalamityMod.Items.Weapons.Rogue
     public class UtensilPoker : RogueWeapon
     {
         private int counter = 0;
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<HeavyBleeding>(), ModContent.BuffType<Laceration>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 44;

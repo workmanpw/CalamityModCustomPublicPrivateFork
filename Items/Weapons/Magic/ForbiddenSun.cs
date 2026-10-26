@@ -1,5 +1,6 @@
 using CalamityMod.Items.Materials;
 using CalamityMod.Projectiles.Magic;
+using CalamityMod.Systems.Collections;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -8,6 +9,10 @@ namespace CalamityMod.Items.Weapons.Magic
     public class ForbiddenSun : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.OnFire3];
+        }
         public override void SetDefaults()
         {
             Item.width = 28;
@@ -31,7 +36,7 @@ namespace CalamityMod.Items.Weapons.Magic
         {
             CreateRecipe().
                 AddIngredient(ItemID.SpellTome).
-                AddIngredient<ScoriaBar>(6).
+                AddIngredient<ScoriaBar>(10).
                 AddTile(TileID.Bookcases).
                 Register();
         }

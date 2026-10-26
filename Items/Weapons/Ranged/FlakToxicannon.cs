@@ -27,6 +27,10 @@ namespace CalamityMod.Items.Weapons.Ranged
         public static int ClusterShrapnelAmount = 7;
         public static float ClusterShrapnelAngleOffset = 0.53f;
         #endregion
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<Irradiated>()];
+        }
 
         public override void SetDefaults()
         {

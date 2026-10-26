@@ -93,7 +93,6 @@ namespace CalamityMod.Tiles.Furniture.Paintings
             var t = Main.tile[i, j];
             var texture = TextureAssets.Tile[Type].Value;
             var cube = CalamityUtils.FindTileEntity<TECanvasPainting>(i, j, 1, 1);
-
             var pos = new Vector2(i * 16, j * 16) + CalamityUtils.TileDrawOffset;
             if (cube != null && t.TileFrameX == 0)
             {
@@ -111,18 +110,18 @@ namespace CalamityMod.Tiles.Furniture.Paintings
                 spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, DepthStencilState.None, Main.Rasterizer, null);
                 spriteBatch.Draw(texture, pos - Main.screenPosition, new Rectangle(fPX, fPY, scale, scale), Lighting.GetColor(i, j), 0, new Vector2(0, 0), 1 / cube.scale * Scale, 0, 0);
                 spriteBatch.End();
-                spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.LinearWrap, DepthStencilState.None, Main.Rasterizer, null);
+                spriteBatch.Begin();
             }
             // Calculate and draw the borders
             if (t.TileFrameX == 0 && t.TileFrameY == 0)
                 DrawBorders(spriteBatch, pos - Main.screenPosition, new Point(i, j));
             return false;
         }
-        public static void DrawBorders(SpriteBatch spriteBatch, Vector2 pos, Point cords)
+        public void DrawBorders(SpriteBatch spriteBatch, Vector2 pos, Point cords)
         {
             var texture = border.Value;
             var cornerTex = corner.Value;
-            var canvasID = (ushort)Main.LocalPlayer.Calamity().CurrentlyViewedCanvasType;
+            var canvasID = Type;
             var commonDim = 8;
             var finalCord = 72;
             var size = 80;

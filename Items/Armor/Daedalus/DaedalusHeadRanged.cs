@@ -26,7 +26,7 @@ namespace CalamityMod.Items.Armor.Daedalus
             Item.height = 18;
             Item.value = CalamityGlobalItem.RarityPinkBuyPrice;
             Item.rare = ItemRarityID.Pink;
-            Item.defense = 9; // 43
+            Item.defense = 14; // 48
         }
 
         public override bool IsArmorSet(Item head, Item body, Item legs) => body.type == ModContent.ItemType<DaedalusBreastplate>() && legs.type == ModContent.ItemType<DaedalusLeggings>();
@@ -55,8 +55,7 @@ namespace CalamityMod.Items.Armor.Daedalus
         public override void AddRecipes()
         {
             CreateRecipe().
-                AddIngredient<CryonicBar>(7).
-                AddIngredient<EssenceofEleum>().
+                AddIngredient<CryonicBar>(12).
                 AddTile(TileID.MythrilAnvil).
                 SortBeforeFirstRecipesOf(ModContent.ItemType<DaedalusHeadMagic>()).
                 Register();

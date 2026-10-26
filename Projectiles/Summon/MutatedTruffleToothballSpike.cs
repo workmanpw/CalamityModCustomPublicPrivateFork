@@ -50,6 +50,8 @@ namespace CalamityMod.Projectiles.Summon
             }
         }
 
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) => target.AddBuff(ModContent.BuffType<SulphuricPoisoning>(), 180);
+
         public override bool? CanDamage() => (TimerForHitbox >= TimeForHitbox && Projectile.getRect().Intersects(TargetShot.getRect())) ? null : false;
     }
 }

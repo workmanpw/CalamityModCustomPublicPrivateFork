@@ -10,6 +10,10 @@ namespace CalamityMod.Items.Weapons.Summon
     public class CausticCroakerStaff : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Summon";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<Irradiated>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 36;

@@ -32,6 +32,15 @@ namespace CalamityMod.Projectiles.Melee
 
             CalamityUtils.HomeInOnNPC(Projectile, false, 200f, 12f, 20f);
         }
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(ModContent.BuffType<WindChilled>(), 180);
+        }
+
+        public override void OnHitPlayer(Player target, Player.HurtInfo info)
+        {
+            target.AddBuff(ModContent.BuffType<WindChilled>(), 180);
+        }
 
         public override void OnKill(int timeLeft)
         {

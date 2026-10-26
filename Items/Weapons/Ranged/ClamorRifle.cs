@@ -1,5 +1,6 @@
 using CalamityMod.Projectiles.Ranged;
 using CalamityMod.Sounds;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -11,6 +12,10 @@ namespace CalamityMod.Items.Weapons.Ranged
     public class ClamorRifle : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Ranged";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<Eutrophication>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 64;

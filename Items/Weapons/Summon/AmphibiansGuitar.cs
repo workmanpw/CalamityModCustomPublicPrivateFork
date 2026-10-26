@@ -26,6 +26,7 @@ namespace CalamityMod.Items.Weapons.Summon
             Item.channel = true;
             Item.value = CalamityGlobalItem.RarityYellowBuyPrice;
             Item.rare = ItemRarityID.Yellow;
+            Item.Calamity().donorItem = true;
             Item.useStyle = ItemUseStyleID.HoldUp;
         }
 
@@ -36,8 +37,8 @@ namespace CalamityMod.Items.Weapons.Summon
             CreateRecipe().
                 AddIngredient(ItemID.TheAxe).
                 AddIngredient(ItemID.Frog).
-                AddIngredient<CoreofCalamity>(3).
                 AddIngredient<LivingShard>(8).
+                AddIngredient<CoreofCalamity>(3).
                 AddTile(TileID.MythrilAnvil).
                 Register();
         }

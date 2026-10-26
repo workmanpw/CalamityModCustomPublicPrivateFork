@@ -8,7 +8,10 @@ namespace CalamityMod.Items.Weapons.Melee
     public class DepthCrusher : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Melee";
-
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<RiptideDebuff>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 56;

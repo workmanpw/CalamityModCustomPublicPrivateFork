@@ -9,6 +9,10 @@ namespace CalamityMod.Items.Weapons.Melee
     public class StormRuler : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Melee";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<WindChilled>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 80;

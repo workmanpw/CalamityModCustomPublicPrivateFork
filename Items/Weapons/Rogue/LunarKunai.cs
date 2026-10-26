@@ -9,6 +9,10 @@ namespace CalamityMod.Items.Weapons.Rogue
 {
     public class LunarKunai : RogueWeapon
     {
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<Nightwither>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 38;

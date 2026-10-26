@@ -13,6 +13,10 @@ namespace CalamityMod.Items.Weapons.Rogue
         public static readonly SoundStyle ImpactSound = new SoundStyle("CalamityMod/Sounds/Item/SporeKnifeImpact") with { PitchVariance = 0.25f, MaxInstances = 10 };
         public static readonly SoundStyle StealthImpactSound = new SoundStyle("CalamityMod/Sounds/Item/SporeKnifeStealthImpact");
         public static readonly SoundStyle ChompSound = new SoundStyle("CalamityMod/Sounds/Item/SporeKnifeChomp", 1, 3) with { PitchVariance = 0.25f, MaxInstances = 10 };
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.Poisoned];
+        }
         public override void SetDefaults()
         {
             Item.width = 12;

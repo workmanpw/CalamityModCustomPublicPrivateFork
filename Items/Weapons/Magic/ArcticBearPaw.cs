@@ -7,6 +7,10 @@ namespace CalamityMod.Items.Weapons.Magic
     public class ArcticBearPaw : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.Frostburn2];
+        }
         public override void SetDefaults()
         {
             Item.width = 28;

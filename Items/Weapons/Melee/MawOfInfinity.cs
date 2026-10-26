@@ -3,6 +3,7 @@ using CalamityMod.NPCs.DevourerofGods;
 using CalamityMod.Projectiles.BaseProjectiles;
 using CalamityMod.Projectiles.Melee;
 using CalamityMod.Rarities;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -18,16 +19,13 @@ namespace CalamityMod.Items.Weapons.Melee
         public override int ProjectileType => ModContent.ProjectileType<MawOfInfinityHoldout>();
         public override void SetStaticDefaults()
         {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<GodSlayerInferno>()];
             base.SetStaticDefaults();
-        }
-        public override void ModifyTooltips(List<TooltipLine> tooltips)
-        {
-            tooltips.FindAndReplaceAll("ff00ff", Utils.Hex3(DevourerofGodsHead.SpecialMoveColor));
         }
         public override void SetDefaults()
         {
-            Item.width = 78;
-            Item.height = 94;
+            Item.width = 74;
+            Item.height = 84;
             Item.damage = 2080;
             Item.DamageType = DamageClass.Melee;
             Item.useTime = Item.useAnimation = 33;

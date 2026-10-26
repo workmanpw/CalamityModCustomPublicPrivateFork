@@ -1,11 +1,19 @@
 using System;
 using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Graphics.Primitives;
 using CalamityMod.Items.Weapons.Melee;
 using CalamityMod.Particles;
 using CalamityMod.Projectiles.BaseProjectiles;
+using CalamityMod.Projectiles.Summon;
+using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
+using Terraria.GameContent;
+using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -14,7 +22,7 @@ namespace CalamityMod.Projectiles.Melee.Spears
     public class GildedProboscisProj : BaseSwordHoldoutProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Melee";
-        public override bool useMeleeSpeed => false;
+        public override bool useAttackSpeed => false;
         public override bool useMeleeSize => false;
         public override int swingWidth => 360;
         public override Item BaseItem => ModContent.GetModItem(ModContent.ItemType<GildedProboscis>()).Item;
@@ -84,13 +92,29 @@ namespace CalamityMod.Projectiles.Melee.Spears
                         Projectile.timeLeft++;
                     }
                     if (Projectile.FinalExtraUpdate() && channelCharge < CalamityUtils.SecondsToFrames(5))
+                    {
                         channelCharge++;
+
+
+                        if (channelCharge == 300)
+                        {
+
+                            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/ChainLightning1") with { Volume = 1f, Pitch = 0.5f });
+                        }
+                        else if (channelCharge % 10 == 0 && channelCharge < 2000)
+                        {
+                            SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/ElectricHit") with { Volume = channelCharge/300f * 0.25f, Pitch = -1 + channelCharge/300f});
+                        }
+                    }
                 }
                 //Once not channeling, set the damage at the end of the startup
                 else
                 {
                     if (timer == StartupTime - 1)
-                        Projectile.damage = (int)(Projectile.damage * 0.75 * (channelCharge / 75f)); //scales from 0x to 3x power
+                    {
+                        Projectile.originalDamage = (int)(Projectile.originalDamage * 0.75 * (channelCharge / 75f)); //scales from 0x to 3x power
+                        Projectile.damage = (int)(Projectile.damage * 0.75 * (channelCharge / 75f)); //Both are needed 
+                    }
                 }
                 //Make the sprite rotation look right in game
                 Projectile.rotation -= (MathHelper.PiOver2) * (angle.X > 0 ? 1 : -1);
@@ -191,6 +215,12 @@ namespace CalamityMod.Projectiles.Melee.Spears
             }
             else
             {
+
+                if (swingTimer == 1)
+                {
+                    SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Custom/ChainLightning1") with { Volume = 0.2f, Pitch = -0.25f });
+                }
+
                 //scale & offset for the damaging swing part of the anim
                 //This keeps "am" (short for animation) at 0 or 1 most of the time, with a quick but smooth transition
                 float am = MathHelper.Clamp(MathF.Pow((SwingCompletion - (0.5f - (1 / 3f))) * 3f, 3f), 0, 1);
@@ -260,15 +290,80 @@ namespace CalamityMod.Projectiles.Melee.Spears
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
             target.AddBuff(ModContent.BuffType<VermillionFlux>(), 900);
-            Main.player[Projectile.owner].SpawnLifeStealProjectile(target, Projectile, ProjectileID.VampireHeal, (int)Math.Round(hit.Damage * 0.0015));
-            if (Projectile.damage > 1)
-                Projectile.damage = (int)(Projectile.damage * 0.925f);
+            Main.player[Projectile.owner].SpawnLifeStealProjectile(target, Projectile, ProjectileID.VampireHeal, (int)Math.Round(hit.Damage * 0.0015), 0.5f);
+            Projectile.originalDamage = (int)(Projectile.originalDamage * 0.925f);
+            Projectile.damage = (int)(Projectile.damage * 0.925f); //Both are needed as it doesn't recalculate till next frame
+
+
+            if (!isChannelable)
+            {
+
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/ElectricBurst") with { Volume = 0.25f, Pitch = 0 });
+            }
+            else
+            {
+
+                SoundEngine.PlaySound(new SoundStyle("CalamityMod/Sounds/Item/ElectricBurst") with { Volume = channelCharge / 300f * 0.25f, Pitch = -1 + channelCharge / 300f });
+                if (channelCharge >= CalamityUtils.SecondsToFrames(5))
+                {
+                    SoundEngine.PlaySound(SoundID.Item172 with { Volume = 1 });
+                }
+            }
         }
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
+            => modifiers.ApplyScalingForcedCrit(Projectile);
+
+        public override bool PreDraw(ref Color lightColor)
         {
-            modifiers.SetCrit();
-            float critDamage = Main.player[Projectile.owner].GetTotalCritChance(Projectile.DamageType) * 0.02f;
-            modifiers.CritDamage += critDamage;
+
+            var player = Main.player[Projectile.owner];
+            var modplayer = player.GetModPlayer<BaseSwordHoldoutPlayer>();
+            var tex = TextureAssets.Projectile[Type];
+            var frame = tex.Frame();
+
+            float intensity = MathF.Pow(Math.Clamp((channelCharge-150) / 150f,0,1),2);
+
+            if (!isChannelable)
+            {
+                intensity = Math.Clamp(StartupCompletion*2 - 1,0,1) - Math.Clamp(CooldownCompletion*2, 0, 1);
+            }
+            if (isChannelable && SwingCompletion >= 1)
+                intensity = 0;
+
+            Color color = isChannelable ? Color.Crimson : Color.Goldenrod;
+            if (intensity > 0)
+            for (float i = 0; i < MathHelper.TwoPi; i += MathHelper.PiOver2)
+            {
+                Main.EntitySpriteDraw(OutlineTex, Projectile.Center - Main.screenPosition + new Vector2(2 * intensity, 0).RotatedBy(i), frame, color, Projectile.rotation, frame.Size() * 0.5f, Projectile.scale, Projectile.spriteDirection == -1 ? SpriteEffects.FlipHorizontally : 0);
+            }
+            Main.EntitySpriteDraw(tex.Value, Projectile.Center - Main.screenPosition, frame, Color.White, Projectile.rotation, frame.Size() * 0.5f, Projectile.scale, Projectile.spriteDirection == -1 ? SpriteEffects.FlipHorizontally : 0);
+
+            return false;
         }
+
+        private static Texture2D OutlineTex
+        {
+            get
+            {
+
+                if (field == null)
+                {
+                    var texture = TextureAssets.Projectile[ModContent.ProjectileType<GildedProboscisProj>()].Value;
+                    field = new Texture2D(Main.graphics.GraphicsDevice, texture.Width, texture.Height);
+
+                    var BaseArray = new Color[field.Width * field.Height];
+                    var ColorArray = new Color[field.Width * field.Height];
+                    texture.GetData(BaseArray);
+                    for (var i = 0; i < BaseArray.Length; i++)
+                    {
+                        ColorArray[i] = new Color(255, 255, 255) * (((float)BaseArray[i].A) / 255f);
+                    }
+                    field.SetData(ColorArray);
+                }
+                return field;
+            }
+        }
+
+
     }
 }

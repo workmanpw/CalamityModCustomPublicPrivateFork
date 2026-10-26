@@ -2,7 +2,9 @@ using System.Collections.Generic;
 using CalamityMod.CalPlayer;
 using CalamityMod.Items.Materials;
 using CalamityMod.Rarities;
+using CalamityMod.Systems.Collections;
 using CalamityMod.Tiles.Furniture.CraftingStations;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
@@ -39,7 +41,7 @@ namespace CalamityMod.Items.Accessories
             Item.Calamity().devItem = true;
         }
 
-        public override void ModifyTooltips(List<TooltipLine> list) => list.IntegrateHotkey(CalamityKeybinds.AngelicAllianceHotKey);
+        public override void ModifyTooltips(List<TooltipLine> list) => list.IntegrateDynamicHotkey(Item);
 
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
@@ -48,8 +50,6 @@ namespace CalamityMod.Items.Accessories
             player.GetDamage<GenericDamageClass>() += DamageBoost;
             player.GetDamage<SummonDamageClass>() += TotalSummonDamageBoost - DamageBoost;
             player.maxMinions += MinionSlotBoost;
-            if (player.wingTime < player.wingTimeMax)
-                player.lifeRegen += RegenBoostDuringFlight;
         }
 
         public override void AddRecipes()
@@ -65,5 +65,7 @@ namespace CalamityMod.Items.Accessories
                 AddTile<DraedonsForge>().
                 Register();
         }
+
+        public static Color RarityColor() => CalamityUtils.MulticolorLerp(Main.GlobalTimeWrappedHourly / 2f % 1f, [ new Color(255, 196, 55), new Color(255, 231, 107), new Color(255, 254, 243) ]);
     }
 }

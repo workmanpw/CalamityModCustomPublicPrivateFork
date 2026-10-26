@@ -2,6 +2,7 @@ using CalamityMod.Items.Materials;
 using CalamityMod.Projectiles.Rogue;
 using CalamityMod.Rarities;
 using CalamityMod.Tiles.Furniture.CraftingStations;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -13,6 +14,10 @@ namespace CalamityMod.Items.Weapons.Rogue
 {
     public class ExecutionersBlade : RogueWeapon
     {
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<GodSlayerInferno>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 64;
@@ -52,7 +57,7 @@ namespace CalamityMod.Items.Weapons.Rogue
         public override void AddRecipes()
         {
             CreateRecipe().
-                AddIngredient<CosmiliteBar>(12).
+                AddIngredient<CosmiliteBar>(10).
                 AddTile<CosmicAnvil>().
                 Register();
         }

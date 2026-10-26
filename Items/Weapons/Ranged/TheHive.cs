@@ -20,6 +20,7 @@ namespace CalamityMod.Items.Weapons.Ranged
         {
             Item.damage = 92;
             Item.DamageType = DamageClass.Ranged;
+            Item.crit = 16;
             Item.useAnimation = Item.useTime = OriginalUseTime;
             Item.shoot = ProjectileType<TheHiveHoldout>();
             Item.shootSpeed = 13f;
@@ -37,9 +38,6 @@ namespace CalamityMod.Items.Weapons.Ranged
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/DudFire") with { Volume = .4f, Pitch = -.9f, PitchVariance = 0.1f };
         }
-
-        // Terraria seems to really dislike high crit values in SetDefaults
-        public override void ModifyWeaponCrit(Player player, ref float crit) => crit += 16;
 
         public override bool CanUseItem(Player player) => player.ownedProjectileCounts[Item.shoot] == 0;
 
@@ -60,6 +58,15 @@ namespace CalamityMod.Items.Weapons.Ranged
             holdout.velocity = (player.Calamity().mouseWorld - player.MountedCenter).SafeNormalize(Vector2.Zero);
 
             return false;
+        }
+        public override void AddRecipes()
+        {
+            CreateRecipe().
+                AddIngredient<MineralMortar>().
+                AddIngredient<InfectedArmorPlating>(7).
+                AddIngredient<PlagueCellCanister>(12).
+                AddTile(TileID.MythrilAnvil).
+                Register();
         }
 
         public override void PostDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, float rotation, float scale, int whoAmI) => Item.DrawItemGlowmaskSingleFrame(spriteBatch, rotation, Request<Texture2D>(Texture + "_Glow").Value);

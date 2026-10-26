@@ -14,6 +14,7 @@ using CalamityMod.Items.Placeables.Furniture.Paintings;
 using CalamityMod.Items.Potions;
 using CalamityMod.Items.Potions.Alcohol;
 using CalamityMod.Items.SummonItems;
+using CalamityMod.Items.Tools;
 using CalamityMod.Items.Weapons.Magic;
 using CalamityMod.Items.Weapons.Melee;
 using CalamityMod.Items.Weapons.Ranged;
@@ -103,10 +104,10 @@ namespace CalamityMod.NPCs
 
                 #region Sky / Space
                 // Harpy
-                // Sky Glaze @ 3.33% IF Eye of Cthulhu dead
+                // Sky Glaze @ 3.33%
                 // Essence of Sunlight @ 50% IF Hardmode and not statue spawned
                 case NPCID.Harpy:
-                    postEoC.Add(ModContent.ItemType<SkyGlaze>(), 30);
+                    npcLoot.Add(ModContent.ItemType<SkyGlaze>(), 30);
                     hardmode.AddIf(() => !npc.SpawnedFromStatue, ModContent.ItemType<EssenceofSunlight>(), 2);
                     break;
 
@@ -266,11 +267,11 @@ namespace CalamityMod.NPCs
 
                 // Sand Elemental
                 // Elemental in a Bottle @ 20% Normal, 33.33% Expert+
-                // Rare Elemental in a Bottle @ 10% Normal, 16.67% Expert+
+                // Oasis Elemental in a Bottle @ 10% Normal, 16.67% Expert+
                 // Desert Key @ 10%
                 case NPCID.SandElemental:
                     npcLoot.Add(ItemDropRule.NormalvsExpert(ModContent.ItemType<ElementalinaBottle>(), 5, 3));
-                    npcLoot.Add(ItemDropRule.NormalvsExpert(ModContent.ItemType<RareElementalinaBottle>(), 10, 6));
+                    npcLoot.Add(ItemDropRule.NormalvsExpert(ModContent.ItemType<OasisElementalinaBottle>(), 10, 6));
                     npcLoot.Add(ItemID.DungeonDesertKey, 10);
                     break;
 
@@ -443,12 +444,12 @@ namespace CalamityMod.NPCs
                     break;
 
                 // Chaos Elemental
-                // Rod of Discord @ 1% Normal, 2% Expert+
+                // Rod of Discord @ 0.8% Normal, 1% Expert+
                 case NPCID.ChaosElemental:
                     // Remove the vanilla loot rule for Rod of Discord.
                     npcLoot.RemoveWhere((rule) => rule is CommonDrop conditionalRule && conditionalRule.itemId == ItemID.RodofDiscord);
                     // Define a replacement rule which has an increased chance.
-                    npcLoot.Add(ItemDropRule.NormalvsExpert(ItemID.RodofDiscord, 100, 50));
+                    npcLoot.Add(ItemDropRule.NormalvsExpert(ItemID.RodofDiscord, 125, 100));
                     break;
 
                 // Illuminant Bat
@@ -497,36 +498,6 @@ namespace CalamityMod.NPCs
                     npcLoot.Add(ItemDropRule.NormalvsExpert(ModContent.ItemType<CelestialClaymore>(), 7, 4));
                     npcLoot.Add(ItemID.HallowedKey, 10);
                     break;
-
-                // World Feeder
-                // 6-15 Cursed Flame INSTEAD OF 2-5 in Death Mode
-                // 4-8 Souls of Night in Death Mode
-                // Also let World Feeders drop their other loot in Death Mode, as only the Head contains loot normally but it may not be killed last
-                // Monster Meat is already dropped by all 3 segments
-                case NPCID.SeekerHead:
-                    npcLoot.RemoveWhere(
-                        // The following expression returns true if the following conditions are met:
-                        rule => rule is CommonDrop drop // If the rule is an CommonDrop instance
-                            && drop.itemId == ItemID.CursedFlame // And that instance drops a Cursed Flame
-                    );
-                    npcLoot.DefineConditionalDropSet(DropHelper.If(() => !CalamityWorld.death, () => !CalamityWorld.death)).Add(ItemID.CursedFlame, 1, 2, 5);
-                    npcLoot.DefineConditionalDropSet(DropHelper.If(() => CalamityWorld.death, () => CalamityWorld.death)).Add(ItemID.CursedFlame, 1, 6, 15);
-                    npcLoot.DefineConditionalDropSet(DropHelper.If(() => CalamityWorld.death, () => CalamityWorld.death, CalamityUtils.GetTextValue("Condition.Drops.IsDeath"))).Add(ItemID.SoulofNight, 1, 4, 8);
-                    break;
-                case NPCID.SeekerBody:
-                case NPCID.SeekerTail:
-                    npcLoot.RemoveWhere(
-                        // The following expression returns true if the following conditions are met:
-                        rule => rule is CommonDrop drop // If the rule is an CommonDrop instance
-                            && drop.itemId == ItemID.CursedFlame // And that instance drops a Cursed Flame
-                    );
-                    npcLoot.DefineConditionalDropSet(DropHelper.If(() => !CalamityWorld.death, () => !CalamityWorld.death)).Add(ItemID.CursedFlame, 1, 2, 5);
-                    npcLoot.DefineConditionalDropSet(DropHelper.If(() => CalamityWorld.death, () => CalamityWorld.death)).Add(ItemID.CursedFlame, 1, 6, 15);
-                    npcLoot.DefineConditionalDropSet(DropHelper.If(() => CalamityWorld.death, () => CalamityWorld.death, CalamityUtils.GetTextValue("Condition.Drops.IsDeath"))).Add(ItemID.SoulofNight, 1, 4, 8);
-
-                    npcLoot.DefineConditionalDropSet(DropHelper.If(() => CalamityWorld.death, false)).Add(ItemID.MeatGrinder, 200);
-                    npcLoot.DefineConditionalDropSet(DropHelper.If(() => CalamityWorld.death && Main.WindyEnoughForKiteDrops, false)).Add(ItemID.KiteWorldFeeder, 25);
-                    break;
                 #endregion
 
                 #region Jungle
@@ -566,8 +537,6 @@ namespace CalamityMod.NPCs
                     npcLoot.Add(ItemDropRule.NormalvsExpert(ModContent.ItemType<ShinobiBlade>(), 15, 10));
                     npcLoot.Add(ItemDropRule.NormalvsExpert(ModContent.ItemType<StaffOfNecrosteocytes>(), 15, 10));
                     break;
-
-                // The ectoplasm extra drops got moved to the list section; just like moss hornets
 
                 // Hardmode Dungeon Melee Skeletons
                 // Wisp in a Bottle @ 0.5% INSTEAD OF 0.25%
@@ -633,10 +602,10 @@ namespace CalamityMod.NPCs
                     break;
 
                 // Fire Imp
-                // Ashen Stalactite @ 4%, 14.28% after defeating EoW/BoC
+                // Ashen Stalactite @ 4%, 8.33% after defeating EoW/BoC
                 case NPCID.FireImp:
                     npcLoot.AddIf((info) => !NPC.downedBoss2, ModContent.ItemType<AshenStalactite>(), 25);
-                    npcLoot.AddIf((info) => NPC.downedBoss2, ModContent.ItemType<AshenStalactite>(), 7);
+                    npcLoot.AddIf((info) => NPC.downedBoss2, ModContent.ItemType<AshenStalactite>(), 12);
                     break;
 
                 // Demon, Voodoo Demon
@@ -650,10 +619,10 @@ namespace CalamityMod.NPCs
                     break;
 
                 // Bone Serpent
-                // Old Lord Oathsword @ 4% Normal, 14.29% after defeating EoW/BoC
+                // Old Lord Oathsword @ 4% Normal, 12.5% after defeating EoW/BoC
                 case NPCID.BoneSerpentHead:
                     npcLoot.AddIf((info) => !NPC.downedBoss2, ModContent.ItemType<OldLordClaymore>(), 25);
-                    npcLoot.AddIf((info) => NPC.downedBoss2, ModContent.ItemType<OldLordClaymore>(), 4);
+                    npcLoot.AddIf((info) => NPC.downedBoss2, ModContent.ItemType<OldLordClaymore>(), 8);
                     break;
 
                 // Red Devil
@@ -1225,7 +1194,8 @@ namespace CalamityMod.NPCs
                                 ItemID.LucyTheAxe,
                                 ItemID.PewMaticHorn,
                                 ItemID.WeatherPain,
-                                ItemID.HoundiusShootius
+                                ItemID.HoundiusShootius,
+                                ModContent.ItemType<WalkingCane>()
                             };
                             LCR_NotExpert.Add(DropHelper.CalamityStyle(DropHelper.NormalWeaponDropRateFraction, deerWeapons));
                         }
@@ -1861,11 +1831,6 @@ DukeEditFailed:
             // Ancient Bone Dust @ 20% Normal, 33.33% Expert+
             if (CalamityNPCTypeSets.Skeleton[npc.type])
                 npcLoot.Add(ItemDropRule.NormalvsExpert(ModContent.ItemType<AncientBoneDust>(), 5, 3));
-
-            // All Hardmode Dungeon Enemies
-            // Ectoplasm @ 20%
-            if (CalamityNPCSets.IsBuffedDungeonEnemy[npc.type])
-                npcLoot.Add(ItemID.Ectoplasm, 5);
             #endregion
         }
         #endregion
@@ -1897,6 +1862,13 @@ DukeEditFailed:
         #region Pre Kill
         public override bool PreKill(NPC npc)
         {
+            if (npc.Calamity().preventDrops)
+            {
+                // This NEEDS to have an exception to function, so I put a very unlikely item to ever drop from an enemy
+                DropHelper.BlockEverything(ModContent.ItemType<AbyssalWarhammer>());
+                npc.value = 0;
+            }
+
             // Stop Eater of Worlds segments and Brain of Cthulhu Creepers from dropping partial loot in Rev+
             if (CalamityWorld.revenge && (CalamityNPCTypeSets.EaterOfWorlds.Contains(npc.type) || npc.type == NPCID.Creeper))
                 DropHelper.BlockDrops(ItemID.DemoniteOre, ItemID.ShadowScale, ItemID.CrimtaneOre, ItemID.TissueSample);
@@ -1914,6 +1886,9 @@ DukeEditFailed:
         #region On Kill Main Hook
         public override void OnKill(NPC npc)
         {
+            if (npc.Calamity().coinDropMult != 1)
+                npc.value = (int)(npc.value * npc.Calamity().coinDropMult);
+
             // Boss Rush on-kill effects
             if (BossRushEvent.BossRushActive)
             {

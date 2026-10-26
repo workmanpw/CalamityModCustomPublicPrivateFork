@@ -70,7 +70,15 @@ namespace CalamityMod.Projectiles.Rogue
             CalamityUtils.DrawAfterimagesCentered(Projectile, ProjectileID.Sets.TrailingMode[Type], lightColor, 1);
             return false;
         }
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(ModContent.BuffType<WindChilled>(), 120);
+        }
 
+        public override void OnHitPlayer(Player target, Player.HurtInfo info)
+        {
+            target.AddBuff(ModContent.BuffType<WindChilled>(), 120);
+        }
         public override void OnKill(int timeLeft)
         {
             for (int k = 0; k < 10; k++)

@@ -11,14 +11,23 @@ namespace CalamityMod.Items.Placeables.Furniture
 
         public static float MoveSpeedBoost = 0.1f;
         public static int CritBoost = 10; // Both 10% so we only need just one in the tooltip
-        public static float DamageReductionLoss = 0.05f;
+        public static float DamageReductionLoss = 0.1f;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(CritBoost, DamageReductionLoss.ToPercent());
 
         public override void SetDefaults()
         {
             Item.DefaultToPlaceableTile(ModContent.TileType<Tiles.Furniture.CorruptionEffigy>());
-            Item.value = Item.sellPrice(gold: 2);
+            Item.value = Item.buyPrice(gold: 10); // Sold by Shady Salesman
             Item.rare = ItemRarityID.Orange;
+        }
+
+        public override void UpdateInventory(Player player)
+        {
+            if (Main.netMode != NetmodeID.MultiplayerClient && !RecipeUnlockHandler.HasFoundCorruptionEffigy)
+            {
+                RecipeUnlockHandler.HasFoundCorruptionEffigy = true;
+                CalamityNetcode.SyncWorld();
+            }
         }
 
         public override void AddRecipes()

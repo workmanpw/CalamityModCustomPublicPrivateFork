@@ -76,6 +76,12 @@ namespace CalamityMod.NPCs.NormalNPCs
             }
         }
 
+        public override void OnHitPlayer(Player target, Player.HurtInfo hurtInfo)
+        {
+            if (hurtInfo.Damage > 0)
+                target.AddBuff(ModContent.BuffType<WindChilled>(), 120, true);
+        }
+
         public override void ModifyNPCLoot(NPCLoot npcLoot) => npcLoot.Add(ModContent.ItemType<AerialiteOre>(), 1, 10, 26);
 
         public override void ModifyTypeName(ref string typeName)

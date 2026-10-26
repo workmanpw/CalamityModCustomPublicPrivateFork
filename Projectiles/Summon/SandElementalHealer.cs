@@ -2,8 +2,11 @@ using System;
 using CalamityMod.CalPlayer;
 using CalamityMod.Projectiles.Healing;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
+using Terraria.GameContent;
+using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -44,7 +47,7 @@ namespace CalamityMod.Projectiles.Summon
             Player player = Main.player[Projectile.owner];
             CalamityPlayer modPlayer = player.Calamity();
 
-            if (!modPlayer.rareSandElemental && !modPlayer.allElementals && !modPlayer.rareSandElementalVanity && !modPlayer.allElementalsVanity)
+            if (!modPlayer.oasisElemental.HasValue && modPlayer.allElementals is null && !modPlayer.oasisElementalVanity && !modPlayer.allElementalsVanity)
             {
                 Projectile.active = false;
                 return;
@@ -55,9 +58,9 @@ namespace CalamityMod.Projectiles.Summon
             {
                 if (player.dead)
                 {
-                    modPlayer.rareSandEleBuff = false;
+                    modPlayer.oasisEleBuff = false;
                 }
-                if (modPlayer.rareSandEleBuff)
+                if (modPlayer.oasisEleBuff)
                 {
                     Projectile.timeLeft = 2;
                 }
@@ -91,7 +94,7 @@ namespace CalamityMod.Projectiles.Summon
                 Projectile.spriteDirection = -Projectile.direction;
             }
 
-            if (!modPlayer.rareSandElementalVanity && !modPlayer.allElementalsVanity)
+            if (!modPlayer.oasisElementalVanity && !modPlayer.allElementalsVanity)
             {
                 float lightScalar = (float)Main.rand.Next(90, 111) * 0.01f;
                 lightScalar *= Main.essScale;
@@ -160,7 +163,7 @@ namespace CalamityMod.Projectiles.Summon
             {
                 Projectile.localAI[0] += 1f;
             }
-            if (Projectile.ai[0] == 0f && !modPlayer.rareSandElementalVanity && !modPlayer.allElementalsVanity)
+            if (Projectile.ai[0] == 0f && !modPlayer.oasisElementalVanity && !modPlayer.allElementalsVanity)
             {
                 int healProj = ModContent.ProjectileType<CactusHealOrb>();
                 if (Projectile.ai[1] == 0f && Projectile.localAI[0] >= 120f)
@@ -189,7 +192,7 @@ namespace CalamityMod.Projectiles.Summon
         {
             Player player = Main.player[Projectile.owner];
             CalamityPlayer modPlayer = player.Calamity();
-            if (modPlayer.rareSandElementalVanity || modPlayer.allElementalsVanity)
+            if (modPlayer.oasisElementalVanity || modPlayer.allElementalsVanity)
             {
                 return false;
             }
@@ -197,6 +200,30 @@ namespace CalamityMod.Projectiles.Summon
             {
                 return null;
             }
+        }
+
+        public override bool PreDraw(ref Color lightColor)
+        {
+            Texture2D tex = TextureAssets.Projectile[Type].Value;
+            Rectangle frame = tex.Frame(1, Main.projFrames[Type], 0, Projectile.frame);
+            SpriteEffects sp = Projectile.spriteDirection == -1 ? SpriteEffects.FlipHorizontally : SpriteEffects.None;
+            var cplayer = Main.player[Projectile.owner].Calamity();
+
+            if ((cplayer.oasisElemental.HasValue && !cplayer.oasisElemental.Value) || (cplayer.allElementals.HasValue && !cplayer.allElementals.Value))
+            {
+                Vector3 hsl = Main.rgbToHsl(Color.LawnGreen);
+                CalamityUtils.EnterShaderRegion(Main.spriteBatch);
+                GameShaders.Misc["CalamityMod:BasicTint"].UseOpacity(1f);
+                GameShaders.Misc["CalamityMod:BasicTint"].UseSaturation(0.25f);
+                GameShaders.Misc["CalamityMod:BasicTint"].UseColor(Main.hslToRgb(1 - hsl.X, hsl.Y, hsl.Z));
+                GameShaders.Misc["CalamityMod:BasicTint"].Apply();
+                Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, frame, Color.White, Projectile.rotation, frame.Size() * 0.5f, Projectile.scale, sp);
+                CalamityUtils.ExitShaderRegion(Main.spriteBatch);
+            }
+            else
+                Main.EntitySpriteDraw(tex, Projectile.Center - Main.screenPosition, frame, lightColor, Projectile.rotation, frame.Size() * 0.5f, Projectile.scale, sp);
+
+            return false;
         }
     }
 }

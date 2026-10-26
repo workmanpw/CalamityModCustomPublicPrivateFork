@@ -431,7 +431,7 @@ namespace CalamityMod.CalPlayer
 
             #region Armor Visuals
             // Demonshade Armor
-            if (calamityPlayer.dsSetBonus && drawInfo.shadow == 0f)
+            if (calamityPlayer.demonshadeSet && drawInfo.shadow == 0f)
             {
                 if (Player != null && !Player.dead)
                 {
@@ -490,8 +490,7 @@ namespace CalamityMod.CalPlayer
 
             if (calamityPlayer.brimstoneFlames && drawInfo.shadow == 0f)
             {
-                bool resistsBrimstoneFlames = abaddon; // Looks weaker if you have Abaddon equipped
-                BrimstoneFlames.DrawEffects(drawInfo, resistsBrimstoneFlames);
+                BrimstoneFlames.DrawEffects(drawInfo);
             }
 
             if (calamityPlayer.brainRot && drawInfo.shadow == 0f)
@@ -578,6 +577,9 @@ namespace CalamityMod.CalPlayer
 
             if (calamityPlayer.vHex && drawInfo.shadow == 0f)
                 VulnerabilityHex.DrawEffects(drawInfo);
+
+            if (calamityPlayer.windChilled && drawInfo.shadow == 0f)
+                WindChilled.DrawEffects(drawInfo);
             #endregion
 
             if (calamityPlayer.PinkJellyRegen && drawInfo.shadow == 0f)

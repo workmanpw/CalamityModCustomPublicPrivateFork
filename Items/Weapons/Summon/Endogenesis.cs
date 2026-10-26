@@ -6,6 +6,7 @@ using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using CalamityMod.Systems.Collections;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -18,7 +19,11 @@ namespace CalamityMod.Items.Weapons.Summon
 
         public static int AttackMode = 0;
 
-        public override void SetStaticDefaults() => ItemID.Sets.StaffMinionSlotsRequired[Type] = 10f;
+        public override void SetStaticDefaults()
+        {
+            ItemID.Sets.StaffMinionSlotsRequired[Type] = 10f;
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<Voidfrost>(), BuffID.Frozen];
+        }
 
         public override void SetDefaults()
         {
@@ -95,5 +100,7 @@ namespace CalamityMod.Items.Weapons.Summon
                 AddTile<DraedonsForge>().
                 Register();
         }
+
+        public static Color RarityColor() => CalamityUtils.ColorSwap(new Color(131, 239, 255), new Color(36, 55, 230), 4f);
     }
 }

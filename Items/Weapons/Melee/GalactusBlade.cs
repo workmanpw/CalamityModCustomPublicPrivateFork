@@ -131,8 +131,8 @@ namespace CalamityMod.Items.Weapons.Melee
         {
             CreateRecipe().
                 AddIngredient(ItemID.StarWrath).
+                AddIngredient<LifeAlloy>(5).
                 AddIngredient<DivineGeode>(10).
-                AddIngredient<GalacticaSingularity>(5).
                 AddTile(TileID.MythrilAnvil).
                 Register();
         }

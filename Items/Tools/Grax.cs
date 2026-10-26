@@ -3,6 +3,7 @@ using CalamityMod.Items.Materials;
 using CalamityMod.Rarities;
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace CalamityMod.Items.Tools
@@ -14,9 +15,9 @@ namespace CalamityMod.Items.Tools
         private const int AxePower = 180 / 5;
 
         public static float DamageBoost = 0.15f;
-        public static int DefenseBoost = 30;
-        public static float DamageReductionBoost = 0.1f;
-
+        public static int DefenseBoost = 15;
+        public static int GraxBoostDuration = CalamityUtils.SecondsToFrames(15);
+        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(DamageBoost.ToPercent(), DefenseBoost, GraxBoostDuration.FramesToSeconds());
         public override void SetStaticDefaults()
         {
             ItemID.Sets.ItemsThatAllowRepeatedRightClick[Type] = true;
@@ -65,14 +66,14 @@ namespace CalamityMod.Items.Tools
             CreateRecipe().
                 AddIngredient<InfernaCutter>().
                 AddRecipeGroup("LunarHamaxe").
-                AddIngredient<UelibloomBar>(5).
+                AddIngredient<UelibloomBar>(10).
                 AddTile(TileID.MythrilAnvil).
                 Register();
         }
 
         public override void OnHitNPC(Player player, NPC target, NPC.HitInfo hit, int damageDone)
         {
-            player.AddBuff(ModContent.BuffType<GraxBoost>(), 600);
+            player.AddBuff(ModContent.BuffType<GraxBoost>(), GraxBoostDuration);
         }
     }
 }

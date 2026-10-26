@@ -9,6 +9,10 @@ namespace CalamityMod.Items.Weapons.Rogue
 {
     public class GraveGrimreaver : RogueWeapon
     {
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.CursedInferno, BuffID.Confused];
+        }
         public override void SetDefaults()
         {
             Item.width = 80;

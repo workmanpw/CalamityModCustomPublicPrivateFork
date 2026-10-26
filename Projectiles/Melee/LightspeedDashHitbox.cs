@@ -6,6 +6,7 @@ using CalamityMod.Sounds;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace CalamityMod.Projectiles.Melee
@@ -16,10 +17,15 @@ namespace CalamityMod.Projectiles.Melee
         public override string Texture => "CalamityMod/Projectiles/InvisibleProj";
         public Player Owner => Main.player[Projectile.owner];
 
+        public override void SetStaticDefaults()
+        {
+            ProjectileID.Sets.AllowsContactDamageFromJellyfish[Type] = true;
+        }
+
         public override void SetDefaults()
         {
-            Projectile.width = 84;
-            Projectile.height = 64;
+            Projectile.width = 150;
+            Projectile.height = 75;
             Projectile.friendly = true;
             Projectile.tileCollide = false;
             Projectile.DamageType = TrueMeleeNoSpeedDamageClass.Instance;
@@ -28,7 +34,11 @@ namespace CalamityMod.Projectiles.Melee
             Projectile.usesLocalNPCImmunity = true;
             Projectile.localNPCHitCooldown = -1;
         }
-
+        public override bool? Colliding(Rectangle projHitbox, Rectangle targetHitbox)
+        {
+            float hitboxSize = Projectile.width * Projectile.scale;
+            return CalamityUtils.CircularHitboxCollision(Projectile.Center, hitboxSize, targetHitbox);
+        }
         public override void AI()
         {
             // Go where the player is going
@@ -42,7 +52,7 @@ namespace CalamityMod.Projectiles.Melee
             SoundEngine.PlaySound(CommonCalamitySounds.SwiftSliceSound with { Volume = CommonCalamitySounds.SwiftSliceSound.Volume * 0.33f }, Projectile.Center);
 
             var player = Main.player[Projectile.owner];
-            var modPlayer = player.Calamity();
+            var modPlayer = player.GetModPlayer<LightspeedPlayer>();
 
             // Refund 30 energy if dash hits. Can get energy from multiple enemies.
             modPlayer.elementalMastery += 30;
@@ -68,7 +78,7 @@ namespace CalamityMod.Projectiles.Melee
                 GeneralParticleHandler.SpawnParticle(energyLeak);
             }
 
-            target.AddBuff(ModContent.BuffType<ElementalMix>(), 120);
+            target.AddBuff(ModContent.BuffType<ElementalMix>(), 300);
         }
     }
 }

@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using CalamityMod.Systems.Collections;
 using Terraria.ModLoader;
 
 namespace CalamityMod.Items.Weapons.Summon
@@ -14,11 +15,15 @@ namespace CalamityMod.Items.Weapons.Summon
     public class LegionofCelestia : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Summon";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<ElementalMix>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 100;
             Item.height = 128;
-            Item.damage = 57;
+            Item.damage = 50;
             Item.DamageType = DamageClass.Summon;
             Item.mana = 10;
             Item.useAnimation = Item.useTime = 24;

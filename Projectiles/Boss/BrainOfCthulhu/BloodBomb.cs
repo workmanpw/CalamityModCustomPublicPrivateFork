@@ -29,6 +29,7 @@ public class BloodBomb : ModNPC, ILocalizedModType
     {
         NPCID.Sets.ProjectileNPC[Type] = true;
         BloodBombYellow = ModContent.Request<Texture2D>("CalamityMod/Projectiles/Boss/BrainOfCthulhu/BloodBomb2");
+        this.HideFromBestiary();
     }
 
     internal static Texture2D GetBombGlow()
@@ -126,7 +127,7 @@ public class BloodBomb : ModNPC, ILocalizedModType
 
     public override void ModifyHitByItem(Player player, Item item, ref NPC.HitModifiers modifiers)
     {
-        if (modifiers.DamageType == TrueMeleeDamageClass.Instance)
+        if (modifiers.DamageType.CountsAsClass(TrueMeleeDamageClass.Instance))
         {
             modifiers.FinalDamage *= 1.5f;
             return;
@@ -142,7 +143,7 @@ public class BloodBomb : ModNPC, ILocalizedModType
 
     public override void ModifyHitByProjectile(Projectile projectile, ref NPC.HitModifiers modifiers)
     {
-        if (modifiers.DamageType == TrueMeleeDamageClass.Instance)
+        if (modifiers.DamageType.CountsAsClass(TrueMeleeDamageClass.Instance))
         {
             modifiers.FinalDamage *= 1.5f;
             return;

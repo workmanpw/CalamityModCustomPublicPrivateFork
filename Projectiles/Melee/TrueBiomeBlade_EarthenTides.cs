@@ -37,6 +37,7 @@ namespace CalamityMod.Projectiles.Melee
         public override void SetDefaults()
         {
             Projectile.DamageType = DamageClass.Melee;
+            Projectile.ContinuouslyUpdateDamageStats = true;
             Projectile.width = Projectile.height = 70;
             Projectile.tileCollide = false;
             Projectile.friendly = true;
@@ -109,7 +110,7 @@ namespace CalamityMod.Projectiles.Melee
                 Charge++;
                 OverCharge--;
                 Projectile.timeLeft = 2;
-                if ((Charge / MaxCharge >= 0.25f && CurrentIndicator == 0f) || (Charge / MaxCharge >= 0.5f && CurrentIndicator == 1f) || (Charge / MaxCharge >= 0.75f && CurrentIndicator == 2f) && Owner.whoAmI == Main.myPlayer)
+                if ((Charge / MaxCharge >= 0.2f && CurrentIndicator == 0f) || (Charge / MaxCharge >= 0.4f && CurrentIndicator == 1f) || (Charge / MaxCharge >= 0.6f && CurrentIndicator == 2f) || (Charge / MaxCharge >= 0.8f && CurrentIndicator == 3f) && Owner.whoAmI == Main.myPlayer)
                 {
                     for (int s = 0; s < 2; s++)
                     {
@@ -126,7 +127,7 @@ namespace CalamityMod.Projectiles.Melee
                 if (Charge >= MaxCharge)
                 {
                     Charge = MaxCharge;
-                    if (Owner.whoAmI == Main.myPlayer && CurrentIndicator < 4f)
+                    if (Owner.whoAmI == Main.myPlayer && CurrentIndicator < 5f)
                     {
                         for (int s = 0; s < 5; s++)
                         {

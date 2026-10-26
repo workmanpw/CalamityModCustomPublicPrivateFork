@@ -1,6 +1,7 @@
 using CalamityMod.CalPlayer;
 using CalamityMod.CalPlayer.Dashes;
 using CalamityMod.Rarities;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
@@ -20,6 +21,10 @@ namespace CalamityMod.Items.Accessories
 
         public const int RamExplosionDamage = 100;
         public const float RamExplosionKnockback = 15f;
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<HolyFlames>()];
+        }
 
         public override void SetDefaults()
         {

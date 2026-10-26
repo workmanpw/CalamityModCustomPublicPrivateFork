@@ -1,5 +1,6 @@
 using System;
 using CalamityMod.Projectiles.Magic;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -20,11 +21,10 @@ namespace CalamityMod.Items.Weapons.Magic
         {
             Item.width = 52;
             Item.height = 74;
-            Item.damage = 8;
+            Item.damage = 10;
             Item.DamageType = DamageClass.Magic;
-            Item.mana = 8;
-            Item.useTime = 25;
-            Item.useAnimation = 25;
+            Item.mana = 9;
+            Item.useAnimation = Item.useTime = 25;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.noMelee = true;
             Item.knockBack = 3.5f;

@@ -2,8 +2,12 @@ using System;
 using CalamityMod.CalPlayer;
 using CalamityMod.Cooldowns;
 using CalamityMod.NPCs;
+using CalamityMod.NPCs.HiveMind;
+using CalamityMod.NPCs.Leviathan;
 using CalamityMod.NPCs.NormalNPCs;
+using CalamityMod.NPCs.Perforator;
 using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -22,7 +26,7 @@ namespace CalamityMod.Items.Accessories
     {
         public new string LocalizationCategory => "Items.Accessories";
         internal const float MaxBonus = 0.3f;
-        internal const float MaxDistance = 700f;
+        internal const float MaxDistance = 720f;
 
         public override void SetStaticDefaults()
         {
@@ -75,7 +79,7 @@ namespace CalamityMod.Items.Accessories
                 float generousHitboxWidth = Math.Max(nPC.Hitbox.Width / 2f, nPC.Hitbox.Height / 2f) + 100; // Adds some room so max bonus isnt when you're ON the hitbox
                 float intensity = Utils.Remap(Utils.Distance(player.Center, nPC.Center), MaxDistance + generousHitboxWidth, generousHitboxWidth, 1, 3, true); // We have to have this seperate from bonus, otherwise all effected enemies take damage based on the closest enemy
 
-                if (Utils.Distance(nPC.Center, player.Center) < MaxDistance + generousHitboxWidth && (nPC.IsAnEnemy(true, true, false) || nPC.type == ModContent.NPCType<SuperDummyNPC>()) && !nPC.dontTakeDamage)
+                if (Utils.Distance(nPC.Center, player.Center) < MaxDistance + generousHitboxWidth && (nPC.IsAnEnemy(true, true, false) || nPC.type == ModContent.NPCType<SuperDummyNPC>()) && !nPC.dontTakeDamage && !CalamityNPCSets.ProtectedHostileNPC[nPC.type])
                 {
                     float minDamageMult = 0.10f;
                     int maxTargets = 7;
@@ -110,8 +114,8 @@ namespace CalamityMod.Items.Accessories
             NPC closestTarget = player.Center.ClosestNPCAt(MaxDistance * 7); // extra range is to account for bonus range from massive targets
             if (closestTarget != null)
             {
-                float generousHitboxWidth = Math.Max(closestTarget.Hitbox.Width / 2f, closestTarget.Hitbox.Height / 2f) + 100; // Adds some room so max bonus isnt when you're ON the hitbox
-                bonus = Utils.Remap(Utils.Distance(player.Center, closestTarget.Center), MaxDistance + generousHitboxWidth, generousHitboxWidth, 0, MaxBonus, true);
+                Vector2 pointToCheck = Vector2.Clamp(player.Center, closestTarget.TopLeft, closestTarget.BottomRight);
+                bonus = Utils.Remap(Utils.Distance(player.Center, pointToCheck), MaxDistance, 80, 0, MaxBonus, true);
             }
             else
                 bonus = 0;

@@ -255,10 +255,10 @@ namespace CalamityMod.Projectiles.Summon
             //Increment attack cooldown
             if (Projectile.ai[1] > 0f)
             {
-                Projectile.ai[1]++;
+                Projectile.ai[1] += Main.rand.NextFloat(0.5f, 2f);
             }
             //Set the minion to be ready for attack
-            if (Projectile.ai[1] > 85f)
+            if (Projectile.ai[1] > 60f)
             {
                 Projectile.ai[1] = 0f;
                 Projectile.netUpdate = true;

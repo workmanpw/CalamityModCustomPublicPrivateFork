@@ -10,6 +10,10 @@ namespace CalamityMod.Items.Weapons.Summon
     public class CryogenicStaff : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Summon";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.Frostburn2];
+        }
         public override void SetDefaults()
         {
             Item.width = 82;

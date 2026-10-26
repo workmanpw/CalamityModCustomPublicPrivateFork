@@ -1,5 +1,6 @@
 using CalamityMod.Items.Materials;
 using CalamityMod.Projectiles.Magic;
+using CalamityMod.Systems.Collections;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -15,11 +16,17 @@ namespace CalamityMod.Items.Weapons.Magic
         public const int BurnOutReuseDelay = 150;
         public const float FizzleOutTime = 40f;
 
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<BrimstoneFlames>()];
+            CalamityItemSets.ExtraDebuffTooltip_Player[Type] = [ModContent.BuffType<BrimstoneFlames>()];
+        }
+
         public override void SetDefaults()
         {
             Item.width = 28;
             Item.height = 30;
-            Item.damage = 69;
+            Item.damage = 56;
             Item.DamageType = DamageClass.Magic;
             Item.mana = 8;
             Item.useTime = 20;
@@ -44,7 +51,7 @@ namespace CalamityMod.Items.Weapons.Magic
         {
             CreateRecipe().
                 AddIngredient(ItemID.SpellTome).
-                AddIngredient<UnholyCore>(5).
+                AddIngredient<UnholyCore>(8).
                 AddTile(TileID.Bookcases).
                 Register();
         }

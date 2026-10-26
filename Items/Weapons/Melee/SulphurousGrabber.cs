@@ -15,6 +15,7 @@ namespace CalamityMod.Items.Weapons.Melee
 
         public override void SetStaticDefaults()
         {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<Irradiated>()];
             ItemID.Sets.Yoyo[Type] = true;
             ItemID.Sets.GamepadExtraRange[Type] = 15;
             ItemID.Sets.GamepadSmartQuickReach[Type] = true;

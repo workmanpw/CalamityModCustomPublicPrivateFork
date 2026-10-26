@@ -11,7 +11,10 @@ namespace CalamityMod.Items.Weapons.Rogue
     {
         public static float Knockback = 5f;
         public static float Speed = 15f;
-
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<StaticDischarge>(), BuffID.Electrified];
+        }
         public override void SetDefaults()
         {
             Item.width = 24;

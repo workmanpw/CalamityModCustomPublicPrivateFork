@@ -10,6 +10,10 @@ namespace CalamityMod.Items.Weapons.Ranged
     public class FrostbiteBlaster : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Ranged";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.Frostburn2];
+        }
         public override void SetDefaults()
         {
             Item.width = 56;

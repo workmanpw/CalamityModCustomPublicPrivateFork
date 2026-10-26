@@ -50,7 +50,6 @@ namespace CalamityMod.Items.Armor.Auric
             modPlayer.silvaSet = true;
             modPlayer.silvaMage = true;
             modPlayer.auricSet = true;
-            player.crimsonRegen = true; // Inherited from Bloodflare
         }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
@@ -97,7 +96,7 @@ namespace CalamityMod.Items.Armor.Auric
                 AddIngredient<SilvaHeadMagic>().
                 AddIngredient<BloodflareHeadMagic>().
                 AddIngredient<TarragonHeadMagic>().
-                AddIngredient<AuricBar>(12).
+                AddIngredient<AuricBar>(10).
                 AddTile<CosmicAnvil>().
                 SortBeforeFirstRecipesOf(ModContent.ItemType<AuricTeslaBodyArmor>()).
                 Register();

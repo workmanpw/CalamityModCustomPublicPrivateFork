@@ -20,7 +20,7 @@ namespace CalamityMod.Items.Weapons.Melee
 
         public const int TrueMeleeHitHeal = 4;
 
-        public const int TrueMeleeGlacialStateTime = 30;
+        public const int TrueMeleeFrozenTime = 30;
 
         public const float SmallSlashDamageFactor = 0.4f;
 
@@ -38,10 +38,9 @@ namespace CalamityMod.Items.Weapons.Melee
         {
             Item.width = 60;
             Item.height = 66;
-            Item.damage = 145;
+            Item.damage = 120;
             Item.DamageType = DamageClass.Melee;
-            Item.useAnimation = 21;
-            Item.useTime = 21;
+            Item.useAnimation = Item.useTime = 21;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.useTurn = true;
             Item.knockBack = 7f;
@@ -60,8 +59,7 @@ namespace CalamityMod.Items.Weapons.Melee
         {
             CreateRecipe().
                 AddIngredient(ItemID.TerraBlade).
-                AddIngredient<UelibloomBar>(7).
-                AddIngredient<LivingShard>(9).
+                AddIngredient<UelibloomBar>(18).
                 AddTile(TileID.MythrilAnvil).
                 Register();
         }

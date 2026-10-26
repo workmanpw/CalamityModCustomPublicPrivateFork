@@ -9,6 +9,10 @@ namespace CalamityMod.Items.Weapons.Rogue
 {
     public class LeviathanTeeth : RogueWeapon
     {
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<HeavyBleeding>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 36;

@@ -3,6 +3,7 @@ using CalamityMod.Rarities;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using CalamityMod.Systems.Collections;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -13,6 +14,7 @@ namespace CalamityMod.Items.Weapons.Melee
         public new string LocalizationCategory => "Items.Weapons.Melee";
         public override void SetStaticDefaults()
         {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<MiracleBlight>()];
             ItemID.Sets.ItemsThatAllowRepeatedRightClick[Type] = true;
         }
 
@@ -20,7 +22,8 @@ namespace CalamityMod.Items.Weapons.Melee
         {
             Item.width = 134;
             Item.height = 54;
-            Item.damage = 3725;
+            Item.damage = 1400;
+            Item.crit = 18;
             Item.knockBack = 12f;
             Item.useTime = 5;
             Item.useAnimation = 25;
@@ -39,11 +42,9 @@ namespace CalamityMod.Items.Weapons.Melee
             Item.shoot = ModContent.ProjectileType<PhotonRipperProjectile>();
             Item.shootSpeed = 1f;
 
-            Item.rare = ModContent.RarityType<BurnishedAuric>();
+            Item.rare = ModContent.RarityType<ExoticRainbow>();
             Item.value = CalamityGlobalItem.RarityVioletBuyPrice;
         }
-
-        public override void ModifyWeaponCrit(Player player, ref float crit) => crit += 18;
 
         public override bool CanUseItem(Player player) => player.ownedProjectileCounts[Item.shoot] <= 0;
         public override bool AltFunctionUse(Player player) => true;

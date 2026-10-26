@@ -50,7 +50,6 @@ namespace CalamityMod.Items.Armor.Auric
             modPlayer.godSlayer = true;
             modPlayer.godSlayerRanged = true;
             modPlayer.auricSet = true;
-            player.crimsonRegen = true; // Inherited from Bloodflare
 
             if (modPlayer.godSlayerDashHotKeyPressed || (player.dashDelay != 0 && modPlayer.LastUsedDashID == GodslayerArmorDash.ID))
                 modPlayer.DeferredDashID = GodslayerArmorDash.ID;
@@ -101,7 +100,7 @@ namespace CalamityMod.Items.Armor.Auric
                 AddIngredient<GodSlayerHeadRanged>().
                 AddIngredient<BloodflareHeadRanged>().
                 AddIngredient<TarragonHeadRanged>().
-                AddIngredient<AuricBar>(12).
+                AddIngredient<AuricBar>(10).
                 AddTile<CosmicAnvil>().
                 SortBeforeFirstRecipesOf(ModContent.ItemType<AuricTeslaHeadMagic>()).
                 Register();

@@ -1,5 +1,6 @@
 using CalamityMod.Items.Materials;
 using CalamityMod.Projectiles.Magic;
+using CalamityMod.Systems.Collections;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -8,6 +9,10 @@ namespace CalamityMod.Items.Weapons.Magic
     public class EvergladeSpray : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.CursedInferno, BuffID.Ichor];
+        }
         public override void SetDefaults()
         {
             Item.width = 34;
@@ -32,12 +37,12 @@ namespace CalamityMod.Items.Weapons.Magic
         {
             CreateRecipe().
                 AddIngredient(ItemID.GoldenShower).
-                AddIngredient<PerennialBar>(3).
+                AddIngredient<PerennialBar>(10).
                 AddTile(TileID.Bookcases).
                 Register();
             CreateRecipe().
                 AddIngredient(ItemID.CursedFlames).
-                AddIngredient<PerennialBar>(3).
+                AddIngredient<PerennialBar>(10).
                 AddTile(TileID.Bookcases).
                 Register();
         }

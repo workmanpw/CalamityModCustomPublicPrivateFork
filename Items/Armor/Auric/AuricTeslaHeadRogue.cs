@@ -50,13 +50,11 @@ namespace CalamityMod.Items.Armor.Auric
             modPlayer.tarraSet = true;
             modPlayer.tarraThrowing = true;
             modPlayer.bloodflareSet = true;
-            modPlayer.bloodflareThrowing = true;
             modPlayer.godSlayer = true;
             modPlayer.godSlayerThrowing = true;
             modPlayer.auricSet = true;
             modPlayer.rogueStealthMax += SetBonusRogueStealth;
             modPlayer.wearingRogueArmor = true;
-            player.crimsonRegen = true; // Inherited from Bloodflare
 
             if (modPlayer.godSlayerDashHotKeyPressed || (player.dashDelay != 0 && modPlayer.LastUsedDashID == GodslayerArmorDash.ID))
                 modPlayer.DeferredDashID = GodslayerArmorDash.ID;
@@ -88,8 +86,8 @@ namespace CalamityMod.Items.Armor.Auric
                         Color[] armorColors = { AuricTeslaBodyArmor.tooltipTarragonColor, AuricTeslaBodyArmor.tooltipBloodflareColor, AuricTeslaBodyArmor.tooltipGodslayerColor };
                         var LocalizedText = CalamityUtils.GetTextFromModItem(Type, $"SetBonus{setBonusTooltipNumber}");
                         line.Text = (setBonusTooltipNumber == 3 ? LocalizedText.Format(RogueDamageBoostAtFullHealth.ToPercent(), SetBonusHurtDamageThreshold, CalamityKeybinds.GodSlayerDashHotKey.TooltipHotkeyString(), GodSlayerChestplate.DashCooldown.FramesToSeconds())
-                        : setBonusTooltipNumber == 2 ? LocalizedText.Format(DefenseBoostAboveHealthThreshold, DefenseBoostHealthThreshold.ToPercent())
-                        : LocalizedText.Format(CritsToActivateImmunity, ImmunityDuration.FramesToSeconds(), ImmunityCooldown.FramesToSeconds(), RogueDamageBoostWhileDebuffed.ToPercent()));
+                        : setBonusTooltipNumber == 2 ? LocalizedText.ToString()
+                        : LocalizedText.Format(CritsToActivateImmunity, ImmunityDuration.FramesToSeconds(), ImmunityCooldown.FramesToSeconds()));
                         line.OverrideColor = armorColors[setBonusTooltipNumber - 1];
                     }
                 }
@@ -106,7 +104,7 @@ namespace CalamityMod.Items.Armor.Auric
                 AddIngredient<GodSlayerHeadRogue>().
                 AddIngredient<BloodflareHeadRogue>().
                 AddIngredient<TarragonHeadRogue>().
-                AddIngredient<AuricBar>(12).
+                AddIngredient<AuricBar>(10).
                 AddTile<CosmicAnvil>().
                 SortBeforeFirstRecipesOf(ModContent.ItemType<AuricTeslaBodyArmor>()).
                 Register();

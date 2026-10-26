@@ -2,27 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.DataStructures;
 using CalamityMod.Enums;
 using CalamityMod.Events;
-using CalamityMod.NPCs;
 using CalamityMod.Particles;
 using CalamityMod.Projectiles.Boss.BrainOfCthulhu;
-using CalamityMod.Utilities.Daybreak;
 using CalamityMod.World;
 using Microsoft.CodeAnalysis;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Graphics.PackedVector;
-using ReLogic.Content;
 using Terraria;
 using Terraria.Audio;
 using Terraria.Chat;
-using Terraria.DataStructures;
 using Terraria.GameContent;
-using Terraria.Graphics.Effects;
-using Terraria.Graphics.Shaders;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -67,7 +59,8 @@ public class BrainOfCthulhuAI : VanillaAIOverride
 
     #region Health Gates
     internal static float DesperateOnslaughtCreeperHealthGate => 0.1f; //When the cumulative health % of all creepers falls below this value, BoC will begin its pre-stun attack upon entering its idle phase.
-    internal static float Phase2HealthGate => 0.5f; //When BoC's health % falls below this value, it will begin entering Phase 2
+    internal static float Phase2HealthGate => 0.7f; //When BoC's health % falls below this value, it will begin entering Phase 2
+    internal static float ForcedIllusionHealthGate => 0.25f; //When BoC's health % falls below this value, the next attack is forced to be the Illusion Trick
     #endregion
 
     internal static float DespawnRangeSQ => 36000000f;
@@ -83,7 +76,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
     internal static int CreeperChargeWindUpTime => 22;
     #endregion
 
-    internal static int StunDuration => 480;
+    internal static int StunDuration => 360;
 
     #region Creeper Swipes
     internal static int SwipesStartupDuration => 120;
@@ -253,6 +246,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
     internal float SpawnTime = 0;
     internal int SpawnDelay = 0;
     internal bool OnSecondCreeperPhase = false;
+    internal bool ForcedIllusionAttack = false;
 
     private bool isNegative = false;
     internal int AttackSign { get => isNegative ? -1 : 1; set => isNegative = value == -1; }
@@ -569,7 +563,9 @@ public class BrainOfCthulhuAI : VanillaAIOverride
             if (d > 592900) //770^2
                 distanceScaleFactor = 1 / (1 + (((float)Math.Sqrt(d) - 770) / 32f));
 
-            float spawnCounter = Time - Math.Abs(SpawnTime);
+            // Time spent in the spawn animation is shortened when summoned via item
+            float spawnAnimTimeReduction = (SummonedViaItem || BossRushEvent.BossRushActive) ? 120 : 0;
+            float spawnCounter = Time - Math.Abs(SpawnTime) + spawnAnimTimeReduction;
 
             if (spawnCounter < 180)
             {
@@ -686,7 +682,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
                     AttackCounter++;
 
                     if (SummonedViaItem || BossRushEvent.BossRushActive)
-                        SpawnDelay = 2;
+                        SpawnDelay = 1;
                     else
                         SpawnDelay = AttackCounter switch
                         {
@@ -1670,12 +1666,15 @@ public class BrainOfCthulhuAI : VanillaAIOverride
             float angleChange = MathHelper.Lerp(MathHelper.Pi / 24f, 0f, MathHelper.Clamp(Time / (ChaseTime * 0.666f), 0f, 1f));
             NPC.velocity = NPC.velocity.RotateDirectionTowards(NPC.DirectionTo(Target.Center).ToRotation(), angleChange) * (MathHelper.Lerp(ChaseMinSpeed, ChaseMaxSpeed, Time / ChaseTime) * speedUp * slowDown);
 
+            // Teleport ahead of the player's movement
             if (Time == ChaseTime)
             {
                 if (Main.netMode != NetmodeID.SinglePlayer)
                     SelectNewTarget();
-                Vector2 direction = Target.velocity.SafeNormalize(Vector2.UnitX * Target.direction).RotatedBy(Main.rand.NextFloat(-MathHelper.Pi / 3f, MathHelper.Pi / 3f));
-                AttackPosition = Target.Center + (direction * DefaultTeleportDistance);
+                Vector2 direction = Target.velocity.RotatedByRandom(MathHelper.Pi * 0.1f);
+                if (direction.Length() < 3.5f)
+                    direction = direction.SafeNormalize(Vector2.UnitX * Target.direction) * 3.5f;
+                AttackPosition = Target.Center + (direction * IdleTeleportDuration * 1.8f);
                 BoCAfterImages = [];
                 NPC.damage = 0;
                 NPC.netUpdate = true;
@@ -1739,26 +1738,35 @@ public class BrainOfCthulhuAI : VanillaAIOverride
                         NPC.rotation = 0;
                         ResetAttackValues();
 
-                        if (availableAttacks.Count == 0)
+                        if (!ForcedIllusionAttack && (NPC.life / (float)NPC.lifeMax) <= ForcedIllusionHealthGate)
                         {
-                            bool quickChoice = Main.rand.NextBool();
-                            availableAttacks = [
-                                BrainAIState.Bloodletting,
+                            ForcedIllusionAttack = true;
+                            AIState = BrainAIState.IllusionTrick;
+                            PreviousAttack = AIState;
+                        }
+                        else
+                        {
+                            if (availableAttacks.Count == 0)
+                            {
+                                bool quickChoice = Main.rand.NextBool();
+                                availableAttacks = [
+                                    BrainAIState.Bloodletting,
                                         quickChoice ? BrainAIState.SanguineScythes : BrainAIState.IllusionDash,
                                         Main.rand.NextBool() ? BrainAIState.Phase2Idle : BrainAIState.Bloodletting,
                                         quickChoice ? BrainAIState.IllusionDash : BrainAIState.SanguineScythes,
                                         BrainAIState.IllusionTrick
-                            ];
-                        }
+                                ];
+                            }
 
-                        AIState = availableAttacks[0];
-                        availableAttacks.RemoveAt(0);
-                        PreviousAttack = AIState;
+                            AIState = availableAttacks[0];
+                            availableAttacks.RemoveAt(0);
+                            PreviousAttack = AIState;
 
-                        if (AIState == BrainAIState.SanguineScythes)
-                        {
-                            Time = -31;
-                            BoCAfterImages = [];
+                            if (AIState == BrainAIState.SanguineScythes)
+                            {
+                                Time = -31;
+                                BoCAfterImages = [];
+                            }
                         }
 
                         NPC.netUpdate = true;
@@ -2853,7 +2861,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
             binaryWriter.Write(SpawnDelay);
         }
 
-        binaryWriter.WriteFlags(OnSecondCreeperPhase, isNegative, AttackFlag);
+        binaryWriter.WriteFlags(OnSecondCreeperPhase, ForcedIllusionAttack, isNegative, AttackFlag);
 
         binaryWriter.Write(AttackRotation);
         binaryWriter.Write(AttackTime);
@@ -2885,7 +2893,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
             SpawnDelay = binaryReader.ReadInt32();
         }
 
-        binaryReader.ReadFlags(out OnSecondCreeperPhase, out isNegative, out AttackFlag);
+        binaryReader.ReadFlags(out OnSecondCreeperPhase, out ForcedIllusionAttack, out isNegative, out AttackFlag);
 
         AttackRotation = binaryReader.ReadSingle();
         AttackTime = binaryReader.ReadSingle();
@@ -3096,7 +3104,7 @@ public class BrainOfCthulhuAI : VanillaAIOverride
         return false;
     }
 
-    public static int GetBrainOfCthuluCreepersCountRevDeath() => CalamityWorld.death ? 30 : 21;
+    public static int GetBrainOfCthuluCreepersCountRevDeath() => CalamityWorld.death ? 27 : 18;
 
     public static List<int> GetAllValidTargets(Vector2 brainPosition)
     {

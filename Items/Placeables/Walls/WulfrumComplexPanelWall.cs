@@ -17,10 +17,8 @@ namespace CalamityMod.Items.Placeables.Walls
 
         public override void AddRecipes()
         {
-            CreateRecipe(8).
-                AddIngredient<WulfrumMetalScrap>().
-                AddIngredient<AnodizedWulfrumMetal>().
-                AddIngredient<EnergyCore>().
+            CreateRecipe(4).
+                AddIngredient<WulfrumPlating>().
                 AddTile(TileID.WorkBenches).
                 Register();
         }

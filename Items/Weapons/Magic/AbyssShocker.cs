@@ -10,13 +10,17 @@ namespace CalamityMod.Items.Weapons.Magic
     public class AbyssShocker : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<StaticDischarge>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 86;
             Item.height = 32;
-            Item.damage = 27;
+            Item.damage = 30;
             Item.DamageType = DamageClass.Magic;
-            Item.mana = 10;
+            Item.mana = 14;
             Item.useAnimation = Item.useTime = 19;
             Item.knockBack = 0.25f;
             Item.shoot = ModContent.ProjectileType<LightningArc>();

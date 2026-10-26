@@ -9,6 +9,10 @@ namespace CalamityMod.Items.Weapons.Rogue
 {
     public class FrostyFlare : RogueWeapon
     {
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.Frostburn2, BuffID.Frozen];
+        }
         public override void SetDefaults()
         {
             Item.width = 10;

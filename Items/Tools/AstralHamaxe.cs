@@ -16,6 +16,7 @@ namespace CalamityMod.Items.Tools
             Item.width = 60;
             Item.height = 70;
             Item.damage = 80;
+            Item.crit = 25;
             Item.knockBack = 5f;
             Item.useTime = 5;
             Item.useAnimation = 20;
@@ -26,14 +27,11 @@ namespace CalamityMod.Items.Tools
             Item.DamageType = DamageClass.Melee;
             Item.useTurn = true;
             Item.useStyle = ItemUseStyleID.Swing;
-            Item.value = CalamityGlobalItem.RarityCyanBuyPrice;
+            Item.value = Item.sellPrice(gold: 4, silver: 50);
             Item.rare = ItemRarityID.Cyan;
             Item.UseSound = SoundID.Item1;
             Item.autoReuse = true;
         }
-
-        // Terraria seems to really dislike high crit values in SetDefaults
-        public override void ModifyWeaponCrit(Player player, ref float crit) => crit += 25;
 
         public override void MeleeEffects(Player player, Rectangle hitbox)
         {
@@ -52,7 +50,7 @@ namespace CalamityMod.Items.Tools
         public override void AddRecipes()
         {
             CreateRecipe().
-                AddIngredient<AstralBar>(8).
+                AddIngredient<AstralBar>(18).
                 AddTile(TileID.LunarCraftingStation).
                 Register();
         }

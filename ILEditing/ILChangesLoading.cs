@@ -3,7 +3,6 @@ using CalamityMod.Tiles.FurnitureExo;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent;
-using Terraria.GameContent.Biomes;
 using Terraria.GameContent.Drawing;
 using Terraria.GameContent.Events;
 using Terraria.GameContent.ItemDropRules;
@@ -64,6 +63,7 @@ namespace CalamityMod.ILEditing
 
             // Mechanics / features
             On_NPC.ApplyTileCollision += AllowFusionFeederToDigThroughSand;
+            On_NPC.RerollVariation += AllowPatronNameRerollsOnLicenseUse;
             IL_Player.ApplyEquipFunctional += ScopesRequireVisibilityToZoom;
             IL_Player.Hurt_PlayerDeathReason_int_int_refHurtInfo_bool_bool_int_bool_float_float_float += DodgeMechanicAdjustments;
             On_Player.PutHallowedArmorSetBonusOnCooldown += AddHolyProtectionCooldown;
@@ -104,13 +104,19 @@ namespace CalamityMod.ILEditing
             // Damage and health balance
             On_Main.DamageVar_float_int_float += AdjustDamageVariance;
             IL_NPC.ScaleStats_ApplyExpertTweaks += RemoveExpertHardmodeScaling;
+            IL_Projectile.Damage += PreventVanillaWhipTagCrits;
             IL_Projectile.Damage += VanillaBossResistChanges;
+            IL_Projectile.AI_026 += PygmyAggroOnClosestPointInHitbox;
             IL_Projectile.AI_099_2 += LimitTerrarianProjectiles;
+            On_Projectile.AI_015_Flails += FlailsNoLongerAffectedByPlayerVelocity;
+            IL_Projectile.AI_015_Flails += IncreaseFlowerPowRetSpeed;
             IL_Projectile.AI_120_StardustGuardian += StardustGuardianAttackBuffs;
             On_Player.ConsumeSolarFlare += SolarWingsDashChange;
             On_Projectile.IsDamageDodgable += GFBNurseMeteorUndodgeable;
             IL_Player.UpdateBuffs += UpdateBuffsBalancingChanges;
             IL_Player.ApplyVanillaHurtEffectModifiers += RemoveBeetleAndSolarFlareMultiplicativeDR;
+            On_Projectile.ghostHeal += AdjustSpectreHealing;
+            On_Projectile.vampireHeal += AdjustVampireHealing;
 
             // Movement speed balance
             IL_Player.UpdateJumpHeight += FixJumpHeightBoosts;
@@ -136,6 +142,8 @@ namespace CalamityMod.ILEditing
             IL_UIWorldCreation.AddWorldSizeOptions += SwapSmallDescriptionKey;
             On_WorldGen.MakeDungeon += LimitDungeonEntranceXPosition;
             IL_WorldGen.DungeonHalls += LimitDungeonHallsXPosition;
+            IL_WorldGen.IslandHouse += MakeFledgingWingsMoreCommon;
+            IL_WorldGen.AddBuriedChest_int_int_int_bool_int_bool_ushort += DisableFledglingWingsSecondary;
 
             // Removal of vanilla stupidity
             IL_Player.StatusFromNPC += RemoveExpertBrainRandomDebuffs;
@@ -148,7 +156,6 @@ namespace CalamityMod.ILEditing
             IL_Item.TryGetPrefixStatMultipliersForItem += RelaxPrefixRequirements;
             On_NPC.SlimeRainSpawns += PreventBossSlimeRainSpawns;
             On_ShimmerTransforms.IsItemTransformLocked += AdjustShimmerRequirements;
-            On_Projectile.AI_015_Flails += FlailsNoLongerAffectedByPlayerVelocity;
 
             IL_Projectile.CanExplodeTile += MakeMeteoriteExplodable;
             IL_Main.UpdateTime_StartNight += BloodMoonsRequire200MaxLife;
@@ -165,11 +172,6 @@ namespace CalamityMod.ILEditing
             On_Player.ItemCheck_UseEventItems += ApplyCelestialSigilChanges;
             IL_Main.DrawInfoAccs += RemoveDamageConditionFromRadar;
             //On_ShopHelper.ApplyNpcRelationshipEffect += AllowMultipleLikedNPCs;
-
-            On_Player.UpdateControlHolds += DelayGravity;
-            On_PlayerInput.SetZoom_MouseInWorld += GravityMouse;
-            On_Main.DrawPlayerChatBubbles += UI_Unflip_Start;
-            On_Main.DrawInterface += UI_Unflip_End;
 
             // Fix vanilla not accounting for spritebatch modification in held projectile drawing
             On_PlayerDrawLayers.DrawHeldProj += FixHeldProjectileBlendState;

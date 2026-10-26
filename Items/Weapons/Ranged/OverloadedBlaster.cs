@@ -15,6 +15,10 @@ namespace CalamityMod.Items.Weapons.Ranged
 
         public static int AmmoSavedPercent = 25;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(AmmoSavedPercent);
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.Slimed];
+        }
         public override void SetDefaults()
         {
             Item.width = 42;

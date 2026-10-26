@@ -40,8 +40,8 @@ namespace CalamityMod.Items.Weapons.Summon
         #region Damage Balancing Properties
 
 
-        //Sage Poison's damage  is kept in the Sage Poison file
-        public static float ActiveAttackSlashDmgMult => 5f;
+        //Sage Poison's damage is kept in the Sage Poison file
+        public static float ActiveAttackSlashDmgMult => 4f;
 
         //Note: the following two only apply when not using the active attack
         public static float AxeDmgMult => 1.25f;
@@ -77,7 +77,7 @@ namespace CalamityMod.Items.Weapons.Summon
         {
             Item.width = 26;
             Item.height = 36;
-            Item.damage = 60;
+            Item.damage = 55;
             Item.DamageType = DamageClass.Summon;
             Item.mana = 10;
             Item.useAnimation = Item.useTime = 24;
@@ -92,21 +92,17 @@ namespace CalamityMod.Items.Weapons.Summon
             Item.shoot = ModContent.ProjectileType<ViridVanguardBlade>();
             Item.rare = ModContent.RarityType<Turquoise>();
         }
-
-        public override bool CanRightClick()
+        public override void HoldItem(Player player)
         {
-            if (!Main.keyState.PressingShift())
-                return false;
-            return true;
-        }
-        public override void RightClick(Player player)
-        {
-            Main.LocalPlayer.Calamity().InvertExaltationLineRotationDirections = !Main.LocalPlayer.Calamity().InvertExaltationLineRotationDirections;
-            if (Main.netMode != NetmodeID.SinglePlayer)
-                ExaltationDirectionSyncPacket.Send(Main.LocalPlayer.Calamity());
+            if (Main.myPlayer == player.whoAmI && Item.JustPressedKeybind())
+            {
+                Main.LocalPlayer.Calamity().InvertExaltationLineRotationDirections = !Main.LocalPlayer.Calamity().InvertExaltationLineRotationDirections;
+                if (Main.netMode != NetmodeID.SinglePlayer)
+                    ExaltationDirectionSyncPacket.Send(Main.LocalPlayer.Calamity());
+            }
         }
 
-        public override bool ConsumeItem(Player player) => false;
+        public override void ModifyTooltips(List<TooltipLine> tooltips) => tooltips.IntegrateDynamicHotkey(Item);
 
         public override bool PreDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
         {
@@ -171,7 +167,7 @@ namespace CalamityMod.Items.Weapons.Summon
             CreateRecipe().
                 AddIngredient<IgneousExaltation>().
                 AddIngredient<ViralSprout>().
-                AddIngredient<UelibloomBar>(15).
+                AddIngredient<UelibloomBar>(12).
                 AddTile(TileID.MythrilAnvil).
                 Register();
         }

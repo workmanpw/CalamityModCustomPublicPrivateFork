@@ -11,7 +11,7 @@ namespace CalamityMod.Items.Accessories.Wings
     [AutoloadEquip(EquipType.Wings)]
     public class StarlightWings : BaseWings
     {
-        public override void SetStaticDefaults() => ArmorIDs.Wing.Sets.Stats[Item.wingSlot] = new WingStats(160, 7.5f, 1.5f);
+        public override void SetStaticDefaults() => ArmorIDs.Wing.Sets.Stats[Item.wingSlot] = new WingStats(170, 7.5f, 1.5f);
 
         public override void SetDefaults()
         {
@@ -46,7 +46,7 @@ namespace CalamityMod.Items.Accessories.Wings
         {
             CreateRecipe().
                 AddIngredient(ItemID.SoulofFlight, 20).
-                AddIngredient<CryonicBar>(5).
+                AddIngredient<CryonicBar>(10).
                 AddTile(TileID.MythrilAnvil).
                 Register();
         }

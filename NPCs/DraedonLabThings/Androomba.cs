@@ -13,6 +13,7 @@ using Terraria.ModLoader;
 
 namespace CalamityMod.NPCs.DraedonLabThings
 {
+    [HeavyKnockbackWhitelisted]
     public class Androomba : ModNPC
     {
 
@@ -150,12 +151,6 @@ namespace CalamityMod.NPCs.DraedonLabThings
                     }
                     break;
             }
-
-            // Force bestiary unlock
-            if (Main.netMode != NetmodeID.MultiplayerClient && Main.BestiaryTracker.Kills.GetKillCount(NPC) <= 0)
-            {
-                Main.BestiaryTracker.Kills.RegisterKill(NPC);
-            }
         }
 
         public void ChangeAI(int phase)
@@ -195,7 +190,7 @@ namespace CalamityMod.NPCs.DraedonLabThings
                     NPC.frame.Y = 1;
                 }
             }
-            // Suprise!
+            // Surprise!
             else if (NPC.ai[0] == 1)
             {
                 if (NPC.frame.Y < frameHeight * 5)

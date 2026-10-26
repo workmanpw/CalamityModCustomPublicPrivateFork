@@ -71,6 +71,7 @@ namespace CalamityMod
     internal class Downed
     {
         public static readonly Func<bool> DownedDesertScourge = () => DownedBossSystem.downedDesertScourge;
+        public static readonly Func<bool> DownedHorribleHog = () => DownedBossSystem.downedHorribleHog;
         public static readonly Func<bool> DownedGiantClam = () => DownedBossSystem.downedCLAM;
         public static readonly Func<bool> DownedCrabulon = () => DownedBossSystem.downedCrabulon;
         public static readonly Func<bool> DownedHiveMind = () => DownedBossSystem.downedHiveMind;
@@ -1173,8 +1174,7 @@ namespace CalamityMod
             RegisterSummon(ItemType<HerringStaff>(), BuffType<Herring>(), ProjectileType<HerringMinion>());
             RegisterSummon(ItemType<EyeOfNight>(), BuffType<EyeOfNightBuff>(), ProjectileType<EyeOfNightSummon>());
             RegisterSummon(ItemType<FleshOfInfidelity>(), BuffType<FleshBallBuff>(), ProjectileType<FleshBallMinion>());
-            RegisterSummon(ItemType<CorroslimeStaff>(), BuffType<Corroslime>(), ProjectileType<CorroslimeMinion>());
-            RegisterSummon(ItemType<CrimslimeStaff>(), BuffType<Crimslime>(), ProjectileType<CrimslimeMinion>());
+            RegisterSummon(ItemType<BlightedSlimeStaff>(), BuffType<BlightedSlime>(), ProjectileType<BlightedSlimeMinion>());
             RegisterSummon(ItemType<BlackHawkRemote>(), BuffType<BlackHawkBuff>(), ProjectileType<BlackHawkSummon>());
             RegisterSummon(ItemType<CausticStaff>(), BuffType<CausticStaffBuff>(), ProjectileType<CausticStaffSummon>());
             RegisterSummon(ItemType<AncientIceChunk>(), BuffType<IceClasperBuff>(), ProjectileType<IceClasperMinion>());
@@ -1204,7 +1204,7 @@ namespace CalamityMod
             RegisterSummon(ItemType<ViridVanguard>(), BuffType<ViridVanguardBuff>(), ProjectileType<ViridVanguardBlade>());
             RegisterSummon(ItemType<DragonbloodDisgorger>(), BuffType<SkeletalDragonsBuff>(), ProjectileType<SkeletalDragonMother>());
             RegisterSummon(ItemType<Cosmilamp>(), BuffType<CosmilampBuff>(), ProjectileType<CosmilampMinion>());
-            RegisterSummon(ItemType<VoidConcentrationStaff>(), BuffType<VoidConcentrationBuff>(), ProjectileType<VoidConcentrationAura>());
+            RegisterSummon(ItemType<VoidConcentrationStaff>(), BuffType<VoidConcentrationBuff>(), ProjectileType<VoidConcentrationMinion>());
             RegisterSummon(ItemType<EtherealSubjugator>(), BuffType<Phantom>(), ProjectileType<PhantomGuy>());
             RegisterSummon(ItemType<CalamarisLament>(), BuffType<CalamarisLamentBuff>(), ProjectileType<CalamarisLamentMinion>());
             RegisterSummon(ItemType<GammaHeart>(), BuffType<GammaHydraBuff>(), ProjectileType<GammaHead>());

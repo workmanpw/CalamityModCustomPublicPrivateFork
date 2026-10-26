@@ -47,7 +47,6 @@ namespace CalamityMod.Items.Armor.Bloodflare
             modPlayer.bloodflareSet = true;
             modPlayer.bloodflareRanged = true;
             player.setBonus = this.GetLocalization("SetBonus").Format(CalamityUtils.GetArmorSetBonusKey(), SoulCooldown.FramesToSeconds(), BloodBombCooldown.FramesToSeconds());
-            player.crimsonRegen = true;
         }
 
         public override void UpdateEquip(Player player)
@@ -61,7 +60,8 @@ namespace CalamityMod.Items.Armor.Bloodflare
         public override void AddRecipes()
         {
             CreateRecipe().
-                AddIngredient<BloodstoneCore>(11).
+                AddIngredient<Bloodstone>(25).
+                AddIngredient<BloodOrb>(10).
                 AddIngredient<RuinousSoul>(2).
                 AddTile(TileID.MythrilAnvil).
                 SortBeforeFirstRecipesOf(ModContent.ItemType<BloodflareHeadMagic>()).

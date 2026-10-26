@@ -25,6 +25,12 @@ namespace CalamityMod.Projectiles.Melee
         public float StarTimer = 0f;
         public float StarFrequency = 47f;
 
+        public override void SetDefaults()
+        {
+            base.SetDefaults();
+            Projectile.DamageType = MeleeRangedHybridDamageClass.Instance;
+        }
+
         public override void HoldoutAI()
         {
             if (Owner.CantUseHoldout())
@@ -60,7 +66,7 @@ namespace CalamityMod.Projectiles.Melee
                 SoundEngine.PlaySound(CrystylCrusher.ChargeSound, Projectile.Center, _ => new ProjectileAudioTracker(Projectile).IsActiveAndInGame());
             if (Timer == LaserChargeTime && Main.myPlayer == Projectile.owner)
             {
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), GunTipPosition, Projectile.velocity, ModContent.ProjectileType<PrismaticMagicCircle>(), (int)(Projectile.damage * LaserDamageMult), Projectile.knockBack, Projectile.owner);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), GunTipPosition, Projectile.velocity, ModContent.ProjectileType<PrismaticMagicCircle>(), (int)(Projectile.originalDamage * LaserDamageMult), Projectile.knockBack, Projectile.owner);
             }
         }
 

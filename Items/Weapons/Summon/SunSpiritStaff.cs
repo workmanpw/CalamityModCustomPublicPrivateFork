@@ -17,7 +17,7 @@ namespace CalamityMod.Items.Weapons.Summon
         {
             Item.width = 44;
             Item.height = 48;
-            Item.damage = 25;
+            Item.damage = 22;
             Item.mana = 10;
             Item.useAnimation = Item.useTime = 36;
             Item.useStyle = ItemUseStyleID.Swing;
@@ -58,8 +58,9 @@ namespace CalamityMod.Items.Weapons.Summon
         public override void AddRecipes()
         {
             CreateRecipe().
-                AddIngredient(ItemID.SandstoneBrick, 20).
-                AddIngredient<StormlionMandible>(2).
+                AddIngredient(ItemID.Amber, 5).
+                AddIngredient(ItemID.AntlionMandible, 3).
+                AddIngredient(ItemID.PalmWood, 10).
                 AddTile(TileID.Anvils).
                 Register();
         }

@@ -20,6 +20,7 @@ namespace CalamityMod.Items.Weapons.Ranged
             Item.height = 46;
             Item.DamageType = DamageClass.Ranged;
             Item.damage = 740;
+            Item.crit = 15;
             Item.knockBack = 16f;
             Item.useTime = Item.useAnimation = 74;
             Item.autoReuse = true;
@@ -37,9 +38,6 @@ namespace CalamityMod.Items.Weapons.Ranged
             Item.useAmmo = AmmoID.Rocket;
         }
 
-        // Terraria seems to really dislike high crit values in SetDefaults
-        public override void ModifyWeaponCrit(Player player, ref float crit) => crit += 15;
-
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
             position += velocity.SafeNormalize(Vector2.UnitX) * 48f;
@@ -54,7 +52,6 @@ namespace CalamityMod.Items.Weapons.Ranged
                 AddIngredient(ItemID.RocketLauncher).
                 AddRecipeGroup("IronBar", 50).
                 AddIngredient<DivineGeode>(5).
-                AddIngredient(ItemID.TigerSkin).
                 AddTile(TileID.MythrilAnvil).
                 Register();
         }

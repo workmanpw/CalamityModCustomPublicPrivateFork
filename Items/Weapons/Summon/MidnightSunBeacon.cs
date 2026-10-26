@@ -1,6 +1,7 @@
 using CalamityMod.Items.Materials;
 using CalamityMod.Projectiles.Summon;
 using CalamityMod.Rarities;
+using CalamityMod.Systems.Collections;
 using CalamityMod.Tiles.Furniture.CraftingStations;
 using Microsoft.Xna.Framework;
 using Terraria;
@@ -14,6 +15,10 @@ namespace CalamityMod.Items.Weapons.Summon
     {
         public new string LocalizationCategory => "Items.Weapons.Summon";
         public const float MachineGunRate = 18f;
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<AuricRebuke>()];
+        }
 
         public override void SetDefaults()
         {
@@ -45,8 +50,8 @@ namespace CalamityMod.Items.Weapons.Summon
         {
             CreateRecipe().
                 AddIngredient(ItemID.XenoStaff).
-                AddIngredient(ItemID.MoonlordTurretStaff).
                 AddIngredient<AuricBar>(5).
+                AddIngredient<DarksunFragment>(15).
                 AddTile<CosmicAnvil>().
                 Register();
         }

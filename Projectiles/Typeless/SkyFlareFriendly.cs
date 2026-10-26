@@ -50,6 +50,10 @@ namespace CalamityMod.Projectiles.Typeless
             return false;
         }
 
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            target.AddBuff(ModContent.BuffType<Dragonfire>(), 300);
+        }
         public override void OnKill(int timeLeft)
         {
             SoundEngine.PlaySound(SoundID.Item14, Projectile.position);

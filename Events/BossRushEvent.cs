@@ -186,7 +186,13 @@ namespace CalamityMod.Events
 
                 new Boss(NPCID.QueenBee, permittedNPCs: new int[] { NPCID.Bee, NPCID.BeeSmall, NPCID.LittleHornetHoney, NPCID.HornetHoney, NPCID.BigHornetHoney }),
 
-                new Boss(NPCID.Deerclops),
+                new Boss(NPCID.Deerclops, spawnContext: type =>
+                {
+                    Player plr = Main.player[ClosestPlayerToWorldCenter];
+                    int deer = NPC.NewNPC(Source, (int)plr.Center.X, (int)(plr.Center.Y - 400f), type, 1);
+                    Main.npc[deer].timeLeft *= 20;
+                    CalamityUtils.BossAwakenMessage(deer);
+                } ),
 
                 new Boss(NPCID.SkeletronHead, TimeChangeContext.Night, type =>
                 {
@@ -580,12 +586,14 @@ namespace CalamityMod.Events
                 // Cooldown and boss spawn.
                 if (BossRushSpawnCountdown <= 0 && BossRushStage < Bosses.Count)
                 {
-                    // Cooldown before next boss spawns.
+                    // Cooldown before next boss spawns. Defaults to 1 second.
                     BossRushSpawnCountdown = 60;
 
-                    // Increase cooldown post-Moon Lord.
+                    // Cooldown increases to 3 seconds in tier 4 and 4 seconds in tier 5.
                     if (BossRushStage >= Bosses.FindIndex(boss => boss.EntityID == NPCID.MoonLordCore))
-                        BossRushSpawnCountdown += 180;
+                        BossRushSpawnCountdown += 120;
+                    if (BossRushStage >= Bosses.FindIndex(boss => boss.EntityID == ModContent.NPCType<DevourerofGodsHead>()))
+                        BossRushSpawnCountdown += 60;
 
                     // Override the spawn countdown if specified.
                     if (BossRushStage < Bosses.Count - 1 && Bosses[BossRushStage + 1].SpecialSpawnCountdown != -1)
@@ -685,6 +693,18 @@ namespace CalamityMod.Events
                 }
             }
 
+            // Both Twins must be killed to progress.
+            else if (npc.type == NPCID.Spazmatism || npc.type == NPCID.Retinazer)
+            {
+                int bossType = npc.type == NPCID.Spazmatism ? NPCID.Retinazer : NPCID.Spazmatism;
+                if (!NPC.AnyNPCs(bossType))
+                {
+                    BossRushStage++;
+                    CalamityUtils.KillAllHostileProjectiles();
+                    HostileProjectileKillCounter = 3;
+                }
+            }
+
             // Anahita and Leviathan manually check for each other (this probably isn't necessary).
             else if (npc.type == ModContent.NPCType<Anahita>() || npc.type == ModContent.NPCType<Leviathan>())
             {
@@ -700,7 +720,8 @@ namespace CalamityMod.Events
             // Killing any split Deus head ends the fight instantly. You don't need to kill both.
             else if (npc.type == ModContent.NPCType<AstrumDeusHead>() && npc.Calamity().newAI[0] != 0f)
             {
-                BossRushStage++;
+                if (BossRushStage <= Bosses.FindIndex(boss => boss.EntityID == ModContent.NPCType<AstrumDeusHead>()))
+                    BossRushStage++;
                 CalamityUtils.KillAllHostileProjectiles();
                 HostileProjectileKillCounter = 3;
             }

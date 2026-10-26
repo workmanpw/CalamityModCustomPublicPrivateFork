@@ -22,6 +22,7 @@ namespace CalamityMod.Projectiles.Melee
             Projectile.width = Projectile.height = 512;
             Projectile.friendly = true;
             Projectile.DamageType = MeleeRangedHybridDamageClass.Instance;
+            Projectile.ContinuouslyUpdateDamageStats = true;
             Projectile.tileCollide = false;
             Projectile.timeLeft = Lifetime;
         }
@@ -61,7 +62,7 @@ namespace CalamityMod.Projectiles.Melee
                 SoundEngine.PlaySound(SoundID.Item68, Projectile.Center);
                 SoundEngine.PlaySound(Items.Weapons.DraedonsArsenal.TeslaCannon.FireSound with { Pitch = 1f });
                 Vector2 spawnPos = Vector2.Lerp(Projectile.Center, Owner.Center, 0.5f);
-                Projectile.NewProjectile(Projectile.GetSource_FromThis(), spawnPos, Projectile.velocity, ModContent.ProjectileType<PrismaticRay>(), Projectile.damage, Projectile.knockBack, Projectile.owner);
+                Projectile.NewProjectile(Projectile.GetSource_FromThis(), spawnPos, Projectile.velocity, ModContent.ProjectileType<PrismaticRay>(), Projectile.originalDamage, Projectile.knockBack, Projectile.owner);
             }
         }
 

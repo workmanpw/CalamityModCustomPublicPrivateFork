@@ -8,10 +8,14 @@ namespace CalamityMod.Items.Weapons.Rogue
 {
     public class UrchinStinger : RogueWeapon
     {
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<Irradiated>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 10;
-            Item.height = 26;
+            Item.height = 32;
             Item.damage = 13;
             Item.DamageType = RogueDamageClass.Instance;
             Item.useAnimation = Item.useTime = 17;

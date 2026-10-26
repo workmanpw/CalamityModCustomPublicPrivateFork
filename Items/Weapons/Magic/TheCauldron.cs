@@ -20,6 +20,7 @@ namespace CalamityMod.Items.Weapons.Magic
             {
                 Glow = ModContent.Request<Texture2D>(Texture + "Glow");
             }
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.OnFire];
         }
         public override void SetDefaults()
         {
@@ -31,7 +32,7 @@ namespace CalamityMod.Items.Weapons.Magic
             Item.useStyle = ItemUseStyleID.Swing;
             Item.useTime = Item.useAnimation = 60;
             Item.knockBack = 8f;
-            Item.mana = 18;
+            Item.mana = 30;
             Item.UseSound = SoundID.DD2_MonkStaffSwing;
             Item.autoReuse = true;
             Item.value = CalamityGlobalItem.RarityOrangeBuyPrice;

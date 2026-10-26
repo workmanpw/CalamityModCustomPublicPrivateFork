@@ -19,7 +19,10 @@ namespace CalamityMod.Buffs.DamageOverTime
         // This deals 600 DPS per stack, is boosted by ranged stats and can supercrit.
         internal static int BaseDamage = 120;
         internal static int FramesPerDamageTick = 12;
-
+        public static DebuffData debuffData = new DebuffData()
+        {
+            EnemyLostRegen = BaseDamage
+        };
         public override void SetStaticDefaults()
         {
             Main.debuff[Type] = true;
@@ -68,6 +71,7 @@ namespace CalamityMod.Buffs.DamageOverTime
                     Projectile tick = Projectile.NewProjectileDirect(target.GetSource_FromThis(), target.Center, Vector2.Zero, ModContent.ProjectileType<DirectStrike>(), bleedTickDamage, 0f, applicator.whoAmI, target.whoAmI);
 
                     tick.DamageType = DamageClass.Ranged; // Uncommon for DirectStrikes, but it needs to be able to crit.
+                    tick.CritChance = (int)applicator.GetTotalCritChance(DamageClass.Ranged);
 
                     // All ticks of Shred have a 3x base crit multiplier and have supercrits enabled.
                     CalamityGlobalProjectile cgp = tick.Calamity();

@@ -46,7 +46,6 @@ namespace CalamityMod.Items.Armor.Bloodflare
             modPlayer.bloodflareSummon = true;
             modPlayer.WearingPostMLSummonerSet = true;
             player.setBonus = this.GetLocalization("SetBonus").Format(SetBonusMinionSlotBoost, SetBonusSummonDamageBoost.ToPercent(), DefenseBoostBelowHealthThreshold, DefenseBoostHealthThreshold.ToPercent());
-            player.crimsonRegen = true;
             player.maxMinions += SetBonusMinionSlotBoost;
             player.GetDamage<SummonDamageClass>() += SetBonusSummonDamageBoost;
         }
@@ -60,7 +59,8 @@ namespace CalamityMod.Items.Armor.Bloodflare
         public override void AddRecipes()
         {
             CreateRecipe().
-                AddIngredient<BloodstoneCore>(11).
+                AddIngredient<Bloodstone>(25).
+                AddIngredient<BloodOrb>(10).
                 AddIngredient<RuinousSoul>(2).
                 AddTile(TileID.MythrilAnvil).
                 SortBeforeFirstRecipesOf(ModContent.ItemType<BloodflareHeadRogue>()).

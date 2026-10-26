@@ -33,7 +33,7 @@ namespace CalamityMod.Items.Armor.OmegaBlue
             Item.width = 18;
             Item.height = 18;
             Item.value = CalamityGlobalItem.RarityPureGreenBuyPrice;
-            Item.defense = 22;
+            Item.defense = 15;
             Item.rare = ModContent.RarityType<PureGreen>();
         }
 
@@ -48,7 +48,7 @@ namespace CalamityMod.Items.Armor.OmegaBlue
         {
             CreateRecipe().
                 AddIngredient<ReaperTooth>(4).
-                AddIngredient<DepthCells>(15).
+                AddIngredient<DepthCells>(20).
                 AddIngredient<RuinousSoul>(2).
                 AddTile(TileID.MythrilAnvil).
                 Register();

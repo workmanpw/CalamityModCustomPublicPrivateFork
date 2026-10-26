@@ -70,7 +70,7 @@ namespace CalamityMod.Projectiles.Summon
                 if (Projectile.ai[0] % 12 == 11)
                 {
                     int beeCount = Main.rand.Next(1, 3);
-                    if (Owner.strongBees && Main.rand.NextBool(3))
+                    if (Owner.strongBees)
                         ++beeCount;
 
                     for (int i = 0; i < beeCount; i++)
@@ -80,7 +80,8 @@ namespace CalamityMod.Projectiles.Summon
                         bee.usesLocalNPCImmunity = true;
                         bee.localNPCHitCooldown = 10;
                         bee.penetrate = 2;
-                        bee.DamageType = DamageClass.Generic;
+                        bee.DamageType = DamageClass.Summon;
+                        bee.CritChance = 0;
                     }
                 }
             }

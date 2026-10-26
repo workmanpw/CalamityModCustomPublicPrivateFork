@@ -22,8 +22,7 @@ namespace CalamityMod.Items.Fishing.FishingRods
         {
             Item.width = 24;
             Item.height = 28;
-            Item.useAnimation = 8;
-            Item.useTime = 8;
+            Item.useAnimation = Item.useTime = 8;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.UseSound = SoundID.Item1;
             Item.fishingPole = 45;
@@ -55,7 +54,7 @@ namespace CalamityMod.Items.Fishing.FishingRods
         {
             CreateRecipe().
                 AddIngredient(ItemID.HotlineFishingHook).
-                AddIngredient<ScoriaBar>(6).
+                AddIngredient<ScoriaBar>(8).
                 AddTile(TileID.MythrilAnvil).
                 Register();
         }

@@ -17,6 +17,7 @@ namespace CalamityMod.Items.Accessories
         {
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(6, 5));
             ItemID.Sets.AnimatesAsSoul[Type] = true;
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<VermillionFlux>()];
         }
 
         public override void SetDefaults()

@@ -12,9 +12,10 @@ namespace CalamityMod.Items.Potions.Food
     {
         public new string LocalizationCategory => "Items.Potions";
 
-        public static int RedWineBuffedHealValue = 250;
-        public static int RedWineBuffedRegenLoss = 4;
-        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(RedWineBuffedHealValue, RedWineBuffedRegenLoss.ToRegenPerSecond());
+        public static int RedWineHealValue = 200;
+        public static int RedWineRegenLoss = 4;
+        public static int RedWineRegenLossDuration = CalamityUtils.SecondsToFrames(15);
+        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(RedWineRegenLoss.ToRegenPerSecond());
 
         public override void SetStaticDefaults()
         {
@@ -26,6 +27,20 @@ namespace CalamityMod.Items.Potions.Food
                 new Color(108, 47, 16)
             };
             ItemID.Sets.IsFood[Type] = true;
+        }
+
+        public override void UpdateInventory(Player player)
+        {
+            if (player.HasBuff<RedWineBuff>())
+            {
+                Item.healLife = RedWineHealValue;
+                Item.potion = true;
+            }
+            else
+            {
+                Item.healLife = 0;
+                Item.potion = false;
+            }
         }
 
         public override void SetDefaults()
@@ -45,7 +60,8 @@ namespace CalamityMod.Items.Potions.Food
         {
             // 5 minutes for both
             player.AddBuff(BuffID.WellFed, Item.buffTime);
-            player.AddBuff(ModContent.BuffType<BaguetteBuff>(), Item.buffTime);
+            if (player.HasBuff<RedWineBuff>())
+                player.AddBuff(ModContent.BuffType<BaguetteBuff>(), RedWineRegenLossDuration);
         }
 
         public override void AddRecipes()

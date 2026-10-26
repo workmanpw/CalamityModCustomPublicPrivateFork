@@ -25,7 +25,7 @@ namespace CalamityMod.Items.Weapons.Magic
             Item.height = 54;
             Item.damage = 80;
             Item.DamageType = DamageClass.Magic;
-            Item.mana = 10;
+            Item.mana = 15;
             Item.useAnimation = Item.useTime = 4;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.noMelee = true;
@@ -69,8 +69,8 @@ namespace CalamityMod.Items.Weapons.Magic
             CreateRecipe().
                 AddIngredient<Genesis>().
                 AddIngredient<Wingman>().
-                AddIngredient<CosmiliteBar>(10).
-                AddIngredient<GalacticaSingularity>(5).
+                AddIngredient<CosmiliteBar>(8).
+                AddIngredient<EndothermicEnergy>(20).
                 AddTile<CosmicAnvil>().
                 Register();
         }

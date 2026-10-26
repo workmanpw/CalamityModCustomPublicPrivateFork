@@ -1,6 +1,7 @@
 using CalamityMod.Items.Materials;
 using CalamityMod.Items.Placeables.Abyss;
 using CalamityMod.Projectiles.Ranged;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
@@ -34,7 +35,10 @@ namespace CalamityMod.Items.Weapons.Ranged
         public static int ClusterShrapnelAmount = 8;
         public static float ClusterShrapnelAngleOffset = MathHelper.PiOver2 + MathHelper.ToRadians(50f);
         #endregion
-
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<CrushDepth>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 152;

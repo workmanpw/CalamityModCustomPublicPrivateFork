@@ -7,7 +7,7 @@ namespace CalamityMod.Buffs.Potions
     {
         public override void SetStaticDefaults()
         {
-            Main.debuff[Type] = false;
+            Main.debuff[Type] = true;
             Main.pvpBuff[Type] = true;
             Main.buffNoSave[Type] = false;
         }
@@ -15,6 +15,7 @@ namespace CalamityMod.Buffs.Potions
         public override void Update(Player player, ref int buffIndex)
         {
             player.Calamity().baguette = true;
+            player.lifeRegen -= Baguette.RedWineRegenLoss;
         }
     }
 }

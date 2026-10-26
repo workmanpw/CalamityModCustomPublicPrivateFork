@@ -9,6 +9,10 @@ namespace CalamityMod.Items.Weapons.Magic
     public class ClothiersWrath : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<Shadowflame>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 28;

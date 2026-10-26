@@ -29,7 +29,6 @@ namespace CalamityMod.Items.Placeables.Furniture.CraftingStations
                 AddRecipeGroup("HardmodeAnvil").
                 AddIngredient<CosmiliteBar>(10).
                 AddIngredient(ItemID.LunarBar, 10).
-                AddIngredient<GalacticaSingularity>(12).
                 AddIngredient<ExodiumCluster>(20).
                 AddTile(TileID.LunarCraftingStation).
                 Register();

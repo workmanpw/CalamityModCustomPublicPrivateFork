@@ -20,11 +20,10 @@ namespace CalamityMod.Items.Weapons.Magic
         {
             Item.width = 48;
             Item.height = 48;
-            Item.damage = 54;
+            Item.damage = 59;
             Item.DamageType = DamageClass.Magic;
-            Item.mana = 5;
-            Item.useTime = 6;
-            Item.useAnimation = 6;
+            Item.mana = 7;
+            Item.useAnimation = Item.useTime = 6;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.noMelee = true;
             Item.knockBack = 3.5f;
@@ -60,7 +59,7 @@ namespace CalamityMod.Items.Weapons.Magic
             CreateRecipe().
                 AddIngredient(ItemID.Razorpine).
                 AddIngredient(ItemID.LeafBlower).
-                AddIngredient<UelibloomBar>(5).
+                AddIngredient<UelibloomBar>(10).
                 AddIngredient<DarkPlasma>(3).
                 AddTile(TileID.MythrilAnvil).
                 Register();

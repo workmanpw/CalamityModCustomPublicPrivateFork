@@ -78,6 +78,11 @@ namespace CalamityMod.Projectiles.Magic
             target.AddBuff(BuffID.Daybreak, 300);
         }
 
+        public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
+        {
+            modifiers.ApplyScalingForcedCrit(Projectile);
+        }
+
         public override void OnKill(int timeLeft)
         {
             if (explode)

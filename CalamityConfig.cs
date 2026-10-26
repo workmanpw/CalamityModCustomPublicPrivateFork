@@ -47,8 +47,8 @@ namespace CalamityMod
         public bool Photosensitivity { get; set; }
 
         [BackgroundColor(192, 54, 64, 192)]
-        [DefaultValue(true)]
-        public bool EnableVanillaTextureEdits { get; set; }
+        [DefaultValue(false)]
+        public bool BoCSpriteChange { get; set; }
 
         [BackgroundColor(192, 54, 64, 192)]
         [DefaultValue(true)]
@@ -240,8 +240,8 @@ namespace CalamityMod
         public float FlightBarPosY { get; set; }
         #endregion
 
-        #region Music Toggles
-        [Header("MusicToggles")]
+        #region Audio Toggles
+        [Header("AudioToggles")]
 
         [BackgroundColor(192, 54, 64, 192)]
         [DefaultValue(true)]
@@ -255,6 +255,9 @@ namespace CalamityMod
         [DefaultValue(false)]
         public bool AbyssLayer3Alt { get; set; }
 
+        [BackgroundColor(192, 54, 64, 192)]
+        [DefaultValue(false)]
+        public bool MisophoniaSupport { get; set; }
         #endregion
 
         #region General Gameplay Changes

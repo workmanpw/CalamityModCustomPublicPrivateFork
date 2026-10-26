@@ -37,6 +37,7 @@ namespace CalamityMod.Projectiles.Magic
             Projectile.penetrate = -1;
             Projectile.tileCollide = false;
             Projectile.DamageType = DamageClass.Magic;
+            Projectile.ContinuouslyUpdateDamageStats = true;
             Projectile.ignoreWater = true;
             Projectile.timeLeft = 90000;
         }
@@ -183,7 +184,7 @@ namespace CalamityMod.Projectiles.Magic
                 SoundEngine.PlaySound(SoundID.Zombie104, Projectile.Center);
 
                 if (Main.myPlayer == Projectile.owner)
-                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<RancorLaserbeam>(), Projectile.damage, Projectile.knockBack, Projectile.owner, Projectile.identity);
+                    Projectile.NewProjectile(Projectile.GetSource_FromThis(), Projectile.Center, Projectile.velocity, ModContent.ProjectileType<RancorLaserbeam>(), Projectile.originalDamage, Projectile.knockBack, Projectile.owner, Projectile.identity);
             }
         }
 

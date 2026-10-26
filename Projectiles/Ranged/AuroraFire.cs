@@ -13,7 +13,7 @@ namespace CalamityMod.Projectiles.Ranged
     public class AuroraFire : ModProjectile, ILocalizedModType
     {
         public new string LocalizationCategory => "Projectiles.Ranged";
-        public override string Texture => "CalamityMod/Projectiles/Magic/RancorFog";
+        public override string Texture => "CalamityMod/Particles/RancorFog";
 
         public static int Lifetime => 480;
         public static int Fadetime => 450;
@@ -108,7 +108,12 @@ namespace CalamityMod.Projectiles.Ranged
             LightPower = MathHelper.Lerp(LightPower, lightPowerBelow, 0.15f);
         }
 
-        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) => target.AddBuff(ModContent.BuffType<AstralInfectionDebuff>(), 240);
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
+        {
+            //Doze - Flamethrowers in vanilla are long debuff infliction tools (20 seconds of their debuff).
+            //I am applying this as the base for Cal flamethrowers, with shorter times being the exception instead of the rule
+            target.AddBuff(ModContent.BuffType<AstralInfectionDebuff>(), 1200);
+        }
         public override void ModifyHitNPC(NPC target, ref NPC.HitModifiers modifiers)
         {
             modifiers.SourceDamage *= damageMult;

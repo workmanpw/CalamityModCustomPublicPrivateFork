@@ -1,6 +1,7 @@
 using CalamityMod.Items.Weapons.Magic;
 using CalamityMod.Projectiles.Ranged;
 using CalamityMod.Rarities;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -22,6 +23,7 @@ namespace CalamityMod.Items.Weapons.Ranged
         {
             Main.RegisterItemAnimation(Type, new DrawAnimationVertical(3, 5));
             ItemID.Sets.AnimatesAsSoul[Type] = true;
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<HolyFlames>()];
         }
         public override void SetDefaults()
         {

@@ -7,6 +7,10 @@ namespace CalamityMod.Items.Accessories
     public class VeneratedLocket : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Accessories";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<GodSlayerInferno>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 50;

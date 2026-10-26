@@ -18,7 +18,7 @@ namespace CalamityMod.Items.Weapons.Melee
         {
             Item.width = 44;
             Item.height = 62;
-            Item.damage = 400;
+            Item.damage = 525;
             Item.DamageType = DamageClass.MeleeNoSpeed;
             Item.noMelee = true;
             Item.noUseGraphic = true;
@@ -62,5 +62,7 @@ namespace CalamityMod.Items.Weapons.Melee
                 AddTile<DraedonsForge>().
                 Register();
         }
+
+        public static Color RarityColor() => CalamityUtils.ColorSwap(new Color(154, 255, 151), new Color(228, 151, 255), 4f);
     }
 }

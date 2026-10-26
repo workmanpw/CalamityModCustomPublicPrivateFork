@@ -54,7 +54,6 @@ namespace CalamityMod.Items.Armor.Auric
             modPlayer.silvaSummon = true;
             modPlayer.auricSet = true;
             modPlayer.WearingPostMLSummonerSet = true;
-            player.crimsonRegen = true; // Inherited from Bloodflare
             player.maxMinions += SetBonusMinionSlotBoost;
             player.GetDamage<SummonDamageClass>() += SetBonusSummonDamageBoost;
         }
@@ -102,7 +101,7 @@ namespace CalamityMod.Items.Armor.Auric
                 AddIngredient<SilvaHeadSummon>().
                 AddIngredient<BloodflareHeadSummon>().
                 AddIngredient<TarragonHeadSummon>().
-                AddIngredient<AuricBar>(12).
+                AddIngredient<AuricBar>(10).
                 AddTile<CosmicAnvil>().
                 SortBeforeFirstRecipesOf(ModContent.ItemType<AuricTeslaHeadRogue>()).
                 Register();

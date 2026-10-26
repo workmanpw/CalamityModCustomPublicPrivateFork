@@ -76,6 +76,7 @@ namespace CalamityMod.Projectiles.Summon
             else
                 return false;
         }
+        public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone) => target.AddBuff(ModContent.BuffType<SulphuricPoisoning>(), 180);
 
         public override void OnKill(int timeLeft)
         {

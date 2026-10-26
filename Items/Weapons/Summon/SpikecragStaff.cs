@@ -12,11 +12,15 @@ namespace CalamityMod.Items.Weapons.Summon
     public class SpikecragStaff : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Summon";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<HeavyBleeding>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 50;
             Item.height = 50;
-            Item.damage = 56;
+            Item.damage = 25;
             Item.mana = 10;
             Item.DamageType = DamageClass.Summon;
             Item.sentry = true;

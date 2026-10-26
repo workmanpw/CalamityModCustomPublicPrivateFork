@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Items.Materials;
 using CalamityMod.Projectiles.Melee;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -49,17 +51,21 @@ namespace CalamityMod.Items.Weapons.Melee
                 parryTooltip.OverrideColor = Color.Orange;
             }
         }
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<ElementalMix>()];
+        }
 
         public override void SetDefaults()
         {
             Item.width = 112;
             Item.height = 172;
-            Item.damage = 507;
+            Item.damage = 444;
             Item.DamageType = DamageClass.MeleeNoSpeed;
+            Item.crit = 10;
             Item.noUseGraphic = true;
             Item.noMelee = true;
-            Item.useAnimation = 20;
-            Item.useTime = 20;
+            Item.useAnimation = Item.useTime = 20;
             Item.useTurn = true;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.knockBack = 8.5f;
@@ -70,9 +76,6 @@ namespace CalamityMod.Items.Weapons.Melee
             Item.shoot = ProjectileID.PurificationPowder;
             Item.shootSpeed = 16f;
         }
-
-        // Terraria seems to really dislike high crit values in SetDefaults
-        public override void ModifyWeaponCrit(Player player, ref float crit) => crit += 10;
 
         public override bool AltFunctionUse(Player player) => true;
 

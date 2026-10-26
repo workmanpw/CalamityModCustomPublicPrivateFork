@@ -1,5 +1,6 @@
 using CalamityMod.Projectiles.Melee.Yoyos;
 using CalamityMod.Rarities;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria.ID;
@@ -23,6 +24,7 @@ namespace CalamityMod.Items.Weapons.Melee
             ItemID.Sets.Yoyo[Type] = true;
             ItemID.Sets.GamepadExtraRange[Type] = 15;
             ItemID.Sets.GamepadSmartQuickReach[Type] = true;
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<HolyFlames>()];
         }
 
         public override void SetDefaults()

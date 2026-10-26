@@ -249,12 +249,12 @@ namespace CalamityMod.NPCs.DevourerofGods
 
         public static int LaserWallDamage = 75; // 300
         public static int LaserWallMiddleBeamDamage = 85; // 340
-        public static int FireballDamage = 60; // 240
+        public static int FireballDamage = 55; // 220
 
         public override void SetDefaults()
         {
             NPC.Calamity().canBreakPlayerDefense = true;
-            NPC.damage = 250; // 500
+            NPC.damage = 235; // 470
             NPC.npcSlots = 5f;
             NPC.width = 104;
             NPC.height = 104;
@@ -306,10 +306,13 @@ namespace CalamityMod.NPCs.DevourerofGods
 
         public override void OnSpawn(IEntitySource source)
         {
+            // Don't display the dialogue in Boss Rush
+            if (BossRushEvent.BossRushActive)
+                return;
+
             string key = "Mods.CalamityMod.Status.Boss.DoGSpawn";
             Color messageColor = Color.Cyan;
             CalamityUtils.BroadcastLocalizedText(key, messageColor);
-
             DialogueDisplaySystem.StartDialogue("Mods.CalamityMod.DevourerOfGods.Phases", NPC, 0, 120, false, new BossText());
         }
 
@@ -637,12 +640,6 @@ namespace CalamityMod.NPCs.DevourerofGods
                     string key = "Mods.CalamityMod.Status.Boss.DoGPhase2";
                     Color messageColor = Color.Cyan;
                     CalamityUtils.BroadcastLocalizedText(key, messageColor);
-                    /*                    
-                    var ctid = CombatText.NewText(NPC.Hitbox, messageColor, Language.GetTextValue(key), true);
-                    if (ctid < Main.maxCombatText)
-                        player.Calamity().subtitletext = Main.combatText[ctid];
-                    player.Calamity().subtitleColors = new Color[] { Color.Cyan, Color.Fuchsia };
-                    */
                     DialogueDisplaySystem.StartDialogue("Mods.CalamityMod.DevourerOfGods.Phases", NPC, 2, 120, false, new BossText());
                 }
             }
@@ -1474,13 +1471,6 @@ namespace CalamityMod.NPCs.DevourerofGods
                             string key = "Mods.CalamityMod.Status.Boss.DoGSubphase1";
                             Color messageColor = Color.Cyan;
                             CalamityUtils.BroadcastLocalizedText(key, messageColor);
-
-                            /*
-                            int ctid = CombatText.NewText(NPC.Hitbox, messageColor, Language.GetTextValue(key), true);
-                            if (ctid < Main.maxCombatText)
-                                player.Calamity().subtitletext = Main.combatText[ctid];
-                            player.Calamity().subtitleColors = new Color[] { Color.Cyan, Color.Fuchsia };
-                            */
                             DialogueDisplaySystem.StartDialogue("Mods.CalamityMod.DevourerOfGods.Phases", NPC, 1, 120, false, new BossText());
                         }
 
@@ -2678,6 +2668,9 @@ namespace CalamityMod.NPCs.DevourerofGods
                 GFBOnly.Add(DropHelper.PerPlayer(ModContent.ItemType<NavyPrismTorch>(), dropRate, dropMin, dropMax), true);
                 GFBOnly.Add(DropHelper.PerPlayer(ModContent.ItemType<RefractivePrismTorch>(), dropRate, dropMin, dropMax), true);
                 GFBOnly.Add(DropHelper.PerPlayer(ModContent.ItemType<SulphurousTorch>(), dropRate, dropMin, dropMax), true);
+                GFBOnly.Add(DropHelper.PerPlayer(ModContent.ItemType<ThermalTorch>(), dropRate, dropMin, dropMax), true);
+                GFBOnly.Add(DropHelper.PerPlayer(ModContent.ItemType<CausticTorch>(), dropRate, dropMin, dropMax), true);
+                GFBOnly.Add(DropHelper.PerPlayer(ModContent.ItemType<KelpTorch>(), dropRate, dropMin, dropMax), true);
             }
 
             // Trophy (always directly from boss, never in bag)

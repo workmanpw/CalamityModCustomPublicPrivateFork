@@ -2,6 +2,9 @@ using CalamityMod.Items.Materials;
 using CalamityMod.Projectiles.Melee;
 using CalamityMod.Rarities;
 using CalamityMod.Tiles.Furniture.CraftingStations;
+using Microsoft.Xna.Framework;
+using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -20,10 +23,10 @@ namespace CalamityMod.Items.Weapons.Melee
             Item.noMelee = true;
             Item.noUseGraphic = true;
             Item.autoReuse = true;
-            Item.useAnimation = Item.useTime = 40;
+            Item.useAnimation = Item.useTime = 25;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.knockBack = 14f;
-            Item.UseSound = SoundID.Item1;
+            Item.UseSound = new SoundStyle("CalamityMod/Sounds/Item/SwingMid") with { Volume = 0.5f, Pitch = Main.rand.NextFloat(-0.3f, -0.4f) };
             Item.DamageType = DamageClass.MeleeNoSpeed;
             Item.shoot = ModContent.ProjectileType<TriactisHammerProj>();
             Item.shootSpeed = 25f;
@@ -42,5 +45,7 @@ namespace CalamityMod.Items.Weapons.Melee
                 AddTile<DraedonsForge>().
                 Register();
         }
+
+        public static Color RarityColor() => new Color(227, 226, 180);
     }
 }

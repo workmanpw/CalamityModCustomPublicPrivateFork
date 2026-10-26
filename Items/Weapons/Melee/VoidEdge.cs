@@ -104,5 +104,14 @@ namespace CalamityMod.Items.Weapons.Melee
             Projectile.NewProjectile(player.GetSource_ItemUse(Item), target.Center + new Vector2(0, 1300f), velocity.RotatedByRandom(0.4f) * Main.rand.NextFloat(0.9f, 1.1f), ModContent.ProjectileType<GhastlySoulMedium>(), soulDamage, 0f, player.whoAmI, 0f, ai1);
             Projectile.NewProjectile(player.GetSource_ItemUse(Item), target.Center + new Vector2(0, 1300f), velocity.RotatedByRandom(0.4f) * Main.rand.NextFloat(0.9f, 1.1f), ModContent.ProjectileType<GhastlySoulSmall>(), soulDamage, 0f, player.whoAmI, 0f, ai1);
         }
+        public override void AddRecipes()
+        {
+            CreateRecipe().
+                AddIngredient<HellfireFlamberge>().
+                AddIngredient<Necroplasm>(15).
+                AddIngredient<RuinousSoul>(3).
+                AddTile(TileID.MythrilAnvil).
+                Register();
+        }
     }
 }

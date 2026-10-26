@@ -48,10 +48,10 @@ namespace CalamityMod.Items.Weapons.Melee
         public override void AddRecipes()
         {
             CreateRecipe().
-                AddIngredient<Nebulash>().
+                AddIngredient(ItemID.BlueMoon).
                 AddIngredient<Lumenyl>(8).
-                AddIngredient<RuinousSoul>(3).
-                AddIngredient<ExodiumCluster>(16).
+                AddIngredient<RuinousSoul>(4).
+                AddIngredient<ExodiumCluster>(20).
                 AddTile(TileID.MythrilAnvil).
                 Register();
         }

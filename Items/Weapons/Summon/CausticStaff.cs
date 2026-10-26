@@ -1,5 +1,6 @@
 using CalamityMod.Buffs.Summon;
 using CalamityMod.Projectiles.Summon;
+using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -8,15 +9,19 @@ using Terraria.ModLoader;
 
 namespace CalamityMod.Items.Weapons.Summon
 {
-    public class CausticStaff : ModItem, ILocalizedModType
+    public class CausticStaff : ModItem, ILocalizedModType, IHoldShiftTooltipItem
     {
         public new string LocalizationCategory => "Items.Weapons.Summon";
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.OnFire3, BuffID.Venom, BuffID.Ichor, BuffID.CursedInferno, ModContent.BuffType<MarkedforDeath>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 26;
             Item.height = 28;
             Item.mana = 10;
-            Item.damage = 15;
+            Item.damage = 18;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.buffType = ModContent.BuffType<CausticStaffBuff>();
             Item.shoot = ModContent.ProjectileType<CausticStaffSummon>();

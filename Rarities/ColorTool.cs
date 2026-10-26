@@ -9,6 +9,8 @@ namespace CalamityMod.Rarities
         public static int RarityCosmicPurple => ModContent.GetInstance<CosmicPurple>().Type;
         public static int RarityBurnishedAuric => ModContent.GetInstance<BurnishedAuric>().Type;
         public static int RarityCalamityRed => ModContent.GetInstance<CalamityRed>().Type;
+        public static int RarityExoticRainbow => ModContent.GetInstance<ExoticRainbow>().Type;
+        public static int RarityCustomDev => ModContent.GetInstance<HotPink>().Type;
 
 
         public override bool PreDrawTooltipLine(Item Item, DrawableTooltipLine line, ref int yOffset)
@@ -28,6 +30,17 @@ namespace CalamityMod.Rarities
                 if (Item.rare == RarityCalamityRed)
                 {
                     CalamityRed.Draw(Item, line);
+                    return false;
+                }
+
+                if (Item.rare == RarityExoticRainbow)
+                {
+                    ExoticRainbow.Draw(Item, line);
+                    return false;
+                }
+                if (Item.rare == RarityCustomDev)
+                {
+                    HotPink.Draw(Item, line);
                     return false;
                 }
             }

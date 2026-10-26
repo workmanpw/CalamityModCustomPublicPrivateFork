@@ -9,6 +9,10 @@ namespace CalamityMod.Items.Weapons.Rogue
 {
     public class MeteorFist : RogueWeapon
     {
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [BuffID.OnFire];
+        }
         public override void SetDefaults()
         {
             Item.width = 22;

@@ -1,6 +1,7 @@
 using CalamityMod.Projectiles.Rogue;
 using Microsoft.Xna.Framework;
 using Terraria;
+using CalamityMod.Systems.Collections;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -9,6 +10,10 @@ namespace CalamityMod.Items.Weapons.Rogue
 {
     public class DeepWounder : RogueWeapon
     {
+        public override void SetStaticDefaults()
+        {
+            CalamityItemSets.ExtraDebuffTooltip_Enemy[Type] = [ModContent.BuffType<CrushDepth>(), ModContent.BuffType<HeavyBleeding>()];
+        }
         public override void SetDefaults()
         {
             Item.width = 58;

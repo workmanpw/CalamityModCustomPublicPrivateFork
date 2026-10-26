@@ -1,9 +1,12 @@
 using System;
 using CalamityMod.Dusts;
+using CalamityMod.Effects;
 using CalamityMod.Enums;
+using CalamityMod.Graphics.Primitives;
 using CalamityMod.Particles;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -14,8 +17,28 @@ namespace CalamityMod.Projectiles.Boss
 {
     public class HolyLight : ModProjectile, ILocalizedModType
     {
+        private static Asset<Texture2D> TrailNoiseTexture;
+        private static Asset<Texture2D> TrailDistortionTexture;
+        private static Asset<Texture2D> GlowOrbTexture;
+
         public new string LocalizationCategory => "Projectiles.Boss";
         public override string Texture => "CalamityMod/Projectiles/StarProj";
+
+        public override void Load()
+        {
+            if (!Main.dedServ)
+            {
+                TrailNoiseTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/EternityStreak");
+                TrailDistortionTexture = ModContent.Request<Texture2D>("CalamityMod/ExtraTextures/GreyscaleGradients/HarshNoise");
+                GlowOrbTexture = ModContent.Request<Texture2D>("CalamityMod/Particles/GlowOrbParticle");
+            }
+        }
+
+        public override void SetStaticDefaults()
+        {
+            ProjectileID.Sets.TrailCacheLength[Type] = 16;
+            ProjectileID.Sets.TrailingMode[Type] = 0;
+        }
 
         public override void SetDefaults()
         {
@@ -25,9 +48,9 @@ namespace CalamityMod.Projectiles.Boss
             Projectile.hostile = true;
             Projectile.ignoreWater = true;
             Projectile.tileCollide = false;
-            Projectile.alpha = 255;
             Projectile.penetrate = 1;
             Projectile.timeLeft = 200;
+            Projectile.MaxUpdates = 4;
         }
 
         public override void OnSpawn(IEntitySource source)
@@ -46,17 +69,21 @@ namespace CalamityMod.Projectiles.Boss
         public override void AI()
         {
             Lighting.AddLight(Projectile.Center, 0f, 0.6f, 0f);
-
-            if (Projectile.ai[0] < 240f)
+            if (Projectile.FinalExtraUpdate())
             {
-                Projectile.ai[0] += 1f;
+                if (Projectile.ai[0] < 240f)
+                {
+                    Projectile.ai[0] += 1f;
 
-                if (Projectile.timeLeft < 160)
-                    Projectile.timeLeft = 160;
+                    if (Projectile.timeLeft < 160)
+                        Projectile.timeLeft = 160;
+                }
+
+                if (Projectile.velocity.Length() < 16f)
+                    Projectile.velocity *= 1.01f;
             }
 
-            if (Projectile.velocity.Length() < 16f)
-                Projectile.velocity *= 1.01f;
+            Projectile.position -= (Projectile.velocity / Projectile.MaxUpdates) * (Projectile.MaxUpdates - 1);
 
             int index = Player.FindClosest(Projectile.position, Projectile.width, Projectile.height);
             Player player = Main.player[index];
@@ -71,18 +98,106 @@ namespace CalamityMod.Projectiles.Boss
                 NetMessage.SendData(MessageID.SpiritHeal, -1, -1, null, index, healAmt);
                 Projectile.Kill();
             }
+        }
 
-            Color col = new Color(54, 209, 54);
-            Particle spark = new GlowSparkParticle(Projectile.Center, -Projectile.velocity * 0.8f, false, 5, 0.06f, col * 0.85f, new Vector2(1, 0.3f), true, false, 1.5f);
-            GeneralParticleHandler.SpawnParticle(spark);
+        public override void OnKill(int timeLeft)
+        {
+            SoundEngine.PlaySound(SoundID.Item14 with { Pitch = -0.3f, Volume = 0.7f }, Projectile.Center);
+            SoundStyle fireHeal = new("CalamityMod/Sounds/Custom/PlantyMushMine", 3);
+            SoundEngine.PlaySound(fireHeal with { Volume = 0.5f, Pitch = 0.3f }, Projectile.Center);
+            Color particleColor = new Color(54, 209, 54);
+            Color smokeColor = Color.Lerp(particleColor, Color.DarkSlateGray, 0.5f);
+            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, smokeColor, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.06f, 18);
+            GeneralParticleHandler.SpawnParticle(pulse);
+            for (int i = 0; i < 7; i++)
+            {
+                Particle smoke = new HeavySmokeParticle(Projectile.Center, (Vector2.UnitX).RotatedByRandom(MathHelper.Pi) * Main.rand.NextFloat(7f), smokeColor, 30, Main.rand.NextFloat(0.6f, 1f), 0.5f, Main.rand.NextFloat(-0.03f, 0.03f), true);
+                GeneralParticleHandler.SpawnParticle(smoke);
+            }
+            for (int i = 0; i < 8; i++)
+            {
+                Dust dust = Dust.NewDustPerfect(Projectile.Center, ModContent.DustType<LightDust>(), (Vector2.UnitX).RotatedByRandom(MathHelper.Pi) * Main.rand.NextFloat(1.8f, 10f));
+                dust.noGravity = true;
+                dust.scale = Main.rand.NextFloat(1f, 1.8f);
+                dust.color = particleColor;
+                dust.noLightEmittence = true;
+            }
+        }
+
+        public float FireWidthFunction(float completion)
+        {
+            float width;
+            float maxBodyWidth = 56f * Projectile.scale;
+            float curveRatio = 0.2f;
+
+            // Crop the tip of the trail into a conic shape.
+            if (completion < curveRatio)
+                width = MathF.Pow(completion / curveRatio, 0.5f) * maxBodyWidth;
+            else
+                width = Utils.Remap(completion, curveRatio, 1f, maxBodyWidth, 0f);
+
+            // Pulse inwards and outwards over time.
+            float pulseInterpolant = MathF.Cos(MathHelper.Pi * completion - Main.GlobalTimeWrappedHourly * 20f) * 0.5f + 0.5f;
+            float additionalPulseWidth = MathHelper.Lerp(0f, 12f, pulseInterpolant);
+            return (width + additionalPulseWidth);
+        }
+
+        public Color FireColorFunction(float completion)
+        {
+            Color mainColor = new Color(54, 209, 54) * 1.3f;
+            Color endColor = Color.Lerp(mainColor, Color.Transparent, Utils.GetLerpValue(0.8f, 1f, completion, true));
+            return Color.Lerp(mainColor, endColor, completion) * Projectile.Opacity;
+        }
+
+        public void DrawTrail()
+        {
+            if (Projectile.oldPos.Length <= 0)
+                return;
+
+            Matrix projection = Matrix.CreateOrthographicOffCenter(0, Main.screenWidth, Main.screenHeight, 0, -200f, 200f);
+            Vector2 basePosition = Projectile.Center - Main.screenPosition;
+            Rectangle screenBounds = new Rectangle(-40, -40, Main.screenWidth + 40, Main.screenHeight + 40);
+            if (screenBounds.Contains(basePosition.ToPoint()))
+            {
+                List<Vector3> path = [];
+                for (var i = 0; i < Projectile.oldPos.Length; i++)
+                {
+                    Vector2 trailDrawPosition = Projectile.oldPos[i] + Projectile.Size * 0.5f - Main.screenPosition;
+                    path.Add(new Vector3(trailDrawPosition.X, trailDrawPosition.Y, 0f));
+                }
+
+                if (path.Count > 2 && Projectile.ai[0] > 6)
+                {
+                    Effect shader = CalamityShaders.ProvidenceHolyOrbTrailShader.Value;
+                    shader.Parameters["time"].SetValue(Main.GlobalTimeWrappedHourly);
+                    shader.Parameters["glowPower"].SetValue(1.48f);
+
+                    Main.graphics.GraphicsDevice.Textures[0] = TrailNoiseTexture.Value;
+                    Main.graphics.GraphicsDevice.SamplerStates[0] = SamplerState.PointWrap;
+                    Main.graphics.GraphicsDevice.Textures[1] = TrailDistortionTexture.Value;
+                    Main.graphics.GraphicsDevice.SamplerStates[1] = SamplerState.LinearWrap;
+
+                    using var shaderScope = SanePrimitiveRenderer.BeginShaderScope(shader, Matrix.Identity, Matrix.Identity, projection);
+                    using var trailMesh = TriangleStripBuilder.BuildStripPooled(path, progress => FireWidthFunction(progress), progress => FireColorFunction(progress), PrimitiveMeshCache.Shared, textured: true, smoothingCurve: StripCurveType.Hermite);
+                    shaderScope.Draw(trailMesh.View);
+                }
+            }
         }
 
         public override bool PreDraw(ref Color lightColor)
         {
+            // Trail drawn by the HolyBurnOrbDrawer system.
+            DrawHealOrb();
+            DrawHealOrbAdditive();
+            return false;
+        }
+
+        private void DrawHealOrb()
+        {
             float vel = Projectile.velocity.Length() / 8;
             Projectile.localAI[1] += vel;
 
-            Texture2D drawTexture = Terraria.GameContent.TextureAssets.Projectile[Type].Value;
+            Texture2D drawTexture = Terraria.GameContent.TextureAssets.Projectile[Projectile.type].Value;
             Color brightGreen = new Color(54, 209, 54, 0);
             Vector2 projDirection = Projectile.Center - Main.screenPosition + new Vector2(0f, Projectile.gfxOffY);
             Vector2 halfTextureSize = drawTexture.Size() / 2f;
@@ -109,32 +224,12 @@ namespace CalamityMod.Projectiles.Boss
             Main.EntitySpriteDraw(drawTexture, position3, null, brightGreen, MathHelper.PiOver4 * 3f + Projectile.rotation, halfTextureSize, timeLeftDrawEffect2 * 0.6f, spriteEffects, 0);
             Main.EntitySpriteDraw(drawTexture, position3, null, halfBrightGreen, MathHelper.PiOver4 + Projectile.rotation, halfTextureSize, timeLeftDrawEffect * 0.36f, spriteEffects, 0);
             Main.EntitySpriteDraw(drawTexture, position3, null, halfBrightGreen, MathHelper.PiOver4 * 3f + Projectile.rotation, halfTextureSize, timeLeftDrawEffect2 * 0.36f, spriteEffects, 0);
-
-            return false;
         }
 
-        public override void OnKill(int timeLeft)
+        private void DrawHealOrbAdditive()
         {
-            SoundEngine.PlaySound(SoundID.Item14 with { Pitch = -0.3f, Volume = 0.7f }, Projectile.Center);
-            SoundStyle fireHeal = new("CalamityMod/Sounds/Custom/PlantyMushMine", 3);
-            SoundEngine.PlaySound(fireHeal with { Volume = 0.5f, Pitch = 0.3f }, Projectile.Center);
-            Color particleColor =  new Color(54, 209, 54);
-            Color smokeColor = Color.Lerp(particleColor, Color.DarkSlateGray, 0.5f);
-            Particle pulse = new CustomPulse(Projectile.Center, Vector2.Zero, smokeColor, "CalamityMod/Particles/SoftRoundExplosion", Vector2.One, Main.rand.NextFloat(MathHelper.TwoPi), 0f, 0.06f, 18);
-            GeneralParticleHandler.SpawnParticle(pulse);
-            for (int i = 0; i < 7; i++)
-            {
-                Particle smoke = new HeavySmokeParticle(Projectile.Center, (Vector2.UnitX).RotatedByRandom(MathHelper.Pi) * Main.rand.NextFloat(7f), smokeColor, 30, Main.rand.NextFloat(0.6f, 1f), 0.5f, Main.rand.NextFloat(-0.03f, 0.03f), true);
-                GeneralParticleHandler.SpawnParticle(smoke);
-            }
-            for (int i = 0; i < 8; i++)
-            {
-                Dust dust = Dust.NewDustPerfect(Projectile.Center, ModContent.DustType<LightDust>(), (Vector2.UnitX).RotatedByRandom(MathHelper.Pi) * Main.rand.NextFloat(1.8f, 10f));
-                dust.noGravity = true;
-                dust.scale = Main.rand.NextFloat(1f, 1.8f);
-                dust.color = particleColor;
-                dust.noLightEmittence = true;
-            }
+            Main.spriteBatch.Draw(GlowOrbTexture.Value, Projectile.Center - Main.screenPosition, null, new Color(54, 209, 54) with { A = 0 }, 0, GlowOrbTexture.Size() * 0.5f, 1f, 0, 0f);
+            Main.spriteBatch.Draw(GlowOrbTexture.Value, Projectile.Center - Main.screenPosition, null, Color.White with { A = 0 }, 0, GlowOrbTexture.Size() * 0.5f, 0.5f, 0, 0f);
         }
     }
 }

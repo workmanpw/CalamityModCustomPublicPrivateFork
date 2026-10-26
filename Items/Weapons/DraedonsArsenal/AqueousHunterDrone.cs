@@ -9,6 +9,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace CalamityMod.Items.Weapons.DraedonsArsenal
@@ -21,6 +22,12 @@ namespace CalamityMod.Items.Weapons.DraedonsArsenal
         public static readonly SoundStyle Sound1 = new("CalamityMod/Sounds/Item/ShrimpSound1");
         public static readonly SoundStyle Sound2 = new("CalamityMod/Sounds/Item/ShrimpSound2");
         public static readonly SoundStyle Surprise = new("CalamityMod/Sounds/Item/ShrimpSurprise");
+
+        public static int ArmorPenetration = 15;
+        public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(ArmorPenetration);
+
+        public override void SetStaticDefaults() => ItemID.Sets.StaffMinionSlotsRequired[Type] = 4f;
+
         public override void SetDefaults()
         {
             CalamityGlobalItem modItem = Item.Calamity();
@@ -28,7 +35,8 @@ namespace CalamityMod.Items.Weapons.DraedonsArsenal
             Item.width = 34;
             Item.height = 32;
             Item.shootSpeed = 10f;
-            Item.damage = 24;
+            Item.damage = 18;
+            Item.ArmorPenetration = ArmorPenetration;
             Item.mana = 10;
             Item.useAnimation = Item.useTime = 36;
             Item.useStyle = ItemUseStyleID.HoldUp;

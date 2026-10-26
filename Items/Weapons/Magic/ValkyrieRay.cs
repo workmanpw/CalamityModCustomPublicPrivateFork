@@ -10,12 +10,12 @@ namespace CalamityMod.Items.Weapons.Magic
     public class ValkyrieRay : ModItem, ILocalizedModType
     {
         public new string LocalizationCategory => "Items.Weapons.Magic";
-        // The base use time of the weapon is 28: 18 charge frames + 10 cooldown frames.
+        // The base use time of the weapon is 36: 24 charge frames + 12 cooldown frames.
         // The rate at which it progresses through its charge and discharge cycle is dynamically sped up by reforges.
         // This math is handled in its holdout projectile, ValkyrieRayStaff.
-        public const int ChargeFrames = 18;
-        public const int CooldownFrames = 10;
-        public const float GemDistance = 18f;
+        public const int ChargeFrames = 24;
+        public const int CooldownFrames = 12;
+        public const float GemDistance = 27f;
         public static readonly Color LightColor = new Color(235, 40, 121);
 
         public override void SetStaticDefaults()
@@ -27,9 +27,10 @@ namespace CalamityMod.Items.Weapons.Magic
         {
             Item.width = 54;
             Item.height = 52;
-            Item.damage = 115;
+            Item.damage = 90;
             Item.knockBack = 8.5f;
             Item.DamageType = DamageClass.Magic;
+            Item.crit = 11;
             Item.mana = 17;
             Item.useTime = ChargeFrames + CooldownFrames;
             Item.useAnimation = ChargeFrames + CooldownFrames;
@@ -38,14 +39,12 @@ namespace CalamityMod.Items.Weapons.Magic
             Item.useTurn = false;
             Item.noMelee = true;
             Item.noUseGraphic = true;
-            Item.value = CalamityGlobalItem.RarityPinkBuyPrice;
-            Item.rare = ItemRarityID.Pink;
+            Item.value = CalamityGlobalItem.RarityLightPurpleBuyPrice;
+            Item.rare = ItemRarityID.LightPurple;
             Item.shoot = ModContent.ProjectileType<ValkyrieRayStaff>();
             Item.shootSpeed = 25f;
             Item.autoReuse = true;
         }
-
-        public override void ModifyWeaponCrit(Player player, ref float crit) => crit += 11;
 
         public override void AddRecipes()
         {

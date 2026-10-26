@@ -89,6 +89,7 @@ namespace CalamityMod.Projectiles.Melee
             Projectile.tileCollide = false;
             Projectile.ignoreWater = true;
             Projectile.DamageType = DamageClass.MeleeNoSpeed;
+            Projectile.ContinuouslyUpdateDamageStats = true;
             Projectile.timeLeft = Terratomere.SwingTime;
             Projectile.usesLocalNPCImmunity = true;
             Projectile.MaxUpdates = 2;
@@ -137,8 +138,8 @@ namespace CalamityMod.Projectiles.Melee
         public void StickToOwner()
         {
             // Glue the sword to its owner. This applies a handful of offsets to make the blade look like it's roughly inside of the owner's hand.
-            Projectile.Center = Owner.RotatedRelativePoint(Owner.MountedCenter, true) + SwordDirection * new Vector2(7f, 16f) * Projectile.scale;
-            Projectile.Center -= Projectile.velocity.SafeNormalize(Vector2.UnitY) * new Vector2(66f, 54f + Projectile.scale * 8f);
+            Projectile.Center = Owner.RotatedRelativePoint(Owner.MountedCenter, true) + SwordDirection * new Vector2(7f, 7f) * Projectile.scale;
+            Projectile.Center -= Projectile.velocity.SafeNormalize(Vector2.UnitY) * new Vector2(44f, 54f + Projectile.scale * 8f);
 
             // Set the owner's held projectile to this and register a false item time calculation.
             Owner.heldProj = Projectile.whoAmI;
@@ -284,7 +285,7 @@ namespace CalamityMod.Projectiles.Melee
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
         {
-            target.AddBuff(ModContent.BuffType<GlacialState>(), Terratomere.TrueMeleeGlacialStateTime);
+            target.AddBuff(BuffID.Frozen, Terratomere.TrueMeleeFrozenTime);
             Owner.DoLifestealDirect(target, (int)Math.Round(hit.Damage * 0.025), 0.75f);
 
             // Create a slash creator on top of the hit target.

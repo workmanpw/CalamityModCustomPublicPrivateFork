@@ -12,7 +12,7 @@ namespace CalamityMod.Items.Tools
         public new string LocalizationCategory => "Items.Tools";
         public static readonly SoundStyle UseSound = new("CalamityMod/Sounds/Item/MarniteObliteratorUse") { PitchVariance = 0.3f };
 
-        public static int ArmorPenetration = 5;
+        public static int ArmorPenetration = 15;
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(ArmorPenetration);
 
         public override void SetDefaults()
@@ -37,7 +37,7 @@ namespace CalamityMod.Items.Tools
             Item.noMelee = true;
             Item.noUseGraphic = true;
 
-            Item.value = CalamityGlobalItem.RarityBlueBuyPrice;
+            Item.value = Item.sellPrice(silver: 30);
             Item.rare = ItemRarityID.Blue;
         }
 

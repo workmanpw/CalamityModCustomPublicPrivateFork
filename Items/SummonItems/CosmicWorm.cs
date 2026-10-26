@@ -24,7 +24,7 @@ namespace CalamityMod.Items.SummonItems
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = false;
-            Item.rare = ModContent.RarityType<Turquoise>();
+            Item.rare = ModContent.RarityType<CosmicPurple>();
         }
 
         public override void ModifyResearchSorting(ref ContentSamples.CreativeHelper.ItemGroup itemGroup)
@@ -60,7 +60,11 @@ namespace CalamityMod.Items.SummonItems
             // sequence breaking recipe
             CreateRecipe().
                 AddIngredient(ItemID.LunarBar, 40).
-                AddIngredient<GalacticaSingularity>(10).
+                AddIngredient(ItemID.FragmentSolar, 10).
+                AddIngredient(ItemID.FragmentVortex, 10).
+                AddIngredient(ItemID.FragmentNebula, 10).
+                AddIngredient(ItemID.FragmentStardust, 10).
+                AddIngredient<MeldBlob>(10).
                 AddIngredient<Necroplasm>(40).
                 AddTile(TileID.MythrilAnvil).
                 Register();

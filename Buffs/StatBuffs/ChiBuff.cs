@@ -15,7 +15,7 @@ namespace CalamityMod.Buffs.StatBuffs
 
         public override void Update(Player player, ref int buffIndex)
         {
-            player.endurance += 0.08f;
+            player.endurance += TrinketofChi.ChiBuffDamageReductionBoost;
         }
     }
 }

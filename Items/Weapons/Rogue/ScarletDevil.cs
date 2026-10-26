@@ -16,7 +16,8 @@ namespace CalamityMod.Items.Weapons.Rogue
         {
             Item.width = 108;
             Item.height = 108;
-            Item.damage = 10000;
+            Item.damage = 8800;
+            Item.crit = 20;
             Item.noMelee = true;
             Item.noUseGraphic = true;
             Item.useAnimation = Item.useTime = 60;
@@ -41,19 +42,18 @@ namespace CalamityMod.Items.Weapons.Rogue
             return false;
         }
 
-        // Terraria seems to really dislike high crit values in SetDefaults
-        public override void ModifyWeaponCrit(Player player, ref float crit) => crit += 20;
-
         public override void AddRecipes()
         {
             CreateRecipe().
                 AddIngredient<Wrathwing>().
                 AddIngredient<RealityRupture>().
                 AddIngredient<ShadowspecBar>(5).
-                AddIngredient<BloodstoneCore>(15).
+                AddIngredient<Bloodstone>(50).
                 AddIngredient(ItemID.SoulofNight, 15).
                 AddTile<DraedonsForge>().
                 Register();
         }
+
+        public static Color RarityColor() => CalamityUtils.ColorSwap(new Color(191, 45, 71), new Color(185, 187, 253), 4f);
     }
 }
