@@ -115,9 +115,8 @@ namespace CalamityMod.Items.Weapons.Melee
             if (Combo > ComboLength)
                 Combo = 0;
 
-            //Shoot projectiles every upwards swing
-            if (scissorState == 1f)
-            {
+            // Fork: shoot projectiles on every swing, not just upwards swings
+            if (true)
                 float empoweredNeedles = Charge > 0 ? 1f : 0f;
                 Projectile.NewProjectile(source, player.Center + Utils.SafeNormalize(velocity, Vector2.Zero) * 20, velocity * 2.8f, ProjectileType<SolarNeedle>(), (int)(damage * needleDamageMultiplier), knockback, player.whoAmI, empoweredNeedles);
 

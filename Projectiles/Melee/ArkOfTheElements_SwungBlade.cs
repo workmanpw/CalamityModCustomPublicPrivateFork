@@ -176,6 +176,35 @@ namespace CalamityMod.Projectiles.Melee
                     SoundEngine.PlaySound(SoundID.Item4);
                 }
 
+                // Fork: spin attack homing, like Ark of the Cosmos thrown blade, but with
+                // ElementalGlassStar homing AI: HomeInOnNPC(true, 450f, 24f, 28f).
+                // Applied to direction (the thrown blade is manually positioned, not
+                // velocity-driven), so direction is turned toward the nearest NPC
+                // within 450, through walls, using the same 24 / 28 homing formula.
+                if (Owner.whoAmI == Main.myPlayer && Combo != 3f)
+                {
+                    NPC homingTarget = null;
+                    float nearestDist = 450f;
+                    foreach (NPC npc in Main.ActiveNPCs)
+                    {
+                        if (!npc.CanBeChasedBy(Projectile, false))
+                            continue;
+                        float dist = Vector2.Distance(Projectile.Center, npc.Center);
+                        if (dist < nearestDist)
+                        {
+                            nearestDist = dist;
+                            homingTarget = npc;
+                        }
+                    }
+                    if (homingTarget != null)
+                    {
+                        Vector2 homeDirection = (homingTarget.Center - Projectile.Center).SafeNormalize(Vector2.UnitY);
+                        direction = (direction * 28f + homeDirection * 24f) / (28f + 1f);
+                        direction.Normalize();
+                        Projectile.velocity = direction;
+                    }
+                }
+
                 Projectile.Center = Owner.Center + direction * ThrowRatio() * ThrowReach;
                 Projectile.rotation -= MathHelper.PiOver4 * 0.3f;
                 Projectile.scale = 1f + ThrowScaleRatio() * 0.5f;
