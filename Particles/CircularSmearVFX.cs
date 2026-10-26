@@ -1,4 +1,4 @@
-using CalamityMod.ExtraTextures;
+﻿using CalamityMod.ExtraTextures;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;

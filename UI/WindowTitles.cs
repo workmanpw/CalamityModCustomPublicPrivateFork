@@ -1,4 +1,4 @@
-using Terraria;
+﻿using Terraria;
 using Terraria.ModLoader;
 using Terraria.Localization;
 using System.Collections.Generic;
@@ -21,44 +21,18 @@ namespace CalamityMod.UI
             Main.QueueMainThreadAction(() =>
             {
                 // the other method involving some terraria intrinsic function didn't work, so i'm just ignoring it
-                List<LocalizedText> vanillaTitles = new();
-                List<LocalizedText> customTitles = new();
-
-                // Retry mechanism for Language.FindAll to handle collection modification during mod loading
-                for (int retry = 0; retry < 5; retry++)
-                {
-                    try
-                    {
-                        if (vanillaTitles.Count == 0)
-                            vanillaTitles = Language.FindAll(new Regex("^GameTitle\\.")).ToList();
-                        
-                        if (customTitles.Count == 0)
-                            customTitles = Language.FindAll(new Regex("^Mods\\.CalamityMod\\.UI\\.WindowTitle\\.")).ToList();
-                        
-                        // If both succeeded, break out of retry loop
-                        if (vanillaTitles.Count > 0 || customTitles.Count > 0)
-                            break;
-                    }
-                    catch (InvalidOperationException)
-                    {
-                        // Collection may be modified during enumeration, wait and retry
-                        if (retry < 4)
-                            System.Threading.Thread.Sleep(50);
-                    }
-                }
+                var vanillaTitles = Language.FindAll(new Regex("^GameTitle\\.")).ToList();
+                var customTitles = Language.FindAll(new Regex("^Mods\\.CalamityMod\\.UI\\.WindowTitle\\.")).ToList();
 
                 var allTitles = new List<LocalizedText>();
                 allTitles.AddRange(vanillaTitles);
                 allTitles.AddRange(customTitles);
 
-                if (allTitles.Count > 0)
-                {
-                    _calamityModifiedText ??= allTitles[Main.rand.Next(allTitles.Count)];
+                _calamityModifiedText ??= allTitles[Main.rand.Next(allTitles.Count)];
 
-                    // this is what vanilla terraria does to set it's title, so i'm replicating that here
-                    Platform.Get<IWindowService>().SetUnicodeTitle(Main.instance.Window, _calamityModifiedText.Value);
-                    Platform.Get<IWindowService>().SetIcon(Main.instance.Window);
-                }
+                // this is what vanilla terraria does to set it's title, so i'm replicating that here
+                Platform.Get<IWindowService>().SetUnicodeTitle(Main.instance.Window, _calamityModifiedText.Value);
+                Platform.Get<IWindowService>().SetIcon(Main.instance.Window);
 
                 loaded = true;
             });

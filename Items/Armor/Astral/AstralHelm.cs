@@ -1,4 +1,8 @@
+﻿using System.Collections.Generic;
+using System.IO;
 using CalamityMod.Items.Materials;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;

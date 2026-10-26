@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using CalamityMod.CustomRecipes;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;

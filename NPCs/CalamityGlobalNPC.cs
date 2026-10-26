@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using CalamityMod.Balancing;
@@ -2576,7 +2576,7 @@ namespace CalamityMod.NPCs
 
             bool countsAsBoss = npc.boss || NPCID.Sets.ShouldBeCountedAsBoss[npc.type];
             bool scalesLikeBoss = countsAsBoss || CalamityNPCSets.ScalesHealthLikeBoss[npc.type];
-            bool isCalamityNPC = npc.ModNPC != null && npc.ModNPC.Mod == ModContent.GetInstance<CalamityMod>();
+            bool isCalamityNPC = npc.ModNPC != null && npc.ModNPC.Mod == CalamityMod.Instance;
 
             // 14APR2025: Ozzatron: Reworked how Calamity changes the health of Expert+ multiplayer bosses
             // Non-boss enemies that receive scaling in Expert+ are still reduced via the old formula
@@ -4147,7 +4147,7 @@ namespace CalamityMod.NPCs
                 return;
 
             int spawnRate = 400;
-            int maxSpawnCount = 15; // NPC.maxSpawns no longer exists, use default
+            int maxSpawnCount = NPC.maxSpawns;
             NPCLoader.EditSpawnRate(player, ref spawnRate, ref maxSpawnCount);
 
             // Enforce a limit on the amount of enemies that can appear.

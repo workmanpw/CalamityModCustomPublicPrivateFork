@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Dusts;
 using CalamityMod.Utilities;
@@ -132,7 +132,7 @@ namespace CalamityMod.Projectiles.Summon
                 sulphuricAcid.noGravity = true;
                 sulphuricAcid.velocity *= 1.8f;
 
-                sulphuricAcid = DustExtensions.BetterCloneDust(sulphuricAcid);
+                sulphuricAcid = Dust.BetterCloneDust(sulphuricAcid);
                 sulphuricAcid.velocity *= -1f;
             }
         }

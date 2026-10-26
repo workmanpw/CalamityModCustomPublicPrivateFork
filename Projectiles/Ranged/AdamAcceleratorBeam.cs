@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using CalamityMod.Items.Weapons.Ranged;
 using CalamityMod.NPCs;
 using CalamityMod.Utilities;
@@ -238,7 +238,7 @@ namespace CalamityMod.Projectiles.Ranged
                 // If the beam isn't at max scale, then make additional smaller dust.
                 if (Projectile.scale != MaxBeamScale)
                 {
-                    Dust smallDust = DustExtensions.BetterCloneDust(d);
+                    Dust smallDust = Dust.BetterCloneDust(d);
                     smallDust.scale /= 2f;
                 }
             }

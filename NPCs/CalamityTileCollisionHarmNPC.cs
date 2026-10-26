@@ -1,4 +1,9 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
+using CalamityMod.Dusts;
+using CalamityMod.Enums;
+using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.Particles;
 using CalamityMod.Projectiles.Typeless;
 using Microsoft.Xna.Framework;
 using Terraria;

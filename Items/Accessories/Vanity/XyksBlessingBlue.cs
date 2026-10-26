@@ -1,3 +1,6 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using CalamityMod.CalPlayer;
 using CalamityMod.Items.BaseItems;
 using CalamityMod.Rarities;

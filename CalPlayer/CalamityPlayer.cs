@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using CalamityMod.Balancing;
@@ -3622,8 +3622,7 @@ namespace CalamityMod.CalPlayer
                     {
                         if (!Collision.SolidCollision(teleportLocation, Player.width, Player.height))
                         {
-                            if (!CalamityClientConfig.Instance.InfiniteStealth)
-                                rogueStealth -= rogueStealthMax * 0.25f;
+                            rogueStealth -= rogueStealthMax * 0.25f;
 
                             Player.Teleport(teleportLocation, 1);
                             NetMessage.SendData(MessageID.TeleportEntity, -1, -1, null, 0, (float)Player.whoAmI, teleportLocation.X, teleportLocation.Y, 1, 0, 0);
@@ -3652,8 +3651,7 @@ namespace CalamityMod.CalPlayer
                 jetPackDash = blunderBooster ? 15 : 10;
                 jetPackDirection = Player.direction;
                 Player.AddCooldown(RogueBooster.ID, 60, true, blunderBooster ? "birb" : "default");
-                if (!CalamityClientConfig.Instance.InfiniteStealth)
-                    rogueStealth -= rogueStealthMax * 0.25f;
+                rogueStealth -= rogueStealthMax * 0.25f;
                 SoundEngine.PlaySound(SoundID.Item66, Player.Center);
                 SoundEngine.PlaySound(SoundID.Item34, Player.Center);
             }
@@ -3943,13 +3941,13 @@ namespace CalamityMod.CalPlayer
                         d.velocity = Main.rand.NextVector2Unit() * spreadSpeed;
 
                         Vector2 segmentTwoPos = Player.Center + segmentTwoStart + segmentTwoIncrement * interpolant;
-                        d = DustExtensions.BetterCloneDust(d);
+                        d = Dust.BetterCloneDust(d);
                         d.position = segmentTwoPos;
                         d.scale = Main.rand.NextFloat(1.2f, 1.8f);
                         d.velocity = Main.rand.NextVector2Unit() * spreadSpeed;
 
                         Vector2 segmentThreePos = Player.Center + segmentThreeStart + segmentThreeIncrement * interpolant;
-                        d = DustExtensions.BetterCloneDust(d);
+                        d = Dust.BetterCloneDust(d);
                         d.position = segmentThreePos;
                         d.scale = Main.rand.NextFloat(1.2f, 1.8f);
                         d.velocity = Main.rand.NextVector2Unit() * spreadSpeed;
@@ -6309,19 +6307,6 @@ namespace CalamityMod.CalPlayer
 
         public void UpdateRogueStealth()
         {
-            // Infinite stealth config: works without rogue armor and never consumes
-            if (CalamityClientConfig.Instance.InfiniteStealth)
-            {
-                // Set stealth to max if not already at max
-                if (rogueStealthMax <= 0f)
-                    rogueStealthMax = 1f;
-                if (rogueStealth < rogueStealthMax)
-                    rogueStealth = rogueStealthMax;
-                wearingRogueArmor = true; // Force wearingRogueArmor to true for stealth abilities
-                ProvideStealthStatBonuses();
-                return;
-            }
-
             if (temporaryStealthTimer > 0)
             {
                 if (rogueStealthMax < temporaryStealthMax)
@@ -6523,10 +6508,6 @@ namespace CalamityMod.CalPlayer
 
         public void ConsumeStealthByAttacking()
         {
-            // Infinite stealth config: never consume stealth
-            if (CalamityClientConfig.Instance.InfiniteStealth)
-                return;
-
             stealthStrikeThisFrame = true;
             stealthAcceleration = 1f; // Reset acceleration when you attack
 

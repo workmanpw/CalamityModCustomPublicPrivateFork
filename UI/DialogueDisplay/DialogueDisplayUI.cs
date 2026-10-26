@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -1081,7 +1081,7 @@ namespace CalamityMod.UI.DialogueDisplay
 
             if (!DialogueLoader.TryGetDialogue(name, out var textData))
             {
-                ModContent.GetInstance<CalamityMod>().Logger.Error($"Unable to find Dialogue Data for given name: '{name}'");
+                CalamityMod.Log.Error($"Unable to find Dialogue Data for given name: '{name}'");
                 return -1;
             }
 
@@ -1142,7 +1142,7 @@ namespace CalamityMod.UI.DialogueDisplay
 
             if (!DialogueLoader.TryGetDialogue(name, out var textData))
             {
-                ModContent.GetInstance<CalamityMod>().Logger.Error($"Unable to find Dialogue Data for given name: '{name}'");
+                CalamityMod.Log.Error($"Unable to find Dialogue Data for given name: '{name}'");
                 return -1;
             }
 

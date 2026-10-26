@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using CalamityMod.BiomeManagers;
 using CalamityMod.Buffs.StatDebuffs;

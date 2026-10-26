@@ -1,4 +1,4 @@
-using CalamityMod.CalPlayer;
+﻿using CalamityMod.CalPlayer;
 using CalamityMod.Items;
 using CalamityMod.Items.BaseItems;
 using CalamityMod.NPCs;

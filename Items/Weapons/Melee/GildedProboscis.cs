@@ -1,4 +1,6 @@
-using CalamityMod.Projectiles.BaseProjectiles;
+﻿using System.Collections.Generic;
+using System.Linq;
+using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Items.Weapons.Ranged;
 using CalamityMod.Projectiles.BaseProjectiles;
 using CalamityMod.Projectiles.Melee.Spears;

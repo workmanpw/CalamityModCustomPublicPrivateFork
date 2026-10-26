@@ -1,4 +1,7 @@
+﻿using System;
+using System.Collections.Generic;
 using CalamityMod.Dusts;
+using CalamityMod.Enums;
 using CalamityMod.Items.Weapons.Melee;
 using CalamityMod.NPCs;
 using CalamityMod.NPCs.PrimordialWyrm;

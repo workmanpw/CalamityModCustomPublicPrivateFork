@@ -1,4 +1,5 @@
-using CalamityMod.CalPlayer;
+﻿using CalamityMod.CalPlayer;
+using CalamityMod.CustomRecipes;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;

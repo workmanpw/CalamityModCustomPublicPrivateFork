@@ -1,3 +1,4 @@
+﻿using System.Collections.Generic;
 using CalamityMod.NPCs.Abyss;
 using CalamityMod.NPCs.Astral;
 using CalamityMod.NPCs.Crags;

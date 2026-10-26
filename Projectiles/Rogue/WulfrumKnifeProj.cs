@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using System.Linq;
 using CalamityMod.Graphics.Primitives;
 using CalamityMod.Items.Weapons.Rogue;
 using CalamityMod.Particles;

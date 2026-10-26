@@ -1,4 +1,5 @@
-using CalamityMod.NPCs;
+﻿using CalamityMod.NPCs;
+using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -110,7 +111,7 @@ namespace CalamityMod.Projectiles.Typeless
                             }
                         }
                     }
-                    if (target != -1 && target < Main.maxNPCs && Main.npc[target].active)
+                    if (target != -1)
                     {
                         Projectile.velocity = Vector2.Normalize(Main.npc[target].Center - Projectile.Center) * 13f + (Main.npc[target].velocity / 2f) - (playerVel / 2f);
                         Projectile.ai[0] *= -1f;

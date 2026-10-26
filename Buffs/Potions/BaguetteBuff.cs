@@ -1,3 +1,4 @@
+﻿using CalamityMod.Items.Potions.Food;
 using Terraria;
 using Terraria.ModLoader;
 

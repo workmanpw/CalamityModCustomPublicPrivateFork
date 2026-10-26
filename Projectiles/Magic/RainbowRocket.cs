@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using CalamityMod.DataStructures;
 using CalamityMod.Graphics.Primitives;
 using CalamityMod.Utilities;
@@ -418,7 +418,7 @@ namespace CalamityMod.Projectiles.Magic
                 dust.color = Color.SkyBlue;
                 dust.fadeIn = 1.5f;
 
-                dust = DustExtensions.BetterCloneDust(dust);
+                dust = Dust.BetterCloneDust(dust);
                 dust.position = center + bezierCurve.Evaluate(i / (float)evaluationPoints).RotatedBy(offsetAngle) * new Vector2(-1f, 1f);
             }
         }
@@ -650,7 +650,7 @@ namespace CalamityMod.Projectiles.Magic
                 dust.scale = 1.4f;
                 dust.noGravity = true;
 
-                dust = DustExtensions.BetterCloneDust(dust);
+                dust = Dust.BetterCloneDust(dust);
                 dust.position = center + bezierCurve.Evaluate(i / (float)evaluationPoints) * new Vector2(1f, -1f) + new Vector2(30f, -12f);
             }
         }
@@ -692,7 +692,7 @@ namespace CalamityMod.Projectiles.Magic
                 dust.color = Color.Purple;
                 dust.fadeIn = 1.5f;
 
-                dust = DustExtensions.BetterCloneDust(dust);
+                dust = Dust.BetterCloneDust(dust);
                 dust.velocity = dust.velocity.RotatedBy(MathHelper.PiOver4);
                 dust.color = Color.White;
             }

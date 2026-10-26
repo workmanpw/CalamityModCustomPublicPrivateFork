@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using CalamityMod.Particles;
 using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;

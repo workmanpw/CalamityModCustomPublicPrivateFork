@@ -1,3 +1,4 @@
+﻿using CalamityMod.Items.Tools;
 using Microsoft.Xna.Framework;
 using Terraria.Localization;
 using Terraria.ModLoader;

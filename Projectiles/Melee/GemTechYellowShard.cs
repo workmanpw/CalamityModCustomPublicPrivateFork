@@ -1,4 +1,4 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using CalamityMod.Utilities;
 using Terraria;
 using Terraria.Audio;
@@ -49,8 +49,8 @@ namespace CalamityMod.Projectiles.Melee
                     crystalShard.color = Color.Yellow;
                     crystalShard.noGravity = true;
 
-                    DustExtensions.BetterCloneDust(crystalShard).velocity = initialVelocity.RotatedBy(MathHelper.Pi * 0.666f) * i / 4f;
-                    DustExtensions.BetterCloneDust(crystalShard).velocity = initialVelocity.RotatedBy(MathHelper.Pi * -0.666f) * i / 4f;
+                    Dust.BetterCloneDust(crystalShard).velocity = initialVelocity.RotatedBy(MathHelper.Pi * 0.666f) * i / 4f;
+                    Dust.BetterCloneDust(crystalShard).velocity = initialVelocity.RotatedBy(MathHelper.Pi * -0.666f) * i / 4f;
                 }
                 Projectile.localAI[0] = 1f;
             }

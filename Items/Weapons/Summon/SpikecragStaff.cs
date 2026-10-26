@@ -1,5 +1,6 @@
-using System.Collections.Generic;
-using CalamityMod.Items.Weapons.Rogue;
+﻿using System.Collections.Generic;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Systems.Collections;
 using CalamityMod.Projectiles.Summon;
 using Microsoft.Xna.Framework;
 using Terraria;

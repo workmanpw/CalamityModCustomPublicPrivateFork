@@ -1,6 +1,4 @@
-using System.Collections.Generic;
-using CalamityMod.Items.Weapons.Melee;
-using CalamityMod.NPCs.DevourerofGods;
+﻿using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Projectiles.Rogue;
 using CalamityMod.Rarities;
 using CalamityMod.Systems.Collections;

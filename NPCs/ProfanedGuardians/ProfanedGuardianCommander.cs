@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Dusts;
@@ -254,7 +254,7 @@ namespace CalamityMod.NPCs.ProfanedGuardians
                                 Main.dust[dust].noGravity = true;
                                 Main.dust[dust].scale = 1f;
                                 Main.dust[dust].fadeIn = Main.rand.NextFloat() * 2f;
-                                Dust dust2 = DustExtensions.BetterCloneDust(Main.dust[dust]);
+                                Dust dust2 = Dust.BetterCloneDust(dust);
                                 Dust dust3 = dust2;
                                 dust3.scale /= 2f;
                                 dust3 = dust2;

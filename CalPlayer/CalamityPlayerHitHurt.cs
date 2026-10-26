@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using CalamityMod.Balancing;
 using CalamityMod.Buffs.DamageOverTime;
@@ -1986,9 +1986,9 @@ namespace CalamityMod.CalPlayer
                         d.velocity = dustVel;
                         d.noGravity = true;
                         d.scale *= Main.rand.NextFloat(1.1f, 1.4f);
-                        DustExtensions.BetterCloneDust(d).velocity = dustVel.RotatedBy(MathHelper.PiOver2);
-                        DustExtensions.BetterCloneDust(d).velocity = dustVel.RotatedBy(MathHelper.Pi);
-                        DustExtensions.BetterCloneDust(d).velocity = dustVel.RotatedBy(MathHelper.Pi * 1.5f);
+                        Dust.BetterCloneDust(d).velocity = dustVel.RotatedBy(MathHelper.PiOver2);
+                        Dust.BetterCloneDust(d).velocity = dustVel.RotatedBy(MathHelper.Pi);
+                        Dust.BetterCloneDust(d).velocity = dustVel.RotatedBy(MathHelper.Pi * 1.5f);
                     }
                 }
 

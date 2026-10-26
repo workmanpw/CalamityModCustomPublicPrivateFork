@@ -1,3 +1,4 @@
+﻿using System;
 using System.Collections.Generic;
 using CalamityMod.Buffs.DamageOverTime;
 using Microsoft.Xna.Framework;

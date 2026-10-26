@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using CalamityMod.Buffs.StatDebuffs;
 using CalamityMod.Projectiles.Magic;
 using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;

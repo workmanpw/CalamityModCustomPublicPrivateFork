@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Utilities;
 using Microsoft.Xna.Framework;

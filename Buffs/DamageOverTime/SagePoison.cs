@@ -1,4 +1,5 @@
-using CalamityMod.DataStructures;
+﻿using CalamityMod.DataStructures;
+using CalamityMod.Projectiles.Summon;
 using CalamityMod.Systems.Collections;
 using Terraria;
 using Terraria.ModLoader;

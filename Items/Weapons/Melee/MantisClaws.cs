@@ -1,3 +1,4 @@
+﻿using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Items.BaseItems;
 using CalamityMod.Projectiles.Melee;
 using CalamityMod.Systems.Collections;

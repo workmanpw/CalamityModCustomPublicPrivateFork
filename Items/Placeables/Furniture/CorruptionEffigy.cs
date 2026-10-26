@@ -1,3 +1,4 @@
+﻿using CalamityMod.CustomRecipes;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;

@@ -1,4 +1,5 @@
-using CalamityMod.Projectiles.Melee.MaceFlails;
+﻿using CalamityMod.Projectiles.Melee.MaceFlails;
+using CalamityMod.Systems.Collections;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;

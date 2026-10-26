@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using CalamityMod.Dusts;
 using CalamityMod.Particles;
 using CalamityMod.Utilities;

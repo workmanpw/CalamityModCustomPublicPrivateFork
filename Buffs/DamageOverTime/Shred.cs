@@ -1,4 +1,5 @@
-using System;
+﻿using System;
+using CalamityMod.DataStructures;
 using CalamityMod.NPCs;
 using CalamityMod.Particles;
 using CalamityMod.Projectiles;

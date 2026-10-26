@@ -1,4 +1,7 @@
+﻿using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Buffs.StatDebuffs;
 using CalamityMod.Projectiles.Melee.Yoyos;
+using CalamityMod.Systems.Collections;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;

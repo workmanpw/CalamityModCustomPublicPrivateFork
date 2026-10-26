@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using CalamityMod.Balancing;
 using CalamityMod.CalPlayer;
@@ -354,10 +354,20 @@ namespace CalamityMod.ILEditing
         {
             // Don't do town NPC spawning at the end (which lies after a !Main.dayTime return).
             // Do it at the beginning, without the arbitrary time restriction.
-            // Main.UpdateTime_SpawnTownNPCs no longer exists in current tModLoader
-            // This IL hook is no longer functional
-            ModContent.GetInstance<CalamityMod>().Logger.Warn("Town NPC spawn editing code disabled - Main.UpdateTime_SpawnTownNPCs no longer exists.");
-            return;
+            var cursor = new ILCursor(il);
+            cursor.EmitDelegate<Action>(() =>
+            {
+                if (Main.dayTime || CalamityServerConfig.Instance.TownNPCsSpawnAtNight)
+                    Main.UpdateTime_SpawnTownNPCs();
+            });
+
+            if (!cursor.TryGotoNext(MoveType.Before, i => i.MatchCallOrCallvirt<Main>(nameof(Main.UpdateTime_SpawnTownNPCs))))
+            {
+                CalamityMod.Log.Warn("Town NPC spawn editing code failed.");
+                return;
+            }
+
+            cursor.Emit(OpCodes.Ret);
         }
 
         private static void AlterTownNPCSpawnRate(On_Main.orig_UpdateTime_SpawnTownNPCs orig)

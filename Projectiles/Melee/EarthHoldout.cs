@@ -1,3 +1,4 @@
+﻿using System;
 using System.Collections.Generic;
 using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Items.Weapons.Melee;

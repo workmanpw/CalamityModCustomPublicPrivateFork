@@ -1,5 +1,14 @@
+﻿using System;
+using System.Linq;
 using CalamityMod.Buffs.Summon;
-using CalamityMod.Items.Weapons.Melee;
+using CalamityMod.CalPlayer;
+using CalamityMod.DataStructures;
+using CalamityMod.Dusts;
+using CalamityMod.Graphics.Primitives;
+using CalamityMod.Items.Weapons.Summon;
+using CalamityMod.NPCs.CeaselessVoid;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Magic;
 using CalamityMod.Projectiles.Summon;
 using CalamityMod.Rarities;
 using CalamityMod.Utilities.Daybreak;

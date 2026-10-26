@@ -1,3 +1,4 @@
+﻿using CalamityMod.Buffs.Alcohol;
 using CalamityMod.Buffs.Potions;
 using Microsoft.Xna.Framework;
 using Terraria;

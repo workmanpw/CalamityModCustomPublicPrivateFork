@@ -1,4 +1,4 @@
-using CalamityMod.NPCs;
+﻿using CalamityMod.DataStructures;
 using CalamityMod.Systems.Collections;
 using Terraria;
 using Terraria.ID;

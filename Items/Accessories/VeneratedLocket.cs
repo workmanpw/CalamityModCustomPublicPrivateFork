@@ -1,4 +1,6 @@
+﻿using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Rarities;
+using CalamityMod.Systems.Collections;
 using Terraria;
 using Terraria.ModLoader;
 

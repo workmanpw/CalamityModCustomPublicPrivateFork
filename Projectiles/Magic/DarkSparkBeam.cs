@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using CalamityMod.NPCs;
 using CalamityMod.Utilities;
@@ -144,7 +144,7 @@ namespace CalamityMod.Projectiles.Magic
                     Main.dust[rainbowDust].noGravity = true;
                     if (Projectile.scale != 1.4f)
                     {
-                        Dust rainbowClone = DustExtensions.BetterCloneDust(Main.dust[rainbowDust]);
+                        Dust rainbowClone = Dust.BetterCloneDust(rainbowDust);
                         rainbowClone.color = color;
                         rainbowClone.scale /= 2f;
                         rainbowClone.noGravity = true;

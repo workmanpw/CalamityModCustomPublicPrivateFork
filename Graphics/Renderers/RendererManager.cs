@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using CalamityMod.Enums;
 using CalamityMod.Systems.Graphic;
@@ -93,6 +93,7 @@ namespace CalamityMod.Graphics.Renderers
                 if (!renderer.ShouldDraw)
                     continue;
 
+                using (Main.spriteBatch.Scope())
                 using (renderer.MainTarget.Scope(clearColor: Color.Transparent))
                 {
                     Main.spriteBatch.Begin(

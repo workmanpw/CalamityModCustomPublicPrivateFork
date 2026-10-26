@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using CalamityMod.Items.Weapons.Melee;
 using CalamityMod.NPCs;
 using CalamityMod.Particles;

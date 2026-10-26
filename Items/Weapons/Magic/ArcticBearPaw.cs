@@ -1,4 +1,6 @@
+﻿using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Projectiles.Magic;
+using CalamityMod.Systems.Collections;
 using Terraria.ID;
 using Terraria.ModLoader;
 

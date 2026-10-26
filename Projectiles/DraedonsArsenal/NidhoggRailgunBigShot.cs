@@ -1,3 +1,4 @@
+﻿using System;
 using CalamityMod.Dusts;
 using CalamityMod.Particles;
 using CalamityMod.Projectiles.Ranged;

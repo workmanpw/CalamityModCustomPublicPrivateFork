@@ -1,3 +1,5 @@
+﻿using System.Collections.Generic;
+using CalamityMod.Buffs.DamageOverTime;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;

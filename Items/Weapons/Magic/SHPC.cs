@@ -1,3 +1,6 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using CalamityMod.Items.Materials;
 using CalamityMod.Projectiles.Magic;
 using Microsoft.Xna.Framework;

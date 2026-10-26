@@ -1,3 +1,4 @@
+﻿using System;
 using CalamityMod.Items.Weapons.Magic;
 using Microsoft.Xna.Framework;
 using Terraria;

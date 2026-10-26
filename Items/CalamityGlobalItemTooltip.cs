@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -509,7 +509,7 @@ namespace CalamityMod.Items
                         defenseIndex = i;
                         break;
                     }
-                tooltips.Insert(defenseIndex + 1, new TooltipLine(ModContent.GetInstance<CalamityMod>(), "Tooltip0", CalamityUtils.GetTextValue($"Vanilla.AddedTooltip.{key}")));
+                tooltips.Insert(defenseIndex + 1, new TooltipLine(CalamityMod.Instance, "Tooltip0", CalamityUtils.GetTextValue($"Vanilla.AddedTooltip.{key}")));
             }
             string AddedTooltip(string key) => "\n" + CalamityUtils.GetTextValue($"Vanilla.AddedTooltip.{key}");
             LocalizedText GetAddedTooltip(string key) => CalamityUtils.GetText($"Vanilla.AddedTooltip.{key}");
@@ -1241,7 +1241,7 @@ namespace CalamityMod.Items
                         materialIndex = i;
                         break;
                     }
-                tooltips.Insert(materialIndex + 1, new TooltipLine(ModContent.GetInstance<CalamityMod>(), "Tooltip0", CalamityUtils.GetTextValue($"Vanilla.HerbTooltips.{key}")));
+                tooltips.Insert(materialIndex + 1, new TooltipLine(CalamityMod.Instance, "Tooltip0", CalamityUtils.GetTextValue($"Vanilla.HerbTooltips.{key}")));
             }
 
             if (item.type == ItemID.Daybloom)
@@ -1268,7 +1268,7 @@ namespace CalamityMod.Items
                         materialIndex = i;
                         break;
                     }
-                tooltips.Insert(materialIndex + 1, new TooltipLine(ModContent.GetInstance<CalamityMod>(), "Tooltip0", CalamityUtils.GetTextValue($"Vanilla.SeedTooltips.{key}")));
+                tooltips.Insert(materialIndex + 1, new TooltipLine(CalamityMod.Instance, "Tooltip0", CalamityUtils.GetTextValue($"Vanilla.SeedTooltips.{key}")));
             }
 
             if (item.type == ItemID.DaybloomSeeds)
@@ -1681,24 +1681,24 @@ namespace CalamityMod.Items
         #region Schematic Knowledge Tooltip Utility
         public static void InsertKnowledgeTooltip(List<TooltipLine> tooltips, int tier, bool allowOldWorlds = false)
         {
-            TooltipLine line = new TooltipLine(ModContent.GetInstance<CalamityMod>(), "SchematicKnowledge1", CalamityUtils.GetTextValue("Misc.SchematicKnowledgeTooltip"));
-            TooltipLine line2 = new TooltipLine(ModContent.GetInstance<CalamityMod>(), "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.SchematicKnowledgeTooltip2"));
+            TooltipLine line = new TooltipLine(CalamityMod.Instance, "SchematicKnowledge1", CalamityUtils.GetTextValue("Misc.SchematicKnowledgeTooltip"));
+            TooltipLine line2 = new TooltipLine(CalamityMod.Instance, "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.SchematicKnowledgeTooltip2"));
             switch (tier)
             {
                 case 1:
-                    line2 = new TooltipLine(ModContent.GetInstance<CalamityMod>(), "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.Tier1KnowledgeTooltip"));
+                    line2 = new TooltipLine(CalamityMod.Instance, "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.Tier1KnowledgeTooltip"));
                     break;
                 case 2:
-                    line2 = new TooltipLine(ModContent.GetInstance<CalamityMod>(), "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.Tier2KnowledgeTooltip"));
+                    line2 = new TooltipLine(CalamityMod.Instance, "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.Tier2KnowledgeTooltip"));
                     break;
                 case 3:
-                    line2 = new TooltipLine(ModContent.GetInstance<CalamityMod>(), "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.Tier3KnowledgeTooltip"));
+                    line2 = new TooltipLine(CalamityMod.Instance, "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.Tier3KnowledgeTooltip"));
                     break;
                 case 4:
-                    line2 = new TooltipLine(ModContent.GetInstance<CalamityMod>(), "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.Tier4KnowledgeTooltip"));
+                    line2 = new TooltipLine(CalamityMod.Instance, "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.Tier4KnowledgeTooltip"));
                     break;
                 case 5:
-                    line2 = new TooltipLine(ModContent.GetInstance<CalamityMod>(), "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.Tier5KnowledgeTooltip"));
+                    line2 = new TooltipLine(CalamityMod.Instance, "SchematicKnowledge2", CalamityUtils.GetTextValue("Misc.Tier5KnowledgeTooltip"));
                     break;
             }
             line.OverrideColor = line2.OverrideColor = Color.Cyan;

@@ -1,4 +1,10 @@
-using System;
+﻿using System;
+using CalamityMod.Buffs.DamageOverTime;
+using CalamityMod.Dusts;
+using CalamityMod.NPCs.SunkenSea;
+using CalamityMod.Particles;
+using CalamityMod.Projectiles.Typeless;
+using CalamityMod.Tiles.Abyss;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;

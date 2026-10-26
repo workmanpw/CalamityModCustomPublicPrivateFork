@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using CalamityMod.Balancing;
 using CalamityMod.Enums;
 using CalamityMod.Projectiles.Boss;

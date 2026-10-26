@@ -1,4 +1,4 @@
-using CalamityMod.Items.Weapons.Summon;
+﻿using CalamityMod.Buffs.DamageOverTime;
 using CalamityMod.Projectiles.Magic;
 using CalamityMod.Systems.Collections;
 using Microsoft.Xna.Framework;

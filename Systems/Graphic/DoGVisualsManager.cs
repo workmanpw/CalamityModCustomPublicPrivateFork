@@ -1,4 +1,4 @@
-using System.Linq;
+﻿using System.Linq;
 using CalamityMod.Effects;
 using CalamityMod.Graphics;
 using CalamityMod.Graphics.Metaballs;
