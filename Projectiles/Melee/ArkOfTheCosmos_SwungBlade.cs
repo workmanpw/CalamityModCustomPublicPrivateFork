@@ -202,11 +202,18 @@ namespace CalamityMod.Projectiles.Melee
             else
             {
                 //Telegraph the start of the snap window with a bit of leeway
+                // Official constellation spawn, restored: spawn once at telegraph, with
+                // official ai/timeLeft parameters, so the constellation projectile itself
+                // regenerates every ConstellationSwapTime (official drawing system).
                 if (!snapTelegraphPlayed && ThrowCompletion >= (SnapWindowStart - 0.1f) && ThrowCompletion < SnapWindowEnd)
                 {
                     Particle pulse = new PulseRing(Projectile.Center, Vector2.Zero, Color.OrangeRed, 0.05f, 1.8f, 8);
                     GeneralParticleHandler.SpawnParticle(pulse);
+                    SoundEngine.PlaySound(SoundID.Item4);
                     snapTelegraphPlayed = true;
+                    var telegraphSource = Projectile.GetSource_FromThis();
+                    Projectile chain = Projectile.NewProjectileDirect(telegraphSource, Owner.Center, Vector2.Zero, ProjectileType<ArkoftheCosmosConstellation>(), (int)(Projectile.damage * ArkoftheCosmos.chainDamageMultiplier), 0, Owner.whoAmI, (int)(Projectile.timeLeft / 2f));
+                    chain.timeLeft = (int)(Projectile.timeLeft / 2f);
                 }
 
                 //Rotate the blade towards the cursor or nearby enemies
@@ -251,29 +258,6 @@ namespace CalamityMod.Projectiles.Melee
                     Projectile bolt = Projectile.NewProjectileDirect(source, Projectile.Center, randomRotation.ToRotationVector2() * 15f, ProjectileType<EonBolt>(), (int)(Projectile.damage * 0.3f), 0f, Owner.whoAmI, 0.55f, EonBolt.CombinedHomingStrength);
                     bolt.timeLeft = 80;
 
-                    //Spawn constellation continuously during snap window (one chain at a time)
-                    if (ThrowCompletion >= SnapWindowStart && ThrowCompletion < SnapWindowEnd)
-                    {
-                        // Check if a constellation already exists for this owner
-                        bool existingConstellation = false;
-                        for (int i = 0; i < Main.maxProjectiles; i++)
-                        {
-                            if (Main.projectile[i].active && Main.projectile[i].owner == Owner.whoAmI && Main.projectile[i].type == ProjectileType<ArkoftheCosmosConstellation>())
-                            {
-                                existingConstellation = true;
-                                break;
-                            }
-                        }
-
-                        // Only spawn if no constellation exists
-                        if (!existingConstellation)
-                        {
-                            // Use fixed lifetime of 90 frames (duration of snap window) so constellation lasts full snap window
-                            int constellationLifetime = (int)(MaxThrowTime * (SnapWindowEnd - SnapWindowStart));
-                            Projectile chain = Projectile.NewProjectileDirect(source, Owner.Center, Vector2.Zero, ProjectileType<ArkoftheCosmosConstellation>(), (int)(Projectile.damage * ArkoftheCosmos.chainDamageMultiplier), 0, Owner.whoAmI, constellationLifetime);
-                            chain.timeLeft = constellationLifetime;
-                        }
-                    }
                 }
 
                 //Come back
